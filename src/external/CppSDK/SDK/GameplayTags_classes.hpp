@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "DeveloperSettings_classes.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -32,6 +32,7 @@ public:
 	static bool DoesTagAssetInterfaceHaveTag(TScriptInterface<class IGameplayTagAssetInterface> TagContainerInterface, const struct FGameplayTag& Tag);
 	static bool EqualEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
 	static bool EqualEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
+	static struct FGameplayTagContainer Filter(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
 	static void GetAllActorsOfClassMatchingTagQuery(class UObject* WorldContextObject, TSubclassOf<class AActor> ActorClass, const struct FGameplayTagQuery& GameplayTagQuery, TArray<class AActor*>* OutActors);
 	static class FString GetDebugStringFromGameplayTag(const struct FGameplayTag& GameplayTag);
 	static class FString GetDebugStringFromGameplayTagContainer(const struct FGameplayTagContainer& TagContainer);
@@ -40,6 +41,7 @@ public:
 	static class FName GetTagName(const struct FGameplayTag& GameplayTag);
 	static bool HasAllMatchingGameplayTags(TScriptInterface<class IGameplayTagAssetInterface> TagContainerInterface, const struct FGameplayTagContainer& OtherContainer);
 	static bool HasAllTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
+	static bool HasAnyMatchingGameplayTags(TScriptInterface<class IGameplayTagAssetInterface> TagContainerInterface, const struct FGameplayTagContainer& OtherContainer);
 	static bool HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
 	static bool HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch);
 	static bool IsGameplayTagValid(const struct FGameplayTag& GameplayTag);
@@ -74,11 +76,15 @@ public:
 		return GetDefaultObjImpl<UBlueprintGameplayTagLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlueprintGameplayTagLibrary;
 
 // Class GameplayTags.GameplayTagAssetInterface
-// 0x0000 (0x0000 - 0x0000)
-class IGameplayTagAssetInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IGameplayTagAssetInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	struct FGameplayTagContainer BP_GetOwnedGameplayTags() const;
 	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer) const;
@@ -108,6 +114,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IGameplayTagAssetInterface;
 
 // Class GameplayTags.EditableGameplayTagQuery
 // 0x0070 (0x0098 - 0x0028)
@@ -133,6 +140,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQuery>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQuery;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression
 // 0x0000 (0x0028 - 0x0028)
@@ -152,6 +160,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -174,6 +183,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyTagsMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -196,6 +206,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllTagsMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -218,6 +229,53 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoTagsMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoTagsMatch;
+
+// Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsExactMatch
+// 0x0020 (0x0048 - 0x0028)
+class UEditableGameplayTagQueryExpression_AnyTagsExactMatch final : public UEditableGameplayTagQueryExpression
+{
+public:
+	struct FGameplayTagContainer                  Tags;                                              // 0x0028(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AnyTagsExactMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AnyTagsExactMatch")
+	}
+	static class UEditableGameplayTagQueryExpression_AnyTagsExactMatch* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyTagsExactMatch>();
+	}
+};
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyTagsExactMatch;
+
+// Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsExactMatch
+// 0x0020 (0x0048 - 0x0028)
+class UEditableGameplayTagQueryExpression_AllTagsExactMatch final : public UEditableGameplayTagQueryExpression
+{
+public:
+	struct FGameplayTagContainer                  Tags;                                              // 0x0028(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AllTagsExactMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AllTagsExactMatch")
+	}
+	static class UEditableGameplayTagQueryExpression_AllTagsExactMatch* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllTagsExactMatch>();
+	}
+};
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllTagsExactMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
 // 0x0010 (0x0038 - 0x0028)
@@ -240,6 +298,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyExprMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0038 - 0x0028)
@@ -262,6 +321,7 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllExprMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
 // 0x0010 (0x0038 - 0x0028)
@@ -284,16 +344,18 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoExprMatch>();
 	}
 };
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoExprMatch;
 
 // Class GameplayTags.GameplayTagsManager
-// 0x0278 (0x02A0 - 0x0028)
+// 0x02F8 (0x0320 - 0x0028)
 class UGameplayTagsManager final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x160];                                     // 0x0028(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FGameplayTagSource>  TagSources;                                        // 0x0188(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D8[0xB8];                                     // 0x01D8(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0290(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_1D8[0xD0];                                     // 0x01D8(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x02A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_2B8[0x68];                                     // 0x02B8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -309,14 +371,16 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsManager>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayTagsManager;
 
 // Class GameplayTags.GameplayTagsList
-// 0x0020 (0x0048 - 0x0028)
+// 0x0030 (0x0058 - 0x0028)
 class UGameplayTagsList : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -332,6 +396,7 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsList>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayTagsList;
 
 // Class GameplayTags.RestrictedGameplayTagsList
 // 0x0020 (0x0048 - 0x0028)
@@ -355,24 +420,24 @@ public:
 		return GetDefaultObjImpl<URestrictedGameplayTagsList>();
 	}
 };
+DUMPER7_ASSERTS_URestrictedGameplayTagsList;
 
 // Class GameplayTags.GameplayTagsSettings
-// 0x0070 (0x00B8 - 0x0048)
+// 0x0060 (0x00B8 - 0x0058)
 class UGameplayTagsSettings final : public UGameplayTagsList
 {
 public:
-	bool                                          ImportTagsFromConfig;                              // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          WarnOnInvalidTags;                                 // 0x0049(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClearInvalidTags;                                  // 0x004A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AllowEditorTagUnloading;                           // 0x004B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AllowGameTagUnloading;                             // 0x004C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FastReplication;                                   // 0x004D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDynamicReplication;                               // 0x004E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 InvalidTagCharacters;                              // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0070(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          ImportTagsFromConfig;                              // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          WarnOnInvalidTags;                                 // 0x0059(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearInvalidTags;                                  // 0x005A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AllowEditorTagUnloading;                           // 0x005B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AllowGameTagUnloading;                             // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FastReplication;                                   // 0x005D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDynamicReplication;                               // 0x005E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 InvalidTagCharacters;                              // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0070(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0090(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	int32                                         NumBitsForContainerSize;                           // 0x00A0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NetIndexFirstBitSegment;                           // 0x00A4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -392,6 +457,7 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayTagsSettings;
 
 // Class GameplayTags.GameplayTagsDeveloperSettings
 // 0x0018 (0x0050 - 0x0038)
@@ -415,5 +481,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsDeveloperSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayTagsDeveloperSettings;
 
 SDK_NAMESPACE_END

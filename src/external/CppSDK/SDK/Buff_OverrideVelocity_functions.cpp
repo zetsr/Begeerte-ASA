@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ABuff_OverrideVelocity_C::BPDeactivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_OverrideVelocity_C", "BPDeactivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_OverrideVelocity_C", "BPDeactivated", FuncInfo);
 
 	Params::Buff_OverrideVelocity_C_BPDeactivated Parms{};
 
@@ -46,10 +44,8 @@ void ABuff_OverrideVelocity_C::BPDeactivated(class AActor* ForInstigator)
 
 struct FVector ABuff_OverrideVelocity_C::BPOverrideCharacterNewFallVelocity(const struct FVector& InitialVelocity, const struct FVector& Gravity, float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_OverrideVelocity_C", "BPOverrideCharacterNewFallVelocity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_OverrideVelocity_C", "BPOverrideCharacterNewFallVelocity", FuncInfo);
 
 	Params::Buff_OverrideVelocity_C_BPOverrideCharacterNewFallVelocity Parms{};
 

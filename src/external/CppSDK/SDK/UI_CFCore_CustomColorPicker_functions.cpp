@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_11_OnMouseCaptureEndEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_11_OnMouseCaptureEndEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_11_OnMouseCaptureEndEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Opacity
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_SLIDER_Opacity_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
@@ -57,10 +53,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Opacity
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_2_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
@@ -75,10 +69,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Saturat
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_7_OnMouseCaptureEndEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_7_OnMouseCaptureEndEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Saturation_K2Node_ComponentBoundEvent_7_OnMouseCaptureEndEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -89,10 +81,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Saturat
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_10_OnMouseCaptureEndEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_10_OnMouseCaptureEndEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_10_OnMouseCaptureEndEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +95,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Value_K
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_3_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_3_OnFloatValueChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_3_OnFloatValueChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_SLIDER_Value_K2Node_ComponentBoundEvent_3_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
@@ -125,10 +113,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SLIDER_Value_K
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
 
@@ -145,10 +131,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
 
@@ -163,10 +147,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_5_OnMouseCaptureEndEventSynth2D__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_5_OnMouseCaptureEndEventSynth2D__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_SYNTH_Picker_K2Node_ComponentBoundEvent_5_OnMouseCaptureEndEventSynth2D__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +162,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_SYNTH_Picker_K
 
 void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_TEXT_HexValue_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_TEXT_HexValue_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "BndEvt__UI_CustomColorPicker_TEXT_HexValue_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_BndEvt__UI_CustomColorPicker_TEXT_HexValue_K2Node_ComponentBoundEvent_6_OnEditableTextCommittedEvent__DelegateSignature Parms{};
 
@@ -201,10 +181,8 @@ void UUI_CFCore_CustomColorPicker_C::BndEvt__UI_CustomColorPicker_TEXT_HexValue_
 
 void UUI_CFCore_CustomColorPicker_C::ExecuteUbergraph_UI_CFCore_CustomColorPicker(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "ExecuteUbergraph_UI_CFCore_CustomColorPicker");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "ExecuteUbergraph_UI_CFCore_CustomColorPicker", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_ExecuteUbergraph_UI_CFCore_CustomColorPicker Parms{};
 
@@ -221,10 +199,8 @@ void UUI_CFCore_CustomColorPicker_C::ExecuteUbergraph_UI_CFCore_CustomColorPicke
 
 void UUI_CFCore_CustomColorPicker_C::GetFinalColor(struct FLinearColor* FinalColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "GetFinalColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "GetFinalColor", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_GetFinalColor Parms{};
 
@@ -244,10 +220,8 @@ void UUI_CFCore_CustomColorPicker_C::GetFinalColor(struct FLinearColor* FinalCol
 
 void UUI_CFCore_CustomColorPicker_C::LimitTextSize(const class FString& SourceString, int32 Size, class FString* Array)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "LimitTextSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "LimitTextSize", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_LimitTextSize Parms{};
 
@@ -266,10 +240,8 @@ void UUI_CFCore_CustomColorPicker_C::LimitTextSize(const class FString& SourceSt
 
 void UUI_CFCore_CustomColorPicker_C::OnUpdate2DSynth()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "OnUpdate2DSynth");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "OnUpdate2DSynth", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,10 +252,8 @@ void UUI_CFCore_CustomColorPicker_C::OnUpdate2DSynth()
 
 void UUI_CFCore_CustomColorPicker_C::OnUpdateOpacity()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "OnUpdateOpacity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "OnUpdateOpacity", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -294,10 +264,8 @@ void UUI_CFCore_CustomColorPicker_C::OnUpdateOpacity()
 
 void UUI_CFCore_CustomColorPicker_C::OnUpdateSaturation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "OnUpdateSaturation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "OnUpdateSaturation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +276,8 @@ void UUI_CFCore_CustomColorPicker_C::OnUpdateSaturation()
 
 void UUI_CFCore_CustomColorPicker_C::OnUpdateValue()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "OnUpdateValue");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "OnUpdateValue", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -324,10 +290,8 @@ void UUI_CFCore_CustomColorPicker_C::OnUpdateValue()
 
 void UUI_CFCore_CustomColorPicker_C::SetColorPickerEnabled(bool bInIsEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "SetColorPickerEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "SetColorPickerEnabled", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_SetColorPickerEnabled Parms{};
 
@@ -344,10 +308,8 @@ void UUI_CFCore_CustomColorPicker_C::SetColorPickerEnabled(bool bInIsEnabled)
 
 void UUI_CFCore_CustomColorPicker_C::SetSaturationBarColor(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "SetSaturationBarColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "SetSaturationBarColor", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_SetSaturationBarColor Parms{};
 
@@ -364,10 +326,8 @@ void UUI_CFCore_CustomColorPicker_C::SetSaturationBarColor(const struct FLinearC
 
 void UUI_CFCore_CustomColorPicker_C::SetValueBarValue(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "SetValueBarValue");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "SetValueBarValue", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_SetValueBarValue Parms{};
 
@@ -384,10 +344,8 @@ void UUI_CFCore_CustomColorPicker_C::SetValueBarValue(const struct FLinearColor&
 
 void UUI_CFCore_CustomColorPicker_C::UpdateAllSliders(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomColorPicker_C", "UpdateAllSliders");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomColorPicker_C", "UpdateAllSliders", FuncInfo);
 
 	Params::UI_CFCore_CustomColorPicker_C_UpdateAllSliders Parms{};
 

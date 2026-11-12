@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PrimalGameSettingsData_Base.PrimalGameSettingsData_Base_C
-// 0x0000 (0x0398 - 0x0398)
+// 0x0000 (0x0390 - 0x0390)
 class UPrimalGameSettingsData_Base_C final : public UPrimalGameSettingsData
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGameSettingsData_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalGameSettingsData_Base_C;
 
 SDK_NAMESPACE_END

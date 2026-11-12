@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Discovery_Spotlight_C::BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Discovery_Spotlight_C::BndEvt__UI_CFCore_Discovery_Spotlight_UI_
 
 void UUI_CFCore_Discovery_Spotlight_C::BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Options_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Options_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "BndEvt__UI_CFCore_Discovery_Spotlight_UI_Button_Options_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +48,8 @@ void UUI_CFCore_Discovery_Spotlight_C::BndEvt__UI_CFCore_Discovery_Spotlight_UI_
 
 bool UUI_CFCore_Discovery_Spotlight_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_BPGamepadReleased Parms{};
 
@@ -72,10 +66,8 @@ bool UUI_CFCore_Discovery_Spotlight_C::BPGamepadReleased(const struct FKey& theK
 
 void UUI_CFCore_Discovery_Spotlight_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +78,8 @@ void UUI_CFCore_Discovery_Spotlight_C::Construct()
 
 void UUI_CFCore_Discovery_Spotlight_C::DestroyPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "DestroyPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "DestroyPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +90,8 @@ void UUI_CFCore_Discovery_Spotlight_C::DestroyPage()
 
 void UUI_CFCore_Discovery_Spotlight_C::DownloadImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "DownloadImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "DownloadImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +104,8 @@ void UUI_CFCore_Discovery_Spotlight_C::DownloadImage()
 
 void UUI_CFCore_Discovery_Spotlight_C::ErrorNotFoundMods(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "ErrorNotFoundMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "ErrorNotFoundMods", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_ErrorNotFoundMods Parms{};
 
@@ -136,10 +122,8 @@ void UUI_CFCore_Discovery_Spotlight_C::ErrorNotFoundMods(const struct FCFCoreErr
 
 void UUI_CFCore_Discovery_Spotlight_C::ExecuteUbergraph_UI_CFCore_Discovery_Spotlight(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "ExecuteUbergraph_UI_CFCore_Discovery_Spotlight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "ExecuteUbergraph_UI_CFCore_Discovery_Spotlight", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_ExecuteUbergraph_UI_CFCore_Discovery_Spotlight Parms{};
 
@@ -156,10 +140,8 @@ void UUI_CFCore_Discovery_Spotlight_C::ExecuteUbergraph_UI_CFCore_Discovery_Spot
 
 void UUI_CFCore_Discovery_Spotlight_C::FoundMods(const TArray<struct FCFCoreMod>& mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "FoundMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "FoundMods", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_FoundMods Parms{};
 
@@ -176,10 +158,8 @@ void UUI_CFCore_Discovery_Spotlight_C::FoundMods(const TArray<struct FCFCoreMod>
 
 void UUI_CFCore_Discovery_Spotlight_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_GetRootCFWidget Parms{};
 
@@ -195,10 +175,8 @@ void UUI_CFCore_Discovery_Spotlight_C::GetRootCFWidget(class UPanelWidget** Root
 
 void UUI_CFCore_Discovery_Spotlight_C::GoBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "GoBack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "GoBack", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +189,8 @@ void UUI_CFCore_Discovery_Spotlight_C::GoBack()
 
 void UUI_CFCore_Discovery_Spotlight_C::OnFail_595996E447E7F8948FB0EBAE4414047D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "OnFail_595996E447E7F8948FB0EBAE4414047D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "OnFail_595996E447E7F8948FB0EBAE4414047D", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_OnFail_595996E447E7F8948FB0EBAE4414047D Parms{};
 
@@ -231,10 +207,8 @@ void UUI_CFCore_Discovery_Spotlight_C::OnFail_595996E447E7F8948FB0EBAE4414047D(c
 
 void UUI_CFCore_Discovery_Spotlight_C::OnSuccess_595996E447E7F8948FB0EBAE4414047D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "OnSuccess_595996E447E7F8948FB0EBAE4414047D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "OnSuccess_595996E447E7F8948FB0EBAE4414047D", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_OnSuccess_595996E447E7F8948FB0EBAE4414047D Parms{};
 
@@ -252,10 +226,8 @@ void UUI_CFCore_Discovery_Spotlight_C::OnSuccess_595996E447E7F8948FB0EBAE4414047
 
 void UUI_CFCore_Discovery_Spotlight_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_Spotlight_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_Spotlight_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_Discovery_Spotlight_C_Tick Parms{};
 

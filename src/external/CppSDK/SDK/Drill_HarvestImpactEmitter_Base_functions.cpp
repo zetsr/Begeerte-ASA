@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ADrill_HarvestImpactEmitter_Base_C::BPOnSetEmitterInstigatorFromSpawn(class APawn* NewInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Drill_HarvestImpactEmitter_Base_C", "BPOnSetEmitterInstigatorFromSpawn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Drill_HarvestImpactEmitter_Base_C", "BPOnSetEmitterInstigatorFromSpawn", FuncInfo);
 
 	Params::Drill_HarvestImpactEmitter_Base_C_BPOnSetEmitterInstigatorFromSpawn Parms{};
 
@@ -43,10 +41,8 @@ void ADrill_HarvestImpactEmitter_Base_C::BPOnSetEmitterInstigatorFromSpawn(class
 
 void ADrill_HarvestImpactEmitter_Base_C::ExecuteUbergraph_Drill_HarvestImpactEmitter_Base(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Drill_HarvestImpactEmitter_Base_C", "ExecuteUbergraph_Drill_HarvestImpactEmitter_Base");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Drill_HarvestImpactEmitter_Base_C", "ExecuteUbergraph_Drill_HarvestImpactEmitter_Base", FuncInfo);
 
 	Params::Drill_HarvestImpactEmitter_Base_C_ExecuteUbergraph_Drill_HarvestImpactEmitter_Base Parms{};
 

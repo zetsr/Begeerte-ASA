@@ -12,17 +12,52 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "RigVM_structs.hpp"
-#include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "Engine_classes.hpp"
+#include "RigVM_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class RigVM.RigVMGraphFunctionHost
-// 0x0000 (0x0000 - 0x0000)
-class IRigVMGraphFunctionHost final
+// Class RigVM.RigVMRuntimeAssetInterface
+// 0x0008 (0x0008 - 0x0000)
+class IRigVMRuntimeAssetInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RigVMRuntimeAssetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RigVMRuntimeAssetInterface")
+	}
+	static class IRigVMRuntimeAssetInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IRigVMRuntimeAssetInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IRigVMRuntimeAssetInterface;
+
+// Class RigVM.RigVMGraphFunctionHost
+// 0x0008 (0x0008 - 0x0000)
+class IRigVMGraphFunctionHost
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -46,14 +81,62 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IRigVMGraphFunctionHost;
 
-// Class RigVM.RigVMBlueprintGeneratedClass
-// 0x0028 (0x03A0 - 0x0378)
-class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass
+// Class RigVM.RigVMRuntimeAsset
+// 0x0678 (0x06A0 - 0x0028)
+#pragma pack(push, 0x1)
+class SDK_ALIGN(0x10) URigVMRuntimeAsset : public UObject, public IRigVMRuntimeAssetInterface, public MIPad::Pad<0x10, 0x40>, public IRigVMGraphFunctionHost
 {
 public:
-	uint8                                         Pad_378[0x8];                                      // 0x0378(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMGraphFunctionStore               GraphFunctionStore;                                // 0x0380(0x0020)(NativeAccessSpecifierPublic)
+	class URigVM*                                 VM;                                                // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FRigVMExtendedExecuteContext           ExecuteContext;                                    // 0x0050(0x0390)(Protected, NativeAccessSpecifierProtected)
+	struct FRigVMPropertyBag                      Variables;                                         // 0x03E0(0x0028)(Protected, NativeAccessSpecifierProtected)
+	struct FRigVMGraphFunctionStore               GraphFunctionStore;                                // 0x0408(0x0020)(Protected, NativeAccessSpecifierProtected)
+	TArray<struct FRigVMGraphFunctionHeader>      PublicGraphFunctions;                              // 0x0428(0x0010)(ZeroConstructor, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
+	struct FRigVMRuntimeSettings                  RuntimeSettings;                                   // 0x0438(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FRigVMDrawContainer                    DrawContainer;                                     // 0x0450(0x0018)(Protected, NativeAccessSpecifierProtected)
+	struct FRigVMVariant                          AssetVariant;                                      // 0x0468(0x0020)(Edit, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FSoftObjectPath>   UserDefinedStructGuidToPathName;                   // 0x0488(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FSoftObjectPath>   UserDefinedEnumToPathName;                         // 0x04D8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TSet<class UObject*>                          UserDefinedTypesInUse;                             // 0x0528(0x0050)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class FName>                           SupportedEventNames;                               // 0x0578(0x0010)(ZeroConstructor, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
+	ERigVMAssetStatus                             Status;                                            // 0x0588(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         RequiredPlugins;                                   // 0x0590(0x0010)(Edit, ZeroConstructor, EditConst, AssetRegistrySearchable, Protected, NativeAccessSpecifierProtected)
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x05A0(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_5B0[0xE8];                                     // 0x05B0(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TArray<struct FRigVMGraphVariableDescription> GetAssetVariables() const;
+	class UClass* GetRigVMHostClass() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RigVMRuntimeAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RigVMRuntimeAsset")
+	}
+	static class URigVMRuntimeAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URigVMRuntimeAsset>();
+	}
+};
+#pragma pack(pop)
+DUMPER7_ASSERTS_URigVMRuntimeAsset;
+
+// Class RigVM.RigVMBlueprintGeneratedClass
+// 0x0070 (0x03F0 - 0x0380)
+class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass, public IRigVMGraphFunctionHost, public IRigVMRuntimeAssetInterface
+{
+public:
+	uint8                                         Pad_390[0x10];                                     // 0x0390(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMGraphFunctionStore               GraphFunctionStore;                                // 0x03A0(0x0020)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SupportedEventNames;                               // 0x03C0(0x0010)(ZeroConstructor, AssetRegistrySearchable, NativeAccessSpecifierPublic)
+	struct FRigVMVariant                          AssetVariant;                                      // 0x03D0(0x0020)(AssetRegistrySearchable, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -69,26 +152,26 @@ public:
 		return GetDefaultObjImpl<URigVMBlueprintGeneratedClass>();
 	}
 };
+DUMPER7_ASSERTS_URigVMBlueprintGeneratedClass;
 
 // Class RigVM.RigVM
-// 0x0390 (0x03B8 - 0x0028)
+// 0x0398 (0x03C0 - 0x0028)
 class URigVM : public UObject
 {
 public:
 	struct FRigVMMemoryStorageStruct              LiteralMemoryStorage;                              // 0x0028(0x0050)(NativeAccessSpecifierPublic)
 	struct FRigVMMemoryStorageStruct              DefaultWorkMemoryStorage;                          // 0x0078(0x0050)(NativeAccessSpecifierPublic)
-	struct FRigVMMemoryStorageStruct              DefaultDebugMemoryStorage;                         // 0x00C8(0x0050)(NativeAccessSpecifierPublic)
+	struct FRigVMMemoryStorageStruct              DefaultDebugMemoryStorage;                         // 0x00C8(0x0050)(Deprecated, NativeAccessSpecifierPublic)
 	uint8                                         Pad_118[0x20];                                     // 0x0118(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMByteCode                         ByteCodeStorage;                                   // 0x0138(0x00B0)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMInstructionArray                 Instructions;                                      // 0x01F0(0x0010)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_200[0x8];                                      // 0x0200(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           FunctionNamesStorage;                              // 0x0208(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_218[0x38];                                     // 0x0218(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigVMParameter>                Parameters;                                        // 0x0250(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_260[0xD8];                                     // 0x0260(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        CachedVMHash;                                      // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_33C[0x7C];                                     // 0x033C(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRigVMByteCode                         ByteCodeStorage;                                   // 0x0138(0x00C0)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x18];                                     // 0x01F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMInstructionArray                 Instructions;                                      // 0x0210(0x0010)(Transient, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           FunctionNamesStorage;                              // 0x0220(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_230[0x38];                                     // 0x0230(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigVMParameter>                Parameters;                                        // 0x0268(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_278[0xA8];                                     // 0x0278(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        CachedVMHash;                                      // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_324[0x9C];                                     // 0x0324(0x009C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 AddRigVMFunction(class UScriptStruct* InRigVMStruct, const class FName& InMethodName);
@@ -131,13 +214,14 @@ public:
 		return GetDefaultObjImpl<URigVM>();
 	}
 };
+DUMPER7_ASSERTS_URigVM;
 
 // Class RigVM.NameSpacedUserData
 // 0x00D8 (0x0100 - 0x0028)
 class UNameSpacedUserData : public UAssetUserData
 {
 public:
-	class FString                                 NameSpace;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Namespace;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0xC8];                                      // 0x0038(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -154,6 +238,7 @@ public:
 		return GetDefaultObjImpl<UNameSpacedUserData>();
 	}
 };
+DUMPER7_ASSERTS_UNameSpacedUserData;
 
 // Class RigVM.DataAssetLink
 // 0x0030 (0x0130 - 0x0100)
@@ -182,13 +267,14 @@ public:
 		return GetDefaultObjImpl<UDataAssetLink>();
 	}
 };
+DUMPER7_ASSERTS_UDataAssetLink;
 
 // Class RigVM.RigVMMemoryStorageGeneratorClass
-// 0x0040 (0x0258 - 0x0218)
+// 0x0040 (0x0260 - 0x0220)
 class URigVMMemoryStorageGeneratorClass final : public UClass
 {
 public:
-	uint8                                         Pad_218[0x40];                                     // 0x0218(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_220[0x40];                                     // 0x0220(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -204,6 +290,7 @@ public:
 		return GetDefaultObjImpl<URigVMMemoryStorageGeneratorClass>();
 	}
 };
+DUMPER7_ASSERTS_URigVMMemoryStorageGeneratorClass;
 
 // Class RigVM.RigVMMemoryStorage
 // 0x0000 (0x0028 - 0x0028)
@@ -223,14 +310,12 @@ public:
 		return GetDefaultObjImpl<URigVMMemoryStorage>();
 	}
 };
+DUMPER7_ASSERTS_URigVMMemoryStorage;
 
 // Class RigVM.RigVMNativized
-// 0x0028 (0x03E0 - 0x03B8)
+// 0x0000 (0x03C0 - 0x03C0)
 class URigVMNativized final : public URigVM
 {
-public:
-	uint8                                         Pad_3B8[0x28];                                     // 0x03B8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -245,6 +330,7 @@ public:
 		return GetDefaultObjImpl<URigVMNativized>();
 	}
 };
+DUMPER7_ASSERTS_URigVMNativized;
 
 // Class RigVM.RigVMUserWorkflowOptions
 // 0x0070 (0x0098 - 0x0028)
@@ -277,26 +363,29 @@ public:
 		return GetDefaultObjImpl<URigVMUserWorkflowOptions>();
 	}
 };
+DUMPER7_ASSERTS_URigVMUserWorkflowOptions;
 
 // Class RigVM.RigVMHost
-// 0x0250 (0x0278 - 0x0028)
-class URigVMHost : public UObject
+// 0x02C8 (0x02F0 - 0x0028)
+class URigVMHost : public UObject, public IInterface_AssetUserData
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigVMRuntimeSettings                  VMRuntimeSettings;                                 // 0x0030(0x0018)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigVM*                                 VM;                                                // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TMap<class FString, struct FSoftObjectPath>   UserDefinedStructGuidToPathName;                   // 0x0060(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TMap<class FString, struct FSoftObjectPath>   UserDefinedEnumToPathName;                         // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<class UObject*>                          UserDefinedTypesInUse;                             // 0x0100(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_150[0x8];                                      // 0x0150(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMDrawContainer                    DrawContainer;                                     // 0x0158(0x0018)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_170[0x18];                                     // 0x0170(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           EventQueue;                                        // 0x0188(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_198[0x90];                                     // 0x0198(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0228(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_238[0x40];                                     // 0x0238(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x28];                                      // 0x0048(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class URigVM*                                 VM;                                                // 0x0070(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FRigVMPropertyBag                      Variables;                                         // 0x0078(0x0028)(Protected, NativeAccessSpecifierProtected)
+	TScriptInterface<class IRigVMRuntimeAssetInterface> GeneratedBy;                                 // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FSoftObjectPath>   UserDefinedStructGuidToPathName;                   // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class FString, struct FSoftObjectPath>   UserDefinedEnumToPathName;                         // 0x0100(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TArray<class FString>                         RequiredPlugins;                                   // 0x0150(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<class UObject*>                          UserDefinedTypesInUse;                             // 0x0160(0x0050)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_1B0[0x8];                                      // 0x01B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMDrawContainer                    DrawContainer;                                     // 0x01B8(0x0018)(NativeAccessSpecifierPublic)
+	struct FRigVMDrawInterface                    DrawInterface;                                     // 0x01D0(0x0018)(Transient, NativeAccessSpecifierPublic)
+	TArray<class FName>                           EventQueue;                                        // 0x01E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x80];                                     // 0x01F8(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0278(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_288[0x68];                                     // 0x0288(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static TArray<class URigVMHost*> FindRigVMHosts(class UObject* Outer_0, TSubclassOf<class URigVMHost> OptionalClass);
@@ -338,7 +427,14 @@ public:
 	{
 		return GetDefaultObjImpl<URigVMHost>();
 	}
+
+public:
+	bool AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	class UAssetUserData* GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	bool HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	void RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
 };
+DUMPER7_ASSERTS_URigVMHost;
 
 // Class RigVM.RigVMEditorSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -358,6 +454,7 @@ public:
 		return GetDefaultObjImpl<URigVMEditorSettings>();
 	}
 };
+DUMPER7_ASSERTS_URigVMEditorSettings;
 
 // Class RigVM.RigVMProjectSettings
 // 0x0010 (0x0048 - 0x0038)
@@ -383,5 +480,6 @@ public:
 		return GetDefaultObjImpl<URigVMProjectSettings>();
 	}
 };
+DUMPER7_ASSERTS_URigVMProjectSettings;
 
 SDK_NAMESPACE_END

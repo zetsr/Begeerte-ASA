@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AudioExtensions_classes.hpp"
 #include "ResonanceAudio_structs.hpp"
+#include "AudioExtensions_classes.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
@@ -41,6 +41,7 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSoundfieldSettings>();
 	}
 };
+DUMPER7_ASSERTS_UResonanceAudioSoundfieldSettings;
 
 // Class ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -64,15 +65,16 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioBlueprintFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UResonanceAudioBlueprintFunctionLibrary;
 
 // Class ResonanceAudio.ResonanceAudioDirectivityVisualizer
-// 0x0080 (0x0510 - 0x0490)
+// 0x0080 (0x0518 - 0x0498)
 class AResonanceAudioDirectivityVisualizer final : public AActor
 {
 public:
-	uint8                                         Pad_490[0x70];                                     // 0x0490(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterial*                              Material;                                          // 0x0500(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class UResonanceAudioSpatializationSourceSettings* Settings;                                     // 0x0508(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_498[0x70];                                     // 0x0498(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterial*                              Material;                                          // 0x0508(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UResonanceAudioSpatializationSourceSettings* Settings;                                     // 0x0510(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -88,6 +90,7 @@ public:
 		return GetDefaultObjImpl<AResonanceAudioDirectivityVisualizer>();
 	}
 };
+DUMPER7_ASSERTS_AResonanceAudioDirectivityVisualizer;
 
 // Class ResonanceAudio.ResonanceAudioReverbPluginPreset
 // 0x0108 (0x0170 - 0x0068)
@@ -122,6 +125,7 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioReverbPluginPreset>();
 	}
 };
+DUMPER7_ASSERTS_UResonanceAudioReverbPluginPreset;
 
 // Class ResonanceAudio.ResonanceAudioSettings
 // 0x0068 (0x0090 - 0x0028)
@@ -148,6 +152,7 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSettings>();
 	}
 };
+DUMPER7_ASSERTS_UResonanceAudioSettings;
 
 // Class ResonanceAudio.ResonanceAudioSpatializationSourceSettings
 // 0x0028 (0x0050 - 0x0028)
@@ -186,5 +191,6 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSpatializationSourceSettings>();
 	}
 };
+DUMPER7_ASSERTS_UResonanceAudioSpatializationSourceSettings;
 
 SDK_NAMESPACE_END

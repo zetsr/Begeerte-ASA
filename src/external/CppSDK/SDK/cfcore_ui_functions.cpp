@@ -344,11 +344,11 @@ bool ICFCoreUIBaseModel::OnEventReceived_Installed(const EGameModsEvent& evt, co
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const EGameModsEvent&                   evt                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FLibraryProgress&          progress                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FLibraryProgress&          Progress                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<struct FInstallProgressMod>*     OutModsList                                            (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ICFCoreUIBaseModel::OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& progress, TArray<struct FInstallProgressMod>* OutModsList)
+bool ICFCoreUIBaseModel::OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& Progress, TArray<struct FInstallProgressMod>* OutModsList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -358,7 +358,7 @@ bool ICFCoreUIBaseModel::OnEventReceived_LibraryProgress(const EGameModsEvent& e
 	Params::CFCoreUIBaseModel_OnEventReceived_LibraryProgress Parms{};
 
 	Parms.evt = evt;
-	Parms.progress = std::move(progress);
+	Parms.Progress = std::move(Progress);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -468,6 +468,108 @@ void UCFCoreUIInstallProgressModHelperFunctionsLibrary::UpdateInstallProgressMod
 
 	if (OutOrderedInstalledModsProperties != nullptr)
 		*OutOrderedInstalledModsProperties = std::move(Parms.OutOrderedInstalledModsProperties);
+}
+
+
+// Function cfcore_ui.CFCoreUIBaseModel.OnEventReceived
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EGameModsEvent&                   evt                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FCFCoreMod>&        InModsList                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FInstallProgressMod>*     OutModsList                                            (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCFCoreUIModel::OnEventReceived(const EGameModsEvent& evt, const TArray<struct FCFCoreMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CFCoreUIBaseModel", "OnEventReceived");
+
+	Params::CFCoreUIBaseModel_OnEventReceived Parms{};
+
+	Parms.evt = evt;
+	Parms.InModsList = std::move(InModsList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutModsList != nullptr)
+		*OutModsList = std::move(Parms.OutModsList);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function cfcore_ui.CFCoreUIBaseModel.OnEventReceived_Installed
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EGameModsEvent&                   evt                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FInstalledMod>&     InModsList                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FInstallProgressMod>*     OutModsList                                            (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCFCoreUIModel::OnEventReceived_Installed(const EGameModsEvent& evt, const TArray<struct FInstalledMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CFCoreUIBaseModel", "OnEventReceived_Installed");
+
+	Params::CFCoreUIBaseModel_OnEventReceived_Installed Parms{};
+
+	Parms.evt = evt;
+	Parms.InModsList = std::move(InModsList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutModsList != nullptr)
+		*OutModsList = std::move(Parms.OutModsList);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function cfcore_ui.CFCoreUIBaseModel.OnEventReceived_LibraryProgress
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EGameModsEvent&                   evt                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLibraryProgress&          Progress                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FInstallProgressMod>*     OutModsList                                            (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCFCoreUIModel::OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& Progress, TArray<struct FInstallProgressMod>* OutModsList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CFCoreUIBaseModel", "OnEventReceived_LibraryProgress");
+
+	Params::CFCoreUIBaseModel_OnEventReceived_LibraryProgress Parms{};
+
+	Parms.evt = evt;
+	Parms.Progress = std::move(Progress);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutModsList != nullptr)
+		*OutModsList = std::move(Parms.OutModsList);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -640,9 +742,9 @@ void UCFCoreUISubsystem::GetMyMods()
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int64                                   modId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    productId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ProductId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreUISubsystem::GetPriceOfProduct(int64 modId, const class FString& productId)
+void UCFCoreUISubsystem::GetPriceOfProduct(int64 modId, const class FString& ProductId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -652,7 +754,7 @@ void UCFCoreUISubsystem::GetPriceOfProduct(int64 modId, const class FString& pro
 	Params::CFCoreUISubsystem_GetPriceOfProduct Parms{};
 
 	Parms.modId = modId;
-	Parms.productId = std::move(productId);
+	Parms.ProductId = std::move(ProductId);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -884,9 +986,9 @@ void UCFCoreUISubsystem::OnGetModsByIds(const TArray<struct FCFCoreMod>& mods)
 // Function cfcore_ui.CFCoreUISubsystem.OnInstallProgress
 // (Final, Native, Private, HasOutParams)
 // Parameters:
-// const struct FLibraryProgress&          progress                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FLibraryProgress&          Progress                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UCFCoreUISubsystem::OnInstallProgress(const struct FLibraryProgress& progress)
+void UCFCoreUISubsystem::OnInstallProgress(const struct FLibraryProgress& Progress)
 {
 	static class UFunction* Func = nullptr;
 
@@ -895,7 +997,7 @@ void UCFCoreUISubsystem::OnInstallProgress(const struct FLibraryProgress& progre
 
 	Params::CFCoreUISubsystem_OnInstallProgress Parms{};
 
-	Parms.progress = std::move(progress);
+	Parms.Progress = std::move(Progress);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

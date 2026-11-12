@@ -16,8 +16,1167 @@
 
 SDK_NAMESPACE_START
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.AddCollisionSource
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.SetOverlayMaterial
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               NewOverlayMaterial                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetBase::SetOverlayMaterial(class UMaterialInterface* NewOverlayMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "SetOverlayMaterial");
+
+	Params::ChaosClothAssetBase_SetOverlayMaterial Parms{};
+
+	Parms.NewOverlayMaterial = NewOverlayMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.SetOverlayMaterialMaxDrawDistance
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InMaxDrawDistance                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetBase::SetOverlayMaterialMaxDrawDistance(float InMaxDrawDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "SetOverlayMaterialMaxDrawDistance");
+
+	Params::ChaosClothAssetBase_SetOverlayMaterialMaxDrawDistance Parms{};
+
+	Parms.InMaxDrawDistance = InMaxDrawDistance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetOverlayMaterial
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInterface* UChaosClothAssetBase::GetOverlayMaterial() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "GetOverlayMaterial");
+
+	Params::ChaosClothAssetBase_GetOverlayMaterial Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetOverlayMaterialMaxDrawDistance
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetBase::GetOverlayMaterialMaxDrawDistance() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "GetOverlayMaterialMaxDrawDistance");
+
+	Params::ChaosClothAssetBase_GetOverlayMaterialMaxDrawDistance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetShadowPhysicsAsset
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPhysicsAsset*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPhysicsAsset* UChaosClothAssetBase::GetShadowPhysicsAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "GetShadowPhysicsAsset");
+
+	Params::ChaosClothAssetBase_GetShadowPhysicsAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.HasDataflow
+// (Final, Native, Public, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UChaosClothAssetBase::HasDataflow() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetBase", "HasDataflow");
+
+	Params::ChaosClothAssetBase_HasDataflow Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetFloatValue
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetFloatValue");
+
+	Params::ChaosClothAssetInteractor_SetFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetHighFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetHighFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetHighFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetHighFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetHighFloatValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetHighFloatValue");
+
+	Params::ChaosClothAssetInteractor_SetHighFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetIntPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetIntPropertyValue(const class FName PropertyName, int32 LODIndex, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetIntPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetIntPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetIntValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetIntValue(const class FString& PropertyName, int32 LODIndex, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetIntValue");
+
+	Params::ChaosClothAssetInteractor_SetIntValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetLowFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetLowFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetLowFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetLowFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetLowFloatValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetLowFloatValue");
+
+	Params::ChaosClothAssetInteractor_SetLowFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetPropertySet
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FClothAssetInteractorPropertyBag&PropertySet                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetPropertySet(const struct FClothAssetInteractorPropertyBag& PropertySet, int32 LODIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetPropertySet");
+
+	Params::ChaosClothAssetInteractor_SetPropertySet Parms{};
+
+	Parms.PropertySet = std::move(PropertySet);
+	Parms.LODIndex = LODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetStringPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetStringPropertyValue(const class FName PropertyName, int32 LODIndex, const class FString& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetStringPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetStringPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetStringValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetStringValue");
+
+	Params::ChaosClothAssetInteractor_SetStringValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetVectorPropertyValue
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetVectorPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetVectorPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetVectorPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetVectorValue
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetVectorValue");
+
+	Params::ChaosClothAssetInteractor_SetVectorValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetWeightedFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetWeightedFloatPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetWeightedFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_SetWeightedFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetWeightedFloatValue
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothAssetInteractor::SetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetWeightedFloatValue");
+
+	Params::ChaosClothAssetInteractor_SetWeightedFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetAllProperties
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UChaosClothAssetInteractor::GetAllProperties(int32 LODIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetAllProperties");
+
+	Params::ChaosClothAssetInteractor_GetAllProperties Parms{};
+
+	Parms.LODIndex = LODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetAllPropertyNames
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UChaosClothAssetInteractor::GetAllPropertyNames(int32 LODIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetAllPropertyNames");
+
+	Params::ChaosClothAssetInteractor_GetAllPropertyNames Parms{};
+
+	Parms.LODIndex = LODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetFloatValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetFloatValue");
+
+	Params::ChaosClothAssetInteractor_GetFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetHighFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetHighFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetHighFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetHighFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetHighFloatValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetHighFloatValue");
+
+	Params::ChaosClothAssetInteractor_GetHighFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetIntPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UChaosClothAssetInteractor::GetIntPropertyValue(const class FName PropertyName, int32 LODIndex, int32 DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetIntPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetIntPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetIntValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UChaosClothAssetInteractor::GetIntValue(const class FString& PropertyName, int32 LODIndex, int32 DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetIntValue");
+
+	Params::ChaosClothAssetInteractor_GetIntValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetLowFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetLowFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetLowFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetLowFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetLowFloatValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothAssetInteractor::GetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetLowFloatValue");
+
+	Params::ChaosClothAssetInteractor_GetLowFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = DefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetStringPropertyValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UChaosClothAssetInteractor::GetStringPropertyValue(const class FName PropertyName, int32 LODIndex, const class FString& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetStringPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetStringPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetStringValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UChaosClothAssetInteractor::GetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetStringValue");
+
+	Params::ChaosClothAssetInteractor_GetStringValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetVectorPropertyValue
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UChaosClothAssetInteractor::GetVectorPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetVectorPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetVectorPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetVectorValue
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UChaosClothAssetInteractor::GetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetVectorValue");
+
+	Params::ChaosClothAssetInteractor_GetVectorValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetWeightedFloatPropertyValue
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UChaosClothAssetInteractor::GetWeightedFloatPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetWeightedFloatPropertyValue");
+
+	Params::ChaosClothAssetInteractor_GetWeightedFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetWeightedFloatValue
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UChaosClothAssetInteractor::GetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetWeightedFloatValue");
+
+	Params::ChaosClothAssetInteractor_GetWeightedFloatValue Parms{};
+
+	Parms.PropertyName = std::move(PropertyName);
+	Parms.LODIndex = LODIndex;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ClothAssetInteractorDataAsset.SynchronizePropertySets
+// (Final, Native, Public)
+
+void UClothAssetInteractorDataAsset::SynchronizePropertySets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ClothAssetInteractorDataAsset", "SynchronizePropertySets");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ClothAssetInteractorDataAsset.GetPropertySet
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName                       SetName                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FClothAssetInteractorPropertyBagReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FClothAssetInteractorPropertyBag UClothAssetInteractorDataAsset::GetPropertySet(const class FName SetName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ClothAssetInteractorDataAsset", "GetPropertySet");
+
+	Params::ClothAssetInteractorDataAsset_GetPropertySet Parms{};
+
+	Parms.SetName = SetName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothAssetSKMClothingAsset.GetClothSimulationModelIds
+// (Final, Native, Private, Const)
+// Parameters:
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UChaosClothAssetSKMClothingAsset::GetClothSimulationModelIds() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothAssetSKMClothingAsset", "GetClothSimulationModelIds");
+
+	Params::ChaosClothAssetSKMClothingAsset_GetClothSimulationModelIds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.AddCollisionSource
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkinnedMeshComponent*            SourceComponent                                        (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UPhysicsAsset*              SourcePhysicsAsset                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -84,11 +1243,13 @@ void UChaosClothComponent::ForceNextUpdateTeleportAndReset()
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.GetClothOutfitInteractor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
+// int32                                   ModelIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName                       ClothSimulationModelName                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UChaosClothAssetInteractor*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UChaosClothAssetInteractor* UChaosClothComponent::GetClothOutfitInteractor()
+class UChaosClothAssetInteractor* UChaosClothComponent::GetClothOutfitInteractor(int32 ModelIndex, const class FName ClothSimulationModelName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -96,6 +1257,9 @@ class UChaosClothAssetInteractor* UChaosClothComponent::GetClothOutfitInteractor
 		Func = Class->GetFunction("ChaosClothComponent", "GetClothOutfitInteractor");
 
 	Params::ChaosClothComponent_GetClothOutfitInteractor Parms{};
+
+	Parms.ModelIndex = ModelIndex;
+	Parms.ClothSimulationModelName = ClothSimulationModelName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -109,7 +1273,7 @@ class UChaosClothAssetInteractor* UChaosClothComponent::GetClothOutfitInteractor
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.RecreateClothSimulationProxy
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UChaosClothComponent::RecreateClothSimulationProxy()
 {
@@ -128,7 +1292,7 @@ void UChaosClothComponent::RecreateClothSimulationProxy()
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSource
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USkinnedMeshComponent*      SourceComponent                                        (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UPhysicsAsset*              SourcePhysicsAsset                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -155,7 +1319,7 @@ void UChaosClothComponent::RemoveCollisionSource(const class USkinnedMeshCompone
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSources
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USkinnedMeshComponent*      SourceComponent                                        (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -180,7 +1344,7 @@ void UChaosClothComponent::RemoveCollisionSources(const class USkinnedMeshCompon
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.ResetCollisionSources
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UChaosClothComponent::ResetCollisionSources()
 {
@@ -199,7 +1363,7 @@ void UChaosClothComponent::ResetCollisionSources()
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.ResetConfigProperties
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UChaosClothComponent::ResetConfigProperties()
 {
@@ -212,6 +1376,31 @@ void UChaosClothComponent::ResetConfigProperties()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.ResetRestLengthsWithMorphTarget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    MorphTargetName                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::ResetRestLengthsWithMorphTarget(const class FString& MorphTargetName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "ResetRestLengthsWithMorphTarget");
+
+	Params::ChaosClothComponent_ResetRestLengthsWithMorphTarget Parms{};
+
+	Parms.MorphTargetName = std::move(MorphTargetName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -255,8 +1444,33 @@ void UChaosClothComponent::ResumeSimulation()
 }
 
 
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UChaosClothAssetBase*             InAsset                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::SetAsset(class UChaosClothAssetBase* InAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "SetAsset");
+
+	Params::ChaosClothComponent_SetAsset Parms{};
+
+	Parms.InAsset = InAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosClothAssetEngine.ChaosClothComponent.SetClothAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UChaosClothAsset*                 InClothAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -270,6 +1484,31 @@ void UChaosClothComponent::SetClothAsset(class UChaosClothAsset* InClothAsset)
 	Params::ChaosClothComponent_SetClothAsset Parms{};
 
 	Parms.InClothAsset = InClothAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetCollideWithEnvironment
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bCollide                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::SetCollideWithEnvironment(bool bCollide)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "SetCollideWithEnvironment");
+
+	Params::ChaosClothComponent_SetCollideWithEnvironment Parms{};
+
+	Parms.bCollide = bCollide;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -305,6 +1544,81 @@ void UChaosClothComponent::SetEnableSimulation(bool bEnable)
 }
 
 
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetSimulateInEditor
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const bool                              bInSimulateInEditor                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::SetSimulateInEditor(const bool bInSimulateInEditor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "SetSimulateInEditor");
+
+	Params::ChaosClothComponent_SetSimulateInEditor Parms{};
+
+	Parms.bInSimulateInEditor = bInSimulateInEditor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetTeleportDistanceThreshold
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Threshold                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::SetTeleportDistanceThreshold(float Threshold)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "SetTeleportDistanceThreshold");
+
+	Params::ChaosClothComponent_SetTeleportDistanceThreshold Parms{};
+
+	Parms.Threshold = Threshold;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetTeleportRotationThreshold
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Threshold                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothComponent::SetTeleportRotationThreshold(float Threshold)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "SetTeleportRotationThreshold");
+
+	Params::ChaosClothComponent_SetTeleportRotationThreshold Parms{};
+
+	Parms.Threshold = Threshold;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosClothAssetEngine.ChaosClothComponent.SuspendSimulation
 // (Final, Native, Public, BlueprintCallable)
 
@@ -324,8 +1638,33 @@ void UChaosClothComponent::SuspendSimulation()
 }
 
 
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UChaosClothAssetBase*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UChaosClothAssetBase* UChaosClothComponent::GetAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "GetAsset");
+
+	Params::ChaosClothComponent_GetAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ChaosClothAssetEngine.ChaosClothComponent.GetClothAsset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UChaosClothAsset*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -349,8 +1688,83 @@ class UChaosClothAsset* UChaosClothComponent::GetClothAsset() const
 }
 
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationEnabled
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetCollideWithEnvironment
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UChaosClothComponent::GetCollideWithEnvironment() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "GetCollideWithEnvironment");
+
+	Params::ChaosClothComponent_GetCollideWithEnvironment Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetTeleportDistanceThreshold
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothComponent::GetTeleportDistanceThreshold() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "GetTeleportDistanceThreshold");
+
+	Params::ChaosClothComponent_GetTeleportDistanceThreshold Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetTeleportRotationThreshold
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UChaosClothComponent::GetTeleportRotationThreshold() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothComponent", "GetTeleportRotationThreshold");
+
+	Params::ChaosClothComponent_GetTeleportRotationThreshold Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationEnabled
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -375,7 +1789,7 @@ bool UChaosClothComponent::IsSimulationEnabled() const
 
 
 // Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationSuspended
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -387,486 +1801,6 @@ bool UChaosClothComponent::IsSimulationSuspended() const
 		Func = Class->GetFunction("ChaosClothComponent", "IsSimulationSuspended");
 
 	Params::ChaosClothComponent_IsSimulationSuspended Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAsset.GetShadowPhysicsAsset
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UPhysicsAsset*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPhysicsAsset* UChaosClothAsset::GetShadowPhysicsAsset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAsset", "GetShadowPhysicsAsset");
-
-	Params::ChaosClothAsset_GetShadowPhysicsAsset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetFloatValue");
-
-	Params::ChaosClothAssetInteractor_SetFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetHighFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetHighFloatValue");
-
-	Params::ChaosClothAssetInteractor_SetHighFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetIntValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetIntValue(const class FString& PropertyName, int32 LODIndex, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetIntValue");
-
-	Params::ChaosClothAssetInteractor_SetIntValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetLowFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetLowFloatValue");
-
-	Params::ChaosClothAssetInteractor_SetLowFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetStringValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetStringValue");
-
-	Params::ChaosClothAssetInteractor_SetStringValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetVectorValue
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetVectorValue");
-
-	Params::ChaosClothAssetInteractor_SetVectorValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetWeightedFloatValue
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UChaosClothAssetInteractor::SetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "SetWeightedFloatValue");
-
-	Params::ChaosClothAssetInteractor_SetWeightedFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetAllProperties
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FString> UChaosClothAssetInteractor::GetAllProperties(int32 LODIndex) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetAllProperties");
-
-	Params::ChaosClothAssetInteractor_GetAllProperties Parms{};
-
-	Parms.LODIndex = LODIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UChaosClothAssetInteractor::GetFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetFloatValue");
-
-	Params::ChaosClothAssetInteractor_GetFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = DefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetHighFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UChaosClothAssetInteractor::GetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetHighFloatValue");
-
-	Params::ChaosClothAssetInteractor_GetHighFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = DefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetIntValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UChaosClothAssetInteractor::GetIntValue(const class FString& PropertyName, int32 LODIndex, int32 DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetIntValue");
-
-	Params::ChaosClothAssetInteractor_GetIntValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = DefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetLowFloatValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UChaosClothAssetInteractor::GetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetLowFloatValue");
-
-	Params::ChaosClothAssetInteractor_GetLowFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = DefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetStringValue
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UChaosClothAssetInteractor::GetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetStringValue");
-
-	Params::ChaosClothAssetInteractor_GetStringValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = std::move(DefaultValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetVectorValue
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UChaosClothAssetInteractor::GetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetVectorValue");
-
-	Params::ChaosClothAssetInteractor_GetVectorValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = std::move(DefaultValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetWeightedFloatValue
-// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    PropertyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UChaosClothAssetInteractor::GetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChaosClothAssetInteractor", "GetWeightedFloatValue");
-
-	Params::ChaosClothAssetInteractor_GetWeightedFloatValue Parms{};
-
-	Parms.PropertyName = std::move(PropertyName);
-	Parms.LODIndex = LODIndex;
-	Parms.DefaultValue = std::move(DefaultValue);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

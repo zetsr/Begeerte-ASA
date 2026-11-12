@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Torpidity_None_StoneWeapon_AutoDrag_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_Melee_Torpidity_None_StoneWeapon_AutoDrag_C;
 
 SDK_NAMESPACE_END

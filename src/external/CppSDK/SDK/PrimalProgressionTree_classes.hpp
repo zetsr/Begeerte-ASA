@@ -19,18 +19,18 @@
 SDK_NAMESPACE_START
 
 // Class PrimalProgressionTree.PrimalProgressionTreeAsset
-// 0x0058 (0x0088 - 0x0030)
+// 0x0058 (0x0080 - 0x0028)
 class UPrimalProgressionTreeAsset final : public UPrimaryDataAsset
 {
 public:
-	TSubclassOf<class UPrimalProgressionTreeGraph> ProgressionGraphClass;                            // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimalProgressionTreeGraph*            ProgressionGraph;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              InputDataTable;                                    // 0x0040(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FText>                           AdditionalStrings;                                 // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         bUsesDedicatedSkillPointPool : 1;                  // 0x0078(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   SkillTreeTag;                                      // 0x007C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UPrimalProgressionTreeGraph> ProgressionGraphClass;                            // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimalProgressionTreeGraph*            ProgressionGraph;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              InputDataTable;                                    // 0x0038(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FText>                           AdditionalStrings;                                 // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         bUsesDedicatedSkillPointPool : 1;                  // 0x0070(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   SkillTreeTag;                                      // 0x0074(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeGraph();
@@ -49,6 +49,7 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeAsset>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeAsset;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeGraph
 // 0x0060 (0x0088 - 0x0028)
@@ -92,6 +93,7 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeGraph>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeGraph;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeFeature
 // 0x0000 (0x0028 - 0x0028)
@@ -111,6 +113,7 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeFeature>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeRowFeature
 // 0x0060 (0x0088 - 0x0028)
@@ -142,6 +145,7 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeRowFeature>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeRowFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeTierFeature
 // 0x00A0 (0x00C8 - 0x0028)
@@ -175,6 +179,7 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeTierFeature>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeTierFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeGraph_RowsAndTiers
 // 0x0010 (0x0098 - 0x0088)
@@ -201,5 +206,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeGraph_RowsAndTiers>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalProgressionTreeGraph_RowsAndTiers;
 
 SDK_NAMESPACE_END

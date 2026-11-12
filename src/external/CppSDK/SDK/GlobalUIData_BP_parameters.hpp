@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ShooterGame_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,7 +24,7 @@ struct GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo final
 public:
 	int32                                         SlotIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StateIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        progress;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Progress;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 MainText;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 ExtendedInfoText;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UTexture2D*                             Icon;                                              // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -99,6 +99,7 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x07D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast_1;    // 0x07D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo_ExtraBar
 // 0x0578 (0x0578 - 0x0000)
@@ -109,7 +110,7 @@ public:
 	int32                                         SlotSpan;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StateIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        progress;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Progress;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 ExtendedInfoText;                                  // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	struct FHUDElement                            OutHUDElement;                                     // 0x0028(0x01D8)(Parm, OutParm)
 	struct FHUDElement                            OutElem;                                           // 0x0200(0x01D8)(Edit, BlueprintVisible)
@@ -158,6 +159,7 @@ public:
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue_11;               // 0x0560(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHUDElementProgress_NewProgress_ImplicitCast; // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_ExtraBar;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo_Frame
 // 0x07D8 (0x07D8 - 0x0000)
@@ -187,6 +189,7 @@ public:
 	double                                        CallFunc_Add_DoubleFloat_A_ImplicitCast;           // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHUDElementRichTextScale_Scale_ImplicitCast; // 0x07D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_Frame;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_Struggle
 // 0x0550 (0x0550 - 0x0000)
@@ -245,6 +248,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeColor_A_ImplicitCast;                 // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_Struggle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_WaterskinCraftable_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_WaterskinCraftable_C;
 
 SDK_NAMESPACE_END

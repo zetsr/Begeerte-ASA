@@ -4657,9 +4657,9 @@ void UDiscordCall::SetStatusChangedCallback(const TDelegate<void(EDiscordCallSta
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Automatic                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   threshold                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Threshold                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordCall::SetVadThreshold(bool Automatic, float threshold)
+void UDiscordCall::SetVadThreshold(bool Automatic, float Threshold)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4669,7 +4669,7 @@ void UDiscordCall::SetVadThreshold(bool Automatic, float threshold)
 	Params::DiscordCall_SetVadThreshold Parms{};
 
 	Parms.Automatic = Automatic;
-	Parms.threshold = threshold;
+	Parms.Threshold = Threshold;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8327,10 +8327,10 @@ void UDiscordClient::AddVoiceLogCallback(const TDelegate<void(const class FStrin
 // Function DiscordPartnerSDK.DiscordClient.Authorize
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UDiscordAuthorizationArgs*        Args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDiscordAuthorizationArgs*        args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)>&Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordClient::Authorize(class UDiscordAuthorizationArgs* Args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)>& Callback)
+void UDiscordClient::Authorize(class UDiscordAuthorizationArgs* args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)>& Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8339,7 +8339,7 @@ void UDiscordClient::Authorize(class UDiscordAuthorizationArgs* Args, const TDel
 
 	Params::DiscordClient_Authorize Parms{};
 
-	Parms.Args = Args;
+	Parms.args = args;
 	Parms.Callback = Callback;
 
 	auto Flgs = Func->FunctionFlags;
@@ -9501,10 +9501,10 @@ void UDiscordClient::GetToken(const struct FDiscordUniqueID& ApplicationId, cons
 // Function DiscordPartnerSDK.DiscordClient.GetTokenFromDevice
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UDiscordDeviceAuthorizationArgs*  Args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDiscordDeviceAuthorizationArgs*  args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>&Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordClient::GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* Args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback)
+void UDiscordClient::GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -9513,7 +9513,7 @@ void UDiscordClient::GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* A
 
 	Params::DiscordClient_GetTokenFromDevice Parms{};
 
-	Parms.Args = Args;
+	Parms.args = args;
 	Parms.Callback = Callback;
 
 	auto Flgs = Func->FunctionFlags;
@@ -9528,12 +9528,12 @@ void UDiscordClient::GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* A
 // Function DiscordPartnerSDK.DiscordClient.GetTokenFromDeviceProvisionalMerge
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UDiscordDeviceAuthorizationArgs*  Args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDiscordDeviceAuthorizationArgs*  args                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EDiscordAuthenticationExternalAuthType  externalAuthType                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    externalAuthToken                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>&Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordClient::GetTokenFromDeviceProvisionalMerge(class UDiscordDeviceAuthorizationArgs* Args, EDiscordAuthenticationExternalAuthType externalAuthType, const class FString& externalAuthToken, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback)
+void UDiscordClient::GetTokenFromDeviceProvisionalMerge(class UDiscordDeviceAuthorizationArgs* args, EDiscordAuthenticationExternalAuthType externalAuthType, const class FString& externalAuthToken, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -9542,7 +9542,7 @@ void UDiscordClient::GetTokenFromDeviceProvisionalMerge(class UDiscordDeviceAuth
 
 	Params::DiscordClient_GetTokenFromDeviceProvisionalMerge Parms{};
 
-	Parms.Args = Args;
+	Parms.args = args;
 	Parms.externalAuthType = externalAuthType;
 	Parms.externalAuthToken = std::move(externalAuthToken);
 	Parms.Callback = Callback;
@@ -9799,9 +9799,9 @@ bool UDiscordClient::IsAuthenticated()
 // Function DiscordPartnerSDK.DiscordClient.IsDiscordAppInstalled
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TDelegate<void(bool installed)>&  Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(bool Installed)>&  Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordClient::IsDiscordAppInstalled(const TDelegate<void(bool installed)>& Callback)
+void UDiscordClient::IsDiscordAppInstalled(const TDelegate<void(bool Installed)>& Callback)
 {
 	static class UFunction* Func = nullptr;
 

@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void IInterface_PlayerData_C::Interface_PlayerData_Progress_Abb_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_PlayerData_C", "Interface_PlayerData Progress Abb Sigil Count");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_PlayerData_C", "Interface_PlayerData Progress Abb Sigil Count", FuncInfo);
 
 	Params::Interface_PlayerData_C_Interface_PlayerData_Progress_Abb_Sigil_Count Parms{};
 
@@ -51,10 +49,8 @@ void IInterface_PlayerData_C::Interface_PlayerData_Progress_Abb_Sigil_Count(uint
 
 void IInterface_PlayerData_C::Interface_PlayerData_Progress_Crimson_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_PlayerData_C", "Interface_PlayerData Progress Crimson Sigil Count");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_PlayerData_C", "Interface_PlayerData Progress Crimson Sigil Count", FuncInfo);
 
 	Params::Interface_PlayerData_C_Interface_PlayerData_Progress_Crimson_Sigil_Count Parms{};
 

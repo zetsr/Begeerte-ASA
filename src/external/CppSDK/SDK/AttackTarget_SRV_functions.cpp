@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UAttackTarget_SRV_C::ExecuteUbergraph_AttackTarget_SRV(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackTarget_SRV_C", "ExecuteUbergraph_AttackTarget_SRV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackTarget_SRV_C", "ExecuteUbergraph_AttackTarget_SRV", FuncInfo);
 
 	Params::AttackTarget_SRV_C_ExecuteUbergraph_AttackTarget_SRV Parms{};
 
@@ -43,10 +41,8 @@ void UAttackTarget_SRV_C::ExecuteUbergraph_AttackTarget_SRV(int32 EntryPoint)
 
 void UAttackTarget_SRV_C::ReceiveActivation(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackTarget_SRV_C", "ReceiveActivation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackTarget_SRV_C", "ReceiveActivation", FuncInfo);
 
 	Params::AttackTarget_SRV_C_ReceiveActivation Parms{};
 
@@ -63,10 +59,8 @@ void UAttackTarget_SRV_C::ReceiveActivation(class AActor* OwnerActor)
 
 void UAttackTarget_SRV_C::ReceiveDeactivation(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackTarget_SRV_C", "ReceiveDeactivation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackTarget_SRV_C", "ReceiveDeactivation", FuncInfo);
 
 	Params::AttackTarget_SRV_C_ReceiveDeactivation Parms{};
 

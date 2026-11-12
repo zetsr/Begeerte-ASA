@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool UUI_CFCore_Prompt_GoToComments_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_Prompt_GoToComments_C_BPGamepadReleased Parms{};
 
@@ -46,10 +44,8 @@ bool UUI_CFCore_Prompt_GoToComments_C::BPGamepadReleased(const struct FKey& theK
 
 bool UUI_CFCore_Prompt_GoToComments_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::UI_CFCore_Prompt_GoToComments_C_BPHighlightWidgetOnStart Parms{};
 
@@ -64,10 +60,8 @@ bool UUI_CFCore_Prompt_GoToComments_C::BPHighlightWidgetOnStart()
 
 void UUI_CFCore_Prompt_GoToComments_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +74,8 @@ void UUI_CFCore_Prompt_GoToComments_C::Construct()
 
 void UUI_CFCore_Prompt_GoToComments_C::ExecuteUbergraph_UI_CFCore_Prompt_GoToComments(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "ExecuteUbergraph_UI_CFCore_Prompt_GoToComments");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "ExecuteUbergraph_UI_CFCore_Prompt_GoToComments", FuncInfo);
 
 	Params::UI_CFCore_Prompt_GoToComments_C_ExecuteUbergraph_UI_CFCore_Prompt_GoToComments Parms{};
 
@@ -100,10 +92,8 @@ void UUI_CFCore_Prompt_GoToComments_C::ExecuteUbergraph_UI_CFCore_Prompt_GoToCom
 
 void UUI_CFCore_Prompt_GoToComments_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Prompt_GoToComments_C_GetRootCFWidget Parms{};
 
@@ -122,10 +112,8 @@ void UUI_CFCore_Prompt_GoToComments_C::GetRootCFWidget(class UPanelWidget** Root
 
 void UUI_CFCore_Prompt_GoToComments_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_Prompt_GoToComments_C_Tick Parms{};
 
@@ -141,10 +129,8 @@ void UUI_CFCore_Prompt_GoToComments_C::Tick(const struct FGeometry& MyGeometry, 
 
 void UUI_CFCore_Prompt_GoToComments_C::UpdateThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_GoToComments_C", "UpdateThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_GoToComments_C", "UpdateThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

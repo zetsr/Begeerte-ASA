@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_BaseGloves_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_BaseGloves_C;
 
 SDK_NAMESPACE_END

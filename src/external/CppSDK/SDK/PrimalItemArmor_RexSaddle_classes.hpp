@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_RexSaddle_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_RexSaddle_C;
 
 SDK_NAMESPACE_END

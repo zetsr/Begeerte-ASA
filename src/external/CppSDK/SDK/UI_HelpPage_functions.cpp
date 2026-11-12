@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_HelpPage_C::BPHandleDockedModeChange(bool bIsDocked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_HelpPage_C", "BPHandleDockedModeChange");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_HelpPage_C", "BPHandleDockedModeChange", FuncInfo);
 
 	Params::UI_HelpPage_C_BPHandleDockedModeChange Parms{};
 
@@ -41,10 +39,8 @@ void UUI_HelpPage_C::BPHandleDockedModeChange(bool bIsDocked)
 
 void UUI_HelpPage_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_HelpPage_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_HelpPage_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UUI_HelpPage_C::Construct()
 
 void UUI_HelpPage_C::ExecuteUbergraph_UI_HelpPage(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_HelpPage_C", "ExecuteUbergraph_UI_HelpPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_HelpPage_C", "ExecuteUbergraph_UI_HelpPage", FuncInfo);
 
 	Params::UI_HelpPage_C_ExecuteUbergraph_UI_HelpPage Parms{};
 
@@ -77,10 +71,8 @@ void UUI_HelpPage_C::ExecuteUbergraph_UI_HelpPage(int32 EntryPoint)
 
 class USizeBox* UUI_HelpPage_C::GetSizeboxForExtraHandheldScaling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_HelpPage_C", "GetSizeboxForExtraHandheldScaling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_HelpPage_C", "GetSizeboxForExtraHandheldScaling", FuncInfo);
 
 	Params::UI_HelpPage_C_GetSizeboxForExtraHandheldScaling Parms{};
 
@@ -97,10 +89,8 @@ class USizeBox* UUI_HelpPage_C::GetSizeboxForExtraHandheldScaling()
 
 class UWidget* UUI_HelpPage_C::GetWidgetToScaleForHandheld()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_HelpPage_C", "GetWidgetToScaleForHandheld");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_HelpPage_C", "GetWidgetToScaleForHandheld", FuncInfo);
 
 	Params::UI_HelpPage_C_GetWidgetToScaleForHandheld Parms{};
 

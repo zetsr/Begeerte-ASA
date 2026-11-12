@@ -25,6 +25,7 @@ public:
 	bool                                          bEnabled;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationBudgetBlueprintLibrary_EnableAnimationBudget;
 
 // Function AnimationBudgetAllocator.AnimationBudgetBlueprintLibrary.SetAnimationBudgetParameters
 // 0x0060 (0x0060 - 0x0000)
@@ -34,6 +35,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAnimationBudgetAllocatorParameters    InParameters;                                      // 0x0008(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimationBudgetBlueprintLibrary_SetAnimationBudgetParameters;
 
 // Function AnimationBudgetAllocator.SkeletalMeshComponentBudgeted.SetAutoRegisterWithBudgetAllocator
 // 0x0001 (0x0001 - 0x0000)
@@ -42,6 +44,7 @@ struct SkeletalMeshComponentBudgeted_SetAutoRegisterWithBudgetAllocator final
 public:
 	bool                                          bInAutoRegisterWithBudgetAllocator;                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SkeletalMeshComponentBudgeted_SetAutoRegisterWithBudgetAllocator;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

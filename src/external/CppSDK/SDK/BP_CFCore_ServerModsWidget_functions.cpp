@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UBP_CFCore_ServerModsWidget_C::AddToTotalSize(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "AddToTotalSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "AddToTotalSize", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_AddToTotalSize Parms{};
 
@@ -41,24 +39,20 @@ void UBP_CFCore_ServerModsWidget_C::AddToTotalSize(const struct FInstallProgress
 
 void UBP_CFCore_ServerModsWidget_C::AnimationPlayFadeInOnInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "AnimationPlayFadeInOnInit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "AnimationPlayFadeInOnInit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function BP_CFCore_ServerModsWidget.BP_CFCore_ServerModsWidget_C.AnimationPlayFadeInOnStart
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_CFCore_ServerModsWidget_C::AnimationPlayFadeInOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "AnimationPlayFadeInOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "AnimationPlayFadeInOnStart", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -69,10 +63,8 @@ void UBP_CFCore_ServerModsWidget_C::AnimationPlayFadeInOnStart()
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_10_OnClickedReturn__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_10_OnClickedReturn__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_10_OnClickedReturn__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -83,10 +75,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_11_OnClickedTryAgain__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_11_OnClickedTryAgain__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_11_OnClickedTryAgain__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +87,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_CFCore
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_Loading_K2Node_ComponentBoundEvent_9_OnClickedReturn__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_Loading_K2Node_ComponentBoundEvent_9_OnClickedReturn__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_CFCore_ServerModsWidget_UI_Loading_K2Node_ComponentBoundEvent_9_OnClickedReturn__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,10 +99,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_CFCore_ServerModsWidget_UI_Loadin
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_BUTTON_BACK_FROM_SUBMENU_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_BUTTON_BACK_FROM_SUBMENU_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_BUTTON_BACK_FROM_SUBMENU_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +111,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_BUTTON_BACK_FROM
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_BUTTON_MENU_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_BUTTON_MENU_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_BUTTON_MENU_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +123,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_BUTTON_MENU_K2No
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_4_ReportEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_4_ReportEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_4_ReportEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +135,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_ServerModsSubMen
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_5_FavoriteEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_5_FavoriteEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_ServerModsSubMenu_K2Node_ComponentBoundEvent_5_FavoriteEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +147,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_ServerModsSubMen
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_8_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_8_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_8_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +159,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_UI_Button_Ark_Gl
 
 void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BndEvt__BP_ServerModsWidget_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,10 +174,8 @@ void UBP_CFCore_ServerModsWidget_C::BndEvt__BP_ServerModsWidget_UI_Button_Ark_Gl
 
 void UBP_CFCore_ServerModsWidget_C::BP_ServerModsWidget_AutoGenFunc(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BP_ServerModsWidget_AutoGenFunc");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BP_ServerModsWidget_AutoGenFunc", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_BP_ServerModsWidget_AutoGenFunc Parms{};
 
@@ -220,10 +194,8 @@ void UBP_CFCore_ServerModsWidget_C::BP_ServerModsWidget_AutoGenFunc(const struct
 
 bool UBP_CFCore_ServerModsWidget_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BPGamepadReleased", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_BPGamepadReleased Parms{};
 
@@ -242,10 +214,8 @@ bool UBP_CFCore_ServerModsWidget_C::BPGamepadReleased(const struct FKey& theKey)
 
 bool UBP_CFCore_ServerModsWidget_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_BPHighlightWidgetOnStart Parms{};
 
@@ -260,10 +230,8 @@ bool UBP_CFCore_ServerModsWidget_C::BPHighlightWidgetOnStart()
 
 void UBP_CFCore_ServerModsWidget_C::CalculateFreeSpaceAvailable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "CalculateFreeSpaceAvailable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "CalculateFreeSpaceAvailable", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +242,8 @@ void UBP_CFCore_ServerModsWidget_C::CalculateFreeSpaceAvailable()
 
 void UBP_CFCore_ServerModsWidget_C::CompletedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "CompletedEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "CompletedEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -288,10 +254,8 @@ void UBP_CFCore_ServerModsWidget_C::CompletedEvent()
 
 void UBP_CFCore_ServerModsWidget_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,10 +269,8 @@ void UBP_CFCore_ServerModsWidget_C::Construct()
 
 void UBP_CFCore_ServerModsWidget_C::CreateFileModToIDList(TArray<struct FFile>& Array, TArray<int64>* ModsIds_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "CreateFileModToIDList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "CreateFileModToIDList", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_CreateFileModToIDList Parms{};
 
@@ -328,10 +290,8 @@ void UBP_CFCore_ServerModsWidget_C::CreateFileModToIDList(TArray<struct FFile>& 
 
 void UBP_CFCore_ServerModsWidget_C::CreateModList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "CreateModList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "CreateModList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -342,10 +302,8 @@ void UBP_CFCore_ServerModsWidget_C::CreateModList()
 
 void UBP_CFCore_ServerModsWidget_C::CreateModPricingList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "CreateModPricingList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "CreateModPricingList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +314,8 @@ void UBP_CFCore_ServerModsWidget_C::CreateModPricingList()
 
 void UBP_CFCore_ServerModsWidget_C::DEBUG_ForceAllModsBought()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "DEBUG_ForceAllModsBought");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "DEBUG_ForceAllModsBought", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -372,10 +328,8 @@ void UBP_CFCore_ServerModsWidget_C::DEBUG_ForceAllModsBought()
 
 void UBP_CFCore_ServerModsWidget_C::Debug_RequestFileInfosFromIDs(const TArray<int64>& TargetArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Debug_RequestFileInfosFromIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Debug_RequestFileInfosFromIDs", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_Debug_RequestFileInfosFromIDs Parms{};
 
@@ -392,10 +346,8 @@ void UBP_CFCore_ServerModsWidget_C::Debug_RequestFileInfosFromIDs(const TArray<i
 
 void UBP_CFCore_ServerModsWidget_C::Debug_SuccessFileInfosFromIDs(TArray<struct FFile>& files)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Debug_SuccessFileInfosFromIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Debug_SuccessFileInfosFromIDs", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_Debug_SuccessFileInfosFromIDs Parms{};
 
@@ -412,10 +364,8 @@ void UBP_CFCore_ServerModsWidget_C::Debug_SuccessFileInfosFromIDs(TArray<struct 
 
 void UBP_CFCore_ServerModsWidget_C::DebugDiskSizeUpdate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "DebugDiskSizeUpdate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "DebugDiskSizeUpdate", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -426,10 +376,8 @@ void UBP_CFCore_ServerModsWidget_C::DebugDiskSizeUpdate()
 
 void UBP_CFCore_ServerModsWidget_C::DebugLogin()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "DebugLogin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "DebugLogin", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -440,10 +388,8 @@ void UBP_CFCore_ServerModsWidget_C::DebugLogin()
 
 void UBP_CFCore_ServerModsWidget_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -454,10 +400,8 @@ void UBP_CFCore_ServerModsWidget_C::Destruct()
 
 void UBP_CFCore_ServerModsWidget_C::EndDownloadCheck()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "EndDownloadCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "EndDownloadCheck", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -468,10 +412,8 @@ void UBP_CFCore_ServerModsWidget_C::EndDownloadCheck()
 
 void UBP_CFCore_ServerModsWidget_C::ErrorEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "ErrorEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "ErrorEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -484,10 +426,8 @@ void UBP_CFCore_ServerModsWidget_C::ErrorEvent()
 
 void UBP_CFCore_ServerModsWidget_C::Event_On_Sync_Installed_Mods_Error(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Event On Sync Installed Mods Error");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Event On Sync Installed Mods Error", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_Event_On_Sync_Installed_Mods_Error Parms{};
 
@@ -502,10 +442,8 @@ void UBP_CFCore_ServerModsWidget_C::Event_On_Sync_Installed_Mods_Error(const str
 
 void UBP_CFCore_ServerModsWidget_C::Event_On_Sync_Installed_Mods_Success()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Event On Sync Installed Mods Success");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Event On Sync Installed Mods Success", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -518,10 +456,8 @@ void UBP_CFCore_ServerModsWidget_C::Event_On_Sync_Installed_Mods_Success()
 
 void UBP_CFCore_ServerModsWidget_C::ExecuteUbergraph_BP_CFCore_ServerModsWidget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "ExecuteUbergraph_BP_CFCore_ServerModsWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "ExecuteUbergraph_BP_CFCore_ServerModsWidget", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_ExecuteUbergraph_BP_CFCore_ServerModsWidget Parms{};
 
@@ -536,10 +472,8 @@ void UBP_CFCore_ServerModsWidget_C::ExecuteUbergraph_BP_CFCore_ServerModsWidget(
 
 void UBP_CFCore_ServerModsWidget_C::FadeInPageAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "FadeInPageAnim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "FadeInPageAnim", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -552,10 +486,8 @@ void UBP_CFCore_ServerModsWidget_C::FadeInPageAnim()
 
 void UBP_CFCore_ServerModsWidget_C::FailedToFindPremium(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "FailedToFindPremium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "FailedToFindPremium", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_FailedToFindPremium Parms{};
 
@@ -568,18 +500,16 @@ void UBP_CFCore_ServerModsWidget_C::FailedToFindPremium(const struct FCFCoreErro
 // Function BP_CFCore_ServerModsWidget.BP_CFCore_ServerModsWidget_C.Get Server Mods Delegate
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TDelegate<void(int64 ServerID)>&  JoinEvent_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void(int64 ServerId)>&  JoinEvent_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // const TDelegate<void()>&                BackEvent_0                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// const TDelegate<void(int64 ServerID)>&  ReportEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// const TDelegate<void(int64 ServerID)>&  FavoriteEvent_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void(int64 ServerId)>&  ReportEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// const TDelegate<void(int64 ServerId)>&  FavoriteEvent_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // const TDelegate<void()>&                ErrorEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
-void UBP_CFCore_ServerModsWidget_C::Get_Server_Mods_Delegate(const TDelegate<void(int64 ServerID)>& JoinEvent_0, const TDelegate<void()>& BackEvent_0, const TDelegate<void(int64 ServerID)>& ReportEvent, const TDelegate<void(int64 ServerID)>& FavoriteEvent_0, const TDelegate<void()>& ErrorEvent)
+void UBP_CFCore_ServerModsWidget_C::Get_Server_Mods_Delegate(const TDelegate<void(int64 ServerId)>& JoinEvent_0, const TDelegate<void()>& BackEvent_0, const TDelegate<void(int64 ServerId)>& ReportEvent, const TDelegate<void(int64 ServerId)>& FavoriteEvent_0, const TDelegate<void()>& ErrorEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Get Server Mods Delegate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Get Server Mods Delegate", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_Get_Server_Mods_Delegate Parms{};
 
@@ -601,10 +531,8 @@ void UBP_CFCore_ServerModsWidget_C::Get_Server_Mods_Delegate(const TDelegate<voi
 
 void UBP_CFCore_ServerModsWidget_C::GetAllModsPurchased(bool* AllModsPurchased, TArray<int64>* NotPurchasedModIDs)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "GetAllModsPurchased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "GetAllModsPurchased", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_GetAllModsPurchased Parms{};
 
@@ -629,10 +557,8 @@ void UBP_CFCore_ServerModsWidget_C::GetAllModsPurchased(bool* AllModsPurchased, 
 
 void UBP_CFCore_ServerModsWidget_C::GetCompleteInstalledModsStatus(bool* AllModsInstalled, int32* TotalInstalledMods, int32* TotalNonInstalledMods, TArray<struct FInstallProgressMod>* installedMods, TArray<struct FInstallProgressMod>* NonInstalledModList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "GetCompleteInstalledModsStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "GetCompleteInstalledModsStatus", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_GetCompleteInstalledModsStatus Parms{};
 
@@ -662,10 +588,8 @@ void UBP_CFCore_ServerModsWidget_C::GetCompleteInstalledModsStatus(bool* AllMods
 
 bool UBP_CFCore_ServerModsWidget_C::GetEnoughSpaceToDownloadAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "GetEnoughSpaceToDownloadAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "GetEnoughSpaceToDownloadAllMods", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_GetEnoughSpaceToDownloadAllMods Parms{};
 
@@ -680,10 +604,8 @@ bool UBP_CFCore_ServerModsWidget_C::GetEnoughSpaceToDownloadAllMods()
 
 void UBP_CFCore_ServerModsWidget_C::InitDropdownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "InitDropdownMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "InitDropdownMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -694,10 +616,8 @@ void UBP_CFCore_ServerModsWidget_C::InitDropdownMenu()
 
 void UBP_CFCore_ServerModsWidget_C::InitializePageState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "InitializePageState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "InitializePageState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -708,10 +628,8 @@ void UBP_CFCore_ServerModsWidget_C::InitializePageState()
 
 void UBP_CFCore_ServerModsWidget_C::LoadingBackEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "LoadingBackEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "LoadingBackEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -724,10 +642,8 @@ void UBP_CFCore_ServerModsWidget_C::LoadingBackEvent()
 
 void UBP_CFCore_ServerModsWidget_C::OnError(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnError", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnError Parms{};
 
@@ -744,10 +660,8 @@ void UBP_CFCore_ServerModsWidget_C::OnError(const struct FCFCoreError& Error_0)
 
 void UBP_CFCore_ServerModsWidget_C::OnErrorMatchPlatform(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnErrorMatchPlatform");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnErrorMatchPlatform", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnErrorMatchPlatform Parms{};
 
@@ -764,10 +678,8 @@ void UBP_CFCore_ServerModsWidget_C::OnErrorMatchPlatform(const struct FCFCoreErr
 
 void UBP_CFCore_ServerModsWidget_C::OnErrorSpaceCheck(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnErrorSpaceCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnErrorSpaceCheck", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnErrorSpaceCheck Parms{};
 
@@ -787,10 +699,8 @@ void UBP_CFCore_ServerModsWidget_C::OnErrorSpaceCheck(const struct FCFCoreError&
 
 bool UBP_CFCore_ServerModsWidget_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnEventBroadcasted Parms{};
 
@@ -811,10 +721,8 @@ bool UBP_CFCore_ServerModsWidget_C::OnEventBroadcasted(EGameModsEvent evt, const
 
 void UBP_CFCore_ServerModsWidget_C::OnModsDirInfo(const struct FModsDirInfo& ModsDirInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnModsDirInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnModsDirInfo", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnModsDirInfo Parms{};
 
@@ -831,10 +739,8 @@ void UBP_CFCore_ServerModsWidget_C::OnModsDirInfo(const struct FModsDirInfo& Mod
 
 void UBP_CFCore_ServerModsWidget_C::OnModsDirInfoError(const struct FCFCoreError& Error_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnModsDirInfoError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnModsDirInfoError", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnModsDirInfoError Parms{};
 
@@ -851,10 +757,8 @@ void UBP_CFCore_ServerModsWidget_C::OnModsDirInfoError(const struct FCFCoreError
 
 void UBP_CFCore_ServerModsWidget_C::OnSuccessSpaceCheck(const struct FModsDirInfo& ModsDirInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnSuccessSpaceCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnSuccessSpaceCheck", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnSuccessSpaceCheck Parms{};
 
@@ -872,10 +776,8 @@ void UBP_CFCore_ServerModsWidget_C::OnSuccessSpaceCheck(const struct FModsDirInf
 
 void UBP_CFCore_ServerModsWidget_C::OnWidgetSwitched(class UObject* Object, const struct FFieldNotificationId& Field)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "OnWidgetSwitched");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "OnWidgetSwitched", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_OnWidgetSwitched Parms{};
 
@@ -891,10 +793,8 @@ void UBP_CFCore_ServerModsWidget_C::OnWidgetSwitched(class UObject* Object, cons
 
 void UBP_CFCore_ServerModsWidget_C::RefreshPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "RefreshPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "RefreshPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -907,10 +807,8 @@ void UBP_CFCore_ServerModsWidget_C::RefreshPage()
 
 void UBP_CFCore_ServerModsWidget_C::SortModsToPutInstalledLast(TArray<struct FInstallProgressMod>* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "SortModsToPutInstalledLast");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "SortModsToPutInstalledLast", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_SortModsToPutInstalledLast Parms{};
 
@@ -926,10 +824,8 @@ void UBP_CFCore_ServerModsWidget_C::SortModsToPutInstalledLast(TArray<struct FIn
 
 void UBP_CFCore_ServerModsWidget_C::StartDowloadingMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "StartDowloadingMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "StartDowloadingMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -942,10 +838,8 @@ void UBP_CFCore_ServerModsWidget_C::StartDowloadingMod()
 
 void UBP_CFCore_ServerModsWidget_C::success(const TArray<int64>& modIds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "success");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "success", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_success Parms{};
 
@@ -962,10 +856,8 @@ void UBP_CFCore_ServerModsWidget_C::success(const TArray<int64>& modIds)
 
 void UBP_CFCore_ServerModsWidget_C::SuccessGetFileInfoByIDs(const TArray<struct FFile>& files)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "SuccessGetFileInfoByIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "SuccessGetFileInfoByIDs", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_SuccessGetFileInfoByIDs Parms{};
 
@@ -983,10 +875,8 @@ void UBP_CFCore_ServerModsWidget_C::SuccessGetFileInfoByIDs(const TArray<struct 
 
 void UBP_CFCore_ServerModsWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "Tick", FuncInfo);
 
 	Params::BP_CFCore_ServerModsWidget_C_Tick Parms{};
 
@@ -1002,10 +892,8 @@ void UBP_CFCore_ServerModsWidget_C::Tick(const struct FGeometry& MyGeometry, flo
 
 void UBP_CFCore_ServerModsWidget_C::UpdateDownloadButtonEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdateDownloadButtonEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdateDownloadButtonEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1016,10 +904,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdateDownloadButtonEnabled()
 
 void UBP_CFCore_ServerModsWidget_C::UpdateFreeSpaceText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdateFreeSpaceText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdateFreeSpaceText", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1030,10 +916,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdateFreeSpaceText()
 
 void UBP_CFCore_ServerModsWidget_C::UpdateInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdateInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdateInfo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1044,10 +928,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdateInfo()
 
 void UBP_CFCore_ServerModsWidget_C::UpdatePageDiskSpaceAvailability()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdatePageDiskSpaceAvailability");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdatePageDiskSpaceAvailability", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1058,10 +940,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdatePageDiskSpaceAvailability()
 
 void UBP_CFCore_ServerModsWidget_C::UpdatePurchaseButtonEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdatePurchaseButtonEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdatePurchaseButtonEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1072,10 +952,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdatePurchaseButtonEnabled()
 
 void UBP_CFCore_ServerModsWidget_C::UpdatePurchaseState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdatePurchaseState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdatePurchaseState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1086,10 +964,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdatePurchaseState()
 
 void UBP_CFCore_ServerModsWidget_C::UpdateTexts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdateTexts");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdateTexts", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1100,10 +976,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdateTexts()
 
 void UBP_CFCore_ServerModsWidget_C::UpdateWholePage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "UpdateWholePage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "UpdateWholePage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1114,10 +988,8 @@ void UBP_CFCore_ServerModsWidget_C::UpdateWholePage()
 
 void UBP_CFCore_ServerModsWidget_C::WipeTexts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsWidget_C", "WipeTexts");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsWidget_C", "WipeTexts", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

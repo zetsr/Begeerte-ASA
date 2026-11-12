@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UCustomMouseWidget_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UCustomMouseWidget_C::Construct()
 
 void UCustomMouseWidget_C::ExecuteUbergraph_CustomMouseWidget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "ExecuteUbergraph_CustomMouseWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "ExecuteUbergraph_CustomMouseWidget", FuncInfo);
 
 	Params::CustomMouseWidget_C_ExecuteUbergraph_CustomMouseWidget Parms{};
 
@@ -59,10 +55,8 @@ void UCustomMouseWidget_C::ExecuteUbergraph_CustomMouseWidget(int32 EntryPoint)
 
 void UCustomMouseWidget_C::SetArrowAlpha(double LeftRightAlpha, double UpDownAlpha, bool useArrow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "SetArrowAlpha");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "SetArrowAlpha", FuncInfo);
 
 	Params::CustomMouseWidget_C_SetArrowAlpha Parms{};
 
@@ -83,10 +77,8 @@ void UCustomMouseWidget_C::SetArrowAlpha(double LeftRightAlpha, double UpDownAlp
 
 void UCustomMouseWidget_C::SetInnerRingScales(double scale0, double scale1, double scale2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "SetInnerRingScales");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "SetInnerRingScales", FuncInfo);
 
 	Params::CustomMouseWidget_C_SetInnerRingScales Parms{};
 
@@ -105,10 +97,8 @@ void UCustomMouseWidget_C::SetInnerRingScales(double scale0, double scale1, doub
 
 void UCustomMouseWidget_C::SetPointerColorAdd(double Add)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "SetPointerColorAdd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "SetPointerColorAdd", FuncInfo);
 
 	Params::CustomMouseWidget_C_SetPointerColorAdd Parms{};
 
@@ -125,10 +115,8 @@ void UCustomMouseWidget_C::SetPointerColorAdd(double Add)
 
 void UCustomMouseWidget_C::SetPointerScale(double NewParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "SetPointerScale");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "SetPointerScale", FuncInfo);
 
 	Params::CustomMouseWidget_C_SetPointerScale Parms{};
 
@@ -145,10 +133,8 @@ void UCustomMouseWidget_C::SetPointerScale(double NewParam)
 
 void UCustomMouseWidget_C::ShowReticule(bool show)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "ShowReticule");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "ShowReticule", FuncInfo);
 
 	Params::CustomMouseWidget_C_ShowReticule Parms{};
 
@@ -163,10 +149,8 @@ void UCustomMouseWidget_C::ShowReticule(bool show)
 
 void UCustomMouseWidget_C::useArrow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "useArrow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "useArrow", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +161,8 @@ void UCustomMouseWidget_C::useArrow()
 
 void UCustomMouseWidget_C::UseCircle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomMouseWidget_C", "UseCircle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomMouseWidget_C", "UseCircle", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -142,7 +142,7 @@ class UStaticMesh* UAnimToTextureDataAsset::BP_GetStaticMesh()
 
 
 // Function AnimToTexture.AnimToTextureDataAsset.GetIndexFromAnimSequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UAnimSequence*              Sequence                                               (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -170,7 +170,7 @@ int32 UAnimToTextureDataAsset::GetIndexFromAnimSequence(const class UAnimSequenc
 
 
 // Function AnimToTexture.AnimToTextureDataAsset.ResetInfo
-// (Final, Native, Public)
+// (Final, RequiredAPI, Native, Public)
 
 void UAnimToTextureDataAsset::ResetInfo()
 {
@@ -189,15 +189,15 @@ void UAnimToTextureDataAsset::ResetInfo()
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.BatchUpdateInstancesAutoPlayData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UInstancedStaticMeshComponent*    InstancedMeshComponent                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FAnimToTextureAutoPlayData>&AutoPlayData                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const TArray<struct FMatrix>&           Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bMarkRenderStateDirty                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesAutoPlayData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureAutoPlayData>& AutoPlayData, const TArray<struct FMatrix>& Transforms, bool bMarkRenderStateDirty)
+bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesAutoPlayData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureAutoPlayData>& AutoPlayData, const TArray<struct FTransform>& Transforms, bool bMarkRenderStateDirty)
 {
 	static class UFunction* Func = nullptr;
 
@@ -223,15 +223,15 @@ bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesAutoPlayData(cla
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.BatchUpdateInstancesFrameData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UInstancedStaticMeshComponent*    InstancedMeshComponent                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FAnimToTextureFrameData>&FrameData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const TArray<struct FMatrix>&           Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    bMarkRenderStateDirty                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesFrameData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureFrameData>& FrameData, const TArray<struct FMatrix>& Transforms, bool bMarkRenderStateDirty)
+bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesFrameData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureFrameData>& FrameData, const TArray<struct FTransform>& Transforms, bool bMarkRenderStateDirty)
 {
 	static class UFunction* Func = nullptr;
 
@@ -257,16 +257,16 @@ bool UAnimToTextureInstancePlaybackLibrary::BatchUpdateInstancesFrameData(class 
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.GetAutoPlayDataFromDataAsset
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UAnimToTextureDataAsset*    DataAsset                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   animationIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   AnimationIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FAnimToTextureAutoPlayData*      AutoPlayData                                           (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   TimeOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimToTextureInstancePlaybackLibrary::GetAutoPlayDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 animationIndex, struct FAnimToTextureAutoPlayData* AutoPlayData, float TimeOffset, float PlayRate)
+bool UAnimToTextureInstancePlaybackLibrary::GetAutoPlayDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 AnimationIndex, struct FAnimToTextureAutoPlayData* AutoPlayData, float TimeOffset, float PlayRate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -276,7 +276,7 @@ bool UAnimToTextureInstancePlaybackLibrary::GetAutoPlayDataFromDataAsset(const c
 	Params::AnimToTextureInstancePlaybackLibrary_GetAutoPlayDataFromDataAsset Parms{};
 
 	Parms.DataAsset = DataAsset;
-	Parms.animationIndex = animationIndex;
+	Parms.AnimationIndex = AnimationIndex;
 	Parms.TimeOffset = TimeOffset;
 	Parms.PlayRate = PlayRate;
 
@@ -295,7 +295,7 @@ bool UAnimToTextureInstancePlaybackLibrary::GetAutoPlayDataFromDataAsset(const c
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.GetFrame
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartFrame                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -333,17 +333,17 @@ float UAnimToTextureInstancePlaybackLibrary::GetFrame(float Time, float StartFra
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.GetFrameDataFromDataAsset
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UAnimToTextureDataAsset*    DataAsset                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   animationIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   AnimationIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FAnimToTextureFrameData*         AutoPlayData                                           (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FAnimToTextureFrameData*         FrameData                                              (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   TimeOffset                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimToTextureInstancePlaybackLibrary::GetFrameDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 animationIndex, float Time, struct FAnimToTextureFrameData* AutoPlayData, float TimeOffset, float PlayRate)
+bool UAnimToTextureInstancePlaybackLibrary::GetFrameDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 AnimationIndex, float Time, struct FAnimToTextureFrameData* FrameData, float TimeOffset, float PlayRate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -353,7 +353,7 @@ bool UAnimToTextureInstancePlaybackLibrary::GetFrameDataFromDataAsset(const clas
 	Params::AnimToTextureInstancePlaybackLibrary_GetFrameDataFromDataAsset Parms{};
 
 	Parms.DataAsset = DataAsset;
-	Parms.animationIndex = animationIndex;
+	Parms.AnimationIndex = AnimationIndex;
 	Parms.Time = Time;
 	Parms.TimeOffset = TimeOffset;
 	Parms.PlayRate = PlayRate;
@@ -365,15 +365,15 @@ bool UAnimToTextureInstancePlaybackLibrary::GetFrameDataFromDataAsset(const clas
 
 	Func->FunctionFlags = Flgs;
 
-	if (AutoPlayData != nullptr)
-		*AutoPlayData = std::move(Parms.AutoPlayData);
+	if (FrameData != nullptr)
+		*FrameData = std::move(Parms.FrameData);
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.SetupInstancedMeshComponent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UInstancedStaticMeshComponent*    InstancedMeshComponent                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NumInstances                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -405,7 +405,7 @@ bool UAnimToTextureInstancePlaybackLibrary::SetupInstancedMeshComponent(class UI
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.UpdateInstanceAutoPlayData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UInstancedStaticMeshComponent*    InstancedMeshComponent                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -439,7 +439,7 @@ bool UAnimToTextureInstancePlaybackLibrary::UpdateInstanceAutoPlayData(class UIn
 
 
 // Function AnimToTexture.AnimToTextureInstancePlaybackLibrary.UpdateInstanceFrameData
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UInstancedStaticMeshComponent*    InstancedMeshComponent                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

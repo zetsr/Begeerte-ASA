@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass Carousel_NewsList_entry_Half.Carousel_NewsList_entry_Half_C
-// 0x0010 (0x0388 - 0x0378)
+// 0x0010 (0x03E8 - 0x03D8)
 class UCarousel_NewsList_entry_Half_C final : public UPrimalUserWidget
 {
 public:
-	class UPrimalRichTextBlock*                   BodyText;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPrimalRichTextBlock*                   TitleText;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UPrimalRichTextBlock*                   TitleText;                                         // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UPrimalRichTextBlock*                   BodyText;                                          // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UCarousel_NewsList_entry_Half_C>();
 	}
 };
+DUMPER7_ASSERTS_UCarousel_NewsList_entry_Half_C;
 
 SDK_NAMESPACE_END

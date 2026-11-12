@@ -10,56 +10,61 @@
 
 #include "Basic.hpp"
 
-#include "DaySequence_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "DaySequence_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class DaySequence.DaySequenceActor
-// 0x0168 (0x05F8 - 0x0490)
-class ADaySequenceActor : public AInfo
+// 0x01D0 (0x0668 - 0x0498)
+class ADaySequenceActor : public AInfo, public IMovieScenePlaybackClient, public IMovieSceneBindingOwnerInterface
 {
 public:
-	uint8                                         Pad_490[0x10];                                     // 0x0490(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            DayInterpCurve;                                    // 0x04A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UDaySequenceCollectionAsset*            DaySequenceCollection;                             // 0x04A8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int32                                         Bias;                                              // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         bReplicatePlayback : 1;                            // 0x04C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDaySequencePlayer*                     SequencePlayer;                                    // 0x04C8(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDaySequence*                           RootSequence;                                      // 0x04D0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	float                                         SequenceUpdateInterval;                            // 0x04D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRunDayCycle;                                      // 0x04DC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseInterpCurve;                                   // 0x04DD(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4DE[0x2];                                      // 0x04DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDaySequenceTime                       DayLength;                                         // 0x04E0(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FDaySequenceTime                       TimePerCycle;                                      // 0x04EC(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FDaySequenceTime                       InitialTimeOfDay;                                  // 0x04F8(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_504[0xA4];                                     // 0x0504(0x00A4)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TSubclassOf<class UDaySequenceConditionTag>, class UDaySequenceConditionTag*> TrackConditionMap; // 0x05A8(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UCurveFloat*                            DayInterpCurve;                                    // 0x04A8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UDaySequenceCollectionAsset*            DaySequenceCollection;                             // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class UDaySequenceCollectionAsset*>    DaySequenceCollections;                            // 0x04B8(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         Bias;                                              // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         bReplicatePlayback : 1;                            // 0x04D8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDaySequencePlayer*                     SequencePlayer;                                    // 0x04E0(0x0008)(ExportObject, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UDaySequence*                           RootSequence;                                      // 0x04E8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	float                                         SequenceUpdateInterval;                            // 0x04F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRunDayCycle;                                      // 0x04F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseInterpCurve;                                   // 0x04F5(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4F6[0x2];                                      // 0x04F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDaySequenceTime                       DayLength;                                         // 0x04F8(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FDaySequenceTime                       TimePerCycle;                                      // 0x0504(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FDaySequenceTime                       InitialTimeOfDay;                                  // 0x0510(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_51C[0x14];                                     // 0x051C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDaySequenceCameraModifierManager*      CameraModifierManager;                             // 0x0530(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_538[0xE0];                                     // 0x0538(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<TSubclassOf<class UDaySequenceConditionTag>, class UDaySequenceConditionTag*> TrackConditionMap; // 0x0618(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	bool ContainsDaySequence(const class UDaySequence* InDaySequence);
 	void Multicast_SetTimePerCycle(float InHours);
 	void Pause();
 	void Play();
+	void SetPlayRate(float NewRate);
 	void SetReplicatePlayback(bool ReplicatePlayback);
 	bool SetTimeOfDay(float InHours);
 	void SetTimeOfDayPreview(float InHours);
 	void StartDaySequenceUpdateTimer();
 	void StopDaySequenceUpdateTimer();
 
+	float GetApparentTimeOfDay() const;
 	float GetDayLength() const;
 	float GetInitialTimeOfDay() const;
+	float GetPlayRate() const;
 	float GetStaticTimeOfDay() const;
 	float GetTimeOfDay() const;
 	float GetTimeOfDayPreview() const;
@@ -82,19 +87,20 @@ public:
 		return GetDefaultObjImpl<ADaySequenceActor>();
 	}
 };
+DUMPER7_ASSERTS_ADaySequenceActor;
 
 // Class DaySequence.BaseDaySequenceActor
-// 0x0038 (0x0630 - 0x05F8)
+// 0x0038 (0x06A0 - 0x0668)
 class ABaseDaySequenceActor : public ADaySequenceActor
 {
 public:
-	class USceneComponent*                        SunRootComponent;                                  // 0x05F8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDirectionalLightComponent*             SunComponent;                                      // 0x0600(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USkyAtmosphereComponent*                SkyAtmosphereComponent;                            // 0x0608(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USkyLightComponent*                     SkyLightComponent;                                 // 0x0610(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UExponentialHeightFogComponent*         ExponentialHeightFogComponent;                     // 0x0618(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UVolumetricCloudComponent*              VolumetricCloudComponent;                          // 0x0620(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UStaticMeshComponent*                   SkySphereComponent;                                // 0x0628(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class USceneComponent*                        SunRootComponent;                                  // 0x0668(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UDirectionalLightComponent*             SunComponent;                                      // 0x0670(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class USkyAtmosphereComponent*                SkyAtmosphereComponent;                            // 0x0678(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class USkyLightComponent*                     SkyLightComponent;                                 // 0x0680(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UExponentialHeightFogComponent*         ExponentialHeightFogComponent;                     // 0x0688(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UVolumetricCloudComponent*              VolumetricCloudComponent;                          // 0x0690(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UStaticMeshComponent*                   SkySphereComponent;                                // 0x0698(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -110,6 +116,145 @@ public:
 		return GetDefaultObjImpl<ABaseDaySequenceActor>();
 	}
 };
+DUMPER7_ASSERTS_ABaseDaySequenceActor;
+
+// Class DaySequence.DaySequenceModifierVolume
+// 0x0090 (0x0528 - 0x0498)
+class ADaySequenceModifierVolume final : public AActor
+{
+public:
+	class UDaySequenceModifierComponent*          DaySequenceModifier;                               // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UBoxComponent*                          DefaultBox;                                        // 0x04A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class ADaySequenceActor*                      DaySequenceActor;                                  // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class APlayerController*                      CachedPlayerController;                            // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UPlayer*                                CachedPlayer;                                      // 0x04B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_4C0[0x8];                                      // 0x04C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableSplitscreenSupport;                         // 0x04C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UPlayer*, class UDaySequenceModifierComponent*> AdditionalPlayers;                    // 0x04D0(0x0050)(ExportObject, Transient, DuplicateTransient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_520[0x8];                                      // 0x0520(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnDaySequenceActorBound(class ADaySequenceActor* InActor);
+	void OnPostEnableModifier();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceModifierVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceModifierVolume")
+	}
+	static class ADaySequenceModifierVolume* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ADaySequenceModifierVolume>();
+	}
+};
+DUMPER7_ASSERTS_ADaySequenceModifierVolume;
+
+// Class DaySequence.SunMoonDaySequenceActor
+// 0x0008 (0x06A8 - 0x06A0)
+class ASunMoonDaySequenceActor final : public ABaseDaySequenceActor
+{
+public:
+	class UDirectionalLightComponent*             MoonComponent;                                     // 0x06A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SunMoonDaySequenceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SunMoonDaySequenceActor")
+	}
+	static class ASunMoonDaySequenceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASunMoonDaySequenceActor>();
+	}
+};
+DUMPER7_ASSERTS_ASunMoonDaySequenceActor;
+
+// Class DaySequence.DaySequence
+// 0x0168 (0x01D0 - 0x0068)
+class UDaySequence final : public UMovieSceneSequence, public IInterface_AssetUserData
+{
+public:
+	class UMovieScene*                            MovieScene;                                        // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FDaySequenceBindingReferences          BindingReferences;                                 // 0x0078(0x0140)(Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x01C0(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequence")
+	}
+	static class UDaySequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequence>();
+	}
+
+public:
+	bool AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	class UAssetUserData* GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	bool HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	void RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+};
+DUMPER7_ASSERTS_UDaySequence;
+
+// Class DaySequence.DaySequenceCameraModifierManager
+// 0x0050 (0x0078 - 0x0028)
+class UDaySequenceCameraModifierManager final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceCameraModifierManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceCameraModifierManager")
+	}
+	static class UDaySequenceCameraModifierManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceCameraModifierManager>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceCameraModifierManager;
+
+// Class DaySequence.DaySequenceCameraModifier
+// 0x08D8 (0x0920 - 0x0048)
+class UDaySequenceCameraModifier final : public UCameraModifier
+{
+public:
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPostProcessSettings                   Settings;                                          // 0x0050(0x08D0)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceCameraModifier")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceCameraModifier")
+	}
+	static class UDaySequenceCameraModifier* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceCameraModifier>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceCameraModifier;
 
 // Class DaySequence.DaySequenceCheatManagerExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -133,14 +278,40 @@ public:
 		return GetDefaultObjImpl<UDaySequenceCheatManagerExtension>();
 	}
 };
+DUMPER7_ASSERTS_UDaySequenceCheatManagerExtension;
+
+// Class DaySequence.DaySequenceCollectionAsset
+// 0x0020 (0x0048 - 0x0028)
+class UDaySequenceCollectionAsset final : public UDataAsset
+{
+public:
+	TArray<struct FDaySequenceCollectionEntry>    DaySequences;                                      // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               ProceduralDaySequences;                            // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceCollectionAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceCollectionAsset")
+	}
+	static class UDaySequenceCollectionAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceCollectionAsset>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceCollectionAsset;
 
 // Class DaySequence.DaySequenceConditionTag
-// 0x0030 (0x0058 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UDaySequenceConditionTag final : public UObject
 {
 public:
 	class FString                                 ConditionName;                                     // 0x0028(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EDaySequenceConditionTagInitializationPhase   InitializationPhase;                               // 0x0038(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_39[0x27];                                      // 0x0039(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BroadcastOnConditionValueChanged() const;
@@ -161,13 +332,50 @@ public:
 		return GetDefaultObjImpl<UDaySequenceConditionTag>();
 	}
 };
+DUMPER7_ASSERTS_UDaySequenceConditionTag;
 
-// Class DaySequence.DaySequenceModifierEasingFunction
-// 0x0048 (0x0070 - 0x0028)
-class UDaySequenceModifierEasingFunction final : public UObject
+// Class DaySequence.DaySequenceDirector
+// 0x0010 (0x0038 - 0x0028)
+class UDaySequenceDirector final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x48];                                      // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UDaySequencePlayer*                     Player;                                            // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         SubSequenceID;                                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MovieScenePlayerIndex;                             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	class AActor* GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	TArray<class AActor*> GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	class UObject* GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	class UMovieSceneSequence* GetSequence();
+	void OnCreated();
+
+	struct FQualifiedFrameTime GetCurrentTime() const;
+	struct FQualifiedFrameTime GetRootSequenceTime() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceDirector")
+	}
+	static class UDaySequenceDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceDirector>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceDirector;
+
+// Class DaySequence.DaySequenceModifierEasingFunction
+// 0x0038 (0x0060 - 0x0028)
+class UDaySequenceModifierEasingFunction final : public UObject, public IMovieSceneEasingFunction
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -182,43 +390,51 @@ public:
 	{
 		return GetDefaultObjImpl<UDaySequenceModifierEasingFunction>();
 	}
+
+public:
+	float OnEvaluate(float Interp) const;
 };
+DUMPER7_ASSERTS_UDaySequenceModifierEasingFunction;
 
 // Class DaySequence.DaySequenceModifierComponent
-// 0x00D0 (0x0350 - 0x0280)
+// 0x00F0 (0x0390 - 0x02A0)
 class UDaySequenceModifierComponent final : public USceneComponent
 {
 public:
-	class ADaySequenceActor*                      TargetActor;                                       // 0x0278(0x0008)(BlueprintVisible, ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_280[0x10];                                     // 0x0280(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FComponentReference>            VolumeShapeComponents;                             // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TWeakObjectPtr<class APlayerController>       WeakBlendTarget;                                   // 0x02A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDaySequence*                           UserDaySequence;                                   // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDaySequence*                           TransientSequence;                                 // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDaySequenceCollectionAsset*            DaySequenceCollection;                             // 0x02B8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDaySequenceModifierEasingFunction*     EasingFunction;                                    // 0x02C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	int32                                         Bias;                                              // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DayNightCycleTime;                                 // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BlendAmount;                                       // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         UserBlendWeight;                                   // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EDayNightCycleMode                            DayNightCycle;                                     // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EDaySequenceModifierMode                      Mode;                                              // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EDaySequenceModifierUserBlendPolicy           BlendPolicy;                                       // 0x02DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2DB[0x5];                                      // 0x02DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnPostReinitializeSubSequences;                    // 0x02E0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void()>              OnPostEnableModifier;                              // 0x02F0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bIgnoreBias : 1;                                   // 0x0300(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIsComponentEnabled : 1;                           // 0x0300(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, DuplicateTransient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIsEnabled : 1;                                    // 0x0300(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, DuplicateTransient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bPreview : 1;                                      // 0x0300(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bUseCollection : 1;                                // 0x0300(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bSmoothBlending : 1;                               // 0x0300(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_301[0x4F];                                     // 0x0301(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ADaySequenceActor*                      TargetActor;                                       // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_2A0[0x10];                                     // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FComponentReference>            VolumeShapeComponents;                             // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class APlayerController>       WeakBlendTarget;                                   // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDaySequence*                           UserDaySequence;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UDaySequence*                           TransientSequence;                                 // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UDaySequenceCollectionAsset*            DaySequenceCollection;                             // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class UDaySequenceCollectionAsset*>    DaySequenceCollections;                            // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UDaySequenceModifierEasingFunction*     EasingFunction;                                    // 0x02F0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	int32                                         Bias;                                              // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DayNightCycleTime;                                 // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BlendAmount;                                       // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BlendTime;                                         // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         UserBlendWeight;                                   // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EDayNightCycleMode                            DayNightCycle;                                     // 0x030C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EDaySequenceModifierMode                      Mode;                                              // 0x030D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EDaySequenceModifierUserBlendPolicy           BlendPolicy;                                       // 0x030E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_30F[0x1];                                      // 0x030F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnPostReinitializeSubSequences;                    // 0x0310(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void()>              OnPostEnableModifier;                              // 0x0320(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bIgnoreBias : 1;                                   // 0x0330(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIsComponentEnabled : 1;                           // 0x0330(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, DuplicateTransient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIsEnabled : 1;                                    // 0x0330(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, DuplicateTransient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bPreview : 1;                                      // 0x0330(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bUseCollection : 1;                                // 0x0330(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bSmoothBlending : 1;                               // 0x0330(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bForceSmoothBlending : 1;                          // 0x0330(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_331[0x57];                                     // 0x0331(0x0057)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BindToDaySequenceActor(class ADaySequenceActor* DaySequenceActor);
 	void DisableComponent();
 	void EnableComponent();
+	void ReinitializeSubSequences();
 	void SetBlendTarget(class APlayerController* InActor);
 	void UnbindFromDaySequenceActor();
 
@@ -238,36 +454,117 @@ public:
 		return GetDefaultObjImpl<UDaySequenceModifierComponent>();
 	}
 };
+DUMPER7_ASSERTS_UDaySequenceModifierComponent;
 
-// Class DaySequence.DaySequenceModifierVolume
-// 0x0038 (0x04C8 - 0x0490)
-class ADaySequenceModifierVolume final : public AActor
+// Class DaySequence.DaySequencePlayer
+// 0x0458 (0x0480 - 0x0028)
+class UDaySequencePlayer final : public UObject
 {
 public:
-	class UDaySequenceModifierComponent*          DaySequenceModifier;                               // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UBoxComponent*                          DefaultBox;                                        // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class ADaySequenceActor*                      DaySequenceActor;                                  // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class APlayerController*                      CachedPlayerController;                            // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class AActor*                                 CurrentBlendTarget;                                // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_4B8[0x10];                                     // 0x04B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x1F8];                                     // 0x0028(0x01F8)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IMovieSceneSequencePlayerObserver> Observer;                              // 0x0220(0x0010)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnPlay;                                            // 0x0230(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnPlayReverse;                                     // 0x0240(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnStop;                                            // 0x0250(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnPause;                                           // 0x0260(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnFinished;                                        // 0x0270(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_280[0x10];                                     // 0x0280(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieScenePlayerStatus                       Status;                                            // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0298(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FFrameNumber                           StartTime;                                         // 0x02A0(0x0004)(Net, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         DurationFrames;                                    // 0x02A4(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DurationSubFrames;                                 // 0x02A8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         CurrentNumLoops;                                   // 0x02AC(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         SerialNumber;                                      // 0x02B0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02B4(0x0028)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;                           // 0x02E0(0x0020)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_300[0x84];                                     // 0x0300(0x0084)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneSequenceReplProperties      NetSyncProps;                                      // 0x0384(0x0014)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	TScriptInterface<class IMovieScenePlaybackClient> PlaybackClient;                                // 0x0398(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3A8[0xA0];                                     // 0x03A8(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0448(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_450[0x30];                                     // 0x0450(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnDaySequenceActorBound(class ADaySequenceActor* InActor);
+	TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	bool GetDisableCameraCuts();
+	TArray<struct FMovieSceneObjectBindingID> GetObjectBindings(class UObject* InObject);
+	void GoToEndAndStop();
+	void Play();
+	void PlayLooping(int32 NumLoops);
+	void RemoveWeight();
+	void RequestInvalidateBinding(const struct FMovieSceneObjectBindingID& ObjectBinding);
+	void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, const struct FFrameTime& RelevantTime, int32 NewSerialNumber);
+	void RPC_OnFinishPlaybackEvent(const struct FFrameTime& StoppedTime, int32 NewSerialNumber);
+	void RPC_OnPlayRateChanged();
+	void RPC_OnStopEvent(const struct FFrameTime& StoppedTime, int32 NewSerialNumber);
+	void Scrub();
+	void SetCompletionModeOverride(EMovieSceneCompletionModeOverride CompletionModeOverride);
+	void SetDisableCameraCuts(bool bInDisableCameraCuts);
+	void SetFrameRange(int32 StartFrame, int32 Duration, float SubFrames);
+	void SetFrameRate(const struct FFrameRate& FrameRate);
+	void SetPlayRate(float PlayRate);
+	void SetWeight(double InWeight);
+	void Stop();
+	void StopAtCurrentTime();
+
+	EMovieSceneCompletionModeOverride GetCompletionModeOverride() const;
+	int32 GetCurrentNumLoops() const;
+	struct FQualifiedFrameTime GetEndTime() const;
+	int32 GetFrameDuration() const;
+	struct FFrameRate GetFrameRate() const;
+	float GetPlayRate() const;
+	class UMovieSceneSequence* GetSequence() const;
+	class FString GetSequenceName(bool bAddClientInfo) const;
+	struct FQualifiedFrameTime GetStartTime() const;
+	bool IsPaused() const;
+	bool IsPlaying() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DaySequenceModifierVolume")
+		STATIC_CLASS_IMPL("DaySequencePlayer")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DaySequenceModifierVolume")
+		STATIC_NAME_IMPL(L"DaySequencePlayer")
 	}
-	static class ADaySequenceModifierVolume* GetDefaultObj()
+	static class UDaySequencePlayer* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ADaySequenceModifierVolume>();
+		return GetDefaultObjImpl<UDaySequencePlayer>();
 	}
 };
+DUMPER7_ASSERTS_UDaySequencePlayer;
+
+// Class DaySequence.DaySequenceProjectSettings
+// 0x0030 (0x0068 - 0x0038)
+class UDaySequenceProjectSettings final : public UDeveloperSettings
+{
+public:
+	bool                                          bDefaultLockEngineToDisplayRate;                   // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DefaultDisplayRate;                                // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DefaultTickResolution;                             // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUpdateClockSource                            DefaultClockSource;                                // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceProjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceProjectSettings")
+	}
+	static class UDaySequenceProjectSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceProjectSettings>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceProjectSettings;
 
 // Class DaySequence.DaySequenceStaticTimeContributor
 // 0x0018 (0x0040 - 0x0028)
@@ -298,6 +595,56 @@ public:
 		return GetDefaultObjImpl<UDaySequenceStaticTimeContributor>();
 	}
 };
+DUMPER7_ASSERTS_UDaySequenceStaticTimeContributor;
+
+// Class DaySequence.DaySequenceSubsystem
+// 0x0038 (0x0070 - 0x0038)
+class UDaySequenceSubsystem final : public UWorldSubsystem
+{
+public:
+	TMulticastInlineDelegate<void(class ADaySequenceActor* NewActor)> OnDaySequenceActorSet;         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x28];                                      // 0x0048(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetDaySequenceActor(class ADaySequenceActor* InActor);
+
+	class ADaySequenceActor* GetDaySequenceActor(bool bFindFallbackOnNull) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceSubsystem")
+	}
+	static class UDaySequenceSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceSubsystem;
+
+// Class DaySequence.DaySequenceTrack
+// 0x0000 (0x01C8 - 0x01C8)
+class UDaySequenceTrack final : public UMovieSceneSubTrack
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DaySequenceTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DaySequenceTrack")
+	}
+	static class UDaySequenceTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDaySequenceTrack>();
+	}
+};
+DUMPER7_ASSERTS_UDaySequenceTrack;
 
 // Class DaySequence.ProceduralDaySequenceBuilder
 // 0x0028 (0x0050 - 0x0028)
@@ -342,313 +689,6 @@ public:
 		return GetDefaultObjImpl<UProceduralDaySequenceBuilder>();
 	}
 };
-
-// Class DaySequence.SunMoonDaySequenceActor
-// 0x0008 (0x0638 - 0x0630)
-class ASunMoonDaySequenceActor final : public ABaseDaySequenceActor
-{
-public:
-	class UDirectionalLightComponent*             MoonComponent;                                     // 0x0630(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SunMoonDaySequenceActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SunMoonDaySequenceActor")
-	}
-	static class ASunMoonDaySequenceActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASunMoonDaySequenceActor>();
-	}
-};
-
-// Class DaySequence.DaySequence
-// 0x00C8 (0x0130 - 0x0068)
-class UDaySequence final : public UMovieSceneSequence
-{
-public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieScene*                            MovieScene;                                        // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FDaySequenceBindingReferences          BindingReferences;                                 // 0x0078(0x00A0)(Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<class UAssetUserData*>                 AssetUserData;                                     // 0x0120(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequence")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequence")
-	}
-	static class UDaySequence* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequence>();
-	}
-};
-
-// Class DaySequence.DaySequenceCollectionAsset
-// 0x0020 (0x0050 - 0x0030)
-class UDaySequenceCollectionAsset final : public UDataAsset
-{
-public:
-	TArray<struct FDaySequenceCollectionEntry>    DaySequences;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               ProceduralDaySequences;                            // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceCollectionAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceCollectionAsset")
-	}
-	static class UDaySequenceCollectionAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequenceCollectionAsset>();
-	}
-};
-
-// Class DaySequence.DaySequenceDirector
-// 0x0010 (0x0038 - 0x0028)
-class UDaySequenceDirector final : public UObject
-{
-public:
-	class UDaySequencePlayer*                     Player;                                            // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int32                                         SubSequenceID;                                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MovieScenePlayerIndex;                             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	class AActor* GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	TArray<class AActor*> GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	class UObject* GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	class UMovieSceneSequence* GetSequence();
-	void OnCreated();
-
-	struct FQualifiedFrameTime GetCurrentTime() const;
-	struct FQualifiedFrameTime GetRootSequenceTime() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceDirector")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceDirector")
-	}
-	static class UDaySequenceDirector* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequenceDirector>();
-	}
-};
-
-// Class DaySequence.DaySequencePlayer
-// 0x0448 (0x0470 - 0x0028)
-class UDaySequencePlayer final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x1F0];                                     // 0x0028(0x01F0)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IMovieSceneSequencePlayerObserver> Observer;                              // 0x0218(0x0010)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnPlay;                                            // 0x0228(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnPlayReverse;                                     // 0x0238(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnStop;                                            // 0x0248(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnPause;                                           // 0x0258(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnFinished;                                        // 0x0268(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_278[0x10];                                     // 0x0278(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	EMovieScenePlayerStatus                       Status;                                            // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneSequence*                    Sequence;                                          // 0x0290(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	struct FFrameNumber                           StartTime;                                         // 0x0298(0x0004)(Net, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         DurationFrames;                                    // 0x029C(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DurationSubFrames;                                 // 0x02A0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         CurrentNumLoops;                                   // 0x02A4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         SerialNumber;                                      // 0x02A8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02AC(0x0028)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;                           // 0x02D8(0x0020)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2F8[0x84];                                     // 0x02F8(0x0084)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequenceReplProperties      NetSyncProps;                                      // 0x037C(0x0014)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TScriptInterface<class IMovieScenePlaybackClient> PlaybackClient;                                // 0x0390(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3A0[0xA0];                                     // 0x03A0(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0440(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_448[0x28];                                     // 0x0448(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	TArray<class UObject*> GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	bool GetDisableCameraCuts();
-	TArray<struct FMovieSceneObjectBindingID> GetObjectBindings(class UObject* InObject);
-	void GoToEndAndStop();
-	void Play();
-	void PlayLooping(int32 NumLoops);
-	void RemoveWeight();
-	void RequestInvalidateBinding(const struct FMovieSceneObjectBindingID& ObjectBinding);
-	void RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Method, const struct FFrameTime& RelevantTime, int32 NewSerialNumber);
-	void RPC_OnFinishPlaybackEvent(const struct FFrameTime& StoppedTime, int32 NewSerialNumber);
-	void RPC_OnStopEvent(const struct FFrameTime& StoppedTime, int32 NewSerialNumber);
-	void Scrub();
-	void SetCompletionModeOverride(EMovieSceneCompletionModeOverride CompletionModeOverride);
-	void SetDisableCameraCuts(bool bInDisableCameraCuts);
-	void SetFrameRange(int32 StartFrame, int32 Duration, float SubFrames);
-	void SetFrameRate(const struct FFrameRate& FrameRate);
-	void SetPlayRate(float PlayRate);
-	void SetWeight(double InWeight);
-	void Stop();
-	void StopAtCurrentTime();
-
-	EMovieSceneCompletionModeOverride GetCompletionModeOverride() const;
-	struct FQualifiedFrameTime GetEndTime() const;
-	int32 GetFrameDuration() const;
-	struct FFrameRate GetFrameRate() const;
-	float GetPlayRate() const;
-	class UMovieSceneSequence* GetSequence() const;
-	class FString GetSequenceName(bool bAddClientInfo) const;
-	struct FQualifiedFrameTime GetStartTime() const;
-	bool IsPaused() const;
-	bool IsPlaying() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequencePlayer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequencePlayer")
-	}
-	static class UDaySequencePlayer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequencePlayer>();
-	}
-};
-
-// Class DaySequence.DaySequenceProjectSettings
-// 0x0030 (0x0068 - 0x0038)
-class UDaySequenceProjectSettings final : public UDeveloperSettings
-{
-public:
-	bool                                          bDefaultLockEngineToDisplayRate;                   // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DefaultDisplayRate;                                // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DefaultTickResolution;                             // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUpdateClockSource                            DefaultClockSource;                                // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceProjectSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceProjectSettings")
-	}
-	static class UDaySequenceProjectSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequenceProjectSettings>();
-	}
-};
-
-// Class DaySequence.DaySequenceProvider
-// 0x0010 (0x04A0 - 0x0490)
-class ADaySequenceProvider : public AActor
-{
-public:
-	TArray<class UDaySequence*>                   DaySequenceAssets;                                 // 0x0490(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceProvider")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceProvider")
-	}
-	static class ADaySequenceProvider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ADaySequenceProvider>();
-	}
-};
-
-// Class DaySequence.DaySequenceSubsystem
-// 0x0038 (0x0068 - 0x0030)
-class UDaySequenceSubsystem final : public UWorldSubsystem
-{
-public:
-	TMulticastInlineDelegate<void(class ADaySequenceActor* NewActor)> OnDaySequenceActorSet;         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x28];                                      // 0x0040(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetDaySequenceActor(class ADaySequenceActor* InActor);
-
-	class ADaySequenceActor* GetDaySequenceActor(bool bFindFallbackOnNull) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceSubsystem")
-	}
-	static class UDaySequenceSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequenceSubsystem>();
-	}
-};
-
-// Class DaySequence.DaySequenceTrack
-// 0x0000 (0x0108 - 0x0108)
-class UDaySequenceTrack final : public UMovieSceneSubTrack
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DaySequenceTrack")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DaySequenceTrack")
-	}
-	static class UDaySequenceTrack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDaySequenceTrack>();
-	}
-};
-
-// Class DaySequence.EnvironmentLightingActor
-// 0x0030 (0x04D0 - 0x04A0)
-class AEnvironmentLightingActor final : public ADaySequenceProvider
-{
-public:
-	class USkyAtmosphereComponent*                SkyAtmosphereComponent;                            // 0x04A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USkyLightComponent*                     SkyLightComponent;                                 // 0x04A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USceneComponent*                        SunRootComponent;                                  // 0x04B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UDirectionalLightComponent*             SunComponent;                                      // 0x04B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UExponentialHeightFogComponent*         ExponentialHeightFogComponent;                     // 0x04C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UVolumetricCloudComponent*              VolumetricCloudComponent;                          // 0x04C8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EnvironmentLightingActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EnvironmentLightingActor")
-	}
-	static class AEnvironmentLightingActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AEnvironmentLightingActor>();
-	}
-};
+DUMPER7_ASSERTS_UProceduralDaySequenceBuilder;
 
 SDK_NAMESPACE_END

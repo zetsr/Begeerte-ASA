@@ -18,33 +18,47 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function Chooser.ChooserTable.ResultAssetFilter
-// 0x0070 (0x0070 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct ChooserTable_ResultAssetFilter final
 {
 public:
-	struct FAssetData                             AssetData;                                         // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAssetData                             AssetData;                                         // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChooserTable_ResultAssetFilter;
 
 // Function Chooser.ChooserFunctionLibrary.AddChooserObjectInput
-// 0x0080 (0x0080 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct ChooserFunctionLibrary_AddChooserObjectInput final
 {
 public:
-	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x0078)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UObject*                                Object;                                            // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                Object;                                            // 0x00C8(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_AddChooserObjectInput;
 
 // Function Chooser.ChooserFunctionLibrary.AddChooserStructInput
-// 0x0080 (0x0080 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct ChooserFunctionLibrary_AddChooserStructInput final
 {
 public:
-	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x0078)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x00C8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_AddChooserStructInput;
+
+// Function Chooser.ChooserFunctionLibrary.AddChooserStructInputOutput
+// 0x00D0 (0x00D0 - 0x0000)
+struct ChooserFunctionLibrary_AddChooserStructInputOutput final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x00C8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_AddChooserStructInputOutput;
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateChooser
 // 0x0020 (0x0020 - 0x0000)
@@ -56,6 +70,7 @@ public:
 	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateChooser;
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateChooserMulti
 // 0x0028 (0x0028 - 0x0000)
@@ -67,50 +82,119 @@ public:
 	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateChooserMulti;
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBase
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct ChooserFunctionLibrary_EvaluateObjectChooserBase final
 {
 public:
-	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x0078)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ObjectChooser;                                     // 0x0078(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResultIsClass;                                    // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ObjectChooser;                                     // 0x00C8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00D8(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResultIsClass;                                    // 0x00E0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateObjectChooserBase;
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseMulti
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct ChooserFunctionLibrary_EvaluateObjectChooserBaseMulti final
 {
 public:
-	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x0078)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ObjectChooser;                                     // 0x0078(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResultIsClass;                                    // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        ReturnValue;                                       // 0x0098(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ObjectChooser;                                     // 0x00C8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00D8(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResultIsClass;                                    // 0x00E0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        ReturnValue;                                       // 0x00E8(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateObjectChooserBaseMulti;
+
+// Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseMultiSoft
+// 0x00F8 (0x00F8 - 0x0000)
+struct ChooserFunctionLibrary_EvaluateObjectChooserBaseMultiSoft final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ObjectChooser;                                     // 0x00C8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00D8(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResultIsClass;                                    // 0x00E0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class UObject>>         ReturnValue;                                       // 0x00E8(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateObjectChooserBaseMultiSoft;
+
+// Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseSoft
+// 0x0110 (0x0110 - 0x0000)
+struct ChooserFunctionLibrary_EvaluateObjectChooserBaseSoft final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ObjectChooser;                                     // 0x00C8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00D8(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResultIsClass;                                    // 0x00E0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 ReturnValue;                                       // 0x00E8(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_EvaluateObjectChooserBaseSoft;
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserObject
+// 0x00D8 (0x00D8 - 0x0000)
+struct ChooserFunctionLibrary_GetChooserObject final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00C8(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x00D0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_GetChooserObject;
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserObjectInput
+// 0x00E0 (0x00E0 - 0x0000)
+struct ChooserFunctionLibrary_GetChooserObjectInput final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x00C8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x00D0(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x00D8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_GetChooserObjectInput;
 
 // Function Chooser.ChooserFunctionLibrary.GetChooserStructOutput
-// 0x0080 (0x0080 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct ChooserFunctionLibrary_GetChooserStructOutput final
 {
 public:
-	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x0078)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x007C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x00C8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x00CC(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_GetChooserStructOutput;
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserStructOutputArray
+// 0x00E0 (0x00E0 - 0x0000)
+struct ChooserFunctionLibrary_GetChooserStructOutputArray final
+{
+public:
+	struct FChooserEvaluationContext              Context;                                           // 0x0000(0x00C8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x00C8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Value;                                             // 0x00D0(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChooserFunctionLibrary_GetChooserStructOutputArray;
 
 // Function Chooser.ChooserFunctionLibrary.MakeChooserEvaluationContext
-// 0x0078 (0x0078 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct ChooserFunctionLibrary_MakeChooserEvaluationContext final
 {
 public:
-	struct FChooserEvaluationContext              ReturnValue;                                       // 0x0000(0x0078)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FChooserEvaluationContext              ReturnValue;                                       // 0x0000(0x00C8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_MakeChooserEvaluationContext;
 
 // Function Chooser.ChooserFunctionLibrary.MakeEvaluateChooser
 // 0x0018 (0x0018 - 0x0000)
@@ -118,8 +202,9 @@ struct ChooserFunctionLibrary_MakeEvaluateChooser final
 {
 public:
 	class UChooserTable*                          Chooser;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChooserFunctionLibrary_MakeEvaluateChooser;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

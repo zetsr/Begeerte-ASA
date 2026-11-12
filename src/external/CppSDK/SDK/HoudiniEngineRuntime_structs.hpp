@@ -10,32 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Enum HoudiniEngineRuntime.EHoudiniStaticMeshMethod
-// NumValues: 0x0004
-enum class EHoudiniStaticMeshMethod : uint8
-{
-	RawMesh_DELETED                          = 0,
-	FMeshDescription                         = 1,
-	UHoudiniStaticMesh                       = 2,
-	EHoudiniStaticMeshMethod_MAX             = 3,
-};
-
-// Enum HoudiniEngineRuntime.EHoudiniBakeAfterNextCook
-// NumValues: 0x0004
-enum class EHoudiniBakeAfterNextCook : uint8
-{
-	Disabled                                 = 0,
-	Always                                   = 1,
-	Once                                     = 2,
-	EHoudiniBakeAfterNextCook_MAX            = 3,
-};
 
 // Enum HoudiniEngineRuntime.EHoudiniAssetState
 // NumValues: 0x0010
@@ -97,6 +77,16 @@ enum class EHoudiniRampInterpolationType : uint8
 	EHoudiniRampInterpolationType_MAX        = 7,
 };
 
+// Enum HoudiniEngineRuntime.EHoudiniEngineBakeOption
+// NumValues: 0x0004
+enum class EHoudiniEngineBakeOption : uint8
+{
+	ToActor                                  = 0,
+	ToBlueprint                              = 1,
+	ToAsset                                  = 2,
+	EHoudiniEngineBakeOption_MAX             = 3,
+};
+
 // Enum HoudiniEngineRuntime.EHoudiniEngineActorBakeOption
 // NumValues: 0x0003
 enum class EHoudiniEngineActorBakeOption : uint8
@@ -118,18 +108,19 @@ enum class EHoudiniLandscapeOutputBakeType : uint8
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniInputType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EHoudiniInputType : uint8
 {
 	Invalid                                  = 0,
 	Geometry                                 = 1,
 	Curve                                    = 2,
 	World                                    = 5,
-	EHoudiniInputType_MAX                    = 6,
+	PCGInput                                 = 8,
+	EHoudiniInputType_MAX                    = 9,
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniOutputType
-// NumValues: 0x000B
+// NumValues: 0x000D
 enum class EHoudiniOutputType : uint8
 {
 	Invalid                                  = 0,
@@ -142,7 +133,9 @@ enum class EHoudiniOutputType : uint8
 	DataTable                                = 7,
 	LandscapeSpline                          = 8,
 	AnimSequence                             = 9,
-	EHoudiniOutputType_MAX                   = 10,
+	Cop                                      = 10,
+	PCG                                      = 11,
+	EHoudiniOutputType_MAX                   = 12,
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniCurveType
@@ -211,6 +204,26 @@ enum class EHoudiniProxyRefineRequestResult : uint8
 	EHoudiniProxyRefineRequestResult_MAX     = 4,
 };
 
+// Enum HoudiniEngineRuntime.EHoudiniStaticMeshMethod
+// NumValues: 0x0004
+enum class EHoudiniStaticMeshMethod : uint8
+{
+	RawMesh_DELETED                          = 0,
+	FMeshDescription                         = 1,
+	UHoudiniStaticMesh                       = 2,
+	EHoudiniStaticMeshMethod_MAX             = 3,
+};
+
+// Enum HoudiniEngineRuntime.EHoudiniBakeAfterNextCook
+// NumValues: 0x0004
+enum class EHoudiniBakeAfterNextCook : uint8
+{
+	Disabled                                 = 0,
+	Always                                   = 1,
+	Once                                     = 2,
+	EHoudiniBakeAfterNextCook_MAX            = 3,
+};
+
 // Enum HoudiniEngineRuntime.EAttribStorageType
 // NumValues: 0x0007
 enum class EAttribStorageType : uint8
@@ -249,7 +262,7 @@ enum class EHoudiniGeoType : uint8
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniPartType
-// NumValues: 0x000C
+// NumValues: 0x000E
 enum class EHoudiniPartType : uint8
 {
 	Invalid                                  = 0,
@@ -263,7 +276,9 @@ enum class EHoudiniPartType : uint8
 	SkeletalMeshPose                         = 8,
 	MotionClip                               = 9,
 	SkeletalMeshPhysAsset                    = 10,
-	EHoudiniPartType_MAX                     = 11,
+	Cop                                      = 11,
+	PCG                                      = 12,
+	EHoudiniPartType_MAX                     = 13,
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniInstancerType
@@ -309,7 +324,7 @@ enum class EHoudiniHandleType : uint8
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniInputObjectType
-// NumValues: 0x001D
+// NumValues: 0x0020
 enum class EHoudiniInputObjectType : uint8
 {
 	Invalid                                  = 0,
@@ -340,7 +355,10 @@ enum class EHoudiniInputObjectType : uint8
 	SplineMeshComponent                      = 25,
 	LevelInstance                            = 26,
 	PackedLevelActor                         = 27,
-	EHoudiniInputObjectType_MAX              = 28,
+	PCGData                                  = 28,
+	Texture                                  = 29,
+	HoudiniCookable                          = 30,
+	EHoudiniInputObjectType_MAX              = 31,
 };
 
 // Enum HoudiniEngineRuntime.EHoudiniXformType
@@ -453,6 +471,16 @@ enum class EHoudiniRampPointConstructStatus : uint8
 	EHoudiniRampPointConstructStatus_MAX     = 5,
 };
 
+// Enum HoudiniEngineRuntime.EHoudiniPCGDataType
+// NumValues: 0x0004
+enum class EHoudiniPCGDataType : uint32
+{
+	InputPCGNone                             = 0,
+	InputPCGGeometry                         = 1,
+	InputPCGSplines                          = 2,
+	EHoudiniPCGDataType_MAX                  = 3,
+};
+
 // Enum HoudiniEngineRuntime.EPDGLinkState
 // NumValues: 0x0005
 enum class EPDGLinkState : uint8
@@ -559,6 +587,7 @@ public:
 	EHoudiniCurveMethod                           CurveMethod;                                       // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniCurveOutputProperties;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniDataLayer
 // 0x0018 (0x0018 - 0x0000)
@@ -569,6 +598,7 @@ public:
 	bool                                          bCreateIfNeeded;                                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniDataLayer;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniHLODLayer
 // 0x0010 (0x0010 - 0x0000)
@@ -577,6 +607,7 @@ struct FHoudiniHLODLayer final
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniHLODLayer;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniLevelInstanceParams
 // 0x0018 (0x0018 - 0x0000)
@@ -587,6 +618,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutputName;                                        // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniLevelInstanceParams;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniOutputObject
 // 0x0160 (0x0160 - 0x0000)
@@ -614,8 +646,9 @@ public:
 	class UWorld*                                 World;                                             // 0x0120(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TArray<struct FHoudiniDataLayer>              DataLayers;                                        // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FHoudiniHLODLayer>              HLODLayers;                                        // 0x0138(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FHoudiniLevelInstanceParams            LevelInstanceParams;                               // 0x0148(0x0018)(NativeAccessSpecifierPublic)
+	struct FHoudiniLevelInstanceParams            LevelInstanceParams;                               // 0x0148(0x0018)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniOutputObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniAssetBlueprintOutput
 // 0x0168 (0x0168 - 0x0000)
@@ -626,6 +659,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHoudiniOutputObject                   OutputObject;                                      // 0x0008(0x0160)(NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniAssetBlueprintOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniOutputObjectIdentifier
 // 0x0040 (0x0040 - 0x0000)
@@ -642,6 +676,7 @@ public:
 	int32                                         PointIndex;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniOutputObjectIdentifier;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniAssetBlueprintInstanceData
 // 0x00B8 (0x0120 - 0x0068)
@@ -670,6 +705,7 @@ public:
 	TMap<struct FHoudiniOutputObjectIdentifier, struct FHoudiniAssetBlueprintOutput> Outputs;        // 0x00C0(0x0050)(NativeAccessSpecifierPublic)
 	TArray<class UHoudiniInput*>                  Inputs;                                            // 0x0110(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FHoudiniAssetBlueprintInstanceData;
 
 // ScriptStruct HoudiniEngineRuntime.UserPackageRules
 // 0x0028 (0x0028 - 0x0000)
@@ -680,6 +716,7 @@ public:
 	TArray<class FString>                         Include;                                           // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         Exclude;                                           // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUserPackageRules;
 
 // ScriptStruct HoudiniEngineRuntime.UserCategoryRules
 // 0x0010 (0x0010 - 0x0000)
@@ -688,6 +725,7 @@ struct FUserCategoryRules final
 public:
 	TArray<struct FUserPackageRules>              Packages;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUserCategoryRules;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGenericAttributeChangedProperty
 // 0x0098 (0x0098 - 0x0000)
@@ -697,6 +735,7 @@ public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_8[0x90];                                       // 0x0008(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniGenericAttributeChangedProperty;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGenericAttribute
 // 0x0050 (0x0050 - 0x0000)
@@ -714,6 +753,7 @@ public:
 	TArray<int64>                                 IntValues;                                         // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         StringValues;                                      // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniGenericAttribute;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniObjectInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -722,6 +762,7 @@ struct alignas(0x08) FHoudiniObjectInfo final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniObjectInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGeoInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -730,6 +771,7 @@ struct alignas(0x08) FHoudiniGeoInfo final
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniGeoInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniPartInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -738,6 +780,7 @@ struct alignas(0x08) FHoudiniPartInfo final
 public:
 	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniPartInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniVolumeInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -746,6 +789,7 @@ struct alignas(0x10) FHoudiniVolumeInfo final
 public:
 	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniVolumeInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniCurveInfo
 // 0x001C (0x001C - 0x0000)
@@ -754,6 +798,7 @@ struct alignas(0x04) FHoudiniCurveInfo final
 public:
 	uint8                                         Pad_0[0x1C];                                       // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniCurveInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniMeshSocket
 // 0x0090 (0x0090 - 0x0000)
@@ -762,6 +807,7 @@ struct alignas(0x10) FHoudiniMeshSocket final
 public:
 	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniMeshSocket;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGeoPartObject
 // 0x02D0 (0x02D0 - 0x0000)
@@ -806,6 +852,7 @@ public:
 	bool                                          bKeepTags;                                         // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C1[0xF];                                      // 0x02C1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniGeoPartObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBrushInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -821,6 +868,7 @@ public:
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	uint64                                        CachedSurfaceHash;                                 // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniBrushInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniLandscapeSplineControlPointData
 // 0x0038 (0x0038 - 0x0000)
@@ -832,6 +880,7 @@ public:
 	float                                         Width;                                             // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniLandscapeSplineControlPointData;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniLandscapeSplineSegmentData
 // 0x0001 (0x0001 - 0x0000)
@@ -840,9 +889,10 @@ struct FHoudiniLandscapeSplineSegmentData final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniLandscapeSplineSegmentData;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniInputObjectSettings
-// 0x0020 (0x0020 - 0x0000)
+// 0x0024 (0x0024 - 0x0000)
 struct FHoudiniInputObjectSettings final
 {
 public:
@@ -851,31 +901,34 @@ public:
 	bool                                          bImportAsReferenceRotScaleEnabled;                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImportAsReferenceBboxEnabled;                     // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImportAsReferenceMaterialEnabled;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportLODs;                                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportSockets;                                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreferNaniteFallbackMesh;                         // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportColliders;                                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportMaterialParameters;                         // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddRotAndScaleAttributesOnCurves;                 // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseLegacyInputCurves;                             // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UnrealSplineResolution;                            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniLandscapeExportType                   LandscapeExportType;                               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeExportSelectionOnly;                     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeAutoSelectComponent;                     // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeExportMaterials;                         // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeExportLighting;                          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeExportNormalizedUVs;                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeExportTileUVs;                           // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeAutoSelectSplines;                       // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeSplinesExportControlPoints;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeSplinesExportLeftRightCurves;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLandscapeSplinesExportSplineMeshComponents;       // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMergeSplineMeshComponents;                        // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportHeightDataPerEditLayer;                     // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportPaintLayersPerEditLayer;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportMergedPaintLayers;                          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportLevelInstanceContent;                       // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportMainGeometry;                               // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLODs;                                       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportSockets;                                    // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreferNaniteFallbackMesh;                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportColliders;                                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportMaterialParameters;                         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddRotAndScaleAttributesOnCurves;                 // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLegacyInputCurves;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         UnrealSplineResolution;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniLandscapeExportType                   LandscapeExportType;                               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeExportSelectionOnly;                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeAutoSelectComponent;                     // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeExportMaterials;                         // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeExportLighting;                          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeExportNormalizedUVs;                     // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeExportTileUVs;                           // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeAutoSelectSplines;                       // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeSplinesExportControlPoints;              // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeSplinesExportLeftRightCurves;            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLandscapeSplinesExportSplineMeshComponents;       // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMergeSplineMeshComponents;                        // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportHeightDataPerEditLayer;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportPaintLayersPerEditLayer;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportMergedPaintLayers;                          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLevelInstanceContent;                       // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniInputObjectSettings;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniExtents
 // 0x0010 (0x0010 - 0x0000)
@@ -885,14 +938,16 @@ public:
 	struct FIntPoint                              min_0;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                              max_0;                                             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniExtents;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniClearedTargetLayer
 // 0x0050 (0x0050 - 0x0000)
 struct FHoudiniClearedTargetLayer final
 {
 public:
-	TSet<class FString>                           TargetLayers;                                      // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	TSet<class FString>                           TargetLayers;                                      // 0x0000(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniClearedTargetLayer;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniClearedEditLayers
 // 0x0050 (0x0050 - 0x0000)
@@ -901,6 +956,7 @@ struct FHoudiniClearedEditLayers final
 public:
 	TMap<class FString, struct FHoudiniClearedTargetLayer> EditLayers;                               // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniClearedEditLayers;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniMaterialIdentifier
 // 0x0030 (0x0030 - 0x0000)
@@ -914,6 +970,7 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MaterialInstanceParametersSlug;                    // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniMaterialIdentifier;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutputObjectIdentifier
 // 0x0018 (0x0018 - 0x0000)
@@ -924,27 +981,22 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SplitIdentifier;                                   // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniBakedOutputObjectIdentifier;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniInstancedOutput
-// 0x0088 (0x0088 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FHoudiniInstancedOutput final
 {
 public:
-	TSoftObjectPtr<class UObject>                 OriginalObject;                                    // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OriginalObjectIndex;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTransform>                     OriginalTransforms;                                // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<TSoftObjectPtr<class UObject>>         VariationObjects;                                  // 0x0040(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     VariationTransformOffsets;                         // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 TransformVariationIndices;                         // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 OriginalInstanceIndices;                           // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bChanged;                                          // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStale;                                            // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 InstancedObject;                                   // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumInstances;                                      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bChanged;                                          // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FHoudiniInstancedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutputObject
-// 0x0120 (0x0120 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct FHoudiniBakedOutputObject final
 {
 public:
@@ -956,14 +1008,17 @@ public:
 	TArray<class FString>                         InstancedActors;                                   // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         InstancedComponents;                               // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FName, class FString>              LandscapeLayers;                                   // 0x0068(0x0050)(NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        FoliageInstancePositions;                          // 0x00B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UFoliageType*                           FoliageType;                                       // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class FString>                         FoliageActors;                                     // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         LevelInstanceActors;                               // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 Landscape;                                         // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BakedSkeleton;                                     // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BakedPhysicsAsset;                                 // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CreatedLandscapeLayers;                            // 0x00B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        FoliageInstancePositions;                          // 0x00C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UFoliageType*                           FoliageType;                                       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class FString>                         FoliageActors;                                     // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         LevelInstanceActors;                               // 0x00F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 Landscape;                                         // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BakedSkeleton;                                     // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BakedPhysicsAsset;                                 // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                PCGOutputData;                                     // 0x0130(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FHoudiniBakedOutputObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutput
 // 0x0050 (0x0050 - 0x0000)
@@ -972,14 +1027,7 @@ struct FHoudiniBakedOutput final
 public:
 	TMap<struct FHoudiniBakedOutputObjectIdentifier, struct FHoudiniBakedOutputObject> BakedOutputObjects; // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct HoudiniEngineRuntime.HoudiniAttributeDataLayer
-// 0x0010 (0x0010 - 0x0000)
-struct FHoudiniAttributeDataLayer final
-{
-public:
-	TArray<struct FHoudiniDataLayer>              DataLayers;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FHoudiniBakedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.OutputActorOwner
 // 0x0010 (0x0010 - 0x0000)
@@ -989,6 +1037,7 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 OutputActor;                                       // 0x0008(0x0008)(ZeroConstructor, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FOutputActorOwner;
 
 // ScriptStruct HoudiniEngineRuntime.TOPWorkResultObject
 // 0x0058 (0x0058 - 0x0000)
@@ -1006,6 +1055,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOutputActorOwner                      OutputActorOwner;                                  // 0x0048(0x0010)(NonTransactional, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FTOPWorkResultObject;
 
 // ScriptStruct HoudiniEngineRuntime.TOPWorkResult
 // 0x0018 (0x0018 - 0x0000)
@@ -1016,6 +1066,7 @@ public:
 	int32                                         WorkItemID;                                        // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FTOPWorkResultObject>           ResultObjects;                                     // 0x0008(0x0010)(ZeroConstructor, NonTransactional, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FTOPWorkResult;
 
 // ScriptStruct HoudiniEngineRuntime.WorkItemTallyBase
 // 0x0008 (0x0008 - 0x0000)
@@ -1024,20 +1075,22 @@ struct alignas(0x08) FWorkItemTallyBase
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FWorkItemTallyBase;
 
 // ScriptStruct HoudiniEngineRuntime.WorkItemTally
 // 0x0230 (0x0238 - 0x0008)
 struct FWorkItemTally final : public FWorkItemTallyBase
 {
 public:
-	TSet<int32>                                   AllWorkItems;                                      // 0x0008(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   WaitingWorkItems;                                  // 0x0058(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   ScheduledWorkItems;                                // 0x00A8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   CookingWorkItems;                                  // 0x00F8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   CookedWorkItems;                                   // 0x0148(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   ErroredWorkItems;                                  // 0x0198(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<int32>                                   CookCancelledWorkItems;                            // 0x01E8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   AllWorkItems;                                      // 0x0008(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   WaitingWorkItems;                                  // 0x0058(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   ScheduledWorkItems;                                // 0x00A8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   CookingWorkItems;                                  // 0x00F8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   CookedWorkItems;                                   // 0x0148(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   ErroredWorkItems;                                  // 0x0198(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TSet<int32>                                   CookCancelledWorkItems;                            // 0x01E8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 };
+DUMPER7_ASSERTS_FWorkItemTally;
 
 // ScriptStruct HoudiniEngineRuntime.AggregatedWorkItemTally
 // 0x0020 (0x0028 - 0x0008)
@@ -1053,6 +1106,7 @@ public:
 	int32                                         CookCancelledWorkItems;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAggregatedWorkItemTally;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniPDGWorkResultObjectBakedOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -1061,28 +1115,30 @@ struct FHoudiniPDGWorkResultObjectBakedOutput final
 public:
 	TArray<struct FHoudiniBakedOutput>            BakedOutputs;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniPDGWorkResultObjectBakedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniStaticMeshGenerationProperties
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x01D8 (0x01D8 - 0x0000)
 struct FHoudiniStaticMeshGenerationProperties final
 {
 public:
 	uint8                                         bGeneratedDoubleSidedGeometry : 1;                 // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPhysicalMaterial*                      GeneratedPhysMaterial;                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FBodyInstance                          DefaultBodyInstance;                               // 0x0010(0x0150)(Edit, NativeAccessSpecifierPublic)
-	ECollisionTraceFlag                           GeneratedCollisionTraceFlag;                       // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GeneratedLightMapResolution;                       // 0x0164(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FWalkableSlopeOverride                 GeneratedWalkableSlopeOverride;                    // 0x0168(0x0010)(Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	int32                                         GeneratedLightMapCoordinateIndex;                  // 0x0178(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bGeneratedUseMaximumStreamingTexelRatio : 1;       // 0x017C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_17D[0x3];                                      // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GeneratedStreamingDistanceMultiplier;              // 0x0180(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFoliageType_InstancedStaticMesh*       GeneratedFoliageDefaultSettings;                   // 0x0188(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, AdvancedDisplay, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class UAssetUserData*>                 GeneratedAssetUserData;                            // 0x0190(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FBodyInstance                          DefaultBodyInstance;                               // 0x0010(0x0188)(Edit, NativeAccessSpecifierPublic)
+	ECollisionTraceFlag                           GeneratedCollisionTraceFlag;                       // 0x0198(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GeneratedLightMapResolution;                       // 0x019C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWalkableSlopeOverride                 GeneratedWalkableSlopeOverride;                    // 0x01A0(0x0010)(Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	int32                                         GeneratedLightMapCoordinateIndex;                  // 0x01B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bGeneratedUseMaximumStreamingTexelRatio : 1;       // 0x01B4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GeneratedStreamingDistanceMultiplier;              // 0x01B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFoliageType_InstancedStaticMesh*       GeneratedFoliageDefaultSettings;                   // 0x01C0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, AdvancedDisplay, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class UAssetUserData*>                 GeneratedAssetUserData;                            // 0x01C8(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FHoudiniStaticMeshGenerationProperties;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniSplineComponentInstanceData
 // 0x0030 (0x0098 - 0x0068)
@@ -1093,6 +1149,7 @@ public:
 	TArray<struct FVector>                        DisplayPoints;                                     // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 DisplayPointIndexDivider;                          // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHoudiniSplineComponentInstanceData;
 
 // ScriptStruct HoudiniEngineRuntime.HImageData
 // 0x0030 (0x0030 - 0x0000)
@@ -1108,6 +1165,7 @@ public:
 	TArray<uint8>                                 RawData;                                           // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 RawDataMD5;                                        // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FHImageData;
 
 // ScriptStruct HoudiniEngineRuntime.CategoryRules
 // 0x0020 (0x0020 - 0x0000)
@@ -1117,5 +1175,6 @@ public:
 	TArray<class FString>                         Include;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         Exclude;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCategoryRules;
 
 SDK_NAMESPACE_END

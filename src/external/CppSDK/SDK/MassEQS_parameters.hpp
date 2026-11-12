@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "MassEQS_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,8 +25,9 @@ public:
 	TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper> EntityList;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMassEnvQueryEntityInfoBlueprintWrapper EntityInfo;                                       // 0x0010(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_ContainsEntity;
 
 // Function MassEQS.MassEQSBlueprintLibrary.EntityComparison
 // 0x00F0 (0x00F0 - 0x0000)
@@ -36,8 +37,9 @@ public:
 	struct FMassEnvQueryEntityInfoBlueprintWrapper A;                                                // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMassEnvQueryEntityInfoBlueprintWrapper B;                                                // 0x0070(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E1[0xF];                                       // 0x00E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_EntityComparison;
 
 // Function MassEQS.MassEQSBlueprintLibrary.EntityToString
 // 0x0080 (0x0080 - 0x0000)
@@ -47,6 +49,7 @@ public:
 	struct FMassEnvQueryEntityInfoBlueprintWrapper EntityInfo;                                       // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0070(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_EntityToString;
 
 // Function MassEQS.MassEQSBlueprintLibrary.GetCachedEntityPosition
 // 0x0090 (0x0090 - 0x0000)
@@ -55,8 +58,8 @@ struct MassEQSBlueprintLibrary_GetCachedEntityPosition final
 public:
 	struct FMassEnvQueryEntityInfoBlueprintWrapper EntityInfo;                                       // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_GetCachedEntityPosition;
 
 // Function MassEQS.MassEQSBlueprintLibrary.GetCurrentEntityPosition
 // 0x00A0 (0x00A0 - 0x0000)
@@ -67,8 +70,8 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMassEnvQueryEntityInfoBlueprintWrapper EntityInfo;                                       // 0x0010(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0080(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_GetCurrentEntityPosition;
 
 // Function MassEQS.MassEQSBlueprintLibrary.GetEnviromentQueryResultAsEntityInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -78,6 +81,7 @@ public:
 	const class UEnvQueryInstanceBlueprintWrapper* QueryInstance;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper> ReturnValue;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_GetEnviromentQueryResultAsEntityInfo;
 
 // Function MassEQS.MassEQSBlueprintLibrary.SendSignalToEntity
 // 0x0090 (0x0090 - 0x0000)
@@ -88,8 +92,8 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMassEnvQueryEntityInfoBlueprintWrapper EntityInfo;                                       // 0x0010(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   Signal;                                            // 0x0080(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MassEQSBlueprintLibrary_SendSignalToEntity;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -13,18 +13,26 @@
 #include "Engine_classes.hpp"
 #include "MediaPlate_structs.hpp"
 #include "MediaAssets_structs.hpp"
+#include "MediaAssets_classes.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class MediaPlate.MediaPlate
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0018 (0x04B0 - 0x0498)
 class AMediaPlate final : public AActor
 {
 public:
-	class UMediaPlateComponent*                   MediaPlateComponent;                               // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UMediaPlateComponent*                   MediaPlateComponent;                               // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x04A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bEnableHoldoutComposite;                           // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetHoldoutCompositeEnabled(bool bInEnabled);
+
+	bool IsHoldoutCompositeEnabled() const;
 
 public:
 	static class UClass* StaticClass()
@@ -40,6 +48,7 @@ public:
 		return GetDefaultObjImpl<AMediaPlate>();
 	}
 };
+DUMPER7_ASSERTS_AMediaPlate;
 
 // Class MediaPlate.MediaPlateAssetUserData
 // 0x0010 (0x0038 - 0x0028)
@@ -62,45 +71,47 @@ public:
 		return GetDefaultObjImpl<UMediaPlateAssetUserData>();
 	}
 };
+DUMPER7_ASSERTS_UMediaPlateAssetUserData;
 
 // Class MediaPlate.MediaPlateComponent
-// 0x0158 (0x0228 - 0x00D0)
-class UMediaPlateComponent final : public UActorComponent
+// 0x01A8 (0x02A0 - 0x00F8)
+class UMediaPlateComponent final : public UActorComponent, public IMediaPlayerProxyInterface
 {
 public:
-	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bPlayOnOpen;                                       // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoPlay;                                         // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAudio;                                      // 0x00DA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB[0x1];                                       // 0x00DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartTime;                                         // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMediaSoundComponent*                   SoundComponent;                                    // 0x00E0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x00E8(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class UStaticMeshComponent*>           Letterboxes;                                       // 0x00F0(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FMediaPlateResource                    MediaPlateResource;                                // 0x0100(0x0078)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         PlaylistIndex;                                     // 0x0178(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMediaSourceCacheSettings              CacheSettings;                                     // 0x017C(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsMediaPlatePlaying;                              // 0x0184(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_185[0x13];                                     // 0x0185(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bPlayOnlyWhenVisible;                              // 0x0198(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bLoop;                                             // 0x0199(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EMediaTextureVisibleMipsTiles                 VisibleMipsTilesCalculations;                      // 0x019A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_19B[0x1];                                      // 0x019B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MipMapBias;                                        // 0x019C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsAspectRatioAuto;                                // 0x01A0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEnableMipMapUpscaling;                            // 0x01A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A2[0x2];                                      // 0x01A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MipLevelToUpscale;                                 // 0x01A4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAdaptivePoleMipUpscaling;                         // 0x01A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LetterboxAspectRatio;                              // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1B0[0x8];                                      // 0x01B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              MeshRange;                                         // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMediaTexture*>                  MediaTextures;                                     // 0x01C8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	struct FMediaTextureResourceSettings          MediaTextureSettings;                              // 0x01D8(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DA[0x6];                                      // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x01E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_1E8[0x40];                                     // 0x01E8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bPlayOnOpen;                                       // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoPlay;                                         // 0x0101(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAudio;                                      // 0x0102(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_103[0x1];                                      // 0x0103(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMediaSoundComponent*                   SoundComponent;                                    // 0x0108(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0110(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class UStaticMeshComponent*>           Letterboxes;                                       // 0x0118(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FMediaPlateResource                    MediaPlateResource;                                // 0x0128(0x0068)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         PlaylistIndex;                                     // 0x0190(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMediaSourceCacheSettings              CacheSettings;                                     // 0x0194(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsMediaPlatePlaying;                              // 0x019C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_19D[0x13];                                     // 0x019D(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bPlayOnlyWhenVisible;                              // 0x01B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bLoop;                                             // 0x01B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EMediaTextureVisibleMipsTiles                 VisibleMipsTilesCalculations;                      // 0x01B2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1B3[0x1];                                      // 0x01B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MipMapBias;                                        // 0x01B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsAspectRatioAuto;                                // 0x01B8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bEnableMipMapUpscaling;                            // 0x01B9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1BA[0x2];                                      // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MipLevelToUpscale;                                 // 0x01BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAdaptivePoleMipUpscaling;                         // 0x01C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LetterboxAspectRatio;                              // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              MeshRange;                                         // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMediaTexture*>                  MediaTextures;                                     // 0x01E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FMediaTextureResourceSettings          MediaTextureSettings;                              // 0x01F0(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x01F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UMediaSource*                           ExternalMediaSource;                               // 0x0200(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UMediaPlaylist*                         ActivePlaylist;                                    // 0x0208(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_210[0x90];                                     // 0x0210(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Close();
@@ -108,15 +119,23 @@ public:
 	bool GetLoop();
 	class UMediaPlayer* GetMediaPlayer();
 	class UMediaTexture* GetMediaTexture(int32 Index_0);
+	bool Next();
 	void OnMediaEnd();
 	void OnMediaOpened(const class FString& DeviceUrl);
 	void OnMediaResumed();
 	void OnMediaSuspended();
 	void Open();
+	void OpenLatent(const class UObject* InWorldContextObject, const struct FLatentActionInfo& InLatentInfo, float InTimeout, bool bInWaitForTexture, bool* bOutSuccess);
 	void Pause();
 	void Play();
+	void PlayReverse();
+	bool Previous();
 	bool Rewind();
 	bool Seek(const struct FTimespan& Time);
+	void SelectExternalMedia(const class FString& InFilePath);
+	void SelectMediaPlaylistAsset(const class UMediaPlaylist* InMediaPlaylist);
+	void SelectMediaSourceAsset(const class UMediaSource* InMediaSource);
+	void SetEnableAudio(bool bInEnableAudio);
 	void SetIsAspectRatioAuto(bool bInIsAspectRatioAuto);
 	void SetLetterboxAspectRatio(float AspectRatio);
 	void SetLoop(bool bInLoop);
@@ -124,7 +143,10 @@ public:
 	void SetPlayOnlyWhenVisible(bool bInPlayOnlyWhenVisible);
 
 	bool GetIsAspectRatioAuto() const;
+	class UMediaPlaylist* GetMediaPlaylist() const;
 	struct FVector2D GetMeshRange() const;
+	class UMediaSource* GetSelectedMediaSource() const;
+	bool IsEventStateChangeAllowed(EMediaPlateEventState InRequestEventState) const;
 	bool IsMediaPlatePlaying() const;
 
 public:
@@ -141,5 +163,6 @@ public:
 		return GetDefaultObjImpl<UMediaPlateComponent>();
 	}
 };
+DUMPER7_ASSERTS_UMediaPlateComponent;
 
 SDK_NAMESPACE_END

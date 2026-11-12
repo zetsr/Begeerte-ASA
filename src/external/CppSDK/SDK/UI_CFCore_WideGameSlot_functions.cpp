@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_WideGameSlot_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_WideGameSlot_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_701_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_701_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_701_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_701_K2Node_Compon
 
 void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Nod
 
 void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Nod
 
 void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,14 +83,84 @@ void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_Button_GoToModPage_K2Nod
 
 void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
 	Parms.bIsChecked = bIsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnEndEntryDropOperation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_WideGameSlot_C::BP_OnEndEntryDropOperation(bool bSuccess)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnEndEntryDropOperation", FuncInfo);
+
+	Params::UI_CFCore_WideGameSlot_C_BP_OnEndEntryDropOperation Parms{};
+
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnEntryDragged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_WideGameSlot_C::BP_OnEntryDragged(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnEntryDragged", FuncInfo);
+
+	Params::UI_CFCore_WideGameSlot_C_BP_OnEntryDragged Parms{};
+
+	Parms.Operation = Operation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnEntryDragOverChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsDraggingOver                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_WideGameSlot_C::BP_OnEntryDragOverChanged(bool bIsDraggingOver)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnEntryDragOverChanged", FuncInfo);
+
+	Params::UI_CFCore_WideGameSlot_C_BP_OnEntryDragOverChanged Parms{};
+
+	Parms.bIsDraggingOver = bIsDraggingOver;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnEntryDropped
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_WideGameSlot_C::BP_OnEntryDropped(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnEntryDropped", FuncInfo);
+
+	Params::UI_CFCore_WideGameSlot_C_BP_OnEntryDropped Parms{};
+
+	Parms.Operation = Operation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -111,10 +171,8 @@ void UUI_CFCore_WideGameSlot_C::BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_Comp
 
 void UUI_CFCore_WideGameSlot_C::BP_OnEntryReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BP_OnEntryReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnEntryReleased", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,10 +185,8 @@ void UUI_CFCore_WideGameSlot_C::BP_OnEntryReleased()
 
 void UUI_CFCore_WideGameSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BP_OnItemExpansionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnItemExpansionChanged", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_BP_OnItemExpansionChanged Parms{};
 
@@ -147,14 +203,30 @@ void UUI_CFCore_WideGameSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 
 void UUI_CFCore_WideGameSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "BP_OnItemSelectionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnItemSelectionChanged", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_BP_OnItemSelectionChanged Parms{};
 
 	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnUpdateEntryDropIndicator
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EUMGItemDropZone                        DropZone                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_WideGameSlot_C::BP_OnUpdateEntryDropIndicator(EUMGItemDropZone DropZone)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "BP_OnUpdateEntryDropIndicator", FuncInfo);
+
+	Params::UI_CFCore_WideGameSlot_C_BP_OnUpdateEntryDropIndicator Parms{};
+
+	Parms.DropZone = DropZone;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -165,10 +237,8 @@ void UUI_CFCore_WideGameSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 
 void UUI_CFCore_WideGameSlot_C::CancelInstallation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "CancelInstallation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "CancelInstallation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +249,8 @@ void UUI_CFCore_WideGameSlot_C::CancelInstallation()
 
 void UUI_CFCore_WideGameSlot_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +261,8 @@ void UUI_CFCore_WideGameSlot_C::Construct()
 
 void UUI_CFCore_WideGameSlot_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +273,8 @@ void UUI_CFCore_WideGameSlot_C::Destruct()
 
 void UUI_CFCore_WideGameSlot_C::Event_On_Uninstall_Pressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "Event On Uninstall Pressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "Event On Uninstall Pressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -223,10 +287,8 @@ void UUI_CFCore_WideGameSlot_C::Event_On_Uninstall_Pressed()
 
 void UUI_CFCore_WideGameSlot_C::ExecuteUbergraph_UI_CFCore_WideGameSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "ExecuteUbergraph_UI_CFCore_WideGameSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "ExecuteUbergraph_UI_CFCore_WideGameSlot", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_ExecuteUbergraph_UI_CFCore_WideGameSlot Parms{};
 
@@ -244,10 +306,8 @@ void UUI_CFCore_WideGameSlot_C::ExecuteUbergraph_UI_CFCore_WideGameSlot(int32 En
 
 void UUI_CFCore_WideGameSlot_C::FormatDownloadNumber(int64 downloads, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "FormatDownloadNumber");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "FormatDownloadNumber", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_FormatDownloadNumber Parms{};
 
@@ -267,10 +327,8 @@ void UUI_CFCore_WideGameSlot_C::FormatDownloadNumber(int64 downloads, class FTex
 
 class UWidget* UUI_CFCore_WideGameSlot_C::GenerateAuthorNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GenerateAuthorNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GenerateAuthorNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GenerateAuthorNameToolTipWidget Parms{};
 
@@ -287,10 +345,8 @@ class UWidget* UUI_CFCore_WideGameSlot_C::GenerateAuthorNameToolTipWidget()
 
 class UWidget* UUI_CFCore_WideGameSlot_C::GenerateModNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GenerateModNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GenerateModNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GenerateModNameToolTipWidget Parms{};
 
@@ -307,10 +363,8 @@ class UWidget* UUI_CFCore_WideGameSlot_C::GenerateModNameToolTipWidget()
 
 void UUI_CFCore_WideGameSlot_C::GetAuthors(class FString* CombinedAuthorsNames)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GetAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GetAuthors", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GetAuthors Parms{};
 
@@ -328,10 +382,8 @@ void UUI_CFCore_WideGameSlot_C::GetAuthors(class FString* CombinedAuthorsNames)
 
 void UUI_CFCore_WideGameSlot_C::GetDownloadCount(class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GetDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GetDownloadCount", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GetDownloadCount Parms{};
 
@@ -349,10 +401,8 @@ void UUI_CFCore_WideGameSlot_C::GetDownloadCount(class FText* FinalAmount)
 
 void UUI_CFCore_WideGameSlot_C::GetModName(class FString* Name_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GetModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GetModName", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GetModName Parms{};
 
@@ -370,10 +420,8 @@ void UUI_CFCore_WideGameSlot_C::GetModName(class FString* Name_0)
 
 void UUI_CFCore_WideGameSlot_C::GetModSize(class FText* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GetModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GetModSize", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GetModSize Parms{};
 
@@ -391,10 +439,8 @@ void UUI_CFCore_WideGameSlot_C::GetModSize(class FText* Result)
 
 void UUI_CFCore_WideGameSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_GetRootCFWidget Parms{};
 
@@ -412,10 +458,8 @@ void UUI_CFCore_WideGameSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWi
 
 void UUI_CFCore_WideGameSlot_C::InitModInfo(const struct FInstallProgressMod& NewModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "InitModInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "InitModInfo", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_InitModInfo Parms{};
 
@@ -430,10 +474,8 @@ void UUI_CFCore_WideGameSlot_C::InitModInfo(const struct FInstallProgressMod& Ne
 
 void UUI_CFCore_WideGameSlot_C::InstallMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "InstallMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "InstallMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -449,10 +491,8 @@ void UUI_CFCore_WideGameSlot_C::InstallMod()
 
 bool UUI_CFCore_WideGameSlot_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_OnEventBroadcasted Parms{};
 
@@ -473,10 +513,8 @@ bool UUI_CFCore_WideGameSlot_C::OnEventBroadcasted(EGameModsEvent evt, const TAr
 
 void UUI_CFCore_WideGameSlot_C::OnFail_B8EEEF7848312655C1FBE6846A0BF90D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "OnFail_B8EEEF7848312655C1FBE6846A0BF90D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "OnFail_B8EEEF7848312655C1FBE6846A0BF90D", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_OnFail_B8EEEF7848312655C1FBE6846A0BF90D Parms{};
 
@@ -493,10 +531,8 @@ void UUI_CFCore_WideGameSlot_C::OnFail_B8EEEF7848312655C1FBE6846A0BF90D(class UT
 
 void UUI_CFCore_WideGameSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "OnListItemObjectSet");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "OnListItemObjectSet", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_OnListItemObjectSet Parms{};
 
@@ -513,10 +549,8 @@ void UUI_CFCore_WideGameSlot_C::OnListItemObjectSet(class UObject* ListItemObjec
 
 void UUI_CFCore_WideGameSlot_C::OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D Parms{};
 
@@ -527,14 +561,12 @@ void UUI_CFCore_WideGameSlot_C::OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D(class
 
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.PlayStartingAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_WideGameSlot_C::PlayStartingAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "PlayStartingAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "PlayStartingAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -545,10 +577,8 @@ void UUI_CFCore_WideGameSlot_C::PlayStartingAnimation()
 
 void UUI_CFCore_WideGameSlot_C::RequestDownloadImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "RequestDownloadImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "RequestDownloadImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -561,10 +591,8 @@ void UUI_CFCore_WideGameSlot_C::RequestDownloadImage()
 
 void UUI_CFCore_WideGameSlot_C::SetIsSelected(bool IsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "SetIsSelected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "SetIsSelected", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_SetIsSelected Parms{};
 
@@ -581,10 +609,8 @@ void UUI_CFCore_WideGameSlot_C::SetIsSelected(bool IsSelected)
 
 void UUI_CFCore_WideGameSlot_C::SetVisibilityEnabledNavUpDown(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "SetVisibilityEnabledNavUpDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "SetVisibilityEnabledNavUpDown", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_SetVisibilityEnabledNavUpDown Parms{};
 
@@ -602,10 +628,8 @@ void UUI_CFCore_WideGameSlot_C::SetVisibilityEnabledNavUpDown(bool IsVisible_0)
 
 void UUI_CFCore_WideGameSlot_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_WideGameSlot_C_Tick Parms{};
 
@@ -621,10 +645,8 @@ void UUI_CFCore_WideGameSlot_C::Tick(const struct FGeometry& MyGeometry, float I
 
 void UUI_CFCore_WideGameSlot_C::Update_LikeStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "Update LikeStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "Update LikeStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -635,10 +657,8 @@ void UUI_CFCore_WideGameSlot_C::Update_LikeStatus()
 
 void UUI_CFCore_WideGameSlot_C::UpdateAuthors()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateAuthors", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -649,10 +669,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateAuthors()
 
 void UUI_CFCore_WideGameSlot_C::UpdatedIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdatedIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdatedIsEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -663,10 +681,8 @@ void UUI_CFCore_WideGameSlot_C::UpdatedIsEnabled()
 
 void UUI_CFCore_WideGameSlot_C::UpdateMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -677,10 +693,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateMod()
 
 void UUI_CFCore_WideGameSlot_C::UpdateModDownloadCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateModDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateModDownloadCount", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -691,10 +705,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateModDownloadCount()
 
 void UUI_CFCore_WideGameSlot_C::UpdateModName()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateModName", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -705,10 +717,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateModName()
 
 void UUI_CFCore_WideGameSlot_C::UpdateModRating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateModRating");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateModRating", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -719,10 +729,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateModRating()
 
 void UUI_CFCore_WideGameSlot_C::UpdateModSize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateModSize", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -733,10 +741,8 @@ void UUI_CFCore_WideGameSlot_C::UpdateModSize()
 
 void UUI_CFCore_WideGameSlot_C::UpdatePaidPremiumStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdatePaidPremiumStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdatePaidPremiumStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -747,24 +753,20 @@ void UUI_CFCore_WideGameSlot_C::UpdatePaidPremiumStatus()
 
 void UUI_CFCore_WideGameSlot_C::UpdateThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdateUPDATEButtonStatus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_WideGameSlot_C::UpdateUPDATEButtonStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_WideGameSlot_C", "UpdateUPDATEButtonStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_WideGameSlot_C", "UpdateUPDATEButtonStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

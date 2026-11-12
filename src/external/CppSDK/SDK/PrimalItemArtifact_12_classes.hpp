@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArtifact_12_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArtifact_12_C;
 
 SDK_NAMESPACE_END

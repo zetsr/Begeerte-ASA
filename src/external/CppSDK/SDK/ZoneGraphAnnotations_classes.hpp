@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "ZoneGraphAnnotations_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ZoneGraph_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ZoneGraphAnnotations_structs.hpp"
-#include "ZoneGraph_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationComponent
-// 0x0020 (0x0690 - 0x0670)
+// 0x0020 (0x0730 - 0x0710)
 class UZoneGraphAnnotationComponent : public UDebugDrawComponent
 {
 public:
-	uint8                                         Pad_670[0x18];                                     // 0x0670(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableDebugDrawing;                               // 0x0688(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_689[0x7];                                      // 0x0689(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_710[0x18];                                     // 0x0710(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableDebugDrawing;                               // 0x0728(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -42,32 +42,37 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationComponent>();
 	}
 };
+DUMPER7_ASSERTS_UZoneGraphAnnotationComponent;
 
-// Class ZoneGraphAnnotations.ZoneGraphAnnotationSubsystem
-// 0x0070 (0x00B0 - 0x0040)
-class UZoneGraphAnnotationSubsystem final : public UTickableWorldSubsystem
+// Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotation
+// 0x0070 (0x07A0 - 0x0730)
+class UZoneGraphDisturbanceAnnotation final : public UZoneGraphAnnotationComponent
 {
 public:
-	TArray<struct FRegisteredZoneGraphAnnotation> RegisteredComponents;                              // 0x0040(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStructContainer              Events[0x2];                                       // 0x0050(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UZoneGraphAnnotationComponent*>  TagToAnnotationLookup;                             // 0x0078(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_88[0x28];                                      // 0x0088(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FZoneGraphTag                          DangerAnnotationTag;                               // 0x0730(0x0001)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FZoneGraphTag                          ObstacleAnnotationTag;                             // 0x0731(0x0001)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_732[0x2];                                      // 0x0732(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FZoneGraphTagFilter                    AffectedLaneTags;                                  // 0x0734(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FZoneGraphTagFilter                    EscapeLaneTags;                                    // 0x0740(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         IdealSpanLength;                                   // 0x074C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_750[0x40];                                     // 0x0750(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	class UZoneGraphSubsystem*                    ZoneGraphSubsystem;                                // 0x0790(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ZoneGraphAnnotationSubsystem")
+		STATIC_CLASS_IMPL("ZoneGraphDisturbanceAnnotation")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ZoneGraphAnnotationSubsystem")
+		STATIC_NAME_IMPL(L"ZoneGraphDisturbanceAnnotation")
 	}
-	static class UZoneGraphAnnotationSubsystem* GetDefaultObj()
+	static class UZoneGraphDisturbanceAnnotation* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UZoneGraphAnnotationSubsystem>();
+		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotation>();
 	}
 };
+DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotation;
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationTest
 // 0x0008 (0x0030 - 0x0028)
@@ -90,83 +95,7 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationTest>();
 	}
 };
-
-// Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingComponent
-// 0x0010 (0x0680 - 0x0670)
-class UZoneGraphAnnotationTestingComponent final : public UDebugDrawComponent
-{
-public:
-	TArray<class UZoneGraphAnnotationTest*>       Tests;                                             // 0x0670(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ZoneGraphAnnotationTestingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ZoneGraphAnnotationTestingComponent")
-	}
-	static class UZoneGraphAnnotationTestingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UZoneGraphAnnotationTestingComponent>();
-	}
-};
-
-// Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingActor
-// 0x0008 (0x0498 - 0x0490)
-class AZoneGraphAnnotationTestingActor final : public AActor
-{
-public:
-	class UZoneGraphAnnotationTestingComponent*   TestingComp;                                       // 0x0490(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	void Trigger();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ZoneGraphAnnotationTestingActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ZoneGraphAnnotationTestingActor")
-	}
-	static class AZoneGraphAnnotationTestingActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AZoneGraphAnnotationTestingActor>();
-	}
-};
-
-// Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotation
-// 0x0070 (0x0700 - 0x0690)
-class UZoneGraphDisturbanceAnnotation final : public UZoneGraphAnnotationComponent
-{
-public:
-	struct FZoneGraphTag                          DangerAnnotationTag;                               // 0x0690(0x0001)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FZoneGraphTag                          ObstacleAnnotationTag;                             // 0x0691(0x0001)(Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_692[0x2];                                      // 0x0692(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FZoneGraphTagFilter                    AffectedLaneTags;                                  // 0x0694(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FZoneGraphTagFilter                    EscapeLaneTags;                                    // 0x06A0(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         IdealSpanLength;                                   // 0x06AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6B0[0x40];                                     // 0x06B0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	class UZoneGraphSubsystem*                    ZoneGraphSubsystem;                                // 0x06F0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ZoneGraphDisturbanceAnnotation")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ZoneGraphDisturbanceAnnotation")
-	}
-	static class UZoneGraphDisturbanceAnnotation* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotation>();
-	}
-};
+DUMPER7_ASSERTS_UZoneGraphAnnotationTest;
 
 // Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotationTest
 // 0x0020 (0x0050 - 0x0030)
@@ -191,6 +120,7 @@ public:
 		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotationTest>();
 	}
 };
+DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotationTest;
 
 // Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotationBPLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -213,5 +143,82 @@ public:
 		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotationBPLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotationBPLibrary;
+
+// Class ZoneGraphAnnotations.ZoneGraphAnnotationSubsystem
+// 0x0078 (0x00C0 - 0x0048)
+class UZoneGraphAnnotationSubsystem final : public UTickableWorldSubsystem
+{
+public:
+	TArray<struct FRegisteredZoneGraphAnnotation> RegisteredComponents;                              // 0x0048(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStructContainer              Events[0x2];                                       // 0x0058(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UZoneGraphAnnotationComponent*>  TagToAnnotationLookup;                             // 0x0080(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_90[0x30];                                      // 0x0090(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ZoneGraphAnnotationSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ZoneGraphAnnotationSubsystem")
+	}
+	static class UZoneGraphAnnotationSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UZoneGraphAnnotationSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UZoneGraphAnnotationSubsystem;
+
+// Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingComponent
+// 0x0010 (0x0720 - 0x0710)
+class UZoneGraphAnnotationTestingComponent final : public UDebugDrawComponent
+{
+public:
+	TArray<class UZoneGraphAnnotationTest*>       Tests;                                             // 0x0710(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ZoneGraphAnnotationTestingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ZoneGraphAnnotationTestingComponent")
+	}
+	static class UZoneGraphAnnotationTestingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UZoneGraphAnnotationTestingComponent>();
+	}
+};
+DUMPER7_ASSERTS_UZoneGraphAnnotationTestingComponent;
+
+// Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingActor
+// 0x0008 (0x04A0 - 0x0498)
+class AZoneGraphAnnotationTestingActor final : public AActor
+{
+public:
+	class UZoneGraphAnnotationTestingComponent*   TestingComp;                                       // 0x0498(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	void Trigger();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ZoneGraphAnnotationTestingActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ZoneGraphAnnotationTestingActor")
+	}
+	static class AZoneGraphAnnotationTestingActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AZoneGraphAnnotationTestingActor>();
+	}
+};
+DUMPER7_ASSERTS_AZoneGraphAnnotationTestingActor;
 
 SDK_NAMESPACE_END

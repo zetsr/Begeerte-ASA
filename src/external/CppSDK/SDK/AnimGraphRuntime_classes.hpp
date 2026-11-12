@@ -10,90 +10,21 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
-// 0x0008 (0x0040 - 0x0038)
-class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotifyWindow")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotifyWindow")
-	}
-	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
-	}
-};
-
-// Class AnimGraphRuntime.AnimNodeRigidBodyLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAnimNodeRigidBodyLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FRigidBodyAnimNodeReference ConvertToRigidBodyAnimNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToRigidBodyAnimNodePure(const struct FAnimNodeReference& Node, struct FRigidBodyAnimNodeReference* RigidBodyAnimNode, bool* Result);
-	static struct FRigidBodyAnimNodeReference SetOverridePhysicsAsset(const struct FRigidBodyAnimNodeReference& Node, class UPhysicsAsset* PhysicsAsset);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimNodeRigidBodyLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimNodeRigidBodyLibrary")
-	}
-	static class UAnimNodeRigidBodyLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNodeRigidBodyLibrary>();
-	}
-};
-
-// Class AnimGraphRuntime.BlendSpaceLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBlendSpaceLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FBlendSpaceReference ConvertToBlendSpace(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendSpacePure(const struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* Result);
-	static struct FVector GetFilteredPosition(const struct FBlendSpaceReference& BlendSpace);
-	static struct FVector GetPosition(const struct FBlendSpaceReference& BlendSpace);
-	static void SnapToPosition(const struct FBlendSpaceReference& BlendSpace, const struct FVector& NewPosition);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlendSpaceLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlendSpaceLibrary")
-	}
-	static class UBlendSpaceLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlendSpaceLibrary>();
-	}
-};
-
 // Class AnimGraphRuntime.SequencerAnimationOverride
-// 0x0000 (0x0000 - 0x0000)
-class ISequencerAnimationOverride final
+// 0x0008 (0x0008 - 0x0000)
+class ISequencerAnimationOverride
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool AllowsCinematicOverride() const;
 	TArray<class FName> GetSequencerAnimSlotNames() const;
@@ -121,6 +52,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ISequencerAnimationOverride;
 
 // Class AnimGraphRuntime.AnimationStateMachineLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -152,25 +84,7 @@ public:
 		return GetDefaultObjImpl<UAnimationStateMachineLibrary>();
 	}
 };
-
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x03D0 - 0x03D0)
-class UAnimSequencerInstance final : public UAnimInstance
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimSequencerInstance")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimSequencerInstance")
-	}
-	static class UAnimSequencerInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
-	}
-};
+DUMPER7_ASSERTS_UAnimationStateMachineLibrary;
 
 // Class AnimGraphRuntime.AnimExecutionContextLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -201,6 +115,7 @@ public:
 		return GetDefaultObjImpl<UAnimExecutionContextLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnimExecutionContextLibrary;
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
 // 0x0008 (0x0048 - 0x0040)
@@ -223,6 +138,82 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
+
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
+// 0x0008 (0x0040 - 0x0038)
+class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotifyWindow")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotifyWindow")
+	}
+	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
+	}
+};
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
+
+// Class AnimGraphRuntime.SequencerAnimationSupport
+// 0x0008 (0x0008 - 0x0000)
+class ISequencerAnimationSupport
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SequencerAnimationSupport")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequencerAnimationSupport")
+	}
+	static class ISequencerAnimationSupport* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISequencerAnimationSupport>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_ISequencerAnimationSupport;
+
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0000 (0x03B0 - 0x03B0)
+class UAnimSequencerInstance final : public UAnimInstance, public ISequencerAnimationSupport
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimSequencerInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimSequencerInstance")
+	}
+	static class UAnimSequencerInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
+	}
+};
+DUMPER7_ASSERTS_UAnimSequencerInstance;
 
 // Class AnimGraphRuntime.BlendListBaseLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -246,6 +237,34 @@ public:
 		return GetDefaultObjImpl<UBlendListBaseLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlendListBaseLibrary;
+
+// Class AnimGraphRuntime.BlendSpaceLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlendSpaceLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FBlendSpaceReference ConvertToBlendSpace(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToBlendSpacePure(const struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* Result);
+	static struct FVector GetFilteredPosition(const struct FBlendSpaceReference& BlendSpace);
+	static struct FVector GetPosition(const struct FBlendSpaceReference& BlendSpace);
+	static void SnapToPosition(const struct FBlendSpaceReference& BlendSpace, const struct FVector& NewPosition);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlendSpaceLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlendSpaceLibrary")
+	}
+	static class UBlendSpaceLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendSpaceLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlendSpaceLibrary;
 
 // Class AnimGraphRuntime.BlendSpacePlayerLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -254,11 +273,13 @@ class UBlendSpacePlayerLibrary final : public UBlueprintFunctionLibrary
 public:
 	static struct FBlendSpacePlayerReference ConvertToBlendSpacePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
 	static void ConvertToBlendSpacePlayerPure(const struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result);
+	static float GetAccumulatedTime(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static class UBlendSpace* GetBlendSpace(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static bool GetLoop(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static float GetPlayRate(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static struct FVector GetPosition(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static float GetStartPosition(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static struct FBlendSpacePlayerReference SetAccumulatedTime(const struct FBlendSpacePlayerReference& BlendSpacePlayer, float Time);
 	static struct FBlendSpacePlayerReference SetBlendSpace(const struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace);
 	static struct FBlendSpacePlayerReference SetBlendSpaceWithInertialBlending(const struct FAnimUpdateContext& UpdateContext, const struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace, float BlendTime);
 	static struct FBlendSpacePlayerReference SetLoop(const struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bLoop);
@@ -281,6 +302,32 @@ public:
 		return GetDefaultObjImpl<UBlendSpacePlayerLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlendSpacePlayerLibrary;
+
+// Class AnimGraphRuntime.AnimNodeRigidBodyLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAnimNodeRigidBodyLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FRigidBodyAnimNodeReference ConvertToRigidBodyAnimNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToRigidBodyAnimNodePure(const struct FAnimNodeReference& Node, struct FRigidBodyAnimNodeReference* RigidBodyAnimNode, bool* Result);
+	static struct FRigidBodyAnimNodeReference SetOverridePhysicsAsset(const struct FRigidBodyAnimNodeReference& Node, class UPhysicsAsset* PhysicsAsset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimNodeRigidBodyLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNodeRigidBodyLibrary")
+	}
+	static class UAnimNodeRigidBodyLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNodeRigidBodyLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UAnimNodeRigidBodyLibrary;
 
 // Class AnimGraphRuntime.KismetAnimationLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -313,6 +360,7 @@ public:
 		return GetDefaultObjImpl<UKismetAnimationLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UKismetAnimationLibrary;
 
 // Class AnimGraphRuntime.LayeredBoneBlendLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -338,6 +386,7 @@ public:
 		return GetDefaultObjImpl<ULayeredBoneBlendLibrary>();
 	}
 };
+DUMPER7_ASSERTS_ULayeredBoneBlendLibrary;
 
 // Class AnimGraphRuntime.LinkedAnimGraphLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -363,6 +412,7 @@ public:
 		return GetDefaultObjImpl<ULinkedAnimGraphLibrary>();
 	}
 };
+DUMPER7_ASSERTS_ULinkedAnimGraphLibrary;
 
 // Class AnimGraphRuntime.MirrorAnimLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -391,6 +441,7 @@ public:
 		return GetDefaultObjImpl<UMirrorAnimLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UMirrorAnimLibrary;
 
 // Class AnimGraphRuntime.ModifyCurveAnimLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -419,6 +470,7 @@ public:
 		return GetDefaultObjImpl<UModifyCurveAnimLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UModifyCurveAnimLibrary;
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
 // 0x0080 (0x00A8 - 0x0028)
@@ -454,6 +506,7 @@ public:
 		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
 	}
 };
+DUMPER7_ASSERTS_UPlayMontageCallbackProxy;
 
 // Class AnimGraphRuntime.SequenceEvaluatorLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -484,6 +537,7 @@ public:
 		return GetDefaultObjImpl<USequenceEvaluatorLibrary>();
 	}
 };
+DUMPER7_ASSERTS_USequenceEvaluatorLibrary;
 
 // Class AnimGraphRuntime.SequencePlayerLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -519,34 +573,7 @@ public:
 		return GetDefaultObjImpl<USequencePlayerLibrary>();
 	}
 };
-
-// Class AnimGraphRuntime.SequencerAnimationSupport
-// 0x0000 (0x0000 - 0x0000)
-class ISequencerAnimationSupport final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SequencerAnimationSupport")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SequencerAnimationSupport")
-	}
-	static class ISequencerAnimationSupport* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ISequencerAnimationSupport>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
+DUMPER7_ASSERTS_USequencePlayerLibrary;
 
 // Class AnimGraphRuntime.SkeletalControlLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -572,5 +599,6 @@ public:
 		return GetDefaultObjImpl<USkeletalControlLibrary>();
 	}
 };
+DUMPER7_ASSERTS_USkeletalControlLibrary;
 
 SDK_NAMESPACE_END

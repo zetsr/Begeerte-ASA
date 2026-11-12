@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void AStructureItemContainerBaseBP_C::BPOnTransferAll(class UPrimalInventoryComponent* ToInventory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StructureItemContainerBaseBP_C", "BPOnTransferAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "StructureItemContainerBaseBP_C", "BPOnTransferAll", FuncInfo);
 
 	Params::StructureItemContainerBaseBP_C_BPOnTransferAll Parms{};
 

@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "NNEDenoiser_structs.hpp"
-#include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class NNEDenoiser.NNEDenoiserAsset
-// 0x0088 (0x00B8 - 0x0030)
+// 0x0088 (0x00B0 - 0x0028)
 class UNNEDenoiserAsset final : public UDataAsset
 {
 public:
-	TSoftObjectPtr<class UNNEModelData>           ModelData;                                         // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              InputMapping;                                      // 0x0058(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              OutputMapping;                                     // 0x0080(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTilingConfig                          TilingConfig;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UNNEModelData>           ModelData;                                         // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              InputMapping;                                      // 0x0050(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              OutputMapping;                                     // 0x0078(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTilingConfig                          TilingConfig;                                      // 0x00A0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -41,16 +41,17 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserAsset>();
 	}
 };
+DUMPER7_ASSERTS_UNNEDenoiserAsset;
 
 // Class NNEDenoiser.NNEDenoiserTemporalAsset
-// 0x0088 (0x00B8 - 0x0030)
+// 0x0088 (0x00B0 - 0x0028)
 class UNNEDenoiserTemporalAsset final : public UDataAsset
 {
 public:
-	TSoftObjectPtr<class UNNEModelData>           ModelData;                                         // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              InputMapping;                                      // 0x0058(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UDataTable>              OutputMapping;                                     // 0x0080(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTilingConfig                          TilingConfig;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UNNEModelData>           ModelData;                                         // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              InputMapping;                                      // 0x0050(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UDataTable>              OutputMapping;                                     // 0x0078(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTilingConfig                          TilingConfig;                                      // 0x00A0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -66,6 +67,7 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserTemporalAsset>();
 	}
 };
+DUMPER7_ASSERTS_UNNEDenoiserTemporalAsset;
 
 // Class NNEDenoiser.NNEDenoiserSettings
 // 0x0068 (0x00A0 - 0x0038)
@@ -74,8 +76,9 @@ class UNNEDenoiserSettings final : public UDeveloperSettingsBackedByCVars
 public:
 	TSoftObjectPtr<class UNNEDenoiserAsset>       DenoiserAsset;                                     // 0x0038(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x28];                                      // 0x0060(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	EDenoiserRuntimeType                          RuntimeType;                                       // 0x0088(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaximumTileSizeOverride;                           // 0x0088(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDenoiserRuntimeType                          RuntimeType;                                       // 0x008C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RuntimeName;                                       // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -92,5 +95,6 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserSettings>();
 	}
 };
+DUMPER7_ASSERTS_UNNEDenoiserSettings;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_Sub_Category_C::BndEvt__Sub_Category1_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "BndEvt__Sub-Category1_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "BndEvt__Sub-Category1_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_Sub_Category_C::BndEvt__Sub_Category1_Btn_Category_K2Node_ComponentBoun
 
 void UUI_Sub_Category_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_Sub_Category_C::Construct()
 
 void UUI_Sub_Category_C::Event_Set_Button_Style(const struct FButtonStyle& InStyle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "Event Set Button Style");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "Event Set Button Style", FuncInfo);
 
 	Params::UI_Sub_Category_C_Event_Set_Button_Style Parms{};
 
@@ -71,10 +65,8 @@ void UUI_Sub_Category_C::Event_Set_Button_Style(const struct FButtonStyle& InSty
 
 void UUI_Sub_Category_C::ExecuteUbergraph_UI_Sub_Category(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "ExecuteUbergraph_UI_Sub-Category");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "ExecuteUbergraph_UI_Sub-Category", FuncInfo);
 
 	Params::UI_Sub_Category_C_ExecuteUbergraph_UI_Sub_Category Parms{};
 
@@ -91,10 +83,8 @@ void UUI_Sub_Category_C::ExecuteUbergraph_UI_Sub_Category(int32 EntryPoint)
 
 void UUI_Sub_Category_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_Sub_Category_C_GetRootCFWidget Parms{};
 
@@ -112,10 +102,8 @@ void UUI_Sub_Category_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 
 void UUI_Sub_Category_C::OnFail_B7C25CB3474DE2A4D0BC4DAA4F40DDC8(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "OnFail_B7C25CB3474DE2A4D0BC4DAA4F40DDC8");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "OnFail_B7C25CB3474DE2A4D0BC4DAA4F40DDC8", FuncInfo);
 
 	Params::UI_Sub_Category_C_OnFail_B7C25CB3474DE2A4D0BC4DAA4F40DDC8 Parms{};
 
@@ -132,10 +120,8 @@ void UUI_Sub_Category_C::OnFail_B7C25CB3474DE2A4D0BC4DAA4F40DDC8(class UTexture2
 
 void UUI_Sub_Category_C::OnSuccess_B7C25CB3474DE2A4D0BC4DAA4F40DDC8(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Category_C", "OnSuccess_B7C25CB3474DE2A4D0BC4DAA4F40DDC8");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Category_C", "OnSuccess_B7C25CB3474DE2A4D0BC4DAA4F40DDC8", FuncInfo);
 
 	Params::UI_Sub_Category_C_OnSuccess_B7C25CB3474DE2A4D0BC4DAA4F40DDC8 Parms{};
 

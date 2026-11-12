@@ -16,9 +16,10 @@
 SDK_NAMESPACE_START
 
 // ScriptStruct HM_TPV_ClimbPick_AnimBP.HM_TPV_ClimbPick_AnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0xD7B8 - 0xD7B8)
+// 0x0000 (0xDB38 - 0xDB38)
 struct HM_TPV_ClimbPick_AnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP_Fists::FAnimBlueprintGeneratedConstantData
 {
 };
+DUMPER7_ASSERTS_HM_TPV_ClimbPick_AnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

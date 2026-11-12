@@ -16,8 +16,724 @@
 
 SDK_NAMESPACE_START
 
+// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToInstance
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USmartObjectSubsystem::AddTagToInstance(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "AddTagToInstance");
+
+	Params::SmartObjectSubsystem_AddTagToInstance Parms{};
+
+	Parms.Handle = std::move(Handle);
+	Parms.Tag = std::move(Tag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToSlot
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USmartObjectSubsystem::AddTagToSlot(const struct FSmartObjectSlotHandle& SlotHandle, const struct FGameplayTag& Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "AddTagToSlot");
+
+	Params::SmartObjectSubsystem_AddTagToSlot Parms{};
+
+	Parms.SlotHandle = std::move(SlotHandle);
+	Parms.Tag = std::move(Tag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinition
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TSubclassOf<class USmartObjectBehaviorDefinition>DefinitionClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class USmartObjectBehaviorDefinition*ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class USmartObjectBehaviorDefinition* USmartObjectSubsystem::GetBehaviorDefinition(const struct FSmartObjectClaimHandle& ClaimHandle, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetBehaviorDefinition");
+
+	Params::SmartObjectSubsystem_GetBehaviorDefinition Parms{};
+
+	Parms.ClaimHandle = std::move(ClaimHandle);
+	Parms.DefinitionClass = DefinitionClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinitionByRequestResult
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectRequestResult& RequestResult                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TSubclassOf<class USmartObjectBehaviorDefinition>DefinitionClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class USmartObjectBehaviorDefinition*ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class USmartObjectBehaviorDefinition* USmartObjectSubsystem::GetBehaviorDefinitionByRequestResult(const struct FSmartObjectRequestResult& RequestResult, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetBehaviorDefinitionByRequestResult");
+
+	Params::SmartObjectSubsystem_GetBehaviorDefinitionByRequestResult Parms{};
+
+	Parms.RequestResult = std::move(RequestResult);
+	Parms.DefinitionClass = DefinitionClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.Release
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::Release(const struct FSmartObjectClaimHandle& ClaimHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "Release");
+
+	Params::SmartObjectSubsystem_Release Parms{};
+
+	Parms.ClaimHandle = std::move(ClaimHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromInstance
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USmartObjectSubsystem::RemoveTagFromInstance(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "RemoveTagFromInstance");
+
+	Params::SmartObjectSubsystem_RemoveTagFromInstance Parms{};
+
+	Parms.Handle = std::move(Handle);
+	Parms.Tag = std::move(Tag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromSlot
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::RemoveTagFromSlot(const struct FSmartObjectSlotHandle& SlotHandle, const struct FGameplayTag& Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "RemoveTagFromSlot");
+
+	Params::SmartObjectSubsystem_RemoveTagFromSlot Parms{};
+
+	Parms.SlotHandle = std::move(SlotHandle);
+	Parms.Tag = std::move(Tag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::SetEnabled(const struct FSmartObjectHandle& Handle, const bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "SetEnabled");
+
+	Params::SmartObjectSubsystem_SetEnabled Parms{};
+
+	Parms.Handle = std::move(Handle);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabledForReason
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::SetEnabledForReason(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& ReasonTag, const bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "SetEnabledForReason");
+
+	Params::SmartObjectSubsystem_SetEnabledForReason Parms{};
+
+	Parms.Handle = std::move(Handle);
+	Parms.ReasonTag = std::move(ReasonTag);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetSlotEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::SetSlotEnabled(const struct FSmartObjectSlotHandle& SlotHandle, const bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "SetSlotEnabled");
+
+	Params::SmartObjectSubsystem_SetSlotEnabled Parms{};
+
+	Parms.SlotHandle = std::move(SlotHandle);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObject
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FSmartObjectRequestResult        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FSmartObjectRequestResult USmartObjectSubsystem::FindSmartObject(const struct FSmartObjectRequest& Request, const class AActor* UserActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObject");
+
+	Params::SmartObjectSubsystem_FindSmartObject Parms{};
+
+	Parms.Request = std::move(Request);
+	Parms.UserActor = UserActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FSmartObjectRequestResult>*OutResults                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::FindSmartObjects(const struct FSmartObjectRequest& Request, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObjects");
+
+	Params::SmartObjectSubsystem_FindSmartObjects Parms{};
+
+	Parms.Request = std::move(Request);
+	Parms.UserActor = UserActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResults != nullptr)
+		*OutResults = std::move(Parms.OutResults);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects_BP
+// (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
+// Parameters:
+// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FSmartObjectRequestResult>*OutResults                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::FindSmartObjects_BP(const struct FSmartObjectRequest& Request, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObjects_BP");
+
+	Params::SmartObjectSubsystem_FindSmartObjects_BP Parms{};
+
+	Parms.Request = std::move(Request);
+	Parms.UserActor = UserActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResults != nullptr)
+		*OutResults = std::move(Parms.OutResults);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetAllSlots
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FSmartObjectSlotHandle>*  OutSlots                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void USmartObjectSubsystem::GetAllSlots(const struct FSmartObjectHandle& Handle, TArray<struct FSmartObjectSlotHandle>* OutSlots) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetAllSlots");
+
+	Params::SmartObjectSubsystem_GetAllSlots Parms{};
+
+	Parms.Handle = std::move(Handle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSlots != nullptr)
+		*OutSlots = std::move(Parms.OutSlots);
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetInstanceTags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTagContainer      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FGameplayTagContainer USmartObjectSubsystem::GetInstanceTags(const struct FSmartObjectHandle& Handle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetInstanceTags");
+
+	Params::SmartObjectSubsystem_GetInstanceTags Parms{};
+
+	Parms.Handle = std::move(Handle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotLocation
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector*                         OutSlotLocation                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::GetSlotLocation(const struct FSmartObjectClaimHandle& ClaimHandle, struct FVector* OutSlotLocation) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotLocation");
+
+	Params::SmartObjectSubsystem_GetSlotLocation Parms{};
+
+	Parms.ClaimHandle = std::move(ClaimHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSlotLocation != nullptr)
+		*OutSlotLocation = std::move(Parms.OutSlotLocation);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotState
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESmartObjectSlotState                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ESmartObjectSlotState USmartObjectSubsystem::GetSlotState(const struct FSmartObjectSlotHandle& SlotHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotState");
+
+	Params::SmartObjectSubsystem_GetSlotState Parms{};
+
+	Parms.SlotHandle = std::move(SlotHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTagContainer      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FGameplayTagContainer USmartObjectSubsystem::GetSlotTags(const struct FSmartObjectSlotHandle& SlotHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTags");
+
+	Params::SmartObjectSubsystem_GetSlotTags Parms{};
+
+	Parms.SlotHandle = std::move(SlotHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransform
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutSlotTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::GetSlotTransform(const struct FSmartObjectClaimHandle& ClaimHandle, struct FTransform* OutSlotTransform) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTransform");
+
+	Params::SmartObjectSubsystem_GetSlotTransform Parms{};
+
+	Parms.ClaimHandle = std::move(ClaimHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSlotTransform != nullptr)
+		*OutSlotTransform = std::move(Parms.OutSlotTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransformFromRequestResult
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectRequestResult& RequestResult                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutSlotTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::GetSlotTransformFromRequestResult(const struct FSmartObjectRequestResult& RequestResult, struct FTransform* OutSlotTransform) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTransformFromRequestResult");
+
+	Params::SmartObjectSubsystem_GetSlotTransformFromRequestResult Parms{};
+
+	Parms.RequestResult = std::move(RequestResult);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSlotTransform != nullptr)
+		*OutSlotTransform = std::move(Parms.OutSlotTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// ETrySpawnActorIfDehydrated              TrySpawnActorIfDehydrated                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USmartObjectComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USmartObjectComponent* USmartObjectSubsystem::GetSmartObjectComponent(const struct FSmartObjectClaimHandle& ClaimHandle, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSmartObjectComponent");
+
+	Params::SmartObjectSubsystem_GetSmartObjectComponent Parms{};
+
+	Parms.ClaimHandle = std::move(ClaimHandle);
+	Parms.TrySpawnActorIfDehydrated = TrySpawnActorIfDehydrated;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponentByRequestResult
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectRequestResult& Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// ETrySpawnActorIfDehydrated              TrySpawnActorIfDehydrated                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USmartObjectComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USmartObjectComponent* USmartObjectSubsystem::GetSmartObjectComponentByRequestResult(const struct FSmartObjectRequestResult& Result, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "GetSmartObjectComponentByRequestResult");
+
+	Params::SmartObjectSubsystem_GetSmartObjectComponentByRequestResult Parms{};
+
+	Parms.Result = std::move(Result);
+	Parms.TrySpawnActorIfDehydrated = TrySpawnActorIfDehydrated;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::IsEnabled(const struct FSmartObjectHandle& Handle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "IsEnabled");
+
+	Params::SmartObjectSubsystem_IsEnabled Parms{};
+
+	Parms.Handle = std::move(Handle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabledForReason
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectSubsystem::IsEnabledForReason(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& ReasonTag) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectSubsystem", "IsEnabledForReason");
+
+	Params::SmartObjectSubsystem_IsEnabledForReason Parms{};
+
+	Parms.Handle = std::move(Handle);
+	Parms.ReasonTag = std::move(ReasonTag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddMultipleSmartObjects
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class AActor*>&            SmartObjectActors                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +761,7 @@ bool USmartObjectBlueprintFunctionLibrary::AddMultipleSmartObjects(const TArray<
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddOrRemoveMultipleSmartObjects
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class AActor*>&            SmartObjectActors                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const bool                              bAdd                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -75,7 +791,7 @@ bool USmartObjectBlueprintFunctionLibrary::AddOrRemoveMultipleSmartObjects(const
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddOrRemoveSmartObject
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           SmartObject                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -105,7 +821,7 @@ bool USmartObjectBlueprintFunctionLibrary::AddOrRemoveSmartObject(class AActor* 
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddSmartObject
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           SmartObjectActor                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -133,7 +849,7 @@ bool USmartObjectBlueprintFunctionLibrary::AddSmartObject(class AActor* SmartObj
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectClaimHandleToString
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectClaimHandle&   Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -161,7 +877,7 @@ class FString USmartObjectBlueprintFunctionLibrary::Conv_SmartObjectClaimHandleT
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectDefinitionToString
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class USmartObjectDefinition*     Definition                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -189,7 +905,7 @@ class FString USmartObjectBlueprintFunctionLibrary::Conv_SmartObjectDefinitionTo
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectHandleToString
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -217,7 +933,7 @@ class FString USmartObjectBlueprintFunctionLibrary::Conv_SmartObjectHandleToStri
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectRequestResultToString
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectRequestResult& Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -245,7 +961,7 @@ class FString USmartObjectBlueprintFunctionLibrary::Conv_SmartObjectRequestResul
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectSlotHandleToString
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectSlotHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -273,7 +989,7 @@ class FString USmartObjectBlueprintFunctionLibrary::Conv_SmartObjectSlotHandleTo
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Equal_SmartObjectHandleSmartObjectHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectHandle&        A                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectHandle&        B                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -303,7 +1019,7 @@ bool USmartObjectBlueprintFunctionLibrary::Equal_SmartObjectHandleSmartObjectHan
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Equal_SmartObjectSlotHandleSmartObjectSlotHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectSlotHandle&    A                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectSlotHandle&    B                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -333,7 +1049,7 @@ bool USmartObjectBlueprintFunctionLibrary::Equal_SmartObjectSlotHandleSmartObjec
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInActor
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSmartObjectRequestFilter& Filter                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class AActor*                           SearchActor                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -369,7 +1085,7 @@ bool USmartObjectBlueprintFunctionLibrary::FindSmartObjectsInActor(const struct 
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInComponent
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSmartObjectRequestFilter& Filter                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class USmartObjectComponent*            SmartObjectComponent                                   (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -405,7 +1121,7 @@ bool USmartObjectBlueprintFunctionLibrary::FindSmartObjectsInComponent(const str
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInList
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectRequestFilter& Filter                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -443,7 +1159,7 @@ bool USmartObjectBlueprintFunctionLibrary::FindSmartObjectsInList(class UObject*
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInTargetingRequest
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectRequestFilter& Filter                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -481,7 +1197,7 @@ bool USmartObjectBlueprintFunctionLibrary::FindSmartObjectsInTargetingRequest(cl
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetBlackboardValueAsSOClaimHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UBTNode*                          NodeOwner                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBlackboardKeySelector&    Key                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -510,8 +1226,148 @@ struct FSmartObjectClaimHandle USmartObjectBlueprintFunctionLibrary::GetBlackboa
 }
 
 
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetNumSlotEntrances
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class USmartObjectDefinition*     Definition                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SlotIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 USmartObjectBlueprintFunctionLibrary::GetNumSlotEntrances(const class USmartObjectDefinition* Definition, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SmartObjectBlueprintFunctionLibrary", "GetNumSlotEntrances");
+
+	Params::SmartObjectBlueprintFunctionLibrary_GetNumSlotEntrances Parms{};
+
+	Parms.Definition = Definition;
+	Parms.SlotIndex = SlotIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotDefinitionDataByType
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class USmartObjectDefinition*     Definition                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SlotIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>*                          OutDefinitionData                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectBlueprintFunctionLibrary::GetSlotDefinitionDataByType(const class USmartObjectDefinition* Definition, int32 SlotIndex, TArray<int32>* OutDefinitionData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SmartObjectBlueprintFunctionLibrary", "GetSlotDefinitionDataByType");
+
+	Params::SmartObjectBlueprintFunctionLibrary_GetSlotDefinitionDataByType Parms{};
+
+	Parms.Definition = Definition;
+	Parms.SlotIndex = SlotIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDefinitionData != nullptr)
+		*OutDefinitionData = std::move(Parms.OutDefinitionData);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotEntranceOffsetAndRotation
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class USmartObjectDefinition*     Definition                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SlotIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntranceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutOffset                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator*                        OutRotation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectBlueprintFunctionLibrary::GetSlotEntranceOffsetAndRotation(const class USmartObjectDefinition* Definition, int32 SlotIndex, int32 EntranceIndex, struct FVector* OutOffset, struct FRotator* OutRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SmartObjectBlueprintFunctionLibrary", "GetSlotEntranceOffsetAndRotation");
+
+	Params::SmartObjectBlueprintFunctionLibrary_GetSlotEntranceOffsetAndRotation Parms{};
+
+	Parms.Definition = Definition;
+	Parms.SlotIndex = SlotIndex;
+	Parms.EntranceIndex = EntranceIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutOffset != nullptr)
+		*OutOffset = std::move(Parms.OutOffset);
+
+	if (OutRotation != nullptr)
+		*OutRotation = std::move(Parms.OutRotation);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotEntranceTransform
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class USmartObjectDefinition*     Definition                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SlotIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntranceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectBlueprintFunctionLibrary::GetSlotEntranceTransform(const class USmartObjectDefinition* Definition, int32 SlotIndex, int32 EntranceIndex, struct FTransform* OutTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SmartObjectBlueprintFunctionLibrary", "GetSlotEntranceTransform");
+
+	Params::SmartObjectBlueprintFunctionLibrary_GetSlotEntranceTransform Parms{};
+
+	Parms.Definition = Definition;
+	Parms.SlotIndex = SlotIndex;
+	Parms.EntranceIndex = EntranceIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetValueAsSOClaimHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UBlackboardComponent*             BlackboardComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      KeyName                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -569,7 +1425,7 @@ bool USmartObjectBlueprintFunctionLibrary::IsValidSmartObjectClaimHandle(const s
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.IsValidSmartObjectHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -597,7 +1453,7 @@ bool USmartObjectBlueprintFunctionLibrary::IsValidSmartObjectHandle(const struct
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.IsValidSmartObjectSlotHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectSlotHandle&    Handle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -625,7 +1481,7 @@ bool USmartObjectBlueprintFunctionLibrary::IsValidSmartObjectSlotHandle(const st
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsClaimed
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -659,7 +1515,7 @@ struct FSmartObjectClaimHandle USmartObjectBlueprintFunctionLibrary::MarkSmartOb
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsFree
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
@@ -689,7 +1545,7 @@ bool USmartObjectBlueprintFunctionLibrary::MarkSmartObjectSlotAsFree(class UObje
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsOccupied
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
@@ -721,7 +1577,7 @@ const class USmartObjectBehaviorDefinition* USmartObjectBlueprintFunctionLibrary
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.NotEqual_SmartObjectHandleSmartObjectHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectHandle&        A                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectHandle&        B                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -751,7 +1607,7 @@ bool USmartObjectBlueprintFunctionLibrary::NotEqual_SmartObjectHandleSmartObject
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FSmartObjectSlotHandle&    A                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSmartObjectSlotHandle&    B                                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -781,7 +1637,7 @@ bool USmartObjectBlueprintFunctionLibrary::NotEqual_SmartObjectSlotHandleSmartOb
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.RemoveMultipleSmartObjects
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class AActor*>&            SmartObjectActors                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -809,7 +1665,7 @@ bool USmartObjectBlueprintFunctionLibrary::RemoveMultipleSmartObjects(const TArr
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.RemoveSmartObject
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           SmartObjectActor                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -837,7 +1693,7 @@ bool USmartObjectBlueprintFunctionLibrary::RemoveSmartObject(class AActor* Smart
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetBlackboardValueAsSOClaimHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UBTNode*                          NodeOwner                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBlackboardKeySelector&    Key                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -866,7 +1722,7 @@ void USmartObjectBlueprintFunctionLibrary::SetBlackboardValueAsSOClaimHandle(cla
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetMultipleSmartObjectsEnabled
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class AActor*>&            SmartObjectActors                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -896,7 +1752,7 @@ bool USmartObjectBlueprintFunctionLibrary::SetMultipleSmartObjectsEnabled(const 
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetSmartObjectEnabled
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           SmartObjectActor                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -926,7 +1782,7 @@ bool USmartObjectBlueprintFunctionLibrary::SetSmartObjectEnabled(class AActor* S
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetValueAsSOClaimHandle
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UBlackboardComponent*             BlackboardComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      KeyName                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -955,7 +1811,7 @@ void USmartObjectBlueprintFunctionLibrary::SetValueAsSOClaimHandle(class UBlackb
 
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SmartObjectClaimHandle_Invalid
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSmartObjectClaimHandle          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -980,7 +1836,7 @@ struct FSmartObjectClaimHandle USmartObjectBlueprintFunctionLibrary::SmartObject
 
 
 // Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// (RequiredAPI, Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
 // const struct FSmartObjectEventData&     EventData                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // const class AActor*                     Interactor                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1002,7 +1858,7 @@ void USmartObjectComponent::ReceiveOnEvent(const struct FSmartObjectEventData& E
 
 
 // Function SmartObjectsModule.SmartObjectComponent.SetDefinition
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USmartObjectDefinition*           DefinitionAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1027,7 +1883,7 @@ void USmartObjectComponent::SetDefinition(class USmartObjectDefinition* Definiti
 
 
 // Function SmartObjectsModule.SmartObjectComponent.GetDefinition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class USmartObjectDefinition*     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1077,7 +1933,7 @@ bool USmartObjectComponent::IsBoundToSimulation() const
 
 
 // Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1102,7 +1958,7 @@ bool USmartObjectComponent::IsSmartObjectEnabled() const
 
 
 // Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1129,8 +1985,66 @@ bool USmartObjectComponent::IsSmartObjectEnabledForReason(const struct FGameplay
 }
 
 
+// Function SmartObjectsModule.SmartObjectComponent.K2_SetSmartObjectEnabled
+// (RequiredAPI, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::K2_SetSmartObjectEnabled(const bool bEnable) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "K2_SetSmartObjectEnabled");
+
+	Params::SmartObjectComponent_K2_SetSmartObjectEnabled Parms{};
+
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.K2_SetSmartObjectEnabledForReason
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::K2_SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "K2_SetSmartObjectEnabledForReason");
+
+	Params::SmartObjectComponent_K2_SetSmartObjectEnabledForReason Parms{};
+
+	Parms.ReasonTag = std::move(ReasonTag);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1158,7 +2072,7 @@ bool USmartObjectComponent::SetSmartObjectEnabled(const bool bEnable) const
 
 
 // Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1266,9 +2180,9 @@ const struct FGameplayTagContainer USmartObjectDefinition::GetActivityTags() con
 
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FBox USmartObjectDefinition::GetBounds() const
 {
@@ -1291,7 +2205,7 @@ struct FBox USmartObjectDefinition::GetBounds() const
 
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetSlotActivityTags
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const int32                             SlotIndex                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGameplayTagContainer*           OutActivityTags                                        (Parm, OutParm, NativeAccessSpecifierPublic)
@@ -1320,7 +2234,7 @@ void USmartObjectDefinition::GetSlotActivityTags(const int32 SlotIndex, struct F
 
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetSlotWorldTransform
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const int32                             SlotIndex                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                OwnerTransform                                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1452,724 +2366,8 @@ const TArray<struct FSmartObjectSlotDefinition> USmartObjectDefinition::K2_GetSl
 }
 
 
-// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToInstance
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USmartObjectSubsystem::AddTagToInstance(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "AddTagToInstance");
-
-	Params::SmartObjectSubsystem_AddTagToInstance Parms{};
-
-	Parms.Handle = std::move(Handle);
-	Parms.Tag = std::move(Tag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToSlot
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USmartObjectSubsystem::AddTagToSlot(const struct FSmartObjectSlotHandle& SlotHandle, const struct FGameplayTag& Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "AddTagToSlot");
-
-	Params::SmartObjectSubsystem_AddTagToSlot Parms{};
-
-	Parms.SlotHandle = std::move(SlotHandle);
-	Parms.Tag = std::move(Tag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinition
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TSubclassOf<class USmartObjectBehaviorDefinition>DefinitionClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class USmartObjectBehaviorDefinition*ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const class USmartObjectBehaviorDefinition* USmartObjectSubsystem::GetBehaviorDefinition(const struct FSmartObjectClaimHandle& ClaimHandle, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetBehaviorDefinition");
-
-	Params::SmartObjectSubsystem_GetBehaviorDefinition Parms{};
-
-	Parms.ClaimHandle = std::move(ClaimHandle);
-	Parms.DefinitionClass = DefinitionClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinitionByRequestResult
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectRequestResult& RequestResult                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TSubclassOf<class USmartObjectBehaviorDefinition>DefinitionClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class USmartObjectBehaviorDefinition*ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const class USmartObjectBehaviorDefinition* USmartObjectSubsystem::GetBehaviorDefinitionByRequestResult(const struct FSmartObjectRequestResult& RequestResult, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetBehaviorDefinitionByRequestResult");
-
-	Params::SmartObjectSubsystem_GetBehaviorDefinitionByRequestResult Parms{};
-
-	Parms.RequestResult = std::move(RequestResult);
-	Parms.DefinitionClass = DefinitionClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.Release
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::Release(const struct FSmartObjectClaimHandle& ClaimHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "Release");
-
-	Params::SmartObjectSubsystem_Release Parms{};
-
-	Parms.ClaimHandle = std::move(ClaimHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromInstance
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USmartObjectSubsystem::RemoveTagFromInstance(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "RemoveTagFromInstance");
-
-	Params::SmartObjectSubsystem_RemoveTagFromInstance Parms{};
-
-	Parms.Handle = std::move(Handle);
-	Parms.Tag = std::move(Tag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromSlot
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::RemoveTagFromSlot(const struct FSmartObjectSlotHandle& SlotHandle, const struct FGameplayTag& Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "RemoveTagFromSlot");
-
-	Params::SmartObjectSubsystem_RemoveTagFromSlot Parms{};
-
-	Parms.SlotHandle = std::move(SlotHandle);
-	Parms.Tag = std::move(Tag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::SetEnabled(const struct FSmartObjectHandle& Handle, const bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "SetEnabled");
-
-	Params::SmartObjectSubsystem_SetEnabled Parms{};
-
-	Parms.Handle = std::move(Handle);
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabledForReason
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::SetEnabledForReason(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& ReasonTag, const bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "SetEnabledForReason");
-
-	Params::SmartObjectSubsystem_SetEnabledForReason Parms{};
-
-	Parms.Handle = std::move(Handle);
-	Parms.ReasonTag = std::move(ReasonTag);
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetSlotEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::SetSlotEnabled(const struct FSmartObjectSlotHandle& SlotHandle, const bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "SetSlotEnabled");
-
-	Params::SmartObjectSubsystem_SetSlotEnabled Parms{};
-
-	Parms.SlotHandle = std::move(SlotHandle);
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObject
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FSmartObjectRequestResult        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FSmartObjectRequestResult USmartObjectSubsystem::FindSmartObject(const struct FSmartObjectRequest& Request, const class AActor* UserActor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObject");
-
-	Params::SmartObjectSubsystem_FindSmartObject Parms{};
-
-	Parms.Request = std::move(Request);
-	Parms.UserActor = UserActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FSmartObjectRequestResult>*OutResults                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::FindSmartObjects(const struct FSmartObjectRequest& Request, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObjects");
-
-	Params::SmartObjectSubsystem_FindSmartObjects Parms{};
-
-	Parms.Request = std::move(Request);
-	Parms.UserActor = UserActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResults != nullptr)
-		*OutResults = std::move(Parms.OutResults);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects_BP
-// (Final, Native, Public, HasOutParams, BlueprintCallable, Const)
-// Parameters:
-// const struct FSmartObjectRequest&       Request                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FSmartObjectRequestResult>*OutResults                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// const class AActor*                     UserActor                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::FindSmartObjects_BP(const struct FSmartObjectRequest& Request, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "FindSmartObjects_BP");
-
-	Params::SmartObjectSubsystem_FindSmartObjects_BP Parms{};
-
-	Parms.Request = std::move(Request);
-	Parms.UserActor = UserActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResults != nullptr)
-		*OutResults = std::move(Parms.OutResults);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetAllSlots
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FSmartObjectSlotHandle>*  OutSlots                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void USmartObjectSubsystem::GetAllSlots(const struct FSmartObjectHandle& Handle, TArray<struct FSmartObjectSlotHandle>* OutSlots) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetAllSlots");
-
-	Params::SmartObjectSubsystem_GetAllSlots Parms{};
-
-	Parms.Handle = std::move(Handle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutSlots != nullptr)
-		*OutSlots = std::move(Parms.OutSlots);
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetInstanceTags
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const struct FGameplayTagContainer USmartObjectSubsystem::GetInstanceTags(const struct FSmartObjectHandle& Handle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetInstanceTags");
-
-	Params::SmartObjectSubsystem_GetInstanceTags Parms{};
-
-	Parms.Handle = std::move(Handle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotLocation
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector*                         OutSlotLocation                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::GetSlotLocation(const struct FSmartObjectClaimHandle& ClaimHandle, struct FVector* OutSlotLocation) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotLocation");
-
-	Params::SmartObjectSubsystem_GetSlotLocation Parms{};
-
-	Parms.ClaimHandle = std::move(ClaimHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutSlotLocation != nullptr)
-		*OutSlotLocation = std::move(Parms.OutSlotLocation);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ESmartObjectSlotState                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ESmartObjectSlotState USmartObjectSubsystem::GetSlotState(const struct FSmartObjectSlotHandle& SlotHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotState");
-
-	Params::SmartObjectSubsystem_GetSlotState Parms{};
-
-	Parms.SlotHandle = std::move(SlotHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTags
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectSlotHandle&    SlotHandle                                             (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTagContainer      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const struct FGameplayTagContainer USmartObjectSubsystem::GetSlotTags(const struct FSmartObjectSlotHandle& SlotHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTags");
-
-	Params::SmartObjectSubsystem_GetSlotTags Parms{};
-
-	Parms.SlotHandle = std::move(SlotHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransform
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FTransform*                      OutSlotTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::GetSlotTransform(const struct FSmartObjectClaimHandle& ClaimHandle, struct FTransform* OutSlotTransform) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTransform");
-
-	Params::SmartObjectSubsystem_GetSlotTransform Parms{};
-
-	Parms.ClaimHandle = std::move(ClaimHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutSlotTransform != nullptr)
-		*OutSlotTransform = std::move(Parms.OutSlotTransform);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransformFromRequestResult
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectRequestResult& RequestResult                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FTransform*                      OutSlotTransform                                       (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::GetSlotTransformFromRequestResult(const struct FSmartObjectRequestResult& RequestResult, struct FTransform* OutSlotTransform) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSlotTransformFromRequestResult");
-
-	Params::SmartObjectSubsystem_GetSlotTransformFromRequestResult Parms{};
-
-	Parms.RequestResult = std::move(RequestResult);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutSlotTransform != nullptr)
-		*OutSlotTransform = std::move(Parms.OutSlotTransform);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponent
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectClaimHandle&   ClaimHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// ETrySpawnActorIfDehydrated              TrySpawnActorIfDehydrated                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USmartObjectComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class USmartObjectComponent* USmartObjectSubsystem::GetSmartObjectComponent(const struct FSmartObjectClaimHandle& ClaimHandle, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSmartObjectComponent");
-
-	Params::SmartObjectSubsystem_GetSmartObjectComponent Parms{};
-
-	Parms.ClaimHandle = std::move(ClaimHandle);
-	Parms.TrySpawnActorIfDehydrated = TrySpawnActorIfDehydrated;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponentByRequestResult
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectRequestResult& Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// ETrySpawnActorIfDehydrated              TrySpawnActorIfDehydrated                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USmartObjectComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class USmartObjectComponent* USmartObjectSubsystem::GetSmartObjectComponentByRequestResult(const struct FSmartObjectRequestResult& Result, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "GetSmartObjectComponentByRequestResult");
-
-	Params::SmartObjectSubsystem_GetSmartObjectComponentByRequestResult Parms{};
-
-	Parms.Result = std::move(Result);
-	Parms.TrySpawnActorIfDehydrated = TrySpawnActorIfDehydrated;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::IsEnabled(const struct FSmartObjectHandle& Handle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "IsEnabled");
-
-	Params::SmartObjectSubsystem_IsEnabled Parms{};
-
-	Parms.Handle = std::move(Handle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabledForReason
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSmartObjectHandle&        Handle                                                 (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectSubsystem::IsEnabledForReason(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& ReasonTag) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectSubsystem", "IsEnabledForReason");
-
-	Params::SmartObjectSubsystem_IsEnabledForReason Parms{};
-
-	Parms.Handle = std::move(Handle);
-	Parms.ReasonTag = std::move(ReasonTag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function SmartObjectsModule.SmartObjectTestingActor.ResetTests
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 
 void ASmartObjectTestingActor::ResetTests()
 {
@@ -2188,7 +2386,7 @@ void ASmartObjectTestingActor::ResetTests()
 
 
 // Function SmartObjectsModule.SmartObjectTestingActor.RunTests
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 
 void ASmartObjectTestingActor::RunTests()
 {

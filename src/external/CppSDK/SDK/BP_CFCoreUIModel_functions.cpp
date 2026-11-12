@@ -20,21 +20,19 @@ SDK_NAMESPACE_START
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const EGameModsEvent&                   evt_OnEventReceived_LibraryProgress                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FLibraryProgress&          progress_OnEventReceived_LibraryProgress               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FLibraryProgress&          Progress_OnEventReceived_LibraryProgress               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FInstallProgressMod>*     OutModsList_OnEventReceived_LibraryProgress            (Parm, OutParm, ContainsInstancedReference)
 // bool                                    ReturnValue_OnEventReceived_LibraryProgress            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UBP_CFCoreUIModel_C::OnEventReceived_LibraryProgress(const EGameModsEvent& evt_OnEventReceived_LibraryProgress, const struct FLibraryProgress& progress_OnEventReceived_LibraryProgress, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived_LibraryProgress)
+bool UBP_CFCoreUIModel_C::OnEventReceived_LibraryProgress(const EGameModsEvent& evt_OnEventReceived_LibraryProgress, const struct FLibraryProgress& Progress_OnEventReceived_LibraryProgress, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived_LibraryProgress)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCoreUIModel_C", "OnEventReceived_LibraryProgress");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCoreUIModel_C", "OnEventReceived_LibraryProgress", FuncInfo);
 
 	Params::BP_CFCoreUIModel_C_OnEventReceived_LibraryProgress Parms{};
 
 	Parms.evt_OnEventReceived_LibraryProgress = evt_OnEventReceived_LibraryProgress;
-	Parms.progress_OnEventReceived_LibraryProgress = std::move(progress_OnEventReceived_LibraryProgress);
+	Parms.Progress_OnEventReceived_LibraryProgress = std::move(Progress_OnEventReceived_LibraryProgress);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -55,10 +53,8 @@ bool UBP_CFCoreUIModel_C::OnEventReceived_LibraryProgress(const EGameModsEvent& 
 
 bool UBP_CFCoreUIModel_C::OnEventReceived(const EGameModsEvent& evt_OnEventReceived, const TArray<struct FCFCoreMod>& InModsList_OnEventReceived, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCoreUIModel_C", "OnEventReceived");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCoreUIModel_C", "OnEventReceived", FuncInfo);
 
 	Params::BP_CFCoreUIModel_C_OnEventReceived Parms{};
 

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UIsFlyingBool_C::ExecuteUbergraph_IsFlyingBool(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsFlyingBool_C", "ExecuteUbergraph_IsFlyingBool");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsFlyingBool_C", "ExecuteUbergraph_IsFlyingBool", FuncInfo);
 
 	Params::IsFlyingBool_C_ExecuteUbergraph_IsFlyingBool Parms{};
 
@@ -43,10 +41,8 @@ void UIsFlyingBool_C::ExecuteUbergraph_IsFlyingBool(int32 EntryPoint)
 
 void UIsFlyingBool_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsFlyingBool_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsFlyingBool_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::IsFlyingBool_C_ReceiveConditionCheck Parms{};
 

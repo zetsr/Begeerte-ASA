@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_AntifireGrenade_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_AntifireGrenade_C;
 
 SDK_NAMESPACE_END

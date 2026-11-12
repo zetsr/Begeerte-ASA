@@ -24,6 +24,7 @@ struct GameplayDebuggerCategoryReplicator_ClientDataPackPacket final
 public:
 	struct FGameplayDebuggerDataPackRPCParams     Params_0;                                          // 0x0000(0x0030)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ClientDataPackPacket;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendCategoryInputEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -33,6 +34,17 @@ public:
 	int32                                         categoryId;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         HandlerId;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSendCategoryInputEvent;
+
+// Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendCategoryNameInputEvent
+// 0x000C (0x000C - 0x0000)
+struct GameplayDebuggerCategoryReplicator_ServerSendCategoryNameInputEvent final
+{
+public:
+	class FName                                   CategoryName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HandlerId;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSendCategoryNameInputEvent;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendExtensionInputEvent
 // 0x0008 (0x0008 - 0x0000)
@@ -42,6 +54,7 @@ public:
 	int32                                         ExtensionId;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         HandlerId;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSendExtensionInputEvent;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetCategoryEnabled
 // 0x0008 (0x0008 - 0x0000)
@@ -52,6 +65,18 @@ public:
 	bool                                          bEnable;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSetCategoryEnabled;
+
+// Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetCategoryNameEnabled
+// 0x000C (0x000C - 0x0000)
+struct GameplayDebuggerCategoryReplicator_ServerSetCategoryNameEnabled final
+{
+public:
+	class FName                                   CategoryName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSetCategoryNameEnabled;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetDebugActor
 // 0x0010 (0x0010 - 0x0000)
@@ -62,6 +87,7 @@ public:
 	bool                                          bSelectInEditor;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSetDebugActor;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -70,6 +96,7 @@ struct GameplayDebuggerCategoryReplicator_ServerSetEnabled final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSetEnabled;
 
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetViewPoint
 // 0x0030 (0x0030 - 0x0000)
@@ -79,6 +106,7 @@ public:
 	struct FVector                                InViewLocation;                                    // 0x0000(0x0018)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                InViewDirection;                                   // 0x0018(0x0018)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameplayDebuggerCategoryReplicator_ServerSetViewPoint;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

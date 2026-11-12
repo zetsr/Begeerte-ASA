@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DinoDeathHarvestingComponent_Base.DinoDeathHarvestingComponent_Base_C
-// 0x0000 (0x0238 - 0x0238)
+// 0x0000 (0x0260 - 0x0260)
 class UDinoDeathHarvestingComponent_Base_C : public UAttackHarvestComponent_Base_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDinoDeathHarvestingComponent_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UDinoDeathHarvestingComponent_Base_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_DiscoveryShelve_C::AddViewAllModSlot()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "AddViewAllModSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "AddViewAllModSlot", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_DiscoveryShelve_C::AddViewAllModSlot()
 
 void UUI_CFCore_DiscoveryShelve_C::BndEvt__UI_HorizontalModList_UI_Button_ScrollToLeft_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "BndEvt__UI_HorizontalModList_UI_Button_ScrollToLeft_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "BndEvt__UI_HorizontalModList_UI_Button_ScrollToLeft_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_DiscoveryShelve_C::BndEvt__UI_HorizontalModList_UI_Button_Scroll
 
 void UUI_CFCore_DiscoveryShelve_C::BndEvt__UI_HorizontalModList_UI_Button_ScrollToRight_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "BndEvt__UI_HorizontalModList_UI_Button_ScrollToRight_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "BndEvt__UI_HorizontalModList_UI_Button_ScrollToRight_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_DiscoveryShelve_C::BndEvt__UI_HorizontalModList_UI_Button_Scroll
 
 void UUI_CFCore_DiscoveryShelve_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +71,8 @@ void UUI_CFCore_DiscoveryShelve_C::Construct()
 
 void UUI_CFCore_DiscoveryShelve_C::Create(const struct FShelf& Shelf_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "Create");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "Create", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_Create Parms{};
 
@@ -97,10 +87,8 @@ void UUI_CFCore_DiscoveryShelve_C::Create(const struct FShelf& Shelf_0)
 
 void UUI_CFCore_DiscoveryShelve_C::EmptyShelve()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "EmptyShelve");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "EmptyShelve", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +101,8 @@ void UUI_CFCore_DiscoveryShelve_C::EmptyShelve()
 
 void UUI_CFCore_DiscoveryShelve_C::ErrorNotFoundMods(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "ErrorNotFoundMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "ErrorNotFoundMods", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_ErrorNotFoundMods Parms{};
 
@@ -133,10 +119,8 @@ void UUI_CFCore_DiscoveryShelve_C::ErrorNotFoundMods(const struct FCFCoreError& 
 
 void UUI_CFCore_DiscoveryShelve_C::ExecuteUbergraph_UI_CFCore_DiscoveryShelve(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "ExecuteUbergraph_UI_CFCore_DiscoveryShelve");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "ExecuteUbergraph_UI_CFCore_DiscoveryShelve", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_ExecuteUbergraph_UI_CFCore_DiscoveryShelve Parms{};
 
@@ -151,10 +135,8 @@ void UUI_CFCore_DiscoveryShelve_C::ExecuteUbergraph_UI_CFCore_DiscoveryShelve(in
 
 void UUI_CFCore_DiscoveryShelve_C::FadeDirections()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "FadeDirections");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "FadeDirections", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +149,8 @@ void UUI_CFCore_DiscoveryShelve_C::FadeDirections()
 
 void UUI_CFCore_DiscoveryShelve_C::FoundMods(const TArray<struct FCFCoreMod>& mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "FoundMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "FoundMods", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_FoundMods Parms{};
 
@@ -185,10 +165,8 @@ void UUI_CFCore_DiscoveryShelve_C::FoundMods(const TArray<struct FCFCoreMod>& mo
 
 void UUI_CFCore_DiscoveryShelve_C::GenerateList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "GenerateList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "GenerateList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,10 +179,8 @@ void UUI_CFCore_DiscoveryShelve_C::GenerateList()
 
 void UUI_CFCore_DiscoveryShelve_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_GetRootCFWidget Parms{};
 
@@ -222,10 +198,8 @@ void UUI_CFCore_DiscoveryShelve_C::GetRootCFWidget(class UPanelWidget** RootPane
 
 void UUI_CFCore_DiscoveryShelve_C::LeftIn(bool Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "LeftIn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "LeftIn", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_LeftIn Parms{};
 
@@ -242,10 +216,8 @@ void UUI_CFCore_DiscoveryShelve_C::LeftIn(bool Index_0)
 
 void UUI_CFCore_DiscoveryShelve_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_PreConstruct Parms{};
 
@@ -262,10 +234,8 @@ void UUI_CFCore_DiscoveryShelve_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_DiscoveryShelve_C::RightIn(bool Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "RightIn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "RightIn", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_RightIn Parms{};
 
@@ -280,10 +250,8 @@ void UUI_CFCore_DiscoveryShelve_C::RightIn(bool Index_0)
 
 void UUI_CFCore_DiscoveryShelve_C::SortInstalledAndPremiumLast()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "SortInstalledAndPremiumLast");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "SortInstalledAndPremiumLast", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -297,10 +265,8 @@ void UUI_CFCore_DiscoveryShelve_C::SortInstalledAndPremiumLast()
 
 void UUI_CFCore_DiscoveryShelve_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryShelve_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryShelve_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryShelve_C_Tick Parms{};
 

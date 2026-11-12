@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UMassGameplaySettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassGameplaySettings;
 
 SDK_NAMESPACE_END

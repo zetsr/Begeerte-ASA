@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_DiscoveryCategory_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CFCore_DiscoveryCategory_C::Construct()
 
 void UUI_CFCore_DiscoveryCategory_C::CreateCategoryList(const struct FShelf& Shelf_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "CreateCategoryList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "CreateCategoryList", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryCategory_C_CreateCategoryList Parms{};
 
@@ -55,10 +51,8 @@ void UUI_CFCore_DiscoveryCategory_C::CreateCategoryList(const struct FShelf& She
 
 void UUI_CFCore_DiscoveryCategory_C::EmptyShelve()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "EmptyShelve");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "EmptyShelve", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +65,8 @@ void UUI_CFCore_DiscoveryCategory_C::EmptyShelve()
 
 void UUI_CFCore_DiscoveryCategory_C::ExecuteUbergraph_UI_CFCore_DiscoveryCategory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "ExecuteUbergraph_UI_CFCore_DiscoveryCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "ExecuteUbergraph_UI_CFCore_DiscoveryCategory", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryCategory_C_ExecuteUbergraph_UI_CFCore_DiscoveryCategory Parms{};
 
@@ -91,10 +83,8 @@ void UUI_CFCore_DiscoveryCategory_C::ExecuteUbergraph_UI_CFCore_DiscoveryCategor
 
 void UUI_CFCore_DiscoveryCategory_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryCategory_C_GetRootCFWidget Parms{};
 
@@ -112,10 +102,8 @@ void UUI_CFCore_DiscoveryCategory_C::GetRootCFWidget(class UPanelWidget** RootPa
 
 void UUI_CFCore_DiscoveryCategory_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryCategory_C_PreConstruct Parms{};
 
@@ -132,10 +120,8 @@ void UUI_CFCore_DiscoveryCategory_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_DiscoveryCategory_C::UpdateShelveTitle(struct FShelfContent* Content)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_DiscoveryCategory_C", "UpdateShelveTitle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_DiscoveryCategory_C", "UpdateShelveTitle", FuncInfo);
 
 	Params::UI_CFCore_DiscoveryCategory_C_UpdateShelveTitle Parms{};
 

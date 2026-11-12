@@ -20,7 +20,6 @@ SDK_NAMESPACE_START
 class UPrimalItem_WeaponMachinedSniper_C final : public UPrimalItemWeaponGenericGun_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftClassPtr<class UClass>>           DinosNotAllowEquip;                                // 0x0B88(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
@@ -40,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponMachinedSniper_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponMachinedSniper_C;
 
 SDK_NAMESPACE_END

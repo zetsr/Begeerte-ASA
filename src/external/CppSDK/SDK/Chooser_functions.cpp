@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function Chooser.ChooserTable.ResultAssetFilter
-// (Final, Native, Public, HasOutParams, HasDefaults)
+// (Final, RequiredAPI, Native, Public, HasOutParams)
 // Parameters:
 // const struct FAssetData&                AssetData                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ bool UChooserTable::ResultAssetFilter(const struct FAssetData& AssetData)
 
 
 // Function Chooser.ChooserFunctionLibrary.AddChooserObjectInput
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -74,7 +74,7 @@ void UChooserFunctionLibrary::AddChooserObjectInput(struct FChooserEvaluationCon
 
 
 // Function Chooser.ChooserFunctionLibrary.AddChooserStructInput
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -102,8 +102,37 @@ void UChooserFunctionLibrary::AddChooserStructInput(struct FChooserEvaluationCon
 }
 
 
+// Function Chooser.ChooserFunctionLibrary.AddChooserStructInputOutput
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChooserFunctionLibrary::AddChooserStructInputOutput(struct FChooserEvaluationContext& Context, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "AddChooserStructInputOutput");
+
+	Params::ChooserFunctionLibrary_AddChooserStructInputOutput Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+}
+
+
 // Function Chooser.ChooserFunctionLibrary.EvaluateChooser
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    ContextObject                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UChooserTable*              ChooserTable                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -135,7 +164,7 @@ class UObject* UChooserFunctionLibrary::EvaluateChooser(const class UObject* Con
 
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateChooserMulti
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    ContextObject                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UChooserTable*              ChooserTable                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -167,10 +196,10 @@ TArray<class UObject*> UChooserFunctionLibrary::EvaluateChooserMulti(const class
 
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBase
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bResultIsClass                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -203,10 +232,10 @@ class UObject* UChooserFunctionLibrary::EvaluateObjectChooserBase(struct FChoose
 
 
 // Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseMulti
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bResultIsClass                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -238,8 +267,146 @@ TArray<class UObject*> UChooserFunctionLibrary::EvaluateObjectChooserBaseMulti(s
 }
 
 
-// Function Chooser.ChooserFunctionLibrary.GetChooserStructOutput
+// Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseMultiSoft
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bResultIsClass                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<TSoftObjectPtr<class UObject>>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, UObjectWrapper, NativeAccessSpecifierPublic)
+
+TArray<TSoftObjectPtr<class UObject>> UChooserFunctionLibrary::EvaluateObjectChooserBaseMultiSoft(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "EvaluateObjectChooserBaseMultiSoft");
+
+	Params::ChooserFunctionLibrary_EvaluateObjectChooserBaseMultiSoft Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.ObjectChooser = std::move(ObjectChooser);
+	Parms.ObjectClass = ObjectClass;
+	Parms.bResultIsClass = bResultIsClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Chooser.ChooserFunctionLibrary.EvaluateObjectChooserBaseSoft
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FInstancedStruct&          ObjectChooser                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bResultIsClass                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSoftObjectPtr<class UObject>           ReturnValue                                            (Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TSoftObjectPtr<class UObject> UChooserFunctionLibrary::EvaluateObjectChooserBaseSoft(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "EvaluateObjectChooserBaseSoft");
+
+	Params::ChooserFunctionLibrary_EvaluateObjectChooserBaseSoft Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.ObjectChooser = std::move(ObjectChooser);
+	Parms.ObjectClass = ObjectClass;
+	Parms.bResultIsClass = bResultIsClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserObject
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UChooserFunctionLibrary::GetChooserObject(struct FChooserEvaluationContext& Context, TSubclassOf<class UObject> ObjectClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "GetChooserObject");
+
+	Params::ChooserFunctionLibrary_GetChooserObject Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.ObjectClass = ObjectClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserObjectInput
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UObject>              ObjectClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UChooserFunctionLibrary::GetChooserObjectInput(struct FChooserEvaluationContext& Context, int32 Index_0, TSubclassOf<class UObject> ObjectClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "GetChooserObjectInput");
+
+	Params::ChooserFunctionLibrary_GetChooserObjectInput Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Index_0 = Index_0;
+	Parms.ObjectClass = ObjectClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Chooser.ChooserFunctionLibrary.GetChooserStructOutput
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -271,8 +438,41 @@ void UChooserFunctionLibrary::GetChooserStructOutput(struct FChooserEvaluationCo
 }
 
 
+// Function Chooser.ChooserFunctionLibrary.GetChooserStructOutputArray
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FChooserEvaluationContext&       Context                                                (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>*                          Value                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UChooserFunctionLibrary::GetChooserStructOutputArray(struct FChooserEvaluationContext& Context, int32 Index_0, TArray<int32>* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ChooserFunctionLibrary", "GetChooserStructOutputArray");
+
+	Params::ChooserFunctionLibrary_GetChooserStructOutputArray Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Context = std::move(Parms.Context);
+
+	if (Value != nullptr)
+		*Value = std::move(Parms.Value);
+}
+
+
 // Function Chooser.ChooserFunctionLibrary.MakeChooserEvaluationContext
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // struct FChooserEvaluationContext        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -297,10 +497,10 @@ struct FChooserEvaluationContext UChooserFunctionLibrary::MakeChooserEvaluationC
 
 
 // Function Chooser.ChooserFunctionLibrary.MakeEvaluateChooser
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UChooserTable*                    Chooser                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FInstancedStruct UChooserFunctionLibrary::MakeEvaluateChooser(class UChooserTable* Chooser)
 {

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UEndLanding_TK_C::ExecuteUbergraph_EndLanding_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EndLanding_TK_C", "ExecuteUbergraph_EndLanding_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "EndLanding_TK_C", "ExecuteUbergraph_EndLanding_TK", FuncInfo);
 
 	Params::EndLanding_TK_C_ExecuteUbergraph_EndLanding_TK Parms{};
 
@@ -43,10 +41,8 @@ void UEndLanding_TK_C::ExecuteUbergraph_EndLanding_TK(int32 EntryPoint)
 
 void UEndLanding_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EndLanding_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "EndLanding_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::EndLanding_TK_C_ReceiveExecute Parms{};
 

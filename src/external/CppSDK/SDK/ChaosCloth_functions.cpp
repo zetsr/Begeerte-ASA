@@ -400,6 +400,45 @@ void UChaosClothingInteractor::SetPressure(const struct FVector2D& Pressure)
 }
 
 
+// Function ChaosCloth.ChaosClothingInteractor.SetVelocityClamps
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// bool                                    bEnableLinearVelocityClamping                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   MaxLinearVelocity                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLinearAccelerationClamping                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   MaxLinearAcceleration                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableAngularVelocityClamping                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxAngularVelocity                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableAngularAccelerationClamping                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxAngularAcceleration                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UChaosClothingInteractor::SetVelocityClamps(bool bEnableLinearVelocityClamping, const struct FVector& MaxLinearVelocity, bool bEnableLinearAccelerationClamping, const struct FVector& MaxLinearAcceleration, bool bEnableAngularVelocityClamping, float MaxAngularVelocity, bool bEnableAngularAccelerationClamping, float MaxAngularAcceleration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosClothingInteractor", "SetVelocityClamps");
+
+	Params::ChaosClothingInteractor_SetVelocityClamps Parms{};
+
+	Parms.bEnableLinearVelocityClamping = bEnableLinearVelocityClamping;
+	Parms.MaxLinearVelocity = std::move(MaxLinearVelocity);
+	Parms.bEnableLinearAccelerationClamping = bEnableLinearAccelerationClamping;
+	Parms.MaxLinearAcceleration = std::move(MaxLinearAcceleration);
+	Parms.bEnableAngularVelocityClamping = bEnableAngularVelocityClamping;
+	Parms.MaxAngularVelocity = MaxAngularVelocity;
+	Parms.bEnableAngularAccelerationClamping = bEnableAngularAccelerationClamping;
+	Parms.MaxAngularAcceleration = MaxAngularAcceleration;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosCloth.ChaosClothingInteractor.SetVelocityScale
 // (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:

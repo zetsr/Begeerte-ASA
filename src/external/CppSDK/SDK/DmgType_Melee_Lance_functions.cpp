@@ -28,10 +28,8 @@ SDK_NAMESPACE_START
 
 float UDmgType_Melee_Lance_C::BPAdjustDamage(class AActor* Victim, float IncomingDamage, const struct FDamageEvent& TheDamageEvent, class AController* EventInstigator, class AActor* DamageCauser) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DmgType_Melee_Lance_C", "BPAdjustDamage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DmgType_Melee_Lance_C", "BPAdjustDamage", FuncInfo);
 
 	Params::DmgType_Melee_Lance_C_BPAdjustDamage Parms{};
 

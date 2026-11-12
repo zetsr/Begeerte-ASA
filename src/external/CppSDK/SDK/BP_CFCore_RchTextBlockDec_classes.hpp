@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UBP_CFCore_RchTextBlockDec_C>();
 	}
 };
+DUMPER7_ASSERTS_UBP_CFCore_RchTextBlockDec_C;
 
 SDK_NAMESPACE_END

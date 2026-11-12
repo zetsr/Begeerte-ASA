@@ -39,6 +39,7 @@ public:
 	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_RotateToTarget_SRV_C_ExecuteUbergraph_RotateToTarget_SRV;
 
 // Function RotateToTarget_SRV.RotateToTarget_SRV_C.ReceiveActivation
 // 0x0008 (0x0008 - 0x0000)
@@ -47,6 +48,7 @@ struct RotateToTarget_SRV_C_ReceiveActivation final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_RotateToTarget_SRV_C_ReceiveActivation;
 
 // Function RotateToTarget_SRV.RotateToTarget_SRV_C.ReceiveDeactivation
 // 0x0008 (0x0008 - 0x0000)
@@ -55,6 +57,7 @@ struct RotateToTarget_SRV_C_ReceiveDeactivation final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_RotateToTarget_SRV_C_ReceiveDeactivation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_BasePage_C::ReloadPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "ReloadPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "ReloadPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_BasePage_C::ReloadPage()
 
 void UUI_CFCore_BasePage_C::ConstructPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "ConstructPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "ConstructPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_BasePage_C::ConstructPage()
 
 void UUI_CFCore_BasePage_C::ShouldHideOptionsButton(bool* ShouldHide)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "ShouldHideOptionsButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "ShouldHideOptionsButton", FuncInfo);
 
 	Params::UI_CFCore_BasePage_C_ShouldHideOptionsButton Parms{};
 
@@ -72,10 +66,8 @@ void UUI_CFCore_BasePage_C::ShouldHideOptionsButton(bool* ShouldHide)
 
 void UUI_CFCore_BasePage_C::GetControlSizeBox(class USizeBox** SizeBoxForControls)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "GetControlSizeBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "GetControlSizeBox", FuncInfo);
 
 	Params::UI_CFCore_BasePage_C_GetControlSizeBox Parms{};
 
@@ -91,10 +83,8 @@ void UUI_CFCore_BasePage_C::GetControlSizeBox(class USizeBox** SizeBoxForControl
 
 void UUI_CFCore_BasePage_C::CheckHideOptionsButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "CheckHideOptionsButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "CheckHideOptionsButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +97,8 @@ void UUI_CFCore_BasePage_C::CheckHideOptionsButton()
 
 void UUI_CFCore_BasePage_C::GetOptionsButton(class UUI_Button_CFCore_Global_Master_C** OptionsButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "GetOptionsButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "GetOptionsButton", FuncInfo);
 
 	Params::UI_CFCore_BasePage_C_GetOptionsButton Parms{};
 
@@ -128,10 +116,8 @@ void UUI_CFCore_BasePage_C::GetOptionsButton(class UUI_Button_CFCore_Global_Mast
 
 void UUI_CFCore_BasePage_C::ExecuteUbergraph_UI_CFCore_BasePage(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BasePage_C", "ExecuteUbergraph_UI_CFCore_BasePage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BasePage_C", "ExecuteUbergraph_UI_CFCore_BasePage", FuncInfo);
 
 	Params::UI_CFCore_BasePage_C_ExecuteUbergraph_UI_CFCore_BasePage Parms{};
 

@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<UOodleNetworkTrainerCommandlet>();
 	}
 };
+DUMPER7_ASSERTS_UOodleNetworkTrainerCommandlet;
 
 SDK_NAMESPACE_END

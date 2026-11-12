@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void AWeap_Torch_Base_C::BPAppliedPrimalItemToWeapon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "BPAppliedPrimalItemToWeapon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "BPAppliedPrimalItemToWeapon", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void AWeap_Torch_Base_C::BPAppliedPrimalItemToWeapon()
 
 bool AWeap_Torch_Base_C::BPCanEquip(class AShooterCharacter* ByCharacter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "BPCanEquip");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "BPCanEquip", FuncInfo);
 
 	Params::Weap_Torch_Base_C_BPCanEquip Parms{};
 
@@ -60,10 +56,8 @@ bool AWeap_Torch_Base_C::BPCanEquip(class AShooterCharacter* ByCharacter)
 
 void AWeap_Torch_Base_C::CanUseNiagaraFire(bool* bCanUse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "CanUseNiagaraFire");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "CanUseNiagaraFire", FuncInfo);
 
 	Params::Weap_Torch_Base_C_CanUseNiagaraFire Parms{};
 
@@ -81,10 +75,8 @@ void AWeap_Torch_Base_C::CanUseNiagaraFire(bool* bCanUse)
 
 void AWeap_Torch_Base_C::ExecuteUbergraph_Weap_Torch_Base(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "ExecuteUbergraph_Weap_Torch_Base");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "ExecuteUbergraph_Weap_Torch_Base", FuncInfo);
 
 	Params::Weap_Torch_Base_C_ExecuteUbergraph_Weap_Torch_Base Parms{};
 
@@ -99,10 +91,8 @@ void AWeap_Torch_Base_C::ExecuteUbergraph_Weap_Torch_Base(int32 EntryPoint)
 
 void AWeap_Torch_Base_C::FireTick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "FireTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "FireTick", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,10 +105,8 @@ void AWeap_Torch_Base_C::FireTick()
 
 void AWeap_Torch_Base_C::GetFPVNiagaraFire(class UNiagaraComponent** FPVNiagaraComponent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "GetFPVNiagaraFire");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "GetFPVNiagaraFire", FuncInfo);
 
 	Params::Weap_Torch_Base_C_GetFPVNiagaraFire Parms{};
 
@@ -136,10 +124,8 @@ void AWeap_Torch_Base_C::GetFPVNiagaraFire(class UNiagaraComponent** FPVNiagaraC
 
 void AWeap_Torch_Base_C::GetTPVNiagaraFire(class UNiagaraComponent** TPVNiagaraComponent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "GetTPVNiagaraFire");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "GetTPVNiagaraFire", FuncInfo);
 
 	Params::Weap_Torch_Base_C_GetTPVNiagaraFire Parms{};
 
@@ -155,10 +141,8 @@ void AWeap_Torch_Base_C::GetTPVNiagaraFire(class UNiagaraComponent** TPVNiagaraC
 
 void AWeap_Torch_Base_C::OnInstigatorSleepingStateChanged()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "OnInstigatorSleepingStateChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "OnInstigatorSleepingStateChanged", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +153,8 @@ void AWeap_Torch_Base_C::OnInstigatorSleepingStateChanged()
 
 void AWeap_Torch_Base_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +165,8 @@ void AWeap_Torch_Base_C::ReceiveBeginPlay()
 
 void AWeap_Torch_Base_C::Server_AttemptPutOnBelt()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "Server_AttemptPutOnBelt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "Server_AttemptPutOnBelt", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +177,8 @@ void AWeap_Torch_Base_C::Server_AttemptPutOnBelt()
 
 void AWeap_Torch_Base_C::StartSecondaryActionEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "StartSecondaryActionEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "StartSecondaryActionEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +189,8 @@ void AWeap_Torch_Base_C::StartSecondaryActionEvent()
 
 void AWeap_Torch_Base_C::StartUnequipEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Weap_Torch_Base_C", "StartUnequipEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Weap_Torch_Base_C", "StartUnequipEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

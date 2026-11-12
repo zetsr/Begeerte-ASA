@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModP
 
 void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModP
 
 void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ViewAllSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ViewAllSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ViewAllSlot_C", "BndEvt__UI_ViewAllSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void UUI_CFCore_Discovery_ViewAllSlot_C::BndEvt__UI_ViewAllSlot_Button_GoToModPa
 
 void UUI_CFCore_Discovery_ViewAllSlot_C::ExecuteUbergraph_UI_CFCore_Discovery_ViewAllSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ViewAllSlot_C", "ExecuteUbergraph_UI_CFCore_Discovery_ViewAllSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ViewAllSlot_C", "ExecuteUbergraph_UI_CFCore_Discovery_ViewAllSlot", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ViewAllSlot_C_ExecuteUbergraph_UI_CFCore_Discovery_ViewAllSlot Parms{};
 
@@ -85,10 +77,8 @@ void UUI_CFCore_Discovery_ViewAllSlot_C::ExecuteUbergraph_UI_CFCore_Discovery_Vi
 
 void UUI_CFCore_Discovery_ViewAllSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ViewAllSlot_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ViewAllSlot_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ViewAllSlot_C_GetRootCFWidget Parms{};
 

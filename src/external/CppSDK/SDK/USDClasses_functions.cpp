@@ -16,8 +16,338 @@
 
 SDK_NAMESPACE_START
 
+// Function USDClasses.UsdDrawModeComponent.SetBoundsColor
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FLinearColor&              NewColor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetBoundsColor(const struct FLinearColor& NewColor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsColor");
+
+	Params::UsdDrawModeComponent_SetBoundsColor Parms{};
+
+	Parms.NewColor = std::move(NewColor);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetBoundsMax
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   NewMax                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetBoundsMax(const struct FVector& NewMax)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsMax");
+
+	Params::UsdDrawModeComponent_SetBoundsMax Parms{};
+
+	Parms.NewMax = std::move(NewMax);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetBoundsMin
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   NewMin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetBoundsMin(const struct FVector& NewMin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsMin");
+
+	Params::UsdDrawModeComponent_SetBoundsMin Parms{};
+
+	Parms.NewMin = std::move(NewMin);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardGeometry
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EUsdModelCardGeometry                   NewGeometry                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardGeometry(EUsdModelCardGeometry NewGeometry)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardGeometry");
+
+	Params::UsdDrawModeComponent_SetCardGeometry Parms{};
+
+	Parms.NewGeometry = NewGeometry;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureXNeg
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureXNeg(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureXNeg");
+
+	Params::UsdDrawModeComponent_SetCardTextureXNeg Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureXPos
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureXPos(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureXPos");
+
+	Params::UsdDrawModeComponent_SetCardTextureXPos Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureYNeg
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureYNeg(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureYNeg");
+
+	Params::UsdDrawModeComponent_SetCardTextureYNeg Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureYPos
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureYPos(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureYPos");
+
+	Params::UsdDrawModeComponent_SetCardTextureYPos Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureZNeg
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureZNeg(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureZNeg");
+
+	Params::UsdDrawModeComponent_SetCardTextureZNeg Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureZPos
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetCardTextureZPos(class UTexture2D* NewTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureZPos");
+
+	Params::UsdDrawModeComponent_SetCardTextureZPos Parms{};
+
+	Parms.NewTexture = NewTexture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetDrawMode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EUsdDrawMode                            NewDrawMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetDrawMode(EUsdDrawMode NewDrawMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetDrawMode");
+
+	Params::UsdDrawModeComponent_SetDrawMode Parms{};
+
+	Parms.NewDrawMode = NewDrawMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.SetTextureForFace
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EUsdModelCardFace                       Face                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUsdDrawModeComponent::SetTextureForFace(EUsdModelCardFace Face, class UTexture2D* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "SetTextureForFace");
+
+	Params::UsdDrawModeComponent_SetTextureForFace Parms{};
+
+	Parms.Face = Face;
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDClasses.UsdDrawModeComponent.GetTextureForFace
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EUsdModelCardFace                       Face                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture2D*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTexture2D* UUsdDrawModeComponent::GetTextureForFace(EUsdModelCardFace Face) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdDrawModeComponent", "GetTextureForFace");
+
+	Params::UsdDrawModeComponent_GetTextureForFace Parms{};
+
+	Parms.Face = Face;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function USDClasses.UsdAssetCache2.AddAssetReference
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -47,7 +377,7 @@ bool UUsdAssetCache2::AddAssetReference(const class UObject* Asset, const class 
 
 
 // Function USDClasses.UsdAssetCache2.CacheAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -76,7 +406,7 @@ void UUsdAssetCache2::CacheAsset(const class FString& Hash, class UObject* Asset
 
 
 // Function USDClasses.UsdAssetCache2.CanRemoveAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -104,7 +434,7 @@ bool UUsdAssetCache2::CanRemoveAsset(const class FString& Hash)
 
 
 // Function USDClasses.UsdAssetCache2.GetCachedAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -132,7 +462,7 @@ class UObject* UUsdAssetCache2::GetCachedAsset(const class FString& Hash)
 
 
 // Function USDClasses.UsdAssetCache2.RefreshStorage
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UUsdAssetCache2::RefreshStorage()
 {
@@ -151,7 +481,7 @@ void UUsdAssetCache2::RefreshStorage()
 
 
 // Function USDClasses.UsdAssetCache2.RemoveAllAssetReferences
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -179,7 +509,7 @@ bool UUsdAssetCache2::RemoveAllAssetReferences(const class UObject* Referencer)
 
 
 // Function USDClasses.UsdAssetCache2.RemoveAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -207,7 +537,7 @@ class UObject* UUsdAssetCache2::RemoveAsset(const class FString& Hash)
 
 
 // Function USDClasses.UsdAssetCache2.RemoveAssetReference
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -237,7 +567,7 @@ bool UUsdAssetCache2::RemoveAssetReference(const class UObject* Asset, const cla
 
 
 // Function USDClasses.UsdAssetCache2.Reset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UUsdAssetCache2::Reset()
 {
@@ -256,7 +586,7 @@ void UUsdAssetCache2::Reset()
 
 
 // Function USDClasses.UsdAssetCache2.TouchAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -286,7 +616,7 @@ bool UUsdAssetCache2::TouchAsset(const class UObject* Asset, const class UObject
 
 
 // Function USDClasses.UsdAssetCache2.GetAllAssetHashes
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -311,7 +641,7 @@ TArray<class FString> UUsdAssetCache2::GetAllAssetHashes() const
 
 
 // Function USDClasses.UsdAssetCache2.GetAllCachedAssetPaths
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -336,7 +666,7 @@ TArray<class FString> UUsdAssetCache2::GetAllCachedAssetPaths() const
 
 
 // Function USDClasses.UsdAssetCache2.GetAllLoadedAssets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -361,7 +691,7 @@ TArray<class UObject*> UUsdAssetCache2::GetAllLoadedAssets() const
 
 
 // Function USDClasses.UsdAssetCache2.GetHashForAsset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -389,7 +719,7 @@ class FString UUsdAssetCache2::GetHashForAsset(const class UObject* Asset) const
 
 
 // Function USDClasses.UsdAssetCache2.GetNumAssets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -414,7 +744,7 @@ int32 UUsdAssetCache2::GetNumAssets() const
 
 
 // Function USDClasses.UsdAssetCache2.IsAssetOwnedByCache
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    AssetPath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -442,7 +772,7 @@ bool UUsdAssetCache2::IsAssetOwnedByCache(const class FString& AssetPath) const
 
 
 // Function USDClasses.UsdAssetCache3.AddAssetReferencer
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -472,7 +802,7 @@ bool UUsdAssetCache3::AddAssetReferencer(const class UObject* Asset, const class
 
 
 // Function USDClasses.UsdAssetCache3.CacheAsset
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSoftObjectPath&           AssetPath                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -501,7 +831,7 @@ void UUsdAssetCache3::CacheAsset(const class FString& Hash, const struct FSoftOb
 
 
 // Function USDClasses.UsdAssetCache3.DeleteUnreferencedAssets
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bShowConfirmation                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -526,7 +856,7 @@ void UUsdAssetCache3::DeleteUnreferencedAssets(const bool bShowConfirmation)
 
 
 // Function USDClasses.UsdAssetCache3.DeleteUnreferencedAssetsWithConfirmation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UUsdAssetCache3::DeleteUnreferencedAssetsWithConfirmation()
 {
@@ -545,7 +875,7 @@ void UUsdAssetCache3::DeleteUnreferencedAssetsWithConfirmation()
 
 
 // Function USDClasses.UsdAssetCache3.GetOrCreateCachedAsset
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UClass*                           Class_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -585,7 +915,7 @@ class UObject* UUsdAssetCache3::GetOrCreateCachedAsset(const class FString& Hash
 
 
 // Function USDClasses.UsdAssetCache3.RemoveAllAssetReferencers
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -610,7 +940,7 @@ bool UUsdAssetCache3::RemoveAllAssetReferencers()
 
 
 // Function USDClasses.UsdAssetCache3.RemoveAllReferencerAssets
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -638,7 +968,7 @@ bool UUsdAssetCache3::RemoveAllReferencerAssets(const class UObject* Referencer)
 
 
 // Function USDClasses.UsdAssetCache3.RemoveAllReferencersForAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -666,7 +996,7 @@ bool UUsdAssetCache3::RemoveAllReferencersForAsset(const class UObject* Asset)
 
 
 // Function USDClasses.UsdAssetCache3.RemoveAssetReferencer
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Referencer                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -696,7 +1026,7 @@ bool UUsdAssetCache3::RemoveAssetReferencer(const class UObject* Asset, const cl
 
 
 // Function USDClasses.UsdAssetCache3.RescanAssetDirectory
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UUsdAssetCache3::RescanAssetDirectory()
 {
@@ -715,7 +1045,7 @@ void UUsdAssetCache3::RescanAssetDirectory()
 
 
 // Function USDClasses.UsdAssetCache3.SetAssetDeletable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsDeletable                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -742,7 +1072,7 @@ void UUsdAssetCache3::SetAssetDeletable(const class UObject* Asset, bool bIsDele
 
 
 // Function USDClasses.UsdAssetCache3.StopTrackingAsset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FSoftObjectPath                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -770,7 +1100,7 @@ struct FSoftObjectPath UUsdAssetCache3::StopTrackingAsset(const class FString& H
 
 
 // Function USDClasses.UsdAssetCache3.GetAllTrackedAssets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TMap<class FString, struct FSoftObjectPath>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -795,7 +1125,7 @@ TMap<class FString, struct FSoftObjectPath> UUsdAssetCache3::GetAllTrackedAssets
 
 
 // Function USDClasses.UsdAssetCache3.GetCachedAsset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -823,7 +1153,7 @@ class UObject* UUsdAssetCache3::GetCachedAsset(const class FString& Hash) const
 
 
 // Function USDClasses.UsdAssetCache3.GetCachedAssetPath
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FSoftObjectPath                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -851,7 +1181,7 @@ struct FSoftObjectPath UUsdAssetCache3::GetCachedAssetPath(const class FString& 
 
 
 // Function USDClasses.UsdAssetCache3.GetHashForAsset
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FSoftObjectPath&           AssetPath                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -879,7 +1209,7 @@ class FString UUsdAssetCache3::GetHashForAsset(const struct FSoftObjectPath& Ass
 
 
 // Function USDClasses.UsdAssetCache3.GetNumAssets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -904,7 +1234,7 @@ int32 UUsdAssetCache3::GetNumAssets() const
 
 
 // Function USDClasses.UsdAssetCache3.IsAssetDeletable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class UObject*                    Asset                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -932,7 +1262,7 @@ bool UUsdAssetCache3::IsAssetDeletable(const class UObject* Asset) const
 
 
 // Function USDClasses.UsdAssetCache3.IsAssetTrackedByCache
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FSoftObjectPath&           AssetPath                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -960,7 +1290,7 @@ bool UUsdAssetCache3::IsAssetTrackedByCache(const struct FSoftObjectPath& AssetP
 
 
 // Function USDClasses.UsdAssetCache3.LoadAndGetAllTrackedAssets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TMap<class FString, class UObject*>     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -972,336 +1302,6 @@ TMap<class FString, class UObject*> UUsdAssetCache3::LoadAndGetAllTrackedAssets(
 		Func = Class->GetFunction("UsdAssetCache3", "LoadAndGetAllTrackedAssets");
 
 	Params::UsdAssetCache3_LoadAndGetAllTrackedAssets Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FLinearColor&              NewColor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetBoundsColor(const struct FLinearColor& NewColor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsColor");
-
-	Params::UsdDrawModeComponent_SetBoundsColor Parms{};
-
-	Parms.NewColor = std::move(NewColor);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsMax
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   NewMax                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetBoundsMax(const struct FVector& NewMax)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsMax");
-
-	Params::UsdDrawModeComponent_SetBoundsMax Parms{};
-
-	Parms.NewMax = std::move(NewMax);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsMin
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   NewMin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetBoundsMin(const struct FVector& NewMin)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetBoundsMin");
-
-	Params::UsdDrawModeComponent_SetBoundsMin Parms{};
-
-	Parms.NewMin = std::move(NewMin);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardGeometry
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EUsdModelCardGeometry                   NewGeometry                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardGeometry(EUsdModelCardGeometry NewGeometry)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardGeometry");
-
-	Params::UsdDrawModeComponent_SetCardGeometry Parms{};
-
-	Parms.NewGeometry = NewGeometry;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureXNeg
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureXNeg(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureXNeg");
-
-	Params::UsdDrawModeComponent_SetCardTextureXNeg Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureXPos
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureXPos(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureXPos");
-
-	Params::UsdDrawModeComponent_SetCardTextureXPos Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureYNeg
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureYNeg(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureYNeg");
-
-	Params::UsdDrawModeComponent_SetCardTextureYNeg Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureYPos
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureYPos(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureYPos");
-
-	Params::UsdDrawModeComponent_SetCardTextureYPos Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureZNeg
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureZNeg(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureZNeg");
-
-	Params::UsdDrawModeComponent_SetCardTextureZNeg Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureZPos
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture2D*                       NewTexture                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetCardTextureZPos(class UTexture2D* NewTexture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetCardTextureZPos");
-
-	Params::UsdDrawModeComponent_SetCardTextureZPos Parms{};
-
-	Parms.NewTexture = NewTexture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetDrawMode
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EUsdDrawMode                            NewDrawMode                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetDrawMode(EUsdDrawMode NewDrawMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetDrawMode");
-
-	Params::UsdDrawModeComponent_SetDrawMode Parms{};
-
-	Parms.NewDrawMode = NewDrawMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.SetTextureForFace
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EUsdModelCardFace                       Face                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture2D*                       Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UUsdDrawModeComponent::SetTextureForFace(EUsdModelCardFace Face, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "SetTextureForFace");
-
-	Params::UsdDrawModeComponent_SetTextureForFace Parms{};
-
-	Parms.Face = Face;
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function USDClasses.UsdDrawModeComponent.GetTextureForFace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EUsdModelCardFace                       Face                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture2D*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UTexture2D* UUsdDrawModeComponent::GetTextureForFace(EUsdModelCardFace Face) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdDrawModeComponent", "GetTextureForFace");
-
-	Params::UsdDrawModeComponent_GetTextureForFace Parms{};
-
-	Parms.Face = Face;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

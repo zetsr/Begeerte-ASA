@@ -36,39 +36,16 @@ public:
 		return GetDefaultObjImpl<UComputeDataInterface>();
 	}
 };
-
-// Class ComputeFramework.ComputeDataProvider
-// 0x0000 (0x0028 - 0x0028)
-class UComputeDataProvider : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComputeDataProvider")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComputeDataProvider")
-	}
-	static class UComputeDataProvider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComputeDataProvider>();
-	}
-};
+DUMPER7_ASSERTS_UComputeDataInterface;
 
 // Class ComputeFramework.ComputeKernelSource
-// 0x0070 (0x0098 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UComputeKernelSource : public UObject
 {
 public:
 	class FString                                 EntryPoint;                                        // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntVector                             GroupSize;                                         // 0x0038(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComputeKernelPermutationSet           PermutationSet;                                    // 0x0048(0x0010)(Edit, EditConst, NativeAccessSpecifierPublic)
-	struct FComputeKernelDefinitionSet            DefinitionsSet;                                    // 0x0058(0x0010)(Edit, EditConst, NativeAccessSpecifierPublic)
-	TArray<class UComputeSource*>                 AdditionalSources;                                 // 0x0068(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FShaderFunctionDefinition>      ExternalInputs;                                    // 0x0078(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FShaderFunctionDefinition>      ExternalOutputs;                                   // 0x0088(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -84,6 +61,27 @@ public:
 		return GetDefaultObjImpl<UComputeKernelSource>();
 	}
 };
+DUMPER7_ASSERTS_UComputeKernelSource;
+
+// Class ComputeFramework.ComputeKernelSourceWithText
+// 0x0000 (0x0048 - 0x0048)
+class UComputeKernelSourceWithText final : public UComputeKernelSource
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComputeKernelSourceWithText")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComputeKernelSourceWithText")
+	}
+	static class UComputeKernelSourceWithText* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComputeKernelSourceWithText>();
+	}
+};
+DUMPER7_ASSERTS_UComputeKernelSourceWithText;
 
 // Class ComputeFramework.ComputeSource
 // 0x0010 (0x0038 - 0x0028)
@@ -106,6 +104,27 @@ public:
 		return GetDefaultObjImpl<UComputeSource>();
 	}
 };
+DUMPER7_ASSERTS_UComputeSource;
+
+// Class ComputeFramework.ComputeDataProvider
+// 0x0000 (0x0028 - 0x0028)
+class UComputeDataProvider : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ComputeDataProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ComputeDataProvider")
+	}
+	static class UComputeDataProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UComputeDataProvider>();
+	}
+};
+DUMPER7_ASSERTS_UComputeDataProvider;
 
 // Class ComputeFramework.ComputeGraph
 // 0x00B8 (0x00E0 - 0x0028)
@@ -133,18 +152,20 @@ public:
 		return GetDefaultObjImpl<UComputeGraph>();
 	}
 };
+DUMPER7_ASSERTS_UComputeGraph;
 
 // Class ComputeFramework.ComputeGraphComponent
-// 0x0020 (0x00F0 - 0x00D0)
+// 0x0030 (0x0128 - 0x00F8)
 class UComputeGraphComponent final : public UActorComponent
 {
 public:
-	class UComputeGraph*                          ComputeGraph;                                      // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FComputeGraphInstance                  ComputeGraphInstance;                              // 0x00D8(0x0018)(NativeAccessSpecifierPrivate)
+	class UComputeGraph*                          ComputeGraph;                                      // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class UComputeDataProvider*>           DataProviderTemplates;                             // 0x0100(0x0010)(Edit, ExportObject, ZeroConstructor, NoClear, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FComputeGraphInstance                  ComputeGraphInstance;                              // 0x0110(0x0018)(Protected, NativeAccessSpecifierProtected)
 
 public:
-	void CreateDataProviders(int32 InBindingIndex, class UObject* InBindingObject);
-	void DestroyDataProviders();
+	class UObject* GetBindingObject(int32 InBindingIndex);
+	void InitializeProvider(int32 InDataInterfaceIndex, class UObject* InOutDataProvider);
 	void QueueExecute();
 
 public:
@@ -161,10 +182,11 @@ public:
 		return GetDefaultObjImpl<UComputeGraphComponent>();
 	}
 };
+DUMPER7_ASSERTS_UComputeGraphComponent;
 
 // Class ComputeFramework.ComputeKernel
 // 0x0010 (0x0038 - 0x0028)
-class UComputeKernel final : public UObject
+class UComputeKernel : public UObject
 {
 public:
 	class UComputeKernelSource*                   KernelSource;                                      // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
@@ -185,49 +207,6 @@ public:
 		return GetDefaultObjImpl<UComputeKernel>();
 	}
 };
-
-// Class ComputeFramework.ComputeKernelFromText
-// 0x0010 (0x00A8 - 0x0098)
-class UComputeKernelFromText final : public UComputeKernelSource
-{
-public:
-	struct FFilePath                              SourceFile;                                        // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComputeKernelFromText")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComputeKernelFromText")
-	}
-	static class UComputeKernelFromText* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComputeKernelFromText>();
-	}
-};
-
-// Class ComputeFramework.ComputeSourceFromText
-// 0x0010 (0x0048 - 0x0038)
-class UComputeSourceFromText final : public UComputeSource
-{
-public:
-	struct FFilePath                              SourceFile;                                        // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ComputeSourceFromText")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ComputeSourceFromText")
-	}
-	static class UComputeSourceFromText* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UComputeSourceFromText>();
-	}
-};
+DUMPER7_ASSERTS_UComputeKernel;
 
 SDK_NAMESPACE_END

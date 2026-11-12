@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UCFCoreWidget_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UCFCoreWidget_C::ApplyThemeSettingsToAll()
 
 void UCFCoreWidget_C::ExecuteUbergraph_CFCoreWidget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "ExecuteUbergraph_CFCoreWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "ExecuteUbergraph_CFCoreWidget", FuncInfo);
 
 	Params::CFCoreWidget_C_ExecuteUbergraph_CFCoreWidget Parms{};
 
@@ -59,10 +55,8 @@ void UCFCoreWidget_C::ExecuteUbergraph_CFCoreWidget(int32 EntryPoint)
 
 void UCFCoreWidget_C::Get_All_Text_Blocks(class UPanelWidget* Root_Widget, TArray<class UTextBlock*>* Text_Blocks, bool* HasItems)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "Get All Text Blocks");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "Get All Text Blocks", FuncInfo);
 
 	Params::CFCoreWidget_C_Get_All_Text_Blocks Parms{};
 
@@ -85,10 +79,8 @@ void UCFCoreWidget_C::Get_All_Text_Blocks(class UPanelWidget* Root_Widget, TArra
 
 void UCFCoreWidget_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "GetRootCFWidget", FuncInfo);
 
 	Params::CFCoreWidget_C_GetRootCFWidget Parms{};
 
@@ -106,10 +98,8 @@ void UCFCoreWidget_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 
 void UCFCoreWidget_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "PreConstruct", FuncInfo);
 
 	Params::CFCoreWidget_C_PreConstruct Parms{};
 
@@ -124,10 +114,8 @@ void UCFCoreWidget_C::PreConstruct(bool IsDesignTime)
 
 void UCFCoreWidget_C::Recursive_ApplyFontToAllWidgets()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreWidget_C", "Recursive_ApplyFontToAllWidgets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreWidget_C", "Recursive_ApplyFontToAllWidgets", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

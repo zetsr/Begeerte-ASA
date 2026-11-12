@@ -10,25 +10,54 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "DataflowCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class DataflowCore.DataflowGraphInterface
+// 0x0008 (0x0008 - 0x0000)
+class IDataflowGraphInterface
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowGraphInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowGraphInterface")
+	}
+	static class IDataflowGraphInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IDataflowGraphInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IDataflowGraphInterface;
+
 // Class DataflowCore.DataflowSettings
-// 0x00B8 (0x00F0 - 0x0038)
+// 0x00F0 (0x0128 - 0x0038)
 class UDataflowSettings final : public UDeveloperSettings
 {
 public:
-	struct FLinearColor                           ArrayPinTypeColor;                                 // 0x0038(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ManagedArrayCollectionPinTypeColor;                // 0x0048(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BoxPinTypeColor;                                   // 0x0058(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SpherePinTypeColor;                                // 0x0068(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           DataflowAnyTypePinTypeColor;                       // 0x0078(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FNodeColors>         NodeColorsMap;                                     // 0x0088(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x18];                                      // 0x00D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FNodeColors>         NodeColorsMap;                                     // 0x0038(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FPinSettings>        PinSettingsMap;                                    // 0x0088(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FTransformLevelColors                  TransformLevelColors;                              // 0x00D8(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x30];                                      // 0x00F8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -44,5 +73,6 @@ public:
 		return GetDefaultObjImpl<UDataflowSettings>();
 	}
 };
+DUMPER7_ASSERTS_UDataflowSettings;
 
 SDK_NAMESPACE_END

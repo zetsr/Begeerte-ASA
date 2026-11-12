@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UAttack_SRV_C final : public UBTService_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	struct FBlackboardKeySelector                 IsAttackingKey;                                    // 0x00A0(0x0028)(Edit, BlueprintVisible)
 
 public:
@@ -44,5 +44,6 @@ public:
 		return GetDefaultObjImpl<UAttack_SRV_C>();
 	}
 };
+DUMPER7_ASSERTS_UAttack_SRV_C;
 
 SDK_NAMESPACE_END

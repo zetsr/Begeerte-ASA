@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_CFCore_CustomComboBox.BPI_CFCore_CustomComboBox_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_CFCore_CustomComboBox_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_CFCore_CustomComboBox_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void OnOptionSelectedInterface(const class FString& Option, int64 ID);
 
@@ -45,5 +48,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IBPI_CFCore_CustomComboBox_C;
 
 SDK_NAMESPACE_END

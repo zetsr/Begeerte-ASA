@@ -27,10 +27,8 @@ SDK_NAMESPACE_START
 
 int32 UCactusHarvestComponent_C::BPCustomHarvestResource(class UPrimalInventoryComponent* invComp, int32 NumToGive, TSubclassOf<class UDamageType> DamageTypeClass, class AActor* ToActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CactusHarvestComponent_C", "BPCustomHarvestResource");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CactusHarvestComponent_C", "BPCustomHarvestResource", FuncInfo);
 
 	Params::CactusHarvestComponent_C_BPCustomHarvestResource Parms{};
 

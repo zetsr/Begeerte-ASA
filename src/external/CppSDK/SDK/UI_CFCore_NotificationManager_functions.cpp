@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 class UUI_CFCore_Notification_C* UUI_CFCore_NotificationManager_C::CreateNotify()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "CreateNotify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "CreateNotify", FuncInfo);
 
 	Params::UI_CFCore_NotificationManager_C_CreateNotify Parms{};
 
@@ -41,10 +39,8 @@ class UUI_CFCore_Notification_C* UUI_CFCore_NotificationManager_C::CreateNotify(
 
 void UUI_CFCore_NotificationManager_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UUI_CFCore_NotificationManager_C::Destruct()
 
 void UUI_CFCore_NotificationManager_C::ExecuteUbergraph_UI_CFCore_NotificationManager(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "ExecuteUbergraph_UI_CFCore_NotificationManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "ExecuteUbergraph_UI_CFCore_NotificationManager", FuncInfo);
 
 	Params::UI_CFCore_NotificationManager_C_ExecuteUbergraph_UI_CFCore_NotificationManager Parms{};
 
@@ -75,10 +69,8 @@ void UUI_CFCore_NotificationManager_C::ExecuteUbergraph_UI_CFCore_NotificationMa
 
 void UUI_CFCore_NotificationManager_C::PlayCantJoinServer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "PlayCantJoinServer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "PlayCantJoinServer", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -89,10 +81,8 @@ void UUI_CFCore_NotificationManager_C::PlayCantJoinServer()
 
 void UUI_CFCore_NotificationManager_C::PlayErrorNotEnoughSpace()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "PlayErrorNotEnoughSpace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "PlayErrorNotEnoughSpace", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +95,8 @@ void UUI_CFCore_NotificationManager_C::PlayErrorNotEnoughSpace()
 
 void UUI_CFCore_NotificationManager_C::PlayInstalledNotification(const struct FInstallProgressMod& InstallProgressMod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "PlayInstalledNotification");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "PlayInstalledNotification", FuncInfo);
 
 	Params::UI_CFCore_NotificationManager_C_PlayInstalledNotification Parms{};
 
@@ -123,10 +111,8 @@ void UUI_CFCore_NotificationManager_C::PlayInstalledNotification(const struct FI
 
 void UUI_CFCore_NotificationManager_C::PlayUnknownError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotificationManager_C", "PlayUnknownError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotificationManager_C", "PlayUnknownError", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

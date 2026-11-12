@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_BP_Base.DinoTamedInventoryComponent_BP_Base_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x08E8 - 0x08E8)
 class UDinoTamedInventoryComponent_BP_Base_C final : public UPrimalInventoryComponent
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDinoTamedInventoryComponent_BP_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UDinoTamedInventoryComponent_BP_Base_C;
 
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PrimalItemArmorGeneric_classes.hpp"
 #include "Engine_structs.hpp"
+#include "PrimalItemArmorGeneric_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UPrimalItemArmor_SaddleGeneric_C : public UPrimalItemArmorGeneric_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B90(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	double                                        LastTorchDurabilityLossTime;                       // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        SavedSaddleDurability;                             // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -48,5 +48,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_SaddleGeneric_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_SaddleGeneric_C;
 
 SDK_NAMESPACE_END

@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHuman_Male_TPV_PPAnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Male_TPV_PPAnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Male_TPV_PPAnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::Human_Male_TPV_PPAnimBP_C_AnimGraph Parms{};
 
@@ -47,10 +45,8 @@ void UHuman_Male_TPV_PPAnimBP_C::AnimGraph(const struct FPoseLink& InPose, struc
 
 void UHuman_Male_TPV_PPAnimBP_C::BlueprintThreadSafeUpdateAnimation(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Male_TPV_PPAnimBP_C", "BlueprintThreadSafeUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Male_TPV_PPAnimBP_C", "BlueprintThreadSafeUpdateAnimation", FuncInfo);
 
 	Params::Human_Male_TPV_PPAnimBP_C_BlueprintThreadSafeUpdateAnimation Parms{};
 
@@ -67,10 +63,8 @@ void UHuman_Male_TPV_PPAnimBP_C::BlueprintThreadSafeUpdateAnimation(float DeltaT
 
 void UHuman_Male_TPV_PPAnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Male_TPV_PPAnimBP_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Male_TPV_PPAnimBP_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::Human_Male_TPV_PPAnimBP_C_BlueprintUpdateAnimation Parms{};
 
@@ -87,10 +81,8 @@ void UHuman_Male_TPV_PPAnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void UHuman_Male_TPV_PPAnimBP_C::ExecuteUbergraph_Human_Male_TPV_PPAnimBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Male_TPV_PPAnimBP_C", "ExecuteUbergraph_Human_Male_TPV_PPAnimBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Male_TPV_PPAnimBP_C", "ExecuteUbergraph_Human_Male_TPV_PPAnimBP", FuncInfo);
 
 	Params::Human_Male_TPV_PPAnimBP_C_ExecuteUbergraph_Human_Male_TPV_PPAnimBP Parms{};
 

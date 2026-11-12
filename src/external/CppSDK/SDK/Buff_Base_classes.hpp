@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Buff_Base.Buff_Base_C
-// 0x0010 (0x0B58 - 0x0B48)
+// 0x0010 (0x0B78 - 0x0B68)
 class ABuff_Base_C : public APrimalBuff
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bDismountingBuff;                                  // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B68(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	bool                                          bDismountingBuff;                                  // 0x0B70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BPDeactivated(class AActor* ForInstigator);
@@ -46,5 +46,6 @@ public:
 		return GetDefaultObjImpl<ABuff_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_ABuff_Base_C;
 
 SDK_NAMESPACE_END

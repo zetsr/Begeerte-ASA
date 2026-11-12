@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UFPVClimbPickHitCameraShake_C>();
 	}
 };
+DUMPER7_ASSERTS_UFPVClimbPickHitCameraShake_C;
 
 SDK_NAMESPACE_END

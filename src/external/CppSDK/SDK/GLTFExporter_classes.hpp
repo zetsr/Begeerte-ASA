@@ -10,16 +10,179 @@
 
 #include "Basic.hpp"
 
-#include "GLTFExporter_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GLTFExporter_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class GLTFExporter.GLTFExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFExporter : public UExporter
+{
+public:
+	static bool ExportToGLTF(class UObject* Object, const class FString& FilePath, const class UGLTFExportOptions* Options, const TSet<class AActor*>& SelectedActors, struct FGLTFExportMessages* OutMessages);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFExporter")
+	}
+	static class UGLTFExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFExporter;
+
+// Class GLTFExporter.GLTFAnimSequenceExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFAnimSequenceExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFAnimSequenceExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFAnimSequenceExporter")
+	}
+	static class UGLTFAnimSequenceExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFAnimSequenceExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFAnimSequenceExporter;
+
+// Class GLTFExporter.GLTFLevelExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFLevelExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFLevelExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelExporter")
+	}
+	static class UGLTFLevelExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFLevelExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFLevelExporter;
+
+// Class GLTFExporter.GLTFLevelSequenceExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFLevelSequenceExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFLevelSequenceExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelSequenceExporter")
+	}
+	static class UGLTFLevelSequenceExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFLevelSequenceExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFLevelSequenceExporter;
+
+// Class GLTFExporter.GLTFLevelVariantSetsExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFLevelVariantSetsExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFLevelVariantSetsExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFLevelVariantSetsExporter")
+	}
+	static class UGLTFLevelVariantSetsExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFLevelVariantSetsExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFLevelVariantSetsExporter;
+
+// Class GLTFExporter.GLTFMaterialExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFMaterialExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFMaterialExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFMaterialExporter")
+	}
+	static class UGLTFMaterialExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFMaterialExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFMaterialExporter;
+
+// Class GLTFExporter.GLTFSkeletalMeshExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFSkeletalMeshExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFSkeletalMeshExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFSkeletalMeshExporter")
+	}
+	static class UGLTFSkeletalMeshExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFSkeletalMeshExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFSkeletalMeshExporter;
+
+// Class GLTFExporter.GLTFStaticMeshExporter
+// 0x0000 (0x0078 - 0x0078)
+class UGLTFStaticMeshExporter final : public UGLTFExporter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GLTFStaticMeshExporter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GLTFStaticMeshExporter")
+	}
+	static class UGLTFStaticMeshExporter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGLTFStaticMeshExporter>();
+	}
+};
+DUMPER7_ASSERTS_UGLTFStaticMeshExporter;
+
 // Class GLTFExporter.GLTFExportOptions
-// 0x0088 (0x00B0 - 0x0028)
+// 0x0090 (0x00B8 - 0x0028)
 class UGLTFExportOptions final : public UObject
 {
 public:
@@ -47,17 +210,20 @@ public:
 	bool                                          bExportVertexSkinWeights;                          // 0x009E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMakeSkinnedMeshesRoot;                            // 0x009F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseMeshQuantization;                              // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportLevelSequences;                             // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportAnimationSequences;                         // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGLTFTextureImageFormat                       TextureImageFormat;                                // 0x00A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TextureImageQuality;                               // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportTextureTransforms;                          // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAdjustNormalmaps;                                 // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportHiddenInGame;                               // 0x00AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportLights;                                     // 0x00AB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExportCameras;                                    // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGLTFMaterialVariantMode                      ExportMaterialVariants;                            // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bExportMorphTargets;                               // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLevelSequences;                             // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportAnimationSequences;                         // 0x00A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGLTFTextureImageFormat                       TextureImageFormat;                                // 0x00A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TextureImageQuality;                               // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportTextureTransforms;                          // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLightmaps;                                  // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAdjustNormalmaps;                                 // 0x00AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportHiddenInGame;                               // 0x00AF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportLights;                                     // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExportCameras;                                    // 0x00B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGLTFMaterialVariantMode                      ExportMaterialVariants;                            // 0x00B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ResetToDefault();
@@ -76,161 +242,7 @@ public:
 		return GetDefaultObjImpl<UGLTFExportOptions>();
 	}
 };
-
-// Class GLTFExporter.GLTFExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFExporter : public UExporter
-{
-public:
-	static bool ExportToGLTF(class UObject* Object, const class FString& FilePath, const class UGLTFExportOptions* Options, const TSet<class AActor*>& SelectedActors, struct FGLTFExportMessages* OutMessages);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFExporter")
-	}
-	static class UGLTFExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFAnimSequenceExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFAnimSequenceExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFAnimSequenceExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFAnimSequenceExporter")
-	}
-	static class UGLTFAnimSequenceExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFAnimSequenceExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFLevelExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFLevelExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFLevelExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFLevelExporter")
-	}
-	static class UGLTFLevelExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFLevelExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFLevelSequenceExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFLevelSequenceExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFLevelSequenceExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFLevelSequenceExporter")
-	}
-	static class UGLTFLevelSequenceExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFLevelSequenceExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFLevelVariantSetsExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFLevelVariantSetsExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFLevelVariantSetsExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFLevelVariantSetsExporter")
-	}
-	static class UGLTFLevelVariantSetsExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFLevelVariantSetsExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFMaterialExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFMaterialExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFMaterialExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFMaterialExporter")
-	}
-	static class UGLTFMaterialExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFMaterialExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFSkeletalMeshExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFSkeletalMeshExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFSkeletalMeshExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFSkeletalMeshExporter")
-	}
-	static class UGLTFSkeletalMeshExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFSkeletalMeshExporter>();
-	}
-};
-
-// Class GLTFExporter.GLTFStaticMeshExporter
-// 0x0000 (0x0078 - 0x0078)
-class UGLTFStaticMeshExporter final : public UGLTFExporter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GLTFStaticMeshExporter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GLTFStaticMeshExporter")
-	}
-	static class UGLTFStaticMeshExporter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGLTFStaticMeshExporter>();
-	}
-};
+DUMPER7_ASSERTS_UGLTFExportOptions;
 
 // Class GLTFExporter.GLTFProxyOptions
 // 0x0068 (0x0090 - 0x0028)
@@ -263,6 +275,7 @@ public:
 		return GetDefaultObjImpl<UGLTFProxyOptions>();
 	}
 };
+DUMPER7_ASSERTS_UGLTFProxyOptions;
 
 // Class GLTFExporter.GLTFMaterialExportOptions
 // 0x0070 (0x0098 - 0x0028)
@@ -288,5 +301,6 @@ public:
 		return GetDefaultObjImpl<UGLTFMaterialExportOptions>();
 	}
 };
+DUMPER7_ASSERTS_UGLTFMaterialExportOptions;
 
 SDK_NAMESPACE_END

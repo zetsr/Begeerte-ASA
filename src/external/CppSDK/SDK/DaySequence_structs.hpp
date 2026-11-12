@@ -15,8 +15,27 @@
 
 SDK_NAMESPACE_START
 
+// Enum DaySequence.EDaySequenceBindingReferenceSpecialization
+// NumValues: 0x0004
+enum class EDaySequenceBindingReferenceSpecialization : uint32
+{
+	None                                     = 0,
+	Root                                     = 1,
+	CameraModifier                           = 2,
+	EDaySequenceBindingReferenceSpecialization_MAX = 3,
+};
+
+// Enum DaySequence.EDaySequenceConditionTagInitializationPhase
+// NumValues: 0x0003
+enum class EDaySequenceConditionTagInitializationPhase : uint8
+{
+	Immediate                                = 0,
+	GameStateReady                           = 1,
+	EDaySequenceConditionTagInitializationPhase_MAX = 2,
+};
+
 // Enum DaySequence.EDayNightCycleMode
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EDayNightCycleMode : uint8
 {
 	Default                                  = 0,
@@ -24,16 +43,18 @@ enum class EDayNightCycleMode : uint8
 	StartAtSpecifiedTime                     = 2,
 	RandomFixedTime                          = 3,
 	RandomStartTime                          = 4,
-	EDayNightCycleMode_MAX                   = 5,
+	LocalFixedTime                           = 5,
+	EDayNightCycleMode_MAX                   = 6,
 };
 
 // Enum DaySequence.EDaySequenceModifierMode
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EDaySequenceModifierMode : uint8
 {
 	Global                                   = 0,
 	Volume                                   = 1,
-	EDaySequenceModifierMode_MAX             = 2,
+	Time                                     = 2,
+	EDaySequenceModifierMode_MAX             = 3,
 };
 
 // Enum DaySequence.EDaySequenceModifierUserBlendPolicy
@@ -54,6 +75,63 @@ struct FDaySequenceConditionSet final
 public:
 	TMap<TSubclassOf<class UDaySequenceConditionTag>, bool> Conditions;                              // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDaySequenceConditionSet;
+
+// ScriptStruct DaySequence.DaySequenceBindingReference
+// 0x0040 (0x0040 - 0x0000)
+struct FDaySequenceBindingReference final
+{
+public:
+	TSoftObjectPtr<class UObject>                 ExternalObjectPath;                                // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 ObjectPath;                                        // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EDaySequenceBindingReferenceSpecialization    Specialization;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDaySequenceBindingReference;
+
+// ScriptStruct DaySequence.DaySequenceBindingReferenceArray
+// 0x0010 (0x0010 - 0x0000)
+struct FDaySequenceBindingReferenceArray final
+{
+public:
+	TArray<struct FDaySequenceBindingReference>   References;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDaySequenceBindingReferenceArray;
+
+// ScriptStruct DaySequence.DaySequenceBindingReferences
+// 0x0140 (0x0140 - 0x0000)
+struct FDaySequenceBindingReferences final
+{
+public:
+	TMap<struct FGuid, struct FDaySequenceBindingReferenceArray> BindingIdToReferences;              // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<EDaySequenceBindingReferenceSpecialization, struct FGuid> SpecializedReferenceToGuid;       // 0x00A0(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<struct FGuid, EDaySequenceBindingReferenceSpecialization> GuidToSpecializedReference;       // 0x00F0(0x0050)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDaySequenceBindingReferences;
+
+// ScriptStruct DaySequence.DaySequenceCollectionEntry
+// 0x0068 (0x0068 - 0x0000)
+struct FDaySequenceCollectionEntry final
+{
+public:
+	class UDaySequence*                           Sequence;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         BiasOffset;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDaySequenceConditionSet               Conditions;                                        // 0x0010(0x0050)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bEnableHierarchicalBlending;                       // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDaySequenceCollectionEntry;
+
+// ScriptStruct DaySequence.DaySequencePlaybackParams
+// 0x000C (0x000C - 0x0000)
+struct alignas(0x04) FDaySequencePlaybackParams final
+{
+public:
+	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDaySequencePlaybackParams;
 
 // ScriptStruct DaySequence.DaySequenceTime
 // 0x000C (0x000C - 0x0000)
@@ -64,97 +142,59 @@ public:
 	int32                                         Minutes;                                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Seconds;                                           // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct DaySequence.DaySequenceBindingReference
-// 0x0038 (0x0038 - 0x0000)
-struct FDaySequenceBindingReference final
-{
-public:
-	TSoftObjectPtr<class UObject>                 ExternalObjectPath;                                // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 ObjectPath;                                        // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DaySequence.DaySequenceBindingReferenceArray
-// 0x0010 (0x0010 - 0x0000)
-struct FDaySequenceBindingReferenceArray final
-{
-public:
-	TArray<struct FDaySequenceBindingReference>   References;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DaySequence.DaySequenceBindingReferences
-// 0x00A0 (0x00A0 - 0x0000)
-struct FDaySequenceBindingReferences final
-{
-public:
-	TMap<struct FGuid, struct FDaySequenceBindingReferenceArray> BindingIdToReferences;              // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DaySequence.DaySequenceCollectionEntry
-// 0x0060 (0x0060 - 0x0000)
-struct FDaySequenceCollectionEntry final
-{
-public:
-	class UDaySequence*                           Sequence;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int32                                         BiasOffset;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDaySequenceConditionSet               Conditions;                                        // 0x0010(0x0050)(Edit, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DaySequence.DaySequencePlaybackParams
-// 0x000C (0x000C - 0x0000)
-struct alignas(0x04) FDaySequencePlaybackParams final
-{
-public:
-	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FDaySequenceTime;
 
 // ScriptStruct DaySequence.ProceduralDaySequence
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FProceduralDaySequence
+// 0x0060 (0x0060 - 0x0000)
+struct FProceduralDaySequence
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDaySequenceConditionSet               Conditions;                                        // 0x0008(0x0050)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FProceduralDaySequence;
 
 // ScriptStruct DaySequence.SineSequence
-// 0x0028 (0x0038 - 0x0010)
+// 0x0028 (0x0088 - 0x0060)
 struct FSineSequence final : public FProceduralDaySequence
 {
 public:
-	class FName                                   PropertyName;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ComponentName;                                     // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        KeyCount;                                          // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Amplitude;                                         // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Frequency;                                         // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PhaseShift;                                        // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VerticalShift;                                     // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   PropertyName;                                      // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ComponentName;                                     // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        KeyCount;                                          // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Amplitude;                                         // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Frequency;                                         // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PhaseShift;                                        // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VerticalShift;                                     // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FSineSequence;
 
 // ScriptStruct DaySequence.SunAngleSequence
-// 0x0008 (0x0018 - 0x0010)
+// 0x0008 (0x0068 - 0x0060)
 struct FSunAngleSequence final : public FProceduralDaySequence
 {
 public:
-	class FName                                   SunComponentName;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SunComponentName;                                  // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSunAngleSequence;
 
 // ScriptStruct DaySequence.SunPositionSequence
-// 0x0038 (0x0048 - 0x0010)
+// 0x0038 (0x0098 - 0x0060)
 struct FSunPositionSequence final : public FProceduralDaySequence
 {
 public:
-	class FName                                   SunComponentName;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        KeyCount;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              Time;                                              // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        TimeZone;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Latitude;                                          // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Longitude;                                         // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDaylightSavings;                                // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   SunComponentName;                                  // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        KeyCount;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              Time;                                              // 0x0070(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        TimeZone;                                          // 0x0078(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Latitude;                                          // 0x0080(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Longitude;                                         // 0x0088(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDaylightSavings;                                // 0x0090(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FSunPositionSequence;
 
 SDK_NAMESPACE_END

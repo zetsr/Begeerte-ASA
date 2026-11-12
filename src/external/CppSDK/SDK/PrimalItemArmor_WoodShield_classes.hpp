@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_WoodShield_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_WoodShield_C;
 
 SDK_NAMESPACE_END

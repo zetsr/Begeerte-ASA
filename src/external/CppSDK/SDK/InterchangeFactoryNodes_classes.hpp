@@ -10,29 +10,56 @@
 
 #include "Basic.hpp"
 
+#include "InterchangeFactoryNodes_structs.hpp"
 #include "InterchangeCore_classes.hpp"
+#include "InterchangeNodes_structs.hpp"
 #include "CinematicCamera_structs.hpp"
 #include "Engine_structs.hpp"
-#include "InterchangeFactoryNodes_structs.hpp"
-#include "InterchangeNodes_structs.hpp"
+#include "InterchangeCommon_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class InterchangeFactoryNodes.InterchangeAudioSoundWaveFactoryNode
+// 0x0000 (0x0228 - 0x0228)
+class UInterchangeAudioSoundWaveFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeAudioSoundWaveFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAudioSoundWaveFactoryNode")
+	}
+	static class UInterchangeAudioSoundWaveFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeAudioSoundWaveFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeAudioSoundWaveFactoryNode;
+
 // Class InterchangeFactoryNodes.InterchangeActorFactoryNode
-// 0x0080 (0x01D0 - 0x0150)
+// 0x00C0 (0x02E8 - 0x0228)
 class UInterchangeActorFactoryNode : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x80];                                     // 0x0150(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0xC0];                                     // 0x0228(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	bool AddComponentUid(const class FString& ComponentUid);
 	bool SetCustomActorClassName(const class FString& AttributeValue);
+	bool SetCustomActorVisibility(bool AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomComponentVisibility(bool AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomGlobalTransform(const struct FTransform& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomLocalTransform(const struct FTransform& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomMobility(const uint8& AttributeValue, bool bAddApplyDelegate);
 
+	void GetComponentUids(TArray<class FString>* OutComponentUids) const;
 	bool GetCustomActorClassName(class FString* AttributeValue) const;
+	bool GetCustomActorVisibility(bool* AttributeValue) const;
+	bool GetCustomComponentVisibility(bool* AttributeValue) const;
 	bool GetCustomGlobalTransform(struct FTransform* AttributeValue) const;
 	bool GetCustomLocalTransform(struct FTransform* AttributeValue) const;
 	bool GetCustomMobility(uint8* AttributeValue) const;
@@ -51,23 +78,70 @@ public:
 		return GetDefaultObjImpl<UInterchangeActorFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeActorFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangePhysicalCameraFactoryNode
-// 0x0040 (0x0210 - 0x01D0)
-class UInterchangePhysicalCameraFactoryNode final : public UInterchangeActorFactoryNode
+// Class InterchangeFactoryNodes.InterchangeBaseCameraFactoryNode
+// 0x0060 (0x0348 - 0x02E8)
+class UInterchangeBaseCameraFactoryNode : public UInterchangeActorFactoryNode
 {
 public:
-	uint8                                         Pad_1D0[0x40];                                     // 0x01D0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E8[0x60];                                     // 0x02E8(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	bool SetCustomAutoExposureMethod(const EInterchangeAutoExposureMethod& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomExposureCompensation(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomExposureFstop(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomExposureISO(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomExposureShutterSpeed(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNearClipPlane(const float& AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomAutoExposureMethod(EInterchangeAutoExposureMethod* AttributeValue) const;
+	bool GetCustomExposureCompensation(float* AttributeValue) const;
+	bool GetCustomExposureFstop(float* AttributeValue) const;
+	bool GetCustomExposureISO(float* AttributeValue) const;
+	bool GetCustomExposureShutterSpeed(float* AttributeValue) const;
+	bool GetCustomNearClipPlane(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeBaseCameraFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseCameraFactoryNode")
+	}
+	static class UInterchangeBaseCameraFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeBaseCameraFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeBaseCameraFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangePhysicalCameraFactoryNode
+// 0x0080 (0x03C8 - 0x0348)
+class UInterchangePhysicalCameraFactoryNode final : public UInterchangeBaseCameraFactoryNode
+{
+public:
+	uint8                                         Pad_348[0x80];                                     // 0x0348(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomDepthOfFieldFstop(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomFocalLength(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomFocusDistance(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomFocusMethod(const ECameraFocusMethod& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomSensorHeight(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSensorHorizontalOffset(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSensorVerticalOffset(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomSensorWidth(const float& AttributeValue, bool bAddApplyDelegate);
 
+	bool GetCustomDepthOfFieldFstop(float* AttributeValue) const;
 	bool GetCustomFocalLength(float* AttributeValue) const;
+	bool GetCustomFocusDistance(float* AttributeValue) const;
 	bool GetCustomFocusMethod(ECameraFocusMethod* AttributeValue) const;
 	bool GetCustomSensorHeight(float* AttributeValue) const;
+	bool GetCustomSensorHorizontalOffset(float* AttributeValue) const;
+	bool GetCustomSensorVerticalOffset(float* AttributeValue) const;
 	bool GetCustomSensorWidth(float* AttributeValue) const;
 
 public:
@@ -84,26 +158,25 @@ public:
 		return GetDefaultObjImpl<UInterchangePhysicalCameraFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangePhysicalCameraFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeStandardCameraFactoryNode
-// 0x0060 (0x0230 - 0x01D0)
-class UInterchangeStandardCameraFactoryNode final : public UInterchangeActorFactoryNode
+// 0x0050 (0x0398 - 0x0348)
+class UInterchangeStandardCameraFactoryNode final : public UInterchangeBaseCameraFactoryNode
 {
 public:
-	uint8                                         Pad_1D0[0x60];                                     // 0x01D0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_348[0x50];                                     // 0x0348(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomAspectRatio(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomFarClipPlane(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomFieldOfView(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomNearClipPlane(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomProjectionMode(const ECameraProjectionMode& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomWidth(const float& AttributeValue, bool bAddApplyDelegate);
 
 	bool GetCustomAspectRatio(float* AttributeValue) const;
 	bool GetCustomFarClipPlane(float* AttributeValue) const;
 	bool GetCustomFieldOfView(float* AttributeValue) const;
-	bool GetCustomNearClipPlane(float* AttributeValue) const;
 	bool GetCustomProjectionMode(ECameraProjectionMode* AttributeValue) const;
 	bool GetCustomWidth(float* AttributeValue) const;
 
@@ -121,382 +194,20 @@ public:
 		return GetDefaultObjImpl<UInterchangeStandardCameraFactoryNode>();
 	}
 };
-
-// Class InterchangeFactoryNodes.InterchangeDecalActorFactoryNode
-// 0x0030 (0x0200 - 0x01D0)
-class UInterchangeDecalActorFactoryNode final : public UInterchangeActorFactoryNode
-{
-public:
-	uint8                                         Pad_1D0[0x30];                                     // 0x01D0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomDecalMaterialPathName(const class FString& AttributeValue);
-	bool SetCustomDecalSize(const struct FVector& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomSortOrder(const int32& AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomDecalMaterialPathName(class FString* AttributeValue) const;
-	bool GetCustomDecalSize(struct FVector* AttributeValue) const;
-	bool GetCustomSortOrder(int32* AttributeValue) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeDecalActorFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeDecalActorFactoryNode")
-	}
-	static class UInterchangeDecalActorFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeDecalActorFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeBaseMaterialFactoryNode
-// 0x0010 (0x0160 - 0x0150)
-class UInterchangeBaseMaterialFactoryNode : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_150[0x10];                                     // 0x0150(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomIsMaterialImportEnabled(const bool& AttributeValue);
-
-	bool GetCustomIsMaterialImportEnabled(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeBaseMaterialFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeBaseMaterialFactoryNode")
-	}
-	static class UInterchangeBaseMaterialFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeBaseMaterialFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeDecalMaterialFactoryNode
-// 0x0020 (0x0180 - 0x0160)
-class UInterchangeDecalMaterialFactoryNode final : public UInterchangeBaseMaterialFactoryNode
-{
-public:
-	uint8                                         Pad_160[0x20];                                     // 0x0160(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomDiffuseTexturePath(const class FString& AttributeValue);
-	bool SetCustomNormalTexturePath(const class FString& AttributeValue);
-
-	bool GetCustomDiffuseTexturePath(class FString* AttributeValue) const;
-	bool GetCustomNormalTexturePath(class FString* AttributeValue) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeDecalMaterialFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeDecalMaterialFactoryNode")
-	}
-	static class UInterchangeDecalMaterialFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeDecalMaterialFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeLevelFactoryNode
-// 0x0060 (0x01B0 - 0x0150)
-class UInterchangeLevelFactoryNode final : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_150[0x60];                                     // 0x0150(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddCustomActorFactoryNodeUid(const class FString& ActorFactoryNodeUid);
-	bool RemoveCustomActorFactoryNodeUid(const class FString& ActorFactoryNodeUid);
-	bool SetCustomCreateWorldPartitionLevel(const bool& AttributeValue);
-	bool SetCustomSceneImportAssetFactoryNodeUid(const class FString& AttributeValue);
-	bool SetCustomShouldCreateLevel(const bool& AttributeValue);
-
-	void GetCustomActorFactoryNodeUid(const int32 Index_0, class FString* OutActorFactoryNodeUid) const;
-	int32 GetCustomActorFactoryNodeUidCount() const;
-	void GetCustomActorFactoryNodeUids(TArray<class FString>* OutActorFactoryNodeUids) const;
-	bool GetCustomCreateWorldPartitionLevel(bool* AttributeValue) const;
-	bool GetCustomSceneImportAssetFactoryNodeUid(class FString* AttributeValue) const;
-	bool GetCustomShouldCreateLevel(bool* AttributeValue) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeLevelFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeLevelFactoryNode")
-	}
-	static class UInterchangeLevelFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeLevelFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeLevelInstanceActorFactoryNode
-// 0x0020 (0x01F0 - 0x01D0)
-class UInterchangeLevelInstanceActorFactoryNode final : public UInterchangeActorFactoryNode
-{
-public:
-	uint8                                         Pad_1D0[0x20];                                     // 0x01D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomLevelReference(const class FString& AttributeValue);
-
-	bool GetCustomLevelReference(class FString* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeLevelInstanceActorFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeLevelInstanceActorFactoryNode")
-	}
-	static class UInterchangeLevelInstanceActorFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeLevelInstanceActorFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeLevelSequenceFactoryNode
-// 0x0030 (0x0180 - 0x0150)
-class UInterchangeLevelSequenceFactoryNode final : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_150[0x30];                                     // 0x0150(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddCustomAnimationTrackUid(const class FString& AnimationTrackUid);
-	bool RemoveCustomAnimationTrackUid(const class FString& AnimationTrackUid);
-	bool SetCustomFrameRate(const float& AttributeValue);
-
-	void GetCustomAnimationTrackUid(const int32 Index_0, class FString* OutAnimationTrackUid) const;
-	int32 GetCustomAnimationTrackUidCount() const;
-	void GetCustomAnimationTrackUids(TArray<class FString>* OutAnimationTrackUids) const;
-	bool GetCustomFrameRate(float* AttributeValue) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeLevelSequenceFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeLevelSequenceFactoryNode")
-	}
-	static class UInterchangeLevelSequenceFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeLevelSequenceFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeBaseLightFactoryNode
-// 0x0040 (0x0210 - 0x01D0)
-class UInterchangeBaseLightFactoryNode : public UInterchangeActorFactoryNode
-{
-public:
-	uint8                                         Pad_1D0[0x40];                                     // 0x01D0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomIntensity(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomLightColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomTemperature(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseTemperature(bool AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomIntensity(float* AttributeValue) const;
-	bool GetCustomLightColor(struct FColor* AttributeValue) const;
-	bool GetCustomTemperature(float* AttributeValue) const;
-	bool GetCustomUseTemperature(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeBaseLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeBaseLightFactoryNode")
-	}
-	static class UInterchangeBaseLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeBaseLightFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeDirectionalLightFactoryNode
-// 0x0000 (0x0210 - 0x0210)
-class UInterchangeDirectionalLightFactoryNode final : public UInterchangeBaseLightFactoryNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeDirectionalLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeDirectionalLightFactoryNode")
-	}
-	static class UInterchangeDirectionalLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeDirectionalLightFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeLightFactoryNode
-// 0x0060 (0x0270 - 0x0210)
-class UInterchangeLightFactoryNode : public UInterchangeBaseLightFactoryNode
-{
-public:
-	uint8                                         Pad_210[0x60];                                     // 0x0210(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomAttenuationRadius(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomIESBrightnessScale(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomIESTexture(const class FString& AttributeValue);
-	bool SetCustomIntensityUnits(ELightUnits AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRotation(const struct FRotator& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseIESBrightness(const bool& AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomAttenuationRadius(float* AttributeValue) const;
-	bool GetCustomIESBrightnessScale(float* AttributeValue) const;
-	bool GetCustomIESTexture(class FString* AttributeValue) const;
-	bool GetCustomIntensityUnits(ELightUnits* AttributeValue) const;
-	bool GetCustomRotation(struct FRotator* AttributeValue) const;
-	bool GetCustomUseIESBrightness(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeLightFactoryNode")
-	}
-	static class UInterchangeLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeLightFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeRectLightFactoryNode
-// 0x0020 (0x0290 - 0x0270)
-class UInterchangeRectLightFactoryNode final : public UInterchangeLightFactoryNode
-{
-public:
-	uint8                                         Pad_270[0x20];                                     // 0x0270(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomSourceHeight(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomSourceWidth(float AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomSourceHeight(float* AttributeValue) const;
-	bool GetCustomSourceWidth(float* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeRectLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeRectLightFactoryNode")
-	}
-	static class UInterchangeRectLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeRectLightFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangePointLightFactoryNode
-// 0x0020 (0x0290 - 0x0270)
-class UInterchangePointLightFactoryNode : public UInterchangeLightFactoryNode
-{
-public:
-	uint8                                         Pad_270[0x20];                                     // 0x0270(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomLightFalloffExponent(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseInverseSquaredFalloff(bool AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomLightFalloffExponent(float* AttributeValue) const;
-	bool GetCustomUseInverseSquaredFalloff(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangePointLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangePointLightFactoryNode")
-	}
-	static class UInterchangePointLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangePointLightFactoryNode>();
-	}
-};
-
-// Class InterchangeFactoryNodes.InterchangeSpotLightFactoryNode
-// 0x0020 (0x02B0 - 0x0290)
-class UInterchangeSpotLightFactoryNode final : public UInterchangePointLightFactoryNode
-{
-public:
-	uint8                                         Pad_290[0x20];                                     // 0x0290(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomInnerConeAngle(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomOuterConeAngle(float AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomInnerConeAngle(float* AttributeValue) const;
-	bool GetCustomOuterConeAngle(float* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeSpotLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeSpotLightFactoryNode")
-	}
-	static class UInterchangeSpotLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeSpotLightFactoryNode>();
-	}
-};
+DUMPER7_ASSERTS_UInterchangeStandardCameraFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangePhysicsAssetFactoryNode
-// 0x0030 (0x0180 - 0x0150)
+// 0x0030 (0x0258 - 0x0228)
 class UInterchangePhysicsAssetFactoryNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x30];                                     // 0x0150(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x30];                                     // 0x0228(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializePhysicsAssetNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass);
+	void InitializePhysicsAssetNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool SetCustomSkeletalMeshUid(const class FString& AttributeValue);
 
 	bool GetCustomSkeletalMeshUid(class FString* AttributeValue) const;
-	class UClass* GetObjectClass() const;
 
 public:
 	static class UClass* StaticClass()
@@ -512,55 +223,27 @@ public:
 		return GetDefaultObjImpl<UInterchangePhysicsAssetFactoryNode>();
 	}
 };
-
-// Class InterchangeFactoryNodes.InterchangeSceneVariantSetsFactoryNode
-// 0x0020 (0x0170 - 0x0150)
-class UInterchangeSceneVariantSetsFactoryNode final : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_150[0x20];                                     // 0x0150(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddCustomVariantSetUid(const class FString& VariantUid);
-	bool RemoveCustomVariantSetUid(const class FString& VariantUid);
-
-	void GetCustomVariantSetUid(const int32 Index_0, class FString* OutVariantUid) const;
-	int32 GetCustomVariantSetUidCount() const;
-	void GetCustomVariantSetUids(TArray<class FString>* OutVariantUids) const;
-	class UClass* GetObjectClass() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeSceneVariantSetsFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeSceneVariantSetsFactoryNode")
-	}
-	static class UInterchangeSceneVariantSetsFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeSceneVariantSetsFactoryNode>();
-	}
-};
+DUMPER7_ASSERTS_UInterchangePhysicsAssetFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSkeletonFactoryNode
-// 0x0050 (0x01A0 - 0x0150)
+// 0x0070 (0x0298 - 0x0228)
 class UInterchangeSkeletonFactoryNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x50];                                     // 0x0150(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x70];                                     // 0x0228(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeSkeletonNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass);
+	bool AddCustomSkeletalMeshFactoryNodeUid(const class FString& InDependency);
+	void InitializeSkeletonNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool SetCustomRootJointUid(const class FString& AttributeValue);
-	bool SetCustomSkeletalMeshFactoryNodeUid(const class FString& AttributeValue);
 	bool SetCustomUseTimeZeroForBindPose(const bool& AttributeValue);
 
 	bool GetCustomRootJointUid(class FString* AttributeValue) const;
+	int32 GetCustomSkeletalMeshFactoryNodeCount() const;
 	bool GetCustomSkeletalMeshFactoryNodeUid(class FString* AttributeValue) const;
+	void GetCustomSkeletalMeshFactoryNodeUidAtIndex(const int32 Index_0, class FString* OutDependency) const;
+	void GetCustomSkeletalMeshFactoryNodeUids(TArray<class FString>* OutDependencies) const;
 	bool GetCustomUseTimeZeroForBindPose(bool* AttributeValue) const;
-	class UClass* GetObjectClass() const;
 
 public:
 	static class UClass* StaticClass()
@@ -576,16 +259,17 @@ public:
 		return GetDefaultObjImpl<UInterchangeSkeletonFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeSkeletonFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTextureFactoryNode
-// 0x02A0 (0x03F0 - 0x0150)
+// 0x02A0 (0x04C8 - 0x0228)
 class UInterchangeTextureFactoryNode : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x2A0];                                    // 0x0150(0x02A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x2A0];                                    // 0x0228(0x02A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeTextureNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetName);
+	void InitializeTextureNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetName, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool SetCustomAdjustBrightness(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomAdjustBrightnessCurve(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomAdjustHue(const float& AttributeValue, bool bAddApplyDelegate);
@@ -665,7 +349,6 @@ public:
 	bool GetCustomSRGB(bool* AttributeValue) const;
 	bool GetCustomTranslatedTextureNodeUid(class FString* AttributeValue) const;
 	bool GetCustomVirtualTextureStreaming(bool* AttributeValue) const;
-	class UClass* GetObjectClass() const;
 
 public:
 	static class UClass* StaticClass()
@@ -681,13 +364,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTextureFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTexture2DArrayFactoryNode
-// 0x0030 (0x0420 - 0x03F0)
+// 0x0030 (0x04F8 - 0x04C8)
 class UInterchangeTexture2DArrayFactoryNode final : public UInterchangeTextureFactoryNode
 {
 public:
-	uint8                                         Pad_3F0[0x30];                                     // 0x03F0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C8[0x30];                                     // 0x04C8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomAddressZ(const uint8 AttributeValue, bool bAddApplyDelegate);
@@ -710,13 +394,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeTexture2DArrayFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTexture2DArrayFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTexture2DFactoryNode
-// 0x0098 (0x0488 - 0x03F0)
+// 0x0098 (0x0560 - 0x04C8)
 class UInterchangeTexture2DFactoryNode : public UInterchangeTextureFactoryNode
 {
 public:
-	uint8                                         Pad_3F0[0x98];                                     // 0x03F0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C8[0x98];                                     // 0x04C8(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomAddressX(const ETextureAddress AttributeValue, bool bAddApplyDelegate);
@@ -745,9 +430,10 @@ public:
 		return GetDefaultObjImpl<UInterchangeTexture2DFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTexture2DFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTextureCubeArrayFactoryNode
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x04C8 - 0x04C8)
 class UInterchangeTextureCubeArrayFactoryNode final : public UInterchangeTextureFactoryNode
 {
 public:
@@ -764,9 +450,10 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureCubeArrayFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTextureCubeArrayFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTextureCubeFactoryNode
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x04C8 - 0x04C8)
 class UInterchangeTextureCubeFactoryNode final : public UInterchangeTextureFactoryNode
 {
 public:
@@ -783,13 +470,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureCubeFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTextureCubeFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeTextureLightProfileFactoryNode
-// 0x0020 (0x04A8 - 0x0488)
+// 0x0040 (0x05A0 - 0x0560)
 class UInterchangeTextureLightProfileFactoryNode final : public UInterchangeTexture2DFactoryNode
 {
 public:
-	uint8                                         Pad_488[0x20];                                     // 0x0488(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_560[0x40];                                     // 0x0560(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomBrightness(const float AttributeValue, bool bAddApplyDelegate);
@@ -812,9 +500,10 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureLightProfileFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTextureLightProfileFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeVolumeTextureFactoryNode
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x04C8 - 0x04C8)
 class UInterchangeVolumeTextureFactoryNode final : public UInterchangeTextureFactoryNode
 {
 public:
@@ -831,16 +520,17 @@ public:
 		return GetDefaultObjImpl<UInterchangeVolumeTextureFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeVolumeTextureFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeAnimSequenceFactoryNode
-// 0x0340 (0x0490 - 0x0150)
+// 0x0340 (0x0568 - 0x0228)
 class UInterchangeAnimSequenceFactoryNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x340];                                    // 0x0150(0x0340)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x340];                                    // 0x0228(0x0340)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeAnimSequenceNode(const class FString& UniqueID, const class FString& DisplayLabel);
+	void InitializeAnimSequenceNode(const class FString& UniqueID, const class FString& DisplayLabel, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool RemoveAnimatedAttributeCurveName(const class FString& AttributeCurveName);
 	bool RemoveAnimatedAttributeStepCurveName(const class FString& AttributeStepCurveName);
 	bool RemoveAnimatedMaterialCurveSuffixe(const class FString& MaterialCurveSuffixe);
@@ -888,7 +578,6 @@ public:
 	bool GetCustomSkeletonFactoryNodeUid(class FString* AttributeValue) const;
 	bool GetCustomSkeletonSoftObjectPath(struct FSoftObjectPath* AttributeValue) const;
 	void GetMorphTargetNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutMorphTargetNodeAnimationPayloads) const;
-	class UClass* GetObjectClass() const;
 	void GetSceneNodeAnimationPayloadKeys(TMap<class FString, struct FInterchangeAnimationPayLoadKey>* OutSceneNodeAnimationPayloadKeys) const;
 
 public:
@@ -905,13 +594,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeAnimSequenceFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeAnimSequenceFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeCommonPipelineDataFactoryNode
-// 0x0030 (0x0180 - 0x0150)
+// 0x0030 (0x0258 - 0x0228)
 class UInterchangeCommonPipelineDataFactoryNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x30];                                     // 0x0150(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x30];                                     // 0x0228(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetBakeMeshes(const bool& AttributeValue);
@@ -936,13 +626,735 @@ public:
 		return GetDefaultObjImpl<UInterchangeCommonPipelineDataFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeCommonPipelineDataFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeDecalActorFactoryNode
+// 0x0030 (0x0318 - 0x02E8)
+class UInterchangeDecalActorFactoryNode final : public UInterchangeActorFactoryNode
+{
+public:
+	uint8                                         Pad_2E8[0x30];                                     // 0x02E8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomDecalMaterialPathName(const class FString& AttributeValue);
+	bool SetCustomDecalSize(const struct FVector& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSortOrder(const int32& AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomDecalMaterialPathName(class FString* AttributeValue) const;
+	bool GetCustomDecalSize(struct FVector* AttributeValue) const;
+	bool GetCustomSortOrder(int32* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeDecalActorFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDecalActorFactoryNode")
+	}
+	static class UInterchangeDecalActorFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeDecalActorFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeDecalActorFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeBaseMaterialFactoryNode
+// 0x0010 (0x0238 - 0x0228)
+class UInterchangeBaseMaterialFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x10];                                     // 0x0228(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomIsMaterialImportEnabled(const bool& AttributeValue);
+
+	bool GetCustomIsMaterialImportEnabled(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeBaseMaterialFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseMaterialFactoryNode")
+	}
+	static class UInterchangeBaseMaterialFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeBaseMaterialFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeBaseMaterialFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeDecalMaterialFactoryNode
+// 0x0020 (0x0258 - 0x0238)
+class UInterchangeDecalMaterialFactoryNode final : public UInterchangeBaseMaterialFactoryNode
+{
+public:
+	uint8                                         Pad_238[0x20];                                     // 0x0238(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomDiffuseTexturePath(const class FString& AttributeValue);
+	bool SetCustomNormalTexturePath(const class FString& AttributeValue);
+
+	bool GetCustomDiffuseTexturePath(class FString* AttributeValue) const;
+	bool GetCustomNormalTexturePath(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeDecalMaterialFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDecalMaterialFactoryNode")
+	}
+	static class UInterchangeDecalMaterialFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeDecalMaterialFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeDecalMaterialFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
+// 0x0208 (0x0430 - 0x0228)
+class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x208];                                    // 0x0228(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool AddPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool Value);
+	bool AddPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double Value);
+	bool AddPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float Value);
+	bool AddPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32 Value);
+	bool AddPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, const class FString& Value);
+	bool GetPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool* Value);
+	bool GetPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double* Value);
+	bool GetPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float* Value);
+	bool GetPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32* Value);
+	bool GetPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, class FString* Value);
+	bool RemoveAssemblyPartDependencyUid(const class FString& MeshUid);
+	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
+	bool ResetAssemblyDependencies();
+	bool ResetSlotMaterialDependencies();
+	bool SetAssemblyPartDependencyUid(const class FString& MeshUid, const class FString& AssemblyPartDependencyUid);
+	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomImportSockets(const bool& AttributeValue);
+	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
+	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
+	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
+	bool SetCustomVertexColorReplace(const bool& AttributeValue);
+	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
+
+	void GetAssemblyPartDependencies(TMap<class FString, class FString>* OutAssemblyPartDependencies) const;
+	int32 GetAssemblyPartDependenciesCount() const;
+	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
+	bool GetCustomImportSockets(bool* AttributeValue) const;
+	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
+	bool GetCustomLODGroup(class FName* AttributeValue) const;
+	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
+	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
+	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
+	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
+	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
+	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
+	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
+	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
+	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
+	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
+	int32 GetLodDataCount() const;
+	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
+	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
+	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
+	}
+	static class UInterchangeMeshFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMeshFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeGeometryCacheFactoryNode
+// 0x0120 (0x0550 - 0x0430)
+class UInterchangeGeometryCacheFactoryNode final : public UInterchangeMeshFactoryNode
+{
+public:
+	uint8                                         Pad_430[0x120];                                    // 0x0430(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitializeGeometryCacheNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
+	bool SetAnimationPayloadKeyForSceneNodeUid(const class FString& SceneNodeUid, const class FString& InUniqueID);
+	bool SetCustomApplyConstantTopologyOptimization(const bool& AttributeValue);
+	bool SetCustomEndFrame(const int32& AttributeValue);
+	bool SetCustomFlattenTracks(const bool& AttributeValue);
+	bool SetCustomMotionVectorsImport(EInterchangeMotionVectorsHandling AttributeValue);
+	bool SetCustomNumBitsForUVs(const int32& AttributeValue);
+	bool SetCustomOptimizeIndexBuffers(const bool& AttributeValue);
+	bool SetCustomPositionPrecision(const float& AttributeValue);
+	bool SetCustomStartFrame(const int32& AttributeValue);
+	bool SetCustomStoreImportedVertexNumbers(const bool& AttributeValue);
+
+	bool GetCustomApplyConstantTopologyOptimization(bool* AttributeValue) const;
+	bool GetCustomEndFrame(int32* AttributeValue) const;
+	bool GetCustomFlattenTracks(bool* AttributeValue) const;
+	bool GetCustomMotionVectorsImport(EInterchangeMotionVectorsHandling* AttributeValue) const;
+	bool GetCustomNumBitsForUVs(int32* AttributeValue) const;
+	bool GetCustomOptimizeIndexBuffers(bool* AttributeValue) const;
+	bool GetCustomPositionPrecision(float* AttributeValue) const;
+	bool GetCustomStartFrame(int32* AttributeValue) const;
+	bool GetCustomStoreImportedVertexNumbers(bool* AttributeValue) const;
+	void GetSceneNodeAnimationPayloadKeys(TMap<class FString, class FString>* OutSceneNodeAnimationPayloadKeyUids) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGeometryCacheFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGeometryCacheFactoryNode")
+	}
+	static class UInterchangeGeometryCacheFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGeometryCacheFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGeometryCacheFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeGroomBindingFactoryNode
+// 0x0010 (0x0238 - 0x0228)
+class UInterchangeGroomBindingFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x10];                                     // 0x0228(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetNumInterpolationPoints(int32 AttributeValue);
+
+	bool GetNumInterpolationPoints(int32* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGroomBindingFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGroomBindingFactoryNode")
+	}
+	static class UInterchangeGroomBindingFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGroomBindingFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGroomBindingFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeGroomCacheFactoryNode
+// 0x0070 (0x0298 - 0x0228)
+class UInterchangeGroomCacheFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x70];                                     // 0x0228(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomEndFrame(const int32& AttributeValue);
+	bool SetCustomFrameRate(const double& AttributeValue);
+	bool SetCustomGroomAssetPath(const struct FSoftObjectPath& AttributeValue);
+	bool SetCustomGroomCacheAttributes(const EInterchangeGroomCacheAttributes& AttributeValue);
+	bool SetCustomGroomCacheImportType(const EInterchangeGroomCacheImportType& AttributeValue);
+	bool SetCustomNumFrames(const int32& AttributeValue);
+	bool SetCustomStartFrame(const int32& AttributeValue);
+
+	bool GetCustomEndFrame(int32* AttributeValue) const;
+	bool GetCustomFrameRate(double* AttributeValue) const;
+	bool GetCustomGroomAssetPath(struct FSoftObjectPath* AttributeValue) const;
+	bool GetCustomGroomCacheAttributes(EInterchangeGroomCacheAttributes* AttributeValue) const;
+	bool GetCustomGroomCacheImportType(EInterchangeGroomCacheImportType* AttributeValue) const;
+	bool GetCustomNumFrames(int32* AttributeValue) const;
+	bool GetCustomStartFrame(int32* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGroomCacheFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGroomCacheFactoryNode")
+	}
+	static class UInterchangeGroomCacheFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGroomCacheFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGroomCacheFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSceneComponentFactoryNode
+// 0x0040 (0x0268 - 0x0228)
+class UInterchangeSceneComponentFactoryNode : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x40];                                     // 0x0228(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddComponentUid(const class FString& ComponentUid);
+	bool SetCustomComponentVisibility(const bool& AttributeValue);
+	bool SetCustomLocalTransform(const struct FTransform& AttributeValue);
+
+	void GetComponentUids(TArray<class FString>* OutComponentUids) const;
+	bool GetCustomComponentVisibility(bool* AttributeValue) const;
+	bool GetCustomLocalTransform(struct FTransform* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSceneComponentFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSceneComponentFactoryNode")
+	}
+	static class UInterchangeSceneComponentFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSceneComponentFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSceneComponentFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeGroomComponentFactoryNode
+// 0x0020 (0x0288 - 0x0268)
+class UInterchangeGroomComponentFactoryNode final : public UInterchangeSceneComponentFactoryNode
+{
+public:
+	uint8                                         Pad_268[0x20];                                     // 0x0268(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetGroomBindingDependencyUid(const class FString& AttributeValue);
+	bool SetGroomDependencyUid(const class FString& AttributeValue);
+
+	bool GetGroomBindingDependencyUid(class FString* AttributeValue) const;
+	bool GetGroomDependencyUid(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGroomComponentFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGroomComponentFactoryNode")
+	}
+	static class UInterchangeGroomComponentFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGroomComponentFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGroomComponentFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeGroomFactoryNode
+// 0x00A0 (0x02C8 - 0x0228)
+class UInterchangeGroomFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0xA0];                                     // 0x0228(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomGroupInterpolationSettings(const struct FHairGroupsInterpolation& AttributeValue);
+
+	bool GetCustomGroupInterpolationSettings(struct FHairGroupsInterpolation* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeGroomFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeGroomFactoryNode")
+	}
+	static class UInterchangeGroomFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeGroomFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeGroomFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeHeterogeneousVolumeActorFactoryNode
+// 0x0010 (0x02F8 - 0x02E8)
+class UInterchangeHeterogeneousVolumeActorFactoryNode final : public UInterchangeActorFactoryNode
+{
+public:
+	uint8                                         Pad_2E8[0x10];                                     // 0x02E8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomVolumetricMaterialUid(const class FString& MaterialFactoryNodeUid);
+
+	bool GetCustomVolumetricMaterialUid(class FString* MaterialFactoryNodeUid) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeHeterogeneousVolumeActorFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeHeterogeneousVolumeActorFactoryNode")
+	}
+	static class UInterchangeHeterogeneousVolumeActorFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeHeterogeneousVolumeActorFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeHeterogeneousVolumeActorFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeLevelFactoryNode
+// 0x0060 (0x0288 - 0x0228)
+class UInterchangeLevelFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x60];                                     // 0x0228(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddCustomActorFactoryNodeUid(const class FString& ActorFactoryNodeUid);
+	bool RemoveCustomActorFactoryNodeUid(const class FString& ActorFactoryNodeUid);
+	bool SetCustomCreateWorldPartitionLevel(const bool& AttributeValue);
+	bool SetCustomSceneImportAssetFactoryNodeUid(const class FString& AttributeValue);
+	bool SetCustomShouldCreateLevel(const bool& AttributeValue);
+
+	void GetCustomActorFactoryNodeUid(const int32 Index_0, class FString* OutActorFactoryNodeUid) const;
+	int32 GetCustomActorFactoryNodeUidCount() const;
+	void GetCustomActorFactoryNodeUids(TArray<class FString>* OutActorFactoryNodeUids) const;
+	bool GetCustomCreateWorldPartitionLevel(bool* AttributeValue) const;
+	bool GetCustomSceneImportAssetFactoryNodeUid(class FString* AttributeValue) const;
+	bool GetCustomShouldCreateLevel(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeLevelFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLevelFactoryNode")
+	}
+	static class UInterchangeLevelFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeLevelFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeLevelFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeLevelInstanceActorFactoryNode
+// 0x0020 (0x0308 - 0x02E8)
+class UInterchangeLevelInstanceActorFactoryNode final : public UInterchangeActorFactoryNode
+{
+public:
+	uint8                                         Pad_2E8[0x20];                                     // 0x02E8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomLevelReference(const class FString& AttributeValue);
+
+	bool GetCustomLevelReference(class FString* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeLevelInstanceActorFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLevelInstanceActorFactoryNode")
+	}
+	static class UInterchangeLevelInstanceActorFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeLevelInstanceActorFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeLevelInstanceActorFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeLevelSequenceFactoryNode
+// 0x0030 (0x0258 - 0x0228)
+class UInterchangeLevelSequenceFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x30];                                     // 0x0228(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddCustomAnimationTrackUid(const class FString& AnimationTrackUid);
+	bool RemoveCustomAnimationTrackUid(const class FString& AnimationTrackUid);
+	bool SetCustomFrameRate(const float& AttributeValue);
+
+	void GetCustomAnimationTrackUid(const int32 Index_0, class FString* OutAnimationTrackUid) const;
+	int32 GetCustomAnimationTrackUidCount() const;
+	void GetCustomAnimationTrackUids(TArray<class FString>* OutAnimationTrackUids) const;
+	bool GetCustomFrameRate(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeLevelSequenceFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLevelSequenceFactoryNode")
+	}
+	static class UInterchangeLevelSequenceFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeLevelSequenceFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeLevelSequenceFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeBaseLightFactoryNode
+// 0x0040 (0x0328 - 0x02E8)
+class UInterchangeBaseLightFactoryNode : public UInterchangeActorFactoryNode
+{
+public:
+	uint8                                         Pad_2E8[0x40];                                     // 0x02E8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomIntensity(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomLightColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomTemperature(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseTemperature(bool AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomIntensity(float* AttributeValue) const;
+	bool GetCustomLightColor(struct FColor* AttributeValue) const;
+	bool GetCustomTemperature(float* AttributeValue) const;
+	bool GetCustomUseTemperature(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeBaseLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseLightFactoryNode")
+	}
+	static class UInterchangeBaseLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeBaseLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeBaseLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeDirectionalLightFactoryNode
+// 0x0010 (0x0338 - 0x0328)
+class UInterchangeDirectionalLightFactoryNode final : public UInterchangeBaseLightFactoryNode
+{
+public:
+	uint8                                         Pad_328[0x10];                                     // 0x0328(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomLightSourceAngle(float AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomLightSourceAngle(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeDirectionalLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDirectionalLightFactoryNode")
+	}
+	static class UInterchangeDirectionalLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeDirectionalLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeDirectionalLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeLightFactoryNode
+// 0x0060 (0x0388 - 0x0328)
+class UInterchangeLightFactoryNode : public UInterchangeBaseLightFactoryNode
+{
+public:
+	uint8                                         Pad_328[0x60];                                     // 0x0328(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomAttenuationRadius(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomIESBrightnessScale(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomIESTexture(const class FString& AttributeValue);
+	bool SetCustomIntensityUnits(ELightUnits AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRotation(const struct FRotator& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseIESBrightness(const bool& AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomAttenuationRadius(float* AttributeValue) const;
+	bool GetCustomIESBrightnessScale(float* AttributeValue) const;
+	bool GetCustomIESTexture(class FString* AttributeValue) const;
+	bool GetCustomIntensityUnits(ELightUnits* AttributeValue) const;
+	bool GetCustomRotation(struct FRotator* AttributeValue) const;
+	bool GetCustomUseIESBrightness(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLightFactoryNode")
+	}
+	static class UInterchangeLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeRectLightFactoryNode
+// 0x0020 (0x03A8 - 0x0388)
+class UInterchangeRectLightFactoryNode final : public UInterchangeLightFactoryNode
+{
+public:
+	uint8                                         Pad_388[0x20];                                     // 0x0388(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomSourceHeight(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSourceWidth(float AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomSourceHeight(float* AttributeValue) const;
+	bool GetCustomSourceWidth(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeRectLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeRectLightFactoryNode")
+	}
+	static class UInterchangeRectLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeRectLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeRectLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangePointLightFactoryNode
+// 0x0030 (0x03B8 - 0x0388)
+class UInterchangePointLightFactoryNode : public UInterchangeLightFactoryNode
+{
+public:
+	uint8                                         Pad_388[0x30];                                     // 0x0388(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomLightFalloffExponent(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSourceRadius(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseInverseSquaredFalloff(bool AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomLightFalloffExponent(float* AttributeValue) const;
+	bool GetCustomSourceRadius(float* AttributeValue) const;
+	bool GetCustomUseInverseSquaredFalloff(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangePointLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePointLightFactoryNode")
+	}
+	static class UInterchangePointLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangePointLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangePointLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSpotLightFactoryNode
+// 0x0020 (0x03D8 - 0x03B8)
+class UInterchangeSpotLightFactoryNode final : public UInterchangePointLightFactoryNode
+{
+public:
+	uint8                                         Pad_3B8[0x20];                                     // 0x03B8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomInnerConeAngle(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomOuterConeAngle(float AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomInnerConeAngle(float* AttributeValue) const;
+	bool GetCustomOuterConeAngle(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSpotLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpotLightFactoryNode")
+	}
+	static class UInterchangeSpotLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSpotLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSpotLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSkyLightFactoryNode
+// 0x0020 (0x0348 - 0x0328)
+class UInterchangeSkyLightFactoryNode final : public UInterchangeBaseLightFactoryNode
+{
+public:
+	uint8                                         Pad_328[0x20];                                     // 0x0328(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomCubemapDependency(const class FString& TextureCubeFactoryNodeUid);
+	bool SetCustomSourceType(EInterchangeSkyLightSourceType SourceType);
+
+	bool GetCustomCubemapDependency(class FString* TextureCubeFactoryNodeUid) const;
+	bool GetCustomSourceType(EInterchangeSkyLightSourceType* SourceType) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSkyLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSkyLightFactoryNode")
+	}
+	static class UInterchangeSkyLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSkyLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSkyLightFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMaterialFactoryNode
-// 0x0070 (0x01D0 - 0x0160)
+// 0x0090 (0x02C8 - 0x0238)
 class UInterchangeMaterialFactoryNode final : public UInterchangeBaseMaterialFactoryNode
 {
 public:
-	uint8                                         Pad_160[0x70];                                     // 0x0160(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x90];                                     // 0x0238(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool ConnectOutputToAnisotropy(const class FString& ExpressionNodeUid, const class FString& OutputName);
@@ -986,6 +1398,8 @@ public:
 	bool ConnectToTangent(const class FString& ExpressionNodeUid);
 	bool ConnectToTransmissionColor(const class FString& AttributeValue);
 	bool SetCustomBlendMode(const EBlendMode& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDisplacementCenter(float AttributeValue);
+	bool SetCustomDisplacementMagnitude(float AttributeValue);
 	bool SetCustomOpacityMaskClipValue(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomRefractionMethod(const ERefractionMode& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomScreenSpaceReflections(const bool& AttributeValue);
@@ -1000,6 +1414,8 @@ public:
 	bool GetClearCoatRoughnessConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetClothConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetCustomBlendMode(EBlendMode* AttributeValue) const;
+	bool GetCustomDisplacementCenter(float* AttributeValue) const;
+	bool GetCustomDisplacementMagnitude(float* AttributeValue) const;
 	bool GetCustomOpacityMaskClipValue(float* AttributeValue) const;
 	bool GetCustomRefractionMethod(ERefractionMode* AttributeValue) const;
 	bool GetCustomScreenSpaceReflections(bool* AttributeValue) const;
@@ -1011,7 +1427,6 @@ public:
 	bool GetFuzzColorConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetMetallicConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetNormalConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
-	class UClass* GetObjectClass() const;
 	bool GetOcclusionConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetOpacityConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
 	bool GetRefractionConnection(class FString* ExpressionNodeUid, class FString* OutputName) const;
@@ -1036,13 +1451,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMaterialFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMaterialExpressionFactoryNode
-// 0x0010 (0x0160 - 0x0150)
+// 0x0010 (0x0238 - 0x0228)
 class UInterchangeMaterialExpressionFactoryNode : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x10];                                     // 0x0150(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x10];                                     // 0x0228(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomExpressionClassName(const class FString& AttributeValue);
@@ -1063,20 +1479,27 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialExpressionFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMaterialExpressionFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMaterialInstanceFactoryNode
-// 0x0020 (0x0180 - 0x0160)
+// 0x0050 (0x0288 - 0x0238)
 class UInterchangeMaterialInstanceFactoryNode final : public UInterchangeBaseMaterialFactoryNode
 {
 public:
-	uint8                                         Pad_160[0x20];                                     // 0x0160(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x50];                                     // 0x0238(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	bool SetCustomBlendMode(EBlendMode AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomEnableTessellation(bool AttributeValue);
 	bool SetCustomInstanceClassName(const class FString& AttributeValue);
 	bool SetCustomParent(const class FString& AttributeValue);
+	bool SetCustomTwoSided(bool AttributeValue);
 
+	bool GetCustomBlendMode(EBlendMode* AttributeValue) const;
+	bool GetCustomEnableTessellation(bool* AttributeValue) const;
 	bool GetCustomInstanceClassName(class FString* AttributeValue) const;
 	bool GetCustomParent(class FString* AttributeValue) const;
+	bool GetCustomTwoSided(bool* AttributeValue) const;
 
 public:
 	static class UClass* StaticClass()
@@ -1092,13 +1515,34 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialInstanceFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMaterialInstanceFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeMaterialReferenceFactoryNode
+// 0x0000 (0x0238 - 0x0238)
+class UInterchangeMaterialReferenceFactoryNode final : public UInterchangeBaseMaterialFactoryNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeMaterialReferenceFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeMaterialReferenceFactoryNode")
+	}
+	static class UInterchangeMaterialReferenceFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeMaterialReferenceFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeMaterialReferenceFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMaterialFunctionCallExpressionFactoryNode
-// 0x0010 (0x0170 - 0x0160)
+// 0x0010 (0x0248 - 0x0238)
 class UInterchangeMaterialFunctionCallExpressionFactoryNode final : public UInterchangeMaterialExpressionFactoryNode
 {
 public:
-	uint8                                         Pad_160[0x10];                                     // 0x0160(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x10];                                     // 0x0238(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomMaterialFunctionDependency(const class FString& AttributeValue);
@@ -1119,14 +1563,14 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialFunctionCallExpressionFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMaterialFunctionCallExpressionFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMaterialFunctionFactoryNode
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0238 - 0x0238)
 class UInterchangeMaterialFunctionFactoryNode final : public UInterchangeBaseMaterialFactoryNode
 {
 public:
 	bool GetInputConnection(const class FString& InputName, class FString* ExpressionNodeUid, class FString* OutputName) const;
-	class UClass* GetObjectClass() const;
 
 public:
 	static class UClass* StaticClass()
@@ -1142,22 +1586,25 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialFunctionFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMaterialFunctionFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeMeshActorFactoryNode
-// 0x0098 (0x0268 - 0x01D0)
+// 0x00A8 (0x0390 - 0x02E8)
 class UInterchangeMeshActorFactoryNode final : public UInterchangeActorFactoryNode
 {
 public:
-	uint8                                         Pad_1D0[0x98];                                     // 0x01D0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E8[0xA8];                                     // 0x02E8(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
 	bool SetCustomAnimationAssetUidToPlay(const class FString& AttributeValue);
 	bool SetCustomGeometricTransform(const struct FTransform& AttributeValue);
+	bool SetCustomInstancedAssetFactoryNodeUid(const class FString& AttributeValue);
 	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
 
 	bool GetCustomAnimationAssetUidToPlay(class FString* AttributeValue) const;
 	bool GetCustomGeometricTransform(struct FTransform* AttributeValue) const;
+	bool GetCustomInstancedAssetFactoryNodeUid(class FString* AttributeValue) const;
 	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
 	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
 
@@ -1175,69 +1622,43 @@ public:
 		return GetDefaultObjImpl<UInterchangeMeshActorFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMeshActorFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
-// 0x0180 (0x02D0 - 0x0150)
-class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
+// Class InterchangeFactoryNodes.InterchangeInstancedStaticMeshComponentFactoryNode
+// 0x0040 (0x02A8 - 0x0268)
+class UInterchangeInstancedStaticMeshComponentFactoryNode final : public UInterchangeSceneComponentFactoryNode
 {
 public:
-	uint8                                         Pad_150[0x180];                                    // 0x0150(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_268[0x40];                                     // 0x0268(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
-	bool ResetSlotMaterialDependencies();
-	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
-	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
-	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
-	bool SetCustomVertexColorReplace(const bool& AttributeValue);
-	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
+	void AddInstanceTransform(const struct FTransform& InstanceTransform);
+	void AddInstanceTransforms(const TArray<struct FTransform>& InInstanceTransforms);
+	bool SetCustomHierarchicalISM(const bool& AttributeValue);
+	bool SetCustomInstancedAssetUid(const class FString& AttributeValue);
 
-	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
-	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
-	bool GetCustomLODGroup(class FName* AttributeValue) const;
-	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
-	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
-	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
-	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
-	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
-	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
-	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
-	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
-	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
-	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
-	int32 GetLodDataCount() const;
-	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
-	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
-	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
+	bool GetCustomHierarchicalISM(bool* AttributeValue) const;
+	bool GetCustomInstancedAssetUid(class FString* AttributeValue) const;
+	void GetInstanceTransforms(TArray<struct FTransform>* OutInstanceTransforms) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
+		STATIC_CLASS_IMPL("InterchangeInstancedStaticMeshComponentFactoryNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
+		STATIC_NAME_IMPL(L"InterchangeInstancedStaticMeshComponentFactoryNode")
 	}
-	static class UInterchangeMeshFactoryNode* GetDefaultObj()
+	static class UInterchangeInstancedStaticMeshComponentFactoryNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
+		return GetDefaultObjImpl<UInterchangeInstancedStaticMeshComponentFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeInstancedStaticMeshComponentFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSceneImportAssetFactoryNode
-// 0x0000 (0x0150 - 0x0150)
+// 0x0000 (0x0228 - 0x0228)
 class UInterchangeSceneImportAssetFactoryNode final : public UInterchangeFactoryBaseNode
 {
 public:
@@ -1254,16 +1675,49 @@ public:
 		return GetDefaultObjImpl<UInterchangeSceneImportAssetFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeSceneImportAssetFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSceneVariantSetsFactoryNode
+// 0x0020 (0x0248 - 0x0228)
+class UInterchangeSceneVariantSetsFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x20];                                     // 0x0228(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddCustomVariantSetUid(const class FString& VariantUid);
+	bool RemoveCustomVariantSetUid(const class FString& VariantUid);
+
+	void GetCustomVariantSetUid(const int32 Index_0, class FString* OutVariantUid) const;
+	int32 GetCustomVariantSetUidCount() const;
+	void GetCustomVariantSetUids(TArray<class FString>* OutVariantUids) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSceneVariantSetsFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSceneVariantSetsFactoryNode")
+	}
+	static class UInterchangeSceneVariantSetsFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSceneVariantSetsFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSceneVariantSetsFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSkeletalMeshFactoryNode
-// 0x00E8 (0x03B8 - 0x02D0)
+// 0x00F8 (0x0528 - 0x0430)
 class UInterchangeSkeletalMeshFactoryNode final : public UInterchangeMeshFactoryNode
 {
 public:
-	uint8                                         Pad_2D0[0xE8];                                     // 0x02D0(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430[0xF8];                                     // 0x0430(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeSkeletalMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass);
+	void InitializeSkeletalMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
+	bool SetCustomAddCurveMetadataToSkeleton(const bool& AttributeValue);
 	bool SetCustomBoneInfluenceLimit(const int32& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomCreatePhysicsAsset(const bool& AttributeValue);
 	bool SetCustomImportContentType(const EInterchangeSkeletalMeshContentType& AttributeValue);
@@ -1278,6 +1732,7 @@ public:
 	bool SetCustomThresholdUV(const float& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomUseHighPrecisionSkinWeights(const bool& AttributeValue, bool bAddApplyDelegate);
 
+	bool GetCustomAddCurveMetadataToSkeleton(bool* AttributeValue) const;
 	bool GetCustomBoneInfluenceLimit(int32* AttributeValue) const;
 	bool GetCustomCreatePhysicsAsset(bool* AttributeValue) const;
 	bool GetCustomImportContentType(EInterchangeSkeletalMeshContentType* AttributeValue) const;
@@ -1291,7 +1746,6 @@ public:
 	bool GetCustomThresholdTangentNormal(float* AttributeValue) const;
 	bool GetCustomThresholdUV(float* AttributeValue) const;
 	bool GetCustomUseHighPrecisionSkinWeights(bool* AttributeValue) const;
-	class UClass* GetObjectClass() const;
 
 public:
 	static class UClass* StaticClass()
@@ -1307,22 +1761,25 @@ public:
 		return GetDefaultObjImpl<UInterchangeSkeletalMeshFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeSkeletalMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeSkeletalMeshLodDataNode
-// 0x0030 (0x0180 - 0x0150)
+// 0x0030 (0x0258 - 0x0228)
 class UInterchangeSkeletalMeshLodDataNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0x30];                                     // 0x0150(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x30];                                     // 0x0228(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool AddMeshUid(const class FString& MeshName);
+	bool AddLODMeshData(const struct FInterchangeLODMeshData& LODMeshData);
+	bool AddMeshUid(const class FString& MeshUid);
 	bool RemoveAllMeshes();
-	bool RemoveMeshUid(const class FString& MeshName);
+	void RemoveMeshUid(const class FString& MeshUid);
 	bool SetCustomSkeletonUid(const class FString& AttributeValue);
 
 	bool GetCustomSkeletonUid(class FString* AttributeValue) const;
-	void GetMeshUids(TArray<class FString>* OutMeshNames) const;
+	void GetLODMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutLODMeshDataArray) const;
+	void GetMeshUids(TArray<class FString>* OutMeshUids) const;
 	int32 GetMeshUidsCount() const;
 
 public:
@@ -1339,18 +1796,97 @@ public:
 		return GetDefaultObjImpl<UInterchangeSkeletalMeshLodDataNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeSkeletalMeshLodDataNode;
+
+// Class InterchangeFactoryNodes.InterchangeSparseVolumeTextureFactoryNode
+// 0x00B0 (0x02D8 - 0x0228)
+class UInterchangeSparseVolumeTextureFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0xB0];                                     // 0x0228(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomAnimationID(const class FString& InAnimationID);
+	bool SetCustomAttributesAChannelW(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesAChannelX(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesAChannelY(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesAChannelZ(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesAFormat(EInterchangeSparseVolumeTextureFormat Format);
+	bool SetCustomAttributesBChannelW(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesBChannelX(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesBChannelY(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesBChannelZ(const class FString& GridNameAndComponentIndex);
+	bool SetCustomAttributesBFormat(EInterchangeSparseVolumeTextureFormat Format);
+
+	bool GetCustomAnimationID(class FString* OutAnimationID) const;
+	bool GetCustomAttributesAChannelW(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesAChannelX(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesAChannelY(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesAChannelZ(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesAFormat(EInterchangeSparseVolumeTextureFormat* Format) const;
+	bool GetCustomAttributesBChannelW(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesBChannelX(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesBChannelY(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesBChannelZ(class FString* GridNameAndComponentIndex) const;
+	bool GetCustomAttributesBFormat(EInterchangeSparseVolumeTextureFormat* Format) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSparseVolumeTextureFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSparseVolumeTextureFactoryNode")
+	}
+	static class UInterchangeSparseVolumeTextureFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSparseVolumeTextureFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSparseVolumeTextureFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode
+// 0x0020 (0x0248 - 0x0228)
+class UInterchangeSpecularProfileFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_228[0x20];                                     // 0x0228(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomFormat(ESpecularProfileFormat Format);
+	bool SetCustomTexture(const class FString& TextureUid);
+
+	bool GetCustomFormat(ESpecularProfileFormat* Format) const;
+	bool GetCustomTexture(class FString* TextureUid) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSpecularProfileFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpecularProfileFactoryNode")
+	}
+	static class UInterchangeSpecularProfileFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSpecularProfileFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSpecularProfileFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode
-// 0x0118 (0x03E8 - 0x02D0)
+// 0x0288 (0x06B8 - 0x0430)
 class UInterchangeStaticMeshFactoryNode final : public UInterchangeMeshFactoryNode
 {
 public:
-	uint8                                         Pad_2D0[0x118];                                    // 0x02D0(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430[0x288];                                    // 0x0430(0x0288)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddSocketUid(const class FString& SocketUid);
 	bool AddSocketUids(const TArray<class FString>& InSocketUids);
-	void InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass);
+	void InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool RemoveSocketUd(const class FString& SocketUid);
 	bool SetCustomAutoComputeLODScreenSizes(const bool& AttributeValue);
 	bool SetCustomBuildNanite(const bool& AttributeValue, bool bAddApplyDelegate);
@@ -1362,7 +1898,30 @@ public:
 	bool SetCustomGenerateLightmapUVs(const bool& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomMaxLumenMeshCards(const int32& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomMinLightmapResolution(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteBoneWeightPrecision(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteDisplacementUVChannel(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteExplicitTangents(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteFallbackPercentTriangles(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteFallbackRelativeError(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteFallbackTarget(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteGenerateFallback(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteKeepPercentTriangles(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteLerpUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteMaxEdgeLengthFactor(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteNormalPrecision(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteNumRays(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNanitePositionPrecision(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteRayBackUp(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteSeparable(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteShapePreservation(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteTangentPrecision(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteTargetMinimumResidencyInKB(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteTrimRelativeError(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteVoxelLevel(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteVoxelNDF(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomNaniteVoxelOpacity(const bool& AttributeValue, bool bAddApplyDelegate);
 	bool SetCustomSrcLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSubstituteUID(const class FString& AttributeValue);
 	bool SetCustomSupportFaceRemap(const bool& AttributeValue, bool bAddApplyDelegate);
 	bool SetLODScreenSizes(const TArray<float>& InLODScreenSizes);
 
@@ -1376,11 +1935,33 @@ public:
 	bool GetCustomGenerateLightmapUVs(bool* AttributeValue) const;
 	bool GetCustomMaxLumenMeshCards(int32* AttributeValue) const;
 	bool GetCustomMinLightmapResolution(int32* AttributeValue) const;
+	bool GetCustomNaniteBoneWeightPrecision(int32* AttributeValue) const;
+	bool GetCustomNaniteDisplacementUVChannel(int32* AttributeValue) const;
+	bool GetCustomNaniteExplicitTangents(bool* AttributeValue) const;
+	bool GetCustomNaniteFallbackPercentTriangles(float* AttributeValue) const;
+	bool GetCustomNaniteFallbackRelativeError(float* AttributeValue) const;
+	bool GetCustomNaniteFallbackTarget(int32* AttributeValue) const;
+	bool GetCustomNaniteGenerateFallback(int32* AttributeValue) const;
+	bool GetCustomNaniteKeepPercentTriangles(float* AttributeValue) const;
+	bool GetCustomNaniteLerpUVs(bool* AttributeValue) const;
+	bool GetCustomNaniteMaxEdgeLengthFactor(float* AttributeValue) const;
+	bool GetCustomNaniteNormalPrecision(int32* AttributeValue) const;
+	bool GetCustomNaniteNumRays(int32* AttributeValue) const;
+	bool GetCustomNanitePositionPrecision(int32* AttributeValue) const;
+	bool GetCustomNaniteRayBackUp(float* AttributeValue) const;
+	bool GetCustomNaniteSeparable(bool* AttributeValue) const;
+	bool GetCustomNaniteShapePreservation(int32* AttributeValue) const;
+	bool GetCustomNaniteTangentPrecision(int32* AttributeValue) const;
+	bool GetCustomNaniteTargetMinimumResidencyInKB(int32* AttributeValue) const;
+	bool GetCustomNaniteTrimRelativeError(float* AttributeValue) const;
+	bool GetCustomNaniteVoxelLevel(int32* AttributeValue) const;
+	bool GetCustomNaniteVoxelNDF(bool* AttributeValue) const;
+	bool GetCustomNaniteVoxelOpacity(bool* AttributeValue) const;
 	bool GetCustomSrcLightmapIndex(int32* AttributeValue) const;
+	bool GetCustomSubstituteUID(class FString* AttributeValue) const;
 	bool GetCustomSupportFaceRemap(bool* AttributeValue) const;
 	int32 GetLODScreenSizeCount() const;
 	void GetLODScreenSizes(TArray<float>* OutLODScreenSizes) const;
-	class UClass* GetObjectClass() const;
 	int32 GetSocketUidCount() const;
 	void GetSocketUids(TArray<class FString>* OutSocketUids) const;
 
@@ -1398,47 +1979,82 @@ public:
 		return GetDefaultObjImpl<UInterchangeStaticMeshFactoryNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeStaticMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeStaticMeshLodDataNode
-// 0x00D0 (0x0220 - 0x0150)
+// 0x02F0 (0x0518 - 0x0228)
 class UInterchangeStaticMeshLodDataNode final : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_150[0xD0];                                     // 0x0150(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x2F0];                                    // 0x0228(0x02F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool AddBoxCollisionMeshUid(const class FString& MeshName);
-	bool AddCapsuleCollisionMeshUid(const class FString& MeshName);
-	bool AddConvexCollisionMeshUid(const class FString& MeshName);
+	bool AddBoxCollisionMeshData(const struct FInterchangeLODMeshData& MeshData);
+	bool AddBoxCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool AddBoxCollisionMeshUids(const class FString& ColliderMeshUid, const class FString& RenderMeshUid);
+	bool AddCapsuleCollisionMeshData(const struct FInterchangeLODMeshData& MeshData);
+	bool AddCapsuleCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool AddCapsuleCollisionMeshUids(const class FString& ColliderMeshUid, const class FString& RenderMeshUid);
+	bool AddConvexCollisionMeshData(const struct FInterchangeLODMeshData& MeshData);
+	bool AddConvexCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool AddConvexCollisionMeshUids(const class FString& ColliderMeshUid, const class FString& RenderMeshUid);
+	bool AddLODMeshData(const struct FInterchangeLODMeshData& LODMeshData);
 	bool AddMeshUid(const class FString& MeshName);
-	bool AddSphereCollisionMeshUid(const class FString& MeshName);
+	bool AddSphereCollisionMeshData(const struct FInterchangeLODMeshData& MeshData);
+	bool AddSphereCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool AddSphereCollisionMeshUids(const class FString& ColliderMeshUid, const class FString& RenderMeshUid);
+	bool RemoveAllBoxCollisionMeshData();
 	bool RemoveAllBoxCollisionMeshes();
+	bool RemoveAllCapsuleCollisionMeshData();
 	bool RemoveAllCapsuleCollisionMeshes();
+	bool RemoveAllConvexCollisionMeshData();
 	bool RemoveAllConvexCollisionMeshes();
+	bool RemoveAllLODMeshData();
 	bool RemoveAllMeshes();
+	bool RemoveAllSphereCollisionMeshData();
 	bool RemoveAllSphereCollisionMeshes();
-	bool RemoveBoxCollisionMeshUid(const class FString& MeshName);
-	bool RemoveCapsuleCollisionMeshUid(const class FString& MeshName);
+	bool RemoveBoxCollisionMeshData(const class FString& MeshUid);
+	bool RemoveBoxCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool RemoveCapsuleCollisionMeshData(const class FString& MeshUid);
+	bool RemoveCapsuleCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool RemoveConvexCollisionMeshData(const class FString& MeshUid);
 	bool RemoveConvexCollisionMeshUid(const class FString& MeshName);
-	bool RemoveMeshUid(const class FString& MeshName);
-	bool RemoveSphereCollisionMeshUid(const class FString& MeshName);
+	void RemoveMeshUid(const class FString& MeshUid);
+	bool RemoveSphereCollisionMeshData(const class FString& MeshUid);
+	bool RemoveSphereCollisionMeshUid(const class FString& ColliderMeshUid);
+	bool SetForceCollisionPrimitiveGeneration(bool bGenerate);
 	bool SetImportCollision(bool AttributeValue);
 	bool SetImportCollisionType(EInterchangeMeshCollision AttributeValue);
 	bool SetOneConvexHullPerUCX(bool AttributeValue);
 
+	void GetBoxColliderRenderMeshUid(const class FString& InColliderMeshUid, class FString* OutRenderMeshUid) const;
+	TMap<class FString, class FString> GetBoxCollisionMeshMap() const;
 	void GetBoxCollisionMeshUids(TArray<class FString>* OutMeshNames) const;
 	int32 GetBoxCollisionMeshUidsCount() const;
+	void GetBoxCollisionsMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutMeshDataArray) const;
+	void GetCapsuleColliderRenderMeshUid(const class FString& InColliderMeshUid, class FString* OutRenderMeshUid) const;
+	TMap<class FString, class FString> GetCapsuleCollisionMeshMap() const;
 	void GetCapsuleCollisionMeshUids(TArray<class FString>* OutMeshNames) const;
 	int32 GetCapsuleCollisionMeshUidsCount() const;
+	void GetCapsuleCollisionsMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutMeshDataArray) const;
+	void GetConvexColliderRenderMeshUid(const class FString& InColliderMeshUid, class FString* OutRenderMeshUid) const;
+	TMap<class FString, class FString> GetConvexCollisionMeshMap() const;
 	void GetConvexCollisionMeshUids(TArray<class FString>* OutMeshNames) const;
 	int32 GetConvexCollisionMeshUidsCount() const;
+	void GetConvexCollisionsMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutMeshDataArray) const;
+	bool GetForceCollisionPrimitiveGeneration(bool* bGenerate) const;
 	bool GetImportCollision(bool* AttributeValue) const;
 	bool GetImportCollisionType(EInterchangeMeshCollision* AttributeValue) const;
+	void GetLODMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutLODMeshDataArray) const;
+	int32 GetLODMeshDataArrayCount() const;
 	void GetMeshUids(TArray<class FString>* OutMeshNames) const;
 	int32 GetMeshUidsCount() const;
 	bool GetOneConvexHullPerUCX(bool* AttributeValue) const;
+	void GetSphereColliderRenderMeshUid(const class FString& InColliderMeshUid, class FString* OutRenderMeshUid) const;
+	TMap<class FString, class FString> GetSphereCollisionMeshMap() const;
 	void GetSphereCollisionMeshUids(TArray<class FString>* OutMeshNames) const;
 	int32 GetSphereCollisionMeshUidsCount() const;
+	void GetSphereCollisionsMeshDataArray(TArray<struct FInterchangeLODMeshData>* OutMeshDataArray) const;
 
 public:
 	static class UClass* StaticClass()
@@ -1454,5 +2070,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeStaticMeshLodDataNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeStaticMeshLodDataNode;
 
 SDK_NAMESPACE_END

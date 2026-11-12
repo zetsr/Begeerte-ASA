@@ -10,16 +10,39 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "Engine_classes.hpp"
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeCore_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "InterchangeEngine_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class InterchangeEngine.InterchangeAnalyticsHandlerBase
+// 0x0038 (0x0060 - 0x0028)
+class UInterchangeAnalyticsHandlerBase : public UObject
+{
+public:
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeAnalyticsHandlerBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeAnalyticsHandlerBase")
+	}
+	static class UInterchangeAnalyticsHandlerBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeAnalyticsHandlerBase>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeAnalyticsHandlerBase;
 
 // Class InterchangeEngine.InterchangeBlueprintPipelineBase
 // 0x0000 (0x00A8 - 0x00A8)
@@ -39,6 +62,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeBlueprintPipelineBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeBlueprintPipelineBase;
 
 // Class InterchangeEngine.InterchangeEditorUtilitiesBase
 // 0x0000 (0x0028 - 0x0028)
@@ -58,14 +82,15 @@ public:
 		return GetDefaultObjImpl<UInterchangeEditorUtilitiesBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeEditorUtilitiesBase;
 
 // Class InterchangeEngine.InterchangeFilePickerBase
 // 0x0000 (0x0028 - 0x0028)
 class UInterchangeFilePickerBase final : public UObject
 {
 public:
-	bool ScriptedFilePickerForTranslatorAssetType(const EInterchangeTranslatorAssetType TranslatorAssetType, struct FInterchangeFilePickerParameters* Parameters, TArray<class FString>* OutFilenames);
-	bool ScriptedFilePickerForTranslatorType(const EInterchangeTranslatorType TranslatorType, struct FInterchangeFilePickerParameters* Parameters, TArray<class FString>* OutFilenames);
+	bool ScriptedFilePickerForTranslatorAssetType(const EInterchangeTranslatorAssetType TranslatorAssetType, const struct FInterchangeFilePickerParameters& Parameters, TArray<class FString>* OutFilenames);
+	bool ScriptedFilePickerForTranslatorType(const EInterchangeTranslatorType TranslatorType, const struct FInterchangeFilePickerParameters& Parameters, TArray<class FString>* OutFilenames);
 
 public:
 	static class UClass* StaticClass()
@@ -81,6 +106,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeFilePickerBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeFilePickerBase;
 
 // Class InterchangeEngine.InterchangePipelineConfigurationBase
 // 0x0000 (0x0028 - 0x0028)
@@ -88,8 +114,9 @@ class UInterchangePipelineConfigurationBase final : public UObject
 {
 public:
 	EInterchangePipelineConfigurationDialogResult ScriptedShowPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer);
-	EInterchangePipelineConfigurationDialogResult ScriptedShowReimportPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer, class UObject* ReimportAsset);
+	EInterchangePipelineConfigurationDialogResult ScriptedShowReimportPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer, class UObject* ReimportAsset, bool bSceneImport);
 	EInterchangePipelineConfigurationDialogResult ScriptedShowScenePipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer);
+	EInterchangePipelineConfigurationDialogResult ScriptedShowTestPlanConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer, class UObject* ReimportAsset, bool bSceneImport, bool bReimport);
 
 public:
 	static class UClass* StaticClass()
@@ -105,135 +132,10 @@ public:
 		return GetDefaultObjImpl<UInterchangePipelineConfigurationBase>();
 	}
 };
-
-// Class InterchangeEngine.InterchangeProjectSettings
-// 0x0238 (0x0270 - 0x0038)
-class UInterchangeProjectSettings final : public UDeveloperSettings
-{
-public:
-	struct FInterchangeContentImportSettings      ContentImportSettings;                             // 0x0038(0x0128)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FInterchangeImportSettings             SceneImportSettings;                               // 0x0160(0x0088)(Edit, Config, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   FilePickerClass;                                   // 0x01E8(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStaticMeshUseSmoothEdgesIfSmoothingInformationIsMissing; // 0x0210(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   GenericPipelineClass;                              // 0x0218(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ConverterDefaultPipeline;                          // 0x0240(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FInterchangeGroup>              InterchangeGroups;                                 // 0x0260(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeProjectSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeProjectSettings")
-	}
-	static class UInterchangeProjectSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeProjectSettings>();
-	}
-};
-
-// Class InterchangeEngine.InterchangeEditorSettings
-// 0x0020 (0x0058 - 0x0038)
-class UInterchangeEditorSettings final : public UDeveloperSettings
-{
-public:
-	bool                                          bShowImportDialogAtReimport;                       // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   UsedGroupName;                                     // 0x003C(0x0008)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGuid                                  UsedGroupUID;                                      // 0x0044(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetUsedGroupName(const class FName& InUsedGroupName);
-
-	TArray<class FName> GetSelectableItems() const;
-	const class FName GetUsedGroupName() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeEditorSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeEditorSettings")
-	}
-	static class UInterchangeEditorSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeEditorSettings>();
-	}
-};
-
-// Class InterchangeEngine.InterchangePythonPipelineBase
-// 0x0000 (0x0148 - 0x0148)
-class UInterchangePythonPipelineBase final : public UInterchangePipelineBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangePythonPipelineBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangePythonPipelineBase")
-	}
-	static class UInterchangePythonPipelineBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangePythonPipelineBase>();
-	}
-};
-
-// Class InterchangeEngine.InterchangePythonPipelineAsset
-// 0x0040 (0x0068 - 0x0028)
-class UInterchangePythonPipelineAsset final : public UObject
-{
-public:
-	TSoftClassPtr<class UClass>                   PythonClass;                                       // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangePythonPipelineBase*         GeneratedPipeline;                                 // 0x0050(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class FString                                 JsonDefaultProperties;                             // 0x0058(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangePythonPipelineAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangePythonPipelineAsset")
-	}
-	static class UInterchangePythonPipelineAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangePythonPipelineAsset>();
-	}
-};
-
-// Class InterchangeEngine.InterchangeSceneImportAsset
-// 0x0008 (0x0030 - 0x0028)
-class UInterchangeSceneImportAsset final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeSceneImportAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeSceneImportAsset")
-	}
-	static class UInterchangeSceneImportAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeSceneImportAsset>();
-	}
-};
+DUMPER7_ASSERTS_UInterchangePipelineConfigurationBase;
 
 // Class InterchangeEngine.InterchangeAssetImportData
-// 0x00B0 (0x00D8 - 0x0028)
+// 0x00C0 (0x00E8 - 0x0028)
 class UInterchangeAssetImportData final : public UAssetImportData
 {
 public:
@@ -244,9 +146,11 @@ public:
 	class UInterchangeBaseNodeContainer*          TransientNodeContainer;                            // 0x0070(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	TArray<class UObject*>                        TransientPipelines;                                // 0x0078(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	class UInterchangeTranslatorSettings*         TransientTranslatorSettings;                       // 0x0088(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_90[0x48];                                      // 0x0090(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x58];                                      // 0x0090(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void SetPipelines(const TArray<class UObject*>& InPipelines);
+
 	class UInterchangeBaseNodeContainer* GetNodeContainer() const;
 	int32 GetNumberOfPipelines() const;
 	TArray<class UObject*> GetPipelines() const;
@@ -257,7 +161,6 @@ public:
 	TArray<class FString> ScriptExtractFilenames() const;
 	class FString ScriptGetFirstFilename() const;
 	void SetNodeContainer(class UInterchangeBaseNodeContainer* InNodeContainer) const;
-	void SetPipelines(const TArray<class UObject*>& InPipelines) const;
 	void SetTranslatorSettings(class UInterchangeTranslatorSettings* TranslatorSettings) const;
 
 public:
@@ -274,6 +177,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeAssetImportData>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeAssetImportData;
 
 // Class InterchangeEngine.InterchangeAssetImportDataConverterBase
 // 0x0000 (0x0028 - 0x0028)
@@ -293,6 +197,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeAssetImportDataConverterBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeAssetImportDataConverterBase;
 
 // Class InterchangeEngine.InterchangePipelineStackOverride
 // 0x0010 (0x0038 - 0x0028)
@@ -320,31 +225,46 @@ public:
 		return GetDefaultObjImpl<UInterchangePipelineStackOverride>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangePipelineStackOverride;
 
 // Class InterchangeEngine.InterchangeManager
-// 0x03A8 (0x03D0 - 0x0028)
+// 0x0418 (0x0440 - 0x0028)
 class alignas(0x10) UInterchangeManager final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x1E8];                                     // 0x0028(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<TSubclassOf<class UObject>>              RegisteredTranslatorsClass;                        // 0x0210(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TMap<TSubclassOf<class UObject>, TSubclassOf<class UObject>> RegisteredFactoryClasses;           // 0x0260(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TMap<TSubclassOf<class UObject>, class UInterchangeWriterBase*> RegisteredWriters;               // 0x02B0(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TMap<TSubclassOf<class UObject>, class UInterchangeAssetImportDataConverterBase*> RegisteredConverters; // 0x0300(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_350[0x80];                                     // 0x0350(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x250];                                     // 0x0028(0x0250)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<TSubclassOf<class UObject>>              RegisteredTranslatorsClass;                        // 0x0278(0x0050)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TMap<TSubclassOf<class UObject>, TSubclassOf<class UObject>> RegisteredFactoryClasses;           // 0x02C8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TMap<TSubclassOf<class UObject>, class UInterchangeWriterBase*> RegisteredWriters;               // 0x0318(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TMap<TSubclassOf<class UObject>, class UInterchangeAssetImportDataConverterBase*> RegisteredConverters; // 0x0368(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_3B8[0x80];                                     // 0x03B8(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UInterchangeSourceData* CreateSourceData(const class FString& InFilename);
 	static class UInterchangeManager* GetInterchangeManagerScripted();
 
+	void CancelAllTasks();
 	bool ExportAsset(const class UObject* Asset, bool bIsAutomated);
 	bool ExportScene(const class UObject* World, bool bIsAutomated);
 	bool ImportAsset(const class FString& ContentPath, const class UInterchangeSourceData* SourceData, const struct FImportAssetParameters& ImportAssetParameters, TArray<class UObject*>* OutImportedObjects);
 	bool ImportScene(const class FString& ContentPath, const class UInterchangeSourceData* SourceData, const struct FImportAssetParameters& ImportAssetParameters);
+	bool IsInterchangeActive();
+	bool ReimportAsset(class UObject* ObjectToReimport, const struct FImportAssetParameters& ImportAssetParameters, TArray<class UObject*>* OutImportedObjects);
 	bool ScriptedImportAssetAsync(const class FString& ContentPath, const class UInterchangeSourceData* SourceData, const struct FImportAssetParameters& ImportAssetParameters);
 	bool ScriptedImportSceneAsync(const class FString& ContentPath, const class UInterchangeSourceData* SourceData, const struct FImportAssetParameters& ImportAssetParameters);
+	bool ScriptedReimportAssetAsync(class UObject* ObjectToReimport, const struct FImportAssetParameters& ImportAssetParameters);
+	void WaitUntilAllTasksDone(bool bCancel);
+	bool WarnIfInterchangeIsActive();
 
+	bool CanReimport(const class UObject* Object, TArray<class FString>* OutFilenames) const;
+	bool CanTranslateSourceData(const class UInterchangeSourceData* SourceData, bool bSceneImportOnly) const;
+	class UInterchangeAssetImportData* GetAssetImportData(class UObject* Asset) const;
 	const class UClass* GetRegisteredFactoryClass(const class UClass* ClassToMake) const;
+	TArray<class FString> GetSupportedAssetTypeFormats(const EInterchangeTranslatorAssetType ForTranslatorAssetType, const EInterchangeTranslatorType ForTranslatorType, bool bStrictMatchTranslatorType) const;
+	TArray<class FString> GetSupportedFormats(const EInterchangeTranslatorType ForTranslatorType) const;
+	TArray<class FString> GetSupportedFormatsForObject(const class UObject* Object, int32 SourceFileIndex) const;
+	class UInterchangeTranslatorBase* GetTranslatorForSourceData(const class UInterchangeSourceData* SourceData) const;
+	bool IsObjectBeingImported(class UObject* Object) const;
 
 public:
 	static class UClass* StaticClass()
@@ -360,6 +280,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeManager>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeManager;
 
 // Class InterchangeEngine.InterchangeMeshUtilities
 // 0x0000 (0x0028 - 0x0028)
@@ -382,5 +303,167 @@ public:
 		return GetDefaultObjImpl<UInterchangeMeshUtilities>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeMeshUtilities;
+
+// Class InterchangeEngine.InterchangeProjectSettings
+// 0x0248 (0x0280 - 0x0038)
+class UInterchangeProjectSettings final : public UDeveloperSettings
+{
+public:
+	struct FInterchangeContentImportSettings      ContentImportSettings;                             // 0x0038(0x0128)(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+	struct FInterchangeSceneImportSettings        SceneImportSettings;                               // 0x0160(0x0098)(Edit, BlueprintVisible, Config, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   FilePickerClass;                                   // 0x01F8(0x0028)(Edit, BlueprintVisible, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStaticMeshUseSmoothEdgesIfSmoothingInformationIsMissing; // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   GenericPipelineClass;                              // 0x0228(0x0028)(Edit, BlueprintVisible, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ConverterDefaultPipeline;                          // 0x0250(0x0020)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FInterchangeGroup>              InterchangeGroups;                                 // 0x0270(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeProjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeProjectSettings")
+	}
+	static class UInterchangeProjectSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeProjectSettings>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeProjectSettings;
+
+// Class InterchangeEngine.InterchangeProjectSettingsScript
+// 0x0000 (0x0028 - 0x0028)
+class UInterchangeProjectSettingsScript final : public UObject
+{
+public:
+	static TArray<class UInterchangePipelineBase*> GetPipelineArrayFromPipelineStack(const struct FInterchangePipelineStack& InterchangePipelineStack);
+	static TArray<class UInterchangePipelineBase*> GetPipelineArrayFromTranslatorPipelines(const struct FInterchangeTranslatorPipelines& InterchangeTranslatorPipeline);
+	static TArray<class UInterchangePipelineBase*> GetPipelineStackFromSourceData(const bool bIsSceneImport, const class UInterchangeSourceData* SourceData);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeProjectSettingsScript")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeProjectSettingsScript")
+	}
+	static class UInterchangeProjectSettingsScript* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeProjectSettingsScript>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeProjectSettingsScript;
+
+// Class InterchangeEngine.InterchangeEditorSettings
+// 0x0020 (0x0058 - 0x0038)
+class UInterchangeEditorSettings final : public UDeveloperSettings
+{
+public:
+	bool                                          bShowImportDialogAtReimport;                       // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   UsedGroupName;                                     // 0x003C(0x0008)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  UsedGroupUID;                                      // 0x0044(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetUsedGroupName(const class FName& InUsedGroupName);
+
+	TArray<class FName> GetSelectableItems() const;
+	const class FName GetUsedGroupName() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeEditorSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeEditorSettings")
+	}
+	static class UInterchangeEditorSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeEditorSettings>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeEditorSettings;
+
+// Class InterchangeEngine.InterchangePythonPipelineBase
+// 0x0000 (0x0128 - 0x0128)
+class UInterchangePythonPipelineBase final : public UInterchangePipelineBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangePythonPipelineBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePythonPipelineBase")
+	}
+	static class UInterchangePythonPipelineBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangePythonPipelineBase>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangePythonPipelineBase;
+
+// Class InterchangeEngine.InterchangePythonPipelineAsset
+// 0x0040 (0x0068 - 0x0028)
+class UInterchangePythonPipelineAsset final : public UObject
+{
+public:
+	TSoftClassPtr<class UClass>                   PythonClass;                                       // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangePythonPipelineBase*         GeneratedPipeline;                                 // 0x0050(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class FString                                 JsonDefaultProperties;                             // 0x0058(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangePythonPipelineAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePythonPipelineAsset")
+	}
+	static class UInterchangePythonPipelineAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangePythonPipelineAsset>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangePythonPipelineAsset;
+
+// Class InterchangeEngine.InterchangeSceneImportAsset
+// 0x0008 (0x0030 - 0x0028)
+class UInterchangeSceneImportAsset final : public UObject, public IInterface_AssetUserData
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSceneImportAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSceneImportAsset")
+	}
+	static class UInterchangeSceneImportAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSceneImportAsset>();
+	}
+
+public:
+	bool AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	class UAssetUserData* GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	bool HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	void RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+};
+DUMPER7_ASSERTS_UInterchangeSceneImportAsset;
 
 SDK_NAMESPACE_END

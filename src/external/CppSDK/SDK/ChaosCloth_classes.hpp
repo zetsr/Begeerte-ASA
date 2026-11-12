@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "ChaosCloth_structs.hpp"
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
-#include "ChaosCloth_structs.hpp"
+#include "Chaos_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ChaosCloth.ChaosClothConfig
-// 0x0120 (0x0148 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class UChaosClothConfig final : public UClothConfigCommon
 {
 public:
@@ -79,13 +80,29 @@ public:
 	struct FChaosClothWeightedValue               Pressure;                                          // 0x0108(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FChaosClothWeightedValue               AnimDriveStiffness;                                // 0x0110(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FChaosClothWeightedValue               AnimDriveDamping;                                  // 0x0118(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LinearVelocityScale;                               // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularVelocityScale;                              // 0x0138(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FictitiousAngularScale;                            // 0x013C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseTetrahedralConstraints;                        // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseThinShellVolumeConstraints;                    // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseContinuousCollisionDetection;                  // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_143[0x5];                                      // 0x0143(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EChaosSoftsSimulationSpace                    VelocityScaleSpace;                                // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LinearVelocityScale;                               // 0x0128(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLinearVelocityClamping;                     // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector3f                              MaxLinearVelocity;                                 // 0x0144(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLinearAccelerationClamping;                 // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector3f                              MaxLinearAcceleration;                             // 0x0154(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularVelocityScale;                              // 0x0160(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAngularVelocityClamping;                    // 0x0164(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxAngularVelocity;                                // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAngularAccelerationClamping;                // 0x016C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxAngularAcceleration;                            // 0x0170(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EChaosClothingSimulationSolverFictitiousForcesModel FictitiousForcesModel;                       // 0x0174(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FictitiousAngularScale;                            // 0x0178(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseTetrahedralConstraints;                        // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseThinShellVolumeConstraints;                    // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseContinuousCollisionDetection;                  // 0x017E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17F[0x1];                                      // 0x017F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -101,6 +118,7 @@ public:
 		return GetDefaultObjImpl<UChaosClothConfig>();
 	}
 };
+DUMPER7_ASSERTS_UChaosClothConfig;
 
 // Class ChaosCloth.ChaosClothSharedSimConfig
 // 0x0010 (0x0038 - 0x0028)
@@ -128,6 +146,7 @@ public:
 		return GetDefaultObjImpl<UChaosClothSharedSimConfig>();
 	}
 };
+DUMPER7_ASSERTS_UChaosClothSharedSimConfig;
 
 // Class ChaosCloth.ChaosClothingSimulationFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -147,6 +166,7 @@ public:
 		return GetDefaultObjImpl<UChaosClothingSimulationFactory>();
 	}
 };
+DUMPER7_ASSERTS_UChaosClothingSimulationFactory;
 
 // Class ChaosCloth.ChaosClothingInteractor
 // 0x0020 (0x0050 - 0x0030)
@@ -170,6 +190,7 @@ public:
 	void SetMaterialBuckling(const struct FVector2D& BucklingRatio, const struct FVector2D& BucklingStiffness);
 	void SetMaterialLinear(float EdgeStiffness, float BendingStiffness, float AreaStiffness);
 	void SetPressure(const struct FVector2D& Pressure);
+	void SetVelocityClamps(bool bEnableLinearVelocityClamping, const struct FVector& MaxLinearVelocity, bool bEnableLinearAccelerationClamping, const struct FVector& MaxLinearAcceleration, bool bEnableAngularVelocityClamping, float MaxAngularVelocity, bool bEnableAngularAccelerationClamping, float MaxAngularAcceleration);
 	void SetVelocityScale(const struct FVector& LinearVelocityScale, float AngularVelocityScale, float FictitiousAngularScale);
 	void SetWind(const struct FVector2D& Drag, const struct FVector2D& Lift, float AirDensity, const struct FVector& WindVelocity, const struct FVector2D& OuterDrag, const struct FVector2D& OuterLift);
 
@@ -187,6 +208,7 @@ public:
 		return GetDefaultObjImpl<UChaosClothingInteractor>();
 	}
 };
+DUMPER7_ASSERTS_UChaosClothingInteractor;
 
 // Class ChaosCloth.ChaosClothingSimulationInteractor
 // 0x0020 (0x00B0 - 0x0090)
@@ -209,5 +231,6 @@ public:
 		return GetDefaultObjImpl<UChaosClothingSimulationInteractor>();
 	}
 };
+DUMPER7_ASSERTS_UChaosClothingSimulationInteractor;
 
 SDK_NAMESPACE_END

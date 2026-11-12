@@ -12,40 +12,53 @@
 
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_classes.hpp"
+#include "MassEQS_structs.hpp"
 #include "MassEntity_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MassEQS_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class MassEQS.EnvQueryItemType_MassEntityHandle
-// 0x0000 (0x0030 - 0x0030)
-class UEnvQueryItemType_MassEntityHandle final : public UEnvQueryItemType_VectorBase
+// Class MassEQS.MassEQSRequestInterface
+// 0x0008 (0x0008 - 0x0000)
+class IMassEQSRequestInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("EnvQueryItemType_MassEntityHandle")
+		STATIC_CLASS_IMPL("MassEQSRequestInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"EnvQueryItemType_MassEntityHandle")
+		STATIC_NAME_IMPL(L"MassEQSRequestInterface")
 	}
-	static class UEnvQueryItemType_MassEntityHandle* GetDefaultObj()
+	static class IMassEQSRequestInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UEnvQueryItemType_MassEntityHandle>();
+		return GetDefaultObjImpl<IMassEQSRequestInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IMassEQSRequestInterface;
 
 // Class MassEQS.MassEnvQueryGenerator
 // 0x0028 (0x0078 - 0x0050)
-class UMassEnvQueryGenerator : public UEnvQueryGenerator
+class UMassEnvQueryGenerator : public UEnvQueryGenerator, public IMassEQSRequestInterface
 {
 public:
-	uint8                                         Pad_50[0x28];                                      // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58[0x20];                                      // 0x0058(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -61,50 +74,7 @@ public:
 		return GetDefaultObjImpl<UMassEnvQueryGenerator>();
 	}
 };
-
-// Class MassEQS.MassEnvQueryProcessorBase
-// 0x0010 (0x00C0 - 0x00B0)
-class UMassEnvQueryProcessorBase : public UMassProcessor
-{
-public:
-	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassEnvQueryProcessorBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassEnvQueryProcessorBase")
-	}
-	static class UMassEnvQueryProcessorBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassEnvQueryProcessorBase>();
-	}
-};
-
-// Class MassEQS.MassEnvQueryGeneratorProcessor_MassEntityHandles
-// 0x0320 (0x03E0 - 0x00C0)
-class UMassEnvQueryGeneratorProcessor_MassEntityHandles final : public UMassEnvQueryProcessorBase
-{
-public:
-	uint8                                         Pad_C0[0x320];                                     // 0x00C0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassEnvQueryGeneratorProcessor_MassEntityHandles")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassEnvQueryGeneratorProcessor_MassEntityHandles")
-	}
-	static class UMassEnvQueryGeneratorProcessor_MassEntityHandles* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassEnvQueryGeneratorProcessor_MassEntityHandles>();
-	}
-};
+DUMPER7_ASSERTS_UMassEnvQueryGenerator;
 
 // Class MassEQS.MassEnvQueryGenerator_MassEntityHandles
 // 0x0040 (0x00B8 - 0x0078)
@@ -128,74 +98,27 @@ public:
 		return GetDefaultObjImpl<UMassEnvQueryGenerator_MassEntityHandles>();
 	}
 };
+DUMPER7_ASSERTS_UMassEnvQueryGenerator_MassEntityHandles;
 
-// Class MassEQS.MassEnvQueryTest
-// 0x0028 (0x0220 - 0x01F8)
-class UMassEnvQueryTest : public UEnvQueryTest
+// Class MassEQS.EnvQueryItemType_MassEntityHandle
+// 0x0000 (0x0030 - 0x0030)
+class UEnvQueryItemType_MassEntityHandle final : public UEnvQueryItemType_VectorBase
 {
-public:
-	uint8                                         Pad_1F8[0x28];                                     // 0x01F8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MassEnvQueryTest")
+		STATIC_CLASS_IMPL("EnvQueryItemType_MassEntityHandle")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MassEnvQueryTest")
+		STATIC_NAME_IMPL(L"EnvQueryItemType_MassEntityHandle")
 	}
-	static class UMassEnvQueryTest* GetDefaultObj()
+	static class UEnvQueryItemType_MassEntityHandle* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMassEnvQueryTest>();
+		return GetDefaultObjImpl<UEnvQueryItemType_MassEntityHandle>();
 	}
 };
-
-// Class MassEQS.MassEnvQueryTestProcessor_MassEntityTags
-// 0x0320 (0x03E0 - 0x00C0)
-class UMassEnvQueryTestProcessor_MassEntityTags final : public UMassEnvQueryProcessorBase
-{
-public:
-	uint8                                         Pad_C0[0x320];                                     // 0x00C0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassEnvQueryTestProcessor_MassEntityTags")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassEnvQueryTestProcessor_MassEntityTags")
-	}
-	static class UMassEnvQueryTestProcessor_MassEntityTags* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassEnvQueryTestProcessor_MassEntityTags>();
-	}
-};
-
-// Class MassEQS.MassEnvQueryTest_MassEntityTags
-// 0x0018 (0x0238 - 0x0220)
-class UMassEnvQueryTest_MassEntityTags final : public UMassEnvQueryTest
-{
-public:
-	EMassEntityTagsTestMode                       TagTestMode;                                       // 0x0220(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FInstancedStruct>               Tags;                                              // 0x0228(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassEnvQueryTest_MassEntityTags")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassEnvQueryTest_MassEntityTags")
-	}
-	static class UMassEnvQueryTest_MassEntityTags* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassEnvQueryTest_MassEntityTags>();
-	}
-};
+DUMPER7_ASSERTS_UEnvQueryItemType_MassEntityHandle;
 
 // Class MassEQS.MassEQSBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -224,13 +147,14 @@ public:
 		return GetDefaultObjImpl<UMassEQSBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UMassEQSBlueprintLibrary;
 
 // Class MassEQS.MassEQSSubsystem
-// 0x00E8 (0x0120 - 0x0038)
+// 0x00E8 (0x0128 - 0x0040)
 class UMassEQSSubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         Pad_38[0xE8];                                      // 0x0038(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0xE8];                                      // 0x0040(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -246,33 +170,123 @@ public:
 		return GetDefaultObjImpl<UMassEQSSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassEQSSubsystem;
 
-// Class MassEQS.MassEQSRequestInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMassEQSRequestInterface final
+// Class MassEQS.MassEnvQueryProcessorBase
+// 0x0010 (0x0110 - 0x0100)
+class UMassEnvQueryProcessorBase : public UMassProcessor
 {
+public:
+	uint8                                         Pad_100[0x10];                                     // 0x0100(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MassEQSRequestInterface")
+		STATIC_CLASS_IMPL("MassEnvQueryProcessorBase")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MassEQSRequestInterface")
+		STATIC_NAME_IMPL(L"MassEnvQueryProcessorBase")
 	}
-	static class IMassEQSRequestInterface* GetDefaultObj()
+	static class UMassEnvQueryProcessorBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IMassEQSRequestInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UMassEnvQueryProcessorBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassEnvQueryProcessorBase;
+
+// Class MassEQS.MassEnvQueryGeneratorProcessor_MassEntityHandles
+// 0x05D0 (0x06E0 - 0x0110)
+class UMassEnvQueryGeneratorProcessor_MassEntityHandles final : public UMassEnvQueryProcessorBase
+{
+public:
+	uint8                                         Pad_110[0x5D0];                                    // 0x0110(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassEnvQueryGeneratorProcessor_MassEntityHandles")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassEnvQueryGeneratorProcessor_MassEntityHandles")
+	}
+	static class UMassEnvQueryGeneratorProcessor_MassEntityHandles* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassEnvQueryGeneratorProcessor_MassEntityHandles>();
+	}
+};
+DUMPER7_ASSERTS_UMassEnvQueryGeneratorProcessor_MassEntityHandles;
+
+// Class MassEQS.MassEnvQueryTestProcessor_MassEntityTags
+// 0x05D0 (0x06E0 - 0x0110)
+class UMassEnvQueryTestProcessor_MassEntityTags final : public UMassEnvQueryProcessorBase
+{
+public:
+	uint8                                         Pad_110[0x5D0];                                    // 0x0110(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassEnvQueryTestProcessor_MassEntityTags")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassEnvQueryTestProcessor_MassEntityTags")
+	}
+	static class UMassEnvQueryTestProcessor_MassEntityTags* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassEnvQueryTestProcessor_MassEntityTags>();
+	}
+};
+DUMPER7_ASSERTS_UMassEnvQueryTestProcessor_MassEntityTags;
+
+// Class MassEQS.MassEnvQueryTest
+// 0x0028 (0x0220 - 0x01F8)
+class UMassEnvQueryTest : public UEnvQueryTest, public IMassEQSRequestInterface
+{
+public:
+	uint8                                         Pad_200[0x20];                                     // 0x0200(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassEnvQueryTest")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassEnvQueryTest")
+	}
+	static class UMassEnvQueryTest* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassEnvQueryTest>();
+	}
+};
+DUMPER7_ASSERTS_UMassEnvQueryTest;
+
+// Class MassEQS.MassEnvQueryTest_MassEntityTags
+// 0x0018 (0x0238 - 0x0220)
+class UMassEnvQueryTest_MassEntityTags final : public UMassEnvQueryTest
+{
+public:
+	EMassEntityTagsTestMode                       TagTestMode;                                       // 0x0220(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FInstancedStruct>               Tags;                                              // 0x0228(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassEnvQueryTest_MassEntityTags")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassEnvQueryTest_MassEntityTags")
+	}
+	static class UMassEnvQueryTest_MassEntityTags* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassEnvQueryTest_MassEntityTags>();
+	}
+};
+DUMPER7_ASSERTS_UMassEnvQueryTest_MassEntityTags;
 
 SDK_NAMESPACE_END

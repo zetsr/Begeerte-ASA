@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUpdatingModsToast_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUpdatingModsToast_C::Construct()
 
 void UUpdatingModsToast_C::ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "ExecuteUbergraph_UpdatingModsToast");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "ExecuteUbergraph_UpdatingModsToast", FuncInfo);
 
 	Params::UpdatingModsToast_C_ExecuteUbergraph_UpdatingModsToast Parms{};
 
@@ -55,10 +51,8 @@ void UUpdatingModsToast_C::ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint)
 
 void UUpdatingModsToast_C::incrementCounter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "incrementCounter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "incrementCounter", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +66,8 @@ void UUpdatingModsToast_C::incrementCounter()
 
 void UUpdatingModsToast_C::InitCounter(int32 NewCounterMax, bool bInWillSetCounter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "InitCounter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "InitCounter", FuncInfo);
 
 	Params::UpdatingModsToast_C_InitCounter Parms{};
 
@@ -95,10 +87,8 @@ void UUpdatingModsToast_C::InitCounter(int32 NewCounterMax, bool bInWillSetCount
 
 void UUpdatingModsToast_C::OverrideTextValue(const class FText& NewText, bool HideProgressBar, bool HideCounter_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "OverrideTextValue");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "OverrideTextValue", FuncInfo);
 
 	Params::UpdatingModsToast_C_OverrideTextValue Parms{};
 
@@ -119,10 +109,8 @@ void UUpdatingModsToast_C::OverrideTextValue(const class FText& NewText, bool Hi
 
 void UUpdatingModsToast_C::OverrideTextValueWithString(const class FString& NewText, bool HideProgressBar, bool HideCounter_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "OverrideTextValueWithString");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "OverrideTextValueWithString", FuncInfo);
 
 	Params::UpdatingModsToast_C_OverrideTextValueWithString Parms{};
 
@@ -141,10 +129,8 @@ void UUpdatingModsToast_C::OverrideTextValueWithString(const class FString& NewT
 
 void UUpdatingModsToast_C::SetCounter(int32 NewCounter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "SetCounter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "SetCounter", FuncInfo);
 
 	Params::UpdatingModsToast_C_SetCounter Parms{};
 
@@ -159,10 +145,8 @@ void UUpdatingModsToast_C::SetCounter(int32 NewCounter)
 
 void UUpdatingModsToast_C::UpdateMainText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateMainText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "UpdateMainText", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +157,8 @@ void UUpdatingModsToast_C::UpdateMainText()
 
 void UUpdatingModsToast_C::UpdateProgressBar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateProgressBar");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UpdatingModsToast_C", "UpdateProgressBar", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

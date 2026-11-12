@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ADino_AIController_BP_C::ExecuteUbergraph_Dino_AIController_BP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_AIController_BP_C", "ExecuteUbergraph_Dino_AIController_BP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_AIController_BP_C", "ExecuteUbergraph_Dino_AIController_BP", FuncInfo);
 
 	Params::Dino_AIController_BP_C_ExecuteUbergraph_Dino_AIController_BP Parms{};
 
@@ -41,10 +39,8 @@ void ADino_AIController_BP_C::ExecuteUbergraph_Dino_AIController_BP(int32 EntryP
 
 void ADino_AIController_BP_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_AIController_BP_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_AIController_BP_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

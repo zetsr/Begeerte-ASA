@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UBeginLand_TK_C::ExecuteUbergraph_BeginLand_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BeginLand_TK_C", "ExecuteUbergraph_BeginLand_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BeginLand_TK_C", "ExecuteUbergraph_BeginLand_TK", FuncInfo);
 
 	Params::BeginLand_TK_C_ExecuteUbergraph_BeginLand_TK Parms{};
 
@@ -43,10 +41,8 @@ void UBeginLand_TK_C::ExecuteUbergraph_BeginLand_TK(int32 EntryPoint)
 
 void UBeginLand_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BeginLand_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BeginLand_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::BeginLand_TK_C_ReceiveExecute Parms{};
 

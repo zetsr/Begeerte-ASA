@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect
-// 0x0048 (0x0080 - 0x0038)
+// 0x0060 (0x0098 - 0x0038)
 class UAnimNotifyState_TimedNiagaraEffect : public UAnimNotifyState
 {
 public:
@@ -26,9 +26,10 @@ public:
 	class FName                                   SocketName;                                        // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LocationOffset;                                    // 0x0048(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RotationOffset;                                    // 0x0060(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bApplyRateScaleAsTimeDilation;                     // 0x0078(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDestroyAtEnd;                                     // 0x0079(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Scale;                                             // 0x0078(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyRateScaleAsTimeDilation;                     // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDestroyAtEnd;                                     // 0x0091(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UFXSystemComponent* GetSpawnedEffect(class UMeshComponent* MeshComp) const;
@@ -47,19 +48,20 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_TimedNiagaraEffect>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotifyState_TimedNiagaraEffect;
 
 // Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffectAdvanced
-// 0x0070 (0x00F0 - 0x0080)
+// 0x0070 (0x0108 - 0x0098)
 class UAnimNotifyState_TimedNiagaraEffectAdvanced final : public UAnimNotifyState_TimedNiagaraEffect
 {
 public:
-	bool                                          bEnableNormalizedNotifyProgress;                   // 0x0080(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyRateScaleToProgress;                         // 0x0081(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   NotifyProgressUserParameter;                       // 0x0084(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCurveParameterPair>            AnimCurves;                                        // 0x0090(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x50];                                      // 0x00A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ENiagaraAnimNotifyProgressType                NotifyProgressType;                                // 0x0098(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyRateScaleToProgress;                         // 0x0099(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   NotifyProgressUserParameter;                       // 0x009C(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCurveParameterPair>            AnimCurves;                                        // 0x00A8(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x50];                                      // 0x00B8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetNotifyProgress(class UMeshComponent* MeshComp) const;
@@ -78,6 +80,7 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_TimedNiagaraEffectAdvanced>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotifyState_TimedNiagaraEffectAdvanced;
 
 // Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect
 // 0x0090 (0x00D0 - 0x0040)
@@ -112,5 +115,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayNiagaraEffect>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotify_PlayNiagaraEffect;
 
 SDK_NAMESPACE_END

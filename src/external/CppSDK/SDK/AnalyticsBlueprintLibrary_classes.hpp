@@ -64,5 +64,6 @@ public:
 		return GetDefaultObjImpl<UAnalyticsBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnalyticsBlueprintLibrary;
 
 SDK_NAMESPACE_END

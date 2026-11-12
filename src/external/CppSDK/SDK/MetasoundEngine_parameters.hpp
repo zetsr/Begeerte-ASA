@@ -10,318 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "MetasoundFrontend_structs.hpp"
-#include "AudioExtensions_structs.hpp"
 #include "MetasoundEngine_structs.hpp"
+#include "MetasoundFrontend_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "AudioExtensions_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolArrayMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral final
-{
-public:
-	TArray<bool>                                  Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolMetaSoundLiteral
-// 0x0060 (0x0060 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatArrayMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral final
-{
-public:
-	TArray<float>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatMetaSoundLiteral
-// 0x0060 (0x0060 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntArrayMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral final
-{
-public:
-	TArray<int32>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntMetaSoundLiteral
-// 0x0060 (0x0060 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromParam
-// 0x00F8 (0x00F8 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam final
-{
-public:
-	struct FAudioParameter                        Param;                                             // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectArrayMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral final
-{
-public:
-	TArray<class UObject*>                        Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectMetaSoundLiteral
-// 0x0060 (0x0060 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral final
-{
-public:
-	class UObject*                                Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringArrayMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral final
-{
-public:
-	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringMetaSoundLiteral
-// 0x0068 (0x0068 - 0x0000)
-struct MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral final
-{
-public:
-	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundGeneratorHandle.CreateMetaSoundGeneratorHandle
-// 0x0010 (0x0010 - 0x0000)
-struct MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle final
-{
-public:
-	class UAudioComponent*                        OnComponent;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMetasoundGeneratorHandle*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundGeneratorHandle.ApplyParameterPack
-// 0x0010 (0x0010 - 0x0000)
-struct MetasoundGeneratorHandle_ApplyParameterPack final
-{
-public:
-	class UMetasoundParameterPack*                Pack;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundGeneratorHandle.WatchOutput
-// 0x002C (0x002C - 0x0000)
-struct MetasoundGeneratorHandle_WatchOutput final
-{
-public:
-	class FName                                   OutputName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AnalyzerName;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AnalyzerOutputName;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundGeneratorHandle.EnableRuntimeRenderTiming
-// 0x0001 (0x0001 - 0x0000)
-struct MetasoundGeneratorHandle_EnableRuntimeRenderTiming final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundGeneratorHandle.GetCPUCoreUtilization
-// 0x0008 (0x0008 - 0x0000)
-struct MetasoundGeneratorHandle_GetCPUCoreUtilization final
-{
-public:
-	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetaSoundCacheSubsystem.PrecacheMetaSound
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundCacheSubsystem_PrecacheMetaSound final
-{
-public:
-	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetaSoundCacheSubsystem.RemoveCachedOperatorsForMetaSound
-// 0x0008 (0x0008 - 0x0000)
-struct MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound final
-{
-public:
-	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetaSoundCacheSubsystem.TouchOrPrecacheMetaSound
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound final
-{
-public:
-	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetBool
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_GetBool final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetFloat
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_GetFloat final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetInt32
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_GetInt32 final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetString
-// 0x0028 (0x0028 - 0x0000)
-struct MetasoundOutputBlueprintAccess_GetString final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetTimeSeconds
-// 0x0020 (0x0020 - 0x0000)
-struct MetasoundOutputBlueprintAccess_GetTimeSeconds final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsBool
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_IsBool final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsFloat
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_IsFloat final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsInt32
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_IsInt32 final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsString
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_IsString final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsTime
-// 0x0018 (0x0018 - 0x0000)
-struct MetasoundOutputBlueprintAccess_IsTime final
-{
-public:
-	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
-// 0x0038 (0x0038 - 0x0000)
-struct MetaSoundOutputSubsystem_WatchOutput final
-{
-public:
-	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OutputName;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AnalyzerName;                                      // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AnalyzerOutputName;                                // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityNames
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundQualityHelper_GetQualityNames final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
 
 // Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
 // 0x0010 (0x0010 - 0x0000)
@@ -330,6 +26,7 @@ struct MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories final
 public:
 	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories;
 
 // Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
 // 0x0010 (0x0010 - 0x0000)
@@ -338,6 +35,7 @@ struct MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories final
 public:
 	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
 // 0x0090 (0x0090 - 0x0000)
@@ -353,6 +51,7 @@ public:
 	struct FMetaSoundBuilderNodeOutputHandle      ReturnValue;                                       // 0x006C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphInputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphOutputNode
 // 0x0090 (0x0090 - 0x0000)
@@ -368,6 +67,56 @@ public:
 	struct FMetaSoundBuilderNodeInputHandle       ReturnValue;                                       // 0x006C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphOutputNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariable
+// 0x0070 (0x0070 - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariable final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DataType;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              DefaultValue;                                      // 0x0010(0x0058)(Parm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariable;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetDelayedNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableGetDelayedNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableGetDelayedNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableGetNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableGetNode;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableSetNode
+// 0x001C (0x001C - 0x0000)
+struct MetaSoundBuilderBase_AddGraphVariableSetNode final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddGraphVariableSetNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddInterface
 // 0x000C (0x000C - 0x0000)
@@ -378,6 +127,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddInterface;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddNode
 // 0x0028 (0x0028 - 0x0000)
@@ -390,6 +140,7 @@ public:
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0014(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddNodeByClassName
 // 0x0030 (0x0030 - 0x0000)
@@ -402,6 +153,7 @@ public:
 	int32                                         MajorVersion;                                      // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_AddNodeByClassName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.BuildAndOverwriteMetaSound
 // 0x0018 (0x0018 - 0x0000)
@@ -412,6 +164,33 @@ public:
 	bool                                          bForceUniqueClassName;                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_BuildAndOverwriteMetaSound;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNamedNodeOutputToGraphOutput
+// 0x003C (0x003C - 0x0000)
+struct MetaSoundBuilderBase_ConnectNamedNodeOutputToGraphOutput final
+{
+public:
+	struct FMetaSoundNodeHandle                   SourceNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   NodeOutputName;                                    // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderNodeInputHandle       GraphOutput;                                       // 0x0018(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNamedNodeOutputToGraphOutput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNamedNodeOutputToNamedGraphOutput
+// 0x0024 (0x0024 - 0x0000)
+struct MetaSoundBuilderBase_ConnectNamedNodeOutputToNamedGraphOutput final
+{
+public:
+	struct FMetaSoundNodeHandle                   SourceNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   NodeOutputName;                                    // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   GraphOutputName;                                   // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNamedNodeOutputToNamedGraphOutput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputsToMatchingGraphInterfaceInputs
 // 0x0028 (0x0028 - 0x0000)
@@ -423,6 +202,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputToGraphInput
 // 0x002C (0x002C - 0x0000)
@@ -434,6 +214,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeInputToGraphInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputsToMatchingGraphInterfaceOutputs
 // 0x0028 (0x0028 - 0x0000)
@@ -445,6 +226,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputToGraphOutput
 // 0x002C (0x002C - 0x0000)
@@ -456,6 +238,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodes
 // 0x0044 (0x0044 - 0x0000)
@@ -467,6 +250,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodesByInterfaceBindings
 // 0x0024 (0x0024 - 0x0000)
@@ -478,6 +262,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConnectNodesByInterfaceBindings;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConvertFromPreset
 // 0x0001 (0x0001 - 0x0000)
@@ -486,6 +271,7 @@ struct MetaSoundBuilderBase_ConvertFromPreset final
 public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConvertFromPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ConvertToPreset
 // 0x0018 (0x0018 - 0x0000)
@@ -496,6 +282,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ConvertToPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeInput
 // 0x0024 (0x0024 - 0x0000)
@@ -506,6 +293,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodeInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeOutput
 // 0x0024 (0x0024 - 0x0000)
@@ -516,6 +304,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodeOutput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodes
 // 0x0044 (0x0044 - 0x0000)
@@ -527,6 +316,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodesByInterfaceBindings
 // 0x0024 (0x0024 - 0x0000)
@@ -538,28 +328,35 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindGraphInputNode
-// 0x001C (0x001C - 0x0000)
+// 0x0044 (0x0044 - 0x0000)
 struct MetaSoundBuilderBase_FindGraphInputNode final
 {
 public:
 	class FName                                   InputName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   OutDataType;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderNodeOutputHandle      NodeOutputHandle;                                  // 0x0010(0x0020)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0034(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindGraphInputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindGraphOutputNode
-// 0x001C (0x001C - 0x0000)
+// 0x0044 (0x0044 - 0x0000)
 struct MetaSoundBuilderBase_FindGraphOutputNode final
 {
 public:
 	class FName                                   OutputName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   OutDataType;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderNodeInputHandle       NodeInputHandle;                                   // 0x0010(0x0020)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0034(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindGraphOutputNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceInputNodes
 // 0x0020 (0x0020 - 0x0000)
@@ -571,6 +368,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundNodeHandle>           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindInterfaceInputNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceOutputNodes
 // 0x0020 (0x0020 - 0x0000)
@@ -582,6 +380,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundNodeHandle>           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindInterfaceOutputNodes;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeClassVersion
 // 0x0024 (0x0024 - 0x0000)
@@ -593,6 +392,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendVersion              ReturnValue;                                       // 0x0014(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeClassVersion;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputByName
 // 0x003C (0x003C - 0x0000)
@@ -605,6 +405,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundBuilderNodeInputHandle       ReturnValue;                                       // 0x001C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputByName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputParent
 // 0x0034 (0x0034 - 0x0000)
@@ -616,6 +417,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputParent;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputs
 // 0x0028 (0x0028 - 0x0000)
@@ -627,6 +429,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputsByDataType
 // 0x0030 (0x0030 - 0x0000)
@@ -640,6 +443,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ReturnValue;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeInputsByDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputByName
 // 0x003C (0x003C - 0x0000)
@@ -652,6 +456,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundBuilderNodeOutputHandle      ReturnValue;                                       // 0x001C(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputByName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputParent
 // 0x0034 (0x0034 - 0x0000)
@@ -663,6 +468,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetaSoundNodeHandle                   ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputParent;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputs
 // 0x0028 (0x0028 - 0x0000)
@@ -674,6 +480,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputs;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputsByDataType
 // 0x0030 (0x0030 - 0x0000)
@@ -687,6 +494,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ReturnValue;                                    // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_FindNodeOutputsByDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputClassDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -698,6 +506,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0028(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputClassDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputData
 // 0x0034 (0x0034 - 0x0000)
@@ -710,6 +519,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputData;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -721,6 +531,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0028(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputData
 // 0x0034 (0x0034 - 0x0000)
@@ -733,6 +544,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeOutputData;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInput
 // 0x000C (0x000C - 0x0000)
@@ -743,6 +555,19 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphInput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInputDefault
+// 0x0014 (0x0014 - 0x0000)
+struct MetaSoundBuilderBase_RemoveGraphInputDefault final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   pageName;                                          // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphOutput
 // 0x000C (0x000C - 0x0000)
@@ -753,6 +578,18 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphOutput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphVariable
+// 0x000C (0x000C - 0x0000)
+struct MetaSoundBuilderBase_RemoveGraphVariable final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveGraphVariable;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveInterface
 // 0x000C (0x000C - 0x0000)
@@ -763,6 +600,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveInterface;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveNode
 // 0x0014 (0x0014 - 0x0000)
@@ -774,6 +612,7 @@ public:
 	bool                                          bRemoveUnusedDependencies;                         // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.RemoveNodeInputDefault
 // 0x0024 (0x0024 - 0x0000)
@@ -784,6 +623,27 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_RemoveNodeInputDefault;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ResetGraphInputDefaults
+// 0x000C (0x000C - 0x0000)
+struct MetaSoundBuilderBase_ResetGraphInputDefaults final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ResetGraphInputDefaults;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetConfiguration
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundBuilderBase_SetConfiguration final
+{
+public:
+	struct FInstancedStruct                       Configuration;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetConfiguration;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputAccessType
 // 0x0010 (0x0010 - 0x0000)
@@ -795,6 +655,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputAccessType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDataType
 // 0x0014 (0x0014 - 0x0000)
@@ -806,17 +667,21 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDefault
-// 0x0068 (0x0068 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct MetaSoundBuilderBase_SetGraphInputDefault final
 {
 public:
 	class FName                                   InputName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0008(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   pageName;                                          // 0x0064(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputDefault;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputName
 // 0x0014 (0x0014 - 0x0000)
@@ -828,6 +693,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphInputName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputAccessType
 // 0x0010 (0x0010 - 0x0000)
@@ -839,6 +705,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputAccessType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputDataType
 // 0x0014 (0x0014 - 0x0000)
@@ -850,6 +717,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputDataType;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputName
 // 0x0014 (0x0014 - 0x0000)
@@ -861,6 +729,7 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetGraphOutputName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.SetNodeInputDefault
 // 0x0080 (0x0080 - 0x0000)
@@ -872,6 +741,16 @@ public:
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetNodeInputDefault;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetTemplate
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundBuilderBase_SetTemplate final
+{
+public:
+	struct FInstancedStruct                       Configuration;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_SetTemplate;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.Build
 // 0x0038 (0x0038 - 0x0000)
@@ -882,6 +761,7 @@ public:
 	struct FMetaSoundBuilderOptions               Options;                                           // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_Build;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.BuildNewMetaSound
 // 0x0018 (0x0018 - 0x0000)
@@ -891,6 +771,7 @@ public:
 	class FName                                   NameBase;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_BuildNewMetaSound;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNode
 // 0x0014 (0x0014 - 0x0000)
@@ -901,6 +782,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNode;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeInput
 // 0x0024 (0x0024 - 0x0000)
@@ -911,6 +793,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNodeInput;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeOutput
 // 0x0024 (0x0024 - 0x0000)
@@ -921,6 +804,86 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_ContainsNodeOutput;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetConfiguration
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetConfiguration final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetConfiguration;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetDocumentTemplate
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetDocumentTemplate final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetDocumentTemplate;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputDefault
+// 0x0070 (0x0070 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphInputDefault final
+{
+public:
+	class FName                                   InputName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   pageName;                                          // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphInputDefault;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputNames
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphInputNames final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphInputNames;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphOutputNames
+// 0x0018 (0x0018 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphOutputNames final
+{
+public:
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphOutputNames;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphVariableDefault
+// 0x0068 (0x0068 - 0x0000)
+struct MetaSoundBuilderBase_GetGraphVariableDefault final
+{
+public:
+	class FName                                   VariableName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetGraphVariableDefault;
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetMetaSound
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundBuilderBase_GetMetaSound final
+{
+public:
+	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetMetaSound;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputIsConstructorPin
 // 0x0024 (0x0024 - 0x0000)
@@ -931,6 +894,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeInputIsConstructorPin;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputIsConstructorPin
 // 0x0024 (0x0024 - 0x0000)
@@ -941,6 +905,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetNodeOutputIsConstructorPin;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetReferencedPresetAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -949,6 +914,7 @@ struct MetaSoundBuilderBase_GetReferencedPresetAsset final
 public:
 	class UObject*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetReferencedPresetAsset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.GetRootGraphClassName
 // 0x0018 (0x0018 - 0x0000)
@@ -957,6 +923,7 @@ struct MetaSoundBuilderBase_GetRootGraphClassName final
 public:
 	struct FMetasoundFrontendClassName            ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_GetRootGraphClassName;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.InterfaceIsDeclared
 // 0x000C (0x000C - 0x0000)
@@ -967,6 +934,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_InterfaceIsDeclared;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.IsPreset
 // 0x0001 (0x0001 - 0x0000)
@@ -975,6 +943,7 @@ struct MetaSoundBuilderBase_IsPreset final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_IsPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodeInputIsConnected
 // 0x0024 (0x0024 - 0x0000)
@@ -985,6 +954,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodeInputIsConnected;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodeOutputIsConnected
 // 0x0024 (0x0024 - 0x0000)
@@ -995,6 +965,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodeOutputIsConnected;
 
 // Function MetasoundEngine.MetaSoundBuilderBase.NodesAreConnected
 // 0x0044 (0x0044 - 0x0000)
@@ -1006,6 +977,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderBase_NodesAreConnected;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.Audition
 // 0x0028 (0x0028 - 0x0000)
@@ -1018,6 +990,7 @@ public:
 	bool                                          bLiveUpdatesEnabled;                               // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_Audition;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetBlockRateOverride
 // 0x0004 (0x0004 - 0x0000)
@@ -1026,6 +999,7 @@ struct MetaSoundSourceBuilder_SetBlockRateOverride final
 public:
 	float                                         BlockRate;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetBlockRateOverride;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetFormat
 // 0x0002 (0x0002 - 0x0000)
@@ -1035,6 +1009,7 @@ public:
 	EMetaSoundOutputAudioFormat                   OutputFormat;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMetaSoundBuilderResult                       OutResult;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetFormat;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetQuality
 // 0x0008 (0x0008 - 0x0000)
@@ -1043,6 +1018,7 @@ struct MetaSoundSourceBuilder_SetQuality final
 public:
 	class FName                                   Quality;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetQuality;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.SetSampleRateOverride
 // 0x0004 (0x0004 - 0x0000)
@@ -1051,6 +1027,7 @@ struct MetaSoundSourceBuilder_SetSampleRateOverride final
 public:
 	int32                                         SampleRate;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_SetSampleRateOverride;
 
 // Function MetasoundEngine.MetaSoundSourceBuilder.GetLiveUpdatesEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -1059,6 +1036,7 @@ struct MetaSoundSourceBuilder_GetLiveUpdatesEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundSourceBuilder_GetLiveUpdatesEnabled;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1069,6 +1047,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1081,6 +1060,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1091,6 +1071,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1102,6 +1083,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1112,6 +1094,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1123,6 +1106,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateMetaSoundLiteralFromParam
 // 0x00F8 (0x00F8 - 0x0000)
@@ -1132,6 +1116,7 @@ public:
 	struct FAudioParameter                        Param;                                             // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectArrayMetaSoundLiteral
 // 0x0068 (0x0068 - 0x0000)
@@ -1141,6 +1126,7 @@ public:
 	TArray<class UObject*>                        Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectMetaSoundLiteral
 // 0x0060 (0x0060 - 0x0000)
@@ -1150,6 +1136,7 @@ public:
 	class UObject*                                Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchBuilder
 // 0x0018 (0x0018 - 0x0000)
@@ -1161,6 +1148,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreatePatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchPresetBuilder
 // 0x0028 (0x0028 - 0x0000)
@@ -1173,6 +1161,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreatePatchPresetBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourceBuilder
 // 0x0068 (0x0068 - 0x0000)
@@ -1189,6 +1178,7 @@ public:
 	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourcePresetBuilder
 // 0x0028 (0x0028 - 0x0000)
@@ -1201,6 +1191,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateSourcePresetBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1211,6 +1202,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)
@@ -1221,6 +1213,7 @@ public:
 	class FName                                   DataType;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0018(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1230,6 +1223,19 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindBuilder;
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindParentBuilderOfPreset
+// 0x0020 (0x0020 - 0x0000)
+struct MetaSoundBuilderSubsystem_FindParentBuilderOfPreset final
+{
+public:
+	TScriptInterface<class IMetaSoundDocumentInterface> InMetaSoundPreset;                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFollowPresetChain;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMetaSoundBuilderBase*                  ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindParentBuilderOfPreset;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindPatchBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1239,6 +1245,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundPatchBuilder*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindSourceBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1248,6 +1255,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundSourceBuilder*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1257,6 +1265,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterPatchBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1266,6 +1275,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundPatchBuilder*                 Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterSourceBuilder
 // 0x0010 (0x0010 - 0x0000)
@@ -1275,6 +1285,7 @@ public:
 	class FName                                   BuilderName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundSourceBuilder*                Builder;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_RegisterSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.SetTargetPage
 // 0x000C (0x000C - 0x0000)
@@ -1285,6 +1296,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_SetTargetPage;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1295,6 +1307,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterPatchBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1305,6 +1318,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterPatchBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterSourceBuilder
 // 0x000C (0x000C - 0x0000)
@@ -1315,6 +1329,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_UnregisterSourceBuilder;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilderOfDocument
 // 0x0018 (0x0018 - 0x0000)
@@ -1324,6 +1339,7 @@ public:
 	TScriptInterface<class IMetaSoundDocumentInterface> InMetaSound;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMetaSoundBuilderBase*                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_FindBuilderOfDocument;
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.IsInterfaceRegistered
 // 0x000C (0x000C - 0x0000)
@@ -1334,6 +1350,727 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MetaSoundBuilderSubsystem_IsInterfaceRegistered;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.Conv_MetaSoundLiteralToString
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_Conv_MetaSoundLiteralToString final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_Conv_MetaSoundLiteralToString;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolArrayMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral final
+{
+public:
+	TArray<bool>                                  Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateBoolArrayMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolMetaSoundLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateBoolMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatArrayMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral final
+{
+public:
+	TArray<float>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateFloatArrayMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateFloatMetaSoundLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateFloatMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntArrayMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral final
+{
+public:
+	TArray<int32>                                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateIntArrayMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateIntMetaSoundLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateIntMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromAudioParameter
+// 0x00F8 (0x00F8 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromAudioParameter final
+{
+public:
+	struct FAudioParameter                        InAudioParameter;                                  // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromAudioParameter;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromBoolean
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBoolean final
+{
+public:
+	bool                                          InBoolean;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBoolean;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromBooleanArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBooleanArray final
+{
+public:
+	TArray<bool>                                  InBooleanArray;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBooleanArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromFloat
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloat final
+{
+public:
+	float                                         InFloat;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloat;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromFloatArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloatArray final
+{
+public:
+	TArray<float>                                 InFloatArray;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloatArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromInteger
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromInteger final
+{
+public:
+	int32                                         InInteger;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromInteger;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromIntegerArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromIntegerArray final
+{
+public:
+	TArray<int32>                                 InIntegerArray;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromIntegerArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromObject
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObject final
+{
+public:
+	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObject;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromObjectArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObjectArray final
+{
+public:
+	TArray<class UObject*>                        InObjectArray;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObjectArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromParam
+// 0x00F8 (0x00F8 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam final
+{
+public:
+	struct FAudioParameter                        Param;                                             // 0x0000(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x00A0(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromString
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromString final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromString;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromStringArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromStringArray final
+{
+public:
+	TArray<class FString>                         InStringArray;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromStringArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectArrayMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral final
+{
+public:
+	TArray<class UObject*>                        Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateObjectArrayMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateObjectMetaSoundLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral final
+{
+public:
+	class UObject*                                Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateObjectMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringArrayMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral final
+{
+public:
+	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateStringArrayMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateStringMetaSoundLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral final
+{
+public:
+	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              ReturnValue;                                       // 0x0010(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_CreateStringMetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.EqualEqual_MetaSoundLiteral
+// 0x00B8 (0x00B8 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_EqualEqual_MetaSoundLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              LiteralA;                                          // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMetasoundFrontendLiteral              LiteralB;                                          // 0x0058(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00B0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_EqualEqual_MetaSoundLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetBoolArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetBoolArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetBoolValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0059(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetBoolValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetFloatArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetFloatArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetFloatValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetFloatValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetIntArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetIntArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntValueFromLiteral
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetIntValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetIntValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsBool
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBool final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBool;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsBoolArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBoolArray final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<bool>                                  ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBoolArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsFloat
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloat final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloat;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsFloatArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloatArray final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<float>                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloatArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsInteger
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsInteger final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsInteger;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsIntegerArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsIntegerArray final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsIntegerArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsObject
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObject final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObject;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsObjectArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObjectArray final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObjectArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsString
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsString final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsString;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsStringArray
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsStringArray final
+{
+public:
+	struct FMetasoundFrontendLiteral              InLiteral;                                         // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsStringArray;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetObjectArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetObjectArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectValueFromLiteral
+// 0x0068 (0x0068 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetObjectValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetObjectValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringArrayValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetStringArrayValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetStringArrayValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringValueFromLiteral
+// 0x0070 (0x0070 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetStringValueFromLiteral final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetaSoundBuilderResult                       OutResult;                                         // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetStringValueFromLiteral;
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetType
+// 0x0060 (0x0060 - 0x0000)
+struct MetasoundFrontendLiteralBlueprintAccess_GetType final
+{
+public:
+	struct FMetasoundFrontendLiteral              Literal;                                           // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMetasoundFrontendLiteralType                 ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundFrontendLiteralBlueprintAccess_GetType;
+
+// Function MetasoundEngine.MetasoundGeneratorHandle.CreateMetaSoundGeneratorHandle
+// 0x0010 (0x0010 - 0x0000)
+struct MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle final
+{
+public:
+	class UAudioComponent*                        OnComponent;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMetasoundGeneratorHandle*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_CreateMetaSoundGeneratorHandle;
+
+// Function MetasoundEngine.MetasoundGeneratorHandle.ApplyParameterPack
+// 0x0010 (0x0010 - 0x0000)
+struct MetasoundGeneratorHandle_ApplyParameterPack final
+{
+public:
+	class UMetasoundParameterPack*                Pack;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_ApplyParameterPack;
+
+// Function MetasoundEngine.MetasoundGeneratorHandle.WatchOutput
+// 0x002C (0x002C - 0x0000)
+struct MetasoundGeneratorHandle_WatchOutput final
+{
+public:
+	class FName                                   OutputName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerName;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerOutputName;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_WatchOutput;
+
+// Function MetasoundEngine.MetasoundGeneratorHandle.EnableRuntimeRenderTiming
+// 0x0001 (0x0001 - 0x0000)
+struct MetasoundGeneratorHandle_EnableRuntimeRenderTiming final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_EnableRuntimeRenderTiming;
+
+// Function MetasoundEngine.MetasoundGeneratorHandle.GetCPUCoreUtilization
+// 0x0008 (0x0008 - 0x0000)
+struct MetasoundGeneratorHandle_GetCPUCoreUtilization final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundGeneratorHandle_GetCPUCoreUtilization;
+
+// Function MetasoundEngine.MetaSoundCacheSubsystem.PrecacheMetaSound
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundCacheSubsystem_PrecacheMetaSound final
+{
+public:
+	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_PrecacheMetaSound;
+
+// Function MetasoundEngine.MetaSoundCacheSubsystem.RemoveCachedOperatorsForMetaSound
+// 0x0008 (0x0008 - 0x0000)
+struct MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound final
+{
+public:
+	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_RemoveCachedOperatorsForMetaSound;
+
+// Function MetasoundEngine.MetaSoundCacheSubsystem.TouchOrPrecacheMetaSound
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound final
+{
+public:
+	class UMetaSoundSource*                       InMetaSound;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InNumInstances;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundCacheSubsystem_TouchOrPrecacheMetaSound;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetBool
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_GetBool final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetBool;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetFloat
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_GetFloat final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetFloat;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetInt32
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_GetInt32 final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetInt32;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetString
+// 0x0028 (0x0028 - 0x0000)
+struct MetasoundOutputBlueprintAccess_GetString final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetString;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.GetTimeSeconds
+// 0x0020 (0x0020 - 0x0000)
+struct MetasoundOutputBlueprintAccess_GetTimeSeconds final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_GetTimeSeconds;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsBool
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_IsBool final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsBool;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsFloat
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_IsFloat final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsFloat;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsInt32
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_IsInt32 final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsInt32;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsString
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_IsString final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsString;
+
+// Function MetasoundEngine.MetasoundOutputBlueprintAccess.IsTime
+// 0x0018 (0x0018 - 0x0000)
+struct MetasoundOutputBlueprintAccess_IsTime final
+{
+public:
+	struct FMetaSoundOutput                       Output;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetasoundOutputBlueprintAccess_IsTime;
+
+// Function MetasoundEngine.MetaSoundOutputSubsystem.UnwatchOutput
+// 0x0038 (0x0038 - 0x0000)
+struct MetaSoundOutputSubsystem_UnwatchOutput final
+{
+public:
+	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OutputName;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerName;                                      // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerOutputName;                                // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundOutputSubsystem_UnwatchOutput;
+
+// Function MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
+// 0x0038 (0x0038 - 0x0000)
+struct MetaSoundOutputSubsystem_WatchOutput final
+{
+public:
+	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OutputName;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)> OnOutputValueChanged; // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerName;                                      // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AnalyzerOutputName;                                // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MetaSoundOutputSubsystem_WatchOutput;
+
+// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityNames
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundQualityHelper_GetQualityNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MetaSoundQualityHelper_GetQualityNames;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -17,9 +17,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Interface_Vehicle.Interface_Vehicle_C
-// 0x0000 (0x0000 - 0x0000)
-class IInterface_Vehicle_C final
+// 0x0008 (0x0008 - 0x0000)
+class IInterface_Vehicle_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void Interface_Vehicle_Get_Should_Be_Forced_TPV__prevent_fpv_(bool* Should_Driver_Be_Forced_TPV, bool* Should_Non_Turret_Passenger_Be_Forced_TPV, bool* Should_Turret_Passenger_Be_Forced_TPV);
 	void Interface_Vehicle_Add_Attachment(TArray<class UStaticMesh*>& Meshes, EPrimalEquipmentType EquipmentSlot, bool* success);
@@ -79,5 +82,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IInterface_Vehicle_C;
 
 SDK_NAMESPACE_END

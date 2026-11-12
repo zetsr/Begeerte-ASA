@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WeapGun_Impacts_TekSword.WeapGun_Impacts_TekSword_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08B8 - 0x08B8)
 class AWeapGun_Impacts_TekSword_C final : public AWeapGun_Impacts_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<AWeapGun_Impacts_TekSword_C>();
 	}
 };
+DUMPER7_ASSERTS_AWeapGun_Impacts_TekSword_C;
 
 SDK_NAMESPACE_END

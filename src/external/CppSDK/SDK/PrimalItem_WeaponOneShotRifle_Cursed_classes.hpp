@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponOneShotRifle_Cursed_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponOneShotRifle_Cursed_C;
 
 SDK_NAMESPACE_END

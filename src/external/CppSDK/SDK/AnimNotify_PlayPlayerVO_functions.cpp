@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 class FString UAnimNotify_PlayPlayerVO_C::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerVO_C", "GetNotifyName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerVO_C", "GetNotifyName", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerVO_C_GetNotifyName Parms{};
 
@@ -46,10 +44,8 @@ class FString UAnimNotify_PlayPlayerVO_C::GetNotifyName() const
 
 bool UAnimNotify_PlayPlayerVO_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerVO_C", "Received_Notify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerVO_C", "Received_Notify", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerVO_C_Received_Notify Parms{};
 
@@ -71,10 +67,8 @@ bool UAnimNotify_PlayPlayerVO_C::Received_Notify(class USkeletalMeshComponent* M
 
 void UAnimNotify_PlayPlayerVO_C::SelectSound(class UPDA_VoiceCollection_C* VoiceCollection, class USoundBase** VoiceSoundReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerVO_C", "SelectSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerVO_C", "SelectSound", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerVO_C_SelectSound Parms{};
 

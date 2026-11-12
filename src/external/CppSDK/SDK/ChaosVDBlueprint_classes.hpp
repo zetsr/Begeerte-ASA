@@ -24,6 +24,7 @@ public:
 	static void RecordDebugDrawLine(const class UObject* WorldContext, const struct FVector& InStartLocation, const struct FVector& InEndLocation, class FName Tag, const struct FLinearColor& Color);
 	static void RecordDebugDrawSphere(const class UObject* WorldContext, const struct FVector& InCenter, float Radius, class FName Tag, const struct FLinearColor& Color);
 	static void RecordDebugDrawVector(const class UObject* WorldContext, const struct FVector& InStartLocation, const struct FVector& InVector, class FName Tag, const struct FLinearColor& Color);
+	static void SetTraceRelevancyVolume(const class UObject* WorldContext, const struct FBox& RelevancyVolume);
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +40,6 @@ public:
 		return GetDefaultObjImpl<UChaosVDRuntimeBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UChaosVDRuntimeBlueprintLibrary;
 
 SDK_NAMESPACE_END

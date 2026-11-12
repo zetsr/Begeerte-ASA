@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void APreviewScene_InventoryNew_C::ExecuteUbergraph_PreviewScene_InventoryNew(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "ExecuteUbergraph_PreviewScene_InventoryNew");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "ExecuteUbergraph_PreviewScene_InventoryNew", FuncInfo);
 
 	Params::PreviewScene_InventoryNew_C_ExecuteUbergraph_PreviewScene_InventoryNew Parms{};
 
@@ -41,10 +39,8 @@ void APreviewScene_InventoryNew_C::ExecuteUbergraph_PreviewScene_InventoryNew(in
 
 void APreviewScene_InventoryNew_C::FrontLightChangeWhenBelowFloor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "FrontLightChangeWhenBelowFloor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "FrontLightChangeWhenBelowFloor", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void APreviewScene_InventoryNew_C::FrontLightChangeWhenBelowFloor()
 
 void APreviewScene_InventoryNew_C::NotifyPreviewSceneUpdated(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "NotifyPreviewSceneUpdated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "NotifyPreviewSceneUpdated", FuncInfo);
 
 	Params::PreviewScene_InventoryNew_C_NotifyPreviewSceneUpdated Parms{};
 
@@ -79,10 +73,8 @@ void APreviewScene_InventoryNew_C::NotifyPreviewSceneUpdated(float DeltaTime)
 
 void APreviewScene_InventoryNew_C::NotifySetupPreviewScene(class UMeshComponent* ForMeshComp, const TArray<class USceneComponent*>& ForChildComps, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "NotifySetupPreviewScene");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "NotifySetupPreviewScene", FuncInfo);
 
 	Params::PreviewScene_InventoryNew_C_NotifySetupPreviewScene Parms{};
 
@@ -99,10 +91,8 @@ void APreviewScene_InventoryNew_C::NotifySetupPreviewScene(class UMeshComponent*
 
 void APreviewScene_InventoryNew_C::RotateLightsInZWithCamera()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "RotateLightsInZWithCamera");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "RotateLightsInZWithCamera", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,10 +105,8 @@ void APreviewScene_InventoryNew_C::RotateLightsInZWithCamera()
 
 void APreviewScene_InventoryNew_C::UpdateFloorLocation(bool IsFemale_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_InventoryNew_C", "UpdateFloorLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_InventoryNew_C", "UpdateFloorLocation", FuncInfo);
 
 	Params::PreviewScene_InventoryNew_C_UpdateFloorLocation Parms{};
 

@@ -32,6 +32,7 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BackSpace;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -40,6 +41,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit2_K2Node_ComponentBound
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -48,6 +50,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit3_K2Node_ComponentBound
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -56,6 +59,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit4_K2Node_ComponentBound
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -64,6 +68,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit5_K2Node_ComponentBound
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -72,6 +77,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit6_K2Node_ComponentBound
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -80,6 +86,7 @@ struct UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_EditableText_172_K2Node_Comp
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.ExecuteUbergraph_UI_CFCore_CodeAUTH
 // 0x0410 (0x0410 - 0x0000)
@@ -170,6 +177,7 @@ public:
 	int32                                         CallFunc_Array_LastIndex_ReturnValue_5;            // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_5;             // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_ExecuteUbergraph_UI_CFCore_CodeAUTH;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.GetDigits
 // 0x00C0 (0x00C0 - 0x0000)
@@ -189,6 +197,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_GetDigits;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.OnLeftArrow
 // 0x000C (0x000C - 0x0000)
@@ -199,23 +208,25 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_OnLeftArrow;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.OnPreviewKeyDown
-// 0x0168 (0x0168 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct UI_CFCore_CodeAUTH_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14B[0x5];                                      // 0x014B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetDigits_Digits;                         // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0138(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_153[0x5];                                      // 0x0153(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetDigits_Digits;                         // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_OnPreviewKeyDown;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.OnRightArrow
 // 0x000C (0x000C - 0x0000)
@@ -226,6 +237,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_OnRightArrow;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -234,6 +246,7 @@ struct UI_CFCore_CodeAUTH_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_PreConstruct;
 
 // Function UI_CFCore_CodeAUTH.UI_CFCore_CodeAUTH_C.SetDigitToText
 // 0x0128 (0x0128 - 0x0000)
@@ -267,6 +280,7 @@ public:
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_CodeAUTH_C_SetDigitToText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

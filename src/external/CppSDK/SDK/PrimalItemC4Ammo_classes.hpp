@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemC4Ammo_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemC4Ammo_C;
 
 SDK_NAMESPACE_END

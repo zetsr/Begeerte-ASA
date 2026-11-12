@@ -10,72 +10,72 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ShooterGame_classes.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ShooterGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C
-// 0x00E0 (0x04D8 - 0x03F8)
+// 0x00E0 (0x0538 - 0x0458)
 class UDataListButtonVariable_Widget_ASA_C : public UDataListValueGeneric
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDataListButton_Widget_ASA_C*           DataListButton_Widget_ASA;                         // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MainButtonGeneric;                                 // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           SafeZone;                                          // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   VariableText;                                      // 0x0418(0x0010)(Edit, BlueprintVisible)
-	TMulticastInlineDelegate<void(class FText ReturnValue_0, int32 Index_0)> ReturnValue;            // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class UClass*>                         WidgetOptionsToAdd;                                // 0x0438(0x0010)(Edit, BlueprintVisible)
-	TArray<class FText>                           OptionsMinValues;                                  // 0x0448(0x0010)(Edit, BlueprintVisible)
-	TArray<class FText>                           OptionsMaxValues;                                  // 0x0458(0x0010)(Edit, BlueprintVisible)
-	TArray<class FText>                           OptionsExtraData;                                  // 0x0468(0x0010)(Edit, BlueprintVisible)
-	int32                                         OptionSelectedIndex;                               // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Support_Multiple_Options;                          // 0x047C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47D[0x3];                                      // 0x047D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MultiplyValueToText;                               // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Test;                                              // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_489[0x3];                                      // 0x0489(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Maximum_Fractional_Digits;                         // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanEditTextVariable;                               // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ForceMinMaxEditChange;                             // 0x0491(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTextUseGrouping;                                  // 0x0492(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_493[0x5];                                      // 0x0493(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPrimalUserWidget*>              OptionsWidgets;                                    // 0x0498(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMulticastInlineDelegate<void(class FText Text, int32 int_0, class UObject* Object)> ReturnValueReference; // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const struct FVector2D& Vector2D)> ReturnColor;                    // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool bExtended, class UDataListButtonVariable_Widget_ASA_C* This)> ReturnIsExtended; // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UVerticalBox*                           SafeZone;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MainButtonGeneric;                                 // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDataListButton_Widget_ASA_C*           DataListButton_Widget_ASA;                         // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   VariableText;                                      // 0x0478(0x0010)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void(class FText ReturnValue_0, int32 Index_0)> ReturnValue;            // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UClass*>                         WidgetOptionsToAdd;                                // 0x0498(0x0010)(Edit, BlueprintVisible)
+	TArray<class FText>                           OptionsMinValues;                                  // 0x04A8(0x0010)(Edit, BlueprintVisible)
+	TArray<class FText>                           OptionsMaxValues;                                  // 0x04B8(0x0010)(Edit, BlueprintVisible)
+	TArray<class FText>                           OptionsExtraData;                                  // 0x04C8(0x0010)(Edit, BlueprintVisible)
+	int32                                         OptionSelectedIndex;                               // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Support_Multiple_Options;                          // 0x04DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DD[0x3];                                      // 0x04DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MultiplyValueToText;                               // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Test;                                              // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x3];                                      // 0x04E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Maximum_Fractional_Digits;                         // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanEditTextVariable;                               // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceMinMaxEditChange;                             // 0x04F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTextUseGrouping;                                  // 0x04F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F3[0x5];                                      // 0x04F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPrimalUserWidget*>              OptionsWidgets;                                    // 0x04F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMulticastInlineDelegate<void(class FText Text, int32 Int, class UObject* Object)> ReturnValueReference; // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FVector2D& Vector2D)> ReturnColor;                    // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool bExtended, class UDataListButtonVariable_Widget_ASA_C* This)> ReturnIsExtended; // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetupTextValueOverride(const class FText& Text, class FText* ReturnText);
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void SetupOptionWidgets();
-	void SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall);
-	void Setup_Values_Index(const int32& Index_0, bool PreventCallParent);
-	void SetParameterValue(const class FString& Value, bool bPreventCallParent);
-	void SetIsSelectedBP(bool Selected);
-	void PreConstruct(bool IsDesignTime);
-	void OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent);
-	bool IsExpanded();
-	void HideValueLabel(bool HideValue);
-	class USlider* HasSlider();
-	class USlider* HasExpandedSlider();
-	void GetWidgetsToAdd(TArray<class UPrimalUserWidget*>* UserWidgets);
-	bool GetIsSelectedBP();
-	TArray<class UWidget*> GetAllValueWidgets();
-	void ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint);
-	void Construct();
-	void CloseSlider();
-	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
-	void BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature(bool Set, bool FromSelectOtherOption);
+	void BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
+	void CloseSlider();
+	void Construct();
+	void ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0);
+	TArray<class UWidget*> GetAllValueWidgets();
+	bool GetIsSelectedBP();
+	void GetWidgetsToAdd(TArray<class UPrimalUserWidget*>* UserWidgets);
+	class USlider* HasExpandedSlider();
+	class USlider* HasSlider();
+	void HideValueLabel(bool HideValue);
+	bool IsExpanded();
+	void OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent);
+	void PreConstruct(bool IsDesignTime);
+	void SetIsSelectedBP(bool Selected);
+	void SetParameterValue(const class FString& Value, bool bPreventCallParent);
+	void Setup_Values_Index(const int32& Index_0, bool PreventCallParent);
+	void SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall);
+	void SetupOptionWidgets();
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
+	void SetupTextValueOverride(const class FText& Text, class FText* ReturnText);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
 
 public:
 	static class UClass* StaticClass()
@@ -91,5 +91,6 @@ public:
 		return GetDefaultObjImpl<UDataListButtonVariable_Widget_ASA_C>();
 	}
 };
+DUMPER7_ASSERTS_UDataListButtonVariable_Widget_ASA_C;
 
 SDK_NAMESPACE_END

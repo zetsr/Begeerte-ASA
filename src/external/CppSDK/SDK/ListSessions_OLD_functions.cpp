@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UListSessions_OLD_C::BndEvt__ShowOfficialServersCheckBox_K2Node_ComponentBoundEvent_78_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "BndEvt__ShowOfficialServersCheckBox_K2Node_ComponentBoundEvent_78_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "BndEvt__ShowOfficialServersCheckBox_K2Node_ComponentBoundEvent_78_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::ListSessions_OLD_C_BndEvt__ShowOfficialServersCheckBox_K2Node_ComponentBoundEvent_78_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -43,10 +41,8 @@ void UListSessions_OLD_C::BndEvt__ShowOfficialServersCheckBox_K2Node_ComponentBo
 
 void UListSessions_OLD_C::BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::ListSessions_OLD_C_BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -63,10 +59,8 @@ void UListSessions_OLD_C::BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentB
 
 void UListSessions_OLD_C::BndEvt__ShowUnOfficialServersCheckBox_K2Node_ComponentBoundEvent_84_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "BndEvt__ShowUnOfficialServersCheckBox_K2Node_ComponentBoundEvent_84_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "BndEvt__ShowUnOfficialServersCheckBox_K2Node_ComponentBoundEvent_84_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::ListSessions_OLD_C_BndEvt__ShowUnOfficialServersCheckBox_K2Node_ComponentBoundEvent_84_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -83,10 +77,8 @@ void UListSessions_OLD_C::BndEvt__ShowUnOfficialServersCheckBox_K2Node_Component
 
 void UListSessions_OLD_C::ExecuteUbergraph_ListSessions_OLD(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "ExecuteUbergraph_ListSessions_OLD");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "ExecuteUbergraph_ListSessions_OLD", FuncInfo);
 
 	Params::ListSessions_OLD_C_ExecuteUbergraph_ListSessions_OLD Parms{};
 
@@ -103,10 +95,8 @@ void UListSessions_OLD_C::ExecuteUbergraph_ListSessions_OLD(int32 EntryPoint)
 
 class USizeBox* UListSessions_OLD_C::GetSizeboxForExtraHandheldScaling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "GetSizeboxForExtraHandheldScaling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "GetSizeboxForExtraHandheldScaling", FuncInfo);
 
 	Params::ListSessions_OLD_C_GetSizeboxForExtraHandheldScaling Parms{};
 
@@ -123,10 +113,8 @@ class USizeBox* UListSessions_OLD_C::GetSizeboxForExtraHandheldScaling()
 
 class UWidget* UListSessions_OLD_C::GetWidgetToScaleForHandheld()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ListSessions_OLD_C", "GetWidgetToScaleForHandheld");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ListSessions_OLD_C", "GetWidgetToScaleForHandheld", FuncInfo);
 
 	Params::ListSessions_OLD_C_GetWidgetToScaleForHandheld Parms{};
 

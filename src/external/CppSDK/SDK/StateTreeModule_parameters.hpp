@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "StateTreeModule_structs.hpp"
 
 
@@ -17,22 +18,24 @@ SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
-// 0x0004 (0x0004 - 0x0000)
+// 0x0006 (0x0006 - 0x0000)
 struct StateTreeNodeBlueprintBase_RequestTransition final
 {
 public:
-	struct FStateTreeStateLink                    TargetState;                                       // 0x0000(0x0002)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EStateTreeTransitionPriority                  Priority;                                          // 0x0002(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FStateTreeStateLink                    TargetState;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EStateTreeTransitionPriority                  Priority;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_RequestTransition;
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.SendEvent
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct StateTreeNodeBlueprintBase_SendEvent final
 {
 public:
-	struct FStateTreeEvent                        Event;                                             // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FStateTreeEvent                        Event;                                             // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_SendEvent;
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.GetPropertyDescriptionByPropertyName
 // 0x0018 (0x0018 - 0x0000)
@@ -42,6 +45,7 @@ public:
 	class FName                                   PropertyName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_GetPropertyDescriptionByPropertyName;
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.GetPropertyReference
 // 0x0010 (0x0010 - 0x0000)
@@ -50,6 +54,7 @@ struct StateTreeNodeBlueprintBase_GetPropertyReference final
 public:
 	struct FStateTreeBlueprintPropertyRef         PropertyRef;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_GetPropertyReference;
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.IsPropertyRefValid
 // 0x0018 (0x0018 - 0x0000)
@@ -60,6 +65,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_IsPropertyRefValid;
 
 // Function StateTreeModule.StateTreeNodeBlueprintBase.ReceiveGetDescription
 // 0x0018 (0x0018 - 0x0000)
@@ -70,6 +76,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeNodeBlueprintBase_ReceiveGetDescription;
 
 // Function StateTreeModule.StateTreeConditionBlueprintBase.ReceiveTestCondition
 // 0x0001 (0x0001 - 0x0000)
@@ -78,6 +85,7 @@ struct StateTreeConditionBlueprintBase_ReceiveTestCondition final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeConditionBlueprintBase_ReceiveTestCondition;
 
 // Function StateTreeModule.StateTreeConsiderationBlueprintBase.ReceiveGetScore
 // 0x0004 (0x0004 - 0x0000)
@@ -86,6 +94,7 @@ struct StateTreeConsiderationBlueprintBase_ReceiveGetScore final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeConsiderationBlueprintBase_ReceiveGetScore;
 
 // Function StateTreeModule.StateTreeEvaluatorBlueprintBase.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -94,6 +103,26 @@ struct StateTreeEvaluatorBlueprintBase_ReceiveTick final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeEvaluatorBlueprintBase_ReceiveTick;
+
+// Function StateTreeModule.StateTreeTaskBlueprintBase.BindDelegate
+// 0x0024 (0x0024 - 0x0000)
+struct StateTreeTaskBlueprintBase_BindDelegate final
+{
+public:
+	struct FStateTreeDelegateListener             Listener;                                          // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             Delegate;                                          // 0x0014(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_BindDelegate;
+
+// Function StateTreeModule.StateTreeTaskBlueprintBase.BroadcastDelegate
+// 0x0010 (0x0010 - 0x0000)
+struct StateTreeTaskBlueprintBase_BroadcastDelegate final
+{
+public:
+	struct FStateTreeDelegateDispatcher           Dispatcher;                                        // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_BroadcastDelegate;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.FinishTask
 // 0x0001 (0x0001 - 0x0000)
@@ -102,6 +131,7 @@ struct StateTreeTaskBlueprintBase_FinishTask final
 public:
 	bool                                          bSucceeded;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_FinishTask;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveEnterState
 // 0x0048 (0x0048 - 0x0000)
@@ -112,6 +142,7 @@ public:
 	EStateTreeRunStatus                           ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveEnterState;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveExitState
 // 0x0040 (0x0040 - 0x0000)
@@ -120,6 +151,7 @@ struct StateTreeTaskBlueprintBase_ReceiveExitState final
 public:
 	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveExitState;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentEnterState
 // 0x0040 (0x0040 - 0x0000)
@@ -128,6 +160,7 @@ struct StateTreeTaskBlueprintBase_ReceiveLatentEnterState final
 public:
 	struct FStateTreeTransitionResult             Transition;                                        // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveLatentEnterState;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveLatentTick
 // 0x0004 (0x0004 - 0x0000)
@@ -136,16 +169,18 @@ struct StateTreeTaskBlueprintBase_ReceiveLatentTick final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveLatentTick;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveStateCompleted
-// 0x0014 (0x0014 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct StateTreeTaskBlueprintBase_ReceiveStateCompleted final
 {
 public:
 	EStateTreeRunStatus                           CompletionStatus;                                  // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x1];                                        // 0x0001(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeActiveStates                 CompletedActiveStates;                             // 0x0002(0x0012)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStateTreeActiveStates                 CompletedActiveStates;                             // 0x0004(0x0034)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveStateCompleted;
 
 // Function StateTreeModule.StateTreeTaskBlueprintBase.ReceiveTick
 // 0x0008 (0x0008 - 0x0000)
@@ -156,6 +191,70 @@ public:
 	EStateTreeRunStatus                           ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_ReceiveTick;
+
+// Function StateTreeModule.StateTreeTaskBlueprintBase.UnbindDelegate
+// 0x0014 (0x0014 - 0x0000)
+struct StateTreeTaskBlueprintBase_UnbindDelegate final
+{
+public:
+	struct FStateTreeDelegateListener             Listener;                                          // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeTaskBlueprintBase_UnbindDelegate;
+
+// Function StateTreeModule.StateTree.K2_GetExtension
+// 0x0010 (0x0010 - 0x0000)
+struct StateTree_K2_GetExtension final
+{
+public:
+	TSubclassOf<class UStateTreeExtension>        ExtensionType;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UStateTreeExtension*              ReturnValue;                                       // 0x0008(0x0008)(ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTree_K2_GetExtension;
+
+// Function StateTreeModule.StateTreeFunctionLibrary.K2_GetParametersProperty
+// 0x0040 (0x0040 - 0x0000)
+struct StateTreeFunctionLibrary_K2_GetParametersProperty final
+{
+public:
+	struct FStateTreeReference                    Reference;                                         // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGuid                                  PropertyID;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_StateTreeFunctionLibrary_K2_GetParametersProperty;
+
+// Function StateTreeModule.StateTreeFunctionLibrary.K2_SetParametersProperty
+// 0x0040 (0x0040 - 0x0000)
+struct StateTreeFunctionLibrary_K2_SetParametersProperty final
+{
+public:
+	struct FStateTreeReference                    Reference;                                         // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGuid                                  PropertyID;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewValue;                                          // 0x0038(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_StateTreeFunctionLibrary_K2_SetParametersProperty;
+
+// Function StateTreeModule.StateTreeFunctionLibrary.MakeStateTreeReference
+// 0x0030 (0x0030 - 0x0000)
+struct StateTreeFunctionLibrary_MakeStateTreeReference final
+{
+public:
+	class UStateTree*                             StateTree;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FStateTreeReference                    ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeFunctionLibrary_MakeStateTreeReference;
+
+// Function StateTreeModule.StateTreeFunctionLibrary.SetStateTree
+// 0x0030 (0x0030 - 0x0000)
+struct StateTreeFunctionLibrary_SetStateTree final
+{
+public:
+	struct FStateTreeReference                    Reference;                                         // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UStateTree*                             StateTree;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeFunctionLibrary_SetStateTree;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

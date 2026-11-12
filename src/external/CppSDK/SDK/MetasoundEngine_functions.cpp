@@ -16,6 +16,3578 @@
 
 SDK_NAMESPACE_START
 
+// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMetaSoundAssetSubsystem::RegisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundAssetSubsystem", "RegisterAssetClassesInDirectories");
+
+	Params::MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories Parms{};
+
+	Parms.Directories = std::move(Directories);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMetaSoundAssetSubsystem::UnregisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundAssetSubsystem", "UnregisterAssetClassesInDirectories");
+
+	Params::MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories Parms{};
+
+	Parms.Directories = std::move(Directories);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& DefaultValue                                           (Parm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsConstructorInput                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeOutputHandleReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetaSoundBuilderNodeOutputHandle UMetaSoundBuilderBase::AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphInputNode");
+
+	Params::MetaSoundBuilderBase_AddGraphInputNode Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.DataType = DataType;
+	Parms.DefaultValue = std::move(DefaultValue);
+	Parms.bIsConstructorInput = bIsConstructorInput;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphOutputNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& DefaultValue                                           (Parm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsConstructorOutput                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeInputHandle ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetaSoundBuilderNodeInputHandle UMetaSoundBuilderBase::AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphOutputNode");
+
+	Params::MetaSoundBuilderBase_AddGraphOutputNode Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.DataType = DataType;
+	Parms.DefaultValue = std::move(DefaultValue);
+	Parms.bIsConstructorOutput = bIsConstructorOutput;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariable
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& DefaultValue                                           (Parm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::AddGraphVariable(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphVariable");
+
+	Params::MetaSoundBuilderBase_AddGraphVariable Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.DataType = DataType;
+	Parms.DefaultValue = std::move(DefaultValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetDelayedNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddGraphVariableGetDelayedNode(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphVariableGetDelayedNode");
+
+	Params::MetaSoundBuilderBase_AddGraphVariableGetDelayedNode Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableGetNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddGraphVariableGetNode(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphVariableGetNode");
+
+	Params::MetaSoundBuilderBase_AddGraphVariableGetNode Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphVariableSetNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddGraphVariableSetNode(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphVariableSetNode");
+
+	Params::MetaSoundBuilderBase_AddGraphVariableSetNode Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddInterface
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddInterface");
+
+	Params::MetaSoundBuilderBase_AddInterface Parms{};
+
+	Parms.InterfaceName = InterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TScriptInterface<class IMetaSoundDocumentInterface>&NodeClass                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddNode");
+
+	Params::MetaSoundBuilderBase_AddNode Parms{};
+
+	Parms.NodeClass = NodeClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.AddNodeByClassName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendClassName&ClassName                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MajorVersion                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "AddNodeByClassName");
+
+	Params::MetaSoundBuilderBase_AddNodeByClassName Parms{};
+
+	Parms.ClassName = std::move(ClassName);
+	Parms.MajorVersion = MajorVersion;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.BuildAndOverwriteMetaSound
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IMetaSoundDocumentInterface>ExistingMetaSound                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bForceUniqueClassName                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::BuildAndOverwriteMetaSound(TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound, bool bForceUniqueClassName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "BuildAndOverwriteMetaSound");
+
+	Params::MetaSoundBuilderBase_BuildAndOverwriteMetaSound Parms{};
+
+	Parms.ExistingMetaSound = ExistingMetaSound;
+	Parms.bForceUniqueClassName = bForceUniqueClassName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNamedNodeOutputToGraphOutput
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      SourceNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName&                      NodeOutputName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeInputHandle&GraphOutput                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNamedNodeOutputToGraphOutput(const struct FMetaSoundNodeHandle& SourceNode, const class FName& NodeOutputName, const struct FMetaSoundBuilderNodeInputHandle& GraphOutput, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNamedNodeOutputToGraphOutput");
+
+	Params::MetaSoundBuilderBase_ConnectNamedNodeOutputToGraphOutput Parms{};
+
+	Parms.SourceNode = std::move(SourceNode);
+	Parms.NodeOutputName = NodeOutputName;
+	Parms.GraphOutput = std::move(GraphOutput);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNamedNodeOutputToNamedGraphOutput
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      SourceNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class FName&                      NodeOutputName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      GraphOutputName                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNamedNodeOutputToNamedGraphOutput(const struct FMetaSoundNodeHandle& SourceNode, const class FName& NodeOutputName, const class FName& GraphOutputName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNamedNodeOutputToNamedGraphOutput");
+
+	Params::MetaSoundBuilderBase_ConnectNamedNodeOutputToNamedGraphOutput Parms{};
+
+	Parms.SourceNode = std::move(SourceNode);
+	Parms.NodeOutputName = NodeOutputName;
+	Parms.GraphOutputName = GraphOutputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputsToMatchingGraphInterfaceInputs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::ConnectNodeInputsToMatchingGraphInterfaceInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeInputsToMatchingGraphInterfaceInputs");
+
+	Params::MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputToGraphInput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             GraphInputName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNodeInputToGraphInput(class FName GraphInputName, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeInputToGraphInput");
+
+	Params::MetaSoundBuilderBase_ConnectNodeInputToGraphInput Parms{};
+
+	Parms.GraphInputName = GraphInputName;
+	Parms.NodeInputHandle = std::move(NodeInputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputsToMatchingGraphInterfaceOutputs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::ConnectNodeOutputsToMatchingGraphInterfaceOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeOutputsToMatchingGraphInterfaceOutputs");
+
+	Params::MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputToGraphOutput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             GraphOutputName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNodeOutputToGraphOutput(class FName GraphOutputName, const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeOutputToGraphOutput");
+
+	Params::MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput Parms{};
+
+	Parms.GraphOutputName = GraphOutputName;
+	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodes");
+
+	Params::MetaSoundBuilderBase_ConnectNodes Parms{};
+
+	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
+	Parms.NodeInputHandle = std::move(NodeInputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodesByInterfaceBindings
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      FromNodeHandle                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FMetaSoundNodeHandle&      ToNodeHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodesByInterfaceBindings");
+
+	Params::MetaSoundBuilderBase_ConnectNodesByInterfaceBindings Parms{};
+
+	Parms.FromNodeHandle = std::move(FromNodeHandle);
+	Parms.ToNodeHandle = std::move(ToNodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConvertFromPreset
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConvertFromPreset(EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConvertFromPreset");
+
+	Params::MetaSoundBuilderBase_ConvertFromPreset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ConvertToPreset
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedNodeClass                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ConvertToPreset(const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedNodeClass, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ConvertToPreset");
+
+	Params::MetaSoundBuilderBase_ConvertToPreset Parms{};
+
+	Parms.ReferencedNodeClass = ReferencedNodeClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeInput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::DisconnectNodeInput(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodeInput");
+
+	Params::MetaSoundBuilderBase_DisconnectNodeInput Parms{};
+
+	Parms.NodeInputHandle = std::move(NodeInputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeOutput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::DisconnectNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodeOutput");
+
+	Params::MetaSoundBuilderBase_DisconnectNodeOutput Parms{};
+
+	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::DisconnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodes");
+
+	Params::MetaSoundBuilderBase_DisconnectNodes Parms{};
+
+	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
+	Parms.NodeInputHandle = std::move(NodeInputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodesByInterfaceBindings
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      FromNodeHandle                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FMetaSoundNodeHandle&      ToNodeHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::DisconnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodesByInterfaceBindings");
+
+	Params::MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings Parms{};
+
+	Parms.FromNodeHandle = std::move(FromNodeHandle);
+	Parms.ToNodeHandle = std::move(ToNodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindGraphInputNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            OutDataType                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeOutputHandle*NodeOutputHandle                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindGraphInputNode(class FName InputName, class FName* OutDataType, struct FMetaSoundBuilderNodeOutputHandle* NodeOutputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindGraphInputNode");
+
+	Params::MetaSoundBuilderBase_FindGraphInputNode Parms{};
+
+	Parms.InputName = InputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDataType != nullptr)
+		*OutDataType = Parms.OutDataType;
+
+	if (NodeOutputHandle != nullptr)
+		*NodeOutputHandle = std::move(Parms.NodeOutputHandle);
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindGraphOutputNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            OutDataType                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeInputHandle*NodeInputHandle                                        (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindGraphOutputNode(class FName OutputName, class FName* OutDataType, struct FMetaSoundBuilderNodeInputHandle* NodeInputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindGraphOutputNode");
+
+	Params::MetaSoundBuilderBase_FindGraphOutputNode Parms{};
+
+	Parms.OutputName = OutputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDataType != nullptr)
+		*OutDataType = Parms.OutDataType;
+
+	if (NodeInputHandle != nullptr)
+		*NodeInputHandle = std::move(Parms.NodeInputHandle);
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceInputNodes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundNodeHandle>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundNodeHandle> UMetaSoundBuilderBase::FindInterfaceInputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindInterfaceInputNodes");
+
+	Params::MetaSoundBuilderBase_FindInterfaceInputNodes Parms{};
+
+	Parms.InterfaceName = InterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceOutputNodes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundNodeHandle>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundNodeHandle> UMetaSoundBuilderBase::FindInterfaceOutputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindInterfaceOutputNodes");
+
+	Params::MetaSoundBuilderBase_FindInterfaceOutputNodes Parms{};
+
+	Parms.InterfaceName = InterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeClassVersion
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendVersion        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendVersion UMetaSoundBuilderBase::FindNodeClassVersion(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeClassVersion");
+
+	Params::MetaSoundBuilderBase_FindNodeClassVersion Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputByName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeInputHandle ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetaSoundBuilderNodeInputHandle UMetaSoundBuilderBase::FindNodeInputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName InputName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputByName");
+
+	Params::MetaSoundBuilderBase_FindNodeInputByName Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+	Parms.InputName = InputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputParent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindNodeInputParent(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputParent");
+
+	Params::MetaSoundBuilderBase_FindNodeInputParent Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::FindNodeInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputs");
+
+	Params::MetaSoundBuilderBase_FindNodeInputs Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputsByDataType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::FindNodeInputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputsByDataType");
+
+	Params::MetaSoundBuilderBase_FindNodeInputsByDataType Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+	Parms.DataType = DataType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputByName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeOutputHandleReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetaSoundBuilderNodeOutputHandle UMetaSoundBuilderBase::FindNodeOutputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName OutputName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputByName");
+
+	Params::MetaSoundBuilderBase_FindNodeOutputByName Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+	Parms.OutputName = OutputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputParent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindNodeOutputParent(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputParent");
+
+	Params::MetaSoundBuilderBase_FindNodeOutputParent Parms{};
+
+	Parms.OutputHandle = std::move(OutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputs");
+
+	Params::MetaSoundBuilderBase_FindNodeOutputs Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputsByDataType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputsByDataType");
+
+	Params::MetaSoundBuilderBase_FindNodeOutputsByDataType Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+	Parms.DataType = DataType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputClassDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputClassDefault");
+
+	Params::MetaSoundBuilderBase_GetNodeInputClassDefault Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputData
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputData");
+
+	Params::MetaSoundBuilderBase_GetNodeInputData Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Name_0 != nullptr)
+		*Name_0 = Parms.Name_0;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputDefault");
+
+	Params::MetaSoundBuilderBase_GetNodeInputDefault Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputData
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeOutputData");
+
+	Params::MetaSoundBuilderBase_GetNodeOutputData Parms{};
+
+	Parms.OutputHandle = std::move(OutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Name_0 != nullptr)
+		*Name_0 = Parms.Name_0;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphInput");
+
+	Params::MetaSoundBuilderBase_RemoveGraphInput Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             pageName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveGraphInputDefault(class FName Name_0, EMetaSoundBuilderResult* OutResult, class FName pageName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphInputDefault");
+
+	Params::MetaSoundBuilderBase_RemoveGraphInputDefault Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.pageName = pageName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphOutput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphOutput");
+
+	Params::MetaSoundBuilderBase_RemoveGraphOutput Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphVariable
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveGraphVariable(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphVariable");
+
+	Params::MetaSoundBuilderBase_RemoveGraphVariable Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveInterface
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveInterface");
+
+	Params::MetaSoundBuilderBase_RemoveInterface Parms{};
+
+	Parms.InterfaceName = InterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRemoveUnusedDependencies                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, bool bRemoveUnusedDependencies)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveNode");
+
+	Params::MetaSoundBuilderBase_RemoveNode Parms{};
+
+	Parms.NodeHandle = std::move(NodeHandle);
+	Parms.bRemoveUnusedDependencies = bRemoveUnusedDependencies;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveNodeInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveNodeInputDefault");
+
+	Params::MetaSoundBuilderBase_RemoveNodeInputDefault Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.RemoveUnusedDependencies
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UMetaSoundBuilderBase::RemoveUnusedDependencies()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveUnusedDependencies");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ResetGraphInputDefaults
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::ResetGraphInputDefaults(class FName Name_0, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ResetGraphInputDefaults");
+
+	Params::MetaSoundBuilderBase_ResetGraphInputDefaults Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetConfiguration
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FInstancedStruct&          Configuration                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetConfiguration(const struct FInstancedStruct& Configuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetConfiguration");
+
+	Params::MetaSoundBuilderBase_SetConfiguration Parms{};
+
+	Parms.Configuration = std::move(Configuration);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputAccessType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetasoundFrontendVertexAccessType      AccessType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphInputAccessType(class FName InputName, EMetasoundFrontendVertexAccessType AccessType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputAccessType");
+
+	Params::MetaSoundBuilderBase_SetGraphInputAccessType Parms{};
+
+	Parms.InputName = InputName;
+	Parms.AccessType = AccessType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDataType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphInputDataType(class FName InputName, class FName DataType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputDataType");
+
+	Params::MetaSoundBuilderBase_SetGraphInputDataType Parms{};
+
+	Parms.InputName = InputName;
+	Parms.DataType = DataType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             pageName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphInputDefault(class FName InputName, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult, class FName pageName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputDefault");
+
+	Params::MetaSoundBuilderBase_SetGraphInputDefault Parms{};
+
+	Parms.InputName = InputName;
+	Parms.Literal = std::move(Literal);
+	Parms.pageName = pageName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NewName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphInputName(class FName InputName, class FName NewName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputName");
+
+	Params::MetaSoundBuilderBase_SetGraphInputName Parms{};
+
+	Parms.InputName = InputName;
+	Parms.NewName = NewName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputAccessType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetasoundFrontendVertexAccessType      AccessType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphOutputAccessType(class FName OutputName, EMetasoundFrontendVertexAccessType AccessType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputAccessType");
+
+	Params::MetaSoundBuilderBase_SetGraphOutputAccessType Parms{};
+
+	Parms.OutputName = OutputName;
+	Parms.AccessType = AccessType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputDataType
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphOutputDataType(class FName OutputName, class FName DataType, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputDataType");
+
+	Params::MetaSoundBuilderBase_SetGraphOutputDataType Parms{};
+
+	Parms.OutputName = OutputName;
+	Parms.DataType = DataType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NewName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetGraphOutputName(class FName OutputName, class FName NewName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputName");
+
+	Params::MetaSoundBuilderBase_SetGraphOutputName Parms{};
+
+	Parms.OutputName = OutputName;
+	Parms.NewName = NewName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetNodeInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetNodeInputDefault");
+
+	Params::MetaSoundBuilderBase_SetNodeInputDefault Parms{};
+
+	Parms.NodeInputHandle = std::move(NodeInputHandle);
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.SetTemplate
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FInstancedStruct&          Configuration                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderBase::SetTemplate(const struct FInstancedStruct& Configuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "SetTemplate");
+
+	Params::MetaSoundBuilderBase_SetTemplate Parms{};
+
+	Parms.Configuration = std::move(Configuration);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.Build
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderOptions&  Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundBuilderBase::Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "Build");
+
+	Params::MetaSoundBuilderBase_Build Parms{};
+
+	Parms.Parent = Parent;
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.BuildNewMetaSound
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             NameBase                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundBuilderBase::BuildNewMetaSound(class FName NameBase) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "BuildNewMetaSound");
+
+	Params::MetaSoundBuilderBase_BuildNewMetaSound Parms{};
+
+	Parms.NameBase = NameBase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNode
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundNodeHandle&      Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::ContainsNode(const struct FMetaSoundNodeHandle& Node) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNode");
+
+	Params::MetaSoundBuilderBase_ContainsNode Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeInput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::ContainsNodeInput(const struct FMetaSoundBuilderNodeInputHandle& Input) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNodeInput");
+
+	Params::MetaSoundBuilderBase_ContainsNodeInput Parms{};
+
+	Parms.Input = std::move(Input);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeOutput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&Output                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::ContainsNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& Output) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNodeOutput");
+
+	Params::MetaSoundBuilderBase_ContainsNodeOutput Parms{};
+
+	Parms.Output = std::move(Output);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetConfiguration
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FInstancedStruct UMetaSoundBuilderBase::GetConfiguration(EMetaSoundBuilderResult* OutResult) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetConfiguration");
+
+	Params::MetaSoundBuilderBase_GetConfiguration Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetDocumentTemplate
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FInstancedStruct UMetaSoundBuilderBase::GetDocumentTemplate(EMetaSoundBuilderResult* OutResult) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetDocumentTemplate");
+
+	Params::MetaSoundBuilderBase_GetDocumentTemplate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             pageName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetGraphInputDefault(class FName InputName, EMetaSoundBuilderResult* OutResult, class FName pageName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetGraphInputDefault");
+
+	Params::MetaSoundBuilderBase_GetGraphInputDefault Parms{};
+
+	Parms.InputName = InputName;
+	Parms.pageName = pageName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphInputNames
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UMetaSoundBuilderBase::GetGraphInputNames(EMetaSoundBuilderResult* OutResult) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetGraphInputNames");
+
+	Params::MetaSoundBuilderBase_GetGraphInputNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphOutputNames
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UMetaSoundBuilderBase::GetGraphOutputNames(EMetaSoundBuilderResult* OutResult) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetGraphOutputNames");
+
+	Params::MetaSoundBuilderBase_GetGraphOutputNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetGraphVariableDefault
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetGraphVariableDefault(class FName VariableName, EMetaSoundBuilderResult* OutResult) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetGraphVariableDefault");
+
+	Params::MetaSoundBuilderBase_GetGraphVariableDefault Parms{};
+
+	Parms.VariableName = VariableName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetMetaSound
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundBuilderBase::GetMetaSound() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetMetaSound");
+
+	Params::MetaSoundBuilderBase_GetMetaSound Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputIsConstructorPin
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::GetNodeInputIsConstructorPin(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputIsConstructorPin");
+
+	Params::MetaSoundBuilderBase_GetNodeInputIsConstructorPin Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputIsConstructorPin
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::GetNodeOutputIsConstructorPin(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeOutputIsConstructorPin");
+
+	Params::MetaSoundBuilderBase_GetNodeOutputIsConstructorPin Parms{};
+
+	Parms.OutputHandle = std::move(OutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetReferencedPresetAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UMetaSoundBuilderBase::GetReferencedPresetAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetReferencedPresetAsset");
+
+	Params::MetaSoundBuilderBase_GetReferencedPresetAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.GetRootGraphClassName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FMetasoundFrontendClassName      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendClassName UMetaSoundBuilderBase::GetRootGraphClassName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "GetRootGraphClassName");
+
+	Params::MetaSoundBuilderBase_GetRootGraphClassName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.InterfaceIsDeclared
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::InterfaceIsDeclared(class FName InterfaceName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "InterfaceIsDeclared");
+
+	Params::MetaSoundBuilderBase_InterfaceIsDeclared Parms{};
+
+	Parms.InterfaceName = InterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.IsPreset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::IsPreset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "IsPreset");
+
+	Params::MetaSoundBuilderBase_IsPreset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.NodeInputIsConnected
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::NodeInputIsConnected(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "NodeInputIsConnected");
+
+	Params::MetaSoundBuilderBase_NodeInputIsConnected Parms{};
+
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.NodeOutputIsConnected
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::NodeOutputIsConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "NodeOutputIsConnected");
+
+	Params::MetaSoundBuilderBase_NodeOutputIsConnected Parms{};
+
+	Parms.OutputHandle = std::move(OutputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderBase.NodesAreConnected
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderBase::NodesAreConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderBase", "NodesAreConnected");
+
+	Params::MetaSoundBuilderBase_NodesAreConnected Parms{};
+
+	Parms.OutputHandle = std::move(OutputHandle);
+	Parms.InputHandle = std::move(InputHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.Audition
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAudioComponent*                  AudioComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)>OnCreateGenerator                                      (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bLiveUpdatesEnabled                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundSourceBuilder::Audition(class UObject* Parent, class UAudioComponent* AudioComponent, TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)> OnCreateGenerator, bool bLiveUpdatesEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "Audition");
+
+	Params::MetaSoundSourceBuilder_Audition Parms{};
+
+	Parms.Parent = Parent;
+	Parms.AudioComponent = AudioComponent;
+	Parms.OnCreateGenerator = OnCreateGenerator;
+	Parms.bLiveUpdatesEnabled = bLiveUpdatesEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.SetBlockRateOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   BlockRate                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundSourceBuilder::SetBlockRateOverride(float BlockRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetBlockRateOverride");
+
+	Params::MetaSoundSourceBuilder_SetBlockRateOverride Parms{};
+
+	Parms.BlockRate = BlockRate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.SetFormat
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// EMetaSoundOutputAudioFormat             OutputFormat                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundSourceBuilder::SetFormat(EMetaSoundOutputAudioFormat OutputFormat, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetFormat");
+
+	Params::MetaSoundSourceBuilder_SetFormat Parms{};
+
+	Parms.OutputFormat = OutputFormat;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.SetQuality
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             Quality                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundSourceBuilder::SetQuality(class FName Quality)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetQuality");
+
+	Params::MetaSoundSourceBuilder_SetQuality Parms{};
+
+	Parms.Quality = Quality;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.SetSampleRateOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   SampleRate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundSourceBuilder::SetSampleRateOverride(int32 SampleRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetSampleRateOverride");
+
+	Params::MetaSoundSourceBuilder_SetSampleRateOverride Parms{};
+
+	Parms.SampleRate = SampleRate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundSourceBuilder.GetLiveUpdatesEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundSourceBuilder::GetLiveUpdatesEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundSourceBuilder", "GetLiveUpdatesEnabled");
+
+	Params::MetaSoundSourceBuilder_GetLiveUpdatesEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<bool>&                     Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateBoolArrayMetaSoundLiteral(const TArray<bool>& Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateBoolArrayMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateBoolMetaSoundLiteral(bool Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateBoolMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatArrayMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<float>&                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateFloatArrayMetaSoundLiteral(const TArray<float>& Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateFloatArrayMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateFloatMetaSoundLiteral(float Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateFloatMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntArrayMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<int32>&                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateIntArrayMetaSoundLiteral(const TArray<int32>& Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateIntArrayMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateIntMetaSoundLiteral(int32 Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateIntMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateMetaSoundLiteralFromParam
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FAudioParameter&           Param                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateMetaSoundLiteralFromParam(const struct FAudioParameter& Param)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateMetaSoundLiteralFromParam");
+
+	Params::MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam Parms{};
+
+	Parms.Param = std::move(Param);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectArrayMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class UObject*>&           Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateObjectArrayMetaSoundLiteral(const TArray<class UObject*>& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateObjectArrayMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Value                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateObjectMetaSoundLiteral(class UObject* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateObjectMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchBuilder
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::CreatePatchBuilder(class FName BuilderName, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreatePatchBuilder");
+
+	Params::MetaSoundBuilderSubsystem_CreatePatchBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchPresetBuilder
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedPatchClass                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::CreatePatchPresetBuilder(class FName BuilderName, const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedPatchClass, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreatePatchPresetBuilder");
+
+	Params::MetaSoundBuilderSubsystem_CreatePatchPresetBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.ReferencedPatchClass = ReferencedPatchClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourceBuilder
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeOutputHandle*OnPlayNodeOutput                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetaSoundBuilderNodeInputHandle*OnFinishedNodeInput                                    (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMetaSoundBuilderNodeInputHandle>*AudioOutNodeInputs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundOutputAudioFormat             OutputFormat                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsOneShot                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::CreateSourceBuilder(class FName BuilderName, struct FMetaSoundBuilderNodeOutputHandle* OnPlayNodeOutput, struct FMetaSoundBuilderNodeInputHandle* OnFinishedNodeInput, TArray<struct FMetaSoundBuilderNodeInputHandle>* AudioOutNodeInputs, EMetaSoundBuilderResult* OutResult, EMetaSoundOutputAudioFormat OutputFormat, bool bIsOneShot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateSourceBuilder");
+
+	Params::MetaSoundBuilderSubsystem_CreateSourceBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.OutputFormat = OutputFormat;
+	Parms.bIsOneShot = bIsOneShot;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OnPlayNodeOutput != nullptr)
+		*OnPlayNodeOutput = std::move(Parms.OnPlayNodeOutput);
+
+	if (OnFinishedNodeInput != nullptr)
+		*OnFinishedNodeInput = std::move(Parms.OnFinishedNodeInput);
+
+	if (AudioOutNodeInputs != nullptr)
+		*AudioOutNodeInputs = std::move(Parms.AudioOutNodeInputs);
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourcePresetBuilder
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedSourceClass                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::CreateSourcePresetBuilder(class FName BuilderName, const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedSourceClass, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateSourcePresetBuilder");
+
+	Params::MetaSoundBuilderSubsystem_CreateSourcePresetBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.ReferencedSourceClass = ReferencedSourceClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringArrayMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateStringArrayMetaSoundLiteral(const TArray<class FString>& Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateStringArrayMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringMetaSoundLiteral
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateStringMetaSoundLiteral(const class FString& Value, class FName* DataType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateStringMetaSoundLiteral");
+
+	Params::MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DataType != nullptr)
+		*DataType = Parms.DataType;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundBuilderBase*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundBuilderBase* UMetaSoundBuilderSubsystem::FindBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindBuilder");
+
+	Params::MetaSoundBuilderSubsystem_FindBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindParentBuilderOfPreset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IMetaSoundDocumentInterface>InMetaSoundPreset                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFollowPresetChain                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundBuilderBase*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundBuilderBase* UMetaSoundBuilderSubsystem::FindParentBuilderOfPreset(TScriptInterface<class IMetaSoundDocumentInterface> InMetaSoundPreset, bool bFollowPresetChain)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindParentBuilderOfPreset");
+
+	Params::MetaSoundBuilderSubsystem_FindParentBuilderOfPreset Parms{};
+
+	Parms.InMetaSoundPreset = InMetaSoundPreset;
+	Parms.bFollowPresetChain = bFollowPresetChain;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindPatchBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::FindPatchBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindPatchBuilder");
+
+	Params::MetaSoundBuilderSubsystem_FindPatchBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindSourceBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::FindSourceBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindSourceBuilder");
+
+	Params::MetaSoundBuilderSubsystem_FindSourceBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundBuilderBase*            Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderSubsystem::RegisterBuilder(class FName BuilderName, class UMetaSoundBuilderBase* Builder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterBuilder");
+
+	Params::MetaSoundBuilderSubsystem_RegisterBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.Builder = Builder;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterPatchBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundPatchBuilder*           Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderSubsystem::RegisterPatchBuilder(class FName BuilderName, class UMetaSoundPatchBuilder* Builder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterPatchBuilder");
+
+	Params::MetaSoundBuilderSubsystem_RegisterPatchBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.Builder = Builder;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterSourceBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundSourceBuilder*          Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMetaSoundBuilderSubsystem::RegisterSourceBuilder(class FName BuilderName, class UMetaSoundSourceBuilder* Builder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterSourceBuilder");
+
+	Params::MetaSoundBuilderSubsystem_RegisterSourceBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+	Parms.Builder = Builder;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.SetTargetPage
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             pageName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderSubsystem::SetTargetPage(class FName pageName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "SetTargetPage");
+
+	Params::MetaSoundBuilderSubsystem_SetTargetPage Parms{};
+
+	Parms.pageName = pageName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderSubsystem::UnregisterBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterBuilder");
+
+	Params::MetaSoundBuilderSubsystem_UnregisterBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterPatchBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderSubsystem::UnregisterPatchBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterPatchBuilder");
+
+	Params::MetaSoundBuilderSubsystem_UnregisterPatchBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterSourceBuilder
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderSubsystem::UnregisterSourceBuilder(class FName BuilderName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterSourceBuilder");
+
+	Params::MetaSoundBuilderSubsystem_UnregisterSourceBuilder Parms{};
+
+	Parms.BuilderName = BuilderName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilderOfDocument
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TScriptInterface<class IMetaSoundDocumentInterface>InMetaSound                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMetaSoundBuilderBase*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMetaSoundBuilderBase* UMetaSoundBuilderSubsystem::FindBuilderOfDocument(TScriptInterface<class IMetaSoundDocumentInterface> InMetaSound) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindBuilderOfDocument");
+
+	Params::MetaSoundBuilderSubsystem_FindBuilderOfDocument Parms{};
+
+	Parms.InMetaSound = InMetaSound;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundBuilderSubsystem.IsInterfaceRegistered
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InInterfaceName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundBuilderSubsystem::IsInterfaceRegistered(class FName InInterfaceName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "IsInterfaceRegistered");
+
+	Params::MetaSoundBuilderSubsystem_IsInterfaceRegistered Parms{};
+
+	Parms.InInterfaceName = InInterfaceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.Conv_MetaSoundLiteralToString
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMetasoundFrontendLiteralBlueprintAccess::Conv_MetaSoundLiteralToString(const struct FMetasoundFrontendLiteral& Literal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "Conv_MetaSoundLiteralToString");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_Conv_MetaSoundLiteralToString Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateBoolArrayMetaSoundLiteral
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -184,6 +3756,258 @@ struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::Creat
 }
 
 
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromAudioParameter
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAudioParameter&           InAudioParameter                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromAudioParameter(const struct FAudioParameter& InAudioParameter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromAudioParameter");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromAudioParameter Parms{};
+
+	Parms.InAudioParameter = std::move(InAudioParameter);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromBoolean
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const bool                              InBoolean                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromBoolean(const bool InBoolean)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromBoolean");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBoolean Parms{};
+
+	Parms.InBoolean = InBoolean;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromBooleanArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const TArray<bool>&                     InBooleanArray                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromBooleanArray(const TArray<bool>& InBooleanArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromBooleanArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromBooleanArray Parms{};
+
+	Parms.InBooleanArray = std::move(InBooleanArray);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromFloat
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const float                             InFloat                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromFloat(const float InFloat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromFloat");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloat Parms{};
+
+	Parms.InFloat = InFloat;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromFloatArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const TArray<float>&                    InFloatArray                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromFloatArray(const TArray<float>& InFloatArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromFloatArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromFloatArray Parms{};
+
+	Parms.InFloatArray = std::move(InFloatArray);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromInteger
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const int32                             InInteger                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromInteger(const int32 InInteger)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromInteger");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromInteger Parms{};
+
+	Parms.InInteger = InInteger;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromIntegerArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const TArray<int32>&                    InIntegerArray                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromIntegerArray(const TArray<int32>& InIntegerArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromIntegerArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromIntegerArray Parms{};
+
+	Parms.InIntegerArray = std::move(InIntegerArray);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromObject
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          InObject                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromObject(class UObject* InObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromObject");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObject Parms{};
+
+	Parms.InObject = InObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromObjectArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const TArray<class UObject*>&           InObjectArray                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromObjectArray(const TArray<class UObject*>& InObjectArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromObjectArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromObjectArray Parms{};
+
+	Parms.InObjectArray = std::move(InObjectArray);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromParam
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -200,6 +4024,62 @@ struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::Creat
 	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromParam Parms{};
 
 	Parms.Param = std::move(Param);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromString
+// (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class FString&                    InString                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromString(const class FString& InString)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromString");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromString Parms{};
+
+	Parms.InString = std::move(InString);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.CreateMetaSoundLiteralFromStringArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const TArray<class FString>&            InStringArray                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::CreateMetaSoundLiteralFromStringArray(const TArray<class FString>& InStringArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "CreateMetaSoundLiteralFromStringArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_CreateMetaSoundLiteralFromStringArray Parms{};
+
+	Parms.InStringArray = std::move(InStringArray);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -324,8 +4204,666 @@ struct FMetasoundFrontendLiteral UMetasoundFrontendLiteralBlueprintAccess::Creat
 }
 
 
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.EqualEqual_MetaSoundLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& LiteralA                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FMetasoundFrontendLiteral& LiteralB                                               (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetasoundFrontendLiteralBlueprintAccess::EqualEqual_MetaSoundLiteral(const struct FMetasoundFrontendLiteral& LiteralA, const struct FMetasoundFrontendLiteral& LiteralB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "EqualEqual_MetaSoundLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_EqualEqual_MetaSoundLiteral Parms{};
+
+	Parms.LiteralA = std::move(LiteralA);
+	Parms.LiteralB = std::move(LiteralB);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolArrayValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<bool>                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<bool> UMetasoundFrontendLiteralBlueprintAccess::GetBoolArrayValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetBoolArrayValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetBoolArrayValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetBoolValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetasoundFrontendLiteralBlueprintAccess::GetBoolValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetBoolValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetBoolValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatArrayValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UMetasoundFrontendLiteralBlueprintAccess::GetFloatArrayValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetFloatArrayValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetFloatArrayValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetFloatValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMetasoundFrontendLiteralBlueprintAccess::GetFloatValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetFloatValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetFloatValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntArrayValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UMetasoundFrontendLiteralBlueprintAccess::GetIntArrayValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetIntArrayValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetIntArrayValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetIntValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMetasoundFrontendLiteralBlueprintAccess::GetIntValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetIntValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetIntValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsBool
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsBool(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsBool");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBool Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsBoolArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<bool>                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<bool> UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsBoolArray(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsBoolArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsBoolArray Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsFloat
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsFloat(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsFloat");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloat Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsFloatArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsFloatArray(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsFloatArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsFloatArray Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsInteger
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsInteger(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsInteger");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsInteger Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsIntegerArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsIntegerArray(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsIntegerArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsIntegerArray Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsObject
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsObject(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsObject");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObject Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsObjectArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UObject*> UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsObjectArray(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsObjectArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsObjectArray Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsString
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsString(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsString");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsString Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetMetaSoundLiteralAsStringArray
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& InLiteral                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UMetasoundFrontendLiteralBlueprintAccess::GetMetaSoundLiteralAsStringArray(const struct FMetasoundFrontendLiteral& InLiteral)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetMetaSoundLiteralAsStringArray");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetMetaSoundLiteralAsStringArray Parms{};
+
+	Parms.InLiteral = std::move(InLiteral);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectArrayValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UObject*> UMetasoundFrontendLiteralBlueprintAccess::GetObjectArrayValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetObjectArrayValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetObjectArrayValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetObjectValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UMetasoundFrontendLiteralBlueprintAccess::GetObjectValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetObjectValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetObjectValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringArrayValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FString> UMetasoundFrontendLiteralBlueprintAccess::GetStringArrayValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetStringArrayValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetStringArrayValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetStringValueFromLiteral
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMetasoundFrontendLiteralBlueprintAccess::GetStringValueFromLiteral(const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetStringValueFromLiteral");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetStringValueFromLiteral Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = Parms.OutResult;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess.GetType
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMetasoundFrontendLiteralType           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMetasoundFrontendLiteralType UMetasoundFrontendLiteralBlueprintAccess::GetType(const struct FMetasoundFrontendLiteral& Literal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetasoundFrontendLiteralBlueprintAccess", "GetType");
+
+	Params::MetasoundFrontendLiteralBlueprintAccess_GetType Parms{};
+
+	Parms.Literal = std::move(Literal);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MetasoundEngine.MetasoundGeneratorHandle.CreateMetaSoundGeneratorHandle
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UAudioComponent*                  OnComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMetasoundGeneratorHandle*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -353,7 +4891,7 @@ class UMetasoundGeneratorHandle* UMetasoundGeneratorHandle::CreateMetaSoundGener
 
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.ApplyParameterPack
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMetasoundParameterPack*          Pack                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -381,7 +4919,7 @@ bool UMetasoundGeneratorHandle::ApplyParameterPack(class UMetasoundParameterPack
 
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.WatchOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)>&OnOutputValueChanged                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -415,7 +4953,7 @@ bool UMetasoundGeneratorHandle::WatchOutput(class FName OutputName, const TDeleg
 
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.EnableRuntimeRenderTiming
-// (Final, Native, Public, BlueprintCallable, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
 // Parameters:
 // bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -440,7 +4978,7 @@ void UMetasoundGeneratorHandle::EnableRuntimeRenderTiming(bool Enable) const
 
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.GetCPUCoreUtilization
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -465,7 +5003,7 @@ double UMetasoundGeneratorHandle::GetCPUCoreUtilization() const
 
 
 // Function MetasoundEngine.MetasoundGeneratorHandle.UpdateWatchers
-// (Final, Native, Public, BlueprintCallable, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
 
 void UMetasoundGeneratorHandle::UpdateWatchers() const
 {
@@ -484,7 +5022,7 @@ void UMetasoundGeneratorHandle::UpdateWatchers() const
 
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.PrecacheMetaSound
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMetaSoundSource*                 InMetaSound                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InNumInstances                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -511,7 +5049,7 @@ void UMetaSoundCacheSubsystem::PrecacheMetaSound(class UMetaSoundSource* InMetaS
 
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.RemoveCachedOperatorsForMetaSound
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMetaSoundSource*                 InMetaSound                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -536,7 +5074,7 @@ void UMetaSoundCacheSubsystem::RemoveCachedOperatorsForMetaSound(class UMetaSoun
 
 
 // Function MetasoundEngine.MetaSoundCacheSubsystem.TouchOrPrecacheMetaSound
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMetaSoundSource*                 InMetaSound                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   InNumInstances                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -862,8 +5400,44 @@ bool UMetasoundOutputBlueprintAccess::IsTime(const struct FMetaSoundOutput& Outp
 }
 
 
+// Function MetasoundEngine.MetaSoundOutputSubsystem.UnwatchOutput
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UAudioComponent*                  AudioComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)>&OnOutputValueChanged                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AnalyzerName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AnalyzerOutputName                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMetaSoundOutputSubsystem::UnwatchOutput(class UAudioComponent* AudioComponent, class FName OutputName, const TDelegate<void(class FName OutputName, const struct FMetaSoundOutput& Output)>& OnOutputValueChanged, class FName AnalyzerName, class FName AnalyzerOutputName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundOutputSubsystem", "UnwatchOutput");
+
+	Params::MetaSoundOutputSubsystem_UnwatchOutput Parms{};
+
+	Parms.AudioComponent = AudioComponent;
+	Parms.OutputName = OutputName;
+	Parms.OnOutputValueChanged = OnOutputValueChanged;
+	Parms.AnalyzerName = AnalyzerName;
+	Parms.AnalyzerOutputName = AnalyzerOutputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UAudioComponent*                  AudioComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -916,2961 +5490,6 @@ TArray<class FName> UMetaSoundQualityHelper::GetQualityNames()
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMetaSoundAssetSubsystem::RegisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundAssetSubsystem", "RegisterAssetClassesInDirectories");
-
-	Params::MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories Parms{};
-
-	Parms.Directories = std::move(Directories);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMetaSoundAssetSubsystem::UnregisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundAssetSubsystem", "UnregisterAssetClassesInDirectories");
-
-	Params::MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories Parms{};
-
-	Parms.Directories = std::move(Directories);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetasoundFrontendLiteral& DefaultValue                                           (Parm, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsConstructorInput                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeOutputHandleReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetaSoundBuilderNodeOutputHandle UMetaSoundBuilderBase::AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphInputNode");
-
-	Params::MetaSoundBuilderBase_AddGraphInputNode Parms{};
-
-	Parms.Name_0 = Name_0;
-	Parms.DataType = DataType;
-	Parms.DefaultValue = std::move(DefaultValue);
-	Parms.bIsConstructorInput = bIsConstructorInput;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.AddGraphOutputNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetasoundFrontendLiteral& DefaultValue                                           (Parm, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsConstructorOutput                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeInputHandle ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetaSoundBuilderNodeInputHandle UMetaSoundBuilderBase::AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "AddGraphOutputNode");
-
-	Params::MetaSoundBuilderBase_AddGraphOutputNode Parms{};
-
-	Parms.Name_0 = Name_0;
-	Parms.DataType = DataType;
-	Parms.DefaultValue = std::move(DefaultValue);
-	Parms.bIsConstructorOutput = bIsConstructorOutput;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.AddInterface
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "AddInterface");
-
-	Params::MetaSoundBuilderBase_AddInterface Parms{};
-
-	Parms.InterfaceName = InterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.AddNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TScriptInterface<class IMetaSoundDocumentInterface>&NodeClass                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "AddNode");
-
-	Params::MetaSoundBuilderBase_AddNode Parms{};
-
-	Parms.NodeClass = NodeClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.AddNodeByClassName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetasoundFrontendClassName&ClassName                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MajorVersion                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "AddNodeByClassName");
-
-	Params::MetaSoundBuilderBase_AddNodeByClassName Parms{};
-
-	Parms.ClassName = std::move(ClassName);
-	Parms.MajorVersion = MajorVersion;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.BuildAndOverwriteMetaSound
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IMetaSoundDocumentInterface>ExistingMetaSound                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bForceUniqueClassName                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::BuildAndOverwriteMetaSound(TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound, bool bForceUniqueClassName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "BuildAndOverwriteMetaSound");
-
-	Params::MetaSoundBuilderBase_BuildAndOverwriteMetaSound Parms{};
-
-	Parms.ExistingMetaSound = ExistingMetaSound;
-	Parms.bForceUniqueClassName = bForceUniqueClassName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputsToMatchingGraphInterfaceInputs
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::ConnectNodeInputsToMatchingGraphInterfaceInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeInputsToMatchingGraphInterfaceInputs");
-
-	Params::MetaSoundBuilderBase_ConnectNodeInputsToMatchingGraphInterfaceInputs Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeInputToGraphInput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             GraphInputName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConnectNodeInputToGraphInput(class FName GraphInputName, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeInputToGraphInput");
-
-	Params::MetaSoundBuilderBase_ConnectNodeInputToGraphInput Parms{};
-
-	Parms.GraphInputName = GraphInputName;
-	Parms.NodeInputHandle = std::move(NodeInputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputsToMatchingGraphInterfaceOutputs
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::ConnectNodeOutputsToMatchingGraphInterfaceOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeOutputsToMatchingGraphInterfaceOutputs");
-
-	Params::MetaSoundBuilderBase_ConnectNodeOutputsToMatchingGraphInterfaceOutputs Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodeOutputToGraphOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             GraphOutputName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConnectNodeOutputToGraphOutput(class FName GraphOutputName, const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodeOutputToGraphOutput");
-
-	Params::MetaSoundBuilderBase_ConnectNodeOutputToGraphOutput Parms{};
-
-	Parms.GraphOutputName = GraphOutputName;
-	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodes");
-
-	Params::MetaSoundBuilderBase_ConnectNodes Parms{};
-
-	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
-	Parms.NodeInputHandle = std::move(NodeInputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConnectNodesByInterfaceBindings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      FromNodeHandle                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FMetaSoundNodeHandle&      ToNodeHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConnectNodesByInterfaceBindings");
-
-	Params::MetaSoundBuilderBase_ConnectNodesByInterfaceBindings Parms{};
-
-	Parms.FromNodeHandle = std::move(FromNodeHandle);
-	Parms.ToNodeHandle = std::move(ToNodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConvertFromPreset
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConvertFromPreset(EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConvertFromPreset");
-
-	Params::MetaSoundBuilderBase_ConvertFromPreset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ConvertToPreset
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedNodeClass                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::ConvertToPreset(const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedNodeClass, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ConvertToPreset");
-
-	Params::MetaSoundBuilderBase_ConvertToPreset Parms{};
-
-	Parms.ReferencedNodeClass = ReferencedNodeClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeInput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::DisconnectNodeInput(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodeInput");
-
-	Params::MetaSoundBuilderBase_DisconnectNodeInput Parms{};
-
-	Parms.NodeInputHandle = std::move(NodeInputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodeOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::DisconnectNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodeOutput");
-
-	Params::MetaSoundBuilderBase_DisconnectNodeOutput Parms{};
-
-	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&NodeOutputHandle                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::DisconnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodes");
-
-	Params::MetaSoundBuilderBase_DisconnectNodes Parms{};
-
-	Parms.NodeOutputHandle = std::move(NodeOutputHandle);
-	Parms.NodeInputHandle = std::move(NodeInputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.DisconnectNodesByInterfaceBindings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      FromNodeHandle                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FMetaSoundNodeHandle&      ToNodeHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::DisconnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "DisconnectNodesByInterfaceBindings");
-
-	Params::MetaSoundBuilderBase_DisconnectNodesByInterfaceBindings Parms{};
-
-	Parms.FromNodeHandle = std::move(FromNodeHandle);
-	Parms.ToNodeHandle = std::move(ToNodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindGraphInputNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindGraphInputNode(class FName InputName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindGraphInputNode");
-
-	Params::MetaSoundBuilderBase_FindGraphInputNode Parms{};
-
-	Parms.InputName = InputName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindGraphOutputNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindGraphOutputNode(class FName OutputName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindGraphOutputNode");
-
-	Params::MetaSoundBuilderBase_FindGraphOutputNode Parms{};
-
-	Parms.OutputName = OutputName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceInputNodes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundNodeHandle>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundNodeHandle> UMetaSoundBuilderBase::FindInterfaceInputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindInterfaceInputNodes");
-
-	Params::MetaSoundBuilderBase_FindInterfaceInputNodes Parms{};
-
-	Parms.InterfaceName = InterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindInterfaceOutputNodes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundNodeHandle>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundNodeHandle> UMetaSoundBuilderBase::FindInterfaceOutputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindInterfaceOutputNodes");
-
-	Params::MetaSoundBuilderBase_FindInterfaceOutputNodes Parms{};
-
-	Parms.InterfaceName = InterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeClassVersion
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendVersion        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendVersion UMetaSoundBuilderBase::FindNodeClassVersion(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeClassVersion");
-
-	Params::MetaSoundBuilderBase_FindNodeClassVersion Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputByName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeInputHandle ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetaSoundBuilderNodeInputHandle UMetaSoundBuilderBase::FindNodeInputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName InputName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputByName");
-
-	Params::MetaSoundBuilderBase_FindNodeInputByName Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-	Parms.InputName = InputName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputParent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindNodeInputParent(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputParent");
-
-	Params::MetaSoundBuilderBase_FindNodeInputParent Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputs
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::FindNodeInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputs");
-
-	Params::MetaSoundBuilderBase_FindNodeInputs Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeInputsByDataType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeInputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeInputHandle> UMetaSoundBuilderBase::FindNodeInputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeInputsByDataType");
-
-	Params::MetaSoundBuilderBase_FindNodeInputsByDataType Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-	Parms.DataType = DataType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputByName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeOutputHandleReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetaSoundBuilderNodeOutputHandle UMetaSoundBuilderBase::FindNodeOutputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName OutputName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputByName");
-
-	Params::MetaSoundBuilderBase_FindNodeOutputByName Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-	Parms.OutputName = OutputName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputParent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundNodeHandle             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FMetaSoundNodeHandle UMetaSoundBuilderBase::FindNodeOutputParent(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputParent");
-
-	Params::MetaSoundBuilderBase_FindNodeOutputParent Parms{};
-
-	Parms.OutputHandle = std::move(OutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputs
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputs");
-
-	Params::MetaSoundBuilderBase_FindNodeOutputs Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.FindNodeOutputsByDataType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeOutputHandle>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMetaSoundBuilderNodeOutputHandle> UMetaSoundBuilderBase::FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "FindNodeOutputsByDataType");
-
-	Params::MetaSoundBuilderBase_FindNodeOutputsByDataType Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-	Parms.DataType = DataType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputClassDefault
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputClassDefault");
-
-	Params::MetaSoundBuilderBase_GetNodeInputClassDefault Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputData
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputData");
-
-	Params::MetaSoundBuilderBase_GetNodeInputData Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Name_0 != nullptr)
-		*Name_0 = Parms.Name_0;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputDefault
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderBase::GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputDefault");
-
-	Params::MetaSoundBuilderBase_GetNodeInputDefault Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputData
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeOutputData");
-
-	Params::MetaSoundBuilderBase_GetNodeOutputData Parms{};
-
-	Parms.OutputHandle = std::move(OutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Name_0 != nullptr)
-		*Name_0 = Parms.Name_0;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphInput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphInput");
-
-	Params::MetaSoundBuilderBase_RemoveGraphInput Parms{};
-
-	Parms.Name_0 = Name_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveGraphOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveGraphOutput");
-
-	Params::MetaSoundBuilderBase_RemoveGraphOutput Parms{};
-
-	Parms.Name_0 = Name_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveInterface
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveInterface");
-
-	Params::MetaSoundBuilderBase_RemoveInterface Parms{};
-
-	Parms.InterfaceName = InterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      NodeHandle                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRemoveUnusedDependencies                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, bool bRemoveUnusedDependencies)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveNode");
-
-	Params::MetaSoundBuilderBase_RemoveNode Parms{};
-
-	Parms.NodeHandle = std::move(NodeHandle);
-	Parms.bRemoveUnusedDependencies = bRemoveUnusedDependencies;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveNodeInputDefault
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveNodeInputDefault");
-
-	Params::MetaSoundBuilderBase_RemoveNodeInputDefault Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.RemoveUnusedDependencies
-// (Final, Native, Public, BlueprintCallable)
-
-void UMetaSoundBuilderBase::RemoveUnusedDependencies()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "RemoveUnusedDependencies");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputAccessType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetasoundFrontendVertexAccessType      AccessType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphInputAccessType(class FName InputName, EMetasoundFrontendVertexAccessType AccessType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputAccessType");
-
-	Params::MetaSoundBuilderBase_SetGraphInputAccessType Parms{};
-
-	Parms.InputName = InputName;
-	Parms.AccessType = AccessType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDataType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphInputDataType(class FName InputName, class FName DataType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputDataType");
-
-	Params::MetaSoundBuilderBase_SetGraphInputDataType Parms{};
-
-	Parms.InputName = InputName;
-	Parms.DataType = DataType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputDefault
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphInputDefault(class FName InputName, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputDefault");
-
-	Params::MetaSoundBuilderBase_SetGraphInputDefault Parms{};
-
-	Parms.InputName = InputName;
-	Parms.Literal = std::move(Literal);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphInputName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InputName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             NewName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphInputName(class FName InputName, class FName NewName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphInputName");
-
-	Params::MetaSoundBuilderBase_SetGraphInputName Parms{};
-
-	Parms.InputName = InputName;
-	Parms.NewName = NewName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputAccessType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetasoundFrontendVertexAccessType      AccessType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphOutputAccessType(class FName OutputName, EMetasoundFrontendVertexAccessType AccessType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputAccessType");
-
-	Params::MetaSoundBuilderBase_SetGraphOutputAccessType Parms{};
-
-	Parms.OutputName = OutputName;
-	Parms.AccessType = AccessType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputDataType
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             DataType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphOutputDataType(class FName OutputName, class FName DataType, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputDataType");
-
-	Params::MetaSoundBuilderBase_SetGraphOutputDataType Parms{};
-
-	Parms.OutputName = OutputName;
-	Parms.DataType = DataType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetGraphOutputName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             OutputName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             NewName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetGraphOutputName(class FName OutputName, class FName NewName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetGraphOutputName");
-
-	Params::MetaSoundBuilderBase_SetGraphOutputName Parms{};
-
-	Parms.OutputName = OutputName;
-	Parms.NewName = NewName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.SetNodeInputDefault
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&NodeInputHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetasoundFrontendLiteral& Literal                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderBase::SetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "SetNodeInputDefault");
-
-	Params::MetaSoundBuilderBase_SetNodeInputDefault Parms{};
-
-	Parms.NodeInputHandle = std::move(NodeInputHandle);
-	Parms.Literal = std::move(Literal);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.Build
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderOptions&  Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundBuilderBase::Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "Build");
-
-	Params::MetaSoundBuilderBase_Build Parms{};
-
-	Parms.Parent = Parent;
-	Parms.Options = std::move(Options);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.BuildNewMetaSound
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             NameBase                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundBuilderBase::BuildNewMetaSound(class FName NameBase) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "BuildNewMetaSound");
-
-	Params::MetaSoundBuilderBase_BuildNewMetaSound Parms{};
-
-	Parms.NameBase = NameBase;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNode
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundNodeHandle&      Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::ContainsNode(const struct FMetaSoundNodeHandle& Node) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNode");
-
-	Params::MetaSoundBuilderBase_ContainsNode Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeInput
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&Input                                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::ContainsNodeInput(const struct FMetaSoundBuilderNodeInputHandle& Input) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNodeInput");
-
-	Params::MetaSoundBuilderBase_ContainsNodeInput Parms{};
-
-	Parms.Input = std::move(Input);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.ContainsNodeOutput
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&Output                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::ContainsNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& Output) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "ContainsNodeOutput");
-
-	Params::MetaSoundBuilderBase_ContainsNodeOutput Parms{};
-
-	Parms.Output = std::move(Output);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeInputIsConstructorPin
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::GetNodeInputIsConstructorPin(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeInputIsConstructorPin");
-
-	Params::MetaSoundBuilderBase_GetNodeInputIsConstructorPin Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetNodeOutputIsConstructorPin
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::GetNodeOutputIsConstructorPin(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetNodeOutputIsConstructorPin");
-
-	Params::MetaSoundBuilderBase_GetNodeOutputIsConstructorPin Parms{};
-
-	Parms.OutputHandle = std::move(OutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetReferencedPresetAsset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UObject* UMetaSoundBuilderBase::GetReferencedPresetAsset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetReferencedPresetAsset");
-
-	Params::MetaSoundBuilderBase_GetReferencedPresetAsset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.GetRootGraphClassName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FMetasoundFrontendClassName      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendClassName UMetaSoundBuilderBase::GetRootGraphClassName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "GetRootGraphClassName");
-
-	Params::MetaSoundBuilderBase_GetRootGraphClassName Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.InterfaceIsDeclared
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InterfaceName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::InterfaceIsDeclared(class FName InterfaceName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "InterfaceIsDeclared");
-
-	Params::MetaSoundBuilderBase_InterfaceIsDeclared Parms{};
-
-	Parms.InterfaceName = InterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.IsPreset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::IsPreset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "IsPreset");
-
-	Params::MetaSoundBuilderBase_IsPreset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.NodeInputIsConnected
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::NodeInputIsConnected(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "NodeInputIsConnected");
-
-	Params::MetaSoundBuilderBase_NodeInputIsConnected Parms{};
-
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.NodeOutputIsConnected
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::NodeOutputIsConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "NodeOutputIsConnected");
-
-	Params::MetaSoundBuilderBase_NodeOutputIsConnected Parms{};
-
-	Parms.OutputHandle = std::move(OutputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderBase.NodesAreConnected
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMetaSoundBuilderNodeOutputHandle&OutputHandle                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderNodeInputHandle&InputHandle                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderBase::NodesAreConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderBase", "NodesAreConnected");
-
-	Params::MetaSoundBuilderBase_NodesAreConnected Parms{};
-
-	Parms.OutputHandle = std::move(OutputHandle);
-	Parms.InputHandle = std::move(InputHandle);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.Audition
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAudioComponent*                  AudioComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)>OnCreateGenerator                                      (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bLiveUpdatesEnabled                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundSourceBuilder::Audition(class UObject* Parent, class UAudioComponent* AudioComponent, TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)> OnCreateGenerator, bool bLiveUpdatesEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "Audition");
-
-	Params::MetaSoundSourceBuilder_Audition Parms{};
-
-	Parms.Parent = Parent;
-	Parms.AudioComponent = AudioComponent;
-	Parms.OnCreateGenerator = OnCreateGenerator;
-	Parms.bLiveUpdatesEnabled = bLiveUpdatesEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.SetBlockRateOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   BlockRate                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundSourceBuilder::SetBlockRateOverride(float BlockRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetBlockRateOverride");
-
-	Params::MetaSoundSourceBuilder_SetBlockRateOverride Parms{};
-
-	Parms.BlockRate = BlockRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.SetFormat
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EMetaSoundOutputAudioFormat             OutputFormat                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundSourceBuilder::SetFormat(EMetaSoundOutputAudioFormat OutputFormat, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetFormat");
-
-	Params::MetaSoundSourceBuilder_SetFormat Parms{};
-
-	Parms.OutputFormat = OutputFormat;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.SetQuality
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             Quality                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundSourceBuilder::SetQuality(class FName Quality)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetQuality");
-
-	Params::MetaSoundSourceBuilder_SetQuality Parms{};
-
-	Parms.Quality = Quality;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.SetSampleRateOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   SampleRate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundSourceBuilder::SetSampleRateOverride(int32 SampleRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "SetSampleRateOverride");
-
-	Params::MetaSoundSourceBuilder_SetSampleRateOverride Parms{};
-
-	Parms.SampleRate = SampleRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundSourceBuilder.GetLiveUpdatesEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundSourceBuilder::GetLiveUpdatesEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundSourceBuilder", "GetLiveUpdatesEnabled");
-
-	Params::MetaSoundSourceBuilder_GetLiveUpdatesEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<bool>&                     Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateBoolArrayMetaSoundLiteral(const TArray<bool>& Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateBoolArrayMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateBoolArrayMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateBoolMetaSoundLiteral(bool Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateBoolMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateBoolMetaSoundLiteral Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatArrayMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<float>&                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateFloatArrayMetaSoundLiteral(const TArray<float>& Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateFloatArrayMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateFloatArrayMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateFloatMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateFloatMetaSoundLiteral(float Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateFloatMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateFloatMetaSoundLiteral Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntArrayMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<int32>&                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateIntArrayMetaSoundLiteral(const TArray<int32>& Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateIntArrayMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateIntArrayMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateIntMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateIntMetaSoundLiteral(int32 Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateIntMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateIntMetaSoundLiteral Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateMetaSoundLiteralFromParam
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FAudioParameter&           Param                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateMetaSoundLiteralFromParam(const struct FAudioParameter& Param)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateMetaSoundLiteralFromParam");
-
-	Params::MetaSoundBuilderSubsystem_CreateMetaSoundLiteralFromParam Parms{};
-
-	Parms.Param = std::move(Param);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectArrayMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class UObject*>&           Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateObjectArrayMetaSoundLiteral(const TArray<class UObject*>& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateObjectArrayMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateObjectArrayMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateObjectMetaSoundLiteral
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          Value                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateObjectMetaSoundLiteral(class UObject* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateObjectMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateObjectMetaSoundLiteral Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchBuilder
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::CreatePatchBuilder(class FName BuilderName, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreatePatchBuilder");
-
-	Params::MetaSoundBuilderSubsystem_CreatePatchBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreatePatchPresetBuilder
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedPatchClass                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::CreatePatchPresetBuilder(class FName BuilderName, const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedPatchClass, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreatePatchPresetBuilder");
-
-	Params::MetaSoundBuilderSubsystem_CreatePatchPresetBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.ReferencedPatchClass = ReferencedPatchClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourceBuilder
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeOutputHandle*OnPlayNodeOutput                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetaSoundBuilderNodeInputHandle*OnFinishedNodeInput                                    (Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FMetaSoundBuilderNodeInputHandle>*AudioOutNodeInputs                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundOutputAudioFormat             OutputFormat                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsOneShot                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::CreateSourceBuilder(class FName BuilderName, struct FMetaSoundBuilderNodeOutputHandle* OnPlayNodeOutput, struct FMetaSoundBuilderNodeInputHandle* OnFinishedNodeInput, TArray<struct FMetaSoundBuilderNodeInputHandle>* AudioOutNodeInputs, EMetaSoundBuilderResult* OutResult, EMetaSoundOutputAudioFormat OutputFormat, bool bIsOneShot)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateSourceBuilder");
-
-	Params::MetaSoundBuilderSubsystem_CreateSourceBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.OutputFormat = OutputFormat;
-	Parms.bIsOneShot = bIsOneShot;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OnPlayNodeOutput != nullptr)
-		*OnPlayNodeOutput = std::move(Parms.OnPlayNodeOutput);
-
-	if (OnFinishedNodeInput != nullptr)
-		*OnFinishedNodeInput = std::move(Parms.OnFinishedNodeInput);
-
-	if (AudioOutNodeInputs != nullptr)
-		*AudioOutNodeInputs = std::move(Parms.AudioOutNodeInputs);
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateSourcePresetBuilder
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TScriptInterface<class IMetaSoundDocumentInterface>&ReferencedSourceClass                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMetaSoundBuilderResult*                OutResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::CreateSourcePresetBuilder(class FName BuilderName, const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedSourceClass, EMetaSoundBuilderResult* OutResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateSourcePresetBuilder");
-
-	Params::MetaSoundBuilderSubsystem_CreateSourcePresetBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.ReferencedSourceClass = ReferencedSourceClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutResult != nullptr)
-		*OutResult = Parms.OutResult;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringArrayMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class FString>&            Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateStringArrayMetaSoundLiteral(const TArray<class FString>& Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateStringArrayMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateStringArrayMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateStringMetaSoundLiteral
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName*                            DataType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMetasoundFrontendLiteral        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FMetasoundFrontendLiteral UMetaSoundBuilderSubsystem::CreateStringMetaSoundLiteral(const class FString& Value, class FName* DataType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "CreateStringMetaSoundLiteral");
-
-	Params::MetaSoundBuilderSubsystem_CreateStringMetaSoundLiteral Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (DataType != nullptr)
-		*DataType = Parms.DataType;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundBuilderBase*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundBuilderBase* UMetaSoundBuilderSubsystem::FindBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindBuilder");
-
-	Params::MetaSoundBuilderSubsystem_FindBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindPatchBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundPatchBuilder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundPatchBuilder* UMetaSoundBuilderSubsystem::FindPatchBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindPatchBuilder");
-
-	Params::MetaSoundBuilderSubsystem_FindPatchBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindSourceBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundSourceBuilder*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundSourceBuilder* UMetaSoundBuilderSubsystem::FindSourceBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindSourceBuilder");
-
-	Params::MetaSoundBuilderSubsystem_FindSourceBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundBuilderBase*            Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderSubsystem::RegisterBuilder(class FName BuilderName, class UMetaSoundBuilderBase* Builder)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterBuilder");
-
-	Params::MetaSoundBuilderSubsystem_RegisterBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.Builder = Builder;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterPatchBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundPatchBuilder*           Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderSubsystem::RegisterPatchBuilder(class FName BuilderName, class UMetaSoundPatchBuilder* Builder)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterPatchBuilder");
-
-	Params::MetaSoundBuilderSubsystem_RegisterPatchBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.Builder = Builder;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.RegisterSourceBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundSourceBuilder*          Builder                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMetaSoundBuilderSubsystem::RegisterSourceBuilder(class FName BuilderName, class UMetaSoundSourceBuilder* Builder)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "RegisterSourceBuilder");
-
-	Params::MetaSoundBuilderSubsystem_RegisterSourceBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-	Parms.Builder = Builder;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.SetTargetPage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             pageName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderSubsystem::SetTargetPage(class FName pageName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "SetTargetPage");
-
-	Params::MetaSoundBuilderSubsystem_SetTargetPage Parms{};
-
-	Parms.pageName = pageName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderSubsystem::UnregisterBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterBuilder");
-
-	Params::MetaSoundBuilderSubsystem_UnregisterBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterPatchBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderSubsystem::UnregisterPatchBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterPatchBuilder");
-
-	Params::MetaSoundBuilderSubsystem_UnregisterPatchBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.UnregisterSourceBuilder
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             BuilderName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderSubsystem::UnregisterSourceBuilder(class FName BuilderName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "UnregisterSourceBuilder");
-
-	Params::MetaSoundBuilderSubsystem_UnregisterSourceBuilder Parms{};
-
-	Parms.BuilderName = BuilderName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.FindBuilderOfDocument
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TScriptInterface<class IMetaSoundDocumentInterface>InMetaSound                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMetaSoundBuilderBase*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMetaSoundBuilderBase* UMetaSoundBuilderSubsystem::FindBuilderOfDocument(TScriptInterface<class IMetaSoundDocumentInterface> InMetaSound) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "FindBuilderOfDocument");
-
-	Params::MetaSoundBuilderSubsystem_FindBuilderOfDocument Parms{};
-
-	Parms.InMetaSound = InMetaSound;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundBuilderSubsystem.IsInterfaceRegistered
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InInterfaceName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMetaSoundBuilderSubsystem::IsInterfaceRegistered(class FName InInterfaceName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundBuilderSubsystem", "IsInterfaceRegistered");
-
-	Params::MetaSoundBuilderSubsystem_IsInterfaceRegistered Parms{};
-
-	Parms.InInterfaceName = InInterfaceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 

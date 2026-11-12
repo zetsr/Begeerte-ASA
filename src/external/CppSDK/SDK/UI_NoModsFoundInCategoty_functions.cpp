@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_NoModsFoundInCategoty_C::ExecuteUbergraph_UI_NoModsFoundInCategoty(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModsFoundInCategoty_C", "ExecuteUbergraph_UI_NoModsFoundInCategoty");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModsFoundInCategoty_C", "ExecuteUbergraph_UI_NoModsFoundInCategoty", FuncInfo);
 
 	Params::UI_NoModsFoundInCategoty_C_ExecuteUbergraph_UI_NoModsFoundInCategoty Parms{};
 
@@ -43,10 +41,8 @@ void UUI_NoModsFoundInCategoty_C::ExecuteUbergraph_UI_NoModsFoundInCategoty(int3
 
 void UUI_NoModsFoundInCategoty_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModsFoundInCategoty_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModsFoundInCategoty_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_NoModsFoundInCategoty_C_GetRootCFWidget Parms{};
 
@@ -65,10 +61,8 @@ void UUI_NoModsFoundInCategoty_C::GetRootCFWidget(class UPanelWidget** RootPanel
 
 void UUI_NoModsFoundInCategoty_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModsFoundInCategoty_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModsFoundInCategoty_C", "Tick", FuncInfo);
 
 	Params::UI_NoModsFoundInCategoty_C_Tick Parms{};
 

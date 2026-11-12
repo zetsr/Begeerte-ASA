@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_GrapplingHook_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_GrapplingHook_C;
 
 SDK_NAMESPACE_END

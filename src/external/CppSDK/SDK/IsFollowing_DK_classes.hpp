@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UIsFollowing_DK_C>();
 	}
 };
+DUMPER7_ASSERTS_UIsFollowing_DK_C;
 
 SDK_NAMESPACE_END

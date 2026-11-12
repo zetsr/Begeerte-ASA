@@ -24,6 +24,7 @@ public:
 	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FActorLayer                            Layer;                                             // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LayersBlueprintLibrary_AddActorToLayer;
 
 // Function ActorLayerUtilities.LayersBlueprintLibrary.GetActors
 // 0x0020 (0x0020 - 0x0000)
@@ -34,6 +35,7 @@ public:
 	struct FActorLayer                            ActorLayer;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LayersBlueprintLibrary_GetActors;
 
 // Function ActorLayerUtilities.LayersBlueprintLibrary.RemoveActorFromLayer
 // 0x0010 (0x0010 - 0x0000)
@@ -43,6 +45,7 @@ public:
 	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FActorLayer                            Layer;                                             // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LayersBlueprintLibrary_RemoveActorFromLayer;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

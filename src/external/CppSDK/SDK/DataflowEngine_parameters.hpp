@@ -10,9 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "DataflowEngine_structs.hpp"
+
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function DataflowEngine.DataflowBlueprintLibrary.EvaluateDataflow
+// 0x0018 (0x0018 - 0x0000)
+struct DataflowBlueprintLibrary_EvaluateDataflow final
+{
+public:
+	class UDataflow*                              Dataflow;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                AssetToUpdate;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_EvaluateDataflow;
 
 // Function DataflowEngine.DataflowBlueprintLibrary.EvaluateTerminalNodeByName
 // 0x0018 (0x0018 - 0x0000)
@@ -23,6 +37,133 @@ public:
 	class FName                                   TerminalNodeName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ResultAsset;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_EvaluateTerminalNodeByName;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.GetDataflowVariableList
+// 0x0018 (0x0018 - 0x0000)
+struct DataflowBlueprintLibrary_GetDataflowVariableList final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FDataflowVariable>              ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_GetDataflowVariableList;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableBool
+// 0x0018 (0x0018 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableBool final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VariableValue;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableBool;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableBoolArray
+// 0x0028 (0x0028 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableBoolArray final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  VariableArrayValue;                                // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableBoolArray;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableFloat
+// 0x0018 (0x0018 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableFloat final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VariableValue;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableFloat;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableFloatArray
+// 0x0028 (0x0028 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableFloatArray final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 VariableArrayValue;                                // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableFloatArray;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableInt
+// 0x0020 (0x0020 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableInt final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         VariableValue;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableInt;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableIntArray
+// 0x0028 (0x0028 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableIntArray final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 VariableArrayValue;                                // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableIntArray;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableObject
+// 0x0020 (0x0020 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableObject final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                VariableValue;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableObject;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableObjectArray
+// 0x0028 (0x0028 - 0x0000)
+struct DataflowBlueprintLibrary_OverrideDataflowVariableObjectArray final
+{
+public:
+	class UObject*                                Asset;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   VariableName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        VariableArrayValue;                                // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_OverrideDataflowVariableObjectArray;
+
+// Function DataflowEngine.DataflowBlueprintLibrary.RegenerateAssetFromDataflow
+// 0x0010 (0x0010 - 0x0000)
+struct DataflowBlueprintLibrary_RegenerateAssetFromDataflow final
+{
+public:
+	class UObject*                                AssetToRegenerate;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRegenerateDependentAssets;                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_DataflowBlueprintLibrary_RegenerateAssetFromDataflow;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

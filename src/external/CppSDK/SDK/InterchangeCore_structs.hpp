@@ -10,11 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+
 
 SDK_NAMESPACE_START
 
 // Enum InterchangeCore.EInterchangeFactoryAssetType
-// NumValues: 0x0007
+// NumValues: 0x000C
 enum class EInterchangeFactoryAssetType : uint8
 {
 	None                                     = 0,
@@ -23,7 +25,12 @@ enum class EInterchangeFactoryAssetType : uint8
 	Meshes                                   = 3,
 	Animations                               = 4,
 	Physics                                  = 5,
-	EInterchangeFactoryAssetType_MAX         = 6,
+	Grooms                                   = 6,
+	Sounds                                   = 7,
+	Levels                                   = 8,
+	Variants                                 = 9,
+	Custom                                   = 10,
+	EInterchangeFactoryAssetType_MAX         = 11,
 };
 
 // Enum InterchangeCore.EInterchangePipelineTask
@@ -77,7 +84,7 @@ enum class EInterchangeTranslatorType : uint8
 };
 
 // Enum InterchangeCore.EInterchangeTranslatorAssetType
-// NumValues: 0x0006
+// NumValues: 0x0008
 enum class EInterchangeTranslatorAssetType : uint8
 {
 	None                                     = 0,
@@ -85,7 +92,9 @@ enum class EInterchangeTranslatorAssetType : uint8
 	Materials                                = 2,
 	Meshes                                   = 4,
 	Animations                               = 8,
-	EInterchangeTranslatorAssetType_MAX      = 9,
+	Sounds                                   = 16,
+	Grooms                                   = 32,
+	EInterchangeTranslatorAssetType_MAX      = 33,
 };
 
 // Enum InterchangeCore.EInterchangeNodeContainerType
@@ -118,13 +127,30 @@ enum class EReimportStrategyFlags : uint8
 	EReimportStrategyFlags_MAX               = 3,
 };
 
-// ScriptStruct InterchangeCore.InterchangePipelineContextParams
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FInterchangePipelineContextParams final
+// ScriptStruct InterchangeCore.InterchangeLODMeshData
+// 0x00E0 (0x00E0 - 0x0000)
+struct FInterchangeLODMeshData final
 {
 public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 MeshUid;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SceneNodeName;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             GeometricTransform;                                // 0x0080(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInterchangeLODMeshData;
+
+// ScriptStruct InterchangeCore.InterchangePipelineContextParams
+// 0x0020 (0x0020 - 0x0000)
+struct FInterchangePipelineContextParams final
+{
+public:
+	EInterchangePipelineContext                   ContextType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    ImportObjectType;                                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UObject*                                ReimportAsset;                                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FInterchangePipelineContextParams;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStatePerContext
 // 0x0001 (0x0001 - 0x0000)
@@ -133,6 +159,7 @@ struct FInterchangePipelinePropertyStatePerContext final
 public:
 	bool                                          bVisible;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInterchangePipelinePropertyStatePerContext;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStates
 // 0x0005 (0x0005 - 0x0000)
@@ -145,6 +172,7 @@ public:
 	struct FInterchangePipelinePropertyStatePerContext ImportStates;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FInterchangePipelinePropertyStatePerContext ReimportStates;                               // 0x0004(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInterchangePipelinePropertyStates;
 
 // ScriptStruct InterchangeCore.InterchangeUserDefinedAttributeInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -154,5 +182,6 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FInterchangeUserDefinedAttributeInfo;
 
 SDK_NAMESPACE_END

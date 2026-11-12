@@ -176,7 +176,7 @@ bool UPrimalProgressionTreeGraph::ValidateGraph(TArray<class FString>* Validatio
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class FName                             NodeID                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPrimalProgressionTreeGraph::ArePrerequisitesMet(class FName NodeID, const TSet<class FName>& UnlockedNodes) const
@@ -325,7 +325,7 @@ TArray<struct FPrimalProgressionPath> UPrimalProgressionTreeGraph::GetAllPathsBe
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetAvailableNodes
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TArray<class FName> UPrimalProgressionTreeGraph::GetAvailableNodes(const TSet<class FName>& UnlockedNodes) const
@@ -551,7 +551,7 @@ void UPrimalProgressionTreeRowFeature::SetNodeRow(class FName NodeID, const stru
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             NodeID                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPrimalProgressionTreeRowFeature::CheckRowRequirements(class FName NodeID, const TSet<class FName>& UnlockedNodes) const
@@ -609,7 +609,7 @@ int32 UPrimalProgressionTreeRowFeature::GetNodeRow(class FName NodeID) const
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   RowIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UPrimalProgressionTreeRowFeature::GetPointsSpentInRow(int32 RowIndex, const TSet<class FName>& UnlockedNodes) const
@@ -639,7 +639,7 @@ int32 UPrimalProgressionTreeRowFeature::GetPointsSpentInRow(int32 RowIndex, cons
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   RowIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPrimalProgressionTreeRowFeature::IsRowAvailable(int32 RowIndex, const TSet<class FName>& UnlockedNodes) const
@@ -727,7 +727,7 @@ void UPrimalProgressionTreeTierFeature::SetSkillTierConfig(class FName SkillID, 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetEffectiveUnlockedNodes
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TSet<class FName>                       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class FName>                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class FName> UPrimalProgressionTreeTierFeature::GetEffectiveUnlockedNodes() const
 {
@@ -859,7 +859,7 @@ TMap<class FName, int32> UPrimalProgressionTreeTierFeature::GetUnlockedTiers() c
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   RowIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class FName>&                UnlockedNodes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 int32 UPrimalProgressionTreeGraph_RowsAndTiers::GetPointsSpentInRow(int32 RowIndex, const TSet<class FName>& UnlockedNodes) const

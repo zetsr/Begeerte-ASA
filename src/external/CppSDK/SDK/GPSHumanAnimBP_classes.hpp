@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass GPSHumanAnimBP.GPSHumanAnimBP_C
-// 0x0000 (0x20020 - 0x20020)
+// 0x0000 (0x21340 - 0x21340)
 class UGPSHumanAnimBP_C final : public UBaseHumanAnimBP_C
 {
 public:
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UGPSHumanAnimBP_C>();
 	}
 };
+DUMPER7_ASSERTS_UGPSHumanAnimBP_C;
 
 SDK_NAMESPACE_END

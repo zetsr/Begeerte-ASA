@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Enum_VoiceCollectionLine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_VoiceCollectionLine_structs.hpp"
 #include "ShooterGame_structs.hpp"
 
 
@@ -27,6 +27,7 @@ public:
 	class UPDA_VoiceCollection_C*                 K2Node_DynamicCast_AsPDA_Voice_Collection;         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_AssignAssetsFromVoiceCollection;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPApplyBodyColors
 // 0x0018 (0x0018 - 0x0000)
@@ -38,6 +39,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPApplyBodyColors;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPApplyPreviewData
 // 0x0008 (0x0008 - 0x0000)
@@ -46,6 +48,7 @@ struct PlayerPawnTest_C_BPApplyPreviewData final
 public:
 	class USkeletalMeshComponent*                 toMesh;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPApplyPreviewData;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPCustomRequest
 // 0x0028 (0x0028 - 0x0000)
@@ -66,6 +69,7 @@ public:
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPCustomRequest;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPGetCustomBlueprintData
 // 0x0180 (0x0180 - 0x0000)
@@ -83,6 +87,7 @@ public:
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x017B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPGetCustomBlueprintData;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPGetOverrideCameraInterpSpeed
 // 0x0030 (0x0030 - 0x0000)
@@ -99,6 +104,7 @@ public:
 	double                                        K2Node_VariableSet_LocalDefaultTPVOffsetInterpSpeed_ImplicitCast; // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_FunctionResult_TPVOffsetInterpSpeed_ImplicitCast; // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPGetOverrideCameraInterpSpeed;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPGetPlayerHexagonCount
 // 0x0050 (0x0050 - 0x0000)
@@ -119,6 +125,7 @@ public:
 	class UPrimalPlayerDataBP_Base_C*             K2Node_DynamicCast_AsPrimal_Player_Data_BP_Base;   // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPGetPlayerHexagonCount;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPGetShowDebugAnimationComponents
 // 0x0050 (0x0050 - 0x0000)
@@ -141,6 +148,7 @@ public:
 	class USkeletalMeshComponent*                 K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPGetShowDebugAnimationComponents;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraArmLength
 // 0x00F8 (0x00F8 - 0x0000)
@@ -155,6 +163,7 @@ public:
 	double                                        CallFunc_FinalOverrideCameraArmLength_CurrentCameraArmLength_ImplicitCast; // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FinalOverrideCameraArmLength_DesiredCameraArmLength_ImplicitCast; // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraArmLength;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraArmLengthInterpParams
 // 0x00E8 (0x00E8 - 0x0000)
@@ -165,6 +174,7 @@ public:
 	struct FPrimalCameraInterpParams              OutInterpParams;                                   // 0x00D8(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x00E4(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraArmLengthInterpParams;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraDesiredPivotLocation
 // 0x0038 (0x0038 - 0x0000)
@@ -175,6 +185,7 @@ public:
 	struct FVector                                DesiredCameraPivotLocation;                        // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraDesiredPivotLocation;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraDesiredPivotOffset
 // 0x00F8 (0x00F8 - 0x0000)
@@ -185,6 +196,7 @@ public:
 	struct FVector                                DesiredCameraOffset;                               // 0x00D8(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraDesiredPivotOffset;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraDesiredPivotRotation
 // 0x0058 (0x0058 - 0x0000)
@@ -200,6 +212,7 @@ public:
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraDesiredPivotRotation;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPOverrideCameraPivotLocationInterpParams
 // 0x0158 (0x0158 - 0x0000)
@@ -216,6 +229,7 @@ public:
 	struct FPrimalCameraInterpParams              OutInterpParamsZ;                                  // 0x0148(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x0154(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPOverrideCameraPivotLocationInterpParams;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPSetFirstPersonMasterPoseComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -224,6 +238,7 @@ struct PlayerPawnTest_C_BPSetFirstPersonMasterPoseComponent final
 public:
 	class USkeletalMeshComponent*                 firstPersonMasterPosecomponent;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPSetFirstPersonMasterPoseComponent;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPSetPlayerHexagonCount
 // 0x0060 (0x0060 - 0x0000)
@@ -249,6 +264,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPSetPlayerHexagonCount;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPSpawnAttackerDamageImpactFX
 // 0x0010 (0x0010 - 0x0000)
@@ -258,6 +274,7 @@ public:
 	class FName                                   SocketName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APrimalCharacter*                       VictimChar;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPSpawnAttackerDamageImpactFX;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.BPUnlockedAllBTTExplorerNotes
 // 0x0008 (0x0008 - 0x0000)
@@ -267,6 +284,7 @@ public:
 	int32                                         exp;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_BPUnlockedAllBTTExplorerNotes;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.ClientShowHUDNotification
 // 0x0038 (0x0038 - 0x0000)
@@ -279,6 +297,7 @@ public:
 	double                                        DisplayScale;                                      // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundCue*                              SoundToPlay;                                       // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_ClientShowHUDNotification;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.DefeatedBoss
 // 0x0078 (0x0078 - 0x0000)
@@ -303,6 +322,7 @@ public:
 	class UPrimalPlayerDataBP_Base_C*             K2Node_DynamicCast_AsPrimal_Player_Data_BP_Base;   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_DefeatedBoss;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.DontCreateAnyMoreSpawnUIs
 // 0x0010 (0x0010 - 0x0000)
@@ -312,6 +332,7 @@ public:
 	class AShooterHUD*                            CallFunc_GetShooterHud_ShooterHud;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_DontCreateAnyMoreSpawnUIs;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.ExecuteUbergraph_PlayerPawnTest
 // 0x03C8 (0x03C8 - 0x0000)
@@ -437,6 +458,7 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_ExecuteUbergraph_PlayerPawnTest;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.GetFaceCustomization
 // 0x0008 (0x0008 - 0x0000)
@@ -445,6 +467,7 @@ struct PlayerPawnTest_C_GetFaceCustomization final
 public:
 	class UAC_FaceCustomization_C*                FaceCustomization;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_GetFaceCustomization;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.GetFXBloodColor
 // 0x0010 (0x0010 - 0x0000)
@@ -453,6 +476,7 @@ struct PlayerPawnTest_C_GetFXBloodColor final
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_GetFXBloodColor;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.GetShooterHud
 // 0x0028 (0x0028 - 0x0000)
@@ -466,6 +490,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AShooterHUD*                            CallFunc_GetShooterHUD_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_GetShooterHud;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.GetTheNumChibiLevelUps
 // 0x0004 (0x0004 - 0x0000)
@@ -474,6 +499,7 @@ struct PlayerPawnTest_C_GetTheNumChibiLevelUps final
 public:
 	int32                                         OutVal;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_GetTheNumChibiLevelUps;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.HasEquipToHideImplant
 // 0x0030 (0x0030 - 0x0000)
@@ -499,6 +525,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_HasEquipToHideImplant;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.InterceptInputEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -507,6 +534,7 @@ struct PlayerPawnTest_C_InterceptInputEvent final
 public:
 	class FString                                 InputName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_InterceptInputEvent;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.NetClientAscend
 // 0x0008 (0x0008 - 0x0000)
@@ -517,6 +545,7 @@ public:
 	bool                                          bImmediateAscend;                                  // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsCheatAscend;                                    // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_NetClientAscend;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.OnBossfightTeleport
 // 0x0118 (0x0118 - 0x0000)
@@ -533,6 +562,7 @@ public:
 	struct FBPNetExecParams                       CallFunc_BPGetCustomBlueprintData_OutData;         // 0x0098(0x0078)()
 	bool                                          CallFunc_BPGetCustomBlueprintData_ReturnValue;     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_OnBossfightTeleport;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.OnLanded
 // 0x0108 (0x0108 - 0x0000)
@@ -541,6 +571,7 @@ struct PlayerPawnTest_C_OnLanded final
 public:
 	struct FHitResult                             Hit;                                               // 0x0000(0x0108)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_OnLanded;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.PlayerCommand
 // 0x0048 (0x0048 - 0x0000)
@@ -549,10 +580,11 @@ struct PlayerPawnTest_C_PlayerCommand final
 public:
 	class FString                                 TheCommand;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-	class FString                                 retVal;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 RetVal;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_PlayerCommand_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_PlayerCommand;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.ServerAscend
 // 0x0218 (0x0218 - 0x0000)
@@ -655,6 +687,7 @@ public:
 	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_ServerAscend;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetGeneralizedUnlockedAchievementTags
 // 0x0010 (0x0010 - 0x0000)
@@ -663,6 +696,7 @@ struct PlayerPawnTest_C_SetGeneralizedUnlockedAchievementTags final
 public:
 	TArray<class FName>                           GeneralizedUnlockedAchievementTags_0;              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_SetGeneralizedUnlockedAchievementTags;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetNumChibiLevelUps
 // 0x0004 (0x0004 - 0x0000)
@@ -671,6 +705,7 @@ struct PlayerPawnTest_C_SetNumChibiLevelUps final
 public:
 	int32                                         NewNum;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_SetNumChibiLevelUps;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SetupMeshes
 // 0x0270 (0x0270 - 0x0000)
@@ -779,6 +814,7 @@ public:
 	uint8                                         Pad_26A[0x2];                                      // 0x026A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_SetupMeshes;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.ShowHUDNotification
 // 0x0038 (0x0038 - 0x0000)
@@ -791,6 +827,7 @@ public:
 	double                                        DisplayScale;                                      // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundCue*                              SoundToPlay;                                       // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_ShowHUDNotification;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.TrySpawnMoundEx
 // 0x0010 (0x0010 - 0x0000)
@@ -800,6 +837,7 @@ public:
 	double                                        Angle;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Range;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_TrySpawnMoundEx;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.UpdateFace
 // 0x0098 (0x0098 - 0x0000)
@@ -841,6 +879,7 @@ public:
 	double                                        CallFunc_Conv_ByteToDouble_ReturnValue;            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleFloat_ReturnValue;           // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_UpdateFace;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.PlayVOLine
 // 0x00E8 (0x00E8 - 0x0000)
@@ -899,6 +938,7 @@ public:
 	class USoundBase*                             CallFunc_SelectVOSound_VoiceSoundReference_2;      // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast; // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_PlayVOLine;
 
 // Function PlayerPawnTest.PlayerPawnTest_C.SelectVOSound
 // 0x0030 (0x0030 - 0x0000)
@@ -914,6 +954,7 @@ public:
 	class USoundBase*                             Temp_object_Variable;                              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             K2Node_Select_Default;                             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PlayerPawnTest_C_SelectVOSound;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

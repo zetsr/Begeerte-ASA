@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UAttacking_DR_C::ExecuteUbergraph_Attacking_DR(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Attacking_DR_C", "ExecuteUbergraph_Attacking_DR");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Attacking_DR_C", "ExecuteUbergraph_Attacking_DR", FuncInfo);
 
 	Params::Attacking_DR_C_ExecuteUbergraph_Attacking_DR Parms{};
 
@@ -43,10 +41,8 @@ void UAttacking_DR_C::ExecuteUbergraph_Attacking_DR(int32 EntryPoint)
 
 void UAttacking_DR_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Attacking_DR_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Attacking_DR_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::Attacking_DR_C_ReceiveConditionCheck Parms{};
 
@@ -64,10 +60,8 @@ void UAttacking_DR_C::ReceiveConditionCheck(class AActor* OwnerActor)
 
 void UAttacking_DR_C::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeResult NodeResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Attacking_DR_C", "ReceiveExecutionFinish");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Attacking_DR_C", "ReceiveExecutionFinish", FuncInfo);
 
 	Params::Attacking_DR_C_ReceiveExecutionFinish Parms{};
 
@@ -85,10 +79,8 @@ void UAttacking_DR_C::ReceiveExecutionFinish(class AActor* OwnerActor, EBTNodeRe
 
 void UAttacking_DR_C::ReceiveExecutionStart(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Attacking_DR_C", "ReceiveExecutionStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Attacking_DR_C", "ReceiveExecutionStart", FuncInfo);
 
 	Params::Attacking_DR_C_ReceiveExecutionStart Parms{};
 

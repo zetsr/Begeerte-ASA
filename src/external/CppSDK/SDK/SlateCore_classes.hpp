@@ -38,6 +38,7 @@ public:
 		return GetDefaultObjImpl<USlateWidgetStyleAsset>();
 	}
 };
+DUMPER7_ASSERTS_USlateWidgetStyleAsset;
 
 // Class SlateCore.FontBulkData
 // 0x0050 (0x0078 - 0x0028)
@@ -60,11 +61,15 @@ public:
 		return GetDefaultObjImpl<UFontBulkData>();
 	}
 };
+DUMPER7_ASSERTS_UFontBulkData;
 
 // Class SlateCore.FontFaceInterface
-// 0x0000 (0x0000 - 0x0000)
-class IFontFaceInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IFontFaceInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -88,11 +93,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IFontFaceInterface;
 
 // Class SlateCore.FontProviderInterface
-// 0x0000 (0x0000 - 0x0000)
-class IFontProviderInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IFontProviderInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -116,6 +125,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IFontProviderInterface;
 
 // Class SlateCore.SlateTypes
 // 0x0000 (0x0028 - 0x0028)
@@ -135,33 +145,15 @@ public:
 		return GetDefaultObjImpl<USlateTypes>();
 	}
 };
-
-// Class SlateCore.SlateWidgetStyleContainerBase
-// 0x0008 (0x0030 - 0x0028)
-class USlateWidgetStyleContainerBase : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SlateWidgetStyleContainerBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SlateWidgetStyleContainerBase")
-	}
-	static class USlateWidgetStyleContainerBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USlateWidgetStyleContainerBase>();
-	}
-};
+DUMPER7_ASSERTS_USlateTypes;
 
 // Class SlateCore.SlateWidgetStyleContainerInterface
-// 0x0000 (0x0000 - 0x0000)
-class ISlateWidgetStyleContainerInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ISlateWidgetStyleContainerInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -185,6 +177,29 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ISlateWidgetStyleContainerInterface;
+
+// Class SlateCore.SlateWidgetStyleContainerBase
+// 0x0008 (0x0030 - 0x0028)
+class USlateWidgetStyleContainerBase : public UObject, public ISlateWidgetStyleContainerInterface
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SlateWidgetStyleContainerBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SlateWidgetStyleContainerBase")
+	}
+	static class USlateWidgetStyleContainerBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USlateWidgetStyleContainerBase>();
+	}
+};
+DUMPER7_ASSERTS_USlateWidgetStyleContainerBase;
 
 // Class SlateCore.SlateThemeManager
 // 0x07B0 (0x07D8 - 0x0028)
@@ -208,5 +223,6 @@ public:
 		return GetDefaultObjImpl<USlateThemeManager>();
 	}
 };
+DUMPER7_ASSERTS_USlateThemeManager;
 
 SDK_NAMESPACE_END

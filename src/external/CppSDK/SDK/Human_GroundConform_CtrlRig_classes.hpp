@@ -10,55 +10,55 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PBIK_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass Human_GroundConform_CtrlRig.Human_GroundConform_CtrlRig_C
-// 0x02E0 (0x0DB0 - 0x0AD0)
+// 0x02E0 (0x1000 - 0x0D20)
 class UHuman_GroundConform_CtrlRig_C final : public UControlRig
 {
 public:
-	struct FRigPose                               Pose;                                              // 0x0AD0(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FPBIKEffector>                  IKEffectors;                                       // 0x0B40(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        EffectorPos;                                       // 0x0B50(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                Settings_TraceRadii;                               // 0x0B60(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                Settings_TraceLengths;                             // 0x0B70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<bool>                                  Settings_ConstrainLength;                          // 0x0B80(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                Settings_BendStiffness;                            // 0x0B90(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                Settings_SpringDampingFactor;                      // 0x0BA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                Settings_SpringStrengthFactor;                     // 0x0BB0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FPBIKBoneSetting>               PBIKBoneSettings;                                  // 0x0BC0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bFoundCtrlParent;                                  // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BD1[0x3];                                      // 0x0BD1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TailAndNeck_RotationStiffness;                     // 0x0BD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FRigElementKey>                 SortedEffectorBones;                               // 0x0BD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 SortedRigElements_IndexArray;                      // 0x0BE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FRigElementKey>                 SortedParentBones;                                 // 0x0BF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FQuat>                          EffectorRotations;                                 // 0x0C08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        TracePathPositions;                                // 0x0C18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bBreakTracePath;                                   // 0x0C28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C29[0x7];                                      // 0x0C29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                MeshScale;                                         // 0x0C30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GroundConform_GravityFactor;                       // 0x0C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GroundConform_IsBeingDragged;                      // 0x0C50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Swimming;                                          // 0x0C51(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GroundConform_Motionless;                          // 0x0C52(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C53[0x5];                                      // 0x0C53(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigPose                               PoseLastFrame;                                     // 0x0C58(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Interpolate;                                       // 0x0CC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFalling;                                         // 0x0CC9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CCA[0x6];                                      // 0x0CCA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             RootControlTransform_LastFrame;                    // 0x0CD0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DetectedNoMotion_LastFrame;                        // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D38[0x8];                                      // 0x0D38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             HipTransform_LastFrame;                            // 0x0D40(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Has_Initially_Updated_Bone_Distances;              // 0x0DA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasDynamicBase_;                                  // 0x0DA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRigPose                               Pose;                                              // 0x0D20(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FPBIKEffector>                  IKEffectors;                                       // 0x0D90(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        EffectorPos;                                       // 0x0DA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                Settings_TraceRadii;                               // 0x0DB0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                Settings_TraceLengths;                             // 0x0DC0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<bool>                                  Settings_ConstrainLength;                          // 0x0DD0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                Settings_BendStiffness;                            // 0x0DE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                Settings_SpringDampingFactor;                      // 0x0DF0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                Settings_SpringStrengthFactor;                     // 0x0E00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FPBIKBoneSetting>               PBIKBoneSettings;                                  // 0x0E10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bFoundCtrlParent;                                  // 0x0E20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E21[0x3];                                      // 0x0E21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TailAndNeck_RotationStiffness;                     // 0x0E24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FRigElementKey>                 SortedEffectorBones;                               // 0x0E28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 SortedRigElements_IndexArray;                      // 0x0E38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FRigElementKey>                 SortedParentBones;                                 // 0x0E48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FQuat>                          EffectorRotations;                                 // 0x0E58(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        TracePathPositions;                                // 0x0E68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bBreakTracePath;                                   // 0x0E78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E79[0x7];                                      // 0x0E79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                MeshScale;                                         // 0x0E80(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GroundConform_GravityFactor;                       // 0x0E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GroundConform_IsBeingDragged;                      // 0x0EA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Swimming;                                          // 0x0EA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GroundConform_Motionless;                          // 0x0EA2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA3[0x5];                                      // 0x0EA3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigPose                               PoseLastFrame;                                     // 0x0EA8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Interpolate;                                       // 0x0F18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFalling;                                         // 0x0F19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1A[0x6];                                      // 0x0F1A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RootControlTransform_LastFrame;                    // 0x0F20(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DetectedNoMotion_LastFrame;                        // 0x0F80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F88[0x8];                                      // 0x0F88(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             HipTransform_LastFrame;                            // 0x0F90(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Has_Initially_Updated_Bone_Distances;              // 0x0FF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasDynamicBase_;                                  // 0x0FF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -74,5 +74,6 @@ public:
 		return GetDefaultObjImpl<UHuman_GroundConform_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_GroundConform_CtrlRig_C;
 
 SDK_NAMESPACE_END

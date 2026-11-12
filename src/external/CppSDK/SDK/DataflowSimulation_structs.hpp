@@ -15,6 +15,16 @@
 
 SDK_NAMESPACE_START
 
+// ScriptStruct DataflowSimulation.DataflowSimulationAsset
+// 0x0058 (0x0058 - 0x0000)
+struct FDataflowSimulationAsset final
+{
+public:
+	class UDataflow*                              DataflowAsset;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSet<class FString>                           SimulationGroups;                                  // 0x0008(0x0050)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowSimulationAsset;
+
 // ScriptStruct DataflowSimulation.DataflowSimulationProxy
 // 0x0078 (0x0078 - 0x0000)
 struct alignas(0x08) FDataflowSimulationProxy
@@ -22,39 +32,7 @@ struct alignas(0x08) FDataflowSimulationProxy
 public:
 	uint8                                         Pad_0[0x78];                                       // 0x0000(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct DataflowSimulation.DataflowCollisionObjectProxy
-// 0x0000 (0x0078 - 0x0078)
-struct FDataflowCollisionObjectProxy final : public FDataflowSimulationProxy
-{
-};
-
-// ScriptStruct DataflowSimulation.DataflowConstraintObjectProxy
-// 0x0000 (0x0078 - 0x0078)
-struct FDataflowConstraintObjectProxy final : public FDataflowSimulationProxy
-{
-};
-
-// ScriptStruct DataflowSimulation.DataflowPhysicsObjectProxy
-// 0x0000 (0x0078 - 0x0078)
-struct FDataflowPhysicsObjectProxy final : public FDataflowSimulationProxy
-{
-};
-
-// ScriptStruct DataflowSimulation.DataflowPhysicsSolverProxy
-// 0x0000 (0x0078 - 0x0078)
-struct FDataflowPhysicsSolverProxy : public FDataflowSimulationProxy
-{
-};
-
-// ScriptStruct DataflowSimulation.DataflowSimulationAsset
-// 0x0058 (0x0058 - 0x0000)
-struct FDataflowSimulationAsset final
-{
-public:
-	class UDataflow*                              DataflowAsset;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TSet<class FString>                           SimulationGroups;                                  // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FDataflowSimulationProxy;
 
 // ScriptStruct DataflowSimulation.DataflowSimulationProperty
 // 0x0008 (0x0008 - 0x0000)
@@ -63,24 +41,44 @@ struct alignas(0x08) FDataflowSimulationProperty final
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FDataflowSimulationProperty;
+
+// ScriptStruct DataflowSimulation.DataflowPhysicsSolverProxy
+// 0x0000 (0x0078 - 0x0078)
+struct FDataflowPhysicsSolverProxy : public FDataflowSimulationProxy
+{
+};
+DUMPER7_ASSERTS_FDataflowPhysicsSolverProxy;
+
+// ScriptStruct DataflowSimulation.RigidPhysicsSceneDataflowState
+// 0x0001 (0x0001 - 0x0000)
+struct FRigidPhysicsSceneDataflowState final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigidPhysicsSceneDataflowState;
 
 // ScriptStruct DataflowSimulation.DataflowSimulationNode
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01E8 - 0x01E8)
 struct FDataflowSimulationNode : public FDataflowNode
 {
 };
+DUMPER7_ASSERTS_FDataflowSimulationNode;
 
 // ScriptStruct DataflowSimulation.DataflowInvalidNode
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01E8 - 0x01E8)
 struct FDataflowInvalidNode : public FDataflowSimulationNode
 {
 };
+DUMPER7_ASSERTS_FDataflowInvalidNode;
 
 // ScriptStruct DataflowSimulation.DataflowExecutionNode
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01E8 - 0x01E8)
 struct FDataflowExecutionNode : public FDataflowSimulationNode
 {
 };
+DUMPER7_ASSERTS_FDataflowExecutionNode;
 
 // ScriptStruct DataflowSimulation.DataflowSimulationTime
 // 0x000C (0x000C - 0x0000)
@@ -91,51 +89,119 @@ public:
 	float                                         CurrentTime;                                       // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeOffset;                                        // 0x0008(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDataflowSimulationTime;
 
 // ScriptStruct DataflowSimulation.GetSimulationTimeDataflowNode
-// 0x0010 (0x01A8 - 0x0198)
+// 0x0010 (0x01F8 - 0x01E8)
 struct FGetSimulationTimeDataflowNode final : public FDataflowInvalidNode
 {
 public:
-	struct FDataflowSimulationTime                SimulationTime;                                    // 0x0198(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FDataflowSimulationTime                SimulationTime;                                    // 0x01E8(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FGetSimulationTimeDataflowNode;
 
 // ScriptStruct DataflowSimulation.GetPhysicsSolversDataflowNode
-// 0x0020 (0x01B8 - 0x0198)
+// 0x0020 (0x0208 - 0x01E8)
 struct FGetPhysicsSolversDataflowNode final : public FDataflowInvalidNode
 {
 public:
-	TArray<struct FDataflowSimulationProperty>    PhysicsSolvers;                                    // 0x0198(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<class FString>                         SimulationGroups;                                  // 0x01A8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDataflowSimulationProperty>    PhysicsSolvers;                                    // 0x01E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class FString>                         SimulationGroups;                                  // 0x01F8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FGetPhysicsSolversDataflowNode;
 
 // ScriptStruct DataflowSimulation.AdvancePhysicsSolversDataflowNode
-// 0x0020 (0x01B8 - 0x0198)
+// 0x0020 (0x0208 - 0x01E8)
 struct FAdvancePhysicsSolversDataflowNode final : public FDataflowSimulationNode
 {
 public:
-	struct FDataflowSimulationTime                SimulationTime;                                    // 0x0198(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDataflowSimulationProperty>    PhysicsSolvers;                                    // 0x01A8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	struct FDataflowSimulationTime                SimulationTime;                                    // 0x01E8(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FDataflowSimulationProperty>    PhysicsSolvers;                                    // 0x01F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FAdvancePhysicsSolversDataflowNode;
 
 // ScriptStruct DataflowSimulation.FilterSimulationProxiesDataflowNode
-// 0x0030 (0x01C8 - 0x0198)
+// 0x0030 (0x0218 - 0x01E8)
 struct FFilterSimulationProxiesDataflowNode final : public FDataflowSimulationNode
 {
 public:
-	TArray<struct FDataflowSimulationProperty>    SimulationProxies;                                 // 0x0198(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<struct FDataflowSimulationProperty>    FilteredProxies;                                   // 0x01A8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<class FString>                         SimulationGroups;                                  // 0x01B8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDataflowSimulationProperty>    SimulationProxies;                                 // 0x01E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FDataflowSimulationProperty>    FilteredProxies;                                   // 0x01F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class FString>                         SimulationGroups;                                  // 0x0208(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FFilterSimulationProxiesDataflowNode;
 
 // ScriptStruct DataflowSimulation.SimulationProxiesTerminalDataflowNode
-// 0x0010 (0x01A8 - 0x0198)
+// 0x0010 (0x01F8 - 0x01E8)
 struct FSimulationProxiesTerminalDataflowNode final : public FDataflowExecutionNode
 {
 public:
-	TArray<struct FDataflowSimulationProperty>    SimulationProxies;                                 // 0x0198(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FDataflowSimulationProperty>    SimulationProxies;                                 // 0x01E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSimulationProxiesTerminalDataflowNode;
+
+// ScriptStruct DataflowSimulation.AdvanceRigidPhysicsSolverDataflowNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FAdvanceRigidPhysicsSolverDataflowNode final : public FDataflowSimulationNode
+{
+public:
+	struct FDataflowSimulationTime                SimulationTime;                                    // 0x01E8(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigidPhysicsSceneDataflowState        State;                                             // 0x01F4(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F5[0x3];                                      // 0x01F5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAdvanceRigidPhysicsSolverDataflowNode;
+
+// ScriptStruct DataflowSimulation.SceneSimulationTerminalDataflowNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FSceneSimulationTerminalDataflowNode final : public FDataflowSimulationNode
+{
+public:
+	struct FRigidPhysicsSceneDataflowState        State;                                             // 0x01E8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSceneSimulationTerminalDataflowNode;
+
+// ScriptStruct DataflowSimulation.RigidSceneSetupTerminalDataflowNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FRigidSceneSetupTerminalDataflowNode final : public FDataflowSimulationNode
+{
+public:
+	struct FRigidPhysicsSceneDataflowState        State;                                             // 0x01E8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigidSceneSetupTerminalDataflowNode;
+
+// ScriptStruct DataflowSimulation.DataflowCollisionObjectProxy
+// 0x0000 (0x0078 - 0x0078)
+struct FDataflowCollisionObjectProxy final : public FDataflowSimulationProxy
+{
+};
+DUMPER7_ASSERTS_FDataflowCollisionObjectProxy;
+
+// ScriptStruct DataflowSimulation.DataflowConstraintObjectProxy
+// 0x0000 (0x0078 - 0x0078)
+struct FDataflowConstraintObjectProxy final : public FDataflowSimulationProxy
+{
+};
+DUMPER7_ASSERTS_FDataflowConstraintObjectProxy;
+
+// ScriptStruct DataflowSimulation.DataflowPhysicsObjectProxy
+// 0x0000 (0x0078 - 0x0078)
+struct FDataflowPhysicsObjectProxy final : public FDataflowSimulationProxy
+{
+};
+DUMPER7_ASSERTS_FDataflowPhysicsObjectProxy;
+
+// ScriptStruct DataflowSimulation.RigidSceneSetupDataflowNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FRigidSceneSetupDataflowNode final : public FDataflowNode
+{
+public:
+	struct FRigidPhysicsSceneDataflowState        State;                                             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigidSceneSetupDataflowNode;
 
 SDK_NAMESPACE_END

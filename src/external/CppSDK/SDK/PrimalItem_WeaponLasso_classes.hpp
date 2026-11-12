@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponLasso_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponLasso_C;
 
 SDK_NAMESPACE_END

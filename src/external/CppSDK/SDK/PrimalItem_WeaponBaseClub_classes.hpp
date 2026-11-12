@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponBaseClub_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponBaseClub_C;
 
 SDK_NAMESPACE_END

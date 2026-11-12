@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.AddRootMotionModifier
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -51,7 +51,7 @@ class URootMotionModifier* UAnimNotifyState_MotionWarping::AddRootMotionModifier
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierActivate
-// (Final, Native, Public, Const)
+// (Final, RequiredAPI, Native, Public, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -78,7 +78,7 @@ void UAnimNotifyState_MotionWarping::OnRootMotionModifierActivate(class UMotionW
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierDeactivate
-// (Final, Native, Public, Const)
+// (Final, RequiredAPI, Native, Public, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -105,7 +105,7 @@ void UAnimNotifyState_MotionWarping::OnRootMotionModifierDeactivate(class UMotio
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierUpdate
-// (Final, Native, Public, Const)
+// (Final, RequiredAPI, Native, Public, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -132,7 +132,7 @@ void UAnimNotifyState_MotionWarping::OnRootMotionModifierUpdate(class UMotionWar
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpBegin
-// (Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -154,7 +154,7 @@ void UAnimNotifyState_MotionWarping::OnWarpBegin(class UMotionWarpingComponent* 
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpEnd
-// (Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -176,7 +176,7 @@ void UAnimNotifyState_MotionWarping::OnWarpEnd(class UMotionWarpingComponent* Mo
 
 
 // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpUpdate
-// (Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // class UMotionWarpingComponent*          MotionWarpingComp                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class URootMotionModifier*              Modifier                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -197,8 +197,47 @@ void UAnimNotifyState_MotionWarping::OnWarpUpdate(class UMotionWarpingComponent*
 }
 
 
+// Function MotionWarping.MotionWarpingUtilities.ExtractBoneTransformFromAnimationAtTime
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class UAnimInstance*              AnimInstance                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bExtractRootMotion                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bLocalSpace                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMotionWarpingUtilities::ExtractBoneTransformFromAnimationAtTime(const class UAnimInstance* AnimInstance, const class UAnimSequenceBase* Animation, float Time, bool bExtractRootMotion, class FName BoneName, bool bLocalSpace, struct FTransform* OutTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingUtilities", "ExtractBoneTransformFromAnimationAtTime");
+
+	Params::MotionWarpingUtilities_ExtractBoneTransformFromAnimationAtTime Parms{};
+
+	Parms.AnimInstance = AnimInstance;
+	Parms.Animation = Animation;
+	Parms.Time = Time;
+	Parms.bExtractRootMotion = bExtractRootMotion;
+	Parms.BoneName = BoneName;
+	Parms.bLocalSpace = bLocalSpace;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+}
+
+
 // Function MotionWarping.MotionWarpingUtilities.ExtractRootMotionFromAnimation
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -230,7 +269,7 @@ struct FTransform UMotionWarpingUtilities::ExtractRootMotionFromAnimation(const 
 
 
 // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsForWarpTargetFromAnimation
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -261,7 +300,7 @@ void UMotionWarpingUtilities::GetMotionWarpingWindowsForWarpTargetFromAnimation(
 
 
 // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsFromAnimation
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FMotionWarpingWindowData>*OutWindows                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -290,7 +329,7 @@ void UMotionWarpingUtilities::GetMotionWarpingWindowsFromAnimation(const class U
 
 
 // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTarget
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FMotionWarpingTarget&      WarpTarget                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -315,16 +354,17 @@ void UMotionWarpingComponent::AddOrUpdateWarpTarget(const struct FMotionWarpingT
 
 
 // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromComponent
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class USceneComponent*            Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bFollowComponent                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EWarpTargetLocationOffsetDirection      LocationOffsetDirection                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   LocationOffset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FRotator&                  RotationOffset                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
-void UMotionWarpingComponent::AddOrUpdateWarpTargetFromComponent(class FName WarpTargetName, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, const struct FVector& LocationOffset, const struct FRotator& RotationOffset)
+void UMotionWarpingComponent::AddOrUpdateWarpTargetFromComponent(class FName WarpTargetName, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, EWarpTargetLocationOffsetDirection LocationOffsetDirection, const struct FVector& LocationOffset, const struct FRotator& RotationOffset)
 {
 	static class UFunction* Func = nullptr;
 
@@ -337,6 +377,7 @@ void UMotionWarpingComponent::AddOrUpdateWarpTargetFromComponent(class FName War
 	Parms.Component = Component;
 	Parms.BoneName = BoneName;
 	Parms.bFollowComponent = bFollowComponent;
+	Parms.LocationOffsetDirection = LocationOffsetDirection;
 	Parms.LocationOffset = std::move(LocationOffset);
 	Parms.RotationOffset = std::move(RotationOffset);
 
@@ -406,7 +447,7 @@ void UMotionWarpingComponent::AddOrUpdateWarpTargetFromLocationAndRotation(class
 
 
 // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                TargetTransform                                        (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -432,8 +473,35 @@ void UMotionWarpingComponent::AddOrUpdateWarpTargetFromTransform(class FName War
 }
 
 
+// Function MotionWarping.MotionWarpingComponent.AddSwitchOffCondition
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffCondition* Condition                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMotionWarpingComponent::AddSwitchOffCondition(class FName WarpTargetName, class UMotionWarpingSwitchOffCondition* Condition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MotionWarpingComponent", "AddSwitchOffCondition");
+
+	Params::MotionWarpingComponent_AddSwitchOffCondition Parms{};
+
+	Parms.WarpTargetName = WarpTargetName;
+	Parms.Condition = Condition;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MotionWarping.MotionWarpingComponent.DisableAllRootMotionModifiers
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMotionWarpingComponent::DisableAllRootMotionModifiers()
 {
@@ -451,8 +519,41 @@ void UMotionWarpingComponent::DisableAllRootMotionModifiers()
 }
 
 
+// Function MotionWarping.MotionWarpingComponent.FindWarpTarget
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMotionWarpingTarget*            MotionWarpingTarget                                    (Parm, OutParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool*                                   bFound                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMotionWarpingComponent::FindWarpTarget(class FName WarpTargetName, struct FMotionWarpingTarget* MotionWarpingTarget, bool* bFound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MotionWarpingComponent", "FindWarpTarget");
+
+	Params::MotionWarpingComponent_FindWarpTarget Parms{};
+
+	Parms.WarpTargetName = WarpTargetName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MotionWarpingTarget != nullptr)
+		*MotionWarpingTarget = std::move(Parms.MotionWarpingTarget);
+
+	if (bFound != nullptr)
+		*bFound = Parms.bFound;
+}
+
+
 // Function MotionWarping.MotionWarpingComponent.RemoveAllWarpTargets
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -477,7 +578,7 @@ int32 UMotionWarpingComponent::RemoveAllWarpTargets()
 
 
 // Function MotionWarping.MotionWarpingComponent.RemoveWarpTarget
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             WarpTargetName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -505,7 +606,7 @@ int32 UMotionWarpingComponent::RemoveWarpTarget(class FName WarpTargetName)
 
 
 // Function MotionWarping.MotionWarpingComponent.RemoveWarpTargets
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<class FName>&              WarpTargetNames                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -532,8 +633,288 @@ int32 UMotionWarpingComponent::RemoveWarpTargets(const TArray<class FName>& Warp
 }
 
 
+// Function MotionWarping.MotionWarpingFunctionLibrary.MakeMotionWarpingTarget
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class FName                       Name_0                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotation                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const class USceneComponent*            Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFollowComponent                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EWarpTargetLocationOffsetDirection      LocationOffsetDirection                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class AActor*                     AvatarActor                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LocationOffset                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  RotationOffset                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMotionWarpingTarget             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+struct FMotionWarpingTarget UMotionWarpingFunctionLibrary::MakeMotionWarpingTarget(const class FName Name_0, const struct FVector& Location, const struct FRotator& Rotation, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, EWarpTargetLocationOffsetDirection LocationOffsetDirection, const class AActor* AvatarActor, const struct FVector& LocationOffset, const struct FRotator& RotationOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingFunctionLibrary", "MakeMotionWarpingTarget");
+
+	Params::MotionWarpingFunctionLibrary_MakeMotionWarpingTarget Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.Location = std::move(Location);
+	Parms.Rotation = std::move(Rotation);
+	Parms.Component = Component;
+	Parms.BoneName = BoneName;
+	Parms.bFollowComponent = bFollowComponent;
+	Parms.LocationOffsetDirection = LocationOffsetDirection;
+	Parms.AvatarActor = AvatarActor;
+	Parms.LocationOffset = std::move(LocationOffset);
+	Parms.RotationOffset = std::move(RotationOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffDistanceCondition.CreateSwitchOffDistanceCondition
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*&                          InOwnerActor                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionEffect               InEffect                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionDistanceOp           InOperator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionDistanceAxesType     InAxesType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InDistance                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InbUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffDistanceCondition*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMotionWarpingSwitchOffDistanceCondition* UMotionWarpingSwitchOffDistanceCondition::CreateSwitchOffDistanceCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, ESwitchOffConditionDistanceOp InOperator, ESwitchOffConditionDistanceAxesType InAxesType, float InDistance, bool InbUseWarpTargetAsTargetLocation, class AActor* InTargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingSwitchOffDistanceCondition", "CreateSwitchOffDistanceCondition");
+
+	Params::MotionWarpingSwitchOffDistanceCondition_CreateSwitchOffDistanceCondition Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InEffect = InEffect;
+	Parms.InOperator = InOperator;
+	Parms.InAxesType = InAxesType;
+	Parms.InDistance = InDistance;
+	Parms.InbUseWarpTargetAsTargetLocation = InbUseWarpTargetAsTargetLocation;
+	Parms.InTargetActor = InTargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InOwnerActor = Parms.InOwnerActor;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffAngleToTargetCondition.CreateSwitchOffAngleToTargetCondition
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*&                          InOwnerActor                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionEffect               InEffect                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionAngleOp              InOperator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InAngle                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInIgnoreZAxis                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffAngleToTargetCondition*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMotionWarpingSwitchOffAngleToTargetCondition* UMotionWarpingSwitchOffAngleToTargetCondition::CreateSwitchOffAngleToTargetCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, ESwitchOffConditionAngleOp InOperator, float InAngle, bool bInIgnoreZAxis, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingSwitchOffAngleToTargetCondition", "CreateSwitchOffAngleToTargetCondition");
+
+	Params::MotionWarpingSwitchOffAngleToTargetCondition_CreateSwitchOffAngleToTargetCondition Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InEffect = InEffect;
+	Parms.InOperator = InOperator;
+	Parms.InAngle = InAngle;
+	Parms.bInIgnoreZAxis = bInIgnoreZAxis;
+	Parms.bInUseWarpTargetAsTargetLocation = bInUseWarpTargetAsTargetLocation;
+	Parms.InTargetActor = InTargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InOwnerActor = Parms.InOwnerActor;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffCompositeCondition.CreateSwitchOffCompositeCondition
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*&                          InOwnerActor                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionEffect               InEffect                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffCondition*&InSwitchOffConditionA                                  (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionCompositeOp          InLogicOperator                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffCondition*&InSwitchOffConditionB                                  (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffCompositeCondition*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMotionWarpingSwitchOffCompositeCondition* UMotionWarpingSwitchOffCompositeCondition::CreateSwitchOffCompositeCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, class UMotionWarpingSwitchOffCondition*& InSwitchOffConditionA, ESwitchOffConditionCompositeOp InLogicOperator, class UMotionWarpingSwitchOffCondition*& InSwitchOffConditionB, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingSwitchOffCompositeCondition", "CreateSwitchOffCompositeCondition");
+
+	Params::MotionWarpingSwitchOffCompositeCondition_CreateSwitchOffCompositeCondition Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InEffect = InEffect;
+	Parms.InSwitchOffConditionA = InSwitchOffConditionA;
+	Parms.InLogicOperator = InLogicOperator;
+	Parms.InSwitchOffConditionB = InSwitchOffConditionB;
+	Parms.bInUseWarpTargetAsTargetLocation = bInUseWarpTargetAsTargetLocation;
+	Parms.InTargetActor = InTargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InOwnerActor = Parms.InOwnerActor;
+	InSwitchOffConditionA = Parms.InSwitchOffConditionA;
+	InSwitchOffConditionB = Parms.InSwitchOffConditionB;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffBlueprintableCondition.CreateSwitchOffBlueprintableCondition
+// (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*&                          InOwnerActor                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESwitchOffConditionEffect               InEffect                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UMotionWarpingSwitchOffBlueprintableCondition>InBlueprintableCondition                               (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMotionWarpingSwitchOffBlueprintableCondition*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMotionWarpingSwitchOffBlueprintableCondition* UMotionWarpingSwitchOffBlueprintableCondition::CreateSwitchOffBlueprintableCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, TSubclassOf<class UMotionWarpingSwitchOffBlueprintableCondition> InBlueprintableCondition, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MotionWarpingSwitchOffBlueprintableCondition", "CreateSwitchOffBlueprintableCondition");
+
+	Params::MotionWarpingSwitchOffBlueprintableCondition_CreateSwitchOffBlueprintableCondition Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InEffect = InEffect;
+	Parms.InBlueprintableCondition = InBlueprintableCondition;
+	Parms.bInUseWarpTargetAsTargetLocation = bInUseWarpTargetAsTargetLocation;
+	Parms.InTargetActor = InTargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InOwnerActor = Parms.InOwnerActor;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffBlueprintableCondition.BP_Check
+// (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// const class AActor*                     InOwnerActor                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class AActor*                     InTargetActor                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InTargetLocation                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMotionWarpingSwitchOffBlueprintableCondition::BP_Check(const class AActor* InOwnerActor, const class AActor* InTargetActor, const struct FVector& InTargetLocation, bool bInUseWarpTargetAsTargetLocation) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MotionWarpingSwitchOffBlueprintableCondition", "BP_Check");
+
+	Params::MotionWarpingSwitchOffBlueprintableCondition_BP_Check Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InTargetActor = InTargetActor;
+	Parms.InTargetLocation = std::move(InTargetLocation);
+	Parms.bInUseWarpTargetAsTargetLocation = bInUseWarpTargetAsTargetLocation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MotionWarping.MotionWarpingSwitchOffBlueprintableCondition.BP_ExtraDebugInfo
+// (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// const class AActor*                     InOwnerActor                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class AActor*                     InTargetActor                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InTargetLocation                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInUseWarpTargetAsTargetLocation                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMotionWarpingSwitchOffBlueprintableCondition::BP_ExtraDebugInfo(const class AActor* InOwnerActor, const class AActor* InTargetActor, const struct FVector& InTargetLocation, bool bInUseWarpTargetAsTargetLocation) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MotionWarpingSwitchOffBlueprintableCondition", "BP_ExtraDebugInfo");
+
+	Params::MotionWarpingSwitchOffBlueprintableCondition_BP_ExtraDebugInfo Parms{};
+
+	Parms.InOwnerActor = InOwnerActor;
+	Parms.InTargetActor = InTargetActor;
+	Parms.InTargetLocation = std::move(InTargetLocation);
+	Parms.bInUseWarpTargetAsTargetLocation = bInUseWarpTargetAsTargetLocation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MotionWarping.RootMotionModifier_Scale.AddRootMotionModifierScale
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UMotionWarpingComponent*          InMotionWarpingComp                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UAnimSequenceBase*          InAnimation                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -568,8 +949,37 @@ class URootMotionModifier_Scale* URootMotionModifier_Scale::AddRootMotionModifie
 }
 
 
+// Function MotionWarping.RootMotionModifier_Blueprintable.BP_ProcessRootMotion
+// (RequiredAPI, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const class AActor*                     Actor                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class USkeletalMeshComponent*     Mesh                                                   (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InRootMotion                                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform URootMotionModifier_Blueprintable::BP_ProcessRootMotion(const class AActor* Actor, const class USkeletalMeshComponent* Mesh, const struct FTransform& InRootMotion, float DeltaSeconds) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RootMotionModifier_Blueprintable", "BP_ProcessRootMotion");
+
+	Params::RootMotionModifier_Blueprintable_BP_ProcessRootMotion Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Mesh = Mesh;
+	Parms.InRootMotion = std::move(InRootMotion);
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MotionWarping.RootMotionModifier_SkewWarp.AddRootMotionModifierSkewWarp
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UMotionWarpingComponent*          InMotionWarpingComp                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UAnimSequenceBase*          InAnimation                                            (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

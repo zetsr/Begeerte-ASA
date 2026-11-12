@@ -12,20 +12,21 @@
 
 #include "MassRepresentation_structs.hpp"
 #include "MassEntity_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "MassSpawner_classes.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class MassRepresentation.MassDistanceLODProcessor
-// 0x0970 (0x0A20 - 0x00B0)
+// 0x1180 (0x1280 - 0x0100)
 class alignas(0x10) UMassDistanceLODProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x968];                                     // 0x00B0(0x0968)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScriptStruct*                          FilterTag;                                         // 0x0A18(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_100[0x1178];                                   // 0x0100(0x1178)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptStruct*                          FilterTag;                                         // 0x1278(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -41,21 +42,21 @@ public:
 		return GetDefaultObjImpl<UMassDistanceLODProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassDistanceLODProcessor;
 
 // Class MassRepresentation.MassDistanceVisualizationTrait
-// 0x00F8 (0x0120 - 0x0028)
+// 0x0100 (0x0130 - 0x0030)
 class UMassDistanceVisualizationTrait : public UMassEntityTraitBase
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStaticMeshInstanceVisualizationDesc   StaticMeshInstanceDesc;                            // 0x0030(0x0080)(Edit, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     HighResTemplateActor;                              // 0x00B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     LowResTemplateActor;                               // 0x00B8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMassRepresentationSubsystem> RepresentationSubsystemClass;                    // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMassRepresentationParameters          Params_0;                                          // 0x00C8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMassDistanceLODParameters             LODParams;                                         // 0x00F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bAllowServerSideVisualization;                     // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_111[0xF];                                      // 0x0111(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FStaticMeshInstanceVisualizationDesc   StaticMeshInstanceDesc;                            // 0x0030(0x0090)(Edit, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     HighResTemplateActor;                              // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     LowResTemplateActor;                               // 0x00C8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMassRepresentationSubsystem> RepresentationSubsystemClass;                    // 0x00D0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMassRepresentationParameters          Params_0;                                          // 0x00D8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMassDistanceLODParameters             LODParams;                                         // 0x0100(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bAllowServerSideVisualization;                     // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -71,21 +72,22 @@ public:
 		return GetDefaultObjImpl<UMassDistanceVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassDistanceVisualizationTrait;
 
 // Class MassRepresentation.MassVisualizationTrait
-// 0x0118 (0x0140 - 0x0028)
+// 0x01B0 (0x01E0 - 0x0030)
 class UMassVisualizationTrait : public UMassEntityTraitBase
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStaticMeshInstanceVisualizationDesc   StaticMeshInstanceDesc;                            // 0x0030(0x0080)(Edit, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     HighResTemplateActor;                              // 0x00B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AActor>                     LowResTemplateActor;                               // 0x00B8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMassRepresentationSubsystem> RepresentationSubsystemClass;                    // 0x00C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMassRepresentationParameters          Params_0;                                          // 0x00C8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMassVisualizationLODParameters        LODParams;                                         // 0x00F0(0x0048)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bAllowServerSideVisualization;                     // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FStaticMeshInstanceVisualizationDesc   StaticMeshInstanceDesc;                            // 0x0030(0x0090)(Edit, NativeAccessSpecifierPublic)
+	struct FSkinnedMeshInstanceVisualizationDesc  SkinnedMeshInstanceDesc;                           // 0x00C0(0x0090)(Edit, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     HighResTemplateActor;                              // 0x0150(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     LowResTemplateActor;                               // 0x0158(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMassRepresentationSubsystem> RepresentationSubsystemClass;                    // 0x0160(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMassRepresentationParameters          Params_0;                                          // 0x0168(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMassVisualizationLODParameters        LODParams;                                         // 0x0190(0x0048)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bAllowServerSideVisualization;                     // 0x01D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -101,9 +103,10 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassVisualizationTrait;
 
 // Class MassRepresentation.MassMovableVisualizationTrait
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x01E0 - 0x01E0)
 class UMassMovableVisualizationTrait final : public UMassVisualizationTrait
 {
 public:
@@ -120,6 +123,7 @@ public:
 		return GetDefaultObjImpl<UMassMovableVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassMovableVisualizationTrait;
 
 // Class MassRepresentation.MassRepresentationActorManagement
 // 0x0000 (0x0028 - 0x0028)
@@ -139,15 +143,39 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationActorManagement>();
 	}
 };
+DUMPER7_ASSERTS_UMassRepresentationActorManagement;
+
+// Class MassRepresentation.MassConsumeInstancedSkinnedMeshAnimationProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class UMassConsumeInstancedSkinnedMeshAnimationProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassConsumeInstancedSkinnedMeshAnimationProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassConsumeInstancedSkinnedMeshAnimationProcessor")
+	}
+	static class UMassConsumeInstancedSkinnedMeshAnimationProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassConsumeInstancedSkinnedMeshAnimationProcessor>();
+	}
+};
+DUMPER7_ASSERTS_UMassConsumeInstancedSkinnedMeshAnimationProcessor;
 
 // Class MassRepresentation.MassRepresentationProcessor
-// 0x0330 (0x03E0 - 0x00B0)
+// 0x05D8 (0x06D8 - 0x0100)
 class UMassRepresentationProcessor : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMassRepresentationUpdateParams        UpdateParams;                                      // 0x03D0(0x0001)(Edit, Config, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3D1[0xF];                                      // 0x03D1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMassRepresentationUpdateParams        UpdateParams;                                      // 0x06D0(0x0001)(Edit, Config, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6D1[0x7];                                      // 0x06D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -163,9 +191,10 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassRepresentationProcessor;
 
 // Class MassRepresentation.MassVisualizationProcessor
-// 0x0000 (0x03E0 - 0x03E0)
+// 0x0000 (0x06D8 - 0x06D8)
 class UMassVisualizationProcessor final : public UMassRepresentationProcessor
 {
 public:
@@ -182,13 +211,14 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassVisualizationProcessor;
 
 // Class MassRepresentation.MassRepresentationFragmentDestructor
-// 0x0328 (0x03F0 - 0x00C8)
+// 0x05D0 (0x06F0 - 0x0120)
 class UMassRepresentationFragmentDestructor final : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x328];                                     // 0x00C8(0x0328)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D0];                                    // 0x0120(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -204,19 +234,23 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationFragmentDestructor>();
 	}
 };
+DUMPER7_ASSERTS_UMassRepresentationFragmentDestructor;
 
 // Class MassRepresentation.MassRepresentationSubsystem
-// 0x00C0 (0x00F8 - 0x0038)
+// 0x00C0 (0x0100 - 0x0040)
 class UMassRepresentationSubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         Pad_38[0x38];                                      // 0x0038(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMassVisualizationComponent*            VisualizationComponent;                            // 0x0070(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class AMassVisualizer*                        Visualizer;                                        // 0x0078(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UMassActorSpawnerSubsystem*             ActorSpawnerSubsystem;                             // 0x0080(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_88[0x10];                                      // 0x0088(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWorldPartitionSubsystem*               WorldPartitionSubsystem;                           // 0x0098(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_A0[0x58];                                      // 0x00A0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x38];                                      // 0x0040(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMassVisualizationComponent*            VisualizationComponent;                            // 0x0078(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class AMassVisualizer*                        Visualizer;                                        // 0x0080(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UMassActorSpawnerSubsystem*             ActorSpawnerSubsystem;                             // 0x0088(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWorldPartitionSubsystem*               WorldPartitionSubsystem;                           // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_A8[0x58];                                      // 0x00A8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void HandleVisualizerEndPlay(class AActor* Actor, const EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()
@@ -232,9 +266,10 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassRepresentationSubsystem;
 
 // Class MassRepresentation.MassStationaryDistanceVisualizationTrait
-// 0x0000 (0x0120 - 0x0120)
+// 0x0000 (0x0130 - 0x0130)
 class UMassStationaryDistanceVisualizationTrait final : public UMassDistanceVisualizationTrait
 {
 public:
@@ -251,13 +286,14 @@ public:
 		return GetDefaultObjImpl<UMassStationaryDistanceVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassStationaryDistanceVisualizationTrait;
 
 // Class MassRepresentation.MassStationaryISMRepresentationFragmentDestructor
-// 0x0328 (0x03F0 - 0x00C8)
+// 0x05D0 (0x06F0 - 0x0120)
 class UMassStationaryISMRepresentationFragmentDestructor final : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x328];                                     // 0x00C8(0x0328)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D0];                                    // 0x0120(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -273,13 +309,14 @@ public:
 		return GetDefaultObjImpl<UMassStationaryISMRepresentationFragmentDestructor>();
 	}
 };
+DUMPER7_ASSERTS_UMassStationaryISMRepresentationFragmentDestructor;
 
 // Class MassRepresentation.MassStationaryISMSwitcherProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x05D0 (0x06D0 - 0x0100)
 class UMassStationaryISMSwitcherProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -295,9 +332,10 @@ public:
 		return GetDefaultObjImpl<UMassStationaryISMSwitcherProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassStationaryISMSwitcherProcessor;
 
 // Class MassRepresentation.MassStationaryVisualizationTrait
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x01E0 - 0x01E0)
 class UMassStationaryVisualizationTrait final : public UMassVisualizationTrait
 {
 public:
@@ -314,13 +352,14 @@ public:
 		return GetDefaultObjImpl<UMassStationaryVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassStationaryVisualizationTrait;
 
 // Class MassRepresentation.MassUpdateISMProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x05D0 (0x06D0 - 0x0100)
 class UMassUpdateISMProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -336,14 +375,40 @@ public:
 		return GetDefaultObjImpl<UMassUpdateISMProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassUpdateISMProcessor;
+
+// Class MassRepresentation.MassUpdateInstancedSkinnedMeshProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class UMassUpdateInstancedSkinnedMeshProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassUpdateInstancedSkinnedMeshProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassUpdateInstancedSkinnedMeshProcessor")
+	}
+	static class UMassUpdateInstancedSkinnedMeshProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassUpdateInstancedSkinnedMeshProcessor>();
+	}
+};
+DUMPER7_ASSERTS_UMassUpdateInstancedSkinnedMeshProcessor;
 
 // Class MassRepresentation.MassVisualizationComponent
-// 0x0160 (0x0230 - 0x00D0)
+// 0x0338 (0x0430 - 0x00F8)
 class UMassVisualizationComponent final : public UActorComponent
 {
 public:
-	TArray<struct FMassInstancedStaticMeshInfo>   InstancedStaticMeshInfos;                          // 0x00D0(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_E0[0x150];                                     // 0x00E0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FMassInstancedStaticMeshInfo>   InstancedStaticMeshInfos;                          // 0x00F8(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_108[0x150];                                    // 0x0108(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMassInstancedSkinnedMeshInfo>  InstancedSkinnedMeshInfos;                         // 0x0258(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_268[0x1C8];                                    // 0x0268(0x01C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -359,16 +424,17 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationComponent>();
 	}
 };
+DUMPER7_ASSERTS_UMassVisualizationComponent;
 
 // Class MassRepresentation.MassVisualizationLODProcessor
-// 0x0CA0 (0x0D50 - 0x00B0)
+// 0x1760 (0x1860 - 0x0100)
 class alignas(0x10) UMassVisualizationLODProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0xC88];                                     // 0x00B0(0x0C88)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScriptStruct*                          FilterTag;                                         // 0x0D38(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	bool                                          bDoAdjustmentFromCount;                            // 0x0D40(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D41[0xF];                                      // 0x0D41(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x1748];                                   // 0x0100(0x1748)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptStruct*                          FilterTag;                                         // 0x1848(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	bool                                          bDoAdjustmentFromCount;                            // 0x1850(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1851[0x7];                                     // 0x1851(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -384,13 +450,14 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationLODProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassVisualizationLODProcessor;
 
 // Class MassRepresentation.MassVisualizer
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class AMassVisualizer final : public AActor
 {
 public:
-	class UMassVisualizationComponent*            VisComponent;                                      // 0x0490(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UMassVisualizationComponent*            VisComponent;                                      // 0x0498(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -406,5 +473,6 @@ public:
 		return GetDefaultObjImpl<AMassVisualizer>();
 	}
 };
+DUMPER7_ASSERTS_AMassVisualizer;
 
 SDK_NAMESPACE_END

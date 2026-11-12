@@ -15,28 +15,29 @@
 
 SDK_NAMESPACE_START
 
-// Class NiagaraCore.NiagaraMergeable
+// Class NiagaraCore.NiagaraNotifyOnChanged
 // 0x0000 (0x0028 - 0x0028)
-class UNiagaraMergeable : public UObject
+class UNiagaraNotifyOnChanged : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("NiagaraMergeable")
+		STATIC_CLASS_IMPL("NiagaraNotifyOnChanged")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"NiagaraMergeable")
+		STATIC_NAME_IMPL(L"NiagaraNotifyOnChanged")
 	}
-	static class UNiagaraMergeable* GetDefaultObj()
+	static class UNiagaraNotifyOnChanged* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNiagaraMergeable>();
+		return GetDefaultObjImpl<UNiagaraNotifyOnChanged>();
 	}
 };
+DUMPER7_ASSERTS_UNiagaraNotifyOnChanged;
 
 // Class NiagaraCore.NiagaraDataInterfaceBase
 // 0x0000 (0x0028 - 0x0028)
-class UNiagaraDataInterfaceBase : public UNiagaraMergeable
+class UNiagaraDataInterfaceBase : public UNiagaraNotifyOnChanged
 {
 public:
 	static class UClass* StaticClass()
@@ -52,5 +53,26 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceBase>();
 	}
 };
+DUMPER7_ASSERTS_UNiagaraDataInterfaceBase;
+
+// Class NiagaraCore.NiagaraMergeable
+// 0x0000 (0x0028 - 0x0028)
+class UNiagaraMergeable : public UNiagaraNotifyOnChanged
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NiagaraMergeable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraMergeable")
+	}
+	static class UNiagaraMergeable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNiagaraMergeable>();
+	}
+};
+DUMPER7_ASSERTS_UNiagaraMergeable;
 
 SDK_NAMESPACE_END

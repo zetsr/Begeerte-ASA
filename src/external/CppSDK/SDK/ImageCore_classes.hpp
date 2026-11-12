@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<USharedImageConstRefBlueprintFns>();
 	}
 };
+DUMPER7_ASSERTS_USharedImageConstRefBlueprintFns;
 
 SDK_NAMESPACE_END

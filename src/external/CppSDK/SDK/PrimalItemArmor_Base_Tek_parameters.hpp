@@ -28,6 +28,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_ApplyingSkinOntoItem;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BlueprintEquipped
 // 0x0002 (0x0002 - 0x0000)
@@ -37,6 +38,7 @@ public:
 	bool                                          bIsFromSaveGame;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Return_Val;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_BlueprintEquipped;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BlueprintOwnerPosssessed
 // 0x0008 (0x0008 - 0x0000)
@@ -45,6 +47,7 @@ struct PrimalItemArmor_Base_Tek_C_BlueprintOwnerPosssessed final
 public:
 	class AController*                            PossessedByController;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_BlueprintOwnerPosssessed;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BlueprintUnequipped
 // 0x0020 (0x0020 - 0x0000)
@@ -56,6 +59,7 @@ public:
 	class AShooterCharacter*                      K2Node_DynamicCast_AsShooter_Character;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_BlueprintUnequipped;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BPGetCustomInventoryWidgetText
 // 0x0080 (0x0080 - 0x0000)
@@ -76,6 +80,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_BPGetCustomInventoryWidgetText;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.BPGetMaxAmmo
 // 0x0004 (0x0004 - 0x0000)
@@ -84,6 +89,7 @@ struct PrimalItemArmor_Base_Tek_C_BPGetMaxAmmo final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_BPGetMaxAmmo;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.Can Element Decrease
 // 0x0028 (0x0028 - 0x0000)
@@ -105,6 +111,7 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_Can_Element_Decrease;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.ExecuteUbergraph_PrimalItemArmor_Base_Tek
 // 0x0100 (0x0100 - 0x0000)
@@ -159,6 +166,7 @@ public:
 	class UWorld*                                 CallFunc_GetPrimaryWorld_ReturnValue;              // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsInfiniteAmmo_IsInfinite_1;              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_ExecuteUbergraph_PrimalItemArmor_Base_Tek;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.FillEmptyArmorElementWhenAvailable
 // 0x0020 (0x0020 - 0x0000)
@@ -175,6 +183,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UseItemOntoItem_ReturnValue;              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_FillEmptyArmorElementWhenAvailable;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetInternalMapRestrictedTekArmorBuff
 // 0x0090 (0x0090 - 0x0000)
@@ -202,6 +211,7 @@ public:
 	class UClass*                                 CallFunc_ClassAssetResolve_ReturnValue;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_ClassAssetResolve_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_GetInternalMapRestrictedTekArmorBuff;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.GetResolvedTekArmorBuff
 // 0x0038 (0x0038 - 0x0000)
@@ -217,6 +227,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetInternalMapRestrictedTekArmorBuff_TekArmorBuff_1; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_GetResolvedTekArmorBuff;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IncreaseElement
 // 0x0008 (0x0008 - 0x0000)
@@ -225,6 +236,7 @@ struct PrimalItemArmor_Base_Tek_C_IncreaseElement final
 public:
 	double                                        Percent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_IncreaseElement;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.InitBuff
 // 0x0028 (0x0028 - 0x0000)
@@ -238,6 +250,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APrimalBuff*                            CallFunc_StaticAddBuff_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_InitBuff;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.IsInfiniteAmmo
 // 0x0030 (0x0030 - 0x0000)
@@ -254,6 +267,7 @@ public:
 	class ABuff_TekArmor_C*                       K2Node_DynamicCast_AsBuff_Tek_Armor;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_IsInfiniteAmmo;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.RemovedSkinFromItem
 // 0x0020 (0x0020 - 0x0000)
@@ -267,6 +281,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_RemovedSkinFromItem;
 
 // Function PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C.TryToDecreaseElement
 // 0x0004 (0x0004 - 0x0000)
@@ -275,6 +290,7 @@ struct PrimalItemArmor_Base_Tek_C_TryToDecreaseElement final
 public:
 	int32                                         AmountToDecreaseBy;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemArmor_Base_Tek_C_TryToDecreaseElement;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

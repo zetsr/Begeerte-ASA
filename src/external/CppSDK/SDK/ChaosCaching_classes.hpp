@@ -10,35 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "ChaosCaching_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MovieSceneTracks_classes.hpp"
-#include "ChaosCaching_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "MovieSceneTracks_classes.hpp"
 #include "MovieScene_classes.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Class ChaosCaching.MovieSceneSpawnableChaosCacheBinding
-// 0x0000 (0x0048 - 0x0048)
-class UMovieSceneSpawnableChaosCacheBinding final : public UMovieSceneSpawnableActorBinding
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneSpawnableChaosCacheBinding")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneSpawnableChaosCacheBinding")
-	}
-	static class UMovieSceneSpawnableChaosCacheBinding* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneSpawnableChaosCacheBinding>();
-	}
-};
 
 // Class ChaosCaching.ChaosCacheCollection
 // 0x0018 (0x0040 - 0x0028)
@@ -63,32 +44,43 @@ public:
 		return GetDefaultObjImpl<UChaosCacheCollection>();
 	}
 };
+DUMPER7_ASSERTS_UChaosCacheCollection;
 
 // Class ChaosCaching.ChaosCacheManager
-// 0x00B0 (0x0540 - 0x0490)
+// 0x00C0 (0x0558 - 0x0498)
 class AChaosCacheManager : public AActor
 {
 public:
-	class UChaosCacheCollection*                  CacheCollection;                                   // 0x0490(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	ECacheMode                                    CacheMode;                                         // 0x0498(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStartMode                                    StartMode;                                         // 0x0499(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49A[0x2];                                      // 0x049A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartTime;                                         // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A0[0x8];                                      // 0x04A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FObservedComponent>             ObservedComponents;                                // 0x04A8(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4B8[0x88];                                     // 0x04B8(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UChaosCacheCollection*                  CacheCollection;                                   // 0x0498(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bCreateNewCacheCollectionAssetOnRecord;            // 0x04A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECacheMode                                    CacheMode;                                         // 0x04A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStartMode                                    StartMode;                                         // 0x04A2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A3[0x1];                                      // 0x04A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStartOnBeginPlay;                                 // 0x04A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplayEventsInStaticPoseMode;                     // 0x04A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4AA[0x6];                                      // 0x04AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FObservedComponent>             ObservedComponents;                                // 0x04B0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4C0[0x98];                                     // 0x04C0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void ClearObservedComponents(bool bDestroyComponents);
 	void EnablePlayback(int32 Index_0, bool bEnable);
 	void EnablePlaybackByCache(class FName InCacheName, bool bEnable);
+	void FindOrAddObservedComponent(class UPrimitiveComponent* InComponent, const class FName& CacheName, const bool bTransferSimulationFlag);
+	void RemoveObservedComponent(class UPrimitiveComponent* InComponent);
 	void ResetAllComponentTransforms();
 	void ResetSingleTransform(int32 InIndex);
 	void SetCacheCollection(class UChaosCacheCollection* InCacheCollection);
 	void SetCurrentTime(float CurrentTime);
 	void SetStartTime(float InStartTime);
+	void Start(float InStartTime);
+	void Stop();
 	void TriggerAll();
 	void TriggerComponent(class UPrimitiveComponent* InComponent);
 	void TriggerComponentByCache(class FName InCacheName);
+
+	bool IsRecording() const;
 
 public:
 	static class UClass* StaticClass()
@@ -104,9 +96,10 @@ public:
 		return GetDefaultObjImpl<AChaosCacheManager>();
 	}
 };
+DUMPER7_ASSERTS_AChaosCacheManager;
 
 // Class ChaosCaching.ChaosCachePlayer
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0558 - 0x0558)
 class AChaosCachePlayer final : public AChaosCacheManager
 {
 public:
@@ -123,9 +116,42 @@ public:
 		return GetDefaultObjImpl<AChaosCachePlayer>();
 	}
 };
+DUMPER7_ASSERTS_AChaosCachePlayer;
+
+// Class ChaosCaching.ChaosCacheData
+// 0x0008 (0x0008 - 0x0000)
+class IChaosCacheData
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosCacheData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosCacheData")
+	}
+	static class IChaosCacheData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IChaosCacheData>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IChaosCacheData;
 
 // Class ChaosCaching.ChaosCache
-// 0x0358 (0x0380 - 0x0028)
+// 0x0368 (0x0390 - 0x0028)
 class UChaosCache final : public UObject
 {
 public:
@@ -145,12 +171,13 @@ public:
 	float                                         ChannelsCompressionErrorThreshold;                 // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelsCompressionSampleRate;                     // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FCacheEventTrack>    EventTracks;                                       // 0x01B8(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCacheSpawnableTemplate                Spawnable;                                         // 0x0210(0x00D0)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FGuid                                  AdapterGuid;                                       // 0x02E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         Version;                                           // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2F4[0x8C];                                     // 0x02F4(0x008C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IChaosCacheData>       CacheData;                                         // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FCacheEventTrack>    EventTracks;                                       // 0x01C8(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCacheSpawnableTemplate                Spawnable;                                         // 0x0220(0x00D0)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FGuid                                  AdapterGuid;                                       // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         Version;                                           // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_304[0x84];                                     // 0x0304(0x0084)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -166,13 +193,14 @@ public:
 		return GetDefaultObjImpl<UChaosCache>();
 	}
 };
+DUMPER7_ASSERTS_UChaosCache;
 
 // Class ChaosCaching.MovieSceneChaosCacheSection
-// 0x0028 (0x0128 - 0x0100)
+// 0x0028 (0x01F0 - 0x01C8)
 class UMovieSceneChaosCacheSection final : public UMovieSceneBaseCacheSection
 {
 public:
-	struct FMovieSceneChaosCacheParams            Params_0;                                          // 0x0100(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneChaosCacheParams            Params_0;                                          // 0x01C8(0x0028)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -188,14 +216,14 @@ public:
 		return GetDefaultObjImpl<UMovieSceneChaosCacheSection>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneChaosCacheSection;
 
 // Class ChaosCaching.MovieSceneChaosCacheTrack
-// 0x0018 (0x0110 - 0x00F8)
-class UMovieSceneChaosCacheTrack final : public UMovieSceneNameableTrack
+// 0x0018 (0x01D0 - 0x01B8)
+class UMovieSceneChaosCacheTrack final : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer
 {
 public:
-	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0100(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x01C0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -211,5 +239,26 @@ public:
 		return GetDefaultObjImpl<UMovieSceneChaosCacheTrack>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneChaosCacheTrack;
+
+// Class ChaosCaching.MovieSceneSpawnableChaosCacheBinding
+// 0x0000 (0x0048 - 0x0048)
+class UMovieSceneSpawnableChaosCacheBinding final : public UMovieSceneSpawnableActorBinding
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneSpawnableChaosCacheBinding")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSpawnableChaosCacheBinding")
+	}
+	static class UMovieSceneSpawnableChaosCacheBinding* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneSpawnableChaosCacheBinding>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneSpawnableChaosCacheBinding;
 
 SDK_NAMESPACE_END

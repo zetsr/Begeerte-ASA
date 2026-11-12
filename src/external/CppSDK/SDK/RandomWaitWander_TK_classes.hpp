@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class URandomWaitWander_TK_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	double                                        MinWait;                                           // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxWait;                                           // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDontWaitOnFlyingNPC;                              // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<URandomWaitWander_TK_C>();
 	}
 };
+DUMPER7_ASSERTS_URandomWaitWander_TK_C;
 
 SDK_NAMESPACE_END

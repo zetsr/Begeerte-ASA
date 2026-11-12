@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PrimalInventoryBP_DeathItemCache.PrimalInventoryBP_DeathItemCache_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x08E8 - 0x08E8)
 class UPrimalInventoryBP_DeathItemCache_C final : public UPrimalInventoryBP_StorageBox_Base_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryBP_DeathItemCache_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalInventoryBP_DeathItemCache_C;
 
 SDK_NAMESPACE_END

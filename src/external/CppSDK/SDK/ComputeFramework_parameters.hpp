@@ -14,15 +14,27 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ComputeFramework.ComputeGraphComponent.CreateDataProviders
+// Function ComputeFramework.ComputeGraphComponent.GetBindingObject
 // 0x0010 (0x0010 - 0x0000)
-struct ComputeGraphComponent_CreateDataProviders final
+struct ComputeGraphComponent_GetBindingObject final
 {
 public:
 	int32                                         InBindingIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                InBindingObject;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ComputeGraphComponent_GetBindingObject;
+
+// Function ComputeFramework.ComputeGraphComponent.InitializeProvider
+// 0x0010 (0x0010 - 0x0000)
+struct ComputeGraphComponent_InitializeProvider final
+{
+public:
+	int32                                         InDataInterfaceIndex;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                InOutDataProvider;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ComputeGraphComponent_InitializeProvider;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

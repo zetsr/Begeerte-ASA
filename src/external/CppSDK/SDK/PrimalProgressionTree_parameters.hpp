@@ -25,6 +25,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ChildID;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_AddChild;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.AddNode
 // 0x0018 (0x0018 - 0x0000)
@@ -34,6 +35,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              NodePosition;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_AddNode;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.AddPrerequisite
 // 0x0014 (0x0014 - 0x0000)
@@ -44,6 +46,7 @@ public:
 	class FName                                   PrereqID;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         GroupIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_AddPrerequisite;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.RemoveNode
 // 0x0008 (0x0008 - 0x0000)
@@ -52,6 +55,7 @@ struct PrimalProgressionTreeGraph_RemoveNode final
 public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_RemoveNode;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.ValidateGraph
 // 0x0018 (0x0018 - 0x0000)
@@ -62,6 +66,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_ValidateGraph;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.ArePrerequisitesMet
 // 0x0060 (0x0060 - 0x0000)
@@ -69,10 +74,11 @@ struct PrimalProgressionTreeGraph_ArePrerequisitesMet final
 {
 public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_ArePrerequisitesMet;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.ArePrerequisitesMetForController
 // 0x0020 (0x0020 - 0x0000)
@@ -85,6 +91,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_ArePrerequisitesMetForController;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetAllAncestors
 // 0x0018 (0x0018 - 0x0000)
@@ -94,6 +101,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetAllAncestors;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetAllDescendants
 // 0x0018 (0x0018 - 0x0000)
@@ -103,6 +111,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetAllDescendants;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetAllPathsBetweenNodes
 // 0x0028 (0x0028 - 0x0000)
@@ -115,15 +124,17 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPrimalProgressionPath>         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetAllPathsBetweenNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetAvailableNodes
 // 0x0060 (0x0060 - 0x0000)
 struct PrimalProgressionTreeGraph_GetAvailableNodes final
 {
 public:
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0000(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ReturnValue;                                       // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetAvailableNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetEdgeWeight
 // 0x0014 (0x0014 - 0x0000)
@@ -134,6 +145,7 @@ public:
 	class FName                                   ToNodeID;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetEdgeWeight;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetLeafNodes
 // 0x0010 (0x0010 - 0x0000)
@@ -142,6 +154,7 @@ struct PrimalProgressionTreeGraph_GetLeafNodes final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetLeafNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetPathBetweenNodes
 // 0x0020 (0x0020 - 0x0000)
@@ -152,6 +165,7 @@ public:
 	class FName                                   EndNodeID;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetPathBetweenNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetRootNodes
 // 0x0010 (0x0010 - 0x0000)
@@ -160,6 +174,7 @@ struct PrimalProgressionTreeGraph_GetRootNodes final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetRootNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.GetShortestWeightedPath
 // 0x0020 (0x0020 - 0x0000)
@@ -170,6 +185,7 @@ public:
 	class FName                                   EndNodeID;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_GetShortestWeightedPath;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph.PathExists
 // 0x0014 (0x0014 - 0x0000)
@@ -181,6 +197,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_PathExists;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeRowFeature.SetNodeRow
 // 0x0010 (0x0010 - 0x0000)
@@ -190,6 +207,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                              NodeRowAndIndex;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeRowFeature_SetNodeRow;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeRowFeature.CheckRowRequirements
 // 0x0060 (0x0060 - 0x0000)
@@ -197,10 +215,11 @@ struct PrimalProgressionTreeRowFeature_CheckRowRequirements final
 {
 public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeRowFeature_CheckRowRequirements;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeRowFeature.GetNodeRow
 // 0x000C (0x000C - 0x0000)
@@ -210,6 +229,7 @@ public:
 	class FName                                   NodeID;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeRowFeature_GetNodeRow;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeRowFeature.GetPointsSpentInRow
 // 0x0060 (0x0060 - 0x0000)
@@ -218,10 +238,11 @@ struct PrimalProgressionTreeRowFeature_GetPointsSpentInRow final
 public:
 	int32                                         RowIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeRowFeature_GetPointsSpentInRow;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeRowFeature.IsRowAvailable
 // 0x0060 (0x0060 - 0x0000)
@@ -230,10 +251,11 @@ struct PrimalProgressionTreeRowFeature_IsRowAvailable final
 public:
 	int32                                         RowIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeRowFeature_IsRowAvailable;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.IncreaseSkillTier
 // 0x000C (0x000C - 0x0000)
@@ -244,6 +266,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_IncreaseSkillTier;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.SetSkillTierConfig
 // 0x0014 (0x0014 - 0x0000)
@@ -255,14 +278,16 @@ public:
 	int32                                         BaseCost;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CostIncreasePerTier;                               // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_SetSkillTierConfig;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetEffectiveUnlockedNodes
 // 0x0050 (0x0050 - 0x0000)
 struct PrimalProgressionTreeTierFeature_GetEffectiveUnlockedNodes final
 {
 public:
-	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_GetEffectiveUnlockedNodes;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetSkillTier
 // 0x000C (0x000C - 0x0000)
@@ -272,6 +297,7 @@ public:
 	class FName                                   SkillID;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_GetSkillTier;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetSkillTierConfigs
 // 0x0050 (0x0050 - 0x0000)
@@ -280,6 +306,7 @@ struct PrimalProgressionTreeTierFeature_GetSkillTierConfigs final
 public:
 	TMap<class FName, struct FSkillTierConfig>    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_GetSkillTierConfigs;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetSkillUpgradeCost
 // 0x000C (0x000C - 0x0000)
@@ -289,6 +316,7 @@ public:
 	class FName                                   SkillID;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_GetSkillUpgradeCost;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeTierFeature.GetUnlockedTiers
 // 0x0050 (0x0050 - 0x0000)
@@ -297,6 +325,7 @@ struct PrimalProgressionTreeTierFeature_GetUnlockedTiers final
 public:
 	TMap<class FName, int32>                      ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeTierFeature_GetUnlockedTiers;
 
 // Function PrimalProgressionTree.PrimalProgressionTreeGraph_RowsAndTiers.GetPointsSpentInRow
 // 0x0060 (0x0060 - 0x0000)
@@ -305,10 +334,11 @@ struct PrimalProgressionTreeGraph_RowsAndTiers_GetPointsSpentInRow final
 public:
 	int32                                         RowIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             UnlockedNodes;                                     // 0x0008(0x0050)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PrimalProgressionTreeGraph_RowsAndTiers_GetPointsSpentInRow;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

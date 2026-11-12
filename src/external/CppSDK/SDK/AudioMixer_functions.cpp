@@ -16,15 +16,307 @@
 
 SDK_NAMESPACE_START
 
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Function AudioMixer.SynthComponent.GetModulators
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const EModulationDestination            Destination                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSet<class USoundModulatorBase*>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-void USubmixEffectDynamicsProcessorPreset::ResetKey()
+TSet<class USoundModulatorBase*> USynthComponent::GetModulators(const EModulationDestination Destination)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "ResetKey");
+		Func = Class->GetFunction("SynthComponent", "GetModulators");
+
+	Params::SynthComponent_GetModulators Parms{};
+
+	Parms.Destination = Destination;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioMixer.SynthComponent.SetAudioBusSendPostEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AudioBusSendLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetAudioBusSendPostEffect(class UAudioBus* AudioBus, float AudioBusSendLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetAudioBusSendPostEffect");
+
+	Params::SynthComponent_SetAudioBusSendPostEffect Parms{};
+
+	Parms.AudioBus = AudioBus;
+	Parms.AudioBusSendLevel = AudioBusSendLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetAudioBusSendPreEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AudioBusSendLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetAudioBusSendPreEffect(class UAudioBus* AudioBus, float AudioBusSendLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetAudioBusSendPreEffect");
+
+	Params::SynthComponent_SetAudioBusSendPreEffect Parms{};
+
+	Parms.AudioBus = AudioBus;
+	Parms.AudioBusSendLevel = AudioBusSendLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetLowPassFilterEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    InLowPassFilterEnabled                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetLowPassFilterEnabled(bool InLowPassFilterEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetLowPassFilterEnabled");
+
+	Params::SynthComponent_SetLowPassFilterEnabled Parms{};
+
+	Parms.InLowPassFilterEnabled = InLowPassFilterEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetLowPassFilterFrequency
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InLowPassFilterFrequency                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetLowPassFilterFrequency(float InLowPassFilterFrequency)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetLowPassFilterFrequency");
+
+	Params::SynthComponent_SetLowPassFilterFrequency Parms{};
+
+	Parms.InLowPassFilterFrequency = InLowPassFilterFrequency;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetModulationRouting
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const EModulationDestination            Destination                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EModulationRouting                RoutingMethod                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetModulationRouting(const TSet<class USoundModulatorBase*>& Modulators, const EModulationDestination Destination, const EModulationRouting RoutingMethod)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetModulationRouting");
+
+	Params::SynthComponent_SetModulationRouting Parms{};
+
+	Parms.Modulators = std::move(Modulators);
+	Parms.Destination = Destination;
+	Parms.RoutingMethod = RoutingMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetOutputToBusOnly
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInOutputToBusOnly                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetOutputToBusOnly(bool bInOutputToBusOnly)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetOutputToBusOnly");
+
+	Params::SynthComponent_SetOutputToBusOnly Parms{};
+
+	Parms.bInOutputToBusOnly = bInOutputToBusOnly;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetSourceBusSendPostEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundSourceBus*                  SoundSourceBus                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SourceBusSendLevel                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetSourceBusSendPostEffect(class USoundSourceBus* SoundSourceBus, float SourceBusSendLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetSourceBusSendPostEffect");
+
+	Params::SynthComponent_SetSourceBusSendPostEffect Parms{};
+
+	Parms.SoundSourceBus = SoundSourceBus;
+	Parms.SourceBusSendLevel = SourceBusSendLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetSourceBusSendPreEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundSourceBus*                  SoundSourceBus                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SourceBusSendLevel                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetSourceBusSendPreEffect(class USoundSourceBus* SoundSourceBus, float SourceBusSendLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetSourceBusSendPreEffect");
+
+	Params::SynthComponent_SetSourceBusSendPreEffect Parms{};
+
+	Parms.SoundSourceBus = SoundSourceBus;
+	Parms.SourceBusSendLevel = SourceBusSendLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetSubmixSend
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundSubmixBase*                 Submix                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SendLevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetSubmixSend");
+
+	Params::SynthComponent_SetSubmixSend Parms{};
+
+	Parms.Submix = Submix;
+	Parms.SendLevel = SendLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.SetVolumeMultiplier
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   VolumeMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "SetVolumeMultiplier");
+
+	Params::SynthComponent_SetVolumeMultiplier Parms{};
+
+	Parms.VolumeMultiplier = VolumeMultiplier;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.Start
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void USynthComponent::Start()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "Start");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -35,21 +327,44 @@ void USubmixEffectDynamicsProcessorPreset::ResetKey()
 }
 
 
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetAudioBus
+// Function AudioMixer.SynthComponent.Stop
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USubmixEffectDynamicsProcessorPreset::SetAudioBus(class UAudioBus* AudioBus)
+void USynthComponent::Stop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetAudioBus");
+		Func = Class->GetFunction("SynthComponent", "Stop");
 
-	Params::SubmixEffectDynamicsProcessorPreset_SetAudioBus Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.AudioBus = AudioBus;
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.AdjustVolume
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// float                                   AdjustVolumeDuration                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdjustVolumeLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponent::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, const EAudioFaderCurve FadeCurve) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "AdjustVolume");
+
+	Params::SynthComponent_AdjustVolume Parms{};
+
+	Parms.AdjustVolumeDuration = AdjustVolumeDuration;
+	Parms.AdjustVolumeLevel = AdjustVolumeLevel;
+	Parms.FadeCurve = FadeCurve;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -60,21 +375,27 @@ void USubmixEffectDynamicsProcessorPreset::SetAudioBus(class UAudioBus* AudioBus
 }
 
 
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Function AudioMixer.SynthComponent.FadeIn
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
 // Parameters:
-// class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FadeInDuration                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FadeVolumeLevel                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
+void USynthComponent::FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime, const EAudioFaderCurve FadeCurve) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetExternalSubmix");
+		Func = Class->GetFunction("SynthComponent", "FadeIn");
 
-	Params::SubmixEffectDynamicsProcessorPreset_SetExternalSubmix Parms{};
+	Params::SynthComponent_FadeIn Parms{};
 
-	Parms.Submix = Submix;
+	Parms.FadeInDuration = FadeInDuration;
+	Parms.FadeVolumeLevel = FadeVolumeLevel;
+	Parms.StartTime = StartTime;
+	Parms.FadeCurve = FadeCurve;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -85,21 +406,25 @@ void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix*
 }
 
 
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Function AudioMixer.SynthComponent.FadeOut
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
 // Parameters:
-// const struct FSubmixEffectDynamicsProcessorSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   FadeOutDuration                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FadeVolumeLevel                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings_0)
+void USynthComponent::FadeOut(float FadeOutDuration, float FadeVolumeLevel, const EAudioFaderCurve FadeCurve) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetSettings");
+		Func = Class->GetFunction("SynthComponent", "FadeOut");
 
-	Params::SubmixEffectDynamicsProcessorPreset_SetSettings Parms{};
+	Params::SynthComponent_FadeOut Parms{};
 
-	Parms.Settings_0 = std::move(Settings_0);
+	Parms.FadeOutDuration = FadeOutDuration;
+	Parms.FadeVolumeLevel = FadeVolumeLevel;
+	Parms.FadeCurve = FadeCurve;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -107,6 +432,31 @@ void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffec
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SynthComponent.IsPlaying
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USynthComponent::IsPlaying() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponent", "IsPlaying");
+
+	Params::SynthComponent_IsPlaying Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1295,51 +1645,40 @@ void UAudioMixerBlueprintLibrary::UnregisterAudioBusFromSubmix(const class UObje
 }
 
 
-// Function AudioMixer.SynthComponent.GetModulators
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const EModulationDestination            destination                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSet<class USoundModulatorBase*>        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
-TSet<class USoundModulatorBase*> USynthComponent::GetModulators(const EModulationDestination destination)
+void USubmixEffectDynamicsProcessorPreset::ResetKey()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "GetModulators");
-
-	Params::SynthComponent_GetModulators Parms{};
-
-	Parms.destination = destination;
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "ResetKey");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
-// Function AudioMixer.SynthComponent.SetAudioBusSendPostEffect
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetAudioBus
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   AudioBusSendLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USynthComponent::SetAudioBusSendPostEffect(class UAudioBus* AudioBus, float AudioBusSendLevel)
+void USubmixEffectDynamicsProcessorPreset::SetAudioBus(class UAudioBus* AudioBus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetAudioBusSendPostEffect");
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetAudioBus");
 
-	Params::SynthComponent_SetAudioBusSendPostEffect Parms{};
+	Params::SubmixEffectDynamicsProcessorPreset_SetAudioBus Parms{};
 
 	Parms.AudioBus = AudioBus;
-	Parms.AudioBusSendLevel = AudioBusSendLevel;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1350,208 +1689,21 @@ void USynthComponent::SetAudioBusSendPostEffect(class UAudioBus* AudioBus, float
 }
 
 
-// Function AudioMixer.SynthComponent.SetAudioBusSendPreEffect
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   AudioBusSendLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USynthComponent::SetAudioBusSendPreEffect(class UAudioBus* AudioBus, float AudioBusSendLevel)
+void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetAudioBusSendPreEffect");
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetExternalSubmix");
 
-	Params::SynthComponent_SetAudioBusSendPreEffect Parms{};
-
-	Parms.AudioBus = AudioBus;
-	Parms.AudioBusSendLevel = AudioBusSendLevel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetLowPassFilterEnabled
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    InLowPassFilterEnabled                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetLowPassFilterEnabled(bool InLowPassFilterEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetLowPassFilterEnabled");
-
-	Params::SynthComponent_SetLowPassFilterEnabled Parms{};
-
-	Parms.InLowPassFilterEnabled = InLowPassFilterEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetLowPassFilterFrequency
-// (RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InLowPassFilterFrequency                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetLowPassFilterFrequency(float InLowPassFilterFrequency)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetLowPassFilterFrequency");
-
-	Params::SynthComponent_SetLowPassFilterFrequency Parms{};
-
-	Parms.InLowPassFilterFrequency = InLowPassFilterFrequency;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetModulationRouting
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const EModulationDestination            destination                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EModulationRouting                RoutingMethod                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetModulationRouting(const TSet<class USoundModulatorBase*>& Modulators, const EModulationDestination destination, const EModulationRouting RoutingMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetModulationRouting");
-
-	Params::SynthComponent_SetModulationRouting Parms{};
-
-	Parms.Modulators = std::move(Modulators);
-	Parms.destination = destination;
-	Parms.RoutingMethod = RoutingMethod;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetOutputToBusOnly
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInOutputToBusOnly                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetOutputToBusOnly(bool bInOutputToBusOnly)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetOutputToBusOnly");
-
-	Params::SynthComponent_SetOutputToBusOnly Parms{};
-
-	Parms.bInOutputToBusOnly = bInOutputToBusOnly;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetSourceBusSendPostEffect
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class USoundSourceBus*                  SoundSourceBus                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SourceBusSendLevel                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetSourceBusSendPostEffect(class USoundSourceBus* SoundSourceBus, float SourceBusSendLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetSourceBusSendPostEffect");
-
-	Params::SynthComponent_SetSourceBusSendPostEffect Parms{};
-
-	Parms.SoundSourceBus = SoundSourceBus;
-	Parms.SourceBusSendLevel = SourceBusSendLevel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetSourceBusSendPreEffect
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class USoundSourceBus*                  SoundSourceBus                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SourceBusSendLevel                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetSourceBusSendPreEffect(class USoundSourceBus* SoundSourceBus, float SourceBusSendLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetSourceBusSendPreEffect");
-
-	Params::SynthComponent_SetSourceBusSendPreEffect Parms{};
-
-	Parms.SoundSourceBus = SoundSourceBus;
-	Parms.SourceBusSendLevel = SourceBusSendLevel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.SetSubmixSend
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class USoundSubmixBase*                 Submix                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SendLevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::SetSubmixSend(class USoundSubmixBase* Submix, float SendLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetSubmixSend");
-
-	Params::SynthComponent_SetSubmixSend Parms{};
+	Params::SubmixEffectDynamicsProcessorPreset_SetExternalSubmix Parms{};
 
 	Parms.Submix = Submix;
-	Parms.SendLevel = SendLevel;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1562,21 +1714,21 @@ void USynthComponent::SetSubmixSend(class USoundSubmixBase* Submix, float SendLe
 }
 
 
-// Function AudioMixer.SynthComponent.SetVolumeMultiplier
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// float                                   VolumeMultiplier                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSubmixEffectDynamicsProcessorSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
+void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "SetVolumeMultiplier");
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetSettings");
 
-	Params::SynthComponent_SetVolumeMultiplier Parms{};
+	Params::SubmixEffectDynamicsProcessorPreset_SetSettings Parms{};
 
-	Parms.VolumeMultiplier = VolumeMultiplier;
+	Parms.Settings_0 = std::move(Settings_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1584,158 +1736,6 @@ void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.Start
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-
-void USynthComponent::Start()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "Start");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.Stop
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-
-void USynthComponent::Stop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "Stop");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.AdjustVolume
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// float                                   AdjustVolumeDuration                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   AdjustVolumeLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, const EAudioFaderCurve FadeCurve) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "AdjustVolume");
-
-	Params::SynthComponent_AdjustVolume Parms{};
-
-	Parms.AdjustVolumeDuration = AdjustVolumeDuration;
-	Parms.AdjustVolumeLevel = AdjustVolumeLevel;
-	Parms.FadeCurve = FadeCurve;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.FadeIn
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// float                                   FadeInDuration                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   FadeVolumeLevel                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime, const EAudioFaderCurve FadeCurve) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "FadeIn");
-
-	Params::SynthComponent_FadeIn Parms{};
-
-	Parms.FadeInDuration = FadeInDuration;
-	Parms.FadeVolumeLevel = FadeVolumeLevel;
-	Parms.StartTime = StartTime;
-	Parms.FadeCurve = FadeCurve;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.FadeOut
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// float                                   FadeOutDuration                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   FadeVolumeLevel                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EAudioFaderCurve                  FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponent::FadeOut(float FadeOutDuration, float FadeVolumeLevel, const EAudioFaderCurve FadeCurve) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "FadeOut");
-
-	Params::SynthComponent_FadeOut Parms{};
-
-	Parms.FadeOutDuration = FadeOutDuration;
-	Parms.FadeVolumeLevel = FadeVolumeLevel;
-	Parms.FadeCurve = FadeCurve;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SynthComponent.IsPlaying
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USynthComponent::IsPlaying() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponent", "IsPlaying");
-
-	Params::SynthComponent_IsPlaying Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -1815,6 +1815,156 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const class UReverbE
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.SetGrainDurationRange
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 InGrainDurationRangeSeconds                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScrubbedSound::SetGrainDurationRange(const struct FVector2D& InGrainDurationRangeSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "SetGrainDurationRange");
+
+	Params::ScrubbedSound_SetGrainDurationRange Parms{};
+
+	Parms.InGrainDurationRangeSeconds = std::move(InGrainDurationRangeSeconds);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.SetIsScrubbing
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInIsScrubbing                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScrubbedSound::SetIsScrubbing(bool bInIsScrubbing)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "SetIsScrubbing");
+
+	Params::ScrubbedSound_SetIsScrubbing Parms{};
+
+	Parms.bInIsScrubbing = bInIsScrubbing;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.SetIsScrubbingWhileStationary
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInScrubWhileStationary                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScrubbedSound::SetIsScrubbingWhileStationary(bool bInScrubWhileStationary)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "SetIsScrubbingWhileStationary");
+
+	Params::ScrubbedSound_SetIsScrubbingWhileStationary Parms{};
+
+	Parms.bInScrubWhileStationary = bInScrubWhileStationary;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.SetPlayheadTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InPlayheadTimeSeconds                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScrubbedSound::SetPlayheadTime(float InPlayheadTimeSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "SetPlayheadTime");
+
+	Params::ScrubbedSound_SetPlayheadTime Parms{};
+
+	Parms.InPlayheadTimeSeconds = InPlayheadTimeSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.SetSoundWave
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundWave*                       InSoundWave                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UScrubbedSound::SetSoundWave(class USoundWave* InSoundWave)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "SetSoundWave");
+
+	Params::ScrubbedSound_SetSoundWave Parms{};
+
+	Parms.InSoundWave = InSoundWave;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.ScrubbedSound.GetPlayheadTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UScrubbedSound::GetPlayheadTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScrubbedSound", "GetPlayheadTime");
+
+	Params::ScrubbedSound_GetPlayheadTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

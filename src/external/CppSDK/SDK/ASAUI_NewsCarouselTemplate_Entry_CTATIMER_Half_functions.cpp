@@ -16,103 +16,113 @@
 
 SDK_NAMESPACE_START
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ShouldHideEntry
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.BlueprintInit
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue_ShouldHideEntry                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    RawExtraData                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-bool UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ShouldHideEntry()
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::BlueprintInit(const class FString& RawExtraData)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "BlueprintInit", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ShouldHideEntry");
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_BlueprintInit Parms{};
 
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ShouldHideEntry Parms{};
+	Parms.RawExtraData = std::move(RawExtraData);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ReplaceTimeCode
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusEnd
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class FString&                          FormatString                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-// const class FString&                    Timecode                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    SuperiorTimeCode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    InferiorTimeCode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    PlacementText                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   CounterValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  CorrectedCounterValue                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ReplaceTimeCode(class FString& FormatString, const class FString& Timecode, const class FString& SuperiorTimeCode, const class FString& InferiorTimeCode, const class FString& PlacementText, int32 CounterValue, int32* CorrectedCounterValue)
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusEnd(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusEnd", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ReplaceTimeCode");
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusEnd Parms{};
 
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ReplaceTimeCode Parms{};
-
-	Parms.FormatString = std::move(FormatString);
-	Parms.Timecode = std::move(Timecode);
-	Parms.SuperiorTimeCode = std::move(SuperiorTimeCode);
-	Parms.InferiorTimeCode = std::move(InferiorTimeCode);
-	Parms.PlacementText = std::move(PlacementText);
-	Parms.CounterValue = CounterValue;
+	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	FormatString = std::move(Parms.FormatString);
-
-	if (CorrectedCounterValue != nullptr)
-		*CorrectedCounterValue = Parms.CorrectedCounterValue;
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.HasAnyActiveTimeCodes
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusStart
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    FormatString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::HasAnyActiveTimeCodes(const class FString& FormatString)
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusStart(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusStart", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "HasAnyActiveTimeCodes");
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusStart Parms{};
 
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_HasAnyActiveTimeCodes Parms{};
-
-	Parms.FormatString = std::move(FormatString);
+	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.GetTimerText
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHighlighted                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusTick(float DeltaTime, bool bIsHighlighted)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusTick", FuncInfo);
+
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusTick Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+	Parms.bIsHighlighted = bIsHighlighted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half(int32 EntryPoint)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half", FuncInfo);
+
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.Get_CountDownTimerTextBox_Text
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FText*                            TimerText                                              (Parm, OutParm)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::GetTimerText(class FText* TimerText)
+class FText UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::Get_CountDownTimerTextBox_Text()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "Get_CountDownTimerTextBox_Text", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "GetTimerText");
-
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_GetTimerText Parms{};
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_Get_CountDownTimerTextBox_Text Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (TimerText != nullptr)
-		*TimerText = std::move(Parms.TimerText);
+	return Parms.ReturnValue;
 }
 
 
@@ -132,10 +142,8 @@ void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::GetTimerText(class FText
 
 void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::GetAdjustedTimerFormatText(const class FString& BaseTimerFormatString, int32 Days, int32 Hours, int32 Minutes, int32 Seconds, class FString* CorrectedTimerFormatString, int32* CorrectedDays, int32* CorrectedHours, int32* CorrectedMinutes, int32* CorrectedSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "GetAdjustedTimerFormatText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "GetAdjustedTimerFormatText", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_GetAdjustedTimerFormatText Parms{};
 
@@ -164,19 +172,39 @@ void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::GetAdjustedTimerFormatTe
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.Get_CountDownTimerTextBox_Text
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.GetTimerText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+// class FText*                            TimerText                                              (Parm, OutParm)
 
-class FText UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::Get_CountDownTimerTextBox_Text()
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::GetTimerText(class FText* TimerText)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "GetTimerText", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "Get_CountDownTimerTextBox_Text");
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_GetTimerText Parms{};
 
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_Get_CountDownTimerTextBox_Text Parms{};
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TimerText != nullptr)
+		*TimerText = std::move(Parms.TimerText);
+}
+
+
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.HasAnyActiveTimeCodes
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    FormatString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::HasAnyActiveTimeCodes(const class FString& FormatString)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "HasAnyActiveTimeCodes", FuncInfo);
+
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_HasAnyActiveTimeCodes Parms{};
+
+	Parms.FormatString = std::move(FormatString);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -184,105 +212,55 @@ class FText UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::Get_CountDownTime
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half
-// (Final, UbergraphFunction, HasDefaults)
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ReplaceTimeCode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString&                          FormatString                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+// const class FString&                    Timecode                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    SuperiorTimeCode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    InferiorTimeCode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    PlacementText                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   CounterValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  CorrectedCounterValue                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half(int32 EntryPoint)
+void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ReplaceTimeCode(class FString& FormatString, const class FString& Timecode, const class FString& SuperiorTimeCode, const class FString& InferiorTimeCode, const class FString& PlacementText, int32 CounterValue, int32* CorrectedCounterValue)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ReplaceTimeCode", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half");
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ReplaceTimeCode Parms{};
 
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.FormatString = std::move(FormatString);
+	Parms.Timecode = std::move(Timecode);
+	Parms.SuperiorTimeCode = std::move(SuperiorTimeCode);
+	Parms.InferiorTimeCode = std::move(InferiorTimeCode);
+	Parms.PlacementText = std::move(PlacementText);
+	Parms.CounterValue = CounterValue;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	FormatString = std::move(Parms.FormatString);
+
+	if (CorrectedCounterValue != nullptr)
+		*CorrectedCounterValue = Parms.CorrectedCounterValue;
 }
 
 
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusTick
-// (Event, Public, BlueprintEvent)
+// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ShouldHideEntry
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime_EntryFocusTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHighlighted_EntryFocusTick                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick)
+bool UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::ShouldHideEntry()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "ShouldHideEntry", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusTick");
-
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusTick Parms{};
-
-	Parms.DeltaTime_EntryFocusTick = DeltaTime_EntryFocusTick;
-	Parms.bIsHighlighted_EntryFocusTick = bIsHighlighted_EntryFocusTick;
+	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ShouldHideEntry Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusStart
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    bInstigatedByAutoRollover_EntryFocusStart              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusStart");
-
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusStart Parms{};
-
-	Parms.bInstigatedByAutoRollover_EntryFocusStart = bInstigatedByAutoRollover_EntryFocusStart;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusEnd
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    bInstigatedByAutoRollover_EntryFocusEnd                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "EntryFocusEnd");
-
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusEnd Parms{};
-
-	Parms.bInstigatedByAutoRollover_EntryFocusEnd = bInstigatedByAutoRollover_EntryFocusEnd;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.BlueprintInit
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    RawExtraData_BlueprintInit                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C::BlueprintInit(const class FString& RawExtraData_BlueprintInit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C", "BlueprintInit");
-
-	Params::ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_BlueprintInit Parms{};
-
-	Parms.RawExtraData_BlueprintInit = std::move(RawExtraData_BlueprintInit);
-
-	UObject::ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue;
 }
 
 

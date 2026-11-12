@@ -36,6 +36,7 @@ public:
 	float                                         WantedPlayRate;                                    // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ActivationDelay;                                   // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_BlendTo;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.BlendToWithSettings
 // 0x0068 (0x0068 - 0x0000)
@@ -59,6 +60,7 @@ public:
 	float                                         WantedPlayRate;                                    // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ActivationDelay;                                   // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_BlendToWithSettings;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.ConvertToBlendStackNode
 // 0x0028 (0x0028 - 0x0000)
@@ -70,6 +72,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendStackAnimNodeReference           ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_ConvertToBlendStackNode;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.ConvertToBlendStackNodePure
 // 0x0028 (0x0028 - 0x0000)
@@ -81,6 +84,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_ConvertToBlendStackNodePure;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.ForceBlendNextUpdate
 // 0x0010 (0x0010 - 0x0000)
@@ -89,6 +93,7 @@ struct BlendStackAnimNodeLibrary_ForceBlendNextUpdate final
 public:
 	struct FBlendStackAnimNodeReference           BlendStackNode;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_ForceBlendNextUpdate;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -98,6 +103,7 @@ public:
 	struct FBlendStackAnimNodeReference           BlendStackNode;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimationAsset*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentAsset;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAssetTime
 // 0x0018 (0x0018 - 0x0000)
@@ -108,6 +114,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentAssetTime;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAssetTimeRemaining
 // 0x0018 (0x0018 - 0x0000)
@@ -118,6 +125,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentAssetTimeRemaining;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -127,6 +135,28 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimationAsset*                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAsset;
+
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetMirrored
+// 0x0018 (0x0018 - 0x0000)
+struct BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrored final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrored;
+
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetMirrorTable
+// 0x0018 (0x0018 - 0x0000)
+struct BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrorTable final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UMirrorDataTable*                       ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrorTable;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetTime
 // 0x0018 (0x0018 - 0x0000)
@@ -137,6 +167,18 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetTime;
+
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimIsActive
+// 0x0018 (0x0018 - 0x0000)
+struct BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimIsActive final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimIsActive;
 
 // Function BlendStack.BlendStackAnimNodeLibrary.IsCurrentAssetLooping
 // 0x0018 (0x0018 - 0x0000)
@@ -147,6 +189,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackAnimNodeLibrary_IsCurrentAssetLooping;
 
 // Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNode
 // 0x0028 (0x0028 - 0x0000)
@@ -158,6 +201,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendStackInputAnimNodeReference      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNode;
 
 // Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNodePure
 // 0x0028 (0x0028 - 0x0000)
@@ -169,6 +213,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNodePure;
 
 // Function BlendStack.BlendStackInputAnimNodeLibrary.GetProperties
 // 0x0020 (0x0020 - 0x0000)
@@ -180,6 +225,7 @@ public:
 	float                                         AccumulatedTime;                                   // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendStackInputAnimNodeLibrary_GetProperties;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_UI_DiscordNotifications.WBP_UI_DiscordNotifications_C
-// 0x0000 (0x08F8 - 0x08F8)
+// 0x0000 (0x0958 - 0x0958)
 class UWBP_UI_DiscordNotifications_C final : public UUI_DiscordNotifications
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWBP_UI_DiscordNotifications_C>();
 	}
 };
+DUMPER7_ASSERTS_UWBP_UI_DiscordNotifications_C;
 
 SDK_NAMESPACE_END

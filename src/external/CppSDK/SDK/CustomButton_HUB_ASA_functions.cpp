@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UCustomButton_HUB_ASA_C::BPSetToggledState(bool IsToggled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomButton_HUB_ASA_C", "BPSetToggledState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomButton_HUB_ASA_C", "BPSetToggledState", FuncInfo);
 
 	Params::CustomButton_HUB_ASA_C_BPSetToggledState Parms{};
 
@@ -43,10 +41,8 @@ void UCustomButton_HUB_ASA_C::BPSetToggledState(bool IsToggled)
 
 void UCustomButton_HUB_ASA_C::ExecuteUbergraph_CustomButton_HUB_ASA(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomButton_HUB_ASA_C", "ExecuteUbergraph_CustomButton_HUB_ASA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomButton_HUB_ASA_C", "ExecuteUbergraph_CustomButton_HUB_ASA", FuncInfo);
 
 	Params::CustomButton_HUB_ASA_C_ExecuteUbergraph_CustomButton_HUB_ASA Parms{};
 

@@ -12,226 +12,20 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
-#include "Chooser_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Chooser_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class Chooser.ChooserParameterBool_ContextProperty
-// 0x0018 (0x0040 - 0x0028)
-class UChooserParameterBool_ContextProperty final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserParameterBool_ContextProperty")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserParameterBool_ContextProperty")
-	}
-	static class UChooserParameterBool_ContextProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserParameterBool_ContextProperty>();
-	}
-};
-
-// Class Chooser.ChooserColumnBool
-// 0x0028 (0x0050 - 0x0028)
-class UChooserColumnBool final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterBool> InputValue;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<bool>                                  RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserColumnBool")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserColumnBool")
-	}
-	static class UChooserColumnBool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserColumnBool>();
-	}
-};
-
-// Class Chooser.ChooserParameterEnum_ContextProperty
-// 0x0018 (0x0040 - 0x0028)
-class UChooserParameterEnum_ContextProperty final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserParameterEnum_ContextProperty")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserParameterEnum_ContextProperty")
-	}
-	static class UChooserParameterEnum_ContextProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserParameterEnum_ContextProperty>();
-	}
-};
-
-// Class Chooser.ChooserColumnEnum
-// 0x0028 (0x0050 - 0x0028)
-class UChooserColumnEnum final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterEnum> InputValue;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserColumnEnum")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserColumnEnum")
-	}
-	static class UChooserColumnEnum* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserColumnEnum>();
-	}
-};
-
-// Class Chooser.FloatAutoPopulator
-// 0x0000 (0x0028 - 0x0028)
-class UFloatAutoPopulator final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FloatAutoPopulator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FloatAutoPopulator")
-	}
-	static class UFloatAutoPopulator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFloatAutoPopulator>();
-	}
-};
-
-// Class Chooser.ChooserParameterFloat_ContextProperty
-// 0x0018 (0x0040 - 0x0028)
-class UChooserParameterFloat_ContextProperty final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserParameterFloat_ContextProperty")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserParameterFloat_ContextProperty")
-	}
-	static class UChooserParameterFloat_ContextProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserParameterFloat_ContextProperty>();
-	}
-};
-
-// Class Chooser.ChooserColumnFloatRange
-// 0x0028 (0x0050 - 0x0028)
-class UChooserColumnFloatRange final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterFloat> InputValue;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FChooserFloatRangeRowData>      RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserColumnFloatRange")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserColumnFloatRange")
-	}
-	static class UChooserColumnFloatRange* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserColumnFloatRange>();
-	}
-};
-
-// Class Chooser.ChooserParameterGameplayTag_ContextProperty
-// 0x0018 (0x0040 - 0x0028)
-class UChooserParameterGameplayTag_ContextProperty final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserParameterGameplayTag_ContextProperty")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserParameterGameplayTag_ContextProperty")
-	}
-	static class UChooserParameterGameplayTag_ContextProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserParameterGameplayTag_ContextProperty>();
-	}
-};
-
-// Class Chooser.ChooserColumnGameplayTag
-// 0x0030 (0x0058 - 0x0028)
-class UChooserColumnGameplayTag final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IChooserParameterGameplayTag> InputValue;                                 // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayContainerMatchType                   TagMatchType;                                      // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTagContainer>          RowValues;                                         // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChooserColumnGameplayTag")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChooserColumnGameplayTag")
-	}
-	static class UChooserColumnGameplayTag* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChooserColumnGameplayTag>();
-	}
-};
-
 // Class Chooser.ChooserColumn
-// 0x0000 (0x0000 - 0x0000)
-class IChooserColumn final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserColumn
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -255,11 +49,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserColumn;
 
 // Class Chooser.ChooserParameterBool
-// 0x0000 (0x0000 - 0x0000)
-class IChooserParameterBool final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserParameterBool
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -283,11 +81,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserParameterBool;
 
 // Class Chooser.ChooserParameterEnum
-// 0x0000 (0x0000 - 0x0000)
-class IChooserParameterEnum final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserParameterEnum
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -311,11 +113,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserParameterEnum;
 
 // Class Chooser.ChooserParameterFloat
-// 0x0000 (0x0000 - 0x0000)
-class IChooserParameterFloat final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserParameterFloat
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -339,11 +145,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserParameterFloat;
 
 // Class Chooser.ChooserParameterGameplayTag
-// 0x0000 (0x0000 - 0x0000)
-class IChooserParameterGameplayTag final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserParameterGameplayTag
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -367,11 +177,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserParameterGameplayTag;
 
 // Class Chooser.HasContextClass
-// 0x0000 (0x0000 - 0x0000)
-class IHasContextClass final
+// 0x0008 (0x0008 - 0x0000)
+class IHasContextClass
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -395,11 +209,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IHasContextClass;
 
 // Class Chooser.ObjectChooser
-// 0x0000 (0x0000 - 0x0000)
-class IObjectChooser final
+// 0x0008 (0x0008 - 0x0000)
+class IObjectChooser
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -423,44 +241,91 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IObjectChooser;
 
-// Class Chooser.ObjectChooser_Asset
-// 0x0010 (0x0038 - 0x0028)
-class UObjectChooser_Asset final : public UObject
+// Class Chooser.ChooserParameterBool_ContextProperty
+// 0x0018 (0x0040 - 0x0028)
+class UChooserParameterBool_ContextProperty final : public UObject, public IChooserParameterBool
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Asset;                                             // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ObjectChooser_Asset")
+		STATIC_CLASS_IMPL("ChooserParameterBool_ContextProperty")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ObjectChooser_Asset")
+		STATIC_NAME_IMPL(L"ChooserParameterBool_ContextProperty")
 	}
-	static class UObjectChooser_Asset* GetDefaultObj()
+	static class UChooserParameterBool_ContextProperty* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UObjectChooser_Asset>();
+		return GetDefaultObjImpl<UChooserParameterBool_ContextProperty>();
 	}
 };
+DUMPER7_ASSERTS_UChooserParameterBool_ContextProperty;
 
-// Class Chooser.ChooserTable
-// 0x0078 (0x00A0 - 0x0028)
-class UChooserTable final : public UObject
+// Class Chooser.ChooserColumnBool
+// 0x0028 (0x0050 - 0x0028)
+class UChooserColumnBool final : public UObject, public IChooserColumn
 {
 public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UChooserTable*                          RootChooser;                                       // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FInstancedStruct                       FallbackResult;                                    // 0x0050(0x0010)(NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               CookedResults;                                     // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               ColumnsStructs;                                    // 0x0070(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
-	EObjectChooserResultType                      ResultType;                                        // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    OutputObjectType;                                  // 0x0088(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FInstancedStruct>               ContextData;                                       // 0x0090(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
+	TScriptInterface<class IChooserParameterBool> InputValue;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserColumnBool")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserColumnBool")
+	}
+	static class UChooserColumnBool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserColumnBool>();
+	}
+};
+DUMPER7_ASSERTS_UChooserColumnBool;
+
+// Class Chooser.ChooserSignature
+// 0x0040 (0x0068 - 0x0028)
+class UChooserSignature : public UObject, public IHasContextClass
+{
+public:
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	EObjectChooserResultType                      ResultType;                                        // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    OutputObjectType;                                  // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FInstancedStruct>               ContextData;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserSignature")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserSignature")
+	}
+	static class UChooserSignature* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserSignature>();
+	}
+};
+DUMPER7_ASSERTS_UChooserSignature;
+
+// Class Chooser.ChooserTable
+// 0x0038 (0x00A0 - 0x0068)
+class UChooserTable final : public UChooserSignature
+{
+public:
+	class UChooserTable*                          RootChooser;                                       // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FInstancedStruct                       FallbackResult;                                    // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               CookedResults;                                     // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               ColumnsStructs;                                    // 0x0090(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
 
 public:
 	bool ResultAssetFilter(const struct FAssetData& AssetData);
@@ -479,13 +344,13 @@ public:
 		return GetDefaultObjImpl<UChooserTable>();
 	}
 };
+DUMPER7_ASSERTS_UChooserTable;
 
 // Class Chooser.ObjectChooser_EvaluateChooser
 // 0x0010 (0x0038 - 0x0028)
-class UObjectChooser_EvaluateChooser final : public UObject
+class UObjectChooser_EvaluateChooser final : public UObject, public IObjectChooser
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChooserTable*                          Chooser;                                           // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
@@ -502,6 +367,7 @@ public:
 		return GetDefaultObjImpl<UObjectChooser_EvaluateChooser>();
 	}
 };
+DUMPER7_ASSERTS_UObjectChooser_EvaluateChooser;
 
 // Class Chooser.ChooserColumnMenuContext
 // 0x0018 (0x0040 - 0x0028)
@@ -524,6 +390,7 @@ public:
 		return GetDefaultObjImpl<UChooserColumnMenuContext>();
 	}
 };
+DUMPER7_ASSERTS_UChooserColumnMenuContext;
 
 // Class Chooser.ChooserFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -532,11 +399,17 @@ class UChooserFunctionLibrary final : public UBlueprintFunctionLibrary
 public:
 	static void AddChooserObjectInput(struct FChooserEvaluationContext& Context, class UObject* Object);
 	static void AddChooserStructInput(struct FChooserEvaluationContext& Context, int32 Value);
+	static void AddChooserStructInputOutput(struct FChooserEvaluationContext& Context, int32 Value);
 	static class UObject* EvaluateChooser(const class UObject* ContextObject, const class UChooserTable* ChooserTable, TSubclassOf<class UObject> ObjectClass);
 	static TArray<class UObject*> EvaluateChooserMulti(const class UObject* ContextObject, const class UChooserTable* ChooserTable, TSubclassOf<class UObject> ObjectClass);
 	static class UObject* EvaluateObjectChooserBase(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass);
 	static TArray<class UObject*> EvaluateObjectChooserBaseMulti(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass);
+	static TArray<TSoftObjectPtr<class UObject>> EvaluateObjectChooserBaseMultiSoft(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass);
+	static TSoftObjectPtr<class UObject> EvaluateObjectChooserBaseSoft(struct FChooserEvaluationContext& Context, const struct FInstancedStruct& ObjectChooser, TSubclassOf<class UObject> ObjectClass, bool bResultIsClass);
+	static class UObject* GetChooserObject(struct FChooserEvaluationContext& Context, TSubclassOf<class UObject> ObjectClass);
+	static class UObject* GetChooserObjectInput(struct FChooserEvaluationContext& Context, int32 Index_0, TSubclassOf<class UObject> ObjectClass);
 	static void GetChooserStructOutput(struct FChooserEvaluationContext& Context, int32 Index_0, int32* Value);
+	static void GetChooserStructOutputArray(struct FChooserEvaluationContext& Context, int32 Index_0, TArray<int32>* Value);
 	static struct FChooserEvaluationContext MakeChooserEvaluationContext();
 	static struct FInstancedStruct MakeEvaluateChooser(class UChooserTable* Chooser);
 
@@ -554,5 +427,192 @@ public:
 		return GetDefaultObjImpl<UChooserFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UChooserFunctionLibrary;
+
+// Class Chooser.ChooserParameterEnum_ContextProperty
+// 0x0018 (0x0040 - 0x0028)
+class UChooserParameterEnum_ContextProperty final : public UObject, public IChooserParameterEnum
+{
+public:
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserParameterEnum_ContextProperty")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserParameterEnum_ContextProperty")
+	}
+	static class UChooserParameterEnum_ContextProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserParameterEnum_ContextProperty>();
+	}
+};
+DUMPER7_ASSERTS_UChooserParameterEnum_ContextProperty;
+
+// Class Chooser.ChooserColumnEnum
+// 0x0028 (0x0050 - 0x0028)
+class UChooserColumnEnum final : public UObject, public IChooserColumn
+{
+public:
+	TScriptInterface<class IChooserParameterEnum> InputValue;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FChooserEnumRowData>            RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserColumnEnum")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserColumnEnum")
+	}
+	static class UChooserColumnEnum* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserColumnEnum>();
+	}
+};
+DUMPER7_ASSERTS_UChooserColumnEnum;
+
+// Class Chooser.FloatAutoPopulator
+// 0x0000 (0x0028 - 0x0028)
+class UFloatAutoPopulator final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FloatAutoPopulator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FloatAutoPopulator")
+	}
+	static class UFloatAutoPopulator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFloatAutoPopulator>();
+	}
+};
+DUMPER7_ASSERTS_UFloatAutoPopulator;
+
+// Class Chooser.ChooserParameterFloat_ContextProperty
+// 0x0018 (0x0040 - 0x0028)
+class UChooserParameterFloat_ContextProperty final : public UObject, public IChooserParameterFloat
+{
+public:
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserParameterFloat_ContextProperty")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserParameterFloat_ContextProperty")
+	}
+	static class UChooserParameterFloat_ContextProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserParameterFloat_ContextProperty>();
+	}
+};
+DUMPER7_ASSERTS_UChooserParameterFloat_ContextProperty;
+
+// Class Chooser.ChooserColumnFloatRange
+// 0x0028 (0x0050 - 0x0028)
+class UChooserColumnFloatRange final : public UObject, public IChooserColumn
+{
+public:
+	TScriptInterface<class IChooserParameterFloat> InputValue;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FChooserFloatRangeRowData>      RowValues;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserColumnFloatRange")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserColumnFloatRange")
+	}
+	static class UChooserColumnFloatRange* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserColumnFloatRange>();
+	}
+};
+DUMPER7_ASSERTS_UChooserColumnFloatRange;
+
+// Class Chooser.ChooserParameterGameplayTag_ContextProperty
+// 0x0018 (0x0040 - 0x0028)
+class UChooserParameterGameplayTag_ContextProperty final : public UObject, public IChooserParameterGameplayTag
+{
+public:
+	TArray<class FName>                           PropertyBindingChain;                              // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserParameterGameplayTag_ContextProperty")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserParameterGameplayTag_ContextProperty")
+	}
+	static class UChooserParameterGameplayTag_ContextProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserParameterGameplayTag_ContextProperty>();
+	}
+};
+DUMPER7_ASSERTS_UChooserParameterGameplayTag_ContextProperty;
+
+// Class Chooser.ChooserColumnGameplayTag
+// 0x0030 (0x0058 - 0x0028)
+class UChooserColumnGameplayTag final : public UObject, public IChooserColumn
+{
+public:
+	TScriptInterface<class IChooserParameterGameplayTag> InputValue;                                 // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayContainerMatchType                   TagMatchType;                                      // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTagContainer>          RowValues;                                         // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChooserColumnGameplayTag")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChooserColumnGameplayTag")
+	}
+	static class UChooserColumnGameplayTag* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChooserColumnGameplayTag>();
+	}
+};
+DUMPER7_ASSERTS_UChooserColumnGameplayTag;
+
+// Class Chooser.ObjectChooser_Asset
+// 0x0010 (0x0038 - 0x0028)
+class UObjectChooser_Asset final : public UObject, public IObjectChooser
+{
+public:
+	class UObject*                                Asset;                                             // 0x0030(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ObjectChooser_Asset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ObjectChooser_Asset")
+	}
+	static class UObjectChooser_Asset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectChooser_Asset>();
+	}
+};
+DUMPER7_ASSERTS_UObjectChooser_Asset;
 
 SDK_NAMESPACE_END

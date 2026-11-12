@@ -46,7 +46,7 @@ void UModularSynthLibrary::AddModularSynthPresetToBankAsset(class UModularSynthP
 
 
 // Function Synthesis.ModularSynthComponent.CreatePatch
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const ESynth1PatchSource                PatchSource                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FSynth1PatchCable>& PatchCables                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -78,7 +78,7 @@ struct FPatchId UModularSynthComponent::CreatePatch(const ESynth1PatchSource Pat
 
 
 // Function Synthesis.ModularSynthComponent.NoteOff
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Note                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bAllNotesOff                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -107,7 +107,7 @@ void UModularSynthComponent::NoteOff(const float Note, const bool bAllNotesOff, 
 
 
 // Function Synthesis.ModularSynthComponent.NoteOn
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Note                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             Velocity                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -136,7 +136,7 @@ void UModularSynthComponent::NoteOn(const float Note, const int32 Velocity, cons
 
 
 // Function Synthesis.ModularSynthComponent.SetAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   AttackTimeMsec                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -161,7 +161,7 @@ void UModularSynthComponent::SetAttackTime(float AttackTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetChorusDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Depth                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -186,7 +186,7 @@ void UModularSynthComponent::SetChorusDepth(float Depth)
 
 
 // Function Synthesis.ModularSynthComponent.SetChorusEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    EnableChorus                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -211,7 +211,7 @@ void UModularSynthComponent::SetChorusEnabled(bool EnableChorus)
 
 
 // Function Synthesis.ModularSynthComponent.SetChorusFeedback
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Feedback                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -236,7 +236,7 @@ void UModularSynthComponent::SetChorusFeedback(float Feedback)
 
 
 // Function Synthesis.ModularSynthComponent.SetChorusFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Frequency                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -261,7 +261,7 @@ void UModularSynthComponent::SetChorusFrequency(float Frequency)
 
 
 // Function Synthesis.ModularSynthComponent.SetDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DecayTimeMsec                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -286,7 +286,7 @@ void UModularSynthComponent::SetDecayTime(float DecayTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetEnableLegato
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    LegatoEnabled                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -311,7 +311,7 @@ void UModularSynthComponent::SetEnableLegato(bool LegatoEnabled)
 
 
 // Function Synthesis.ModularSynthComponent.SetEnablePatch
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FPatchId&                  PatchId                                                (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 // const bool                              bIsEnabled                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -341,7 +341,7 @@ bool UModularSynthComponent::SetEnablePatch(const struct FPatchId& PatchId, cons
 
 
 // Function Synthesis.ModularSynthComponent.SetEnablePolyphony
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnablePolyphony                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -366,7 +366,7 @@ void UModularSynthComponent::SetEnablePolyphony(bool bEnablePolyphony)
 
 
 // Function Synthesis.ModularSynthComponent.SetEnableRetrigger
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    RetriggerEnabled                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -391,7 +391,7 @@ void UModularSynthComponent::SetEnableRetrigger(bool RetriggerEnabled)
 
 
 // Function Synthesis.ModularSynthComponent.SetEnableUnison
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    EnableUnison                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -416,7 +416,7 @@ void UModularSynthComponent::SetEnableUnison(bool EnableUnison)
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterAlgorithm
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESynthFilterAlgorithm                   FilterAlgorithm                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -441,7 +441,7 @@ void UModularSynthComponent::SetFilterAlgorithm(ESynthFilterAlgorithm FilterAlgo
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   FilterFrequencyHz                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -466,7 +466,7 @@ void UModularSynthComponent::SetFilterFrequency(float FilterFrequencyHz)
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterFrequencyMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   FilterFrequencyHz                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -491,7 +491,7 @@ void UModularSynthComponent::SetFilterFrequencyMod(float FilterFrequencyHz)
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterQ
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   FilterQ                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -516,7 +516,7 @@ void UModularSynthComponent::SetFilterQ(float FilterQ)
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterQMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   FilterQ                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -541,7 +541,7 @@ void UModularSynthComponent::SetFilterQMod(float FilterQ)
 
 
 // Function Synthesis.ModularSynthComponent.SetFilterType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESynthFilterType                        FilterType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -566,7 +566,7 @@ void UModularSynthComponent::SetFilterType(ESynthFilterType FilterType)
 
 
 // Function Synthesis.ModularSynthComponent.SetGainDb
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   GainDb                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -591,7 +591,7 @@ void UModularSynthComponent::SetGainDb(float GainDb)
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   FrequencyHz                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -618,7 +618,7 @@ void UModularSynthComponent::SetLFOFrequency(int32 LFOIndex, float FrequencyHz)
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOFrequencyMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   FrequencyModHz                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -645,7 +645,7 @@ void UModularSynthComponent::SetLFOFrequencyMod(int32 LFOIndex, float FrequencyM
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Gain                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -672,7 +672,7 @@ void UModularSynthComponent::SetLFOGain(int32 LFOIndex, float Gain)
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOGainMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   GainMod                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -699,7 +699,7 @@ void UModularSynthComponent::SetLFOGainMod(int32 LFOIndex, float GainMod)
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOMode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESynthLFOMode                           LFOMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -726,7 +726,7 @@ void UModularSynthComponent::SetLFOMode(int32 LFOIndex, ESynthLFOMode LFOMode)
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOPatch
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESynthLFOPatchType                      LFOPatchType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -753,7 +753,7 @@ void UModularSynthComponent::SetLFOPatch(int32 LFOIndex, ESynthLFOPatchType LFOP
 
 
 // Function Synthesis.ModularSynthComponent.SetLFOType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   LFOIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESynthLFOType                           LFOType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -780,7 +780,7 @@ void UModularSynthComponent::SetLFOType(int32 LFOIndex, ESynthLFOType LFOType)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             AttackTimeMsec                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -805,7 +805,7 @@ void UModularSynthComponent::SetModEnvAttackTime(const float AttackTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvBiasInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInvert                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -830,7 +830,7 @@ void UModularSynthComponent::SetModEnvBiasInvert(const bool bInvert)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvBiasPatch
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const ESynthModEnvBiasPatch             InPatchType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -855,7 +855,7 @@ void UModularSynthComponent::SetModEnvBiasPatch(const ESynthModEnvBiasPatch InPa
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             DecayTimeMsec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -880,7 +880,7 @@ void UModularSynthComponent::SetModEnvDecayTime(const float DecayTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Depth                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -905,7 +905,7 @@ void UModularSynthComponent::SetModEnvDepth(const float Depth)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInvert                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -930,7 +930,7 @@ void UModularSynthComponent::SetModEnvInvert(const bool bInvert)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvPatch
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const ESynthModEnvPatch                 InPatchType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -955,7 +955,7 @@ void UModularSynthComponent::SetModEnvPatch(const ESynthModEnvPatch InPatchType)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvReleaseTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Release                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -980,7 +980,7 @@ void UModularSynthComponent::SetModEnvReleaseTime(const float Release)
 
 
 // Function Synthesis.ModularSynthComponent.SetModEnvSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             SustainGain                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1005,7 +1005,7 @@ void UModularSynthComponent::SetModEnvSustainGain(const float SustainGain)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscCents
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Cents                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1032,7 +1032,7 @@ void UModularSynthComponent::SetOscCents(int32 OscIndex, float Cents)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscFrequencyMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   OscFreqMod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1059,7 +1059,7 @@ void UModularSynthComponent::SetOscFrequencyMod(int32 OscIndex, float OscFreqMod
 
 
 // Function Synthesis.ModularSynthComponent.SetOscGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   OscGain                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1086,7 +1086,7 @@ void UModularSynthComponent::SetOscGain(int32 OscIndex, float OscGain)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscGainMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   OscGainMod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1113,7 +1113,7 @@ void UModularSynthComponent::SetOscGainMod(int32 OscIndex, float OscGainMod)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscOctave
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Octave                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1140,7 +1140,7 @@ void UModularSynthComponent::SetOscOctave(int32 OscIndex, float Octave)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscPulsewidth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Pulsewidth                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1167,7 +1167,7 @@ void UModularSynthComponent::SetOscPulsewidth(int32 OscIndex, float Pulsewidth)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscSemitones
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Semitones                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1194,7 +1194,7 @@ void UModularSynthComponent::SetOscSemitones(int32 OscIndex, float Semitones)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscSync
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bIsSynced                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1219,7 +1219,7 @@ void UModularSynthComponent::SetOscSync(const bool bIsSynced)
 
 
 // Function Synthesis.ModularSynthComponent.SetOscType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   OscIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESynth1OscType                          OscType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1246,7 +1246,7 @@ void UModularSynthComponent::SetOscType(int32 OscIndex, ESynth1OscType OscType)
 
 
 // Function Synthesis.ModularSynthComponent.SetPan
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Pan                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1271,7 +1271,7 @@ void UModularSynthComponent::SetPan(float Pan)
 
 
 // Function Synthesis.ModularSynthComponent.SetPitchBend
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   PitchBend                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1296,7 +1296,7 @@ void UModularSynthComponent::SetPitchBend(float PitchBend)
 
 
 // Function Synthesis.ModularSynthComponent.SetPortamento
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Portamento                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1321,7 +1321,7 @@ void UModularSynthComponent::SetPortamento(float Portamento)
 
 
 // Function Synthesis.ModularSynthComponent.SetReleaseTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   ReleaseTimeMsec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1346,7 +1346,7 @@ void UModularSynthComponent::SetReleaseTime(float ReleaseTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetSpread
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Spread                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1371,7 +1371,7 @@ void UModularSynthComponent::SetSpread(float Spread)
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayFeedback
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DelayFeedback                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1396,7 +1396,7 @@ void UModularSynthComponent::SetStereoDelayFeedback(float DelayFeedback)
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayIsEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    StereoDelayEnabled                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1421,7 +1421,7 @@ void UModularSynthComponent::SetStereoDelayIsEnabled(bool StereoDelayEnabled)
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayMode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESynthStereoDelayMode                   StereoDelayMode                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1446,7 +1446,7 @@ void UModularSynthComponent::SetStereoDelayMode(ESynthStereoDelayMode StereoDela
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayRatio
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DelayRatio                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1471,7 +1471,7 @@ void UModularSynthComponent::SetStereoDelayRatio(float DelayRatio)
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DelayTimeMsec                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1496,7 +1496,7 @@ void UModularSynthComponent::SetStereoDelayTime(float DelayTimeMsec)
 
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayWetlevel
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DelayWetlevel                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1521,7 +1521,7 @@ void UModularSynthComponent::SetStereoDelayWetlevel(float DelayWetlevel)
 
 
 // Function Synthesis.ModularSynthComponent.SetSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   SustainGain                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1546,7 +1546,7 @@ void UModularSynthComponent::SetSustainGain(float SustainGain)
 
 
 // Function Synthesis.ModularSynthComponent.SetSynthPreset
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FModularSynthPreset&       SynthPreset                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -1571,7 +1571,7 @@ void UModularSynthComponent::SetSynthPreset(const struct FModularSynthPreset& Sy
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1596,9 +1596,9 @@ void USourceEffectBitCrusherPreset::SetBitModulator(const class USoundModulatorB
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& InModulators                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& InModulators                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectBitCrusherPreset::SetBitModulators(const TSet<class USoundModulatorBase*>& InModulators)
 {
@@ -1621,7 +1621,7 @@ void USourceEffectBitCrusherPreset::SetBitModulators(const TSet<class USoundModu
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetBits
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Bits                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1646,7 +1646,7 @@ void USourceEffectBitCrusherPreset::SetBits(float Bits)
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetModulationSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectBitCrusherSettings&ModulationSettings                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -1671,7 +1671,7 @@ void USourceEffectBitCrusherPreset::SetModulationSettings(const struct FSourceEf
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   SampleRate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1696,7 +1696,7 @@ void USourceEffectBitCrusherPreset::SetSampleRate(float SampleRate)
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1721,9 +1721,9 @@ void USourceEffectBitCrusherPreset::SetSampleRateModulator(const class USoundMod
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& InModulators                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& InModulators                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectBitCrusherPreset::SetSampleRateModulators(const TSet<class USoundModulatorBase*>& InModulators)
 {
@@ -1746,7 +1746,7 @@ void USourceEffectBitCrusherPreset::SetSampleRateModulators(const TSet<class USo
 
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectBitCrusherBaseSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -1771,7 +1771,7 @@ void USourceEffectBitCrusherPreset::SetSettings(const struct FSourceEffectBitCru
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Depth                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1796,7 +1796,7 @@ void USourceEffectChorusPreset::SetDepth(float Depth)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDepthModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1821,9 +1821,9 @@ void USourceEffectChorusPreset::SetDepthModulator(const class USoundModulatorBas
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDepthModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetDepthModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -1846,7 +1846,7 @@ void USourceEffectChorusPreset::SetDepthModulators(const TSet<class USoundModula
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDry
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DryAmount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1871,7 +1871,7 @@ void USourceEffectChorusPreset::SetDry(float DryAmount)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDryModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1896,9 +1896,9 @@ void USourceEffectChorusPreset::SetDryModulator(const class USoundModulatorBase*
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetDryModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetDryModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -1921,7 +1921,7 @@ void USourceEffectChorusPreset::SetDryModulators(const TSet<class USoundModulato
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFeedback
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Feedback                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1946,7 +1946,7 @@ void USourceEffectChorusPreset::SetFeedback(float Feedback)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1971,9 +1971,9 @@ void USourceEffectChorusPreset::SetFeedbackModulator(const class USoundModulator
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetFeedbackModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -1996,7 +1996,7 @@ void USourceEffectChorusPreset::SetFeedbackModulators(const TSet<class USoundMod
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Frequency                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2021,7 +2021,7 @@ void USourceEffectChorusPreset::SetFrequency(float Frequency)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2046,9 +2046,9 @@ void USourceEffectChorusPreset::SetFrequencyModulator(const class USoundModulato
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetFrequencyModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -2071,7 +2071,7 @@ void USourceEffectChorusPreset::SetFrequencyModulators(const TSet<class USoundMo
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetModulationSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectChorusSettings&ModulationSettings                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -2096,7 +2096,7 @@ void USourceEffectChorusPreset::SetModulationSettings(const struct FSourceEffect
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectChorusBaseSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2121,7 +2121,7 @@ void USourceEffectChorusPreset::SetSettings(const struct FSourceEffectChorusBase
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetSpread
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Spread                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2146,7 +2146,7 @@ void USourceEffectChorusPreset::SetSpread(float Spread)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetSpreadModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2171,9 +2171,9 @@ void USourceEffectChorusPreset::SetSpreadModulator(const class USoundModulatorBa
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetSpreadModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetSpreadModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -2196,7 +2196,7 @@ void USourceEffectChorusPreset::SetSpreadModulators(const TSet<class USoundModul
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetWet
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   WetAmount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2221,7 +2221,7 @@ void USourceEffectChorusPreset::SetWet(float WetAmount)
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetWetModulator
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class USoundModulatorBase*        Modulator                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2246,9 +2246,9 @@ void USourceEffectChorusPreset::SetWetModulator(const class USoundModulatorBase*
 
 
 // Function Synthesis.SourceEffectChorusPreset.SetWetModulators
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TSet<class USoundModulatorBase*>& Modulators                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
 void USourceEffectChorusPreset::SetWetModulators(const TSet<class USoundModulatorBase*>& Modulators)
 {
@@ -2271,7 +2271,7 @@ void USourceEffectChorusPreset::SetWetModulators(const TSet<class USoundModulato
 
 
 // Function Synthesis.SourceEffectConvolutionReverbPreset.SetImpulseResponse
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioImpulseResponse*            InImpulseResponse                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2296,7 +2296,7 @@ void USourceEffectConvolutionReverbPreset::SetImpulseResponse(class UAudioImpuls
 
 
 // Function Synthesis.SourceEffectConvolutionReverbPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectConvolutionReverbSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2321,7 +2321,7 @@ void USourceEffectConvolutionReverbPreset::SetSettings(const struct FSourceEffec
 
 
 // Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectDynamicsProcessorSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2346,7 +2346,7 @@ void USourceEffectDynamicsProcessorPreset::SetSettings(const struct FSourceEffec
 
 
 // Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2371,7 +2371,7 @@ void USourceEffectEnvelopeFollowerPreset::RegisterEnvelopeFollowerListener(class
 
 
 // Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2396,7 +2396,7 @@ void USourceEffectEnvelopeFollowerPreset::SetSettings(const struct FSourceEffect
 
 
 // Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UEnvelopeFollowerListener*        EnvelopeFollowerListener                               (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2421,7 +2421,7 @@ void USourceEffectEnvelopeFollowerPreset::UnregisterEnvelopeFollowerListener(cla
 
 
 // Function Synthesis.SourceEffectEQPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectEQSettings&   InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -2446,7 +2446,7 @@ void USourceEffectEQPreset::SetSettings(const struct FSourceEffectEQSettings& In
 
 
 // Function Synthesis.SourceEffectFilterPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectFilterSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -2471,7 +2471,7 @@ void USourceEffectFilterPreset::SetSettings(const struct FSourceEffectFilterSett
 
 
 // Function Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectFoldbackDistortionSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2496,7 +2496,7 @@ void USourceEffectFoldbackDistortionPreset::SetSettings(const struct FSourceEffe
 
 
 // Function Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectMidSideSpreaderSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2521,7 +2521,7 @@ void USourceEffectMidSideSpreaderPreset::SetSettings(const struct FSourceEffectM
 
 
 // Function Synthesis.SourceEffectMotionFilterPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectMotionFilterSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -2546,7 +2546,7 @@ void USourceEffectMotionFilterPreset::SetSettings(const struct FSourceEffectMoti
 
 
 // Function Synthesis.SourceEffectPannerPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectPannerSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2571,7 +2571,7 @@ void USourceEffectPannerPreset::SetSettings(const struct FSourceEffectPannerSett
 
 
 // Function Synthesis.SourceEffectPhaserPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectPhaserSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2596,7 +2596,7 @@ void USourceEffectPhaserPreset::SetSettings(const struct FSourceEffectPhaserSett
 
 
 // Function Synthesis.SourceEffectRingModulationPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectRingModulationSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2621,7 +2621,7 @@ void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRi
 
 
 // Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectSimpleDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2646,7 +2646,7 @@ void USourceEffectSimpleDelayPreset::SetSettings(const struct FSourceEffectSimpl
 
 
 // Function Synthesis.SourceEffectStereoDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectStereoDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2671,7 +2671,7 @@ void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStere
 
 
 // Function Synthesis.SourceEffectWaveShaperPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSourceEffectWaveShaperSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2696,7 +2696,7 @@ void USourceEffectWaveShaperPreset::SetSettings(const struct FSourceEffectWaveSh
 
 
 // Function Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioImpulseResponse*            InImpulseResponse                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2721,7 +2721,7 @@ void USubmixEffectConvolutionReverbPreset::SetImpulseResponse(class UAudioImpuls
 
 
 // Function Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectConvolutionReverbSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2842,7 +2842,7 @@ struct FSubmixEffectDelaySettings USubmixEffectDelayStatics::SetMaximumDelayLeng
 
 
 // Function Synthesis.SubmixEffectDelayPreset.SetDefaultSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2867,7 +2867,7 @@ void USubmixEffectDelayPreset::SetDefaultSettings(const struct FSubmixEffectDela
 
 
 // Function Synthesis.SubmixEffectDelayPreset.SetDelay
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Length                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2892,7 +2892,7 @@ void USubmixEffectDelayPreset::SetDelay(float Length)
 
 
 // Function Synthesis.SubmixEffectDelayPreset.SetInterpolationTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2917,7 +2917,7 @@ void USubmixEffectDelayPreset::SetInterpolationTime(float Time)
 
 
 // Function Synthesis.SubmixEffectDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2967,7 +2967,7 @@ float USubmixEffectDelayPreset::GetMaxDelayInMilliseconds() const
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESubmixFilterAlgorithm                  InAlgorithm                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2992,7 +2992,7 @@ void USubmixEffectFilterPreset::SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgo
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InFrequency                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3017,7 +3017,7 @@ void USubmixEffectFilterPreset::SetFilterCutoffFrequency(float InFrequency)
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InFrequency                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3042,7 +3042,7 @@ void USubmixEffectFilterPreset::SetFilterCutoffFrequencyMod(float InFrequency)
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterQ
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InQ                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3067,7 +3067,7 @@ void USubmixEffectFilterPreset::SetFilterQ(float InQ)
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InQ                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3092,7 +3092,7 @@ void USubmixEffectFilterPreset::SetFilterQMod(float InQ)
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESubmixFilterType                       InType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3117,7 +3117,7 @@ void USubmixEffectFilterPreset::SetFilterType(ESubmixFilterType InType)
 
 
 // Function Synthesis.SubmixEffectFilterPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectFilterSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3142,7 +3142,7 @@ void USubmixEffectFilterPreset::SetSettings(const struct FSubmixEffectFilterSett
 
 
 // Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectFlexiverbSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3167,7 +3167,7 @@ void USubmixEffectFlexiverbPreset::SetSettings(const struct FSubmixEffectFlexive
 
 
 // Function Synthesis.SubmixEffectMultibandCompressorPreset.ResetKey
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void USubmixEffectMultibandCompressorPreset::ResetKey()
 {
@@ -3186,7 +3186,7 @@ void USubmixEffectMultibandCompressorPreset::ResetKey()
 
 
 // Function Synthesis.SubmixEffectMultibandCompressorPreset.SetAudioBus
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3211,7 +3211,7 @@ void USubmixEffectMultibandCompressorPreset::SetAudioBus(class UAudioBus* AudioB
 
 
 // Function Synthesis.SubmixEffectMultibandCompressorPreset.SetExternalSubmix
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3236,7 +3236,7 @@ void USubmixEffectMultibandCompressorPreset::SetExternalSubmix(class USoundSubmi
 
 
 // Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectMultibandCompressorSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -3261,7 +3261,7 @@ void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEff
 
 
 // Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectStereoDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3286,7 +3286,7 @@ void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStere
 
 
 // Function Synthesis.SubmixEffectStereoToQuadPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectStereoToQuadSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -3311,7 +3311,7 @@ void USubmixEffectStereoToQuadPreset::SetSettings(const struct FSubmixEffectSter
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.AddTap
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32*                                  TapId                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3362,7 +3362,7 @@ float USubmixEffectTapDelayPreset::GetMaxDelayInMilliseconds()
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.GetTap
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32                                   TapId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTapDelayInfo*                   TapInfo                                                (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -3391,7 +3391,7 @@ void USubmixEffectTapDelayPreset::GetTap(int32 TapId, struct FTapDelayInfo* TapI
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.GetTapIds
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<int32>*                          TapIds                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -3417,7 +3417,7 @@ void USubmixEffectTapDelayPreset::GetTapIds(TArray<int32>* TapIds)
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.RemoveTap
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   TapId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3442,7 +3442,7 @@ void USubmixEffectTapDelayPreset::RemoveTap(int32 TapId)
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetInterpolationTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3467,7 +3467,7 @@ void USubmixEffectTapDelayPreset::SetInterpolationTime(float Time)
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSubmixEffectTapDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -3492,7 +3492,7 @@ void USubmixEffectTapDelayPreset::SetSettings(const struct FSubmixEffectTapDelay
 
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetTap
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32                                   TapId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTapDelayInfo&             TapInfo                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -3519,7 +3519,7 @@ void USubmixEffectTapDelayPreset::SetTap(int32 TapId, const struct FTapDelayInfo
 
 
 // Function Synthesis.GranularSynth.NoteOff
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Note                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bKill                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3546,7 +3546,7 @@ void UGranularSynth::NoteOff(const float Note, const bool bKill)
 
 
 // Function Synthesis.GranularSynth.NoteOn
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             Note                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             Velocity                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3575,7 +3575,7 @@ void UGranularSynth::NoteOn(const float Note, const int32 Velocity, const float 
 
 
 // Function Synthesis.GranularSynth.SetAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             AttackTimeMsec                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3600,7 +3600,7 @@ void UGranularSynth::SetAttackTime(const float AttackTimeMsec)
 
 
 // Function Synthesis.GranularSynth.SetDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             DecayTimeMsec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3625,7 +3625,7 @@ void UGranularSynth::SetDecayTime(const float DecayTimeMsec)
 
 
 // Function Synthesis.GranularSynth.SetGrainDuration
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const float                             BaseDurationMsec                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 DurationRange                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3652,7 +3652,7 @@ void UGranularSynth::SetGrainDuration(const float BaseDurationMsec, const struct
 
 
 // Function Synthesis.GranularSynth.SetGrainEnvelopeType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const EGranularSynthEnvelopeType        EnvelopeType                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3677,7 +3677,7 @@ void UGranularSynth::SetGrainEnvelopeType(const EGranularSynthEnvelopeType Envel
 
 
 // Function Synthesis.GranularSynth.SetGrainPan
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const float                             BasePan                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 PanRange                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3704,7 +3704,7 @@ void UGranularSynth::SetGrainPan(const float BasePan, const struct FVector2D& Pa
 
 
 // Function Synthesis.GranularSynth.SetGrainPitch
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const float                             BasePitch                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 PitchRange                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3731,7 +3731,7 @@ void UGranularSynth::SetGrainPitch(const float BasePitch, const struct FVector2D
 
 
 // Function Synthesis.GranularSynth.SetGrainProbability
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InGrainProbability                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3756,7 +3756,7 @@ void UGranularSynth::SetGrainProbability(const float InGrainProbability)
 
 
 // Function Synthesis.GranularSynth.SetGrainsPerSecond
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InGrainsPerSecond                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3781,7 +3781,7 @@ void UGranularSynth::SetGrainsPerSecond(const float InGrainsPerSecond)
 
 
 // Function Synthesis.GranularSynth.SetGrainVolume
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const float                             BaseVolume                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 VolumeRange                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3808,7 +3808,7 @@ void UGranularSynth::SetGrainVolume(const float BaseVolume, const struct FVector
 
 
 // Function Synthesis.GranularSynth.SetPlaybackSpeed
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InPlayheadRate                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3833,7 +3833,7 @@ void UGranularSynth::SetPlaybackSpeed(const float InPlayheadRate)
 
 
 // Function Synthesis.GranularSynth.SetPlayheadTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InPositionSec                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             LerpTimeSec                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3862,7 +3862,7 @@ void UGranularSynth::SetPlayheadTime(const float InPositionSec, const float Lerp
 
 
 // Function Synthesis.GranularSynth.SetReleaseTimeMsec
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             ReleaseTimeMsec                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3887,7 +3887,7 @@ void UGranularSynth::SetReleaseTimeMsec(const float ReleaseTimeMsec)
 
 
 // Function Synthesis.GranularSynth.SetScrubMode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bScrubMode                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3912,7 +3912,7 @@ void UGranularSynth::SetScrubMode(const bool bScrubMode)
 
 
 // Function Synthesis.GranularSynth.SetSoundWave
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USoundWave*                       InSoundWave                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3937,7 +3937,7 @@ void UGranularSynth::SetSoundWave(class USoundWave* InSoundWave)
 
 
 // Function Synthesis.GranularSynth.SetSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             SustainGain                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3962,7 +3962,7 @@ void UGranularSynth::SetSustainGain(const float SustainGain)
 
 
 // Function Synthesis.GranularSynth.GetCurrentPlayheadTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -3987,7 +3987,7 @@ float UGranularSynth::GetCurrentPlayheadTime() const
 
 
 // Function Synthesis.GranularSynth.GetSampleDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4012,7 +4012,7 @@ float UGranularSynth::GetSampleDuration() const
 
 
 // Function Synthesis.GranularSynth.IsLoaded
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4037,7 +4037,7 @@ bool UGranularSynth::IsLoaded() const
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.GetCurveTangent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4065,7 +4065,7 @@ float USynthComponentMonoWaveTable::GetCurveTangent(int32 TableIndex)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.GetNumTableEntries
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4090,7 +4090,7 @@ int32 USynthComponentMonoWaveTable::GetNumTableEntries()
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.NoteOff
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InMidiNote                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4115,7 +4115,7 @@ void USynthComponentMonoWaveTable::NoteOff(const float InMidiNote)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.NoteOn
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InMidiNote                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             InVelocity                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4142,7 +4142,7 @@ void USynthComponentMonoWaveTable::NoteOn(const float InMidiNote, const float In
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.RefreshAllWaveTables
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void USynthComponentMonoWaveTable::RefreshAllWaveTables()
 {
@@ -4161,7 +4161,7 @@ void USynthComponentMonoWaveTable::RefreshAllWaveTables()
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.RefreshWaveTable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4186,7 +4186,7 @@ void USynthComponentMonoWaveTable::RefreshWaveTable(int32 Index_0)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InAttackTimeMsec                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4211,7 +4211,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeAttackTime(const float InAttack
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4236,7 +4236,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasDepth(const float InDepth)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInBiasInvert                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4261,7 +4261,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeBiasInvert(const bool bInBiasIn
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDecayTimeMsec                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4286,7 +4286,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeDecayTime(const float InDecayTi
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4311,7 +4311,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeDepth(const float InDepth)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4336,7 +4336,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeInvert(const bool bInInvert)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeReleaseTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InReleaseTimeMsec                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4361,7 +4361,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeReleaseTime(const float InRelea
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InSustainGain                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4386,7 +4386,7 @@ void USynthComponentMonoWaveTable::SetAmpEnvelopeSustainGain(const float InSusta
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetCurveInterpolationType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ECurveInterpolationType                 InterpolationType                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4416,7 +4416,7 @@ bool USynthComponentMonoWaveTable::SetCurveInterpolationType(ECurveInterpolation
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetCurveTangent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InNewTangent                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4446,7 +4446,7 @@ bool USynthComponentMonoWaveTable::SetCurveTangent(int32 TableIndex, float InNew
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetCurveValue
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   KeyframeIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4478,7 +4478,7 @@ bool USynthComponentMonoWaveTable::SetCurveValue(int32 TableIndex, int32 Keyfram
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InAttackTimeMsec                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4503,7 +4503,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeAttackTime(const float InAtt
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4528,7 +4528,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasDepth(const float InDept
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInBiasInvert                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4553,7 +4553,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeBiasInvert(const bool bInBia
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4578,7 +4578,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeDepth(const float InDepth)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4603,7 +4603,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeInvert(const bool bInInvert)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopenDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDecayTimeMsec                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4628,7 +4628,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopenDecayTime(const float InDec
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeReleaseTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InReleaseTimeMsec                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4653,7 +4653,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeReleaseTime(const float InRe
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InSustainGain                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4678,7 +4678,7 @@ void USynthComponentMonoWaveTable::SetFilterEnvelopeSustainGain(const float InSu
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             FrequencyHz                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4703,7 +4703,7 @@ void USynthComponentMonoWaveTable::SetFrequency(const float FrequencyHz)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyPitchBend
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             FrequencyOffsetCents                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4728,7 +4728,7 @@ void USynthComponentMonoWaveTable::SetFrequencyPitchBend(const float FrequencyOf
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyWithMidiNote
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InMidiNote                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4753,7 +4753,7 @@ void USynthComponentMonoWaveTable::SetFrequencyWithMidiNote(const float InMidiNo
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetLowPassFilterResonance
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InNewQ                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4778,7 +4778,7 @@ void USynthComponentMonoWaveTable::SetLowPassFilterResonance(float InNewQ)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeAttackTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InAttackTimeMsec                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4803,7 +4803,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeAttackTime(const float InA
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4828,7 +4828,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasDepth(const float InDe
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInBiasInvert                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4853,7 +4853,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeBiasInvert(const bool bInB
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDecayTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDecayTimeMsec                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4878,7 +4878,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeDecayTime(const float InDe
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InDepth                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4903,7 +4903,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeDepth(const float InDepth)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeInvert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInInvert                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4928,7 +4928,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeInvert(const bool bInInver
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeReleaseTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InReleaseTimeMsec                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4953,7 +4953,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeReleaseTime(const float In
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeSustainGain
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InSustainGain                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -4978,7 +4978,7 @@ void USynthComponentMonoWaveTable::SetPositionEnvelopeSustainGain(const float In
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoDepth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InLfoDepth                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5003,7 +5003,7 @@ void USynthComponentMonoWaveTable::SetPosLfoDepth(const float InLfoDepth)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const float                             InLfoFrequency                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5028,7 +5028,7 @@ void USynthComponentMonoWaveTable::SetPosLfoFrequency(const float InLfoFrequency
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const ESynthLFOType                     InLfoType                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5053,7 +5053,7 @@ void USynthComponentMonoWaveTable::SetPosLfoType(const ESynthLFOType InLfoType)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetSustainPedalState
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    InSustainPedalState                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5078,7 +5078,7 @@ void USynthComponentMonoWaveTable::SetSustainPedalState(bool InSustainPedalState
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InPosition                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5103,7 +5103,7 @@ void USynthComponentMonoWaveTable::SetWaveTablePosition(float InPosition)
 
 
 // Function Synthesis.SynthComponentMonoWaveTable.GetKeyFrameValuesForTable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   TableIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -5156,7 +5156,7 @@ int32 USynthComponentMonoWaveTable::GetMaxTableIndex() const
 
 
 // Function Synthesis.SynthComponentToneGenerator.SetFrequency
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InFrequency                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5181,7 +5181,7 @@ void USynthComponentToneGenerator::SetFrequency(float InFrequency)
 
 
 // Function Synthesis.SynthComponentToneGenerator.SetVolume
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InVolume                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5206,7 +5206,7 @@ void USynthComponentToneGenerator::SetVolume(float InVolume)
 
 
 // Function Synthesis.SynthSamplePlayer.SeekToTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   TimeSec                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESamplePlayerSeekType                   SeekType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5235,7 +5235,7 @@ void USynthSamplePlayer::SeekToTime(float TimeSec, ESamplePlayerSeekType SeekTyp
 
 
 // Function Synthesis.SynthSamplePlayer.SetPitch
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InPitch                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   TimeSec                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5262,7 +5262,7 @@ void USynthSamplePlayer::SetPitch(float InPitch, float TimeSec)
 
 
 // Function Synthesis.SynthSamplePlayer.SetScrubMode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bScrubMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5287,7 +5287,7 @@ void USynthSamplePlayer::SetScrubMode(bool bScrubMode)
 
 
 // Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InScrubTimeWidthSec                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5312,7 +5312,7 @@ void USynthSamplePlayer::SetScrubTimeWidth(float InScrubTimeWidthSec)
 
 
 // Function Synthesis.SynthSamplePlayer.SetSoundWave
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USoundWave*                       InSoundWave                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5337,7 +5337,7 @@ void USynthSamplePlayer::SetSoundWave(class USoundWave* InSoundWave)
 
 
 // Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5362,7 +5362,7 @@ float USynthSamplePlayer::GetCurrentPlaybackProgressPercent() const
 
 
 // Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5387,7 +5387,7 @@ float USynthSamplePlayer::GetCurrentPlaybackProgressTime() const
 
 
 // Function Synthesis.SynthSamplePlayer.GetSampleDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5412,7 +5412,7 @@ float USynthSamplePlayer::GetSampleDuration() const
 
 
 // Function Synthesis.SynthSamplePlayer.IsLoaded
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5509,7 +5509,7 @@ float USynthesisUtilitiesBlueprintFunctionLibrary::GetLogFrequency(float InLinea
 
 
 // Function Synthesis.Synth2DSlider.SetIndentHandle
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5534,7 +5534,7 @@ void USynth2DSlider::SetIndentHandle(bool InValue)
 
 
 // Function Synthesis.Synth2DSlider.SetLocked
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5559,7 +5559,7 @@ void USynth2DSlider::SetLocked(bool InValue)
 
 
 // Function Synthesis.Synth2DSlider.SetSliderHandleColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FLinearColor&              InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5584,7 +5584,7 @@ void USynth2DSlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 
 
 // Function Synthesis.Synth2DSlider.SetStepSize
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5609,7 +5609,7 @@ void USynth2DSlider::SetStepSize(float InValue)
 
 
 // Function Synthesis.Synth2DSlider.SetValue
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector2D&                 InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5634,7 +5634,7 @@ void USynth2DSlider::SetValue(const struct FVector2D& InValue)
 
 
 // Function Synthesis.Synth2DSlider.GetValue
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5659,7 +5659,7 @@ struct FVector2D USynth2DSlider::GetValue() const
 
 
 // Function Synthesis.SynthKnob.SetLocked
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5684,7 +5684,7 @@ void USynthKnob::SetLocked(bool InValue)
 
 
 // Function Synthesis.SynthKnob.SetStepSize
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5709,7 +5709,7 @@ void USynthKnob::SetStepSize(float InValue)
 
 
 // Function Synthesis.SynthKnob.SetValue
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -5734,7 +5734,7 @@ void USynthKnob::SetValue(float InValue)
 
 
 // Function Synthesis.SynthKnob.GetValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

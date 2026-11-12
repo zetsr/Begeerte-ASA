@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_NoModProjects_C::ExecuteUbergraph_UI_NoModProjects(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModProjects_C", "ExecuteUbergraph_UI_NoModProjects");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModProjects_C", "ExecuteUbergraph_UI_NoModProjects", FuncInfo);
 
 	Params::UI_NoModProjects_C_ExecuteUbergraph_UI_NoModProjects Parms{};
 
@@ -43,10 +41,8 @@ void UUI_NoModProjects_C::ExecuteUbergraph_UI_NoModProjects(int32 EntryPoint)
 
 void UUI_NoModProjects_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModProjects_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModProjects_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_NoModProjects_C_GetRootCFWidget Parms{};
 
@@ -64,10 +60,8 @@ void UUI_NoModProjects_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 
 void UUI_NoModProjects_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_NoModProjects_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_NoModProjects_C", "PreConstruct", FuncInfo);
 
 	Params::UI_NoModProjects_C_PreConstruct Parms{};
 

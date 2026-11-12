@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_Button_OpenTerm_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_Button_OpenTerm_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_Button_OpenTerm_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_Button_OpenTerm
 
 void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_UI_Button_Ark_G
 
 void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_UI_Button_Ark_Global_IAgree_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_UI_Button_Ark_Global_IAgree_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "BndEvt__TermsAndConditions_UI_Button_Ark_Global_IAgree_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +60,8 @@ void UUI_CFCore_TermsAndConditions_C::BndEvt__TermsAndConditions_UI_Button_Ark_G
 
 bool UUI_CFCore_TermsAndConditions_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_BPGamepadReleased Parms{};
 
@@ -88,10 +80,8 @@ bool UUI_CFCore_TermsAndConditions_C::BPGamepadReleased(const struct FKey& theKe
 
 bool UUI_CFCore_TermsAndConditions_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_BPHighlightWidgetOnStart Parms{};
 
@@ -106,10 +96,8 @@ bool UUI_CFCore_TermsAndConditions_C::BPHighlightWidgetOnStart()
 
 void UUI_CFCore_TermsAndConditions_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -122,10 +110,8 @@ void UUI_CFCore_TermsAndConditions_C::Construct()
 
 void UUI_CFCore_TermsAndConditions_C::ExecuteUbergraph_UI_CFCore_TermsAndConditions(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "ExecuteUbergraph_UI_CFCore_TermsAndConditions");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "ExecuteUbergraph_UI_CFCore_TermsAndConditions", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_ExecuteUbergraph_UI_CFCore_TermsAndConditions Parms{};
 
@@ -142,10 +128,8 @@ void UUI_CFCore_TermsAndConditions_C::ExecuteUbergraph_UI_CFCore_TermsAndConditi
 
 void UUI_CFCore_TermsAndConditions_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_GetRootCFWidget Parms{};
 
@@ -163,10 +147,8 @@ void UUI_CFCore_TermsAndConditions_C::GetRootCFWidget(class UPanelWidget** RootP
 
 void UUI_CFCore_TermsAndConditions_C::OnFailTerms(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "OnFailTerms");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "OnFailTerms", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_OnFailTerms Parms{};
 
@@ -183,10 +165,8 @@ void UUI_CFCore_TermsAndConditions_C::OnFailTerms(const struct FCFCoreError& Err
 
 void UUI_CFCore_TermsAndConditions_C::OnSuccessTerms(const struct FTerms& Terms_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "OnSuccessTerms");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "OnSuccessTerms", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_OnSuccessTerms Parms{};
 
@@ -197,16 +177,14 @@ void UUI_CFCore_TermsAndConditions_C::OnSuccessTerms(const struct FTerms& Terms_
 
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.PlayFadeAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EUMGSequencePlayMode                    PlayMode                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUI_CFCore_TermsAndConditions_C::PlayFadeAnimation(EUMGSequencePlayMode PlayMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "PlayFadeAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "PlayFadeAnimation", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_PlayFadeAnimation Parms{};
 
@@ -224,10 +202,8 @@ void UUI_CFCore_TermsAndConditions_C::PlayFadeAnimation(EUMGSequencePlayMode Pla
 
 void UUI_CFCore_TermsAndConditions_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_TermsAndConditions_C_Tick Parms{};
 
@@ -243,10 +219,8 @@ void UUI_CFCore_TermsAndConditions_C::Tick(const struct FGeometry& MyGeometry, f
 
 void UUI_CFCore_TermsAndConditions_C::UpdateTextByPlatform()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_TermsAndConditions_C", "UpdateTextByPlatform");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_TermsAndConditions_C", "UpdateTextByPlatform", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

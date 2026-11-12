@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // ControlRigBlueprintGeneratedClass Human_Male_TPV_StrideWarping_CtrlRig.Human_Male_TPV_StrideWarping_CtrlRig_C
-// 0x0080 (0x0B50 - 0x0AD0)
+// 0x0080 (0x0DA0 - 0x0D20)
 class UHuman_Male_TPV_StrideWarping_CtrlRig_C final : public UControlRig
 {
 public:
-	struct FVector                                Stride_Direction;                                  // 0x0AD0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Stride_Scale;                                      // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DebugVector;                                       // 0x0AF0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ScalingPivot;                                      // 0x0B08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Left_Upvector;                                     // 0x0B20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Right_Upvector;                                    // 0x0B38(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Stride_Direction;                                  // 0x0D20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Stride_Scale;                                      // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DebugVector;                                       // 0x0D40(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ScalingPivot;                                      // 0x0D58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Left_Upvector;                                     // 0x0D70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Right_Upvector;                                    // 0x0D88(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -42,5 +42,6 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_StrideWarping_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_Male_TPV_StrideWarping_CtrlRig_C;
 
 SDK_NAMESPACE_END

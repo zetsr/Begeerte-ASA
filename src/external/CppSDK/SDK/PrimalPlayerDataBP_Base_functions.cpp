@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UPrimalPlayerDataBP_Base_C::BPCreatedNewPlayerData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "BPCreatedNewPlayerData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "BPCreatedNewPlayerData", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +37,8 @@ void UPrimalPlayerDataBP_Base_C::BPCreatedNewPlayerData()
 
 void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int32 DifficultyIndex, class FName BossName, class AShooterPlayerController* PlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "BPForceDefeatedBoss");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "BPForceDefeatedBoss", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_BPForceDefeatedBoss Parms{};
 
@@ -59,10 +55,8 @@ void UPrimalPlayerDataBP_Base_C::BPForceDefeatedBoss(int32 DifficultyIndex, clas
 
 void UPrimalPlayerDataBP_Base_C::BPPostLoadFromFile()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "BPPostLoadFromFile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "BPPostLoadFromFile", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +72,8 @@ void UPrimalPlayerDataBP_Base_C::BPPostLoadFromFile()
 
 void UPrimalPlayerDataBP_Base_C::DefeatedBoss(class APrimalDinoCharacter* BossChar, int32 DifficultyIndex, class FName TagOverride, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "DefeatedBoss");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "DefeatedBoss", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_DefeatedBoss Parms{};
 
@@ -102,10 +94,8 @@ void UPrimalPlayerDataBP_Base_C::DefeatedBoss(class APrimalDinoCharacter* BossCh
 
 void UPrimalPlayerDataBP_Base_C::EndActivityOnBoss(class FName Boss, class AShooterPlayerController* SPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "EndActivityOnBoss");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "EndActivityOnBoss", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_EndActivityOnBoss Parms{};
 
@@ -123,10 +113,8 @@ void UPrimalPlayerDataBP_Base_C::EndActivityOnBoss(class FName Boss, class AShoo
 
 int32 UPrimalPlayerDataBP_Base_C::GetPlayerHexagonCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "GetPlayerHexagonCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "GetPlayerHexagonCount", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_GetPlayerHexagonCount Parms{};
 
@@ -144,10 +132,8 @@ int32 UPrimalPlayerDataBP_Base_C::GetPlayerHexagonCount()
 
 void UPrimalPlayerDataBP_Base_C::GrantGeneralizedAchievementTag(class FName ObtainedAchievementTag, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "GrantGeneralizedAchievementTag");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "GrantGeneralizedAchievementTag", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_GrantGeneralizedAchievementTag Parms{};
 
@@ -166,10 +152,8 @@ void UPrimalPlayerDataBP_Base_C::GrantGeneralizedAchievementTag(class FName Obta
 
 bool UPrimalPlayerDataBP_Base_C::HasGeneralizedAchievementTag(class FName Tag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "HasGeneralizedAchievementTag");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "HasGeneralizedAchievementTag", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_HasGeneralizedAchievementTag Parms{};
 
@@ -190,10 +174,8 @@ bool UPrimalPlayerDataBP_Base_C::HasGeneralizedAchievementTag(class FName Tag)
 
 void UPrimalPlayerDataBP_Base_C::Interface_PlayerData_Progress_Abb_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "Interface_PlayerData Progress Abb Sigil Count");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "Interface_PlayerData Progress Abb Sigil Count", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_Interface_PlayerData_Progress_Abb_Sigil_Count Parms{};
 
@@ -216,10 +198,8 @@ void UPrimalPlayerDataBP_Base_C::Interface_PlayerData_Progress_Abb_Sigil_Count(u
 
 void UPrimalPlayerDataBP_Base_C::Interface_PlayerData_Progress_Crimson_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "Interface_PlayerData Progress Crimson Sigil Count");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "Interface_PlayerData Progress Crimson Sigil Count", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_Interface_PlayerData_Progress_Crimson_Sigil_Count Parms{};
 
@@ -241,10 +221,8 @@ void UPrimalPlayerDataBP_Base_C::Interface_PlayerData_Progress_Crimson_Sigil_Cou
 
 void UPrimalPlayerDataBP_Base_C::SetChibiLevels(int32 NewLevels, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "SetChibiLevels");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "SetChibiLevels", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_SetChibiLevels Parms{};
 
@@ -263,10 +241,8 @@ void UPrimalPlayerDataBP_Base_C::SetChibiLevels(int32 NewLevels, class AShooterP
 
 bool UPrimalPlayerDataBP_Base_C::SetPlayerHexagonCount(int32 NewHexagonCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "SetPlayerHexagonCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "SetPlayerHexagonCount", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_SetPlayerHexagonCount Parms{};
 
@@ -290,10 +266,8 @@ bool UPrimalPlayerDataBP_Base_C::SetPlayerHexagonCount(int32 NewHexagonCount)
 
 void UPrimalPlayerDataBP_Base_C::Shared_Adding_Sigil_Count_Function(uint8 newly_added_sigils, class AShooterPlayerController* Controller, uint8 sigil_count, bool is_crimson, bool is_abb, uint8* Count_After)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalPlayerDataBP_Base_C", "Shared Adding Sigil Count Function");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalPlayerDataBP_Base_C", "Shared Adding Sigil Count Function", FuncInfo);
 
 	Params::PrimalPlayerDataBP_Base_C_Shared_Adding_Sigil_Count_Function Parms{};
 

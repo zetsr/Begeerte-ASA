@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void IBPI_CFCore_CustomComboBox_C::OnOptionSelectedInterface(const class FString& Option, int64 ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_CFCore_CustomComboBox_C", "OnOptionSelectedInterface");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "BPI_CFCore_CustomComboBox_C", "OnOptionSelectedInterface", FuncInfo);
 
 	Params::BPI_CFCore_CustomComboBox_C_OnOptionSelectedInterface Parms{};
 

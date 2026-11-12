@@ -10,21 +10,26 @@
 
 #include "Basic.hpp"
 
+#include "MassEntity_structs.hpp"
+#include "MassEntity_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MassSpawner_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ZoneGraph_structs.hpp"
+#include "MassSpawner_structs.hpp"
 #include "AIModule_structs.hpp"
-#include "MassEntity_classes.hpp"
+#include "ZoneGraph_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class MassSpawner.MassEntityTraitBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0008 (0x0030 - 0x0028)
 class UMassEntityTraitBase : public UObject
 {
+public:
+	EProcessorExecutionFlags                      ValidTargetConfig;                                 // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -39,14 +44,35 @@ public:
 		return GetDefaultObjImpl<UMassEntityTraitBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntityTraitBase;
+
+// Class MassSpawner.MassCreatedBySpawnerTrait
+// 0x0000 (0x0030 - 0x0030)
+class UMassCreatedBySpawnerTrait final : public UMassEntityTraitBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassCreatedBySpawnerTrait")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassCreatedBySpawnerTrait")
+	}
+	static class UMassCreatedBySpawnerTrait* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassCreatedBySpawnerTrait>();
+	}
+};
+DUMPER7_ASSERTS_UMassCreatedBySpawnerTrait;
 
 // Class MassSpawner.MassAssortedFragmentsTrait
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UMassAssortedFragmentsTrait final : public UMassEntityTraitBase
 {
 public:
-	TArray<struct FInstancedStruct>               Fragments;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FInstancedStruct>               Tags;                                              // 0x0038(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FInstancedStruct>               Fragments;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FInstancedStruct>               Tags;                                              // 0x0040(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -62,13 +88,14 @@ public:
 		return GetDefaultObjImpl<UMassAssortedFragmentsTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassAssortedFragmentsTrait;
 
 // Class MassSpawner.MassEntityConfigAsset
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x0058 - 0x0028)
 class UMassEntityConfigAsset final : public UDataAsset
 {
 public:
-	struct FMassEntityConfig                      Config;                                            // 0x0030(0x0030)(Edit, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FMassEntityConfig                      Config;                                            // 0x0028(0x0030)(Edit, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -84,6 +111,7 @@ public:
 		return GetDefaultObjImpl<UMassEntityConfigAsset>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntityConfigAsset;
 
 // Class MassSpawner.MassEntitySpawnDataGeneratorBase
 // 0x0008 (0x0030 - 0x0028)
@@ -108,6 +136,7 @@ public:
 		return GetDefaultObjImpl<UMassEntitySpawnDataGeneratorBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntitySpawnDataGeneratorBase;
 
 // Class MassSpawner.MassEntityEQSSpawnPointsGenerator
 // 0x0048 (0x0078 - 0x0030)
@@ -130,6 +159,7 @@ public:
 		return GetDefaultObjImpl<UMassEntityEQSSpawnPointsGenerator>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntityEQSSpawnPointsGenerator;
 
 // Class MassSpawner.MassEntityZoneGraphSpawnPointsGenerator
 // 0x0018 (0x0048 - 0x0030)
@@ -155,24 +185,25 @@ public:
 		return GetDefaultObjImpl<UMassEntityZoneGraphSpawnPointsGenerator>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntityZoneGraphSpawnPointsGenerator;
 
 // Class MassSpawner.MassSpawner
-// 0x00A8 (0x0538 - 0x0490)
+// 0x00A8 (0x0540 - 0x0498)
 class AMassSpawner final : public AActor
 {
 public:
-	TMulticastInlineDelegate<void()>              OnSpawningFinishedEvent;                           // 0x0490(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnDespawningFinishedEvent;                         // 0x04A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x04B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMassSpawnedEntityType>         EntityTypes;                                       // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FMassSpawnDataGenerator>        SpawnDataGenerators;                               // 0x04C8(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bAutoSpawnOnBeginPlay : 1;                         // 0x04D8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bOverrideSchematics : 1;                           // 0x04D8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMassProcessor*>                 PostSpawnProcessors;                               // 0x04E0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	float                                         SpawningCountScale;                                // 0x04F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4F4[0x44];                                     // 0x04F4(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnSpawningFinishedEvent;                           // 0x0498(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnDespawningFinishedEvent;                         // 0x04A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x04B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4BC[0x4];                                      // 0x04BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMassSpawnedEntityType>         EntityTypes;                                       // 0x04C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FMassSpawnDataGenerator>        SpawnDataGenerators;                               // 0x04D0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bAutoSpawnOnBeginPlay : 1;                         // 0x04E0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bOverrideSchematics : 1;                           // 0x04E0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMassProcessor*>                 PostSpawnProcessors;                               // 0x04E8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	float                                         SpawningCountScale;                                // 0x04F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4FC[0x44];                                     // 0x04FC(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearTemplates();
@@ -198,14 +229,15 @@ public:
 		return GetDefaultObjImpl<AMassSpawner>();
 	}
 };
+DUMPER7_ASSERTS_AMassSpawner;
 
 // Class MassSpawner.MassSpawnerSubsystem
-// 0x0088 (0x00C0 - 0x0038)
+// 0x0088 (0x00C8 - 0x0040)
 class UMassSpawnerSubsystem final : public UMassSubsystemBase
 {
 public:
-	TArray<class UMassProcessor*>                 SpawnDataInitializers;                             // 0x0038(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_48[0x78];                                      // 0x0048(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UMassProcessor*>                 SpawnDataInitializers;                             // 0x0040(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_50[0x78];                                      // 0x0050(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -221,13 +253,14 @@ public:
 		return GetDefaultObjImpl<UMassSpawnerSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassSpawnerSubsystem;
 
 // Class MassSpawner.MassSpawnLocationProcessor
-// 0x0330 (0x03E0 - 0x00B0)
+// 0x05D8 (0x06D8 - 0x0100)
 class UMassSpawnLocationProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x330];                                     // 0x00B0(0x0330)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D8];                                    // 0x0100(0x05D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -243,13 +276,14 @@ public:
 		return GetDefaultObjImpl<UMassSpawnLocationProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassSpawnLocationProcessor;
 
 // Class MassSpawner.MassTranslator
-// 0x0020 (0x00D0 - 0x00B0)
+// 0x0030 (0x0130 - 0x0100)
 class UMassTranslator : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x20];                                      // 0x00B0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x30];                                     // 0x0100(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -265,5 +299,6 @@ public:
 		return GetDefaultObjImpl<UMassTranslator>();
 	}
 };
+DUMPER7_ASSERTS_UMassTranslator;
 
 SDK_NAMESPACE_END

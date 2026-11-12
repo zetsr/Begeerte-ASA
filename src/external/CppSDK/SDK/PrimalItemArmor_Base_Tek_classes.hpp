@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "MapSpecificTekArmorBuffs_structs.hpp"
-#include "PrimalItemArmorGeneric_classes.hpp"
 #include "Engine_structs.hpp"
+#include "PrimalItemArmorGeneric_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UPrimalItemArmor_Base_Tek_C final : public UPrimalItemArmorGeneric_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B90(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	class UPrimalItem*                            SelfObj;                                           // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   MyTekArmorBuff;                                    // 0x0BA0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         MaxAmmo;                                           // 0x0BC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -67,5 +67,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_Base_Tek_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_Base_Tek_C;
 
 SDK_NAMESPACE_END

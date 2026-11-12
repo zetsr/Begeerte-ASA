@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CustomizeColorSlot_C::GetColor(struct FLinearColor* Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "GetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "GetColor", FuncInfo);
 
 	Params::UI_CFCore_CustomizeColorSlot_C_GetColor Parms{};
 
@@ -44,10 +42,8 @@ void UUI_CFCore_CustomizeColorSlot_C::GetColor(struct FLinearColor* Color)
 
 void UUI_CFCore_CustomizeColorSlot_C::SetColor(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "SetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "SetColor", FuncInfo);
 
 	Params::UI_CFCore_CustomizeColorSlot_C_SetColor Parms{};
 
@@ -64,10 +60,8 @@ void UUI_CFCore_CustomizeColorSlot_C::SetColor(const struct FLinearColor& Color)
 
 void UUI_CFCore_CustomizeColorSlot_C::GetCurrentTheme(struct FCFCoreThemeRowData* CurrentTheme)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "GetCurrentTheme");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "GetCurrentTheme", FuncInfo);
 
 	Params::UI_CFCore_CustomizeColorSlot_C_GetCurrentTheme Parms{};
 
@@ -83,10 +77,8 @@ void UUI_CFCore_CustomizeColorSlot_C::GetCurrentTheme(struct FCFCoreThemeRowData
 
 void UUI_CFCore_CustomizeColorSlot_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "OnInitialized");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "OnInitialized", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +89,8 @@ void UUI_CFCore_CustomizeColorSlot_C::OnInitialized()
 
 void UUI_CFCore_CustomizeColorSlot_C::BndEvt__UI_CustomizeColorSlot_Button_Slot_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "BndEvt__UI_CustomizeColorSlot_Button_Slot_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "BndEvt__UI_CustomizeColorSlot_Button_Slot_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +103,8 @@ void UUI_CFCore_CustomizeColorSlot_C::BndEvt__UI_CustomizeColorSlot_Button_Slot_
 
 void UUI_CFCore_CustomizeColorSlot_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_CustomizeColorSlot_C_PreConstruct Parms{};
 
@@ -131,10 +119,8 @@ void UUI_CFCore_CustomizeColorSlot_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_CustomizeColorSlot_C::CustomEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "CustomEvent_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "CustomEvent_0", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +133,8 @@ void UUI_CFCore_CustomizeColorSlot_C::CustomEvent_0()
 
 void UUI_CFCore_CustomizeColorSlot_C::ExecuteUbergraph_UI_CFCore_CustomizeColorSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeColorSlot_C", "ExecuteUbergraph_UI_CFCore_CustomizeColorSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeColorSlot_C", "ExecuteUbergraph_UI_CFCore_CustomizeColorSlot", FuncInfo);
 
 	Params::UI_CFCore_CustomizeColorSlot_C_ExecuteUbergraph_UI_CFCore_CustomizeColorSlot Parms{};
 

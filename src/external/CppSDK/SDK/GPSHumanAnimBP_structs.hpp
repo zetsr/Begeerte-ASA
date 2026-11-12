@@ -16,9 +16,10 @@
 SDK_NAMESPACE_START
 
 // ScriptStruct GPSHumanAnimBP.GPSHumanAnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0xD7B8 - 0xD7B8)
+// 0x0000 (0xDB38 - 0xDB38)
 struct GPSHumanAnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
+DUMPER7_ASSERTS_GPSHumanAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

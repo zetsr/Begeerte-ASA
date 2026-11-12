@@ -22,10 +22,11 @@ struct ChaosVDRuntimeBlueprintLibrary_RecordDebugDrawBox final
 {
 public:
 	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   InBox;                                             // 0x0008(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   InBox;                                             // 0x0008(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Tag;                                               // 0x0040(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0048(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosVDRuntimeBlueprintLibrary_RecordDebugDrawBox;
 
 // Function ChaosVDBlueprint.ChaosVDRuntimeBlueprintLibrary.RecordDebugDrawLine
 // 0x0050 (0x0050 - 0x0000)
@@ -38,6 +39,7 @@ public:
 	class FName                                   Tag;                                               // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0040(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosVDRuntimeBlueprintLibrary_RecordDebugDrawLine;
 
 // Function ChaosVDBlueprint.ChaosVDRuntimeBlueprintLibrary.RecordDebugDrawSphere
 // 0x0040 (0x0040 - 0x0000)
@@ -51,6 +53,7 @@ public:
 	struct FLinearColor                           Color;                                             // 0x002C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChaosVDRuntimeBlueprintLibrary_RecordDebugDrawSphere;
 
 // Function ChaosVDBlueprint.ChaosVDRuntimeBlueprintLibrary.RecordDebugDrawVector
 // 0x0050 (0x0050 - 0x0000)
@@ -63,6 +66,17 @@ public:
 	class FName                                   Tag;                                               // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0040(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosVDRuntimeBlueprintLibrary_RecordDebugDrawVector;
+
+// Function ChaosVDBlueprint.ChaosVDRuntimeBlueprintLibrary.SetTraceRelevancyVolume
+// 0x0040 (0x0040 - 0x0000)
+struct ChaosVDRuntimeBlueprintLibrary_SetTraceRelevancyVolume final
+{
+public:
+	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   RelevancyVolume;                                   // 0x0008(0x0038)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosVDRuntimeBlueprintLibrary_SetTraceRelevancyVolume;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

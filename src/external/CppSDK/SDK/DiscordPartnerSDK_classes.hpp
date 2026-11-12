@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "DiscordPartnerSDK_structs.hpp"
-#include "Engine_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "DiscordPartnerSDK_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -60,6 +60,7 @@ public:
 		return GetDefaultObjImpl<UDiscordLocalPlayerSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordLocalPlayerSubsystem;
 
 // Class DiscordPartnerSDK.DiscordPartnerSDKSettings
 // 0x0010 (0x0048 - 0x0038)
@@ -87,6 +88,7 @@ public:
 		return GetDefaultObjImpl<UDiscordPartnerSDKSettings>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordPartnerSDKSettings;
 
 // Class DiscordPartnerSDK.DiscordUniqueIDFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -112,6 +114,7 @@ public:
 		return GetDefaultObjImpl<UDiscordUniqueIDFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordUniqueIDFunctionLibrary;
 
 // Class DiscordPartnerSDK.DiscordActivityInvite
 // 0x0010 (0x0038 - 0x0028)
@@ -156,6 +159,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivityInvite>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivityInvite;
 
 // Class DiscordPartnerSDK.DiscordActivityAssets
 // 0x0010 (0x0038 - 0x0028)
@@ -196,6 +200,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivityAssets>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivityAssets;
 
 // Class DiscordPartnerSDK.DiscordActivityTimestamps
 // 0x0010 (0x0038 - 0x0028)
@@ -226,6 +231,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivityTimestamps>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivityTimestamps;
 
 // Class DiscordPartnerSDK.DiscordActivityParty
 // 0x0010 (0x0038 - 0x0028)
@@ -260,6 +266,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivityParty>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivityParty;
 
 // Class DiscordPartnerSDK.DiscordActivitySecrets
 // 0x0010 (0x0038 - 0x0028)
@@ -288,6 +295,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivitySecrets>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivitySecrets;
 
 // Class DiscordPartnerSDK.DiscordActivityButton
 // 0x0010 (0x0038 - 0x0028)
@@ -318,6 +326,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivityButton>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivityButton;
 
 // Class DiscordPartnerSDK.DiscordActivity
 // 0x0010 (0x0038 - 0x0028)
@@ -375,6 +384,7 @@ public:
 		return GetDefaultObjImpl<UDiscordActivity>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordActivity;
 
 // Class DiscordPartnerSDK.DiscordClientResult
 // 0x0010 (0x0038 - 0x0028)
@@ -417,6 +427,7 @@ public:
 		return GetDefaultObjImpl<UDiscordClientResult>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordClientResult;
 
 // Class DiscordPartnerSDK.DiscordAuthorizationCodeChallenge
 // 0x0010 (0x0038 - 0x0028)
@@ -447,6 +458,7 @@ public:
 		return GetDefaultObjImpl<UDiscordAuthorizationCodeChallenge>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordAuthorizationCodeChallenge;
 
 // Class DiscordPartnerSDK.DiscordAuthorizationCodeVerifier
 // 0x0010 (0x0038 - 0x0028)
@@ -476,6 +488,7 @@ public:
 		return GetDefaultObjImpl<UDiscordAuthorizationCodeVerifier>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordAuthorizationCodeVerifier;
 
 // Class DiscordPartnerSDK.DiscordAuthorizationArgs
 // 0x0010 (0x0038 - 0x0028)
@@ -516,6 +529,7 @@ public:
 		return GetDefaultObjImpl<UDiscordAuthorizationArgs>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordAuthorizationArgs;
 
 // Class DiscordPartnerSDK.DiscordDeviceAuthorizationArgs
 // 0x0010 (0x0038 - 0x0028)
@@ -546,6 +560,7 @@ public:
 		return GetDefaultObjImpl<UDiscordDeviceAuthorizationArgs>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordDeviceAuthorizationArgs;
 
 // Class DiscordPartnerSDK.DiscordVoiceStateHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -573,6 +588,7 @@ public:
 		return GetDefaultObjImpl<UDiscordVoiceStateHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordVoiceStateHandle;
 
 // Class DiscordPartnerSDK.DiscordVADThresholdSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -602,6 +618,7 @@ public:
 		return GetDefaultObjImpl<UDiscordVADThresholdSettings>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordVADThresholdSettings;
 
 // Class DiscordPartnerSDK.DiscordCall
 // 0x0020 (0x0048 - 0x0028)
@@ -639,7 +656,7 @@ public:
 	void SetSelfMute(bool Mute);
 	void SetSpeakingStatusChangedCallback(const TDelegate<void(const struct FDiscordUniqueID& UserId, bool isPlayingSound)>& cb);
 	void SetStatusChangedCallback(const TDelegate<void(EDiscordCallStatus Status, EDiscordCallError Error, int32 errorDetail)>& cb);
-	void SetVadThreshold(bool Automatic, float threshold);
+	void SetVadThreshold(bool Automatic, float Threshold);
 
 public:
 	static class UClass* StaticClass()
@@ -655,6 +672,7 @@ public:
 		return GetDefaultObjImpl<UDiscordCall>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordCall;
 
 // Class DiscordPartnerSDK.DiscordChannelHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -684,6 +702,7 @@ public:
 		return GetDefaultObjImpl<UDiscordChannelHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordChannelHandle;
 
 // Class DiscordPartnerSDK.DiscordGuildMinimal
 // 0x0010 (0x0038 - 0x0028)
@@ -713,6 +732,7 @@ public:
 		return GetDefaultObjImpl<UDiscordGuildMinimal>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordGuildMinimal;
 
 // Class DiscordPartnerSDK.DiscordGuildChannel
 // 0x0010 (0x0038 - 0x0028)
@@ -754,6 +774,7 @@ public:
 		return GetDefaultObjImpl<UDiscordGuildChannel>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordGuildChannel;
 
 // Class DiscordPartnerSDK.DiscordLinkedLobby
 // 0x0010 (0x0038 - 0x0028)
@@ -784,6 +805,7 @@ public:
 		return GetDefaultObjImpl<UDiscordLinkedLobby>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordLinkedLobby;
 
 // Class DiscordPartnerSDK.DiscordLinkedChannel
 // 0x0010 (0x0038 - 0x0028)
@@ -815,6 +837,7 @@ public:
 		return GetDefaultObjImpl<UDiscordLinkedChannel>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordLinkedChannel;
 
 // Class DiscordPartnerSDK.DiscordRelationshipHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -845,6 +868,7 @@ public:
 		return GetDefaultObjImpl<UDiscordRelationshipHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordRelationshipHandle;
 
 // Class DiscordPartnerSDK.DiscordUserApplicationProfileHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -876,6 +900,7 @@ public:
 		return GetDefaultObjImpl<UDiscordUserApplicationProfileHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordUserApplicationProfileHandle;
 
 // Class DiscordPartnerSDK.DiscordUserHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -914,6 +939,7 @@ public:
 		return GetDefaultObjImpl<UDiscordUserHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordUserHandle;
 
 // Class DiscordPartnerSDK.DiscordLobbyMemberHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -944,6 +970,7 @@ public:
 		return GetDefaultObjImpl<UDiscordLobbyMemberHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordLobbyMemberHandle;
 
 // Class DiscordPartnerSDK.DiscordLobbyHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -976,6 +1003,7 @@ public:
 		return GetDefaultObjImpl<UDiscordLobbyHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordLobbyHandle;
 
 // Class DiscordPartnerSDK.DiscordAdditionalContent
 // 0x0010 (0x0038 - 0x0028)
@@ -1011,6 +1039,7 @@ public:
 		return GetDefaultObjImpl<UDiscordAdditionalContent>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordAdditionalContent;
 
 // Class DiscordPartnerSDK.DiscordMessageHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -1054,6 +1083,7 @@ public:
 		return GetDefaultObjImpl<UDiscordMessageHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordMessageHandle;
 
 // Class DiscordPartnerSDK.DiscordAudioDevice
 // 0x0010 (0x0038 - 0x0028)
@@ -1086,6 +1116,7 @@ public:
 		return GetDefaultObjImpl<UDiscordAudioDevice>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordAudioDevice;
 
 // Class DiscordPartnerSDK.DiscordUserMessageSummary
 // 0x0010 (0x0038 - 0x0028)
@@ -1113,6 +1144,7 @@ public:
 		return GetDefaultObjImpl<UDiscordUserMessageSummary>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordUserMessageSummary;
 
 // Class DiscordPartnerSDK.DiscordClientCreateOptions
 // 0x0010 (0x0038 - 0x0028)
@@ -1149,6 +1181,7 @@ public:
 		return GetDefaultObjImpl<UDiscordClientCreateOptions>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordClientCreateOptions;
 
 // Class DiscordPartnerSDK.DiscordClient
 // 0x0010 (0x0038 - 0x0028)
@@ -1176,7 +1209,7 @@ public:
 	void AcceptGameFriendRequest(const struct FDiscordUniqueID& UserId, const TDelegate<void(class UDiscordClientResult* Result)>& cb);
 	void AddLogCallback(const TDelegate<void(const class FString& Message, EDiscordLoggingSeverity Severity)>& Callback, EDiscordLoggingSeverity minSeverity);
 	void AddVoiceLogCallback(const TDelegate<void(const class FString& Message, EDiscordLoggingSeverity Severity)>& Callback, EDiscordLoggingSeverity minSeverity);
-	void Authorize(class UDiscordAuthorizationArgs* Args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)>& Callback);
+	void Authorize(class UDiscordAuthorizationArgs* args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)>& Callback);
 	void BlockUser(const struct FDiscordUniqueID& UserId, const TDelegate<void(class UDiscordClientResult* Result)>& cb);
 	void CancelDiscordFriendRequest(const struct FDiscordUniqueID& UserId, const TDelegate<void(class UDiscordClientResult* Result)>& cb);
 	void CancelGameFriendRequest(const struct FDiscordUniqueID& UserId, const TDelegate<void(class UDiscordClientResult* Result)>& cb);
@@ -1221,8 +1254,8 @@ public:
 	bool GetSelfMuteAll();
 	EDiscordClientStatus GetStatus();
 	void GetToken(const struct FDiscordUniqueID& ApplicationId, const class FString& code, const class FString& codeVerifier, const class FString& redirectUri, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
-	void GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* Args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
-	void GetTokenFromDeviceProvisionalMerge(class UDiscordDeviceAuthorizationArgs* Args, EDiscordAuthenticationExternalAuthType externalAuthType, const class FString& externalAuthToken, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
+	void GetTokenFromDevice(class UDiscordDeviceAuthorizationArgs* args, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
+	void GetTokenFromDeviceProvisionalMerge(class UDiscordDeviceAuthorizationArgs* args, EDiscordAuthenticationExternalAuthType externalAuthType, const class FString& externalAuthToken, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
 	void GetTokenFromProvisionalMerge(const struct FDiscordUniqueID& ApplicationId, const class FString& code, const class FString& codeVerifier, const class FString& redirectUri, EDiscordAuthenticationExternalAuthType externalAuthType, const class FString& externalAuthToken, const TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)>& Callback);
 	class UDiscordUserHandle* GetUser(const struct FDiscordUniqueID& UserId);
 	void GetUserGuilds(const TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordGuildMinimal*>& guilds)>& cb);
@@ -1232,7 +1265,7 @@ public:
 	void InitWithBases(const class FString& ApiBase, const class FString& WebBase);
 	void InitWithOptions(class UDiscordClientCreateOptions* Options);
 	bool IsAuthenticated();
-	void IsDiscordAppInstalled(const TDelegate<void(bool installed)>& Callback);
+	void IsDiscordAppInstalled(const TDelegate<void(bool Installed)>& Callback);
 	void JoinLinkedLobbyGuild(const struct FDiscordUniqueID& LobbyId, const TDelegate<void()>& provisionalUserMergeRequiredCallback, const TDelegate<void(class UDiscordClientResult* Result, const class FString& inviteUrl)>& Callback);
 	void LeaveLobby(const struct FDiscordUniqueID& LobbyId, const TDelegate<void(class UDiscordClientResult* Result)>& Callback);
 	void LinkChannelToLobby(const struct FDiscordUniqueID& LobbyId, const struct FDiscordUniqueID& ChannelId, const TDelegate<void(class UDiscordClientResult* Result)>& Callback);
@@ -1331,6 +1364,7 @@ public:
 		return GetDefaultObjImpl<UDiscordClient>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordClient;
 
 // Class DiscordPartnerSDK.DiscordCallInfoHandle
 // 0x0010 (0x0038 - 0x0028)
@@ -1360,5 +1394,6 @@ public:
 		return GetDefaultObjImpl<UDiscordCallInfoHandle>();
 	}
 };
+DUMPER7_ASSERTS_UDiscordCallInfoHandle;
 
 SDK_NAMESPACE_END

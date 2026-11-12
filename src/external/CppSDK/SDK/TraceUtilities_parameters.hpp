@@ -21,6 +21,7 @@ struct TraceUtilLibrary_GetAllChannels final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_GetAllChannels;
 
 // Function TraceUtilities.TraceUtilLibrary.GetEnabledChannels
 // 0x0010 (0x0010 - 0x0000)
@@ -29,6 +30,7 @@ struct TraceUtilLibrary_GetEnabledChannels final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_GetEnabledChannels;
 
 // Function TraceUtilities.TraceUtilLibrary.IsChannelEnabled
 // 0x0018 (0x0018 - 0x0000)
@@ -39,6 +41,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_IsChannelEnabled;
 
 // Function TraceUtilities.TraceUtilLibrary.IsTracing
 // 0x0001 (0x0001 - 0x0000)
@@ -47,6 +50,7 @@ struct TraceUtilLibrary_IsTracing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_IsTracing;
 
 // Function TraceUtilities.TraceUtilLibrary.PauseTracing
 // 0x0001 (0x0001 - 0x0000)
@@ -55,6 +59,7 @@ struct TraceUtilLibrary_PauseTracing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_PauseTracing;
 
 // Function TraceUtilities.TraceUtilLibrary.ResumeTracing
 // 0x0001 (0x0001 - 0x0000)
@@ -63,6 +68,7 @@ struct TraceUtilLibrary_ResumeTracing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_ResumeTracing;
 
 // Function TraceUtilities.TraceUtilLibrary.StartTraceSendTo
 // 0x0028 (0x0028 - 0x0000)
@@ -74,6 +80,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_StartTraceSendTo;
 
 // Function TraceUtilities.TraceUtilLibrary.StartTraceToFile
 // 0x0028 (0x0028 - 0x0000)
@@ -85,6 +92,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_StartTraceToFile;
 
 // Function TraceUtilities.TraceUtilLibrary.StopTracing
 // 0x0001 (0x0001 - 0x0000)
@@ -93,6 +101,7 @@ struct TraceUtilLibrary_StopTracing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_StopTracing;
 
 // Function TraceUtilities.TraceUtilLibrary.ToggleChannel
 // 0x0018 (0x0018 - 0x0000)
@@ -104,6 +113,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_ToggleChannel;
 
 // Function TraceUtilities.TraceUtilLibrary.TraceBookmark
 // 0x0010 (0x0010 - 0x0000)
@@ -112,6 +122,7 @@ struct TraceUtilLibrary_TraceBookmark final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_TraceBookmark;
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionEnd
 // 0x0010 (0x0010 - 0x0000)
@@ -120,6 +131,7 @@ struct TraceUtilLibrary_TraceMarkRegionEnd final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_TraceMarkRegionEnd;
 
 // Function TraceUtilities.TraceUtilLibrary.TraceMarkRegionStart
 // 0x0010 (0x0010 - 0x0000)
@@ -128,6 +140,7 @@ struct TraceUtilLibrary_TraceMarkRegionStart final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_TraceMarkRegionStart;
 
 // Function TraceUtilities.TraceUtilLibrary.TraceScreenshot
 // 0x0018 (0x0018 - 0x0000)
@@ -138,6 +151,7 @@ public:
 	bool                                          bShowUI;                                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TraceUtilLibrary_TraceScreenshot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "OptimusSettings_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,5 +40,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSettings>();
 	}
 };
+DUMPER7_ASSERTS_UOptimusSettings;
 
 SDK_NAMESPACE_END

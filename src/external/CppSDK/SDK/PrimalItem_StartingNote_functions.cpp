@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItem_StartingNote_C::BlueprintUsed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BlueprintUsed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BlueprintUsed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void UPrimalItem_StartingNote_C::BlueprintUsed()
 
 bool UPrimalItem_StartingNote_C::BPCanUse(bool bIgnoreCooldown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPCanUse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPCanUse", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPCanUse Parms{};
 
@@ -64,10 +60,8 @@ bool UPrimalItem_StartingNote_C::BPCanUse(bool bIgnoreCooldown)
 
 void UPrimalItem_StartingNote_C::BPDrawItemIcon(class UCanvas* ItemCanvas, const struct FVector2D& ItemCanvasSize, const struct FVector2D& ItemCanvasScale, bool bItemEnabled, const struct FLinearColor& TheTintColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPDrawItemIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPDrawItemIcon", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPDrawItemIcon Parms{};
 
@@ -91,10 +85,8 @@ void UPrimalItem_StartingNote_C::BPDrawItemIcon(class UCanvas* ItemCanvas, const
 
 class FString UPrimalItem_StartingNote_C::BPGetItemDescription(const class FString& InDescription, bool bGetLongDescription, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPGetItemDescription");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPGetItemDescription", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPGetItemDescription Parms{};
 
@@ -116,10 +108,8 @@ class FString UPrimalItem_StartingNote_C::BPGetItemDescription(const class FStri
 
 class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPGetItemIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPGetItemIcon", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPGetItemIcon Parms{};
 
@@ -140,10 +130,8 @@ class UTexture2D* UPrimalItem_StartingNote_C::BPGetItemIcon(class AShooterPlayer
 
 class FString UPrimalItem_StartingNote_C::BPGetItemName(const class FString& ItemNameIn, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPGetItemName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPGetItemName", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPGetItemName Parms{};
 
@@ -161,10 +149,8 @@ class FString UPrimalItem_StartingNote_C::BPGetItemName(const class FString& Ite
 
 void UPrimalItem_StartingNote_C::BPOnUpdatedItemContextMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPOnUpdatedItemContextMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPOnUpdatedItemContextMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +163,8 @@ void UPrimalItem_StartingNote_C::BPOnUpdatedItemContextMenu()
 
 void UPrimalItem_StartingNote_C::BPPreInitializeItem(class UWorld* OptionalInitWorld)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "BPPreInitializeItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "BPPreInitializeItem", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_BPPreInitializeItem Parms{};
 
@@ -197,10 +181,8 @@ void UPrimalItem_StartingNote_C::BPPreInitializeItem(class UWorld* OptionalInitW
 
 void UPrimalItem_StartingNote_C::ExecuteUbergraph_PrimalItem_StartingNote(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "ExecuteUbergraph_PrimalItem_StartingNote");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "ExecuteUbergraph_PrimalItem_StartingNote", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_ExecuteUbergraph_PrimalItem_StartingNote Parms{};
 
@@ -218,10 +200,8 @@ void UPrimalItem_StartingNote_C::ExecuteUbergraph_PrimalItem_StartingNote(int32 
 
 void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<double>& SurvData, class FString* OutString)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "Get Survival Quotient String");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "Get Survival Quotient String", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_Get_Survival_Quotient_String Parms{};
 
@@ -244,10 +224,8 @@ void UPrimalItem_StartingNote_C::Get_Survival_Quotient_String(TArray<double>& Su
 
 void UPrimalItem_StartingNote_C::IsLocalImplant(class AShooterPlayerController* ForPC, bool* IsLocal)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_StartingNote_C", "IsLocalImplant");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_StartingNote_C", "IsLocalImplant", FuncInfo);
 
 	Params::PrimalItem_StartingNote_C_IsLocalImplant Parms{};
 

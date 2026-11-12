@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_DeltaMapData_structs.hpp"
 #include "Human_Male_Faces_Enum_structs.hpp"
+#include "STRUCT_DeltaMapData_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -39,6 +39,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_ResetFaceWeights;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.UpdateSkinTextures
 // 0x0038 (0x0038 - 0x0000)
@@ -56,6 +57,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_UpdateSkinTextures;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.ClampFaceAlphas
 // 0x00E0 (0x00E0 - 0x0000)
@@ -110,6 +112,7 @@ public:
 	float                                         CallFunc_Divide_DoubleFloat_B_ImplicitCast_1;      // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast;           // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_ClampFaceAlphas;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.UpdateDeltaMaps
 // 0x0120 (0x0120 - 0x0000)
@@ -159,6 +162,7 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Array_Add_NewItem_ImplicitCast;           // 0x011C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_UpdateDeltaMaps;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.UpdateFaceRegionValues
 // 0x0130 (0x0130 - 0x0000)
@@ -207,6 +211,7 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Array_Add_NewItem_ImplicitCast;           // 0x012C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_UpdateFaceRegionValues;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.InitMaterials
 // 0x0178 (0x0178 - 0x0000)
@@ -267,6 +272,7 @@ public:
 	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_InitMaterials;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -275,6 +281,7 @@ struct AC_FaceCustomization_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_ReceiveTick;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.ExecuteUbergraph_AC_FaceCustomization
 // 0x0048 (0x0048 - 0x0000)
@@ -294,6 +301,7 @@ public:
 	class APlayerPawnTest_C*                      K2Node_DynamicCast_AsPlayer_Pawn_Test;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_ExecuteUbergraph_AC_FaceCustomization;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceEars
 // 0x0028 (0x0028 - 0x0000)
@@ -305,6 +313,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceEars;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceJaw
 // 0x0028 (0x0028 - 0x0000)
@@ -316,6 +325,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceJaw;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceMouth
 // 0x0028 (0x0028 - 0x0000)
@@ -327,6 +337,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceMouth;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceNose
 // 0x0028 (0x0028 - 0x0000)
@@ -338,6 +349,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceNose;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceEyes
 // 0x0028 (0x0028 - 0x0000)
@@ -349,6 +361,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceEyes;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceBrows
 // 0x0028 (0x0028 - 0x0000)
@@ -360,6 +373,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceBrows;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceScalp
 // 0x0028 (0x0028 - 0x0000)
@@ -371,6 +385,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                K2Node_Select_Default;                             // 0x0018(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceScalp;
 
 // Function AC_FaceCustomization.AC_FaceCustomization_C.GetFaceA
 // 0x0003 (0x0003 - 0x0000)
@@ -381,6 +396,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EHuman_Male_Faces_Enum                        K2Node_Select_Default;                             // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_AC_FaceCustomization_C_GetFaceA;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass GamepadButtonLegend.GamepadButtonLegend_C
-// 0x0008 (0x03B0 - 0x03A8)
+// 0x0008 (0x0410 - 0x0408)
 class UGamepadButtonLegend_C final : public UGamepadButtonLegendWidget
 {
 public:
-	class UImage*                                 MyButtonImage;                                     // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MyButtonImage;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UGamepadButtonLegend_C>();
 	}
 };
+DUMPER7_ASSERTS_UGamepadButtonLegend_C;
 
 SDK_NAMESPACE_END

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WoodHardHarvestComponent.WoodHardHarvestComponent_C
-// 0x0000 (0x0238 - 0x0238)
+// 0x0000 (0x0260 - 0x0260)
 class UWoodHardHarvestComponent_C final : public UAttackHarvestComponent_Base_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWoodHardHarvestComponent_C>();
 	}
 };
+DUMPER7_ASSERTS_UWoodHardHarvestComponent_C;
 
 SDK_NAMESPACE_END

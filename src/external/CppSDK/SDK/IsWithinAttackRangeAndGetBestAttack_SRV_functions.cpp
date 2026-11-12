@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UIsWithinAttackRangeAndGetBestAttack_SRV_C::ExecuteUbergraph_IsWithinAttackRangeAndGetBestAttack_SRV(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsWithinAttackRangeAndGetBestAttack_SRV_C", "ExecuteUbergraph_IsWithinAttackRangeAndGetBestAttack_SRV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsWithinAttackRangeAndGetBestAttack_SRV_C", "ExecuteUbergraph_IsWithinAttackRangeAndGetBestAttack_SRV", FuncInfo);
 
 	Params::IsWithinAttackRangeAndGetBestAttack_SRV_C_ExecuteUbergraph_IsWithinAttackRangeAndGetBestAttack_SRV Parms{};
 
@@ -44,10 +42,8 @@ void UIsWithinAttackRangeAndGetBestAttack_SRV_C::ExecuteUbergraph_IsWithinAttack
 
 void UIsWithinAttackRangeAndGetBestAttack_SRV_C::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsWithinAttackRangeAndGetBestAttack_SRV_C", "ReceiveTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsWithinAttackRangeAndGetBestAttack_SRV_C", "ReceiveTick", FuncInfo);
 
 	Params::IsWithinAttackRangeAndGetBestAttack_SRV_C_ReceiveTick Parms{};
 
@@ -65,10 +61,8 @@ void UIsWithinAttackRangeAndGetBestAttack_SRV_C::ReceiveTick(class AActor* Owner
 
 void UIsWithinAttackRangeAndGetBestAttack_SRV_C::UpdateBlackboardKeys(class APrimalDinoAIController* OwnerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsWithinAttackRangeAndGetBestAttack_SRV_C", "UpdateBlackboardKeys");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsWithinAttackRangeAndGetBestAttack_SRV_C", "UpdateBlackboardKeys", FuncInfo);
 
 	Params::IsWithinAttackRangeAndGetBestAttack_SRV_C_UpdateBlackboardKeys Parms{};
 

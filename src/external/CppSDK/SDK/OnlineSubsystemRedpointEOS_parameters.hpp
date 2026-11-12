@@ -25,6 +25,7 @@ public:
 	class FString                                 VerificationUrl;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PinCode;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_EnterDevicePinCode_SetupUserInterface;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context.SelectedCandidates
 // 0x0010 (0x0010 - 0x0000)
@@ -33,6 +34,7 @@ struct EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context_SelectedCand
 public:
 	TArray<struct FEOSUserInterface_CandidateEOSAccount> SelectedCandidates_0;                       // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context_SelectedCandidates;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform.SetupUserInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -42,6 +44,7 @@ public:
 	class UEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context* Context;                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FEOSUserInterface_CandidateEOSAccount> AvailableCandidates;                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_SetupUserInterface;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SelectEOSAccount_Context.SelectCandidate
 // 0x00C0 (0x00C0 - 0x0000)
@@ -50,6 +53,7 @@ struct EOSUserInterface_SelectEOSAccount_Context_SelectCandidate final
 public:
 	struct FEOSUserInterface_CandidateEOSAccount  SelectedCandidate;                                 // 0x0000(0x00C0)(Parm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SelectEOSAccount_Context_SelectCandidate;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SelectEOSAccount.SetupUserInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -59,6 +63,7 @@ public:
 	class UEOSUserInterface_SelectEOSAccount_Context* Context;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FEOSUserInterface_CandidateEOSAccount> AvailableCandidates;                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SelectEOSAccount_SetupUserInterface;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SignInOrCreateAccount_Context.SelectChoice
 // 0x0001 (0x0001 - 0x0000)
@@ -67,6 +72,7 @@ struct EOSUserInterface_SignInOrCreateAccount_Context_SelectChoice final
 public:
 	EEOSUserInterface_SignInOrCreateAccount_Choice SelectedChoice;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SignInOrCreateAccount_Context_SelectChoice;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SignInOrCreateAccount.SetupUserInterface
 // 0x0008 (0x0008 - 0x0000)
@@ -75,6 +81,7 @@ struct EOSUserInterface_SignInOrCreateAccount_SetupUserInterface final
 public:
 	class UEOSUserInterface_SignInOrCreateAccount_Context* Context;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SignInOrCreateAccount_SetupUserInterface;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SwitchToCrossPlatformAccount_Context.SelectChoice
 // 0x0001 (0x0001 - 0x0000)
@@ -83,6 +90,7 @@ struct EOSUserInterface_SwitchToCrossPlatformAccount_Context_SelectChoice final
 public:
 	EEOSUserInterface_SwitchToCrossPlatformAccount_Choice SelectedChoice;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SwitchToCrossPlatformAccount_Context_SelectChoice;
 
 // Function OnlineSubsystemRedpointEOS.EOSUserInterface_SwitchToCrossPlatformAccount.SetupUserInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -92,6 +100,7 @@ public:
 	class UEOSUserInterface_SwitchToCrossPlatformAccount_Context* Context;                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 EpicAccountName;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_EOSUserInterface_SwitchToCrossPlatformAccount_SetupUserInterface;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

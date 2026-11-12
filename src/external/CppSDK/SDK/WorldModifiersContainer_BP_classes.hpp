@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWorldModifiersContainer_BP_C>();
 	}
 };
+DUMPER7_ASSERTS_UWorldModifiersContainer_BP_C;
 
 SDK_NAMESPACE_END

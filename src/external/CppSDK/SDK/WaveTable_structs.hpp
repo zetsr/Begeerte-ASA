@@ -86,36 +86,40 @@ public:
 	float                                         FinalValue;                                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FWaveTableData;
 
 // ScriptStruct WaveTable.WaveTableTransform
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct FWaveTableTransform final
 {
 public:
-	EWaveTableCurve                               Curve;                                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Scalar;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRichCurve                             CurveCustom;                                       // 0x0008(0x0080)(NativeAccessSpecifierPublic)
-	class UCurveFloat*                            CurveShared;                                       // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FWaveTableData                         TableData;                                         // 0x0090(0x0020)(Protected, NativeAccessSpecifierProtected)
-	float                                         Duration;                                          // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EWaveTableCurve                               Curve;                                             // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Scalar;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRichCurve                             CurveCustom;                                       // 0x0010(0x0080)(NativeAccessSpecifierPublic)
+	class UCurveFloat*                            CurveShared;                                       // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FWaveTableData                         TableData;                                         // 0x0098(0x0020)(Protected, NativeAccessSpecifierProtected)
+	float                                         Duration;                                          // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FWaveTableTransform;
 
 // ScriptStruct WaveTable.WaveTableBankEntry
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct FWaveTableBankEntry final
 {
 public:
-	struct FWaveTableTransform                    Transform;                                         // 0x0000(0x00B8)(Edit, NativeAccessSpecifierPublic)
+	struct FWaveTableTransform                    Transform;                                         // 0x0000(0x00C0)(Edit, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FWaveTableBankEntry;
 
 // ScriptStruct WaveTable.WaveTableSettings
 // 0x0058 (0x0058 - 0x0000)
 struct FWaveTableSettings final
 {
 public:
-	struct FFilePath                              FilePath;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFilePath                              FilePath;                                          // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWaveTableData                         SourceData;                                        // 0x0018(0x0020)(Edit, NativeAccessSpecifierPublic)
@@ -129,5 +133,6 @@ public:
 	bool                                          bRemoveOffset;                                     // 0x0051(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FWaveTableSettings;
 
 SDK_NAMESPACE_END

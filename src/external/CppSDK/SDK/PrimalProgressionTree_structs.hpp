@@ -33,6 +33,7 @@ struct FPrimalProgressionPrereqGroup final
 public:
 	TArray<class FName>                           Prerequisites;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPrimalProgressionPrereqGroup;
 
 // ScriptStruct PrimalProgressionTree.PrimalProgressionNode
 // 0x0038 (0x0038 - 0x0000)
@@ -44,6 +45,7 @@ public:
 	TArray<class FName>                           ChildNodes;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FVector2D                              NodePosition;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPrimalProgressionNode;
 
 // ScriptStruct PrimalProgressionTree.PrimalProgressionPath
 // 0x0010 (0x0010 - 0x0000)
@@ -52,6 +54,7 @@ struct FPrimalProgressionPath final
 public:
 	TArray<class FName>                           NodeIDs;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPrimalProgressionPath;
 
 // ScriptStruct PrimalProgressionTree.RowDefinition
 // 0x0008 (0x0008 - 0x0000)
@@ -61,6 +64,7 @@ public:
 	int32                                         RowIndex;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PointsNeededFromPreviousRow;                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FRowDefinition;
 
 // ScriptStruct PrimalProgressionTree.SkillTierConfig
 // 0x000C (0x000C - 0x0000)
@@ -71,5 +75,6 @@ public:
 	int32                                         BaseCost;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CostIncreasePerTier;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSkillTierConfig;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_CFCore_RectangleCategorieShowcase_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_CFCore_RectangleCategorieShowcase_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_CFCore_RectangleCategorieShowcase_Button_GoToModPage_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_CFCore_RectangleCatego
 
 void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_ShowcaseSlot_Button_Go
 
 void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::BndEvt__UI_ShowcaseSlot_Button_Go
 
 void UUI_CFCore_Discovery_RectangleCategory_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +71,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::Construct()
 
 void UUI_CFCore_Discovery_RectangleCategory_C::ExecuteUbergraph_UI_CFCore_Discovery_RectangleCategory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "ExecuteUbergraph_UI_CFCore_Discovery_RectangleCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "ExecuteUbergraph_UI_CFCore_Discovery_RectangleCategory", FuncInfo);
 
 	Params::UI_CFCore_Discovery_RectangleCategory_C_ExecuteUbergraph_UI_CFCore_Discovery_RectangleCategory Parms{};
 
@@ -99,10 +89,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::ExecuteUbergraph_UI_CFCore_Discov
 
 void UUI_CFCore_Discovery_RectangleCategory_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Discovery_RectangleCategory_C_GetRootCFWidget Parms{};
 
@@ -118,10 +106,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::GetRootCFWidget(class UPanelWidge
 
 void UUI_CFCore_Discovery_RectangleCategory_C::InitCategory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "InitCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "InitCategory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +120,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::InitCategory()
 
 void UUI_CFCore_Discovery_RectangleCategory_C::OnFail_8B547B2B44BE3780AA9107BF907BE956(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "OnFail_8B547B2B44BE3780AA9107BF907BE956");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "OnFail_8B547B2B44BE3780AA9107BF907BE956", FuncInfo);
 
 	Params::UI_CFCore_Discovery_RectangleCategory_C_OnFail_8B547B2B44BE3780AA9107BF907BE956 Parms{};
 
@@ -154,10 +138,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::OnFail_8B547B2B44BE3780AA9107BF90
 
 void UUI_CFCore_Discovery_RectangleCategory_C::OnSuccess_8B547B2B44BE3780AA9107BF907BE956(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "OnSuccess_8B547B2B44BE3780AA9107BF907BE956");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "OnSuccess_8B547B2B44BE3780AA9107BF907BE956", FuncInfo);
 
 	Params::UI_CFCore_Discovery_RectangleCategory_C_OnSuccess_8B547B2B44BE3780AA9107BF907BE956 Parms{};
 
@@ -174,10 +156,8 @@ void UUI_CFCore_Discovery_RectangleCategory_C::OnSuccess_8B547B2B44BE3780AA9107B
 
 void UUI_CFCore_Discovery_RectangleCategory_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_RectangleCategory_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_RectangleCategory_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Discovery_RectangleCategory_C_PreConstruct Parms{};
 

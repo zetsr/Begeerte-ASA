@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UShouldForceFlee_DK_C::ExecuteUbergraph_ShouldForceFlee_DK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShouldForceFlee_DK_C", "ExecuteUbergraph_ShouldForceFlee_DK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ShouldForceFlee_DK_C", "ExecuteUbergraph_ShouldForceFlee_DK", FuncInfo);
 
 	Params::ShouldForceFlee_DK_C_ExecuteUbergraph_ShouldForceFlee_DK Parms{};
 
@@ -43,10 +41,8 @@ void UShouldForceFlee_DK_C::ExecuteUbergraph_ShouldForceFlee_DK(int32 EntryPoint
 
 void UShouldForceFlee_DK_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShouldForceFlee_DK_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ShouldForceFlee_DK_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::ShouldForceFlee_DK_C_ReceiveConditionCheck Parms{};
 

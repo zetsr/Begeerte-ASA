@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "SteelShield_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SteelShield_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -38,6 +38,7 @@ public:
 		return GetDefaultObjImpl<USteelShieldTokenProvider>();
 	}
 };
+DUMPER7_ASSERTS_USteelShieldTokenProvider;
 
 // Class SteelShield.ClientTokenProvider
 // 0x00A0 (0x0100 - 0x0060)
@@ -61,6 +62,7 @@ public:
 		return GetDefaultObjImpl<UClientTokenProvider>();
 	}
 };
+DUMPER7_ASSERTS_UClientTokenProvider;
 
 // Class SteelShield.DefaultTokenProvider
 // 0x0010 (0x0110 - 0x0100)
@@ -84,6 +86,7 @@ public:
 		return GetDefaultObjImpl<UDefaultTokenProvider>();
 	}
 };
+DUMPER7_ASSERTS_UDefaultTokenProvider;
 
 // Class SteelShield.EOSTokenProvider
 // 0x0018 (0x0118 - 0x0100)
@@ -106,6 +109,7 @@ public:
 		return GetDefaultObjImpl<UEOSTokenProvider>();
 	}
 };
+DUMPER7_ASSERTS_UEOSTokenProvider;
 
 // Class SteelShield.SteelShieldJWT
 // 0x0038 (0x0060 - 0x0028)
@@ -128,6 +132,7 @@ public:
 		return GetDefaultObjImpl<USteelShieldJWT>();
 	}
 };
+DUMPER7_ASSERTS_USteelShieldJWT;
 
 // Class SteelShield.SteelShieldRuntimeSettings
 // 0x0090 (0x00B8 - 0x0028)
@@ -161,6 +166,7 @@ public:
 		return GetDefaultObjImpl<USteelShieldRuntimeSettings>();
 	}
 };
+DUMPER7_ASSERTS_USteelShieldRuntimeSettings;
 
 // Class SteelShield.SteelShieldSubsystem
 // 0x0078 (0x00A8 - 0x0030)
@@ -195,6 +201,7 @@ public:
 		return GetDefaultObjImpl<USteelShieldSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_USteelShieldSubsystem;
 
 // Class SteelShield.SteelShieldTokenRequest
 // 0x0018 (0x0040 - 0x0028)
@@ -217,5 +224,6 @@ public:
 		return GetDefaultObjImpl<USteelShieldTokenRequest>();
 	}
 };
+DUMPER7_ASSERTS_USteelShieldTokenRequest;
 
 SDK_NAMESPACE_END

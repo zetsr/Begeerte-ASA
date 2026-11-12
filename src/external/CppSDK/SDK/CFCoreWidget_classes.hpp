@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass CFCoreWidget.CFCoreWidget_C
-// 0x0078 (0x0870 - 0x07F8)
+// 0x0078 (0x08D0 - 0x0858)
 class UCFCoreWidget_C : public UPrimalUI
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FSTRUCT_CFCore_UITheme                 CFcoreUITheme;                                     // 0x0800(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0858(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	struct FSTRUCT_CFCore_UITheme                 CFcoreUITheme;                                     // 0x0860(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyThemeSettingsToAll();
@@ -47,5 +47,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreWidget_C>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreWidget_C;
 
 SDK_NAMESPACE_END

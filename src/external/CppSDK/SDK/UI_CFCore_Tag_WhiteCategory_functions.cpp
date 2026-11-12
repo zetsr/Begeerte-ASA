@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Tag_WhiteCategory_C::ExecuteUbergraph_UI_CFCore_Tag_WhiteCategory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Tag_WhiteCategory_C", "ExecuteUbergraph_UI_CFCore_Tag_WhiteCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Tag_WhiteCategory_C", "ExecuteUbergraph_UI_CFCore_Tag_WhiteCategory", FuncInfo);
 
 	Params::UI_CFCore_Tag_WhiteCategory_C_ExecuteUbergraph_UI_CFCore_Tag_WhiteCategory Parms{};
 
@@ -43,10 +41,8 @@ void UUI_CFCore_Tag_WhiteCategory_C::ExecuteUbergraph_UI_CFCore_Tag_WhiteCategor
 
 void UUI_CFCore_Tag_WhiteCategory_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Tag_WhiteCategory_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Tag_WhiteCategory_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Tag_WhiteCategory_C_PreConstruct Parms{};
 
@@ -63,10 +59,8 @@ void UUI_CFCore_Tag_WhiteCategory_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_Tag_WhiteCategory_C::UpdateText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Tag_WhiteCategory_C", "UpdateText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Tag_WhiteCategory_C", "UpdateText", FuncInfo);
 
 	Params::UI_CFCore_Tag_WhiteCategory_C_UpdateText Parms{};
 

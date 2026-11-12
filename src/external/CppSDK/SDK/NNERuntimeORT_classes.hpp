@@ -10,12 +10,103 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
+#include "NNE_classes.hpp"
 #include "NNERuntimeORT_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class NNERuntimeORT.NNERuntimeORTCpu
+// 0x0020 (0x0048 - 0x0028)
+class UNNERuntimeORTCpu final : public UObject, public INNERuntime, public INNERuntimeCPU
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTCpu")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTCpu")
+	}
+	static class UNNERuntimeORTCpu* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTCpu>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTCpu;
+
+// Class NNERuntimeORT.NNERuntimeORTDmlProxy
+// 0x0010 (0x0038 - 0x0028)
+class UNNERuntimeORTDmlProxy : public UObject, public INNERuntime
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDmlProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDmlProxy")
+	}
+	static class UNNERuntimeORTDmlProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDmlProxy>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDmlProxy;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU_RDG
+// 0x0010 (0x0048 - 0x0038)
+class UNNERuntimeORTDml_GPU_RDG final : public UNNERuntimeORTDmlProxy, public INNERuntimeGPU, public INNERuntimeRDG
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU_RDG")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU_RDG")
+	}
+	static class UNNERuntimeORTDml_GPU_RDG* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU_RDG>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU_RDG;
+
+// Class NNERuntimeORT.NNERuntimeORTDml_GPU
+// 0x0008 (0x0040 - 0x0038)
+class UNNERuntimeORTDml_GPU final : public UNNERuntimeORTDmlProxy, public INNERuntimeGPU
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNERuntimeORTDml_GPU")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNERuntimeORTDml_GPU")
+	}
+	static class UNNERuntimeORTDml_GPU* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNERuntimeORTDml_GPU>();
+	}
+};
+DUMPER7_ASSERTS_UNNERuntimeORTDml_GPU;
 
 // Class NNERuntimeORT.NNERuntimeORTSettings
 // 0x0020 (0x0058 - 0x0038)
@@ -39,49 +130,6 @@ public:
 		return GetDefaultObjImpl<UNNERuntimeORTSettings>();
 	}
 };
-
-// Class NNERuntimeORT.NNERuntimeORTCpu
-// 0x0020 (0x0048 - 0x0028)
-class UNNERuntimeORTCpu final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NNERuntimeORTCpu")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NNERuntimeORTCpu")
-	}
-	static class UNNERuntimeORTCpu* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNNERuntimeORTCpu>();
-	}
-};
-
-// Class NNERuntimeORT.NNERuntimeORTDml
-// 0x0038 (0x0060 - 0x0028)
-class UNNERuntimeORTDml final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NNERuntimeORTDml")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NNERuntimeORTDml")
-	}
-	static class UNNERuntimeORTDml* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNNERuntimeORTDml>();
-	}
-};
+DUMPER7_ASSERTS_UNNERuntimeORTSettings;
 
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "NetCore_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,6 +37,7 @@ public:
 		return GetDefaultObjImpl<UNetAnalyticsAggregatorConfig>();
 	}
 };
+DUMPER7_ASSERTS_UNetAnalyticsAggregatorConfig;
 
 // Class NetCore.StatePerObjectConfig
 // 0x0040 (0x0068 - 0x0028)
@@ -62,6 +63,7 @@ public:
 		return GetDefaultObjImpl<UStatePerObjectConfig>();
 	}
 };
+DUMPER7_ASSERTS_UStatePerObjectConfig;
 
 // Class NetCore.EscalationManagerConfig
 // 0x0020 (0x0088 - 0x0068)
@@ -85,5 +87,46 @@ public:
 		return GetDefaultObjImpl<UEscalationManagerConfig>();
 	}
 };
+DUMPER7_ASSERTS_UEscalationManagerConfig;
+
+// Class NetCore.RPCDoSDetectionConfig
+// 0x0080 (0x00A8 - 0x0028)
+class URPCDoSDetectionConfig final : public UObject
+{
+public:
+	bool                                          bRPCDoSDetection;                                  // 0x0028(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRPCDoSAnalytics;                                  // 0x0029(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         HitchTimeQuotaMS;                                  // 0x002C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HitchSuspendDetectionTimeMS;                       // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         DetectionSeverity;                                 // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	int32                                         InitialConnectToleranceMS;                         // 0x0048(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           RPCBlockAllowlist;                                 // 0x0050(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FRPCAnalyticsThreshold>         RPCAnalyticsThresholds;                            // 0x0060(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	double                                        RPCAnalyticsOverrideChance;                        // 0x0070(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRPCDoSFrameLimit;                                 // 0x0078(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RPCDoSFrameLimitDefault;                           // 0x007C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRPCDoSFrameLimitOverride>      RPCDoSFrameLimitOverrides;                         // 0x0080(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FName>                           RPCDoSFrameLimitAllowlist;                         // 0x0090(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	double                                        RPCDoSFrameLimitAnalyticsPeriod;                   // 0x00A0(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RPCDoSDetectionConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RPCDoSDetectionConfig")
+	}
+	static class URPCDoSDetectionConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URPCDoSDetectionConfig>();
+	}
+};
+DUMPER7_ASSERTS_URPCDoSDetectionConfig;
 
 SDK_NAMESPACE_END

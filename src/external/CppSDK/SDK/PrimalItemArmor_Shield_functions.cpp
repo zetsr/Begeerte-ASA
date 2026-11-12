@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItemArmor_Shield_C::BPClientHandleItemNetExecCommand(class FName CommandName, const struct FBPNetExecParams& ExecParams, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Shield_C", "BPClientHandleItemNetExecCommand");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Shield_C", "BPClientHandleItemNetExecCommand", FuncInfo);
 
 	Params::PrimalItemArmor_Shield_C_BPClientHandleItemNetExecCommand Parms{};
 
@@ -47,10 +45,8 @@ void UPrimalItemArmor_Shield_C::BPClientHandleItemNetExecCommand(class FName Com
 
 class UFXSystemAsset* UPrimalItemArmor_Shield_C::BPGetShieldHitImpactEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Shield_C", "BPGetShieldHitImpactEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Shield_C", "BPGetShieldHitImpactEffect", FuncInfo);
 
 	Params::PrimalItemArmor_Shield_C_BPGetShieldHitImpactEffect Parms{};
 
@@ -73,10 +69,8 @@ class UFXSystemAsset* UPrimalItemArmor_Shield_C::BPGetShieldHitImpactEffect()
 
 float UPrimalItemArmor_Shield_C::HandleShieldDamageBlocking(class AShooterCharacter* ForShooterCharacter, float DamageIn, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser, const struct FVector& HitPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Shield_C", "HandleShieldDamageBlocking");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Shield_C", "HandleShieldDamageBlocking", FuncInfo);
 
 	Params::PrimalItemArmor_Shield_C_HandleShieldDamageBlocking Parms{};
 
@@ -102,10 +96,8 @@ float UPrimalItemArmor_Shield_C::HandleShieldDamageBlocking(class AShooterCharac
 
 void UPrimalItemArmor_Shield_C::PlayHitShieldEffect(bool LocalOnly, const struct FVector& HitLoc, const struct FVector& FromLoc)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Shield_C", "PlayHitShieldEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Shield_C", "PlayHitShieldEffect", FuncInfo);
 
 	Params::PrimalItemArmor_Shield_C_PlayHitShieldEffect Parms{};
 

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Sap_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Sap_C;
 
 SDK_NAMESPACE_END

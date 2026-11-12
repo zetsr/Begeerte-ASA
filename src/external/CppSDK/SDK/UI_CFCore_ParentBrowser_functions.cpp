@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ParentBrowser_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_ParentBrowser_C::Construct()
 
 void UUI_CFCore_ParentBrowser_C::GetMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "GetMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "GetMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_ParentBrowser_C::GetMods()
 
 void UUI_CFCore_ParentBrowser_C::ExecuteUbergraph_UI_CFCore_ParentBrowser(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ExecuteUbergraph_UI_CFCore_ParentBrowser");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ExecuteUbergraph_UI_CFCore_ParentBrowser", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_ExecuteUbergraph_UI_CFCore_ParentBrowser Parms{};
 
@@ -71,10 +65,8 @@ void UUI_CFCore_ParentBrowser_C::ExecuteUbergraph_UI_CFCore_ParentBrowser(int32 
 
 void UUI_CFCore_ParentBrowser_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_GetRootCFWidget Parms{};
 
@@ -92,10 +84,8 @@ void UUI_CFCore_ParentBrowser_C::GetRootCFWidget(class UPanelWidget** RootPanelW
 
 bool UUI_CFCore_ParentBrowser_C::BPEscapeClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BPEscapeClosed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BPEscapeClosed", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_BPEscapeClosed Parms{};
 
@@ -110,10 +100,8 @@ bool UUI_CFCore_ParentBrowser_C::BPEscapeClosed()
 
 void UUI_CFCore_ParentBrowser_C::EnableClassesDropdown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "EnableClassesDropdown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "EnableClassesDropdown", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +114,8 @@ void UUI_CFCore_ParentBrowser_C::EnableClassesDropdown()
 
 ESlateVisibility UUI_CFCore_ParentBrowser_C::SetVisibilityOfUninstallAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetVisibilityOfUninstallAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetVisibilityOfUninstallAllMods", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_SetVisibilityOfUninstallAllMods Parms{};
 
@@ -146,10 +132,8 @@ ESlateVisibility UUI_CFCore_ParentBrowser_C::SetVisibilityOfUninstallAllMods()
 
 ESlateVisibility UUI_CFCore_ParentBrowser_C::SetVisibilityOfUpdateAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetVisibilityOfUpdateAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetVisibilityOfUpdateAllMods", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_SetVisibilityOfUpdateAllMods Parms{};
 
@@ -167,10 +151,8 @@ ESlateVisibility UUI_CFCore_ParentBrowser_C::SetVisibilityOfUpdateAllMods()
 
 class FString UUI_CFCore_ParentBrowser_C::Translate_OptionsFilter(ECFCoreModsSearchSortField ENUM_Option)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Translate_OptionsFilter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Translate_OptionsFilter", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Translate_OptionsFilter Parms{};
 
@@ -190,10 +172,8 @@ class FString UUI_CFCore_ParentBrowser_C::Translate_OptionsFilter(ECFCoreModsSea
 
 class FString UUI_CFCore_ParentBrowser_C::Translate_PremiumFilter(ECFCorePremiumFilterType Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Translate_PremiumFilter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Translate_PremiumFilter", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Translate_PremiumFilter Parms{};
 
@@ -212,10 +192,8 @@ class FString UUI_CFCore_ParentBrowser_C::Translate_PremiumFilter(ECFCorePremium
 
 void UUI_CFCore_ParentBrowser_C::FilterSort_Premium(ECFCorePremiumFilterType Default_Premium_FIlter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FilterSort_Premium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FilterSort_Premium", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_FilterSort_Premium Parms{};
 
@@ -226,28 +204,24 @@ void UUI_CFCore_ParentBrowser_C::FilterSort_Premium(ECFCorePremiumFilterType Def
 
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PlayFadeOutAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ParentBrowser_C::PlayFadeOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "PlayFadeOutAnim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "PlayFadeOutAnim", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PlayFadeIn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ParentBrowser_C::PlayFadeIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "PlayFadeIn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "PlayFadeIn", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -260,10 +234,8 @@ void UUI_CFCore_ParentBrowser_C::PlayFadeIn()
 
 void UUI_CFCore_ParentBrowser_C::GetAllModsIDs(TArray<int64>* List)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "GetAllModsIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "GetAllModsIDs", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_GetAllModsIDs Parms{};
 
@@ -281,10 +253,8 @@ void UUI_CFCore_ParentBrowser_C::GetAllModsIDs(TArray<int64>* List)
 
 bool UUI_CFCore_ParentBrowser_C::MoreImagesLeftToDownload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "MoreImagesLeftToDownload");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "MoreImagesLeftToDownload", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_MoreImagesLeftToDownload Parms{};
 
@@ -302,10 +272,8 @@ bool UUI_CFCore_ParentBrowser_C::MoreImagesLeftToDownload()
 
 void UUI_CFCore_ParentBrowser_C::GetModIndexesForCurrentRow(int32* First, int32* Last)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "GetModIndexesForCurrentRow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "GetModIndexesForCurrentRow", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_GetModIndexesForCurrentRow Parms{};
 
@@ -324,10 +292,8 @@ void UUI_CFCore_ParentBrowser_C::GetModIndexesForCurrentRow(int32* First, int32*
 
 void UUI_CFCore_ParentBrowser_C::DownloadNextBatchOfMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "DownloadNextBatchOfMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "DownloadNextBatchOfMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +304,8 @@ void UUI_CFCore_ParentBrowser_C::DownloadNextBatchOfMods()
 
 void UUI_CFCore_ParentBrowser_C::DownloadBatchOfMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "DownloadBatchOfMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "DownloadBatchOfMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -352,10 +316,8 @@ void UUI_CFCore_ParentBrowser_C::DownloadBatchOfMods()
 
 void UUI_CFCore_ParentBrowser_C::CheckIfImagesAreReady()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CheckIfImagesAreReady");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CheckIfImagesAreReady", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,10 +328,8 @@ void UUI_CFCore_ParentBrowser_C::CheckIfImagesAreReady()
 
 void UUI_CFCore_ParentBrowser_C::DownloadImagesInAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "DownloadImagesInAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "DownloadImagesInAllMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -383,10 +343,8 @@ void UUI_CFCore_ParentBrowser_C::DownloadImagesInAllMods()
 
 void UUI_CFCore_ParentBrowser_C::SwitchControllerAction(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SwitchControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SwitchControllerAction", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_SwitchControllerAction Parms{};
 
@@ -405,10 +363,8 @@ void UUI_CFCore_ParentBrowser_C::SwitchControllerAction(const struct FKey& Key, 
 
 class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownTime(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Nav Down from DropdownTime");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Nav Down from DropdownTime", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownTime Parms{};
 
@@ -428,10 +384,8 @@ class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownTime(EUINavigat
 
 class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownSort(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Nav Down from DropdownSort");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Nav Down from DropdownSort", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownSort Parms{};
 
@@ -451,10 +405,8 @@ class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownSort(EUINavigat
 
 class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownCategory(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Nav Down from DropdownCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Nav Down from DropdownCategory", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownCategory Parms{};
 
@@ -474,10 +426,8 @@ class UWidget* UUI_CFCore_ParentBrowser_C::Nav_Down_from_DropdownCategory(EUINav
 
 class UWidget* UUI_CFCore_ParentBrowser_C::Nav_for_Up_Move_from_List(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Nav for Up Move from List");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Nav for Up Move from List", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Nav_for_Up_Move_from_List Parms{};
 
@@ -494,10 +444,8 @@ class UWidget* UUI_CFCore_ParentBrowser_C::Nav_for_Up_Move_from_List(EUINavigati
 
 void UUI_CFCore_ParentBrowser_C::SetNavigationRuleForList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetNavigationRuleForList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetNavigationRuleForList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -508,10 +456,8 @@ void UUI_CFCore_ParentBrowser_C::SetNavigationRuleForList()
 
 void UUI_CFCore_ParentBrowser_C::SetListFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetListFocus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetListFocus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -524,10 +470,8 @@ void UUI_CFCore_ParentBrowser_C::SetListFocus()
 
 void UUI_CFCore_ParentBrowser_C::CloseAllDropdownApartFrom(class UUI_CFCore_CustomComboBox_C* Dropdown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CloseAllDropdownApartFrom");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CloseAllDropdownApartFrom", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_CloseAllDropdownApartFrom Parms{};
 
@@ -542,10 +486,8 @@ void UUI_CFCore_ParentBrowser_C::CloseAllDropdownApartFrom(class UUI_CFCore_Cust
 
 void UUI_CFCore_ParentBrowser_C::CloseAllDropDown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CloseAllDropDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CloseAllDropDown", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -556,10 +498,8 @@ void UUI_CFCore_ParentBrowser_C::CloseAllDropDown()
 
 void UUI_CFCore_ParentBrowser_C::BindToDropdown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BindToDropdown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BindToDropdown", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -572,10 +512,8 @@ void UUI_CFCore_ParentBrowser_C::BindToDropdown()
 
 void UUI_CFCore_ParentBrowser_C::SetEnableStageForGameSlot(bool EnableStage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetEnableStageForGameSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetEnableStageForGameSlot", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_SetEnableStageForGameSlot Parms{};
 
@@ -593,10 +531,8 @@ void UUI_CFCore_ParentBrowser_C::SetEnableStageForGameSlot(bool EnableStage)
 
 void UUI_CFCore_ParentBrowser_C::ReturnModsOfCurrentPage(TArray<struct FInstallProgressMod>& Mod_List, TArray<struct FInstallProgressMod>* TrueModInfo_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ReturnModsOfCurrentPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ReturnModsOfCurrentPage", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_ReturnModsOfCurrentPage Parms{};
 
@@ -616,10 +552,8 @@ void UUI_CFCore_ParentBrowser_C::ReturnModsOfCurrentPage(TArray<struct FInstallP
 
 void UUI_CFCore_ParentBrowser_C::UpdateNotificationInSwitcher()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdateNotificationInSwitcher");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdateNotificationInSwitcher", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -630,10 +564,8 @@ void UUI_CFCore_ParentBrowser_C::UpdateNotificationInSwitcher()
 
 void UUI_CFCore_ParentBrowser_C::InitWidgetStoreMenuRefs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "InitWidgetStoreMenuRefs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "InitWidgetStoreMenuRefs", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -644,10 +576,8 @@ void UUI_CFCore_ParentBrowser_C::InitWidgetStoreMenuRefs()
 
 void UUI_CFCore_ParentBrowser_C::UpdateAllThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdateAllThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdateAllThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -658,10 +588,8 @@ void UUI_CFCore_ParentBrowser_C::UpdateAllThemeSettings()
 
 void UUI_CFCore_ParentBrowser_C::UpdateSearchText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdateSearchText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdateSearchText", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -672,10 +600,8 @@ void UUI_CFCore_ParentBrowser_C::UpdateSearchText()
 
 void UUI_CFCore_ParentBrowser_C::LoadSavedUpImagesAsync()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "LoadSavedUpImagesAsync");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "LoadSavedUpImagesAsync", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -688,10 +614,8 @@ void UUI_CFCore_ParentBrowser_C::LoadSavedUpImagesAsync()
 
 void UUI_CFCore_ParentBrowser_C::InitiliazeImageDownloads(bool* ReadyToStart)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "InitiliazeImageDownloads");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "InitiliazeImageDownloads", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_InitiliazeImageDownloads Parms{};
 
@@ -709,10 +633,8 @@ void UUI_CFCore_ParentBrowser_C::InitiliazeImageDownloads(bool* ReadyToStart)
 
 void UUI_CFCore_ParentBrowser_C::CalculateModsPerRow(int32* mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CalculateModsPerRow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CalculateModsPerRow", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_CalculateModsPerRow Parms{};
 
@@ -730,10 +652,8 @@ void UUI_CFCore_ParentBrowser_C::CalculateModsPerRow(int32* mods)
 
 void UUI_CFCore_ParentBrowser_C::CalculateModsPerPage(int32* mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CalculateModsPerPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CalculateModsPerPage", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_CalculateModsPerPage Parms{};
 
@@ -749,10 +669,8 @@ void UUI_CFCore_ParentBrowser_C::CalculateModsPerPage(int32* mods)
 
 void UUI_CFCore_ParentBrowser_C::PrevPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "PrevPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "PrevPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -763,10 +681,8 @@ void UUI_CFCore_ParentBrowser_C::PrevPage()
 
 void UUI_CFCore_ParentBrowser_C::NextPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "NextPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "NextPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -779,10 +695,8 @@ void UUI_CFCore_ParentBrowser_C::NextPage()
 
 void UUI_CFCore_ParentBrowser_C::GetCurrentSearchInput(class FText* CurrentSearchInput_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "GetCurrentSearchInput");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "GetCurrentSearchInput", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_GetCurrentSearchInput Parms{};
 
@@ -798,10 +712,8 @@ void UUI_CFCore_ParentBrowser_C::GetCurrentSearchInput(class FText* CurrentSearc
 
 void UUI_CFCore_ParentBrowser_C::ResetPageNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ResetPageNum");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ResetPageNum", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -812,10 +724,8 @@ void UUI_CFCore_ParentBrowser_C::ResetPageNum()
 
 void UUI_CFCore_ParentBrowser_C::BuildPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BuildPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BuildPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -826,10 +736,8 @@ void UUI_CFCore_ParentBrowser_C::BuildPage()
 
 void UUI_CFCore_ParentBrowser_C::SetStypleOfPageArrowsButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SetStypleOfPageArrowsButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SetStypleOfPageArrowsButtons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -842,10 +750,8 @@ void UUI_CFCore_ParentBrowser_C::SetStypleOfPageArrowsButtons()
 
 void UUI_CFCore_ParentBrowser_C::UpdatePaginations(const TArray<struct FInstallProgressMod>& TotalList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdatePaginations");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdatePaginations", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_UpdatePaginations Parms{};
 
@@ -862,10 +768,8 @@ void UUI_CFCore_ParentBrowser_C::UpdatePaginations(const TArray<struct FInstallP
 
 struct FCFCoreSearchModsFilter UUI_CFCore_ParentBrowser_C::FilterModInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FilterModInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FilterModInfo", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_FilterModInfo Parms{};
 
@@ -880,10 +784,8 @@ struct FCFCoreSearchModsFilter UUI_CFCore_ParentBrowser_C::FilterModInfo()
 
 void UUI_CFCore_ParentBrowser_C::ClearAllModsInPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ClearAllModsInPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ClearAllModsInPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -894,10 +796,8 @@ void UUI_CFCore_ParentBrowser_C::ClearAllModsInPage()
 
 void UUI_CFCore_ParentBrowser_C::BindToGameSlot()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BindToGameSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BindToGameSlot", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -908,10 +808,8 @@ void UUI_CFCore_ParentBrowser_C::BindToGameSlot()
 
 void UUI_CFCore_ParentBrowser_C::UpdatePagesPagination()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdatePagesPagination");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdatePagesPagination", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -924,10 +822,8 @@ void UUI_CFCore_ParentBrowser_C::UpdatePagesPagination()
 
 void UUI_CFCore_ParentBrowser_C::CreateModSlot(int32 AtIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CreateModSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CreateModSlot", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_CreateModSlot Parms{};
 
@@ -942,10 +838,8 @@ void UUI_CFCore_ParentBrowser_C::CreateModSlot(int32 AtIndex)
 
 void UUI_CFCore_ParentBrowser_C::UpdateClasses()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdateClasses");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdateClasses", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -958,10 +852,8 @@ void UUI_CFCore_ParentBrowser_C::UpdateClasses()
 
 void UUI_CFCore_ParentBrowser_C::FilterSort_Time(ENUM_CFCore_TimeFilters SelectedDefaultOption)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FilterSort_Time");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FilterSort_Time", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_FilterSort_Time Parms{};
 
@@ -978,10 +870,8 @@ void UUI_CFCore_ParentBrowser_C::FilterSort_Time(ENUM_CFCore_TimeFilters Selecte
 
 void UUI_CFCore_ParentBrowser_C::FilterSort_Options(ECFCoreModsSearchSortField SelectedDefaultOption)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FilterSort_Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FilterSort_Options", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_FilterSort_Options Parms{};
 
@@ -996,10 +886,8 @@ void UUI_CFCore_ParentBrowser_C::FilterSort_Options(ECFCoreModsSearchSortField S
 
 void UUI_CFCore_ParentBrowser_C::FilterSort_ClassFilter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FilterSort_ClassFilter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FilterSort_ClassFilter", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1010,10 +898,8 @@ void UUI_CFCore_ParentBrowser_C::FilterSort_ClassFilter()
 
 void UUI_CFCore_ParentBrowser_C::SelectClass()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "SelectClass");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "SelectClass", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1028,10 +914,8 @@ void UUI_CFCore_ParentBrowser_C::SelectClass()
 
 struct FEventReply UUI_CFCore_ParentBrowser_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "OnMouseButtonDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "OnMouseButtonDown", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_OnMouseButtonDown Parms{};
 
@@ -1053,10 +937,8 @@ struct FEventReply UUI_CFCore_ParentBrowser_C::OnMouseButtonDown(const struct FG
 
 void UUI_CFCore_ParentBrowser_C::CheckWhichTextAppearsFirst(const class FText& NameOne, const class FText& NameTwo, bool* Name_One_Appears_First)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "CheckWhichTextAppearsFirst");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "CheckWhichTextAppearsFirst", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_CheckWhichTextAppearsFirst Parms{};
 
@@ -1077,10 +959,8 @@ void UUI_CFCore_ParentBrowser_C::CheckWhichTextAppearsFirst(const class FText& N
 
 void UUI_CFCore_ParentBrowser_C::Event_On_Input_Device_Changed(ENUM_CFCore_InputDevices device)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Event On Input Device Changed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Event On Input Device Changed", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Event_On_Input_Device_Changed Parms{};
 
@@ -1097,10 +977,8 @@ void UUI_CFCore_ParentBrowser_C::Event_On_Input_Device_Changed(ENUM_CFCore_Input
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature(const class FString& Option)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature Parms{};
 
@@ -1117,10 +995,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__ParentPageWidget_SortBySelect_K2Node_Co
 
 void UUI_CFCore_ParentBrowser_C::Event_Update_Filter_By_Options(int64 Current_Class_Category_ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Event Update Filter By Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Event Update Filter By Options", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Event_Update_Filter_By_Options Parms{};
 
@@ -1137,10 +1013,8 @@ void UUI_CFCore_ParentBrowser_C::Event_Update_Filter_By_Options(int64 Current_Cl
 
 void UUI_CFCore_ParentBrowser_C::UpdateSearch(const class FText& SearchInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "UpdateSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "UpdateSearch", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_UpdateSearch Parms{};
 
@@ -1155,10 +1029,8 @@ void UUI_CFCore_ParentBrowser_C::UpdateSearch(const class FText& SearchInput)
 
 void UUI_CFCore_ParentBrowser_C::Event_Search_Mods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Event Search Mods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Event Search Mods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1169,10 +1041,8 @@ void UUI_CFCore_ParentBrowser_C::Event_Search_Mods()
 
 void UUI_CFCore_ParentBrowser_C::FillTheModList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "FillTheModList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "FillTheModList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1185,10 +1055,8 @@ void UUI_CFCore_ParentBrowser_C::FillTheModList()
 
 void UUI_CFCore_ParentBrowser_C::OnSearch(const class FText& Search_Input)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "OnSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "OnSearch", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_OnSearch Parms{};
 
@@ -1206,10 +1074,8 @@ void UUI_CFCore_ParentBrowser_C::OnSearch(const class FText& Search_Input)
 
 void UUI_CFCore_ParentBrowser_C::ButtonCall(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ButtonCall");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ButtonCall", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_ButtonCall Parms{};
 
@@ -1225,10 +1091,8 @@ void UUI_CFCore_ParentBrowser_C::ButtonCall(const struct FKey& Key, EViewState S
 
 void UUI_CFCore_ParentBrowser_C::BindControllerAction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BindControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BindControllerAction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1239,10 +1103,8 @@ void UUI_CFCore_ParentBrowser_C::BindControllerAction()
 
 void UUI_CFCore_ParentBrowser_C::NextPageButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "NextPageButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "NextPageButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1253,10 +1115,8 @@ void UUI_CFCore_ParentBrowser_C::NextPageButton()
 
 void UUI_CFCore_ParentBrowser_C::PrevPageButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "PrevPageButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "PrevPageButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1269,10 +1129,8 @@ void UUI_CFCore_ParentBrowser_C::PrevPageButton()
 
 void UUI_CFCore_ParentBrowser_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_PreConstruct Parms{};
 
@@ -1287,10 +1145,8 @@ void UUI_CFCore_ParentBrowser_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentPage_UI_PaginationLeftRight_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentPage_UI_PaginationLeftRight_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentPage_UI_PaginationLeftRight_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1301,10 +1157,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentPage_UI_PaginationLeftRight_K2
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentPage_UI_PaginationRight_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentPage_UI_PaginationRight_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentPage_UI_PaginationRight_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1315,10 +1169,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentPage_UI_PaginationRight_K2Node
 
 void UUI_CFCore_ParentBrowser_C::ReloadPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ReloadPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ReloadPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1329,10 +1181,8 @@ void UUI_CFCore_ParentBrowser_C::ReloadPage()
 
 void UUI_CFCore_ParentBrowser_C::ConstructPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "ConstructPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "ConstructPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1345,10 +1195,8 @@ void UUI_CFCore_ParentBrowser_C::ConstructPage()
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature(const class FString& Option)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature Parms{};
 
@@ -1365,10 +1213,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2No
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature(const class FString& Option)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature Parms{};
 
@@ -1383,10 +1229,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2No
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_7_OnOptionChangedIGuess__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_7_OnOptionChangedIGuess__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_7_OnOptionChangedIGuess__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1397,10 +1241,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2No
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_6_OnOptionChangedIGuess__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_6_OnOptionChangedIGuess__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_6_OnOptionChangedIGuess__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1413,10 +1255,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature(const class FString& Option)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature Parms{};
 
@@ -1434,10 +1274,8 @@ void UUI_CFCore_ParentBrowser_C::BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2
 
 void UUI_CFCore_ParentBrowser_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_ParentBrowser_C_Tick Parms{};
 
@@ -1453,10 +1291,8 @@ void UUI_CFCore_ParentBrowser_C::Tick(const struct FGeometry& MyGeometry, float 
 
 void UUI_CFCore_ParentBrowser_C::BndEvt__UI_CFCore_ParentBrowser_UI_Button_CFCore_Global_Back_234_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ParentBrowser_C", "BndEvt__UI_CFCore_ParentBrowser_UI_Button_CFCore_Global_Back_234_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ParentBrowser_C", "BndEvt__UI_CFCore_ParentBrowser_UI_Button_CFCore_Global_Back_234_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

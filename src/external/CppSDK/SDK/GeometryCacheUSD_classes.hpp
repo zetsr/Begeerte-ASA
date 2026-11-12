@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class GeometryCacheUSD.GeometryCacheTrackUsd
-// 0x0120 (0x0178 - 0x0058)
+// 0x0130 (0x0188 - 0x0058)
 class UGeometryCacheTrackUsd final : public UGeometryCacheTrack
 {
 public:
-	uint8                                         Pad_58[0x120];                                     // 0x0058(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58[0x130];                                     // 0x0058(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -36,9 +36,10 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrackUsd>();
 	}
 };
+DUMPER7_ASSERTS_UGeometryCacheTrackUsd;
 
 // Class GeometryCacheUSD.GeometryCacheUsdComponent
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x07A0 - 0x07A0)
 class UGeometryCacheUsdComponent final : public UGeometryCacheComponent
 {
 public:
@@ -55,5 +56,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheUsdComponent>();
 	}
 };
+DUMPER7_ASSERTS_UGeometryCacheUsdComponent;
 
 SDK_NAMESPACE_END

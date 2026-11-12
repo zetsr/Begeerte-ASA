@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_NotifNoResultsFound_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotifNoResultsFound_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotifNoResultsFound_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_NotifNoResultsFound_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_NotifNoResultsFound_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotifNoResultsFound_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotifNoResultsFound_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_NotifNoResultsFound_C::Construct()
 
 void UUI_CFCore_NotifNoResultsFound_C::ExecuteUbergraph_UI_CFCore_NotifNoResultsFound(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotifNoResultsFound_C", "ExecuteUbergraph_UI_CFCore_NotifNoResultsFound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotifNoResultsFound_C", "ExecuteUbergraph_UI_CFCore_NotifNoResultsFound", FuncInfo);
 
 	Params::UI_CFCore_NotifNoResultsFound_C_ExecuteUbergraph_UI_CFCore_NotifNoResultsFound Parms{};
 
@@ -71,10 +65,8 @@ void UUI_CFCore_NotifNoResultsFound_C::ExecuteUbergraph_UI_CFCore_NotifNoResults
 
 void UUI_CFCore_NotifNoResultsFound_C::UpdateWidget(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_NotifNoResultsFound_C", "UpdateWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_NotifNoResultsFound_C", "UpdateWidget", FuncInfo);
 
 	Params::UI_CFCore_NotifNoResultsFound_C_UpdateWidget Parms{};
 

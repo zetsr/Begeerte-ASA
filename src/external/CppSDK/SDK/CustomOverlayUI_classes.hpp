@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass CustomOverlayUI.CustomOverlayUI_C
-// 0x0018 (0x0858 - 0x0840)
+// 0x0018 (0x08B8 - 0x08A0)
 class UCustomOverlayUI_C final : public UUI_CustomOverlay
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0840(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           MainCanvas;                                        // 0x0848(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          FirstTick;                                         // 0x0850(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UCanvasPanel*                           MainCanvas;                                        // 0x08A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          FirstTick;                                         // 0x08B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddChildToCanvas(class UUserWidget* Child, const struct FVector2D& Size, int32 ZOrder);
@@ -50,5 +50,6 @@ public:
 		return GetDefaultObjImpl<UCustomOverlayUI_C>();
 	}
 };
+DUMPER7_ASSERTS_UCustomOverlayUI_C;
 
 SDK_NAMESPACE_END

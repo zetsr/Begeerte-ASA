@@ -20,5 +20,6 @@ struct FFieldNotificationId final
 public:
 	class FName                                   FieldName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FFieldNotificationId;
 
 SDK_NAMESPACE_END

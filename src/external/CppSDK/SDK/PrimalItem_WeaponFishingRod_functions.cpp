@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItem_WeaponFishingRod_C::BPCanUse(bool bIgnoreCooldown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponFishingRod_C", "BPCanUse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponFishingRod_C", "BPCanUse", FuncInfo);
 
 	Params::PrimalItem_WeaponFishingRod_C_BPCanUse Parms{};
 

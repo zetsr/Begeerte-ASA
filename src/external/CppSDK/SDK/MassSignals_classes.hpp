@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class MassSignals.MassSignalProcessorBase
-// 0x03E0 (0x0490 - 0x00B0)
+// 0x0690 (0x0790 - 0x0100)
 class UMassSignalProcessorBase : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x3E0];                                     // 0x00B0(0x03E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x690];                                    // 0x0100(0x0690)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -36,14 +36,15 @@ public:
 		return GetDefaultObjImpl<UMassSignalProcessorBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassSignalProcessorBase;
 
 // Class MassSignals.MassSignalSubsystem
-// 0x0068 (0x00B0 - 0x0048)
+// 0x0068 (0x00B8 - 0x0050)
 class UMassSignalSubsystem final : public UMassTickableSubsystemBase
 {
 public:
-	uint8                                         Pad_48[0x60];                                      // 0x0048(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWorld*                                 CachedWorld;                                       // 0x00A8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_50[0x60];                                      // 0x0050(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWorld*                                 CachedWorld;                                       // 0x00B0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -59,5 +60,6 @@ public:
 		return GetDefaultObjImpl<UMassSignalSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassSignalSubsystem;
 
 SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "ShooterGame_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +26,7 @@ public:
 	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature
 // 0x0018 (0x0018 - 0x0000)
@@ -35,6 +36,7 @@ public:
 	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.ExecuteUbergraph_MapSelect_Entry
 // 0x00D8 (0x00D8 - 0x0000)
@@ -77,6 +79,7 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_ExecuteUbergraph_MapSelect_Entry;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.FixupComboBox
 // 0x0008 (0x0008 - 0x0000)
@@ -86,6 +89,7 @@ public:
 	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_FixupComboBox;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.IsSelected
 // 0x0002 (0x0002 - 0x0000)
@@ -95,6 +99,7 @@ public:
 	bool                                          Selected;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_IsSelected;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.Set To Map Select View
 // 0x0009 (0x0009 - 0x0000)
@@ -111,6 +116,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_Set_To_Map_Select_View;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.SetSelected
 // 0x0001 (0x0001 - 0x0000)
@@ -119,6 +125,7 @@ struct MapSelect_Entry_C_SetSelected final
 public:
 	bool                                          IsSelected_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_SetSelected;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.SetupUsingHostSession
 // 0x0050 (0x0050 - 0x0000)
@@ -135,6 +142,7 @@ public:
 	class FText                                   CallFunc_GetMapInfo_OutMapName;                    // 0x0020(0x0010)()
 	struct FMapDescription                        CallFunc_GetMapInfo_OutDescription;                // 0x0030(0x0020)()
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_SetupUsingHostSession;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.Show Hide Locked Images
 // 0x0005 (0x0005 - 0x0000)
@@ -147,6 +155,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_Show_Hide_Locked_Images;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -156,6 +165,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_Tick;
 
 // Function MapSelect_Entry.MapSelect_Entry_C.UpdateDeleteSaveButton
 // 0x0006 (0x0006 - 0x0000)
@@ -169,6 +179,7 @@ public:
 	bool                                          CallFunc_HasSaveForMapIndex_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MapSelect_Entry_C_UpdateDeleteSaveButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -63,5 +63,6 @@ public:
 		return GetDefaultObjImpl<UPropertyPathTestObject>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyPathTestObject;
 
 SDK_NAMESPACE_END

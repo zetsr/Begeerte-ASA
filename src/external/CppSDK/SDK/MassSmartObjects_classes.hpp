@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "MassSignals_classes.hpp"
 #include "SmartObjectsModule_classes.hpp"
 #include "MassEntity_classes.hpp"
-#include "MassSignals_classes.hpp"
-#include "MassSmartObjects_structs.hpp"
 #include "ZoneGraph_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "MassSpawner_classes.hpp"
 #include "ZoneGraphAnnotations_classes.hpp"
+#include "MassSpawner_classes.hpp"
+#include "MassSmartObjects_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -44,14 +44,15 @@ public:
 		return GetDefaultObjImpl<USmartObjectMassBehaviorDefinition>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectMassBehaviorDefinition;
 
 // Class MassSmartObjects.MassSmartObjectCandidatesFinderProcessor
-// 0x0650 (0x0700 - 0x00B0)
+// 0x0BB0 (0x0CB0 - 0x0100)
 class UMassSmartObjectCandidatesFinderProcessor final : public UMassProcessor
 {
 public:
-	float                                         SearchExtents;                                     // 0x00B0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B4[0x64C];                                     // 0x00B4(0x064C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SearchExtents;                                     // 0x0100(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_104[0xBAC];                                    // 0x0104(0x0BAC)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -67,13 +68,14 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectCandidatesFinderProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectCandidatesFinderProcessor;
 
 // Class MassSmartObjects.MassSmartObjectTimedBehaviorProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x05D0 (0x06D0 - 0x0100)
 class UMassSmartObjectTimedBehaviorProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -89,13 +91,14 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectTimedBehaviorProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectTimedBehaviorProcessor;
 
 // Class MassSmartObjects.MassSmartObjectUserFragmentDeinitializer
-// 0x0328 (0x03F0 - 0x00C8)
+// 0x05D0 (0x06F0 - 0x0120)
 class UMassSmartObjectUserFragmentDeinitializer final : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x328];                                     // 0x00C8(0x0328)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D0];                                    // 0x0120(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -111,13 +114,37 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectUserFragmentDeinitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectUserFragmentDeinitializer;
+
+// Class MassSmartObjects.MRUSlotsProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class UMRUSlotsProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MRUSlotsProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MRUSlotsProcessor")
+	}
+	static class UMRUSlotsProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMRUSlotsProcessor>();
+	}
+};
+DUMPER7_ASSERTS_UMRUSlotsProcessor;
 
 // Class MassSmartObjects.MassSmartObjectInitializerBase
-// 0x0338 (0x0400 - 0x00C8)
+// 0x05D8 (0x06F8 - 0x0120)
 class UMassSmartObjectInitializerBase : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x338];                                     // 0x00C8(0x0338)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D8];                                    // 0x0120(0x05D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -133,13 +160,14 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectInitializerBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectInitializerBase;
 
 // Class MassSmartObjects.MassSmartObjectDeinitializerBase
-// 0x0338 (0x0400 - 0x00C8)
+// 0x05D8 (0x06F8 - 0x0120)
 class UMassSmartObjectDeinitializerBase : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x338];                                     // 0x00C8(0x0338)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D8];                                    // 0x0120(0x05D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -155,9 +183,10 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectDeinitializerBase>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectDeinitializerBase;
 
 // Class MassSmartObjects.MassActiveSmartObjectInitializer
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x06F8 - 0x06F8)
 class UMassActiveSmartObjectInitializer final : public UMassSmartObjectInitializerBase
 {
 public:
@@ -174,9 +203,10 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectInitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassActiveSmartObjectInitializer;
 
 // Class MassSmartObjects.MassActiveSmartObjectDeinitializer
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x06F8 - 0x06F8)
 class UMassActiveSmartObjectDeinitializer final : public UMassSmartObjectDeinitializerBase
 {
 public:
@@ -193,9 +223,10 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectDeinitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassActiveSmartObjectDeinitializer;
 
 // Class MassSmartObjects.MassActorInstanceHandleInitializer
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x06F8 - 0x06F8)
 class UMassActorInstanceHandleInitializer final : public UMassSmartObjectInitializerBase
 {
 public:
@@ -212,9 +243,10 @@ public:
 		return GetDefaultObjImpl<UMassActorInstanceHandleInitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassActorInstanceHandleInitializer;
 
 // Class MassSmartObjects.MassActorInstanceHandleDeinitializer
-// 0x0000 (0x0400 - 0x0400)
+// 0x0000 (0x06F8 - 0x06F8)
 class UMassActorInstanceHandleDeinitializer final : public UMassSmartObjectDeinitializerBase
 {
 public:
@@ -231,13 +263,14 @@ public:
 		return GetDefaultObjImpl<UMassActorInstanceHandleDeinitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassActorInstanceHandleDeinitializer;
 
 // Class MassSmartObjects.MassActiveSmartObjectSignalProcessor
-// 0x0640 (0x0AD0 - 0x0490)
+// 0x0BA0 (0x1330 - 0x0790)
 class UMassActiveSmartObjectSignalProcessor final : public UMassSignalProcessorBase
 {
 public:
-	uint8                                         Pad_490[0x640];                                    // 0x0490(0x0640)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_790[0xBA0];                                    // 0x0790(0x0BA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -253,15 +286,21 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectSignalProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassActiveSmartObjectSignalProcessor;
 
 // Class MassSmartObjects.MassSmartObjectSettings
-// 0x0008 (0x0030 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UMassSmartObjectSettings final : public UMassModuleSettings
 {
 public:
 	struct FZoneGraphTag                          SmartObjectTag;                                    // 0x0028(0x0001)(Edit, Config, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SearchExtents;                                     // 0x002C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MRUSlotsMaxCount;                                  // 0x0030(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCooldownForMRUSlots;                           // 0x0034(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MRUSlotsCooldown;                                  // 0x0038(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -277,13 +316,14 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectSettings;
 
 // Class MassSmartObjects.MassSmartObjectUserTrait
-// 0x0020 (0x0048 - 0x0028)
+// 0x0020 (0x0050 - 0x0030)
 class UMassSmartObjectUserTrait final : public UMassEntityTraitBase
 {
 public:
-	struct FGameplayTagContainer                  UserTags;                                          // 0x0028(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FGameplayTagContainer                  UserTags;                                          // 0x0030(0x0020)(Edit, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -299,18 +339,19 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectUserTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassSmartObjectUserTrait;
 
 // Class MassSmartObjects.SmartObjectZoneAnnotations
-// 0x0030 (0x06C0 - 0x0690)
+// 0x0030 (0x0760 - 0x0730)
 class USmartObjectZoneAnnotations final : public UZoneGraphAnnotationComponent
 {
 public:
-	struct FZoneGraphTagFilter                    AffectedLaneTags;                                  // 0x0690(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSmartObjectAnnotationData>     SmartObjectAnnotationDataArray;                    // 0x06A0(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
-	struct FZoneGraphTag                          BehaviorTag;                                       // 0x06B0(0x0001)(Edit, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6B1[0x7];                                      // 0x06B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USmartObjectSubsystem*                  SmartObjectSubsystem;                              // 0x06B8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FZoneGraphTagFilter                    AffectedLaneTags;                                  // 0x0730(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_73C[0x4];                                      // 0x073C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSmartObjectAnnotationData>     SmartObjectAnnotationDataArray;                    // 0x0740(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
+	struct FZoneGraphTag                          BehaviorTag;                                       // 0x0750(0x0001)(Edit, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_751[0x7];                                      // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USmartObjectSubsystem*                  SmartObjectSubsystem;                              // 0x0758(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -326,5 +367,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectZoneAnnotations>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectZoneAnnotations;
 
 SDK_NAMESPACE_END

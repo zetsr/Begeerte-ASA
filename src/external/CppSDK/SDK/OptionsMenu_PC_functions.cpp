@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UOptionsMenu_PC_C::BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -46,10 +44,8 @@ void UOptionsMenu_PC_C::BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_
 
 void UOptionsMenu_PC_C::BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -68,10 +64,8 @@ void UOptionsMenu_PC_C::BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEve
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_AdvancedGraphics_K2Node_ComponentBoundEvent_53_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_AdvancedGraphics_K2Node_ComponentBoundEvent_53_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_AdvancedGraphics_K2Node_ComponentBoundEvent_53_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_AdvancedGraphics_K2Node_ComponentBoundEvent_53_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -87,10 +81,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_AdvancedGraphics_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_AutoDetectSettings_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_AutoDetectSettings_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_AutoDetectSettings_K2Node_ComponentBoundEvent_24_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +93,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_AutoDetectSettings_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_BackButton_K2Node_ComponentBoundEvent_7_OnButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_BackButton_K2Node_ComponentBoundEvent_7_OnButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_BackButton_K2Node_ComponentBoundEvent_7_OnButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +108,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_BackButton_K2Node_ComponentBoundEven
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_1_K2Node_ComponentBoundEvent_39_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_1_K2Node_ComponentBoundEvent_39_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_1_K2Node_ComponentBoundEvent_39_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CameraModeComboBox_1_K2Node_ComponentBoundEvent_39_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -137,10 +125,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_1_K2Node_Componen
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_0_OnOpeningEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_0_OnOpeningEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_0_OnOpeningEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +137,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_1_OnClosingEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_1_OnClosingEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_1_OnClosingEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +152,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_43_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_43_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_43_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentBoundEvent_43_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -190,10 +172,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CameraModeComboBox_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ClientNetSpeedComboBox_K2Node_ComponentBoundEvent_44_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_ClientNetSpeedComboBox_K2Node_ComponentBoundEvent_44_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_ClientNetSpeedComboBox_K2Node_ComponentBoundEvent_44_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_ClientNetSpeedComboBox_K2Node_ComponentBoundEvent_44_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -211,10 +191,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ClientNetSpeedComboBox_K2Node_Compon
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_1_K2Node_ComponentBoundEvent_26_ChangedColor__DelegateSignature(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_1_K2Node_ComponentBoundEvent_26_ChangedColor__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_1_K2Node_ComponentBoundEvent_26_ChangedColor__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CrosshairColorSlider_1_K2Node_ComponentBoundEvent_26_ChangedColor__DelegateSignature Parms{};
 
@@ -231,10 +209,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_1_K2Node_Compon
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_2_K2Node_ComponentBoundEvent_21_ChangedColor__DelegateSignature(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_2_K2Node_ComponentBoundEvent_21_ChangedColor__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_2_K2Node_ComponentBoundEvent_21_ChangedColor__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CrosshairColorSlider_2_K2Node_ComponentBoundEvent_21_ChangedColor__DelegateSignature Parms{};
 
@@ -251,10 +227,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_2_K2Node_Compon
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_K2Node_ComponentBoundEvent_3_ChangedColor__DelegateSignature(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_K2Node_ComponentBoundEvent_3_ChangedColor__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairColorSlider_K2Node_ComponentBoundEvent_3_ChangedColor__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CrosshairColorSlider_K2Node_ComponentBoundEvent_3_ChangedColor__DelegateSignature Parms{};
 
@@ -272,10 +246,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairColorSlider_K2Node_Componen
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairOpacitySlider_K2Node_ComponentBoundEvent_5_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairOpacitySlider_K2Node_ComponentBoundEvent_5_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairOpacitySlider_K2Node_ComponentBoundEvent_5_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CrosshairOpacitySlider_K2Node_ComponentBoundEvent_5_ReturnValue__DelegateSignature Parms{};
 
@@ -294,10 +266,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairOpacitySlider_K2Node_Compon
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairSizeSlider_K2Node_ComponentBoundEvent_4_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairSizeSlider_K2Node_ComponentBoundEvent_4_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_CrosshairSizeSlider_K2Node_ComponentBoundEvent_4_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_CrosshairSizeSlider_K2Node_ComponentBoundEvent_4_ReturnValue__DelegateSignature Parms{};
 
@@ -315,10 +285,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_CrosshairSizeSlider_K2Node_Component
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_DynamicDownloadSpeedEditBox_K2Node_ComponentBoundEvent_55_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_DynamicDownloadSpeedEditBox_K2Node_ComponentBoundEvent_55_OnEditableTextBoxChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_DynamicDownloadSpeedEditBox_K2Node_ComponentBoundEvent_55_OnEditableTextBoxChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_DynamicDownloadSpeedEditBox_K2Node_ComponentBoundEvent_55_OnEditableTextBoxChangedEvent__DelegateSignature Parms{};
 
@@ -336,10 +304,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_DynamicDownloadSpeedEditBox_K2Node_C
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_EffectsQuality_K2Node_ComponentBoundEvent_51_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_EffectsQuality_K2Node_ComponentBoundEvent_51_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_EffectsQuality_K2Node_ComponentBoundEvent_51_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_EffectsQuality_K2Node_ComponentBoundEvent_51_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -358,10 +324,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_EffectsQuality_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FilmGrainCheckbox_K2Node_ComponentBoundEvent_23_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FilmGrainCheckbox_K2Node_ComponentBoundEvent_23_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FilmGrainCheckbox_K2Node_ComponentBoundEvent_23_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FilmGrainCheckbox_K2Node_ComponentBoundEvent_23_ReturnValue__DelegateSignature Parms{};
 
@@ -379,10 +343,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FilmGrainCheckbox_K2Node_ComponentBo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FirstPersonRidingCheckbox_1_K2Node_ComponentBoundEvent_56_OnFloatValueGenericChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FirstPersonRidingCheckbox_1_K2Node_ComponentBoundEvent_56_OnFloatValueGenericChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FirstPersonRidingCheckbox_1_K2Node_ComponentBoundEvent_56_OnFloatValueGenericChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FirstPersonRidingCheckbox_1_K2Node_ComponentBoundEvent_56_OnFloatValueGenericChangedEvent__DelegateSignature Parms{};
 
@@ -400,10 +362,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FirstPersonRidingCheckbox_1_K2Node_C
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FoliageQuality_K2Node_ComponentBoundEvent_52_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FoliageQuality_K2Node_ComponentBoundEvent_52_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FoliageQuality_K2Node_ComponentBoundEvent_52_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FoliageQuality_K2Node_ComponentBoundEvent_52_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -421,10 +381,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FoliageQuality_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FPSCapCheckbox_K2Node_ComponentBoundEvent_37_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FPSCapCheckbox_K2Node_ComponentBoundEvent_37_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FPSCapCheckbox_K2Node_ComponentBoundEvent_37_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FPSCapCheckbox_K2Node_ComponentBoundEvent_37_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -442,10 +400,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FPSCapCheckbox_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FPSCapTextBox_K2Node_ComponentBoundEvent_38_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FPSCapTextBox_K2Node_ComponentBoundEvent_38_OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FPSCapTextBox_K2Node_ComponentBoundEvent_38_OnEditableTextBoxCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FPSCapTextBox_K2Node_ComponentBoundEvent_38_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
@@ -464,10 +420,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FPSCapTextBox_K2Node_ComponentBoundE
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FrameGenComboBox_K2Node_ComponentBoundEvent_36_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_FrameGenComboBox_K2Node_ComponentBoundEvent_36_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_FrameGenComboBox_K2Node_ComponentBoundEvent_36_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_FrameGenComboBox_K2Node_ComponentBoundEvent_36_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -486,10 +440,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_FrameGenComboBox_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_GlobalIlluminationQuality_K2Node_ComponentBoundEvent_50_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_GlobalIlluminationQuality_K2Node_ComponentBoundEvent_50_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_GlobalIlluminationQuality_K2Node_ComponentBoundEvent_50_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_GlobalIlluminationQuality_K2Node_ComponentBoundEvent_50_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -508,10 +460,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_GlobalIlluminationQuality_K2Node_Com
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_GroundClutterDensitySlider_K2Node_ComponentBoundEvent_32_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_GroundClutterDensitySlider_K2Node_ComponentBoundEvent_32_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_GroundClutterDensitySlider_K2Node_ComponentBoundEvent_32_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_GroundClutterDensitySlider_K2Node_ComponentBoundEvent_32_ReturnValue__DelegateSignature Parms{};
 
@@ -527,10 +477,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_GroundClutterDensitySlider_K2Node_Co
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HDRandOcio_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_HDRandOcio_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_HDRandOcio_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -541,10 +489,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HDRandOcio_K2Node_ComponentBoundEven
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HDRandOcioConsole_K2Node_ComponentBoundEvent_54_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_HDRandOcioConsole_K2Node_ComponentBoundEvent_54_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_HDRandOcioConsole_K2Node_ComponentBoundEvent_54_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -555,10 +501,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HDRandOcioConsole_K2Node_ComponentBo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_10_OnSelectionChanged_1__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_10_OnSelectionChanged_1__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_10_OnSelectionChanged_1__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -569,10 +513,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_11_OnSelectionChanged_2__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_11_OnSelectionChanged_2__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_11_OnSelectionChanged_2__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -583,10 +525,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_12_OnSelectionChanged_3__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_12_OnSelectionChanged_3__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_12_OnSelectionChanged_3__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -597,10 +537,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_8_OnSelectionChanged_0__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_8_OnSelectionChanged_0__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBoundEvent_8_OnSelectionChanged_0__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -614,10 +552,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Header_GridPanel_K2Node_ComponentBou
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HeightTextBox_K2Node_ComponentBoundEvent_33_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_HeightTextBox_K2Node_ComponentBoundEvent_33_OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_HeightTextBox_K2Node_ComponentBoundEvent_33_OnEditableTextBoxCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_HeightTextBox_K2Node_ComponentBoundEvent_33_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
@@ -636,10 +572,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_HeightTextBox_K2Node_ComponentBoundE
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_MotionBlurCheckbox_K2Node_ComponentBoundEvent_20_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_MotionBlurCheckbox_K2Node_ComponentBoundEvent_20_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_MotionBlurCheckbox_K2Node_ComponentBoundEvent_20_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_MotionBlurCheckbox_K2Node_ComponentBoundEvent_20_ReturnValue__DelegateSignature Parms{};
 
@@ -658,10 +592,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_MotionBlurCheckbox_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_Reflections_K2Node_ComponentBoundEvent_58_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_Reflections_K2Node_ComponentBoundEvent_58_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_Reflections_K2Node_ComponentBoundEvent_58_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_PC_Reflections_K2Node_ComponentBoundEvent_58_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -677,10 +609,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_Reflections_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_Submenu_Header_K2Node_ComponentBoundEvent_59_OnSelectionChanged_5__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_Submenu_Header_K2Node_ComponentBoundEvent_59_OnSelectionChanged_5__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_Submenu_Header_K2Node_ComponentBoundEvent_59_OnSelectionChanged_5__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -694,10 +624,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_Submenu_Header_K2Node_ComponentBo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_VSyncModeCombo_K2Node_ComponentBoundEvent_57_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_VSyncModeCombo_K2Node_ComponentBoundEvent_57_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_PC_VSyncModeCombo_K2Node_ComponentBoundEvent_57_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_PC_VSyncModeCombo_K2Node_ComponentBoundEvent_57_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -713,10 +641,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_PC_VSyncModeCombo_K2Node_ComponentBo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ResetCameraLateralOffset_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_ResetCameraLateralOffset_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_ResetCameraLateralOffset_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -730,10 +656,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ResetCameraLateralOffset_K2Node_Comp
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ResolutionsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_ResolutionsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_ResolutionsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_ResolutionsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -752,10 +676,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_ResolutionsComboBox_K2Node_Component
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SSAOCheckbox_K2Node_ComponentBoundEvent_27_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_SSAOCheckbox_K2Node_ComponentBoundEvent_27_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_SSAOCheckbox_K2Node_ComponentBoundEvent_27_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_SSAOCheckbox_K2Node_ComponentBoundEvent_27_ReturnValue__DelegateSignature Parms{};
 
@@ -771,10 +693,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SSAOCheckbox_K2Node_ComponentBoundEv
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_16_OnSelectionChanged_0__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_16_OnSelectionChanged_0__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_16_OnSelectionChanged_0__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -785,10 +705,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_17_OnSelectionChanged_1__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_17_OnSelectionChanged_1__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_17_OnSelectionChanged_1__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -799,10 +717,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_18_OnSelectionChanged_2__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_18_OnSelectionChanged_2__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_18_OnSelectionChanged_2__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -813,10 +729,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_19_OnSelectionChanged_3__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_19_OnSelectionChanged_3__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_19_OnSelectionChanged_3__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -827,10 +741,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_40_OnSelectionChanged_4__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_40_OnSelectionChanged_4__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBoundEvent_40_OnSelectionChanged_4__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -844,10 +756,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_Submenu_Header_K2Node_ComponentBound
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SuperResolutionFSRCombo_K2Node_ComponentBoundEvent_42_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_SuperResolutionFSRCombo_K2Node_ComponentBoundEvent_42_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_SuperResolutionFSRCombo_K2Node_ComponentBoundEvent_42_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_SuperResolutionFSRCombo_K2Node_ComponentBoundEvent_42_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -866,10 +776,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SuperResolutionFSRCombo_K2Node_Compo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SuperResolutionNvidiaCombo_K2Node_ComponentBoundEvent_41_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_SuperResolutionNvidiaCombo_K2Node_ComponentBoundEvent_41_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_SuperResolutionNvidiaCombo_K2Node_ComponentBoundEvent_41_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_SuperResolutionNvidiaCombo_K2Node_ComponentBoundEvent_41_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -888,10 +796,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_SuperResolutionNvidiaCombo_K2Node_Co
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TerrainShadowComboBox_K2Node_ComponentBoundEvent_2_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_TerrainShadowComboBox_K2Node_ComponentBoundEvent_2_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_TerrainShadowComboBox_K2Node_ComponentBoundEvent_2_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_TerrainShadowComboBox_K2Node_ComponentBoundEvent_2_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -910,10 +816,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TerrainShadowComboBox_K2Node_Compone
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TextChatFilterComboBox_K2Node_ComponentBoundEvent_45_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_TextChatFilterComboBox_K2Node_ComponentBoundEvent_45_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_TextChatFilterComboBox_K2Node_ComponentBoundEvent_45_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_TextChatFilterComboBox_K2Node_ComponentBoundEvent_45_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -932,10 +836,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TextChatFilterComboBox_K2Node_Compon
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TrueSkyQualitySlider_K2Node_ComponentBoundEvent_29_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_TrueSkyQualitySlider_K2Node_ComponentBoundEvent_29_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_TrueSkyQualitySlider_K2Node_ComponentBoundEvent_29_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_TrueSkyQualitySlider_K2Node_ComponentBoundEvent_29_ReturnValue__DelegateSignature Parms{};
 
@@ -953,10 +855,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_TrueSkyQualitySlider_K2Node_Componen
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseAutoDetectSettingsCheckbox_K2Node_ComponentBoundEvent_48_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseAutoDetectSettingsCheckbox_K2Node_ComponentBoundEvent_48_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseAutoDetectSettingsCheckbox_K2Node_ComponentBoundEvent_48_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_UseAutoDetectSettingsCheckbox_K2Node_ComponentBoundEvent_48_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -974,10 +874,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseAutoDetectSettingsCheckbox_K2Node
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseDFAOCheckbox_K2Node_ComponentBoundEvent_25_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseDFAOCheckbox_K2Node_ComponentBoundEvent_25_ReturnValue__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseDFAOCheckbox_K2Node_ComponentBoundEvent_25_ReturnValue__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_UseDFAOCheckbox_K2Node_ComponentBoundEvent_25_ReturnValue__DelegateSignature Parms{};
 
@@ -996,10 +894,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseDFAOCheckbox_K2Node_ComponentBoun
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseGamepadAimAssist_K2Node_ComponentBoundEvent_46_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseGamepadAimAssist_K2Node_ComponentBoundEvent_46_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_UseGamepadAimAssist_K2Node_ComponentBoundEvent_46_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_UseGamepadAimAssist_K2Node_ComponentBoundEvent_46_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1018,10 +914,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_UseGamepadAimAssist_K2Node_Component
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_VoiceChatFilterComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_VoiceChatFilterComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_VoiceChatFilterComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_VoiceChatFilterComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1040,10 +934,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_VoiceChatFilterComboBox_K2Node_Compo
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WidthTextBox_K2Node_ComponentBoundEvent_31_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_WidthTextBox_K2Node_ComponentBoundEvent_31_OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_WidthTextBox_K2Node_ComponentBoundEvent_31_OnEditableTextBoxCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_WidthTextBox_K2Node_ComponentBoundEvent_31_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
@@ -1062,10 +954,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WidthTextBox_K2Node_ComponentBoundEv
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WindowModeComboBox_K2Node_ComponentBoundEvent_34_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_WindowModeComboBox_K2Node_ComponentBoundEvent_34_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_WindowModeComboBox_K2Node_ComponentBoundEvent_34_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_WindowModeComboBox_K2Node_ComponentBoundEvent_34_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1084,10 +974,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WindowModeComboBox_K2Node_ComponentB
 
 void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WorldTileBufferComboBox_K2Node_ComponentBoundEvent_35_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__OptionsMenu_WorldTileBufferComboBox_K2Node_ComponentBoundEvent_35_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__OptionsMenu_WorldTileBufferComboBox_K2Node_ComponentBoundEvent_35_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__OptionsMenu_WorldTileBufferComboBox_K2Node_ComponentBoundEvent_35_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1106,10 +994,8 @@ void UOptionsMenu_PC_C::BndEvt__OptionsMenu_WorldTileBufferComboBox_K2Node_Compo
 
 void UOptionsMenu_PC_C::BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1128,10 +1014,8 @@ void UOptionsMenu_PC_C::BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEven
 
 void UOptionsMenu_PC_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1150,10 +1034,8 @@ void UOptionsMenu_PC_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_On
 
 void UOptionsMenu_PC_C::BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1172,10 +1054,8 @@ void UOptionsMenu_PC_C::BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_O
 
 void UOptionsMenu_PC_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_PC_C_BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -1191,10 +1071,8 @@ void UOptionsMenu_PC_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_
 
 void UOptionsMenu_PC_C::ClosedEvent_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "ClosedEvent_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "ClosedEvent_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1205,10 +1083,8 @@ void UOptionsMenu_PC_C::ClosedEvent_Event()
 
 void UOptionsMenu_PC_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1219,10 +1095,8 @@ void UOptionsMenu_PC_C::Construct()
 
 void UOptionsMenu_PC_C::CustomEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "CustomEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "CustomEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1235,10 +1109,8 @@ void UOptionsMenu_PC_C::CustomEvent()
 
 void UOptionsMenu_PC_C::ExecuteUbergraph_OptionsMenu_PC(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "ExecuteUbergraph_OptionsMenu_PC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "ExecuteUbergraph_OptionsMenu_PC", FuncInfo);
 
 	Params::OptionsMenu_PC_C_ExecuteUbergraph_OptionsMenu_PC Parms{};
 
@@ -1255,10 +1127,8 @@ void UOptionsMenu_PC_C::ExecuteUbergraph_OptionsMenu_PC(int32 EntryPoint)
 
 bool UOptionsMenu_PC_C::Get_AntiAlias_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_AntiAlias_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_AntiAlias_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_AntiAlias_bIsEnabled Parms{};
 
@@ -1275,10 +1145,8 @@ bool UOptionsMenu_PC_C::Get_AntiAlias_bIsEnabled()
 
 bool UOptionsMenu_PC_C::Get_bCinematicLightingMode_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_bCinematicLightingMode_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_bCinematicLightingMode_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_bCinematicLightingMode_bIsEnabled Parms{};
 
@@ -1295,10 +1163,8 @@ bool UOptionsMenu_PC_C::Get_bCinematicLightingMode_bIsEnabled()
 
 bool UOptionsMenu_PC_C::Get_ChangesText_1_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ChangesText_1_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ChangesText_1_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ChangesText_1_bIsEnabled Parms{};
 
@@ -1315,10 +1181,8 @@ bool UOptionsMenu_PC_C::Get_ChangesText_1_bIsEnabled()
 
 ESlateVisibility UOptionsMenu_PC_C::Get_ChangesText_1_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ChangesText_1_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ChangesText_1_Visibility", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ChangesText_1_Visibility Parms{};
 
@@ -1335,10 +1199,8 @@ ESlateVisibility UOptionsMenu_PC_C::Get_ChangesText_1_Visibility()
 
 bool UOptionsMenu_PC_C::Get_DisableTPVCameraInterpolationCheckbox_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_DisableTPVCameraInterpolationCheckbox_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_DisableTPVCameraInterpolationCheckbox_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_DisableTPVCameraInterpolationCheckbox_bIsEnabled Parms{};
 
@@ -1355,10 +1217,8 @@ bool UOptionsMenu_PC_C::Get_DisableTPVCameraInterpolationCheckbox_bIsEnabled()
 
 bool UOptionsMenu_PC_C::Get_ForceTPVCameraOffsetCheckbox_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ForceTPVCameraOffsetCheckbox_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ForceTPVCameraOffsetCheckbox_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ForceTPVCameraOffsetCheckbox_bIsEnabled Parms{};
 
@@ -1375,10 +1235,8 @@ bool UOptionsMenu_PC_C::Get_ForceTPVCameraOffsetCheckbox_bIsEnabled()
 
 ESlateVisibility UOptionsMenu_PC_C::Get_ResetAudio_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ResetAudio_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ResetAudio_Visibility", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ResetAudio_Visibility Parms{};
 
@@ -1395,10 +1253,8 @@ ESlateVisibility UOptionsMenu_PC_C::Get_ResetAudio_Visibility()
 
 ESlateVisibility UOptionsMenu_PC_C::Get_ResetGraphics_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ResetGraphics_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ResetGraphics_Visibility", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ResetGraphics_Visibility Parms{};
 
@@ -1415,10 +1271,8 @@ ESlateVisibility UOptionsMenu_PC_C::Get_ResetGraphics_Visibility()
 
 ESlateVisibility UOptionsMenu_PC_C::Get_ResetKeybinding_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ResetKeybinding_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ResetKeybinding_Visibility", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ResetKeybinding_Visibility Parms{};
 
@@ -1435,10 +1289,8 @@ ESlateVisibility UOptionsMenu_PC_C::Get_ResetKeybinding_Visibility()
 
 ESlateVisibility UOptionsMenu_PC_C::Get_ResetOptions_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_ResetOptions_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_ResetOptions_Visibility", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_ResetOptions_Visibility Parms{};
 
@@ -1455,10 +1307,8 @@ ESlateVisibility UOptionsMenu_PC_C::Get_ResetOptions_Visibility()
 
 bool UOptionsMenu_PC_C::Get_SuperResolution_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_SuperResolution_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_SuperResolution_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_SuperResolution_bIsEnabled Parms{};
 
@@ -1475,10 +1325,8 @@ bool UOptionsMenu_PC_C::Get_SuperResolution_bIsEnabled()
 
 bool UOptionsMenu_PC_C::Get_UseNvidiaDlss_bIsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Get_UseNvidiaDlss_bIsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Get_UseNvidiaDlss_bIsEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Get_UseNvidiaDlss_bIsEnabled Parms{};
 
@@ -1495,10 +1343,8 @@ bool UOptionsMenu_PC_C::Get_UseNvidiaDlss_bIsEnabled()
 
 bool UOptionsMenu_PC_C::GetIsNVidiaDLSSEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "GetIsNVidiaDLSSEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "GetIsNVidiaDLSSEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_GetIsNVidiaDLSSEnabled Parms{};
 
@@ -1515,10 +1361,8 @@ bool UOptionsMenu_PC_C::GetIsNVidiaDLSSEnabled()
 
 bool UOptionsMenu_PC_C::IsNewCameraEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "IsNewCameraEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "IsNewCameraEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_IsNewCameraEnabled Parms{};
 
@@ -1533,10 +1377,8 @@ bool UOptionsMenu_PC_C::IsNewCameraEnabled()
 
 void UOptionsMenu_PC_C::NewFunction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "NewFunction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "NewFunction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1549,10 +1391,8 @@ void UOptionsMenu_PC_C::NewFunction()
 
 bool UOptionsMenu_PC_C::NotIsNewCameraEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "NotIsNewCameraEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "NotIsNewCameraEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_NotIsNewCameraEnabled Parms{};
 
@@ -1571,10 +1411,8 @@ bool UOptionsMenu_PC_C::NotIsNewCameraEnabled()
 
 struct FEventReply UOptionsMenu_PC_C::OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "OnKeyDownEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "OnKeyDownEvent", FuncInfo);
 
 	Params::OptionsMenu_PC_C_OnKeyDownEvent Parms{};
 
@@ -1592,10 +1430,8 @@ struct FEventReply UOptionsMenu_PC_C::OnKeyDownEvent(const struct FGeometry& MyG
 
 void UOptionsMenu_PC_C::OptionsMenuValueChanged()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "OptionsMenuValueChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "OptionsMenuValueChanged", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1606,10 +1442,8 @@ void UOptionsMenu_PC_C::OptionsMenuValueChanged()
 
 void UOptionsMenu_PC_C::PopulateSROptions()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "PopulateSROptions");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "PopulateSROptions", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1620,10 +1454,8 @@ void UOptionsMenu_PC_C::PopulateSROptions()
 
 void UOptionsMenu_PC_C::ResetOptionsMenuValueChanged()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "ResetOptionsMenuValueChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "ResetOptionsMenuValueChanged", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1637,10 +1469,8 @@ void UOptionsMenu_PC_C::ResetOptionsMenuValueChanged()
 
 void UOptionsMenu_PC_C::SetCosmeticEntryDetails(class UDataListValueGeneric* EntryWidget, const class FString& DetailText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "SetCosmeticEntryDetails");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "SetCosmeticEntryDetails", FuncInfo);
 
 	Params::OptionsMenu_PC_C_SetCosmeticEntryDetails Parms{};
 
@@ -1658,10 +1488,8 @@ void UOptionsMenu_PC_C::SetCosmeticEntryDetails(class UDataListValueGeneric* Ent
 
 void UOptionsMenu_PC_C::SetNVidiaDLSSEnabled(bool bEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "SetNVidiaDLSSEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "SetNVidiaDLSSEnabled", FuncInfo);
 
 	Params::OptionsMenu_PC_C_SetNVidiaDLSSEnabled Parms{};
 
@@ -1679,10 +1507,8 @@ void UOptionsMenu_PC_C::SetNVidiaDLSSEnabled(bool bEnabled)
 
 void UOptionsMenu_PC_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Tick", FuncInfo);
 
 	Params::OptionsMenu_PC_C_Tick Parms{};
 
@@ -1698,10 +1524,8 @@ void UOptionsMenu_PC_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 
 void UOptionsMenu_PC_C::Update_Available_Anti_Alias_Options()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "Update Available Anti Alias Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "Update Available Anti Alias Options", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1714,10 +1538,8 @@ void UOptionsMenu_PC_C::Update_Available_Anti_Alias_Options()
 
 void UOptionsMenu_PC_C::UpdateChangedValueButton(bool bHasChangedAnyValue_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "UpdateChangedValueButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "UpdateChangedValueButton", FuncInfo);
 
 	Params::OptionsMenu_PC_C_UpdateChangedValueButton Parms{};
 
@@ -1732,10 +1554,8 @@ void UOptionsMenu_PC_C::UpdateChangedValueButton(bool bHasChangedAnyValue_0)
 
 void UOptionsMenu_PC_C::UpdateGamepadControlsTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_PC_C", "UpdateGamepadControlsTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_PC_C", "UpdateGamepadControlsTab", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

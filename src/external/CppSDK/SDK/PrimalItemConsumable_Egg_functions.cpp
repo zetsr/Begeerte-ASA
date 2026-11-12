@@ -26,10 +26,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItemConsumable_Egg_C::BPAllowRemoteAddToInventory(class UPrimalInventoryComponent* invComp, class AShooterPlayerController* ByPC, bool bRequestedByPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemConsumable_Egg_C", "BPAllowRemoteAddToInventory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemConsumable_Egg_C", "BPAllowRemoteAddToInventory", FuncInfo);
 
 	Params::PrimalItemConsumable_Egg_C_BPAllowRemoteAddToInventory Parms{};
 
@@ -50,10 +48,8 @@ bool UPrimalItemConsumable_Egg_C::BPAllowRemoteAddToInventory(class UPrimalInven
 
 class FString UPrimalItemConsumable_Egg_C::BPGetCustomInventoryWidgetText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemConsumable_Egg_C", "BPGetCustomInventoryWidgetText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemConsumable_Egg_C", "BPGetCustomInventoryWidgetText", FuncInfo);
 
 	Params::PrimalItemConsumable_Egg_C_BPGetCustomInventoryWidgetText Parms{};
 

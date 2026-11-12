@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_NetGun_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_NetGun_C;
 
 SDK_NAMESPACE_END

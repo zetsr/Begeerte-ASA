@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ExpandedModSlot_C::Animation_UpdateModImage(class UImage* IMG_GameImage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Animation_UpdateModImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Animation_UpdateModImage", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_Animation_UpdateModImage Parms{};
 
@@ -41,10 +39,8 @@ void UUI_CFCore_ExpandedModSlot_C::Animation_UpdateModImage(class UImage* IMG_Ga
 
 void UUI_CFCore_ExpandedModSlot_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -55,10 +51,8 @@ void UUI_CFCore_ExpandedModSlot_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_InstallSwitcher_K2Node_ComponentBoundEvent_3_OnClickUpdate_B__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_InstallSwitcher_K2Node_ComponentBoundEvent_3_OnClickUpdate_B__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_InstallSwitcher_K2Node_ComponentBoundEvent_3_OnClickUpdate_B__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -69,10 +63,8 @@ void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_InstallS
 
 void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_UninstallSelected_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_UninstallSelected_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_UninstallSelected_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -83,12 +75,82 @@ void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_Uninstal
 
 void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_ViewModSelected_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_ViewModSelected_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BndEvt__UI_ExpandedModSlot_UI_Button_ViewModSelected_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEndEntryDropOperation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_ExpandedModSlot_C::BP_OnEndEntryDropOperation(bool bSuccess)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnEndEntryDropOperation", FuncInfo);
+
+	Params::UI_CFCore_ExpandedModSlot_C_BP_OnEndEntryDropOperation Parms{};
+
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDragged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_ExpandedModSlot_C::BP_OnEntryDragged(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnEntryDragged", FuncInfo);
+
+	Params::UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragged Parms{};
+
+	Parms.Operation = Operation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDragOverChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsDraggingOver                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_ExpandedModSlot_C::BP_OnEntryDragOverChanged(bool bIsDraggingOver)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnEntryDragOverChanged", FuncInfo);
+
+	Params::UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragOverChanged Parms{};
+
+	Parms.bIsDraggingOver = bIsDraggingOver;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDropped
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_ExpandedModSlot_C::BP_OnEntryDropped(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnEntryDropped", FuncInfo);
+
+	Params::UI_CFCore_ExpandedModSlot_C_BP_OnEntryDropped Parms{};
+
+	Parms.Operation = Operation;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -97,10 +159,8 @@ void UUI_CFCore_ExpandedModSlot_C::BndEvt__UI_ExpandedModSlot_UI_Button_ViewModS
 
 void UUI_CFCore_ExpandedModSlot_C::BP_OnEntryReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BP_OnEntryReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnEntryReleased", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +173,8 @@ void UUI_CFCore_ExpandedModSlot_C::BP_OnEntryReleased()
 
 void UUI_CFCore_ExpandedModSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BP_OnItemExpansionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnItemExpansionChanged", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_BP_OnItemExpansionChanged Parms{};
 
@@ -133,14 +191,30 @@ void UUI_CFCore_ExpandedModSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 
 void UUI_CFCore_ExpandedModSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "BP_OnItemSelectionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnItemSelectionChanged", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_BP_OnItemSelectionChanged Parms{};
 
 	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnUpdateEntryDropIndicator
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EUMGItemDropZone                        DropZone                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_ExpandedModSlot_C::BP_OnUpdateEntryDropIndicator(EUMGItemDropZone DropZone)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "BP_OnUpdateEntryDropIndicator", FuncInfo);
+
+	Params::UI_CFCore_ExpandedModSlot_C_BP_OnUpdateEntryDropIndicator Parms{};
+
+	Parms.DropZone = DropZone;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -151,10 +225,8 @@ void UUI_CFCore_ExpandedModSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 
 void UUI_CFCore_ExpandedModSlot_C::CancelInstallation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "CancelInstallation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "CancelInstallation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,10 +237,8 @@ void UUI_CFCore_ExpandedModSlot_C::CancelInstallation()
 
 void UUI_CFCore_ExpandedModSlot_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +249,8 @@ void UUI_CFCore_ExpandedModSlot_C::Construct()
 
 void UUI_CFCore_ExpandedModSlot_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +261,8 @@ void UUI_CFCore_ExpandedModSlot_C::Destruct()
 
 void UUI_CFCore_ExpandedModSlot_C::DownloadImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "DownloadImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "DownloadImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +273,8 @@ void UUI_CFCore_ExpandedModSlot_C::DownloadImage()
 
 void UUI_CFCore_ExpandedModSlot_C::Event_On_Uninstall_Pressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Event On Uninstall Pressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Event On Uninstall Pressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +285,8 @@ void UUI_CFCore_ExpandedModSlot_C::Event_On_Uninstall_Pressed()
 
 void UUI_CFCore_ExpandedModSlot_C::Event_View_Mod_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Event View Mod Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Event View Mod Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,10 +299,8 @@ void UUI_CFCore_ExpandedModSlot_C::Event_View_Mod_Page()
 
 void UUI_CFCore_ExpandedModSlot_C::ExecuteUbergraph_UI_CFCore_ExpandedModSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "ExecuteUbergraph_UI_CFCore_ExpandedModSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "ExecuteUbergraph_UI_CFCore_ExpandedModSlot", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_ExecuteUbergraph_UI_CFCore_ExpandedModSlot Parms{};
 
@@ -258,10 +318,8 @@ void UUI_CFCore_ExpandedModSlot_C::ExecuteUbergraph_UI_CFCore_ExpandedModSlot(in
 
 void UUI_CFCore_ExpandedModSlot_C::FormatDownloadNumber(int64 downloads, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "FormatDownloadNumber");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "FormatDownloadNumber", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_FormatDownloadNumber Parms{};
 
@@ -281,10 +339,8 @@ void UUI_CFCore_ExpandedModSlot_C::FormatDownloadNumber(int64 downloads, class F
 
 class UWidget* UUI_CFCore_ExpandedModSlot_C::GenerateAuthorNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GenerateAuthorNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GenerateAuthorNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GenerateAuthorNameToolTipWidget Parms{};
 
@@ -301,10 +357,8 @@ class UWidget* UUI_CFCore_ExpandedModSlot_C::GenerateAuthorNameToolTipWidget()
 
 class UWidget* UUI_CFCore_ExpandedModSlot_C::GenerateModNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GenerateModNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GenerateModNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GenerateModNameToolTipWidget Parms{};
 
@@ -321,10 +375,8 @@ class UWidget* UUI_CFCore_ExpandedModSlot_C::GenerateModNameToolTipWidget()
 
 void UUI_CFCore_ExpandedModSlot_C::GetAuthors(class FString* CombinedAuthorsNames)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GetAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GetAuthors", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GetAuthors Parms{};
 
@@ -342,10 +394,8 @@ void UUI_CFCore_ExpandedModSlot_C::GetAuthors(class FString* CombinedAuthorsName
 
 void UUI_CFCore_ExpandedModSlot_C::GetDownloadCount(class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GetDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GetDownloadCount", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GetDownloadCount Parms{};
 
@@ -363,10 +413,8 @@ void UUI_CFCore_ExpandedModSlot_C::GetDownloadCount(class FText* FinalAmount)
 
 void UUI_CFCore_ExpandedModSlot_C::GetModName(class FString* Name_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GetModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GetModName", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GetModName Parms{};
 
@@ -384,10 +432,8 @@ void UUI_CFCore_ExpandedModSlot_C::GetModName(class FString* Name_0)
 
 void UUI_CFCore_ExpandedModSlot_C::GetModSize(class FText* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GetModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GetModSize", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GetModSize Parms{};
 
@@ -405,10 +451,8 @@ void UUI_CFCore_ExpandedModSlot_C::GetModSize(class FText* Result)
 
 void UUI_CFCore_ExpandedModSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_GetRootCFWidget Parms{};
 
@@ -426,10 +470,8 @@ void UUI_CFCore_ExpandedModSlot_C::GetRootCFWidget(class UPanelWidget** RootPane
 
 void UUI_CFCore_ExpandedModSlot_C::InitModInfo(const struct FInstallProgressMod& NewModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "InitModInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "InitModInfo", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_InitModInfo Parms{};
 
@@ -444,10 +486,8 @@ void UUI_CFCore_ExpandedModSlot_C::InitModInfo(const struct FInstallProgressMod&
 
 void UUI_CFCore_ExpandedModSlot_C::InstallMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "InstallMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "InstallMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -463,10 +503,8 @@ void UUI_CFCore_ExpandedModSlot_C::InstallMod()
 
 bool UUI_CFCore_ExpandedModSlot_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_OnEventBroadcasted Parms{};
 
@@ -487,10 +525,8 @@ bool UUI_CFCore_ExpandedModSlot_C::OnEventBroadcasted(EGameModsEvent evt, const 
 
 void UUI_CFCore_ExpandedModSlot_C::OnFail_99B1ABC24A7099A526173E84E0B7AC9A(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "OnFail_99B1ABC24A7099A526173E84E0B7AC9A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "OnFail_99B1ABC24A7099A526173E84E0B7AC9A", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_OnFail_99B1ABC24A7099A526173E84E0B7AC9A Parms{};
 
@@ -507,10 +543,8 @@ void UUI_CFCore_ExpandedModSlot_C::OnFail_99B1ABC24A7099A526173E84E0B7AC9A(class
 
 void UUI_CFCore_ExpandedModSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "OnListItemObjectSet");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "OnListItemObjectSet", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_OnListItemObjectSet Parms{};
 
@@ -525,10 +559,8 @@ void UUI_CFCore_ExpandedModSlot_C::OnListItemObjectSet(class UObject* ListItemOb
 
 void UUI_CFCore_ExpandedModSlot_C::OnReturnClicked_Event_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "OnReturnClicked_Event_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "OnReturnClicked_Event_0", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -541,10 +573,8 @@ void UUI_CFCore_ExpandedModSlot_C::OnReturnClicked_Event_0()
 
 void UUI_CFCore_ExpandedModSlot_C::OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A Parms{};
 
@@ -555,14 +585,12 @@ void UUI_CFCore_ExpandedModSlot_C::OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A(cl
 
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.PlayStartingAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ExpandedModSlot_C::PlayStartingAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "PlayStartingAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "PlayStartingAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -573,10 +601,8 @@ void UUI_CFCore_ExpandedModSlot_C::PlayStartingAnimation()
 
 void UUI_CFCore_ExpandedModSlot_C::ResetWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "ResetWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "ResetWidget", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -589,10 +615,8 @@ void UUI_CFCore_ExpandedModSlot_C::ResetWidget()
 
 void UUI_CFCore_ExpandedModSlot_C::SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot(class UImage* IMG_GameImage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot", FuncInfo);
 
 	Params::UI_CFCore_ExpandedModSlot_C_SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot Parms{};
 
@@ -607,10 +631,8 @@ void UUI_CFCore_ExpandedModSlot_C::SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedMo
 
 void UUI_CFCore_ExpandedModSlot_C::ToggleUpdateButtonVisibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "ToggleUpdateButtonVisibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "ToggleUpdateButtonVisibility", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -621,10 +643,8 @@ void UUI_CFCore_ExpandedModSlot_C::ToggleUpdateButtonVisibility()
 
 void UUI_CFCore_ExpandedModSlot_C::Update_LikeStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "Update LikeStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "Update LikeStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -635,24 +655,20 @@ void UUI_CFCore_ExpandedModSlot_C::Update_LikeStatus()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateAuthors()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateAuthors", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.UpdateImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -663,10 +679,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateImage()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -677,10 +691,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateMod()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateModDownloadCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateModDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateModDownloadCount", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -691,10 +703,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateModDownloadCount()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateModName()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateModName", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -705,10 +715,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateModName()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateModRating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateModRating");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateModRating", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -719,10 +727,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateModRating()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateModSize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateModSize", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -733,10 +739,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateModSize()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdateModSummary()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdateModSummary");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdateModSummary", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -747,10 +751,8 @@ void UUI_CFCore_ExpandedModSlot_C::UpdateModSummary()
 
 void UUI_CFCore_ExpandedModSlot_C::UpdatePaidPremiumStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ExpandedModSlot_C", "UpdatePaidPremiumStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ExpandedModSlot_C", "UpdatePaidPremiumStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -16,90 +16,8 @@
 
 SDK_NAMESPACE_START
 
-// Function MassActors.MassAgentComponent.Disable
-// (Final, Native, Public, BlueprintCallable)
-
-void UMassAgentComponent::Disable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MassAgentComponent", "Disable");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MassActors.MassAgentComponent.Enable
-// (Final, Native, Public, BlueprintCallable)
-
-void UMassAgentComponent::Enable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MassAgentComponent", "Enable");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MassActors.MassAgentComponent.KillEntity
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const bool                              bDestroyActor                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMassAgentComponent::KillEntity(const bool bDestroyActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MassAgentComponent", "KillEntity");
-
-	Params::MassAgentComponent_KillEntity Parms{};
-
-	Parms.bDestroyActor = bDestroyActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MassActors.MassAgentComponent.OnRep_NetID
-// (Native, Public)
-
-void UMassAgentComponent::OnRep_NetID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MassAgentComponent", "OnRep_NetID");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function MassActors.MassActorPoolableInterface.CanBePooled
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -124,7 +42,7 @@ bool IMassActorPoolableInterface::CanBePooled()
 
 
 // Function MassActors.MassActorPoolableInterface.PrepareForGame
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
 void IMassActorPoolableInterface::PrepareForGame()
 {
@@ -143,7 +61,7 @@ void IMassActorPoolableInterface::PrepareForGame()
 
 
 // Function MassActors.MassActorPoolableInterface.PrepareForPooling
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
 void IMassActorPoolableInterface::PrepareForPooling()
 {
@@ -156,6 +74,88 @@ void IMassActorPoolableInterface::PrepareForPooling()
 	Func->FunctionFlags |= 0x400;
 
 	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MassActors.MassAgentComponent.Disable
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UMassAgentComponent::Disable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MassAgentComponent", "Disable");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MassActors.MassAgentComponent.Enable
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UMassAgentComponent::Enable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MassAgentComponent", "Enable");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MassActors.MassAgentComponent.KillEntity
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const bool                              bDestroyActor                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMassAgentComponent::KillEntity(const bool bDestroyActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MassAgentComponent", "KillEntity");
+
+	Params::MassAgentComponent_KillEntity Parms{};
+
+	Parms.bDestroyActor = bDestroyActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MassActors.MassAgentComponent.OnRep_NetID
+// (RequiredAPI, Native, Public)
+
+void UMassAgentComponent::OnRep_NetID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MassAgentComponent", "OnRep_NetID");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

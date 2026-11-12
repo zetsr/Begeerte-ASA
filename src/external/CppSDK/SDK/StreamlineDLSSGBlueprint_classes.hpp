@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "StreamlineDLSSGBlueprint_structs.hpp"
 #include "Engine_classes.hpp"
+#include "StreamlineDLSSGBlueprint_structs.hpp"
 #include "StreamlineBlueprint_structs.hpp"
 
 
@@ -24,6 +24,7 @@ class UStreamlineLibraryDLSSG final : public UBlueprintFunctionLibrary
 public:
 	static EStreamlineDLSSGMode GetDefaultDLSSGMode();
 	static void GetDLSSGFrameTiming(float* FrameRateInHertz, int32* FramesPresented);
+	static bool GetDLSSGIsVsyncSupportAvailable();
 	static EStreamlineDLSSGMode GetDLSSGMode();
 	static TArray<EStreamlineDLSSGMode> GetSupportedDLSSGModes();
 	static bool IsDLSSGModeSupported(EStreamlineDLSSGMode DLSSGMode);
@@ -45,5 +46,6 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibraryDLSSG>();
 	}
 };
+DUMPER7_ASSERTS_UStreamlineLibraryDLSSG;
 
 SDK_NAMESPACE_END

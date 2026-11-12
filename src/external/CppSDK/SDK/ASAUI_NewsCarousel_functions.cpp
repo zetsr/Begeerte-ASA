@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UASAUI_NewsCarousel_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarousel_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarousel_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void UASAUI_NewsCarousel_C::Construct()
 
 void UASAUI_NewsCarousel_C::DoClickAction(const class FString& ActionKey, const class FString& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarousel_C", "DoClickAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarousel_C", "DoClickAction", FuncInfo);
 
 	Params::ASAUI_NewsCarousel_C_DoClickAction Parms{};
 
@@ -59,10 +55,8 @@ void UASAUI_NewsCarousel_C::DoClickAction(const class FString& ActionKey, const 
 
 void UASAUI_NewsCarousel_C::ExecuteUbergraph_ASAUI_NewsCarousel(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarousel_C", "ExecuteUbergraph_ASAUI_NewsCarousel");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarousel_C", "ExecuteUbergraph_ASAUI_NewsCarousel", FuncInfo);
 
 	Params::ASAUI_NewsCarousel_C_ExecuteUbergraph_ASAUI_NewsCarousel Parms{};
 
@@ -79,10 +73,8 @@ void UASAUI_NewsCarousel_C::ExecuteUbergraph_ASAUI_NewsCarousel(int32 EntryPoint
 
 struct FLinearColor UASAUI_NewsCarousel_C::GetColorAndOpacity()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarousel_C", "GetColorAndOpacity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarousel_C", "GetColorAndOpacity", FuncInfo);
 
 	Params::ASAUI_NewsCarousel_C_GetColorAndOpacity Parms{};
 
@@ -99,10 +91,8 @@ struct FLinearColor UASAUI_NewsCarousel_C::GetColorAndOpacity()
 
 void UASAUI_NewsCarousel_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarousel_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarousel_C", "PreConstruct", FuncInfo);
 
 	Params::ASAUI_NewsCarousel_C_PreConstruct Parms{};
 

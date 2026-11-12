@@ -46,6 +46,36 @@ class FText ULocalizableMessageLibrary::Conv_LocalizableMessageToText(class UObj
 }
 
 
+// Function LocalizableMessageBlueprint.LocalizableMessageLibrary.EqualEqual_LocalizableMessage
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FLocalizableMessage&       A                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FLocalizableMessage&       B                                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULocalizableMessageLibrary::EqualEqual_LocalizableMessage(const struct FLocalizableMessage& A, const struct FLocalizableMessage& B)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LocalizableMessageLibrary", "EqualEqual_LocalizableMessage");
+
+	Params::LocalizableMessageLibrary_EqualEqual_LocalizableMessage Parms{};
+
+	Parms.A = std::move(A);
+	Parms.B = std::move(B);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function LocalizableMessageBlueprint.LocalizableMessageLibrary.IsEmpty_LocalizableMessage
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:

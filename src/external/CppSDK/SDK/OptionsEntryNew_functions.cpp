@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UOptionsEntryNew_C::BndEvt__OptionsEntryNew_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsEntryNew_C", "BndEvt__OptionsEntryNew_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsEntryNew_C", "BndEvt__OptionsEntryNew_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UOptionsEntryNew_C::BndEvt__OptionsEntryNew_Button_K2Node_ComponentBoundEve
 
 void UOptionsEntryNew_C::ExecuteUbergraph_OptionsEntryNew(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsEntryNew_C", "ExecuteUbergraph_OptionsEntryNew");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsEntryNew_C", "ExecuteUbergraph_OptionsEntryNew", FuncInfo);
 
 	Params::OptionsEntryNew_C_ExecuteUbergraph_OptionsEntryNew Parms{};
 

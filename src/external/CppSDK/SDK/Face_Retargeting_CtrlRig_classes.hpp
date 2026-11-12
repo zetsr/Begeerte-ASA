@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // ControlRigBlueprintGeneratedClass Face_Retargeting_CtrlRig.Face_Retargeting_CtrlRig_C
-// 0x0008 (0x0AD8 - 0x0AD0)
+// 0x0010 (0x0D30 - 0x0D20)
 class UFace_Retargeting_CtrlRig_C final : public UControlRig
 {
 public:
-	ERigVMTransformSpace                          Space;                                             // 0x0AD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WearingSkin;                                       // 0x0AD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LegacyWearingSkin_DEPRECATED;                      // 0x0AD2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERigVMTransformSpace                          Space;                                             // 0x0D20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WearingSkin;                                       // 0x0D21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LegacyWearingSkin_DEPRECATED;                      // 0x0D22(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UFace_Retargeting_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UFace_Retargeting_CtrlRig_C;
 
 SDK_NAMESPACE_END

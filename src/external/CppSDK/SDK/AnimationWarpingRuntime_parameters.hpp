@@ -10,12 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "AnimationWarpingRuntime_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.ApplyDeltaToOffsetRootBone
+// 0x0050 (0x0050 - 0x0000)
+struct AnimationWarpingLibrary_ApplyDeltaToOffsetRootBone final
+{
+public:
+	struct FOffsetRootBoneAnimNodeReference       OffsetRootBoneNode;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                TranslationWorld;                                  // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  RotationWorld;                                     // 0x0030(0x0020)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimationWarpingLibrary_ApplyDeltaToOffsetRootBone;
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.ConvertToOffsetRootBoneNodePure
+// 0x0028 (0x0028 - 0x0000)
+struct AnimationWarpingLibrary_ConvertToOffsetRootBoneNodePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FOffsetRootBoneAnimNodeReference       OffsetRootBoneNode;                                // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimationWarpingLibrary_ConvertToOffsetRootBoneNodePure;
 
 // Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetCurveValueFromAnimation
 // 0x0020 (0x0020 - 0x0000)
@@ -29,6 +54,20 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationWarpingLibrary_GetCurveValueFromAnimation;
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetFloatValueFromCurve
+// 0x0018 (0x0018 - 0x0000)
+struct AnimationWarpingLibrary_GetFloatValueFromCurve final
+{
+public:
+	const class UCurveFloat*                      InCurve;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutValue;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimationWarpingLibrary_GetFloatValueFromCurve;
 
 // Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetOffsetRootTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -38,6 +77,21 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimationWarpingLibrary_GetOffsetRootTransform;
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetVectorValueFromCurve
+// 0x0030 (0x0030 - 0x0000)
+struct AnimationWarpingLibrary_GetVectorValueFromCurve final
+{
+public:
+	const class UCurveVector*                     InCurve;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                OutValue;                                          // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimationWarpingLibrary_GetVectorValueFromCurve;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

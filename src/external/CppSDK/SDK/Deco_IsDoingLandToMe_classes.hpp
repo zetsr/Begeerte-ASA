@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UDeco_IsDoingLandToMe_C final : public UBTDecorator_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	struct FBlackboardKeySelector                 NavigationTargetKey;                               // 0x00A8(0x0028)(Edit, BlueprintVisible)
 
 public:
@@ -43,5 +43,6 @@ public:
 		return GetDefaultObjImpl<UDeco_IsDoingLandToMe_C>();
 	}
 };
+DUMPER7_ASSERTS_UDeco_IsDoingLandToMe_C;
 
 SDK_NAMESPACE_END

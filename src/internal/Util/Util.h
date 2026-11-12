@@ -414,23 +414,23 @@ namespace g_Util {
 
         // 禁用后处理
         // [2] -> (ByteOffset: +0x0, Bit: 2)
-        GameViewportClient->EngineShowFlags[0] &= ~(1 << 2);
+        // GameViewportClient->EngineShowFlags[0] &= ~(1 << 2);
 
         // 地面材质降低
         // [61] -> (ByteOffset: +0x7, Bit: 5)
-        GameViewportClient->EngineShowFlags[0x7] &= ~(1 << 5);
+        // GameViewportClient->EngineShowFlags[0x7] &= ~(1 << 5);
 
         // 删掉远景滤镜
         // [129] -> (ByteOffset: +0x10, Bit: 1)
-        GameViewportClient->EngineShowFlags[0x10] &= ~(1 << 1);
+        // GameViewportClient->EngineShowFlags[0x10] &= ~(1 << 1);
 
         // 禁用天空和反射
         // [139] -> (ByteOffset: +0x11, Bit: 3)
-        GameViewportClient->EngineShowFlags[0x11] &= ~(1 << 3);
+        // GameViewportClient->EngineShowFlags[0x11] &= ~(1 << 3);
 
         // 解决水面闪烁
         // [220] -> (ByteOffset: +0x1B, Bit: 4)
-        GameViewportClient->EngineShowFlags[0x1B] &= ~(1 << 4);
+        // GameViewportClient->EngineShowFlags[0x1B] &= ~(1 << 4);
 
         // 辅助宏：通过 KismetSystemLibrary 执行虚幻引擎控制台指令
         auto Exec = [WorldContextObject](const wchar_t* Cmd) {

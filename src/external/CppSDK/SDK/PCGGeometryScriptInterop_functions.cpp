@@ -16,62 +16,8 @@
 
 SDK_NAMESPACE_START
 
-// Function PCGGeometryScriptInterop.PCGDynamicMeshData.K2_Initialize
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UDynamicMesh*                     InMesh                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<class UMaterialInterface*>&InMaterials                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    bCanTakeOwnership                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPCGDynamicMeshData::K2_Initialize(class UDynamicMesh* InMesh, const TArray<class UMaterialInterface*>& InMaterials, bool bCanTakeOwnership)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGDynamicMeshData", "K2_Initialize");
-
-	Params::PCGDynamicMeshData_K2_Initialize Parms{};
-
-	Parms.InMesh = InMesh;
-	Parms.InMaterials = std::move(InMaterials);
-	Parms.bCanTakeOwnership = bCanTakeOwnership;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCGGeometryScriptInterop.PCGDynamicMeshData.SetMaterials
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class UMaterialInterface*>&InMaterials                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UPCGDynamicMeshData::SetMaterials(const TArray<class UMaterialInterface*>& InMaterials)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGDynamicMeshData", "SetMaterials");
-
-	Params::PCGDynamicMeshData_SetMaterials Parms{};
-
-	Parms.InMaterials = std::move(InMaterials);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.ProcessDynamicMesh
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UDynamicMesh*                     InDynMesh                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FString>*                  OutTags                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -95,7 +41,7 @@ void UPCGGeometryBlueprintElement::ProcessDynamicMesh(class UDynamicMesh* InDynM
 
 
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.CopyOrStealInputData
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const struct FPCGTaggedData&            InTaggedData                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UPCGDynamicMeshData*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

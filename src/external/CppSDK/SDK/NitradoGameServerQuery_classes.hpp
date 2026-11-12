@@ -63,5 +63,6 @@ public:
 		return GetDefaultObjImpl<UGameServerQuerySubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UGameServerQuerySubsystem;
 
 SDK_NAMESPACE_END

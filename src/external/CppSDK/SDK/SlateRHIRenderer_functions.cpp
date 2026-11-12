@@ -16,27 +16,45 @@
 
 SDK_NAMESPACE_START
 
-// Function SlateRHIRenderer.SlateFXSubsystem.GetSlatePostProcessor
-// (Final, Native, Public, BlueprintCallable)
+// Function SlateRHIRenderer.SlateFontBlueprintLibrary.MakeSlateFontInfo
+// (Final, RequiredAPI, Native, Static, Private, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USlateRHIPostBufferProcessor*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    FontObject                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          FontMaterial                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFontOutlineSettings&      OutlineSettings                                        (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             TypefaceFontName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Size                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LetterSpacing                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SkewAmount                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bForceMonospaced                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bMaterialIsStencil                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MonospacedWidth                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FSlateFontInfo                   ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class USlateRHIPostBufferProcessor* USlateFXSubsystem::GetSlatePostProcessor(ESlatePostRT InPostBufferBit)
+struct FSlateFontInfo USlateFontBlueprintLibrary::MakeSlateFontInfo(const class UObject* FontObject, class UObject* FontMaterial, const struct FFontOutlineSettings& OutlineSettings, class FName TypefaceFontName, float Size, int32 LetterSpacing, float SkewAmount, bool bForceMonospaced, bool bMaterialIsStencil, float MonospacedWidth)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SlateFXSubsystem", "GetSlatePostProcessor");
+		Func = StaticClass()->GetFunction("SlateFontBlueprintLibrary", "MakeSlateFontInfo");
 
-	Params::SlateFXSubsystem_GetSlatePostProcessor Parms{};
+	Params::SlateFontBlueprintLibrary_MakeSlateFontInfo Parms{};
 
-	Parms.InPostBufferBit = InPostBufferBit;
+	Parms.FontObject = FontObject;
+	Parms.FontMaterial = FontMaterial;
+	Parms.OutlineSettings = std::move(OutlineSettings);
+	Parms.TypefaceFontName = TypefaceFontName;
+	Parms.Size = Size;
+	Parms.LetterSpacing = LetterSpacing;
+	Parms.SkewAmount = SkewAmount;
+	Parms.bForceMonospaced = bForceMonospaced;
+	Parms.bMaterialIsStencil = bMaterialIsStencil;
+	Parms.MonospacedWidth = MonospacedWidth;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -45,7 +63,7 @@ class USlateRHIPostBufferProcessor* USlateFXSubsystem::GetSlatePostProcessor(ESl
 
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetMutableSlatePostSetting
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FSlatePostSettings               ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
@@ -73,7 +91,7 @@ struct FSlatePostSettings USlateRHIRendererSettings::GetMutableSlatePostSetting(
 
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetSlatePostSetting
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ESlatePostRT                            InPostBufferBit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSlatePostSettings         ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)

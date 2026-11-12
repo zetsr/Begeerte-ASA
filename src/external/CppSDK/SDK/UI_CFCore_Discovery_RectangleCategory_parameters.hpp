@@ -68,9 +68,10 @@ public:
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1A2[0x6];                                      // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x01A8(0x0010)()
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x01B8(0x0060)(HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         CallFunc_MakeSlateFontInfo_ReturnValue;            // 0x01B8(0x0060)(HasGetValueTypeHash)
+	float                                         CallFunc_MakeSlateFontInfo_Size_ImplicitCast;      // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_RectangleCategory_C_ExecuteUbergraph_UI_CFCore_Discovery_RectangleCategory;
 
 // Function UI_CFCore_Discovery_RectangleCategory.UI_CFCore_Discovery_RectangleCategory_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -80,6 +81,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_RectangleCategory_C_GetRootCFWidget;
 
 // Function UI_CFCore_Discovery_RectangleCategory.UI_CFCore_Discovery_RectangleCategory_C.OnFail_8B547B2B44BE3780AA9107BF907BE956
 // 0x0008 (0x0008 - 0x0000)
@@ -88,6 +90,7 @@ struct UI_CFCore_Discovery_RectangleCategory_C_OnFail_8B547B2B44BE3780AA9107BF90
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_RectangleCategory_C_OnFail_8B547B2B44BE3780AA9107BF907BE956;
 
 // Function UI_CFCore_Discovery_RectangleCategory.UI_CFCore_Discovery_RectangleCategory_C.OnSuccess_8B547B2B44BE3780AA9107BF907BE956
 // 0x0008 (0x0008 - 0x0000)
@@ -96,6 +99,7 @@ struct UI_CFCore_Discovery_RectangleCategory_C_OnSuccess_8B547B2B44BE3780AA9107B
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_RectangleCategory_C_OnSuccess_8B547B2B44BE3780AA9107BF907BE956;
 
 // Function UI_CFCore_Discovery_RectangleCategory.UI_CFCore_Discovery_RectangleCategory_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -104,6 +108,7 @@ struct UI_CFCore_Discovery_RectangleCategory_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_RectangleCategory_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

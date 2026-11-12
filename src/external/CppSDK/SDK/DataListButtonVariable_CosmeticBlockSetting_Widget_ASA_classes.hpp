@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DataListButtonVariable_CosmeticBlockSetting_Widget_ASA.DataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0560 - 0x0560)
 class UDataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C final : public UDataListButtonVariable_Bool_Widget_ASA_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C>();
 	}
 };
+DUMPER7_ASSERTS_UDataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C;
 
 SDK_NAMESPACE_END

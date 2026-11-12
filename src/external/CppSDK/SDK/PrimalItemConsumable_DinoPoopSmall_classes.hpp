@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_DinoPoopSmall_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_DinoPoopSmall_C;
 
 SDK_NAMESPACE_END

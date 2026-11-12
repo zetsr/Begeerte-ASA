@@ -10,34 +10,34 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_CFCore_DiscoveryCategory.UI_CFCore_DiscoveryCategory_C
-// 0x0178 (0x09E8 - 0x0870)
+// 0x0178 (0x0A48 - 0x08D0)
 class UUI_CFCore_DiscoveryCategory_C final : public UCFCoreWidget_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_DiscoveryCategory_C;      // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeInGoTos;                                       // 0x0878(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                BORDER_DebugNotRuntime;                            // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_0;                                         // 0x0888(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Categories;                                // 0x0890(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TEXT_ShelveTitle;                                  // 0x0898(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_GeneratedList;                         // 0x08A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               WrapBox_Categories;                                // 0x08A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<int64>                                 Mod_Id;                                            // 0x08B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FInstallProgressMod>            Out_Mod;                                           // 0x08C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UUI_CFCore_Discovery_C*                 Discovery;                                         // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TArray<class UUI_CFCore_GameSlot_C*>          ListOfGameSlots;                                   // 0x08D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UUI_CFCore_Discovery_ViewAllSlot_C*     ViewAllButton;                                     // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FShelf                                 Shelf;                                             // 0x08F0(0x00E8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   ShelveTitle;                                       // 0x09D8(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_DiscoveryCategory_C;      // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UWrapBox*                               WrapBox_Categories;                                // 0x08D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_GeneratedList;                         // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TEXT_ShelveTitle;                                  // 0x08E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Categories;                                // 0x08F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x08F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BORDER_DebugNotRuntime;                            // 0x0900(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeInGoTos;                                       // 0x0908(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	TArray<int64>                                 Mod_ID;                                            // 0x0910(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FInstallProgressMod>            Out_Mod;                                           // 0x0920(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UUI_CFCore_Discovery_C*                 Discovery;                                         // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TArray<class UUI_CFCore_GameSlot_C*>          ListOfGameSlots;                                   // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UUI_CFCore_Discovery_ViewAllSlot_C*     ViewAllButton;                                     // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FShelf                                 Shelf;                                             // 0x0950(0x00E8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   ShelveTitle;                                       // 0x0A38(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void Construct();
@@ -62,5 +62,6 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_DiscoveryCategory_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_CFCore_DiscoveryCategory_C;
 
 SDK_NAMESPACE_END

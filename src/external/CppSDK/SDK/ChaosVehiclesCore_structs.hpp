@@ -15,15 +15,25 @@
 
 SDK_NAMESPACE_START
 
+// Enum ChaosVehiclesCore.EModuleInputQuantizationType
+// NumValues: 0x0003
+enum class EModuleInputQuantizationType : uint8
+{
+	Default_16Bits                           = 0,
+	Custom_8Bits                             = 1,
+	EModuleInputQuantizationType_MAX         = 2,
+};
+
 // Enum ChaosVehiclesCore.EModuleInputValueType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EModuleInputValueType : uint8
 {
 	MBoolean                                 = 0,
 	MAxis1D                                  = 1,
 	MAxis2D                                  = 2,
 	MAxis3D                                  = 3,
-	EModuleInputValueType_MAX                = 4,
+	MInteger                                 = 4,
+	EModuleInputValueType_MAX                = 5,
 };
 
 // Enum ChaosVehiclesCore.EFunctionType
@@ -34,6 +44,16 @@ enum class EFunctionType : uint8
 	SquaredFunction                          = 1,
 	CustomCurve                              = 2,
 	EFunctionType_MAX                        = 3,
+};
+
+// Enum ChaosVehiclesCore.EModuleInputBufferActionType
+// NumValues: 0x0004
+enum class EModuleInputBufferActionType : uint8
+{
+	Override                                 = 0,
+	Combine                                  = 1,
+	Average                                  = 2,
+	EModuleInputBufferActionType_MAX         = 3,
 };
 
 // Enum ChaosVehiclesCore.ESimTreeProcessingOrder
@@ -48,25 +68,33 @@ enum class ESimTreeProcessingOrder : uint8
 };
 
 // ScriptStruct ChaosVehiclesCore.ModuleInputValue
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FModuleInputValue final
 {
 public:
-	struct FVector                                Value;                                             // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EModuleInputValueType                         ValueType;                                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bHasValue;                                         // 0x0000(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ValueInt;                                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EModuleInputValueType                         ValueType;                                         // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bApplyInputDecay;                                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bInverseInputDecay;                                // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bClearAfterConsumed;                               // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
+DUMPER7_ASSERTS_FModuleInputValue;
 
 // ScriptStruct ChaosVehiclesCore.ModuleInputSetup
-// 0x0018 (0x0018 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct FModuleInputSetup final
 {
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EModuleInputValueType                         Type;                                              // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UDefaultModularVehicleInputModifier> InputModifierClass;                       // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyInputDecay;                                  // 0x0009(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInverseInputDecay;                                // 0x000A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClearAfterConsumed;                               // 0x000B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FModuleInputSetup;
 
 // ScriptStruct ChaosVehiclesCore.ModuleInputContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -75,5 +103,6 @@ struct FModuleInputContainer final
 public:
 	TArray<struct FModuleInputValue>              InputValues;                                       // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FModuleInputContainer;
 
 SDK_NAMESPACE_END

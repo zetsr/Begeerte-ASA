@@ -14,14 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function MassActors.MassAgentComponent.KillEntity
-// 0x0001 (0x0001 - 0x0000)
-struct MassAgentComponent_KillEntity final
-{
-public:
-	bool                                          bDestroyActor;                                     // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
 // Function MassActors.MassActorPoolableInterface.CanBePooled
 // 0x0001 (0x0001 - 0x0000)
 struct MassActorPoolableInterface_CanBePooled final
@@ -29,6 +21,16 @@ struct MassActorPoolableInterface_CanBePooled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassActorPoolableInterface_CanBePooled;
+
+// Function MassActors.MassAgentComponent.KillEntity
+// 0x0001 (0x0001 - 0x0000)
+struct MassAgentComponent_KillEntity final
+{
+public:
+	bool                                          bDestroyActor;                                     // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MassAgentComponent_KillEntity;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

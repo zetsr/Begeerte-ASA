@@ -26,6 +26,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniAssetBlueprintComponent_HasParameter;
 
 // Function HoudiniEngineRuntime.HoudiniAssetBlueprintComponent.SetFloatParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -36,6 +37,7 @@ public:
 	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Index_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniAssetBlueprintComponent_SetFloatParameter;
 
 // Function HoudiniEngineRuntime.HoudiniAssetBlueprintComponent.SetToggleValueAt
 // 0x0018 (0x0018 - 0x0000)
@@ -47,16 +49,18 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniAssetBlueprintComponent_SetToggleValueAt;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.AddStaticMaterial
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct HoudiniStaticMesh_AddStaticMaterial final
 {
 public:
-	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint32                                        ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint32                                        ReturnValue;                                       // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_AddStaticMaterial;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.CalculateNormals
 // 0x0001 (0x0001 - 0x0000)
@@ -65,6 +69,7 @@ struct HoudiniStaticMesh_CalculateNormals final
 public:
 	bool                                          bInComputeWeightedNormals;                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_CalculateNormals;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.CalculateTangents
 // 0x0001 (0x0001 - 0x0000)
@@ -73,6 +78,7 @@ struct HoudiniStaticMesh_CalculateTangents final
 public:
 	bool                                          bInComputeWeightedNormals;                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_CalculateTangents;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetMaterial
 // 0x0010 (0x0010 - 0x0000)
@@ -83,6 +89,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetMaterial;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.Initialize
 // 0x0014 (0x0014 - 0x0000)
@@ -98,6 +105,7 @@ public:
 	bool                                          bInHasColors;                                      // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInHasPerFaceMaterials;                            // 0x0013(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_Initialize;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetHasColors
 // 0x0001 (0x0001 - 0x0000)
@@ -106,6 +114,7 @@ struct HoudiniStaticMesh_SetHasColors final
 public:
 	bool                                          bInHasColors;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetHasColors;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetHasNormals
 // 0x0001 (0x0001 - 0x0000)
@@ -114,6 +123,7 @@ struct HoudiniStaticMesh_SetHasNormals final
 public:
 	bool                                          bInHasNormals;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetHasNormals;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetHasPerFaceMaterials
 // 0x0001 (0x0001 - 0x0000)
@@ -122,6 +132,7 @@ struct HoudiniStaticMesh_SetHasPerFaceMaterials final
 public:
 	bool                                          bInHasPerFaceMaterials;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetHasPerFaceMaterials;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetHasTangents
 // 0x0001 (0x0001 - 0x0000)
@@ -130,6 +141,7 @@ struct HoudiniStaticMesh_SetHasTangents final
 public:
 	bool                                          bInHasTangents;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetHasTangents;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetNumStaticMaterials
 // 0x0004 (0x0004 - 0x0000)
@@ -138,6 +150,7 @@ struct HoudiniStaticMesh_SetNumStaticMaterials final
 public:
 	uint32                                        InNumStaticMaterials;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetNumStaticMaterials;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetNumUVLayers
 // 0x0004 (0x0004 - 0x0000)
@@ -146,16 +159,18 @@ struct HoudiniStaticMesh_SetNumUVLayers final
 public:
 	uint32                                        InNumUVLayers;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetNumUVLayers;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetStaticMaterial
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct HoudiniStaticMesh_SetStaticMaterial final
 {
 public:
 	uint32                                        InMaterialIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0008(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0008(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetStaticMaterial;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleMaterialID
 // 0x0008 (0x0008 - 0x0000)
@@ -165,6 +180,7 @@ public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InMaterialID;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleMaterialID;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexColor
 // 0x000C (0x000C - 0x0000)
@@ -176,6 +192,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 InColor;                                           // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexColor;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexIndices
 // 0x0010 (0x0010 - 0x0000)
@@ -185,6 +202,7 @@ public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntVector                             InTriangleVertexIndices;                           // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexIndices;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexNormal
 // 0x0014 (0x0014 - 0x0000)
@@ -196,6 +214,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InNormal;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexNormal;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexUTangent
 // 0x0014 (0x0014 - 0x0000)
@@ -207,6 +226,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InUTangent;                                        // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexUTangent;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexUV
 // 0x0010 (0x0010 - 0x0000)
@@ -219,6 +239,7 @@ public:
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2f                              InUV;                                              // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexUV;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexVTangent
 // 0x0014 (0x0014 - 0x0000)
@@ -230,6 +251,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InVTangent;                                        // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetTriangleVertexVTangent;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetVertexPosition
 // 0x0010 (0x0010 - 0x0000)
@@ -239,14 +261,16 @@ public:
 	uint32                                        InVertexIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector3f                              InPosition;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_SetVertexPosition;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.CalcBounds
 // 0x0038 (0x0038 - 0x0000)
 struct HoudiniStaticMesh_CalcBounds final
 {
 public:
-	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_CalcBounds;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetMaterialIDsPerTriangle
 // 0x0010 (0x0010 - 0x0000)
@@ -255,6 +279,7 @@ struct HoudiniStaticMesh_GetMaterialIDsPerTriangle final
 public:
 	TArray<int32>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetMaterialIDsPerTriangle;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetMaterialIndex
 // 0x000C (0x000C - 0x0000)
@@ -264,6 +289,7 @@ public:
 	class FName                                   InMaterialSlotName;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetMaterialIndex;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetNumStaticMaterials
 // 0x0004 (0x0004 - 0x0000)
@@ -272,6 +298,7 @@ struct HoudiniStaticMesh_GetNumStaticMaterials final
 public:
 	uint32                                        ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetNumStaticMaterials;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetNumTriangles
 // 0x0004 (0x0004 - 0x0000)
@@ -280,6 +307,7 @@ struct HoudiniStaticMesh_GetNumTriangles final
 public:
 	uint32                                        ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetNumTriangles;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetNumUVLayers
 // 0x0004 (0x0004 - 0x0000)
@@ -288,6 +316,7 @@ struct HoudiniStaticMesh_GetNumUVLayers final
 public:
 	uint32                                        ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetNumUVLayers;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetNumVertexInstances
 // 0x0004 (0x0004 - 0x0000)
@@ -296,6 +325,7 @@ struct HoudiniStaticMesh_GetNumVertexInstances final
 public:
 	uint32                                        ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetNumVertexInstances;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetNumVertices
 // 0x0004 (0x0004 - 0x0000)
@@ -304,6 +334,7 @@ struct HoudiniStaticMesh_GetNumVertices final
 public:
 	uint32                                        ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetNumVertices;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetStaticMaterials
 // 0x0010 (0x0010 - 0x0000)
@@ -312,6 +343,7 @@ struct HoudiniStaticMesh_GetStaticMaterials final
 public:
 	TArray<struct FStaticMaterial>                ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetStaticMaterials;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetTriangleIndices
 // 0x0010 (0x0010 - 0x0000)
@@ -320,6 +352,7 @@ struct HoudiniStaticMesh_GetTriangleIndices final
 public:
 	TArray<struct FIntVector>                     ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetTriangleIndices;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexInstanceColors
 // 0x0010 (0x0010 - 0x0000)
@@ -328,6 +361,7 @@ struct HoudiniStaticMesh_GetVertexInstanceColors final
 public:
 	TArray<struct FColor>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexInstanceColors;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexInstanceNormals
 // 0x0010 (0x0010 - 0x0000)
@@ -336,6 +370,7 @@ struct HoudiniStaticMesh_GetVertexInstanceNormals final
 public:
 	TArray<struct FVector3f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexInstanceNormals;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexInstanceUTangents
 // 0x0010 (0x0010 - 0x0000)
@@ -344,6 +379,7 @@ struct HoudiniStaticMesh_GetVertexInstanceUTangents final
 public:
 	TArray<struct FVector3f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexInstanceUTangents;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexInstanceUVs
 // 0x0010 (0x0010 - 0x0000)
@@ -352,6 +388,7 @@ struct HoudiniStaticMesh_GetVertexInstanceUVs final
 public:
 	TArray<struct FVector2f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexInstanceUVs;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexInstanceVTangents
 // 0x0010 (0x0010 - 0x0000)
@@ -360,6 +397,7 @@ struct HoudiniStaticMesh_GetVertexInstanceVTangents final
 public:
 	TArray<struct FVector3f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexInstanceVTangents;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.GetVertexPositions
 // 0x0010 (0x0010 - 0x0000)
@@ -368,6 +406,7 @@ struct HoudiniStaticMesh_GetVertexPositions final
 public:
 	TArray<struct FVector3f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_GetVertexPositions;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.HasColors
 // 0x0001 (0x0001 - 0x0000)
@@ -376,6 +415,7 @@ struct HoudiniStaticMesh_HasColors final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_HasColors;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.HasNormals
 // 0x0001 (0x0001 - 0x0000)
@@ -384,6 +424,7 @@ struct HoudiniStaticMesh_HasNormals final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_HasNormals;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.HasPerFaceMaterials
 // 0x0001 (0x0001 - 0x0000)
@@ -392,6 +433,7 @@ struct HoudiniStaticMesh_HasPerFaceMaterials final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_HasPerFaceMaterials;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.HasTangents
 // 0x0001 (0x0001 - 0x0000)
@@ -400,6 +442,7 @@ struct HoudiniStaticMesh_HasTangents final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_HasTangents;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.IsValid
 // 0x0002 (0x0002 - 0x0000)
@@ -409,6 +452,7 @@ public:
 	bool                                          bInSkipVertexIndicesCheck;                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMesh_IsValid;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.GetMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -417,6 +461,7 @@ struct HoudiniStaticMeshComponent_GetMesh final
 public:
 	class UHoudiniStaticMesh*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMeshComponent_GetMesh;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetHoudiniIconVisible
 // 0x0001 (0x0001 - 0x0000)
@@ -425,6 +470,7 @@ struct HoudiniStaticMeshComponent_SetHoudiniIconVisible final
 public:
 	bool                                          bInHoudiniIconVisible;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMeshComponent_SetHoudiniIconVisible;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.SetMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -433,6 +479,7 @@ struct HoudiniStaticMeshComponent_SetMesh final
 public:
 	class UHoudiniStaticMesh*                     InMesh;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMeshComponent_SetMesh;
 
 // Function HoudiniEngineRuntime.HoudiniStaticMeshComponent.IsHoudiniIconVisible
 // 0x0001 (0x0001 - 0x0000)
@@ -441,6 +488,7 @@ struct HoudiniStaticMeshComponent_IsHoudiniIconVisible final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HoudiniStaticMeshComponent_IsHoudiniIconVisible;
 
 // Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
 // 0x0018 (0x0018 - 0x0000)
@@ -451,6 +499,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONData;
 
 // Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
 // 0x0018 (0x0018 - 0x0000)
@@ -461,6 +510,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniToolData_PopulateFromJSONFile;
 
 // Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
 // 0x0018 (0x0018 - 0x0000)
@@ -471,6 +521,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniToolData_SaveToJSONFile;
 
 // Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
 // 0x0018 (0x0018 - 0x0000)
@@ -481,6 +532,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_HoudiniToolData_ConvertToJSONData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -26,10 +26,8 @@ SDK_NAMESPACE_START
 
 bool UUI_CFCore_GameSlot_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_OnEventBroadcasted Parms{};
 
@@ -50,10 +48,8 @@ bool UUI_CFCore_GameSlot_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<
 
 void UUI_CFCore_GameSlot_C::SequenceEvent__ENTRYPOINTUI_CFCore_GameSlot(class UImage* IMG_GameImage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "SequenceEvent__ENTRYPOINTUI_CFCore_GameSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "SequenceEvent__ENTRYPOINTUI_CFCore_GameSlot", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_SequenceEvent__ENTRYPOINTUI_CFCore_GameSlot Parms{};
 
@@ -70,10 +66,8 @@ void UUI_CFCore_GameSlot_C::SequenceEvent__ENTRYPOINTUI_CFCore_GameSlot(class UI
 
 void UUI_CFCore_GameSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetRootCFWidget Parms{};
 
@@ -89,10 +83,8 @@ void UUI_CFCore_GameSlot_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget
 
 void UUI_CFCore_GameSlot_C::RetryPlatformProductPriceInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "RetryPlatformProductPriceInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "RetryPlatformProductPriceInfo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -103,10 +95,8 @@ void UUI_CFCore_GameSlot_C::RetryPlatformProductPriceInfo()
 
 void UUI_CFCore_GameSlot_C::GetPlatformProductPriceInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetPlatformProductPriceInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetPlatformProductPriceInfo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,14 +109,12 @@ void UUI_CFCore_GameSlot_C::GetPlatformProductPriceInfo()
 // const class FText&                      PriceText                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const class FText&                      DescriptionText                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // int64                                   NumericPrice                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    productId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    ProductId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_GameSlot_C::Platform_GetPriceOfProduct_Response(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& productId)
+void UUI_CFCore_GameSlot_C::Platform_GetPriceOfProduct_Response(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Platform_GetPriceOfProduct_Response");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Platform_GetPriceOfProduct_Response", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_Platform_GetPriceOfProduct_Response Parms{};
 
@@ -134,7 +122,7 @@ void UUI_CFCore_GameSlot_C::Platform_GetPriceOfProduct_Response(int64 modId, con
 	Parms.PriceText = std::move(PriceText);
 	Parms.DescriptionText = std::move(DescriptionText);
 	Parms.NumericPrice = NumericPrice;
-	Parms.productId = std::move(productId);
+	Parms.ProductId = std::move(ProductId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -143,21 +131,19 @@ void UUI_CFCore_GameSlot_C::Platform_GetPriceOfProduct_Response(int64 modId, con
 // Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.GetDiscountProductIdOfModInThisSlot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString*                          productId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          ProductId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_GameSlot_C::GetDiscountProductIdOfModInThisSlot(class FString* productId)
+void UUI_CFCore_GameSlot_C::GetDiscountProductIdOfModInThisSlot(class FString* ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetDiscountProductIdOfModInThisSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetDiscountProductIdOfModInThisSlot", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetDiscountProductIdOfModInThisSlot Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (productId != nullptr)
-		*productId = std::move(Parms.productId);
+	if (ProductId != nullptr)
+		*ProductId = std::move(Parms.ProductId);
 }
 
 
@@ -168,10 +154,8 @@ void UUI_CFCore_GameSlot_C::GetDiscountProductIdOfModInThisSlot(class FString* p
 
 void UUI_CFCore_GameSlot_C::IsDiscountedProduct(bool* IsDiscounted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "IsDiscountedProduct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "IsDiscountedProduct", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_IsDiscountedProduct Parms{};
 
@@ -185,21 +169,19 @@ void UUI_CFCore_GameSlot_C::IsDiscountedProduct(bool* IsDiscounted)
 // Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.GetBaseProductIdOfModInThisSlot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString*                          productId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          ProductId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_GameSlot_C::GetBaseProductIdOfModInThisSlot(class FString* productId)
+void UUI_CFCore_GameSlot_C::GetBaseProductIdOfModInThisSlot(class FString* ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetBaseProductIdOfModInThisSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetBaseProductIdOfModInThisSlot", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetBaseProductIdOfModInThisSlot Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (productId != nullptr)
-		*productId = std::move(Parms.productId);
+	if (ProductId != nullptr)
+		*ProductId = std::move(Parms.ProductId);
 }
 
 
@@ -210,10 +192,8 @@ void UUI_CFCore_GameSlot_C::GetBaseProductIdOfModInThisSlot(class FString* produ
 
 void UUI_CFCore_GameSlot_C::GetIdOfModInThisSlot(int64* modId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetIdOfModInThisSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetIdOfModInThisSlot", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetIdOfModInThisSlot Parms{};
 
@@ -229,10 +209,8 @@ void UUI_CFCore_GameSlot_C::GetIdOfModInThisSlot(int64* modId)
 
 void UUI_CFCore_GameSlot_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -243,10 +221,8 @@ void UUI_CFCore_GameSlot_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_GameSlot_C::UpdateDiscountPercent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateDiscountPercent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateDiscountPercent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -257,10 +233,8 @@ void UUI_CFCore_GameSlot_C::UpdateDiscountPercent()
 
 void UUI_CFCore_GameSlot_C::ApplyDiscountData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "ApplyDiscountData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "ApplyDiscountData", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -271,10 +245,8 @@ void UUI_CFCore_GameSlot_C::ApplyDiscountData()
 
 void UUI_CFCore_GameSlot_C::UpdatePaidPremiumStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdatePaidPremiumStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdatePaidPremiumStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -287,10 +259,8 @@ void UUI_CFCore_GameSlot_C::UpdatePaidPremiumStatus()
 
 void UUI_CFCore_GameSlot_C::Change_Slot_Enable_State(bool IsEnableState_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Change Slot Enable State");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Change Slot Enable State", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_Change_Slot_Enable_State Parms{};
 
@@ -301,14 +271,12 @@ void UUI_CFCore_GameSlot_C::Change_Slot_Enable_State(bool IsEnableState_0)
 
 
 // Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.PlayStartingAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_GameSlot_C::PlayStartingAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "PlayStartingAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "PlayStartingAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -321,10 +289,8 @@ void UUI_CFCore_GameSlot_C::PlayStartingAnimation()
 
 void UUI_CFCore_GameSlot_C::GetDownloadCount(class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetDownloadCount", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetDownloadCount Parms{};
 
@@ -340,10 +306,8 @@ void UUI_CFCore_GameSlot_C::GetDownloadCount(class FText* FinalAmount)
 
 void UUI_CFCore_GameSlot_C::UpdateModCard()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateModCard");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateModCard", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +320,8 @@ void UUI_CFCore_GameSlot_C::UpdateModCard()
 
 void UUI_CFCore_GameSlot_C::GetModSize(class FText* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetModSize", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetModSize Parms{};
 
@@ -377,10 +339,8 @@ void UUI_CFCore_GameSlot_C::GetModSize(class FText* Result)
 
 void UUI_CFCore_GameSlot_C::GetAuthors(class FString* CombinedAuthorsNames)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetAuthors", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetAuthors Parms{};
 
@@ -398,10 +358,8 @@ void UUI_CFCore_GameSlot_C::GetAuthors(class FString* CombinedAuthorsNames)
 
 void UUI_CFCore_GameSlot_C::GetModName(class FString* Name_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GetModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GetModName", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GetModName Parms{};
 
@@ -417,10 +375,8 @@ void UUI_CFCore_GameSlot_C::GetModName(class FString* Name_0)
 
 void UUI_CFCore_GameSlot_C::UpdateModSize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateModSize");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateModSize", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -431,10 +387,8 @@ void UUI_CFCore_GameSlot_C::UpdateModSize()
 
 void UUI_CFCore_GameSlot_C::UpdateModRating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateModRating");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateModRating", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +399,8 @@ void UUI_CFCore_GameSlot_C::UpdateModRating()
 
 void UUI_CFCore_GameSlot_C::UpdateModDownloadCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateModDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateModDownloadCount", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -459,10 +411,8 @@ void UUI_CFCore_GameSlot_C::UpdateModDownloadCount()
 
 void UUI_CFCore_GameSlot_C::Update_LikeStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Update LikeStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Update LikeStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -473,24 +423,20 @@ void UUI_CFCore_GameSlot_C::Update_LikeStatus()
 
 void UUI_CFCore_GameSlot_C::UpdateThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.UpdateImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_GameSlot_C::UpdateImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -501,10 +447,8 @@ void UUI_CFCore_GameSlot_C::UpdateImage()
 
 void UUI_CFCore_GameSlot_C::UpdateAuthors()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateAuthors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateAuthors", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -515,10 +459,8 @@ void UUI_CFCore_GameSlot_C::UpdateAuthors()
 
 void UUI_CFCore_GameSlot_C::UpdateModName()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateModName", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -532,10 +474,8 @@ void UUI_CFCore_GameSlot_C::UpdateModName()
 
 void UUI_CFCore_GameSlot_C::FormatDownloadNumber(int64 downloads, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "FormatDownloadNumber");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "FormatDownloadNumber", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_FormatDownloadNumber Parms{};
 
@@ -555,10 +495,8 @@ void UUI_CFCore_GameSlot_C::FormatDownloadNumber(int64 downloads, class FText* F
 
 class UWidget* UUI_CFCore_GameSlot_C::GenerateModNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GenerateModNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GenerateModNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GenerateModNameToolTipWidget Parms{};
 
@@ -575,10 +513,8 @@ class UWidget* UUI_CFCore_GameSlot_C::GenerateModNameToolTipWidget()
 
 class UWidget* UUI_CFCore_GameSlot_C::GenerateAuthorNameToolTipWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "GenerateAuthorNameToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "GenerateAuthorNameToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_GenerateAuthorNameToolTipWidget Parms{};
 
@@ -595,10 +531,8 @@ class UWidget* UUI_CFCore_GameSlot_C::GenerateAuthorNameToolTipWidget()
 
 void UUI_CFCore_GameSlot_C::InitModInfo(const struct FInstallProgressMod& NewModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "InitModInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "InitModInfo", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_InitModInfo Parms{};
 
@@ -617,10 +551,8 @@ void UUI_CFCore_GameSlot_C::InitModInfo(const struct FInstallProgressMod& NewMod
 
 struct FEventReply UUI_CFCore_GameSlot_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnMouseButtonDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnMouseButtonDown", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_OnMouseButtonDown Parms{};
 
@@ -640,10 +572,8 @@ struct FEventReply UUI_CFCore_GameSlot_C::OnMouseButtonDown(const struct FGeomet
 
 void UUI_CFCore_GameSlot_C::OnFail_B97DCA8245D1E43D54A2A9BEF5BD8D82(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnFail_B97DCA8245D1E43D54A2A9BEF5BD8D82");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnFail_B97DCA8245D1E43D54A2A9BEF5BD8D82", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_OnFail_B97DCA8245D1E43D54A2A9BEF5BD8D82 Parms{};
 
@@ -660,14 +590,84 @@ void UUI_CFCore_GameSlot_C::OnFail_B97DCA8245D1E43D54A2A9BEF5BD8D82(class UTextu
 
 void UUI_CFCore_GameSlot_C::OnSuccess_B97DCA8245D1E43D54A2A9BEF5BD8D82(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnSuccess_B97DCA8245D1E43D54A2A9BEF5BD8D82");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnSuccess_B97DCA8245D1E43D54A2A9BEF5BD8D82", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_OnSuccess_B97DCA8245D1E43D54A2A9BEF5BD8D82 Parms{};
 
 	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.BP_OnEndEntryDropOperation
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_GameSlot_C::BP_OnEndEntryDropOperation(bool bSuccess)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnEndEntryDropOperation", FuncInfo);
+
+	Params::UI_CFCore_GameSlot_C_BP_OnEndEntryDropOperation Parms{};
+
+	Parms.bSuccess = bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.BP_OnEntryDragged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_GameSlot_C::BP_OnEntryDragged(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnEntryDragged", FuncInfo);
+
+	Params::UI_CFCore_GameSlot_C_BP_OnEntryDragged Parms{};
+
+	Parms.Operation = Operation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.BP_OnEntryDragOverChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsDraggingOver                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_GameSlot_C::BP_OnEntryDragOverChanged(bool bIsDraggingOver)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnEntryDragOverChanged", FuncInfo);
+
+	Params::UI_CFCore_GameSlot_C_BP_OnEntryDragOverChanged Parms{};
+
+	Parms.bIsDraggingOver = bIsDraggingOver;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.BP_OnEntryDropped
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UDragDropOperation*               Operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_GameSlot_C::BP_OnEntryDropped(class UDragDropOperation* Operation)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnEntryDropped", FuncInfo);
+
+	Params::UI_CFCore_GameSlot_C_BP_OnEntryDropped Parms{};
+
+	Parms.Operation = Operation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -678,10 +678,8 @@ void UUI_CFCore_GameSlot_C::OnSuccess_B97DCA8245D1E43D54A2A9BEF5BD8D82(class UTe
 
 void UUI_CFCore_GameSlot_C::BP_OnEntryReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BP_OnEntryReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnEntryReleased", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -694,10 +692,8 @@ void UUI_CFCore_GameSlot_C::BP_OnEntryReleased()
 
 void UUI_CFCore_GameSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BP_OnItemExpansionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnItemExpansionChanged", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_BP_OnItemExpansionChanged Parms{};
 
@@ -714,14 +710,30 @@ void UUI_CFCore_GameSlot_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 
 void UUI_CFCore_GameSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BP_OnItemSelectionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnItemSelectionChanged", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_BP_OnItemSelectionChanged Parms{};
 
 	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_CFCore_GameSlot.UI_CFCore_GameSlot_C.BP_OnUpdateEntryDropIndicator
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EUMGItemDropZone                        DropZone                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_CFCore_GameSlot_C::BP_OnUpdateEntryDropIndicator(EUMGItemDropZone DropZone)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BP_OnUpdateEntryDropIndicator", FuncInfo);
+
+	Params::UI_CFCore_GameSlot_C_BP_OnUpdateEntryDropIndicator Parms{};
+
+	Parms.DropZone = DropZone;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -734,10 +746,8 @@ void UUI_CFCore_GameSlot_C::BP_OnItemSelectionChanged(bool bIsSelected)
 
 void UUI_CFCore_GameSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnListItemObjectSet");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnListItemObjectSet", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_OnListItemObjectSet Parms{};
 
@@ -754,10 +764,8 @@ void UUI_CFCore_GameSlot_C::OnListItemObjectSet(class UObject* ListItemObject)
 
 void UUI_CFCore_GameSlot_C::Animation_UpdateModImage(class UImage* IMG_GameImage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Animation_UpdateModImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Animation_UpdateModImage", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_Animation_UpdateModImage Parms{};
 
@@ -772,10 +780,8 @@ void UUI_CFCore_GameSlot_C::Animation_UpdateModImage(class UImage* IMG_GameImage
 
 void UUI_CFCore_GameSlot_C::BndEvt__GameSlot_Button_53_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BndEvt__GameSlot_Button_53_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BndEvt__GameSlot_Button_53_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -786,10 +792,8 @@ void UUI_CFCore_GameSlot_C::BndEvt__GameSlot_Button_53_K2Node_ComponentBoundEven
 
 void UUI_CFCore_GameSlot_C::Event_View_Mod_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Event View Mod Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Event View Mod Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -800,10 +804,8 @@ void UUI_CFCore_GameSlot_C::Event_View_Mod_Page()
 
 void UUI_CFCore_GameSlot_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -814,10 +816,8 @@ void UUI_CFCore_GameSlot_C::Construct()
 
 void UUI_CFCore_GameSlot_C::UpdateInstallSlot()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateInstallSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateInstallSlot", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -828,10 +828,8 @@ void UUI_CFCore_GameSlot_C::UpdateInstallSlot()
 
 void UUI_CFCore_GameSlot_C::BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -842,10 +840,8 @@ void UUI_CFCore_GameSlot_C::BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_Compon
 
 void UUI_CFCore_GameSlot_C::BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -856,10 +852,8 @@ void UUI_CFCore_GameSlot_C::BndEvt__UI_GameSlot_Button_GoToModPage_K2Node_Compon
 
 void UUI_CFCore_GameSlot_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -873,10 +867,8 @@ void UUI_CFCore_GameSlot_C::Destruct()
 
 void UUI_CFCore_GameSlot_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_Tick Parms{};
 
@@ -894,10 +886,8 @@ void UUI_CFCore_GameSlot_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 void UUI_CFCore_GameSlot_C::RequestDownloadImage(const class FString& URL_String)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "RequestDownloadImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "RequestDownloadImage", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_RequestDownloadImage Parms{};
 
@@ -912,10 +902,8 @@ void UUI_CFCore_GameSlot_C::RequestDownloadImage(const class FString& URL_String
 
 void UUI_CFCore_GameSlot_C::OnReturnClicked_Event_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "OnReturnClicked_Event_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "OnReturnClicked_Event_0", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -926,10 +914,8 @@ void UUI_CFCore_GameSlot_C::OnReturnClicked_Event_0()
 
 void UUI_CFCore_GameSlot_C::InstallMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "InstallMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "InstallMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -940,10 +926,8 @@ void UUI_CFCore_GameSlot_C::InstallMod()
 
 void UUI_CFCore_GameSlot_C::UpdateMod()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "UpdateMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "UpdateMod", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -954,10 +938,8 @@ void UUI_CFCore_GameSlot_C::UpdateMod()
 
 void UUI_CFCore_GameSlot_C::CancelInstallation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "CancelInstallation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "CancelInstallation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -968,10 +950,8 @@ void UUI_CFCore_GameSlot_C::CancelInstallation()
 
 void UUI_CFCore_GameSlot_C::Event_On_Uninstall_Pressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "Event On Uninstall Pressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "Event On Uninstall Pressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -984,10 +964,8 @@ void UUI_CFCore_GameSlot_C::Event_On_Uninstall_Pressed()
 
 void UUI_CFCore_GameSlot_C::ExecuteUbergraph_UI_CFCore_GameSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GameSlot_C", "ExecuteUbergraph_UI_CFCore_GameSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GameSlot_C", "ExecuteUbergraph_UI_CFCore_GameSlot", FuncInfo);
 
 	Params::UI_CFCore_GameSlot_C_ExecuteUbergraph_UI_CFCore_GameSlot Parms{};
 

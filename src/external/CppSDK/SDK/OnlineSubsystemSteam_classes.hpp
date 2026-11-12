@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "PacketHandler_classes.hpp"
-#include "OnlineSubsystemUtils_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -34,50 +33,6 @@ public:
 		return GetDefaultObjImpl<USteamAuthComponentModuleInterface>();
 	}
 };
-
-// Class OnlineSubsystemSteam.SteamNetConnection
-// 0x0008 (0x1FF0 - 0x1FE8)
-class USteamNetConnection final : public UIpConnection
-{
-public:
-	bool                                          bIsPassthrough;                                    // 0x1FE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FE9[0x7];                                     // 0x1FE9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SteamNetConnection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SteamNetConnection")
-	}
-	static class USteamNetConnection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USteamNetConnection>();
-	}
-};
-
-// Class OnlineSubsystemSteam.SteamNetDriver
-// 0x0008 (0x0968 - 0x0960)
-class USteamNetDriver final : public UIpNetDriver
-{
-public:
-	uint8                                         Pad_960[0x8];                                      // 0x0960(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SteamNetDriver")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SteamNetDriver")
-	}
-	static class USteamNetDriver* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USteamNetDriver>();
-	}
-};
+DUMPER7_ASSERTS_USteamAuthComponentModuleInterface;
 
 SDK_NAMESPACE_END

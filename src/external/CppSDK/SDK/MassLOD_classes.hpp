@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "MassEntity_classes.hpp"
 #include "MassLOD_structs.hpp"
-#include "Engine_structs.hpp"
+#include "MassEntity_classes.hpp"
 #include "MassSpawner_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class MassLOD.MassLODCollectorProcessor
-// 0x0CA0 (0x0D50 - 0x00B0)
+// 0x1760 (0x1860 - 0x0100)
 class UMassLODCollectorProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0xCA0];                                     // 0x00B0(0x0CA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x1760];                                   // 0x0100(0x1760)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -39,13 +39,14 @@ public:
 		return GetDefaultObjImpl<UMassLODCollectorProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassLODCollectorProcessor;
 
 // Class MassLOD.MassLODDistanceCollectorProcessor
-// 0x0CA0 (0x0D50 - 0x00B0)
+// 0x1760 (0x1860 - 0x0100)
 class UMassLODDistanceCollectorProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0xCA0];                                     // 0x00B0(0x0CA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x1760];                                   // 0x0100(0x1760)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -61,21 +62,22 @@ public:
 		return GetDefaultObjImpl<UMassLODDistanceCollectorProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassLODDistanceCollectorProcessor;
 
 // Class MassLOD.MassLODSubsystem
-// 0x00C8 (0x0100 - 0x0038)
+// 0x00C8 (0x0108 - 0x0040)
 class UMassLODSubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         bGatherPlayerControllers : 1;                      // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bGatherStreamingSources : 1;                       // 0x0038(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bAllowNonPlayerViwerActors : 1;                    // 0x0038(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bUsePlayerPawnLocationInsteadOfCamera : 1;         // 0x0038(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FViewerInfo>                    Viewers;                                           // 0x0040(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TMap<uint32, struct FMassViewerHandle>        ViewerMap;                                         // 0x0050(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TArray<class AActor*>                         RegisteredActorViewers;                            // 0x00A0(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_B0[0x50];                                      // 0x00B0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bGatherPlayerControllers : 1;                      // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bGatherStreamingSources : 1;                       // 0x0040(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bAllowNonPlayerViwerActors : 1;                    // 0x0040(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bUsePlayerPawnLocationInsteadOfCamera : 1;         // 0x0040(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FViewerInfo>                    Viewers;                                           // 0x0048(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TMap<uint32, struct FMassViewerHandle>        ViewerMap;                                         // 0x0058(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TArray<class AActor*>                         RegisteredActorViewers;                            // 0x00A8(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_B8[0x50];                                      // 0x00B8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnPlayerControllerEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason);
@@ -94,11 +96,16 @@ public:
 		return GetDefaultObjImpl<UMassLODSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassLODSubsystem;
 
 // Class MassLOD.MassLODCollectorTrait
-// 0x0000 (0x0028 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UMassLODCollectorTrait final : public UMassEntityTraitBase
 {
+public:
+	bool                                          bTestCollectorProcessor;                           // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -113,11 +120,16 @@ public:
 		return GetDefaultObjImpl<UMassLODCollectorTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassLODCollectorTrait;
 
 // Class MassLOD.MassDistanceLODCollectorTrait
-// 0x0000 (0x0028 - 0x0028)
+// 0x0008 (0x0038 - 0x0030)
 class UMassDistanceLODCollectorTrait final : public UMassEntityTraitBase
 {
+public:
+	bool                                          bTestCollectorProcessor;                           // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -132,16 +144,17 @@ public:
 		return GetDefaultObjImpl<UMassDistanceLODCollectorTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassDistanceLODCollectorTrait;
 
 // Class MassLOD.MassSimulationLODTrait
-// 0x0040 (0x0068 - 0x0028)
+// 0x0040 (0x0070 - 0x0030)
 class UMassSimulationLODTrait final : public UMassEntityTraitBase
 {
 public:
-	struct FMassSimulationLODParameters           Params_0;                                          // 0x0028(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	bool                                          bEnableVariableTicking;                            // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMassSimulationVariableTickParameters  VariableTickParams;                                // 0x0054(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FMassSimulationLODParameters           Params_0;                                          // 0x0030(0x0028)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bEnableVariableTicking;                            // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMassSimulationVariableTickParameters  VariableTickParams;                                // 0x005C(0x0014)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -157,15 +170,16 @@ public:
 		return GetDefaultObjImpl<UMassSimulationLODTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimulationLODTrait;
 
 // Class MassLOD.MassSimulationLODProcessor
-// 0x0FB0 (0x1060 - 0x00B0)
+// 0x1D18 (0x1E18 - 0x0100)
 class UMassSimulationLODProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0xFA0];                                     // 0x00B0(0x0FA0)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bDoAdjustmentFromCount;                            // 0x1050(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1051[0xF];                                     // 0x1051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x1D10];                                   // 0x0100(0x1D10)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDoAdjustmentFromCount;                            // 0x1E10(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E11[0x7];                                     // 0x1E11(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -181,5 +195,6 @@ public:
 		return GetDefaultObjImpl<UMassSimulationLODProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimulationLODProcessor;
 
 SDK_NAMESPACE_END

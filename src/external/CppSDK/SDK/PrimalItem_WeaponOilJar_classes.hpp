@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponOilJar_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponOilJar_C;
 
 SDK_NAMESPACE_END

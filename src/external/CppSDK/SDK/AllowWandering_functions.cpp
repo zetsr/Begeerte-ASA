@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UAllowWandering_C::ExecuteUbergraph_AllowWandering(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AllowWandering_C", "ExecuteUbergraph_AllowWandering");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AllowWandering_C", "ExecuteUbergraph_AllowWandering", FuncInfo);
 
 	Params::AllowWandering_C_ExecuteUbergraph_AllowWandering Parms{};
 
@@ -43,10 +41,8 @@ void UAllowWandering_C::ExecuteUbergraph_AllowWandering(int32 EntryPoint)
 
 void UAllowWandering_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AllowWandering_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AllowWandering_C", "ReceiveExecute", FuncInfo);
 
 	Params::AllowWandering_C_ReceiveExecute Parms{};
 

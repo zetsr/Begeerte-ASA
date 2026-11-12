@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_JellyVenom_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_JellyVenom_C;
 
 SDK_NAMESPACE_END

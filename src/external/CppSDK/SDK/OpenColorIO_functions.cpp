@@ -51,7 +51,7 @@ bool UOpenColorIOBlueprintLibrary::ApplyColorSpaceTransform(const class UObject*
 
 
 // Function OpenColorIO.OpenColorIOConfiguration.ReloadExistingColorspaces
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bForce                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -75,8 +75,58 @@ void UOpenColorIOConfiguration::ReloadExistingColorspaces(bool bForce)
 }
 
 
+// Function OpenColorIO.OpenColorIOConfiguration.SetConfigurationFile
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FFilePath&                 InFilePath                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UOpenColorIOConfiguration::SetConfigurationFile(const struct FFilePath& InFilePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OpenColorIOConfiguration", "SetConfigurationFile");
+
+	Params::OpenColorIOConfiguration_SetConfigurationFile Parms{};
+
+	Parms.InFilePath = std::move(InFilePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OpenColorIO.OpenColorIOConfiguration.GetConfigurationFile
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FFilePath                  ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FFilePath UOpenColorIOConfiguration::GetConfigurationFile() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OpenColorIOConfiguration", "GetConfigurationFile");
+
+	Params::OpenColorIOConfiguration_GetConfigurationFile Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.CreateInGameOpenColorIODisplayExtension
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const struct FOpenColorIODisplayConfiguration&InDisplayConfiguration                                 (Parm, NativeAccessSpecifierPublic)
 // class UOpenColorIODisplayExtensionWrapper*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -104,7 +154,7 @@ class UOpenColorIODisplayExtensionWrapper* UOpenColorIODisplayExtensionWrapper::
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.CreateOpenColorIODisplayExtension
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FOpenColorIODisplayConfiguration&InDisplayConfiguration                                 (Parm, NativeAccessSpecifierPublic)
 // const struct FSceneViewExtensionIsActiveFunctor&IsActiveFunction                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -134,7 +184,7 @@ class UOpenColorIODisplayExtensionWrapper* UOpenColorIODisplayExtensionWrapper::
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.RemoveSceneExtension
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UOpenColorIODisplayExtensionWrapper::RemoveSceneExtension()
 {
@@ -153,7 +203,7 @@ void UOpenColorIODisplayExtensionWrapper::RemoveSceneExtension()
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.SetOpenColorIOConfiguration
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FOpenColorIODisplayConfiguration&InDisplayConfiguration                                 (Parm, NativeAccessSpecifierPublic)
 
@@ -178,7 +228,7 @@ void UOpenColorIODisplayExtensionWrapper::SetOpenColorIOConfiguration(const stru
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.SetSceneExtensionIsActiveFunction
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FSceneViewExtensionIsActiveFunctor&IsActiveFunction                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -203,7 +253,7 @@ void UOpenColorIODisplayExtensionWrapper::SetSceneExtensionIsActiveFunction(cons
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.SetSceneExtensionIsActiveFunctions
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FSceneViewExtensionIsActiveFunctor>&IsActiveFunctions                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -228,7 +278,7 @@ void UOpenColorIODisplayExtensionWrapper::SetSceneExtensionIsActiveFunctions(con
 
 
 // Function OpenColorIO.OpenColorIODisplayExtensionWrapper.GetOpenColorIOConfiguration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FOpenColorIODisplayConfiguration ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 

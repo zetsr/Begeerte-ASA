@@ -17,16 +17,16 @@
 SDK_NAMESPACE_START
 
 // Class WorldMetricsCore.WorldMetricsSubsystem
-// 0x2A10 (0x2A40 - 0x0030)
+// 0x2A10 (0x2A48 - 0x0038)
 class UWorldMetricsSubsystem final : public UWorldSubsystem
 {
 public:
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0040(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_50[0x29E0];                                    // 0x0050(0x29E0)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         UpdateRateInSeconds;                               // 0x2A30(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WarmUpFrames;                                      // 0x2A34(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A38[0x8];                                     // 0x2A38(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWorldMetricInterface*>          Metrics;                                           // 0x0048(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_58[0x29E0];                                    // 0x0058(0x29E0)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         UpdateRateInSeconds;                               // 0x2A38(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         WarmUpFrames;                                      // 0x2A3C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A40[0x8];                                     // 0x2A40(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -42,6 +42,7 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UWorldMetricsSubsystem;
 
 // Class WorldMetricsCore.WorldMetricInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -61,11 +62,15 @@ public:
 		return GetDefaultObjImpl<UWorldMetricInterface>();
 	}
 };
+DUMPER7_ASSERTS_UWorldMetricInterface;
 
 // Class WorldMetricsCore.WorldMetricsActorTrackerSubscriber
-// 0x0000 (0x0000 - 0x0000)
-class IWorldMetricsActorTrackerSubscriber final
+// 0x0008 (0x0008 - 0x0000)
+class IWorldMetricsActorTrackerSubscriber
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -89,6 +94,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IWorldMetricsActorTrackerSubscriber;
 
 // Class WorldMetricsCore.WorldMetricsExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -108,6 +114,7 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsExtension>();
 	}
 };
+DUMPER7_ASSERTS_UWorldMetricsExtension;
 
 // Class WorldMetricsCore.WorldMetricsActorTracker
 // 0x00A8 (0x00D0 - 0x0028)
@@ -130,5 +137,6 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsActorTracker>();
 	}
 };
+DUMPER7_ASSERTS_UWorldMetricsActorTracker;
 
 SDK_NAMESPACE_END

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_PoisonGrenade_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_PoisonGrenade_C;
 
 SDK_NAMESPACE_END

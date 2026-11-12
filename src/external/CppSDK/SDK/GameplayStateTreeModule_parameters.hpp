@@ -11,18 +11,39 @@
 #include "Basic.hpp"
 
 #include "StateTreeModule_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function GameplayStateTreeModule.StateTreeComponent.AddLinkedStateTreeOverrides
+// 0x0030 (0x0030 - 0x0000)
+struct StateTreeComponent_AddLinkedStateTreeOverrides final
+{
+public:
+	struct FGameplayTag                           StateTag;                                          // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FStateTreeReference                    StateTreeReference;                                // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeComponent_AddLinkedStateTreeOverrides;
+
+// Function GameplayStateTreeModule.StateTreeComponent.RemoveLinkedStateTreeOverrides
+// 0x0008 (0x0008 - 0x0000)
+struct StateTreeComponent_RemoveLinkedStateTreeOverrides final
+{
+public:
+	struct FGameplayTag                           StateTag;                                          // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeComponent_RemoveLinkedStateTreeOverrides;
+
 // Function GameplayStateTreeModule.StateTreeComponent.SendStateTreeEvent
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct StateTreeComponent_SendStateTreeEvent final
 {
 public:
-	struct FStateTreeEvent                        Event;                                             // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FStateTreeEvent                        Event;                                             // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeComponent_SendStateTreeEvent;
 
 // Function GameplayStateTreeModule.StateTreeComponent.SetStartLogicAutomatically
 // 0x0001 (0x0001 - 0x0000)
@@ -31,6 +52,25 @@ struct StateTreeComponent_SetStartLogicAutomatically final
 public:
 	bool                                          bInStartLogicAutomatically;                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeComponent_SetStartLogicAutomatically;
+
+// Function GameplayStateTreeModule.StateTreeComponent.SetStateTree
+// 0x0008 (0x0008 - 0x0000)
+struct StateTreeComponent_SetStateTree final
+{
+public:
+	class UStateTree*                             StateTree;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeComponent_SetStateTree;
+
+// Function GameplayStateTreeModule.StateTreeComponent.SetStateTreeReference
+// 0x0028 (0x0028 - 0x0000)
+struct StateTreeComponent_SetStateTreeReference final
+{
+public:
+	struct FStateTreeReference                    StateTreeReference;                                // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_StateTreeComponent_SetStateTreeReference;
 
 // Function GameplayStateTreeModule.StateTreeComponent.GetStateTreeRunStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -39,6 +79,19 @@ struct StateTreeComponent_GetStateTreeRunStatus final
 public:
 	EStateTreeRunStatus                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_StateTreeComponent_GetStateTreeRunStatus;
+
+// Function GameplayStateTreeModule.GameplayStateTreeBlueprintFunctionLibrary.RunStateTree
+// 0x0018 (0x0018 - 0x0000)
+struct GameplayStateTreeBlueprintFunctionLibrary_RunStateTree final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStateTree*                             StateTreeAsset;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayStateTreeBlueprintFunctionLibrary_RunStateTree;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

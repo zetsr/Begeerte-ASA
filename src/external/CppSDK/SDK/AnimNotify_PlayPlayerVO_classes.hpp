@@ -46,5 +46,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayPlayerVO_C>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotify_PlayPlayerVO_C;
 
 SDK_NAMESPACE_END

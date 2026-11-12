@@ -18,6 +18,139 @@
 
 SDK_NAMESPACE_START
 
+// Class EngineCameras.CameraAnimationCameraModifier
+// 0x0018 (0x0060 - 0x0048)
+class UCameraAnimationCameraModifier final : public UCameraModifier
+{
+public:
+	TArray<struct FActiveCameraAnimationInfo>     ActiveAnimations;                                  // 0x0048(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint16                                        NextInstanceSerialNumber;                          // 0x0058(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifier(const class UObject* WorldContextObject, int32 PlayerIndex);
+	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromID(const class UObject* WorldContextObject, int32 ControllerId);
+	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromPlayerController(const class APlayerController* PlayerController);
+
+	struct FCameraAnimationHandle PlayCameraAnimation(class UCameraAnimationSequence* Sequence, const struct FCameraAnimationParams& Params_0);
+	void StopAllCameraAnimations(bool bImmediate);
+	void StopAllCameraAnimationsOf(class UCameraAnimationSequence* Sequence, bool bImmediate);
+	void StopCameraAnimation(const struct FCameraAnimationHandle& Handle, bool bImmediate);
+
+	bool IsCameraAnimationActive(const struct FCameraAnimationHandle& Handle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraAnimationCameraModifier")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAnimationCameraModifier")
+	}
+	static class UCameraAnimationCameraModifier* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraAnimationCameraModifier>();
+	}
+};
+DUMPER7_ASSERTS_UCameraAnimationCameraModifier;
+
+// Class EngineCameras.EngineCameraAnimationFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UEngineCameraAnimationFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UCameraAnimationCameraModifier* Conv_CameraAnimationCameraModifier(class APlayerCameraManager* PlayerCameraManager);
+	static ECameraAnimationPlaySpace Conv_CameraAnimationPlaySpace(ECameraShakePlaySpace CameraShakePlaySpace);
+	static ECameraShakePlaySpace Conv_CameraShakePlaySpace(ECameraAnimationPlaySpace CameraAnimationPlaySpace);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EngineCameraAnimationFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EngineCameraAnimationFunctionLibrary")
+	}
+	static class UEngineCameraAnimationFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEngineCameraAnimationFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UEngineCameraAnimationFunctionLibrary;
+
+// Class EngineCameras.EngineCamerasSubsystem
+// 0x0000 (0x0038 - 0x0038)
+class UEngineCamerasSubsystem final : public UWorldSubsystem
+{
+public:
+	struct FCameraAnimationHandle PlayCameraAnimation(class APlayerController* PlayerController, class UCameraAnimationSequence* Sequence, const struct FCameraAnimationParams& Params_0);
+	void StopAllCameraAnimations(class APlayerController* PlayerController, bool bImmediate);
+	void StopAllCameraAnimationsOf(class APlayerController* PlayerController, class UCameraAnimationSequence* Sequence, bool bImmediate);
+	void StopCameraAnimation(class APlayerController* PlayerController, const struct FCameraAnimationHandle& Handle, bool bImmediate);
+
+	bool IsCameraAnimationActive(class APlayerController* PlayerController, const struct FCameraAnimationHandle& Handle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EngineCamerasSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EngineCamerasSubsystem")
+	}
+	static class UEngineCamerasSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEngineCamerasSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UEngineCamerasSubsystem;
+
+// Class EngineCameras.CompositeCameraShakePattern
+// 0x0010 (0x0038 - 0x0028)
+class UCompositeCameraShakePattern final : public UCameraShakePattern
+{
+public:
+	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CompositeCameraShakePattern")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CompositeCameraShakePattern")
+	}
+	static class UCompositeCameraShakePattern* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCompositeCameraShakePattern>();
+	}
+};
+DUMPER7_ASSERTS_UCompositeCameraShakePattern;
+
+// Class EngineCameras.DefaultCameraShakeBase
+// 0x0000 (0x00E0 - 0x00E0)
+class UDefaultCameraShakeBase final : public UCameraShakeBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DefaultCameraShakeBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DefaultCameraShakeBase")
+	}
+	static class UDefaultCameraShakeBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDefaultCameraShakeBase>();
+	}
+};
+DUMPER7_ASSERTS_UDefaultCameraShakeBase;
+
 // Class EngineCameras.LegacyCameraShake
 // 0x0120 (0x0200 - 0x00E0)
 class ULegacyCameraShake : public UCameraShakeBase
@@ -68,6 +201,7 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShake>();
 	}
 };
+DUMPER7_ASSERTS_ULegacyCameraShake;
 
 // Class EngineCameras.LegacyCameraShakePattern
 // 0x0000 (0x0028 - 0x0028)
@@ -87,6 +221,7 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShakePattern>();
 	}
 };
+DUMPER7_ASSERTS_ULegacyCameraShakePattern;
 
 // Class EngineCameras.LegacyCameraShakeFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -109,134 +244,7 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShakeFunctionLibrary>();
 	}
 };
-
-// Class EngineCameras.CameraAnimationCameraModifier
-// 0x0018 (0x0060 - 0x0048)
-class UCameraAnimationCameraModifier final : public UCameraModifier
-{
-public:
-	TArray<struct FActiveCameraAnimationInfo>     ActiveAnimations;                                  // 0x0048(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint16                                        NextInstanceSerialNumber;                          // 0x0058(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifier(const class UObject* WorldContextObject, int32 PlayerIndex);
-	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromID(const class UObject* WorldContextObject, int32 ControllerId);
-	static class UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromPlayerController(const class APlayerController* PlayerController);
-
-	struct FCameraAnimationHandle PlayCameraAnimation(class UCameraAnimationSequence* Sequence, const struct FCameraAnimationParams& Params_0);
-	void StopAllCameraAnimations(bool bImmediate);
-	void StopAllCameraAnimationsOf(class UCameraAnimationSequence* Sequence, bool bImmediate);
-	void StopCameraAnimation(const struct FCameraAnimationHandle& Handle, bool bImmediate);
-
-	bool IsCameraAnimationActive(const struct FCameraAnimationHandle& Handle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraAnimationCameraModifier")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraAnimationCameraModifier")
-	}
-	static class UCameraAnimationCameraModifier* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraAnimationCameraModifier>();
-	}
-};
-
-// Class EngineCameras.EngineCameraAnimationFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UEngineCameraAnimationFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UCameraAnimationCameraModifier* Conv_CameraAnimationCameraModifier(class APlayerCameraManager* PlayerCameraManager);
-	static ECameraAnimationPlaySpace Conv_CameraAnimationPlaySpace(ECameraShakePlaySpace CameraShakePlaySpace);
-	static ECameraShakePlaySpace Conv_CameraShakePlaySpace(ECameraAnimationPlaySpace CameraAnimationPlaySpace);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EngineCameraAnimationFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EngineCameraAnimationFunctionLibrary")
-	}
-	static class UEngineCameraAnimationFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEngineCameraAnimationFunctionLibrary>();
-	}
-};
-
-// Class EngineCameras.EngineCamerasSubsystem
-// 0x0000 (0x0030 - 0x0030)
-class UEngineCamerasSubsystem final : public UWorldSubsystem
-{
-public:
-	struct FCameraAnimationHandle PlayCameraAnimation(class APlayerController* PlayerController, class UCameraAnimationSequence* Sequence, const struct FCameraAnimationParams& Params_0);
-	void StopAllCameraAnimations(class APlayerController* PlayerController, bool bImmediate);
-	void StopAllCameraAnimationsOf(class APlayerController* PlayerController, class UCameraAnimationSequence* Sequence, bool bImmediate);
-	void StopCameraAnimation(class APlayerController* PlayerController, const struct FCameraAnimationHandle& Handle, bool bImmediate);
-
-	bool IsCameraAnimationActive(class APlayerController* PlayerController, const struct FCameraAnimationHandle& Handle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EngineCamerasSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EngineCamerasSubsystem")
-	}
-	static class UEngineCamerasSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEngineCamerasSubsystem>();
-	}
-};
-
-// Class EngineCameras.CompositeCameraShakePattern
-// 0x0010 (0x0038 - 0x0028)
-class UCompositeCameraShakePattern final : public UCameraShakePattern
-{
-public:
-	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CompositeCameraShakePattern")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CompositeCameraShakePattern")
-	}
-	static class UCompositeCameraShakePattern* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCompositeCameraShakePattern>();
-	}
-};
-
-// Class EngineCameras.DefaultCameraShakeBase
-// 0x0000 (0x00E0 - 0x00E0)
-class UDefaultCameraShakeBase final : public UCameraShakeBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DefaultCameraShakeBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DefaultCameraShakeBase")
-	}
-	static class UDefaultCameraShakeBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDefaultCameraShakeBase>();
-	}
-};
+DUMPER7_ASSERTS_ULegacyCameraShakeFunctionLibrary;
 
 // Class EngineCameras.SimpleCameraShakePattern
 // 0x0030 (0x0058 - 0x0028)
@@ -262,6 +270,7 @@ public:
 		return GetDefaultObjImpl<USimpleCameraShakePattern>();
 	}
 };
+DUMPER7_ASSERTS_USimpleCameraShakePattern;
 
 // Class EngineCameras.PerlinNoiseCameraShakePattern
 // 0x0080 (0x00D8 - 0x0058)
@@ -295,6 +304,7 @@ public:
 		return GetDefaultObjImpl<UPerlinNoiseCameraShakePattern>();
 	}
 };
+DUMPER7_ASSERTS_UPerlinNoiseCameraShakePattern;
 
 // Class EngineCameras.WaveOscillatorCameraShakePattern
 // 0x00A0 (0x00F8 - 0x0058)
@@ -328,6 +338,7 @@ public:
 		return GetDefaultObjImpl<UWaveOscillatorCameraShakePattern>();
 	}
 };
+DUMPER7_ASSERTS_UWaveOscillatorCameraShakePattern;
 
 // Class EngineCameras.TestCameraShake
 // 0x0000 (0x00E0 - 0x00E0)
@@ -347,6 +358,7 @@ public:
 		return GetDefaultObjImpl<UTestCameraShake>();
 	}
 };
+DUMPER7_ASSERTS_UTestCameraShake;
 
 // Class EngineCameras.ConstantCameraShakePattern
 // 0x0030 (0x0088 - 0x0058)
@@ -370,5 +382,6 @@ public:
 		return GetDefaultObjImpl<UConstantCameraShakePattern>();
 	}
 };
+DUMPER7_ASSERTS_UConstantCameraShakePattern;
 
 SDK_NAMESPACE_END

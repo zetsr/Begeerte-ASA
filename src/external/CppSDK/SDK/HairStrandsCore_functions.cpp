@@ -16,19 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function HairStrandsCore.GroomAsset.GetDeformedGroupSections
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Function HairStrandsCore.GroomBindingAsset.Build
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)>CompletionDelegate                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-TArray<int32> UGroomAsset::GetDeformedGroupSections()
+void UGroomBindingAsset::Build(TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)> CompletionDelegate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetDeformedGroupSections");
+		Func = Class->GetFunction("GroomBindingAsset", "Build");
 
-	Params::GroomAsset_GetDeformedGroupSections Parms{};
+	Params::GroomBindingAsset_Build Parms{};
+
+	Parms.CompletionDelegate = CompletionDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -36,588 +38,11 @@ TArray<int32> UGroomAsset::GetDeformedGroupSections()
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsCards
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsCardsSourceDescription>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsCardsSourceDescription> UGroomAsset::GetHairGroupsCards()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsCards");
-
-	Params::GroomAsset_GetHairGroupsCards Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsInterpolation
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsInterpolation> ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsInterpolation> UGroomAsset::GetHairGroupsInterpolation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsInterpolation");
-
-	Params::GroomAsset_GetHairGroupsInterpolation Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsLOD
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsLOD>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsLOD> UGroomAsset::GetHairGroupsLOD()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsLOD");
-
-	Params::GroomAsset_GetHairGroupsLOD Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsMaterials
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsMaterial>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsMaterial> UGroomAsset::GetHairGroupsMaterials()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsMaterials");
-
-	Params::GroomAsset_GetHairGroupsMaterials Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsMeshes
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsMeshesSourceDescription>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsMeshesSourceDescription> UGroomAsset::GetHairGroupsMeshes()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsMeshes");
-
-	Params::GroomAsset_GetHairGroupsMeshes Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsPhysics
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsPhysics>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsPhysics> UGroomAsset::GetHairGroupsPhysics()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsPhysics");
-
-	Params::GroomAsset_GetHairGroupsPhysics Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairGroupsRendering
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FHairGroupsRendering>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FHairGroupsRendering> UGroomAsset::GetHairGroupsRendering()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairGroupsRendering");
-
-	Params::GroomAsset_GetHairGroupsRendering Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetDeformedGroupSections
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<int32>&                    In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetDeformedGroupSections(const TArray<int32>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetDeformedGroupSections");
-
-	Params::GroomAsset_SetDeformedGroupSections Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetEnableGlobalInterpolation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetEnableGlobalInterpolation(bool In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetEnableGlobalInterpolation");
-
-	Params::GroomAsset_SetEnableGlobalInterpolation Parms{};
-
-	Parms.In = In;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetEnableSimulationCache
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetEnableSimulationCache(bool In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetEnableSimulationCache");
-
-	Params::GroomAsset_SetEnableSimulationCache Parms{};
-
-	Parms.In = In;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsCards
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsCardsSourceDescription>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsCards(const TArray<struct FHairGroupsCardsSourceDescription>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsCards");
-
-	Params::GroomAsset_SetHairGroupsCards Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsInterpolation
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsInterpolation>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsInterpolation(const TArray<struct FHairGroupsInterpolation>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsInterpolation");
-
-	Params::GroomAsset_SetHairGroupsInterpolation Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsLOD
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsLOD>&    In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsLOD(const TArray<struct FHairGroupsLOD>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsLOD");
-
-	Params::GroomAsset_SetHairGroupsLOD Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsMaterials
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsMaterial>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsMaterials(const TArray<struct FHairGroupsMaterial>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsMaterials");
-
-	Params::GroomAsset_SetHairGroupsMaterials Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsMeshes
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsMeshesSourceDescription>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsMeshes(const TArray<struct FHairGroupsMeshesSourceDescription>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsMeshes");
-
-	Params::GroomAsset_SetHairGroupsMeshes Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsPhysics
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsPhysics>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsPhysics(const TArray<struct FHairGroupsPhysics>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsPhysics");
-
-	Params::GroomAsset_SetHairGroupsPhysics Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairGroupsRendering
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FHairGroupsRendering>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairGroupsRendering(const TArray<struct FHairGroupsRendering>& In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairGroupsRendering");
-
-	Params::GroomAsset_SetHairGroupsRendering Parms{};
-
-	Parms.In = std::move(In);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetHairInterpolationType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EGroomInterpolationType                 In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetHairInterpolationType(EGroomInterpolationType In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetHairInterpolationType");
-
-	Params::GroomAsset_SetHairInterpolationType Parms{};
-
-	Parms.In = In;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.SetRiggedSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkeletalMesh*                    In                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGroomAsset::SetRiggedSkeletalMesh(class USkeletalMesh* In)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "SetRiggedSkeletalMesh");
-
-	Params::GroomAsset_SetRiggedSkeletalMesh Parms{};
-
-	Parms.In = In;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetEnableGlobalInterpolation
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UGroomAsset::GetEnableGlobalInterpolation() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetEnableGlobalInterpolation");
-
-	Params::GroomAsset_GetEnableGlobalInterpolation Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetEnableSimulationCache
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UGroomAsset::GetEnableSimulationCache() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetEnableSimulationCache");
-
-	Params::GroomAsset_GetEnableSimulationCache Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetHairInterpolationType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EGroomInterpolationType                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EGroomInterpolationType UGroomAsset::GetHairInterpolationType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetHairInterpolationType");
-
-	Params::GroomAsset_GetHairInterpolationType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function HairStrandsCore.GroomAsset.GetRiggedSkeletalMesh
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class USkeletalMesh*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class USkeletalMesh* UGroomAsset::GetRiggedSkeletalMesh() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GroomAsset", "GetRiggedSkeletalMesh");
-
-	Params::GroomAsset_GetRiggedSkeletalMesh Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetGroom
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGroomAsset*                      InGroom                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -642,7 +67,7 @@ void UGroomBindingAsset::SetGroom(class UGroomAsset* InGroom)
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetGroomBindingType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EGroomBindingMeshType                   InGroomBindingType                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -667,7 +92,7 @@ void UGroomBindingAsset::SetGroomBindingType(EGroomBindingMeshType InGroomBindin
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetGroupInfos
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FGoomBindingGroupInfo>&InGroupInfos                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -692,7 +117,7 @@ void UGroomBindingAsset::SetGroupInfos(const TArray<struct FGoomBindingGroupInfo
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetMatchingSection
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InMatchingSection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -717,7 +142,7 @@ void UGroomBindingAsset::SetMatchingSection(int32 InMatchingSection)
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetNumInterpolationPoints
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InNumInterpolationPoints                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -742,7 +167,7 @@ void UGroomBindingAsset::SetNumInterpolationPoints(int32 InNumInterpolationPoint
 
 
 // Function HairStrandsCore.GroomBindingAsset.SetSourceGeometryCache
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGeometryCache*                   InGeometryCache                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -766,8 +191,58 @@ void UGroomBindingAsset::SetSourceGeometryCache(class UGeometryCache* InGeometry
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.SetSourceMeshRequestedLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InSourceMeshRequestedLOD                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomBindingAsset::SetSourceMeshRequestedLOD(int32 InSourceMeshRequestedLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "SetSourceMeshRequestedLOD");
+
+	Params::GroomBindingAsset_SetSourceMeshRequestedLOD Parms{};
+
+	Parms.InSourceMeshRequestedLOD = InSourceMeshRequestedLOD;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomBindingAsset.SetSourceMeshUsedLOD
+// (Final, RequiredAPI, Native, Private, BlueprintCallable)
+// Parameters:
+// int32                                   InSourceMeshUsedLOD                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomBindingAsset::SetSourceMeshUsedLOD(int32 InSourceMeshUsedLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "SetSourceMeshUsedLOD");
+
+	Params::GroomBindingAsset_SetSourceMeshUsedLOD Parms{};
+
+	Parms.InSourceMeshUsedLOD = InSourceMeshUsedLOD;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.SetSourceSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -791,8 +266,33 @@ void UGroomBindingAsset::SetSourceSkeletalMesh(class USkeletalMesh* InSkeletalMe
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.SetTargetBindingAttribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InAttributeName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomBindingAsset::SetTargetBindingAttribute(class FName InAttributeName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "SetTargetBindingAttribute");
+
+	Params::GroomBindingAsset_SetTargetBindingAttribute Parms{};
+
+	Parms.InAttributeName = InAttributeName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.SetTargetGeometryCache
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGeometryCache*                   InGeometryCache                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -816,8 +316,58 @@ void UGroomBindingAsset::SetTargetGeometryCache(class UGeometryCache* InGeometry
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.SetTargetMeshRequestedMinLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InTargetMeshRequestedMinLOD                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomBindingAsset::SetTargetMeshRequestedMinLOD(int32 InTargetMeshRequestedMinLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "SetTargetMeshRequestedMinLOD");
+
+	Params::GroomBindingAsset_SetTargetMeshRequestedMinLOD Parms{};
+
+	Parms.InTargetMeshRequestedMinLOD = InTargetMeshRequestedMinLOD;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomBindingAsset.SetTargetMeshUsedMinLOD
+// (Final, RequiredAPI, Native, Private, BlueprintCallable)
+// Parameters:
+// int32                                   InTargetMeshUsedMinLOD                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomBindingAsset::SetTargetMeshUsedMinLOD(int32 InTargetMeshUsedMinLOD)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "SetTargetMeshUsedMinLOD");
+
+	Params::GroomBindingAsset_SetTargetMeshUsedMinLOD Parms{};
+
+	Parms.InTargetMeshUsedMinLOD = InTargetMeshUsedMinLOD;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.SetTargetSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -842,7 +392,7 @@ void UGroomBindingAsset::SetTargetSkeletalMesh(class USkeletalMesh* InSkeletalMe
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetGroom
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UGroomAsset*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -867,7 +417,7 @@ class UGroomAsset* UGroomBindingAsset::GetGroom() const
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetGroomBindingType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EGroomBindingMeshType                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -892,7 +442,7 @@ EGroomBindingMeshType UGroomBindingAsset::GetGroomBindingType() const
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetGroupInfos
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const TArray<struct FGoomBindingGroupInfo>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -917,7 +467,7 @@ const TArray<struct FGoomBindingGroupInfo> UGroomBindingAsset::GetGroupInfos() c
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetMatchingSection
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -942,7 +492,7 @@ int32 UGroomBindingAsset::GetMatchingSection() const
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetNumInterpolationPoints
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -967,7 +517,7 @@ int32 UGroomBindingAsset::GetNumInterpolationPoints() const
 
 
 // Function HairStrandsCore.GroomBindingAsset.GetSourceGeometryCache
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UGeometryCache*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -991,8 +541,58 @@ class UGeometryCache* UGroomBindingAsset::GetSourceGeometryCache() const
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.GetSourceMeshRequestedLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGroomBindingAsset::GetSourceMeshRequestedLOD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "GetSourceMeshRequestedLOD");
+
+	Params::GroomBindingAsset_GetSourceMeshRequestedLOD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBindingAsset.GetSourceMeshUsedLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGroomBindingAsset::GetSourceMeshUsedLOD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "GetSourceMeshUsedLOD");
+
+	Params::GroomBindingAsset_GetSourceMeshUsedLOD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.GetSourceSkeletalMesh
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMesh*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1016,8 +616,33 @@ class USkeletalMesh* UGroomBindingAsset::GetSourceSkeletalMesh() const
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.GetTargetBindingAttribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UGroomBindingAsset::GetTargetBindingAttribute() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "GetTargetBindingAttribute");
+
+	Params::GroomBindingAsset_GetTargetBindingAttribute Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.GetTargetGeometryCache
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UGeometryCache*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1041,8 +666,58 @@ class UGeometryCache* UGroomBindingAsset::GetTargetGeometryCache() const
 }
 
 
+// Function HairStrandsCore.GroomBindingAsset.GetTargetMeshRequestedMinLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGroomBindingAsset::GetTargetMeshRequestedMinLOD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "GetTargetMeshRequestedMinLOD");
+
+	Params::GroomBindingAsset_GetTargetMeshRequestedMinLOD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBindingAsset.GetTargetMeshUsedMinLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGroomBindingAsset::GetTargetMeshUsedMinLOD() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomBindingAsset", "GetTargetMeshUsedMinLOD");
+
+	Params::GroomBindingAsset_GetTargetMeshUsedMinLOD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function HairStrandsCore.GroomBindingAsset.GetTargetSkeletalMesh
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMesh*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1066,35 +741,43 @@ class USkeletalMesh* UGroomBindingAsset::GetTargetSkeletalMesh() const
 }
 
 
-// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGeometryCacheGroomBindingAsset
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UGroomAsset*                      GroomAsset                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryCache*                   GeometryCache                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   NumInterpolationPoints                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryCache*                   SourceGeometryCacheForTransfer                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MatchingSection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function HairStrandsCore.GroomAsset.CreateGroomDataflow
+// (Final, Native, Public, BlueprintCallable)
 
-class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBindingAsset(class UGroomAsset* GroomAsset, class UGeometryCache* GeometryCache, int32 NumInterpolationPoints, class UGeometryCache* SourceGeometryCacheForTransfer, int32 MatchingSection)
+void UGroomAsset::CreateGroomDataflow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGeometryCacheGroomBindingAsset");
-
-	Params::GroomBlueprintLibrary_CreateNewGeometryCacheGroomBindingAsset Parms{};
-
-	Parms.GroomAsset = GroomAsset;
-	Parms.GeometryCache = GeometryCache;
-	Parms.NumInterpolationPoints = NumInterpolationPoints;
-	Parms.SourceGeometryCacheForTransfer = SourceGeometryCacheForTransfer;
-	Parms.MatchingSection = MatchingSection;
+		Func = Class->GetFunction("GroomAsset", "CreateGroomDataflow");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetDeformedGroupSections
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UGroomAsset::GetDeformedGroupSections()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetDeformedGroupSections");
+
+	Params::GroomAsset_GetDeformedGroupSections Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1102,37 +785,24 @@ class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBin
 }
 
 
-// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGeometryCacheGroomBindingAssetWithPath
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function HairStrandsCore.GroomAsset.GetHairGroupsCards
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const class FString&                    DesiredPackagePath                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomAsset*                      GroomAsset                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryCache*                   GeometryCache                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   NumInterpolationPoints                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGeometryCache*                   SourceGeometryCacheForTransfer                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MatchingSection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FHairGroupsCardsSourceDescription>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBindingAssetWithPath(const class FString& DesiredPackagePath, class UGroomAsset* GroomAsset, class UGeometryCache* GeometryCache, int32 NumInterpolationPoints, class UGeometryCache* SourceGeometryCacheForTransfer, int32 MatchingSection)
+TArray<struct FHairGroupsCardsSourceDescription> UGroomAsset::GetHairGroupsCards()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGeometryCacheGroomBindingAssetWithPath");
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsCards");
 
-	Params::GroomBlueprintLibrary_CreateNewGeometryCacheGroomBindingAssetWithPath Parms{};
-
-	Parms.DesiredPackagePath = std::move(DesiredPackagePath);
-	Parms.GroomAsset = GroomAsset;
-	Parms.GeometryCache = GeometryCache;
-	Parms.NumInterpolationPoints = NumInterpolationPoints;
-	Parms.SourceGeometryCacheForTransfer = SourceGeometryCacheForTransfer;
-	Parms.MatchingSection = MatchingSection;
+	Params::GroomAsset_GetHairGroupsCards Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1140,35 +810,24 @@ class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBin
 }
 
 
-// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAsset
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function HairStrandsCore.GroomAsset.GetHairGroupsInterpolation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UGroomAsset*                      InGroomAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InNumInterpolationPoints                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USkeletalMesh*                    InSourceSkeletalMeshForTransfer                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InMatchingSection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FHairGroupsInterpolation> ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAsset(class UGroomAsset* InGroomAsset, class USkeletalMesh* InSkeletalMesh, int32 InNumInterpolationPoints, class USkeletalMesh* InSourceSkeletalMeshForTransfer, int32 InMatchingSection)
+TArray<struct FHairGroupsInterpolation> UGroomAsset::GetHairGroupsInterpolation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGroomBindingAsset");
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsInterpolation");
 
-	Params::GroomBlueprintLibrary_CreateNewGroomBindingAsset Parms{};
-
-	Parms.InGroomAsset = InGroomAsset;
-	Parms.InSkeletalMesh = InSkeletalMesh;
-	Parms.InNumInterpolationPoints = InNumInterpolationPoints;
-	Parms.InSourceSkeletalMeshForTransfer = InSourceSkeletalMeshForTransfer;
-	Parms.InMatchingSection = InMatchingSection;
+	Params::GroomAsset_GetHairGroupsInterpolation Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1176,37 +835,24 @@ class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAsset(cla
 }
 
 
-// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAssetWithPath
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function HairStrandsCore.GroomAsset.GetHairGroupsLOD
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const class FString&                    InDesiredPackagePath                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomAsset*                      InGroomAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InNumInterpolationPoints                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USkeletalMesh*                    InSourceSkeletalMeshForTransfer                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InMatchingSection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FHairGroupsLOD>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAssetWithPath(const class FString& InDesiredPackagePath, class UGroomAsset* InGroomAsset, class USkeletalMesh* InSkeletalMesh, int32 InNumInterpolationPoints, class USkeletalMesh* InSourceSkeletalMeshForTransfer, int32 InMatchingSection)
+TArray<struct FHairGroupsLOD> UGroomAsset::GetHairGroupsLOD()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGroomBindingAssetWithPath");
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsLOD");
 
-	Params::GroomBlueprintLibrary_CreateNewGroomBindingAssetWithPath Parms{};
-
-	Parms.InDesiredPackagePath = std::move(InDesiredPackagePath);
-	Parms.InGroomAsset = InGroomAsset;
-	Parms.InSkeletalMesh = InSkeletalMesh;
-	Parms.InNumInterpolationPoints = InNumInterpolationPoints;
-	Parms.InSourceSkeletalMeshForTransfer = InSourceSkeletalMeshForTransfer;
-	Parms.InMatchingSection = InMatchingSection;
+	Params::GroomAsset_GetHairGroupsLOD Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1214,36 +860,617 @@ class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAssetWith
 }
 
 
-// Function HairStrandsCore.GroomBlueprintLibrary.IsHairStrandsSupportedInWorld
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function HairStrandsCore.GroomAsset.GetHairGroupsMaterials
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FHairGroupsMaterial>      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FHairGroupsMaterial> UGroomAsset::GetHairGroupsMaterials()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsMaterials");
+
+	Params::GroomAsset_GetHairGroupsMaterials Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetHairGroupsMeshes
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FHairGroupsMeshesSourceDescription>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FHairGroupsMeshesSourceDescription> UGroomAsset::GetHairGroupsMeshes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsMeshes");
+
+	Params::GroomAsset_GetHairGroupsMeshes Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetHairGroupsPhysics
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FHairGroupsPhysics>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FHairGroupsPhysics> UGroomAsset::GetHairGroupsPhysics()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsPhysics");
+
+	Params::GroomAsset_GetHairGroupsPhysics Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetHairGroupsRendering
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FHairGroupsRendering>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FHairGroupsRendering> UGroomAsset::GetHairGroupsRendering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetHairGroupsRendering");
+
+	Params::GroomAsset_GetHairGroupsRendering Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetDeformedGroupSections
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<int32>&                    In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetDeformedGroupSections(const TArray<int32>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetDeformedGroupSections");
+
+	Params::GroomAsset_SetDeformedGroupSections Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetEnableGlobalInterpolation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetEnableGlobalInterpolation(bool In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetEnableGlobalInterpolation");
+
+	Params::GroomAsset_SetEnableGlobalInterpolation Parms{};
+
+	Parms.In = In;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetEnableSimulationCache
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetEnableSimulationCache(bool In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetEnableSimulationCache");
+
+	Params::GroomAsset_SetEnableSimulationCache Parms{};
+
+	Parms.In = In;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsCards
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsCardsSourceDescription>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsCards(const TArray<struct FHairGroupsCardsSourceDescription>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsCards");
+
+	Params::GroomAsset_SetHairGroupsCards Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsInterpolation
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsInterpolation>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsInterpolation(const TArray<struct FHairGroupsInterpolation>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsInterpolation");
+
+	Params::GroomAsset_SetHairGroupsInterpolation Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsLOD
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsLOD>&    In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsLOD(const TArray<struct FHairGroupsLOD>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsLOD");
+
+	Params::GroomAsset_SetHairGroupsLOD Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsMaterials
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsMaterial>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsMaterials(const TArray<struct FHairGroupsMaterial>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsMaterials");
+
+	Params::GroomAsset_SetHairGroupsMaterials Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsMeshes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsMeshesSourceDescription>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsMeshes(const TArray<struct FHairGroupsMeshesSourceDescription>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsMeshes");
+
+	Params::GroomAsset_SetHairGroupsMeshes Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsPhysics
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsPhysics>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsPhysics(const TArray<struct FHairGroupsPhysics>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsPhysics");
+
+	Params::GroomAsset_SetHairGroupsPhysics Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairGroupsRendering
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FHairGroupsRendering>&In                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairGroupsRendering(const TArray<struct FHairGroupsRendering>& In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairGroupsRendering");
+
+	Params::GroomAsset_SetHairGroupsRendering Parms{};
+
+	Parms.In = std::move(In);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetHairInterpolationType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EGroomInterpolationType                 In                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetHairInterpolationType(EGroomInterpolationType In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetHairInterpolationType");
+
+	Params::GroomAsset_SetHairInterpolationType Parms{};
+
+	Parms.In = In;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.SetRiggedSkeletalMesh
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    In                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomAsset::SetRiggedSkeletalMesh(class USkeletalMesh* In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "SetRiggedSkeletalMesh");
+
+	Params::GroomAsset_SetRiggedSkeletalMesh Parms{};
+
+	Parms.In = In;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetEnableGlobalInterpolation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UGroomBlueprintLibrary::IsHairStrandsSupportedInWorld(const class UObject* WorldContextObject)
+bool UGroomAsset::GetEnableGlobalInterpolation() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "IsHairStrandsSupportedInWorld");
+		Func = Class->GetFunction("GroomAsset", "GetEnableGlobalInterpolation");
 
-	Params::GroomBlueprintLibrary_IsHairStrandsSupportedInWorld Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
+	Params::GroomAsset_GetEnableGlobalInterpolation Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetEnableSimulationCache
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomAsset::GetEnableSimulationCache() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetEnableSimulationCache");
+
+	Params::GroomAsset_GetEnableSimulationCache Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetHairInterpolationType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EGroomInterpolationType                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EGroomInterpolationType UGroomAsset::GetHairInterpolationType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetHairInterpolationType");
+
+	Params::GroomAsset_GetHairInterpolationType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomAsset.GetRiggedSkeletalMesh
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USkeletalMesh*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USkeletalMesh* UGroomAsset::GetRiggedSkeletalMesh() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GroomAsset", "GetRiggedSkeletalMesh");
+
+	Params::GroomAsset_GetRiggedSkeletalMesh Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomAsset::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "AddAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UGroomAsset::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "GetAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomAsset::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "HasAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.RemoveUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomAsset::RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "RemoveUserDataOfClass");
+
+	Params::Interface_AssetUserData_RemoveUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function HairStrandsCore.GroomComponent.AddCollisionComponent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1268,7 +1495,7 @@ void UGroomComponent::AddCollisionComponent(class USkeletalMeshComponent* Skelet
 
 
 // Function HairStrandsCore.GroomComponent.GetIsHairLengthScaleEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1321,7 +1548,7 @@ class UNiagaraComponent* UGroomComponent::GetNiagaraComponent(const int32 GroupI
 
 
 // Function HairStrandsCore.GroomComponent.ResetCollisionComponents
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGroomComponent::ResetCollisionComponents()
 {
@@ -1340,7 +1567,7 @@ void UGroomComponent::ResetCollisionComponents()
 
 
 // Function HairStrandsCore.GroomComponent.ResetSimulation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGroomComponent::ResetSimulation()
 {
@@ -1359,7 +1586,7 @@ void UGroomComponent::ResetSimulation()
 
 
 // Function HairStrandsCore.GroomComponent.SetBindingAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGroomBindingAsset*               InBinding                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1384,7 +1611,7 @@ void UGroomComponent::SetBindingAsset(class UGroomBindingAsset* InBinding)
 
 
 // Function HairStrandsCore.GroomComponent.SetEnableSimulation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInEnableSimulation                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1409,7 +1636,7 @@ void UGroomComponent::SetEnableSimulation(bool bInEnableSimulation)
 
 
 // Function HairStrandsCore.GroomComponent.SetGroomAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGroomAsset*                      Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1434,7 +1661,7 @@ void UGroomComponent::SetGroomAsset(class UGroomAsset* Asset)
 
 
 // Function HairStrandsCore.GroomComponent.SetGroomCache
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGroomCache*                      InGroomCache                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1459,7 +1686,7 @@ void UGroomComponent::SetGroomCache(class UGroomCache* InGroomCache)
 
 
 // Function HairStrandsCore.GroomComponent.SetHairLengthScale
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1484,7 +1711,7 @@ void UGroomComponent::SetHairLengthScale(float Scale)
 
 
 // Function HairStrandsCore.GroomComponent.SetHairLengthScaleEnable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1509,7 +1736,7 @@ void UGroomComponent::SetHairLengthScaleEnable(bool bEnable)
 
 
 // Function HairStrandsCore.GroomComponent.SetMeshDeformer
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMeshDeformer*                    InMeshDeformer                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1534,7 +1761,7 @@ void UGroomComponent::SetMeshDeformer(class UMeshDeformer* InMeshDeformer)
 
 
 // Function HairStrandsCore.GroomComponent.SetPhysicsAsset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UPhysicsAsset*                    InPhysicsAsset                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1548,6 +1775,291 @@ void UGroomComponent::SetPhysicsAsset(class UPhysicsAsset* InPhysicsAsset)
 	Params::GroomComponent_SetPhysicsAsset Parms{};
 
 	Parms.InPhysicsAsset = InPhysicsAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGeometryCacheGroomBindingAsset
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UGroomAsset*                      GroomAsset                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryCache*                   GeometryCache                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumInterpolationPoints                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryCache*                   SourceGeometryCacheForTransfer                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MatchingSection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBindingAsset(class UGroomAsset* GroomAsset, class UGeometryCache* GeometryCache, int32 NumInterpolationPoints, class UGeometryCache* SourceGeometryCacheForTransfer, int32 MatchingSection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGeometryCacheGroomBindingAsset");
+
+	Params::GroomBlueprintLibrary_CreateNewGeometryCacheGroomBindingAsset Parms{};
+
+	Parms.GroomAsset = GroomAsset;
+	Parms.GeometryCache = GeometryCache;
+	Parms.NumInterpolationPoints = NumInterpolationPoints;
+	Parms.SourceGeometryCacheForTransfer = SourceGeometryCacheForTransfer;
+	Parms.MatchingSection = MatchingSection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGeometryCacheGroomBindingAssetWithPath
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    DesiredPackagePath                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomAsset*                      GroomAsset                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryCache*                   GeometryCache                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumInterpolationPoints                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryCache*                   SourceGeometryCacheForTransfer                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MatchingSection                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGeometryCacheGroomBindingAssetWithPath(const class FString& DesiredPackagePath, class UGroomAsset* GroomAsset, class UGeometryCache* GeometryCache, int32 NumInterpolationPoints, class UGeometryCache* SourceGeometryCacheForTransfer, int32 MatchingSection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGeometryCacheGroomBindingAssetWithPath");
+
+	Params::GroomBlueprintLibrary_CreateNewGeometryCacheGroomBindingAssetWithPath Parms{};
+
+	Parms.DesiredPackagePath = std::move(DesiredPackagePath);
+	Parms.GroomAsset = GroomAsset;
+	Parms.GeometryCache = GeometryCache;
+	Parms.NumInterpolationPoints = NumInterpolationPoints;
+	Parms.SourceGeometryCacheForTransfer = SourceGeometryCacheForTransfer;
+	Parms.MatchingSection = MatchingSection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAsset
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UGroomAsset*                      InGroomAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InNumInterpolationPoints                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    InSourceSkeletalMeshForTransfer                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InMatchingSection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAsset(class UGroomAsset* InGroomAsset, class USkeletalMesh* InSkeletalMesh, int32 InNumInterpolationPoints, class USkeletalMesh* InSourceSkeletalMeshForTransfer, int32 InMatchingSection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGroomBindingAsset");
+
+	Params::GroomBlueprintLibrary_CreateNewGroomBindingAsset Parms{};
+
+	Parms.InGroomAsset = InGroomAsset;
+	Parms.InSkeletalMesh = InSkeletalMesh;
+	Parms.InNumInterpolationPoints = InNumInterpolationPoints;
+	Parms.InSourceSkeletalMeshForTransfer = InSourceSkeletalMeshForTransfer;
+	Parms.InMatchingSection = InMatchingSection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBlueprintLibrary.CreateNewGroomBindingAssetWithPath
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InDesiredPackagePath                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomAsset*                      InGroomAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InNumInterpolationPoints                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    InSourceSkeletalMeshForTransfer                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InMatchingSection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGroomBindingAsset*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGroomBindingAsset* UGroomBlueprintLibrary::CreateNewGroomBindingAssetWithPath(const class FString& InDesiredPackagePath, class UGroomAsset* InGroomAsset, class USkeletalMesh* InSkeletalMesh, int32 InNumInterpolationPoints, class USkeletalMesh* InSourceSkeletalMeshForTransfer, int32 InMatchingSection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "CreateNewGroomBindingAssetWithPath");
+
+	Params::GroomBlueprintLibrary_CreateNewGroomBindingAssetWithPath Parms{};
+
+	Parms.InDesiredPackagePath = std::move(InDesiredPackagePath);
+	Parms.InGroomAsset = InGroomAsset;
+	Parms.InSkeletalMesh = InSkeletalMesh;
+	Parms.InNumInterpolationPoints = InNumInterpolationPoints;
+	Parms.InSourceSkeletalMeshForTransfer = InSourceSkeletalMeshForTransfer;
+	Parms.InMatchingSection = InMatchingSection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function HairStrandsCore.GroomBlueprintLibrary.IsHairStrandsSupportedInWorld
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomBlueprintLibrary::IsHairStrandsSupportedInWorld(const class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GroomBlueprintLibrary", "IsHairStrandsSupportedInWorld");
+
+	Params::GroomBlueprintLibrary_IsHairStrandsSupportedInWorld Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomCache::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "AddAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UGroomCache::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "GetAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGroomCache::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "HasAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.RemoveUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGroomCache::RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "RemoveUserDataOfClass");
+
+	Params::Interface_AssetUserData_RemoveUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_BloodExtractor_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_BloodExtractor_C;
 
 SDK_NAMESPACE_END

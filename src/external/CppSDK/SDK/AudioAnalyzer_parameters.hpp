@@ -22,6 +22,7 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioBus*                              AudioBusToAnalyze;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AudioAnalyzer_StartAnalyzing;
 
 // Function AudioAnalyzer.AudioAnalyzer.StopAnalyzing
 // 0x0008 (0x0008 - 0x0000)
@@ -30,6 +31,7 @@ struct AudioAnalyzer_StopAnalyzing final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AudioAnalyzer_StopAnalyzing;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItem_WeaponMachinedSniper_Cursed_C::BPPreventWeaponEquip()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponMachinedSniper_Cursed_C", "BPPreventWeaponEquip");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponMachinedSniper_Cursed_C", "BPPreventWeaponEquip", FuncInfo);
 
 	Params::PrimalItem_WeaponMachinedSniper_Cursed_C_BPPreventWeaponEquip Parms{};
 

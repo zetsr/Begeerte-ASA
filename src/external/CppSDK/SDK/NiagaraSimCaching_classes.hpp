@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "MovieSceneTracks_classes.hpp"
 #include "NiagaraSimCaching_structs.hpp"
+#include "MovieSceneTracks_classes.hpp"
 #include "MovieScene_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class NiagaraSimCaching.MovieSceneNiagaraCacheSection
-// 0x0090 (0x0190 - 0x0100)
+// 0x0090 (0x0258 - 0x01C8)
 class UMovieSceneNiagaraCacheSection final : public UMovieSceneBaseCacheSection
 {
 public:
-	struct FMovieSceneNiagaraCacheParams          Params_0;                                          // 0x0100(0x0088)(Edit, NativeAccessSpecifierPublic)
-	bool                                          bCacheOutOfDate;                                   // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneNiagaraCacheParams          Params_0;                                          // 0x01C8(0x0088)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bCacheOutOfDate;                                   // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -40,18 +40,18 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNiagaraCacheSection>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneNiagaraCacheSection;
 
 // Class NiagaraSimCaching.MovieSceneNiagaraCacheTrack
-// 0x0030 (0x0128 - 0x00F8)
-class UMovieSceneNiagaraCacheTrack final : public UMovieSceneNameableTrack
+// 0x0030 (0x01E8 - 0x01B8)
+class UMovieSceneNiagaraCacheTrack final : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer, public IMovieSceneCachedTrack
 {
 public:
-	uint8                                         Pad_F8[0x10];                                      // 0x00F8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsRecording;                                      // 0x0108(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0110(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	bool                                          bCacheRecordingEnabled;                            // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsRecording;                                      // 0x01C8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x01D0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	bool                                          bCacheRecordingEnabled;                            // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -67,5 +67,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNiagaraCacheTrack>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneNiagaraCacheTrack;
 
 SDK_NAMESPACE_END

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.AddFrom
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UConsoleVariablesAsset*     InAssetToCopy                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,7 +42,7 @@ void UConsoleVariablesAsset::AddFrom(const class UConsoleVariablesAsset* InAsset
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.AddOrSetConsoleObjectSavedData
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FConsoleVariablesEditorAssetSaveData&InData                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -67,7 +67,7 @@ void UConsoleVariablesAsset::AddOrSetConsoleObjectSavedData(const struct FConsol
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.CopyFrom
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UConsoleVariablesAsset*     InAssetToCopy                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -92,7 +92,7 @@ void UConsoleVariablesAsset::CopyFrom(const class UConsoleVariablesAsset* InAsse
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.RemoveConsoleVariable
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    InCommandString                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -120,7 +120,7 @@ bool UConsoleVariablesAsset::RemoveConsoleVariable(const class FString& InComman
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.ReplaceSavedCommands
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FConsoleVariablesEditorAssetSaveData>&replacement                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -145,7 +145,7 @@ void UConsoleVariablesAsset::ReplaceSavedCommands(const TArray<struct FConsoleVa
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.SetVariableCollectionDescription
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    InVariableCollectionDescription                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -170,7 +170,7 @@ void UConsoleVariablesAsset::SetVariableCollectionDescription(const class FStrin
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.ExecuteSavedCommands
-// (Final, Native, Public, BlueprintCallable, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOnlyIncludeChecked                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -197,7 +197,7 @@ void UConsoleVariablesAsset::ExecuteSavedCommands(class UObject* WorldContextObj
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.FindSavedDataByCommandString
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString&                    InCommandString                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FConsoleVariablesEditorAssetSaveData*OutValue                                               (Parm, OutParm, NativeAccessSpecifierPublic)
@@ -256,7 +256,7 @@ const TArray<struct FConsoleVariablesEditorAssetSaveData> UConsoleVariablesAsset
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommandsAsCommaSeparatedString
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    bOnlyIncludeChecked                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -284,7 +284,7 @@ class FString UConsoleVariablesAsset::GetSavedCommandsAsCommaSeparatedString(boo
 
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.GetSavedCommandsAsStringArray
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    bOnlyIncludeChecked                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)

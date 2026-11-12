@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_ComboCategory_C::ExecuteUbergraph_UI_ComboCategory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_ComboCategory_C", "ExecuteUbergraph_UI_ComboCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_ComboCategory_C", "ExecuteUbergraph_UI_ComboCategory", FuncInfo);
 
 	Params::UI_ComboCategory_C_ExecuteUbergraph_UI_ComboCategory Parms{};
 
@@ -43,10 +41,8 @@ void UUI_ComboCategory_C::ExecuteUbergraph_UI_ComboCategory(int32 EntryPoint)
 
 void UUI_ComboCategory_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_ComboCategory_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_ComboCategory_C", "PreConstruct", FuncInfo);
 
 	Params::UI_ComboCategory_C_PreConstruct Parms{};
 
@@ -64,10 +60,8 @@ void UUI_ComboCategory_C::PreConstruct(bool IsDesignTime)
 
 void UUI_ComboCategory_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_ComboCategory_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_ComboCategory_C", "Tick", FuncInfo);
 
 	Params::UI_ComboCategory_C_Tick Parms{};
 

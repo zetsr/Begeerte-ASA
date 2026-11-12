@@ -26,6 +26,27 @@ enum class ECineCameraRigRailDriveMode : uint8
 	ECineCameraRigRailDriveMode_MAX          = 3,
 };
 
+// Enum CineCameraRigs.ECineCameraRigRailLoopMode
+// NumValues: 0x0004
+enum class ECineCameraRigRailLoopMode : uint8
+{
+	NoLoop                                   = 0,
+	Loop                                     = 1,
+	Bounce                                   = 2,
+	ECineCameraRigRailLoopMode_MAX           = 3,
+};
+
+// Enum CineCameraRigs.ECineSplineMetadataTangentType
+// NumValues: 0x0005
+enum class ECineSplineMetadataTangentType : uint8
+{
+	Linear                                   = 0,
+	Curve                                    = 1,
+	Constant                                 = 2,
+	CurveClamped                             = 3,
+	ECineSplineMetadataTangentType_MAX       = 4,
+};
+
 // ScriptStruct CineCameraRigs.CineSplinePointData
 // 0x0040 (0x0040 - 0x0000)
 struct FCineSplinePointData final
@@ -38,6 +59,7 @@ public:
 	float                                         FocusDistance;                                     // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCineSplinePointData;
 
 // ScriptStruct CineCameraRigs.CineSplineCurveDefaults
 // 0x0030 (0x0030 - 0x0000)
@@ -50,6 +72,7 @@ public:
 	float                                         DefaultFocusDistance;                              // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuat                                  DefaultPointRotation;                              // 0x0010(0x0020)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCineSplineCurveDefaults;
 
 // ScriptStruct CineCameraRigs.CineSplineInstanceData
 // 0x0008 (0x01A0 - 0x0198)
@@ -58,5 +81,6 @@ struct FCineSplineInstanceData final : public FSplineInstanceData
 public:
 	class UCineSplineMetadata*                    CineSplineMetadata;                                // 0x0198(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FCineSplineInstanceData;
 
 SDK_NAMESPACE_END

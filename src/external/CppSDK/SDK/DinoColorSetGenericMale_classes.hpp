@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDinoColorSetGenericMale_C>();
 	}
 };
+DUMPER7_ASSERTS_UDinoColorSetGenericMale_C;
 
 SDK_NAMESPACE_END

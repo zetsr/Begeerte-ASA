@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 float AWeapClimbPick_C::BPModifyFOV(float inFOV)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "BPModifyFOV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "BPModifyFOV", FuncInfo);
 
 	Params::WeapClimbPick_C_BPModifyFOV Parms{};
 
@@ -53,10 +51,8 @@ float AWeapClimbPick_C::BPModifyFOV(float inFOV)
 
 void AWeapClimbPick_C::BPOnWeaponAnimPlayedNotify(const struct FWeaponAnim& Animation, float InPlayRate, bool bPlayBothFirstAndThirdPerson, bool bReplicate, bool bReplicateToInstigator, bool bPauseOnFinish1P, bool bForceTickPoseAndServerUpdateMesh, bool bForceTickPoseOnServer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "BPOnWeaponAnimPlayedNotify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "BPOnWeaponAnimPlayedNotify", FuncInfo);
 
 	Params::WeapClimbPick_C_BPOnWeaponAnimPlayedNotify Parms{};
 
@@ -88,10 +84,8 @@ void AWeapClimbPick_C::BPOnWeaponAnimPlayedNotify(const struct FWeaponAnim& Anim
 
 void AWeapClimbPick_C::BPUpdateClimbTarget(float DeltaSeconds, bool bClimbing, const struct FVector& AnchorPosition, const struct FVector& AnchorNormal, bool bCanClimb, bool bCanLand, const struct FVector& ClimbLocation, const struct FVector& ClimbNormal, bool bHudVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "BPUpdateClimbTarget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "BPUpdateClimbTarget", FuncInfo);
 
 	Params::WeapClimbPick_C_BPUpdateClimbTarget Parms{};
 
@@ -117,10 +111,8 @@ void AWeapClimbPick_C::BPUpdateClimbTarget(float DeltaSeconds, bool bClimbing, c
 
 void AWeapClimbPick_C::SetSourceLocation(class UParticleSystemComponent* Particle_System, const struct FVector& NewSourcePoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "SetSourceLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "SetSourceLocation", FuncInfo);
 
 	Params::WeapClimbPick_C_SetSourceLocation Parms{};
 
@@ -139,10 +131,8 @@ void AWeapClimbPick_C::SetSourceLocation(class UParticleSystemComponent* Particl
 
 void AWeapClimbPick_C::SetTemplateTo(class UParticleSystemComponent* Particle_System, class UParticleSystem* New_Template)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "SetTemplateTo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "SetTemplateTo", FuncInfo);
 
 	Params::WeapClimbPick_C_SetTemplateTo Parms{};
 
@@ -158,10 +148,8 @@ void AWeapClimbPick_C::SetTemplateTo(class UParticleSystemComponent* Particle_Sy
 
 void AWeapClimbPick_C::StartUnequipEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapClimbPick_C", "StartUnequipEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapClimbPick_C", "StartUnequipEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

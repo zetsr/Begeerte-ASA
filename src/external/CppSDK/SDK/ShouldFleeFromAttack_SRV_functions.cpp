@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UShouldFleeFromAttack_SRV_C::ExecuteUbergraph_ShouldFleeFromAttack_SRV(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShouldFleeFromAttack_SRV_C", "ExecuteUbergraph_ShouldFleeFromAttack_SRV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ShouldFleeFromAttack_SRV_C", "ExecuteUbergraph_ShouldFleeFromAttack_SRV", FuncInfo);
 
 	Params::ShouldFleeFromAttack_SRV_C_ExecuteUbergraph_ShouldFleeFromAttack_SRV Parms{};
 
@@ -44,10 +42,8 @@ void UShouldFleeFromAttack_SRV_C::ExecuteUbergraph_ShouldFleeFromAttack_SRV(int3
 
 void UShouldFleeFromAttack_SRV_C::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShouldFleeFromAttack_SRV_C", "ReceiveTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ShouldFleeFromAttack_SRV_C", "ReceiveTick", FuncInfo);
 
 	Params::ShouldFleeFromAttack_SRV_C_ReceiveTick Parms{};
 

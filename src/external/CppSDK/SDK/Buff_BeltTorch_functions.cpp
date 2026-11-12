@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void ABuff_BeltTorch_C::ActivateVFX()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "ActivateVFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "ActivateVFX", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void ABuff_BeltTorch_C::ActivateVFX()
 
 void ABuff_BeltTorch_C::ApplyMeshColorization()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "ApplyMeshColorization");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "ApplyMeshColorization", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +49,8 @@ void ABuff_BeltTorch_C::ApplyMeshColorization()
 
 void ABuff_BeltTorch_C::AreValidTorchIDs(int32 TorchID1, int32 TorchID2, bool* bAreValid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "AreValidTorchIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "AreValidTorchIDs", FuncInfo);
 
 	Params::Buff_BeltTorch_C_AreValidTorchIDs Parms{};
 
@@ -77,10 +71,8 @@ void ABuff_BeltTorch_C::AreValidTorchIDs(int32 TorchID1, int32 TorchID2, bool* b
 
 void ABuff_BeltTorch_C::BPDeactivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BPDeactivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BPDeactivated", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BPDeactivated Parms{};
 
@@ -99,10 +91,8 @@ void ABuff_BeltTorch_C::BPDeactivated(class AActor* ForInstigator)
 
 TArray<struct FMultiUseEntry> ABuff_BeltTorch_C::BPGetMultiUseEntries(class APlayerController* ForPC, const TArray<struct FMultiUseEntry>& MultiUseEntries)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BPGetMultiUseEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BPGetMultiUseEntries", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BPGetMultiUseEntries Parms{};
 
@@ -122,10 +112,8 @@ TArray<struct FMultiUseEntry> ABuff_BeltTorch_C::BPGetMultiUseEntries(class APla
 
 void ABuff_BeltTorch_C::BPOnInputEvent(EPrimalCharacterInputType inputType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BPOnInputEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BPOnInputEvent", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BPOnInputEvent Parms{};
 
@@ -145,10 +133,8 @@ void ABuff_BeltTorch_C::BPOnInputEvent(EPrimalCharacterInputType inputType)
 
 bool ABuff_BeltTorch_C::BPTryMultiUse(class APlayerController* ForPC, int32 UseIndex, class FName UseName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BPTryMultiUse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BPTryMultiUse", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BPTryMultiUse Parms{};
 
@@ -169,10 +155,8 @@ bool ABuff_BeltTorch_C::BPTryMultiUse(class APlayerController* ForPC, int32 UseI
 
 void ABuff_BeltTorch_C::BuffTickClient(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BuffTickClient");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BuffTickClient", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BuffTickClient Parms{};
 
@@ -189,10 +173,8 @@ void ABuff_BeltTorch_C::BuffTickClient(float DeltaTime)
 
 void ABuff_BeltTorch_C::BuffTickServer(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "BuffTickServer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "BuffTickServer", FuncInfo);
 
 	Params::Buff_BeltTorch_C_BuffTickServer Parms{};
 
@@ -209,10 +191,8 @@ void ABuff_BeltTorch_C::BuffTickServer(float DeltaTime)
 
 void ABuff_BeltTorch_C::DeactivateBeltTorch(bool bEquipTorchOnDeactivation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "DeactivateBeltTorch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "DeactivateBeltTorch", FuncInfo);
 
 	Params::Buff_BeltTorch_C_DeactivateBeltTorch Parms{};
 
@@ -229,10 +209,8 @@ void ABuff_BeltTorch_C::DeactivateBeltTorch(bool bEquipTorchOnDeactivation)
 
 void ABuff_BeltTorch_C::ExecuteUbergraph_Buff_BeltTorch(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "ExecuteUbergraph_Buff_BeltTorch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "ExecuteUbergraph_Buff_BeltTorch", FuncInfo);
 
 	Params::Buff_BeltTorch_C_ExecuteUbergraph_Buff_BeltTorch Parms{};
 
@@ -249,10 +227,8 @@ void ABuff_BeltTorch_C::ExecuteUbergraph_Buff_BeltTorch(int32 EntryPoint)
 
 void ABuff_BeltTorch_C::InitializeAssociatedWeaponClass(class UClass* WeaponClass)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeAssociatedWeaponClass");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeAssociatedWeaponClass", FuncInfo);
 
 	Params::Buff_BeltTorch_C_InitializeAssociatedWeaponClass Parms{};
 
@@ -267,10 +243,8 @@ void ABuff_BeltTorch_C::InitializeAssociatedWeaponClass(class UClass* WeaponClas
 
 void ABuff_BeltTorch_C::InitializeDefaultTorchWeapon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeDefaultTorchWeapon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeDefaultTorchWeapon", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -284,10 +258,8 @@ void ABuff_BeltTorch_C::InitializeDefaultTorchWeapon()
 
 void ABuff_BeltTorch_C::InitializeTorchFromItem(class UPrimalItem* TheItem, class UClass* WeaponClassOverride)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeTorchFromItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeTorchFromItem", FuncInfo);
 
 	Params::Buff_BeltTorch_C_InitializeTorchFromItem Parms{};
 
@@ -305,10 +277,8 @@ void ABuff_BeltTorch_C::InitializeTorchFromItem(class UPrimalItem* TheItem, clas
 
 void ABuff_BeltTorch_C::InitializeTorchIDs(class UPrimalItem* TorchItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeTorchIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeTorchIDs", FuncInfo);
 
 	Params::Buff_BeltTorch_C_InitializeTorchIDs Parms{};
 
@@ -325,10 +295,8 @@ void ABuff_BeltTorch_C::InitializeTorchIDs(class UPrimalItem* TorchItem)
 
 void ABuff_BeltTorch_C::InitializeTorchItem(bool* bInitialized)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeTorchItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeTorchItem", FuncInfo);
 
 	Params::Buff_BeltTorch_C_InitializeTorchItem Parms{};
 
@@ -344,10 +312,8 @@ void ABuff_BeltTorch_C::InitializeTorchItem(bool* bInitialized)
 
 void ABuff_BeltTorch_C::InitializeTorchMesh()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "InitializeTorchMesh");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "InitializeTorchMesh", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -358,10 +324,8 @@ void ABuff_BeltTorch_C::InitializeTorchMesh()
 
 void ABuff_BeltTorch_C::Server_DeactivateBeltTorch()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "Server_DeactivateBeltTorch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "Server_DeactivateBeltTorch", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -374,10 +338,8 @@ void ABuff_BeltTorch_C::Server_DeactivateBeltTorch()
 
 void ABuff_BeltTorch_C::SetFlameColorIndex(int32 theIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "SetFlameColorIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "SetFlameColorIndex", FuncInfo);
 
 	Params::Buff_BeltTorch_C_SetFlameColorIndex Parms{};
 
@@ -395,10 +357,8 @@ void ABuff_BeltTorch_C::SetFlameColorIndex(int32 theIndex)
 
 void ABuff_BeltTorch_C::SetTorchColorByIndex(const struct FLinearColor& theColor, int32 TheColorIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "SetTorchColorByIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "SetTorchColorByIndex", FuncInfo);
 
 	Params::Buff_BeltTorch_C_SetTorchColorByIndex Parms{};
 
@@ -417,10 +377,8 @@ void ABuff_BeltTorch_C::SetTorchColorByIndex(const struct FLinearColor& theColor
 
 void ABuff_BeltTorch_C::SetTorchColorByIndex_Multicast(const struct FLinearColor& theColor, int32 theIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "SetTorchColorByIndex_Multicast");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "SetTorchColorByIndex_Multicast", FuncInfo);
 
 	Params::Buff_BeltTorch_C_SetTorchColorByIndex_Multicast Parms{};
 
@@ -438,10 +396,8 @@ void ABuff_BeltTorch_C::SetTorchColorByIndex_Multicast(const struct FLinearColor
 
 void ABuff_BeltTorch_C::SetTorchFlameColor(const struct FLinearColor& theColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "SetTorchFlameColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "SetTorchFlameColor", FuncInfo);
 
 	Params::Buff_BeltTorch_C_SetTorchFlameColor Parms{};
 
@@ -458,10 +414,8 @@ void ABuff_BeltTorch_C::SetTorchFlameColor(const struct FLinearColor& theColor)
 
 void ABuff_BeltTorch_C::SetTorchFlameColor_Multicast(const struct FLinearColor& theColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "SetTorchFlameColor_Multicast");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "SetTorchFlameColor_Multicast", FuncInfo);
 
 	Params::Buff_BeltTorch_C_SetTorchFlameColor_Multicast Parms{};
 
@@ -478,10 +432,8 @@ void ABuff_BeltTorch_C::SetTorchFlameColor_Multicast(const struct FLinearColor& 
 
 void ABuff_BeltTorch_C::ShouldDeactivateBuff(bool* bShouldDeactivate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "ShouldDeactivateBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "ShouldDeactivateBuff", FuncInfo);
 
 	Params::Buff_BeltTorch_C_ShouldDeactivateBuff Parms{};
 
@@ -497,10 +449,8 @@ void ABuff_BeltTorch_C::ShouldDeactivateBuff(bool* bShouldDeactivate)
 
 void ABuff_BeltTorch_C::Update_All_Torch_Colors()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "Update All Torch Colors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "Update All Torch Colors", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -513,10 +463,8 @@ void ABuff_BeltTorch_C::Update_All_Torch_Colors()
 
 void ABuff_BeltTorch_C::UpdateTorchColorsArray(class UPrimalItem* ForPrimalItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "UpdateTorchColorsArray");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "UpdateTorchColorsArray", FuncInfo);
 
 	Params::Buff_BeltTorch_C_UpdateTorchColorsArray Parms{};
 
@@ -531,10 +479,8 @@ void ABuff_BeltTorch_C::UpdateTorchColorsArray(class UPrimalItem* ForPrimalItem)
 
 void ABuff_BeltTorch_C::UpdateTorchFlameColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "UpdateTorchFlameColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "UpdateTorchFlameColor", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -547,10 +493,8 @@ void ABuff_BeltTorch_C::UpdateTorchFlameColor()
 
 void ABuff_BeltTorch_C::UpdateTorchType(bool FPV)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BeltTorch_C", "UpdateTorchType");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BeltTorch_C", "UpdateTorchType", FuncInfo);
 
 	Params::Buff_BeltTorch_C_UpdateTorchType Parms{};
 

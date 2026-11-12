@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UAttackTarget_SRV_C final : public UBTService_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_AttackTarget_SRV(int32 EntryPoint);
@@ -42,5 +42,6 @@ public:
 		return GetDefaultObjImpl<UAttackTarget_SRV_C>();
 	}
 };
+DUMPER7_ASSERTS_UAttackTarget_SRV_C;
 
 SDK_NAMESPACE_END

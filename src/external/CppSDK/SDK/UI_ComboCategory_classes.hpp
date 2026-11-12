@@ -17,12 +17,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_ComboCategory.UI_ComboCategory_C
-// 0x0010 (0x1490 - 0x1480)
+// 0x0010 (0x1550 - 0x1540)
 class UUI_ComboCategory_C final : public UUI_CustomComboBoxOption_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_ComboCategory_C;                 // 0x1480(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UUI_Sub_Categories_Scroll_C*            SubCategoriesScroll_0;                             // 0x1488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_ComboCategory_C;                 // 0x1540(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UUI_Sub_Categories_Scroll_C*            SubCategoriesScroll_0;                             // 0x1548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_UI_ComboCategory(int32 EntryPoint);
@@ -43,5 +43,6 @@ public:
 		return GetDefaultObjImpl<UUI_ComboCategory_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_ComboCategory_C;
 
 SDK_NAMESPACE_END

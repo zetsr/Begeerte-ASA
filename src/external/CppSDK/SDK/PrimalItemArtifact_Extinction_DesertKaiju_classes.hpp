@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArtifact_Extinction_DesertKaiju_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArtifact_Extinction_DesertKaiju_C;
 
 SDK_NAMESPACE_END

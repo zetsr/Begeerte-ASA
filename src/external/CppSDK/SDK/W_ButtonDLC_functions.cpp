@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UW_ButtonDLC_C::BndEvt__W_ButtonDLC_DLCButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "BndEvt__W_ButtonDLC_DLCButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "BndEvt__W_ButtonDLC_DLCButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UW_ButtonDLC_C::BndEvt__W_ButtonDLC_DLCButton_K2Node_ComponentBoundEvent_0_
 
 void UW_ButtonDLC_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UW_ButtonDLC_C::Construct()
 
 void UW_ButtonDLC_C::ExecuteUbergraph_W_ButtonDLC(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "ExecuteUbergraph_W_ButtonDLC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "ExecuteUbergraph_W_ButtonDLC", FuncInfo);
 
 	Params::W_ButtonDLC_C_ExecuteUbergraph_W_ButtonDLC Parms{};
 
@@ -72,10 +66,8 @@ void UW_ButtonDLC_C::ExecuteUbergraph_W_ButtonDLC(int32 EntryPoint)
 
 void UW_ButtonDLC_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "OnMouseEnter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "OnMouseEnter", FuncInfo);
 
 	Params::W_ButtonDLC_C_OnMouseEnter Parms{};
 
@@ -93,10 +85,8 @@ void UW_ButtonDLC_C::OnMouseEnter(const struct FGeometry& MyGeometry, const stru
 
 void UW_ButtonDLC_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "OnMouseLeave");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "OnMouseLeave", FuncInfo);
 
 	Params::W_ButtonDLC_C_OnMouseLeave Parms{};
 
@@ -111,10 +101,8 @@ void UW_ButtonDLC_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 
 void UW_ButtonDLC_C::Refresh()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ButtonDLC_C", "Refresh");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "W_ButtonDLC_C", "Refresh", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

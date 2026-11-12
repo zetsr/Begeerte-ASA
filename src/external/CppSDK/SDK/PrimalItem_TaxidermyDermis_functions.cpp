@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItem_TaxidermyDermis_C::BPInitIconMaterial()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_TaxidermyDermis_C", "BPInitIconMaterial");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_TaxidermyDermis_C", "BPInitIconMaterial", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

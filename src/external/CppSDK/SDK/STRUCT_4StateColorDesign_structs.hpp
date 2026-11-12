@@ -20,11 +20,12 @@ SDK_NAMESPACE_START
 struct FSTRUCT_4StateColorDesign final
 {
 public:
-	struct FSlateColor                            Default_2_062AF318474EA06C55E25DB84DFD6717;        // 0x0000(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            Hovered_6_648FC38047DAB123531FB084E780ED88;        // 0x0014(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            Pressed_7_67F729464B9E0E15F8892E90DB73770D;        // 0x0028(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            Selected_11_93F7E611476526D980DD359603116C7B;      // 0x003C(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            Disabled_8_DB9CE2AF447766DF073744BE165E7680;       // 0x0050(0x0014)(Edit, BlueprintVisible)
+	struct FSlateColor                            Default_2_062AF318474EA06C55E25DB84DFD6717;        // 0x0000(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            Hovered_6_648FC38047DAB123531FB084E780ED88;        // 0x0014(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            Pressed_7_67F729464B9E0E15F8892E90DB73770D;        // 0x0028(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            Selected_11_93F7E611476526D980DD359603116C7B;      // 0x003C(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            Disabled_8_DB9CE2AF447766DF073744BE165E7680;       // 0x0050(0x0014)(Edit, BlueprintVisible, NoDestructor)
 };
+DUMPER7_ASSERTS_FSTRUCT_4StateColorDesign;
 
 SDK_NAMESPACE_END

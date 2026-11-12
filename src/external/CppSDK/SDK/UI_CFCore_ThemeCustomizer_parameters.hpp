@@ -35,6 +35,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Int32_AddOne_ReturnValue_1;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_AddToHistory;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.CheckIfHistoryDirty
 // 0x0002 (0x0002 - 0x0000)
@@ -44,6 +45,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_CheckIfHistoryDirty;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.ExecuteUbergraph_UI_CFCore_ThemeCustomizer
 // 0x0098 (0x0098 - 0x0000)
@@ -64,6 +66,7 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_CustomEvent_Color;                          // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_ExecuteUbergraph_UI_CFCore_ThemeCustomizer;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.ForwardHistoryAStep
 // 0x0118 (0x0118 - 0x0000)
@@ -79,6 +82,7 @@ public:
 	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_ForwardHistoryAStep;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.GetThemeSaveDirectory
 // 0x0030 (0x0030 - 0x0000)
@@ -89,6 +93,7 @@ public:
 	class FString                                 CallFunc_GetProjectDirectory_ReturnValue;          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_GetThemeSaveDirectory;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.OnColorChangedByColorPicker
 // 0x0010 (0x0010 - 0x0000)
@@ -97,26 +102,28 @@ struct UI_CFCore_ThemeCustomizer_C_OnColorChangedByColorPicker final
 public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_OnColorChangedByColorPicker;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.OnKeyDown
-// 0x0228 (0x0228 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct UI_CFCore_ThemeCustomizer_C_OnKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FInputEvent                            CallFunc_GetInputEventFromKeyEvent_ReturnValue;    // 0x0130(0x0020)()
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0150(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_InputEvent_IsLeftControlDown_ReturnValue; // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_InputEvent_IsLeftControlDown_ReturnValue_1; // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16E[0x2];                                      // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0170(0x00B8)()
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FInputEvent                            CallFunc_GetInputEventFromKeyEvent_ReturnValue;    // 0x0138(0x0028)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0160(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_InputEvent_IsLeftControlDown_ReturnValue; // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InputEvent_IsLeftControlDown_ReturnValue_1; // 0x017B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17E[0x2];                                      // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0180(0x00B8)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_OnKeyDown;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.ResetHistory
 // 0x0108 (0x0108 - 0x0000)
@@ -127,6 +134,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCFCoreThemeRowData                    CallFunc_Array_Get_Item;                           // 0x0008(0x0100)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_ResetHistory;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.RestoreToDefaults
 // 0x0110 (0x0110 - 0x0000)
@@ -140,6 +148,7 @@ public:
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_RestoreToDefaults;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.RevertBackAStepInHistory
 // 0x0118 (0x0118 - 0x0000)
@@ -156,6 +165,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_RevertBackAStepInHistory;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.SaveToHistory
 // 0x0108 (0x0108 - 0x0000)
@@ -166,6 +176,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCFCoreThemeRowData                    CallFunc_Array_Get_Item;                           // 0x0008(0x0100)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_SaveToHistory;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -175,6 +186,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_Tick;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.UpdateColorPickerEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -183,6 +195,7 @@ struct UI_CFCore_ThemeCustomizer_C_UpdateColorPickerEnabled final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_UpdateColorPickerEnabled;
 
 // Function UI_CFCore_ThemeCustomizer.UI_CFCore_ThemeCustomizer_C.UpdateSliderActivated
 // 0x0001 (0x0001 - 0x0000)
@@ -191,6 +204,7 @@ struct UI_CFCore_ThemeCustomizer_C_UpdateSliderActivated final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ThemeCustomizer_C_UpdateSliderActivated;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

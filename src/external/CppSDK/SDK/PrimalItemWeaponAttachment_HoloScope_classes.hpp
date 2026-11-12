@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemWeaponAttachment_HoloScope_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemWeaponAttachment_HoloScope_C;
 
 SDK_NAMESPACE_END

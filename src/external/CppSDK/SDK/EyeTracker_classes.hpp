@@ -40,5 +40,6 @@ public:
 		return GetDefaultObjImpl<UEyeTrackerFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UEyeTrackerFunctionLibrary;
 
 SDK_NAMESPACE_END

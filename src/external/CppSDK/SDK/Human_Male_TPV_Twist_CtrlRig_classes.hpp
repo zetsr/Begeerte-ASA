@@ -18,32 +18,32 @@
 SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass Human_Male_TPV_Twist_CtrlRig.Human_Male_TPV_Twist_CtrlRig_C
-// 0x0110 (0x0BE0 - 0x0AD0)
+// 0x0110 (0x0E30 - 0x0D20)
 class UHuman_Male_TPV_Twist_CtrlRig_C final : public UControlRig
 {
 public:
-	TArray<struct FVector>                        CurrentSpringPositionWorld;                        // 0x0AD0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        CurrentSpringPositionGlobal;                       // 0x0AE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        LastFrameSpringPositionGlobal;                     // 0x0AF0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        CurrentVelocity;                                   // 0x0B00(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector>                        CurrentVelocityGlobal;                             // 0x0B10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FRigElementKey>                 BoneArraySpringSolver_RigElements;                 // 0x0B20(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        OverallFat;                                        // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B38[0x8];                                      // 0x0B38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  InverseRotation_LeftUpperArm;                      // 0x0B40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FQuat                                  InverseRotation_RightUpperArm;                     // 0x0B60(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PhysicsFactor_Belly;                               // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PhysicsFactor_Breast;                              // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFemale;                                           // 0x0B90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B91[0x7];                                      // 0x0B91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CharacterCreatorFatChest;                          // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CharacterCreatorFatBelly;                          // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ChestFat_Spring_Local;                             // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BellyFat_Spring_Local;                             // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OverallFat_Spring_Local;                           // 0x0BB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldReset;                                      // 0x0BC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC1[0x7];                                      // 0x0BC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 KeepBoneAnimIndeces;                               // 0x0BC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        CurrentSpringPositionWorld;                        // 0x0D20(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        CurrentSpringPositionGlobal;                       // 0x0D30(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        LastFrameSpringPositionGlobal;                     // 0x0D40(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        CurrentVelocity;                                   // 0x0D50(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        CurrentVelocityGlobal;                             // 0x0D60(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FRigElementKey>                 BoneArraySpringSolver_RigElements;                 // 0x0D70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        OverallFat;                                        // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D88[0x8];                                      // 0x0D88(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  InverseRotation_LeftUpperArm;                      // 0x0D90(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FQuat                                  InverseRotation_RightUpperArm;                     // 0x0DB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PhysicsFactor_Belly;                               // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PhysicsFactor_Breast;                              // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFemale;                                           // 0x0DE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DE1[0x7];                                      // 0x0DE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CharacterCreatorFatChest;                          // 0x0DE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CharacterCreatorFatBelly;                          // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChestFat_Spring_Local;                             // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BellyFat_Spring_Local;                             // 0x0E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OverallFat_Spring_Local;                           // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldReset;                                      // 0x0E10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E11[0x7];                                      // 0x0E11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 KeepBoneAnimIndeces;                               // 0x0E18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
@@ -59,5 +59,6 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_Twist_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_Male_TPV_Twist_CtrlRig_C;
 
 SDK_NAMESPACE_END

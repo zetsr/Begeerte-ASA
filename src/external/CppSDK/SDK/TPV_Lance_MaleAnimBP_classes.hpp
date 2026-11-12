@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass TPV_Lance_MaleAnimBP.TPV_Lance_MaleAnimBP_C
-// 0x0000 (0x20020 - 0x20020)
+// 0x0000 (0x21340 - 0x21340)
 class UTPV_Lance_MaleAnimBP_C final : public UBaseHumanAnimBP_C
 {
 public:
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UTPV_Lance_MaleAnimBP_C>();
 	}
 };
+DUMPER7_ASSERTS_UTPV_Lance_MaleAnimBP_C;
 
 SDK_NAMESPACE_END

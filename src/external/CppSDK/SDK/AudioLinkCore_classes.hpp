@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UAudioLinkSettingsAbstract>();
 	}
 };
+DUMPER7_ASSERTS_UAudioLinkSettingsAbstract;
 
 SDK_NAMESPACE_END

@@ -50,6 +50,7 @@ public:
 	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_Assert_Selected_Item_for_Preview;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.BndEvt__ReHostSession_ASA_AdvancedHeader_1_K2Node_ComponentBoundEvent_22_OnSelectionIndexChanged__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
@@ -58,6 +59,7 @@ struct ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_AdvancedHeader_1_K2Node_Com
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_AdvancedHeader_1_K2Node_ComponentBoundEvent_22_OnSelectionIndexChanged__DelegateSignature;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.BndEvt__ReHostSession_ASA_Header_GridPanel_K2Node_ComponentBoundEvent_30_OnSelectionChangedIndex__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
@@ -66,6 +68,7 @@ struct ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_Header_GridPanel_K2Node_Com
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_Header_GridPanel_K2Node_ComponentBoundEvent_30_OnSelectionChangedIndex__DelegateSignature;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.BndEvt__ReHostSession_ASA_Submenu_Mods_1_K2Node_ComponentBoundEvent_21_OnSelectionIndexChanged__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
@@ -74,6 +77,7 @@ struct ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_Submenu_Mods_1_K2Node_Compo
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_BndEvt__ReHostSession_ASA_Submenu_Mods_1_K2Node_ComponentBoundEvent_21_OnSelectionIndexChanged__DelegateSignature;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.BPIsPresetDifficultyUIOpen
 // 0x0002 (0x0002 - 0x0000)
@@ -83,6 +87,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPresetDifficultyUIOpen_NewParam;        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_BPIsPresetDifficultyUIOpen;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.BPShowDfficultyPanel
 // 0x0001 (0x0001 - 0x0000)
@@ -91,6 +96,7 @@ struct ReHostSession_ASA_C_BPShowDfficultyPanel final
 public:
 	bool                                          bShow;                                             // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_BPShowDfficultyPanel;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.CreateNotifManager
 // 0x0010 (0x0010 - 0x0000)
@@ -100,6 +106,7 @@ public:
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Create_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_CreateNotifManager;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.ExecuteUbergraph_ReHostSession_ASA
 // 0x0750 (0x0750 - 0x0000)
@@ -171,6 +178,7 @@ public:
 	uint8                                         Pad_742[0x6];                                      // 0x0742(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UButton*                                K2Node_Select_Default_2;                           // 0x0748(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_ExecuteUbergraph_ReHostSession_ASA;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.Get_MapImage_Border_Background
 // 0x0190 (0x0190 - 0x0000)
@@ -190,6 +198,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_Get_MapImage_Border_Background;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.Get_ModImage_Border_Background
 // 0x01A0 (0x01A0 - 0x0000)
@@ -209,6 +218,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_Get_ModImage_Border_Background;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.HasUGCPrivileges
 // 0x0020 (0x0020 - 0x0000)
@@ -222,6 +232,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanUseUserGeneratedContent_ReturnValue;   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_HasUGCPrivileges;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.IsPresetDifficultyUIOpen
 // 0x0003 (0x0003 - 0x0000)
@@ -232,6 +243,7 @@ public:
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_IsPresetDifficultyUIOpen;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.OnEventBroadcasted
 // 0x0030 (0x0030 - 0x0000)
@@ -245,36 +257,38 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_OnEventBroadcasted;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.OnKeyDownEvent
-// 0x0260 (0x0260 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct ReHostSession_ASA_C_OnKeyDownEvent final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyboardEvent;                                   // 0x0038(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	class UASAUIWidget_HorizontalListSelector_Sub_Style4_C* LocalSubMenu;                            // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   LocalKey;                                          // 0x0138(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPresetDifficultyUIOpen_NewParam;        // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0158(0x0018)(HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_OnKeyDownEvent_ReturnValue;               // 0x0170(0x00B8)()
-	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x023D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x023E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x023F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_SwitchButton_Widget_2;                    // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_4;          // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24A[0x2];                                      // 0x024A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_SwitchButton_Widget_3;                    // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UASAUIWidget_HorizontalListSelector_Sub_Style4_C* K2Node_Select_Default;                   // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FKeyEvent                              InKeyboardEvent;                                   // 0x0038(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	class UASAUIWidget_HorizontalListSelector_Sub_Style4_C* LocalSubMenu;                            // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   LocalKey;                                          // 0x0140(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPresetDifficultyUIOpen_NewParam;        // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0160(0x0018)(HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_OnKeyDownEvent_ReturnValue;               // 0x0178(0x00B8)()
+	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0238(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0245(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0246(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x0247(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_SwitchButton_Widget_2;                    // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_4;          // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_252[0x2];                                      // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_SwitchButton_Widget_3;                    // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UASAUIWidget_HorizontalListSelector_Sub_Style4_C* K2Node_Select_Default;                   // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_OnKeyDownEvent;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.OnModInfoRequested
 // 0x0008 (0x0008 - 0x0000)
@@ -283,6 +297,7 @@ struct ReHostSession_ASA_C_OnModInfoRequested final
 public:
 	int64                                         modId;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_OnModInfoRequested;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.OnRecievedInstalledModsInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -291,6 +306,7 @@ struct ReHostSession_ASA_C_OnRecievedInstalledModsInfo final
 public:
 	TArray<struct FInstallProgressMod>            installedMods_0;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_OnRecievedInstalledModsInfo;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -300,6 +316,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReHostSession_ASA_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

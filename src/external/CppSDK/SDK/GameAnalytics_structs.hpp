@@ -89,13 +89,37 @@ enum class EGAAdError : uint8
 	EGAAdError_MAX                           = 7,
 };
 
-// ScriptStruct GameAnalytics.GameAnalyticsCustomEventField
-// 0x0020 (0x0020 - 0x0000)
-struct FGameAnalyticsCustomEventField final
+// Enum GameAnalytics.EGAValueType
+// NumValues: 0x0004
+enum class EGAValueType : uint8
+{
+	value_number                             = 0,
+	value_string                             = 1,
+	value_bool                               = 2,
+	value_MAX                                = 3,
+};
+
+// ScriptStruct GameAnalytics.GACustomValue
+// 0x0030 (0x0030 - 0x0000)
+struct FGACustomValue final
 {
 public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Key;                                               // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValueString;                                       // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ValueNumber;                                       // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ValueBool;                                         // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGAValueType                                  ValueType;                                         // 0x0029(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FGACustomValue;
+
+// ScriptStruct GameAnalytics.GACustomFields
+// 0x0010 (0x0010 - 0x0000)
+struct FGACustomFields final
+{
+public:
+	TArray<struct FGACustomValue>                 Values;                                            // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGACustomFields;
 
 SDK_NAMESPACE_END

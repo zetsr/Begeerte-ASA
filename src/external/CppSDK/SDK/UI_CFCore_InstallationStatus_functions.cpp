@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_InstallationStatus_C::Event_Set_Bindings_To_Game_Slot(class UUI_CFCore_GameSlot_C* GameSlot)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "Event Set Bindings To Game Slot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "Event Set Bindings To Game Slot", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_Event_Set_Bindings_To_Game_Slot Parms{};
 
@@ -43,10 +41,8 @@ void UUI_CFCore_InstallationStatus_C::Event_Set_Bindings_To_Game_Slot(class UUI_
 
 void UUI_CFCore_InstallationStatus_C::ExecuteUbergraph_UI_CFCore_InstallationStatus(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "ExecuteUbergraph_UI_CFCore_InstallationStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "ExecuteUbergraph_UI_CFCore_InstallationStatus", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_ExecuteUbergraph_UI_CFCore_InstallationStatus Parms{};
 
@@ -63,10 +59,8 @@ void UUI_CFCore_InstallationStatus_C::ExecuteUbergraph_UI_CFCore_InstallationSta
 
 void UUI_CFCore_InstallationStatus_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_GetRootCFWidget Parms{};
 
@@ -87,10 +81,8 @@ void UUI_CFCore_InstallationStatus_C::GetRootCFWidget(class UPanelWidget** RootP
 
 double UUI_CFCore_InstallationStatus_C::GetTrueProgress(int32 Amount, ELibraryProgressState InstalationState, bool* MaintainPreviousValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "GetTrueProgress");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "GetTrueProgress", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_GetTrueProgress Parms{};
 
@@ -114,10 +106,8 @@ double UUI_CFCore_InstallationStatus_C::GetTrueProgress(int32 Amount, ELibraryPr
 
 void UUI_CFCore_InstallationStatus_C::PlayNotificationUpdate(double Duration, const class FText& Message)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "PlayNotificationUpdate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "PlayNotificationUpdate", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_PlayNotificationUpdate Parms{};
 
@@ -135,10 +125,8 @@ void UUI_CFCore_InstallationStatus_C::PlayNotificationUpdate(double Duration, co
 
 void UUI_CFCore_InstallationStatus_C::SetTextBasedOnState(EInstallStatus Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "SetTextBasedOnState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "SetTextBasedOnState", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_SetTextBasedOnState Parms{};
 
@@ -155,10 +143,8 @@ void UUI_CFCore_InstallationStatus_C::SetTextBasedOnState(EInstallStatus Index_0
 
 void UUI_CFCore_InstallationStatus_C::UpdateColor(EInstallStatus Install_Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "UpdateColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "UpdateColor", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_UpdateColor Parms{};
 
@@ -169,22 +155,20 @@ void UUI_CFCore_InstallationStatus_C::UpdateColor(EInstallStatus Install_Status)
 
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.UpdateModProgress
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EInstallStatus                          NewInstallationStatus                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ELibraryProgressState                   InstallationPhase                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_CFCore_InstallationStatus_C::UpdateModProgress(int32 progress, EInstallStatus NewInstallationStatus, ELibraryProgressState InstallationPhase)
+void UUI_CFCore_InstallationStatus_C::UpdateModProgress(int32 Progress, EInstallStatus NewInstallationStatus, ELibraryProgressState InstallationPhase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstallationStatus_C", "UpdateModProgress");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstallationStatus_C", "UpdateModProgress", FuncInfo);
 
 	Params::UI_CFCore_InstallationStatus_C_UpdateModProgress Parms{};
 
-	Parms.progress = progress;
+	Parms.Progress = Progress;
 	Parms.NewInstallationStatus = NewInstallationStatus;
 	Parms.InstallationPhase = InstallationPhase;
 

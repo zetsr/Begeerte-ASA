@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_PaginationLeftRight_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PaginationLeftRight_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_PaginationLeftRight_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_PaginationLeftRight_C::ApplyThemeSettingsToAll()
 
 void UUI_PaginationLeftRight_C::BndEvt__UI_PaginationLeftRight_Button_PrevPage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PaginationLeftRight_C", "BndEvt__UI_PaginationLeftRight_Button_PrevPage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_PaginationLeftRight_C", "BndEvt__UI_PaginationLeftRight_Button_PrevPage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_PaginationLeftRight_C::BndEvt__UI_PaginationLeftRight_Button_PrevPage_K
 
 void UUI_PaginationLeftRight_C::ExecuteUbergraph_UI_PaginationLeftRight(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PaginationLeftRight_C", "ExecuteUbergraph_UI_PaginationLeftRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_PaginationLeftRight_C", "ExecuteUbergraph_UI_PaginationLeftRight", FuncInfo);
 
 	Params::UI_PaginationLeftRight_C_ExecuteUbergraph_UI_PaginationLeftRight Parms{};
 
@@ -71,10 +65,8 @@ void UUI_PaginationLeftRight_C::ExecuteUbergraph_UI_PaginationLeftRight(int32 En
 
 void UUI_PaginationLeftRight_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PaginationLeftRight_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_PaginationLeftRight_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_PaginationLeftRight_C_GetRootCFWidget Parms{};
 

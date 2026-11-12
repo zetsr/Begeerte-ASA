@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
-#include "TargetingSystem_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
-#include "GameplayAbilities_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "TargetingSystem_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "GameplayAbilities_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -47,6 +47,7 @@ public:
 		return GetDefaultObjImpl<UAbilityTask_PerformTargeting>();
 	}
 };
+DUMPER7_ASSERTS_UAbilityTask_PerformTargeting;
 
 // Class TargetingSystem.AsyncAction_PerformTargeting
 // 0x0038 (0x0068 - 0x0030)
@@ -81,169 +82,14 @@ public:
 		return GetDefaultObjImpl<UAsyncAction_PerformTargeting>();
 	}
 };
-
-// Class TargetingSystem.TargetingTask
-// 0x0000 (0x0028 - 0x0028)
-class UTargetingTask : public UObject
-{
-public:
-	class UTargetingSubsystem* GetTargetingSubsystem(const struct FTargetingRequestHandle& TargetingHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingTask")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingTask")
-	}
-	static class UTargetingTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingTask>();
-	}
-};
-
-// Class TargetingSystem.TargetingFilterTask_BasicFilterTemplate
-// 0x0000 (0x0028 - 0x0028)
-class UTargetingFilterTask_BasicFilterTemplate : public UTargetingTask
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingFilterTask_BasicFilterTemplate")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingFilterTask_BasicFilterTemplate")
-	}
-	static class UTargetingFilterTask_BasicFilterTemplate* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingFilterTask_BasicFilterTemplate>();
-	}
-};
-
-// Class TargetingSystem.SimpleTargetingFilterTask
-// 0x0000 (0x0028 - 0x0028)
-class USimpleTargetingFilterTask final : public UTargetingFilterTask_BasicFilterTemplate
-{
-public:
-	bool BP_ShouldFilterTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SimpleTargetingFilterTask")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SimpleTargetingFilterTask")
-	}
-	static class USimpleTargetingFilterTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USimpleTargetingFilterTask>();
-	}
-};
-
-// Class TargetingSystem.SimpleTargetingSelectionTask
-// 0x0000 (0x0028 - 0x0028)
-class USimpleTargetingSelectionTask final : public UTargetingTask
-{
-public:
-	bool AddHitResult(const struct FTargetingRequestHandle& TargetingHandle, const struct FHitResult& HitResult) const;
-	bool AddTargetActor(const struct FTargetingRequestHandle& TargetingHandle, class AActor* Actor) const;
-	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SimpleTargetingSelectionTask")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SimpleTargetingSelectionTask")
-	}
-	static class USimpleTargetingSelectionTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USimpleTargetingSelectionTask>();
-	}
-};
-
-// Class TargetingSystem.TargetingSortTask_Base
-// 0x0008 (0x0030 - 0x0028)
-class UTargetingSortTask_Base : public UTargetingTask
-{
-public:
-	uint8                                         bAscending : 1;                                    // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bStableSort : 1;                                   // 0x0028(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingSortTask_Base")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingSortTask_Base")
-	}
-	static class UTargetingSortTask_Base* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingSortTask_Base>();
-	}
-};
-
-// Class TargetingSystem.SimpleTargetingSortTask
-// 0x0000 (0x0030 - 0x0030)
-class USimpleTargetingSortTask final : public UTargetingSortTask_Base
-{
-public:
-	float BP_GetScoreForTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SimpleTargetingSortTask")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SimpleTargetingSortTask")
-	}
-	static class USimpleTargetingSortTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USimpleTargetingSortTask>();
-	}
-};
-
-// Class TargetingSystem.TargetingFilterTask_ActorClass
-// 0x0020 (0x0048 - 0x0028)
-class UTargetingFilterTask_ActorClass final : public UTargetingFilterTask_BasicFilterTemplate
-{
-public:
-	TArray<TSubclassOf<class UObject>>            RequiredActorClassFilters;                         // 0x0028(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<TSubclassOf<class UObject>>            IgnoredActorClassFilters;                          // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingFilterTask_ActorClass")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingFilterTask_ActorClass")
-	}
-	static class UTargetingFilterTask_ActorClass* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingFilterTask_ActorClass>();
-	}
-};
+DUMPER7_ASSERTS_UAsyncAction_PerformTargeting;
 
 // Class TargetingSystem.TargetingPreset
-// 0x0010 (0x0040 - 0x0030)
+// 0x0010 (0x0038 - 0x0028)
 class UTargetingPreset final : public UDataAsset
 {
 public:
-	struct FTargetingTaskSet                      TargetingTaskSet;                                  // 0x0030(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FTargetingTaskSet                      TargetingTaskSet;                                  // 0x0028(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -259,118 +105,7 @@ public:
 		return GetDefaultObjImpl<UTargetingPreset>();
 	}
 };
-
-// Class TargetingSystem.TargetingSelectionTask_AOE
-// 0x00B0 (0x00D8 - 0x0028)
-class UTargetingSelectionTask_AOE final : public UTargetingTask
-{
-public:
-	ETargetingAOEShape                            ShapeType;                                         // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECollisionChannel                             CollisionChannel;                                  // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      CollisionObjectTypes;                              // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                DefaultSourceOffset;                               // 0x0048(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bUseRelativeOffset : 1;                            // 0x0060(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreSourceActor : 1;                            // 0x0060(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0060(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bTraceComplex : 1;                                 // 0x0060(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HalfExtent;                                        // 0x0068(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         Radius;                                            // 0x0080(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         HalfHeight;                                        // 0x00A8(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	class FName                                   ComponentTag;                                      // 0x00D0(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingSelectionTask_AOE")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingSelectionTask_AOE")
-	}
-	static class UTargetingSelectionTask_AOE* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingSelectionTask_AOE>();
-	}
-};
-
-// Class TargetingSystem.TargetingSelectionTask_SourceActor
-// 0x0000 (0x0028 - 0x0028)
-class UTargetingSelectionTask_SourceActor final : public UTargetingTask
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingSelectionTask_SourceActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingSelectionTask_SourceActor")
-	}
-	static class UTargetingSelectionTask_SourceActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingSelectionTask_SourceActor>();
-	}
-};
-
-// Class TargetingSystem.TargetingSelectionTask_Trace
-// 0x0150 (0x0178 - 0x0028)
-class UTargetingSelectionTask_Trace final : public UTargetingTask
-{
-public:
-	ETargetingTraceType                           TraceType;                                         // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ETraceTypeQuery                               TraceChannel;                                      // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         DefaultSweptTraceRadius;                           // 0x0038(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         DefaultSweptTraceCapsuleHalfHeight;                // 0x0060(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentX;                   // 0x0088(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentY;                   // 0x00B0(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentZ;                   // 0x00D8(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FRotator                               DefaultSweptTraceRotation;                         // 0x0100(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         DefaultTraceLength;                                // 0x0118(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                DefaultSourceOffset;                               // 0x0140(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector                                ExplicitTraceDirection;                            // 0x0158(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bComplexTrace : 1;                                 // 0x0170(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bMultiTrace : 1;                                   // 0x0170(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreSourceActor : 1;                            // 0x0170(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0170(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void GetAdditionalActorsToIgnore(const struct FTargetingRequestHandle& TargetingHandle, TArray<class AActor*>* OutAdditionalActorsToIgnore) const;
-	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSweptTraceBoxHalfExtents(const struct FTargetingRequestHandle& TargetingHandle) const;
-	float GetSweptTraceCapsuleHalfHeight(const struct FTargetingRequestHandle& TargetingHandle) const;
-	float GetSweptTraceRadius(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FRotator GetSweptTraceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetTraceDirection(const struct FTargetingRequestHandle& TargetingHandle) const;
-	float GetTraceLength(const struct FTargetingRequestHandle& TargetingHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TargetingSelectionTask_Trace")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TargetingSelectionTask_Trace")
-	}
-	static class UTargetingSelectionTask_Trace* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTargetingSelectionTask_Trace>();
-	}
-};
+DUMPER7_ASSERTS_UTargetingPreset;
 
 // Class TargetingSystem.TargetingSubsystem
 // 0x0048 (0x0078 - 0x0030)
@@ -406,6 +141,170 @@ public:
 		return GetDefaultObjImpl<UTargetingSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UTargetingSubsystem;
+
+// Class TargetingSystem.TargetingTask
+// 0x0000 (0x0028 - 0x0028)
+class UTargetingTask : public UObject
+{
+public:
+	class UTargetingSubsystem* GetTargetingSubsystem(const struct FTargetingRequestHandle& TargetingHandle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingTask")
+	}
+	static class UTargetingTask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingTask>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingTask;
+
+// Class TargetingSystem.TargetingFilterTask_BasicFilterTemplate
+// 0x0000 (0x0028 - 0x0028)
+class UTargetingFilterTask_BasicFilterTemplate : public UTargetingTask
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingFilterTask_BasicFilterTemplate")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingFilterTask_BasicFilterTemplate")
+	}
+	static class UTargetingFilterTask_BasicFilterTemplate* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingFilterTask_BasicFilterTemplate>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingFilterTask_BasicFilterTemplate;
+
+// Class TargetingSystem.SimpleTargetingFilterTask
+// 0x0000 (0x0028 - 0x0028)
+class USimpleTargetingFilterTask final : public UTargetingFilterTask_BasicFilterTemplate
+{
+public:
+	bool BP_ShouldFilterTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SimpleTargetingFilterTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleTargetingFilterTask")
+	}
+	static class USimpleTargetingFilterTask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USimpleTargetingFilterTask>();
+	}
+};
+DUMPER7_ASSERTS_USimpleTargetingFilterTask;
+
+// Class TargetingSystem.SimpleTargetingSelectionTask
+// 0x0000 (0x0028 - 0x0028)
+class USimpleTargetingSelectionTask final : public UTargetingTask
+{
+public:
+	bool AddHitResult(const struct FTargetingRequestHandle& TargetingHandle, const struct FHitResult& HitResult) const;
+	bool AddTargetActor(const struct FTargetingRequestHandle& TargetingHandle, class AActor* Actor) const;
+	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SimpleTargetingSelectionTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleTargetingSelectionTask")
+	}
+	static class USimpleTargetingSelectionTask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USimpleTargetingSelectionTask>();
+	}
+};
+DUMPER7_ASSERTS_USimpleTargetingSelectionTask;
+
+// Class TargetingSystem.TargetingSortTask_Base
+// 0x0008 (0x0030 - 0x0028)
+class UTargetingSortTask_Base : public UTargetingTask
+{
+public:
+	uint8                                         bAscending : 1;                                    // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bStableSort : 1;                                   // 0x0028(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingSortTask_Base")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingSortTask_Base")
+	}
+	static class UTargetingSortTask_Base* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingSortTask_Base>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingSortTask_Base;
+
+// Class TargetingSystem.SimpleTargetingSortTask
+// 0x0000 (0x0030 - 0x0030)
+class USimpleTargetingSortTask final : public UTargetingSortTask_Base
+{
+public:
+	float BP_GetScoreForTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SimpleTargetingSortTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleTargetingSortTask")
+	}
+	static class USimpleTargetingSortTask* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USimpleTargetingSortTask>();
+	}
+};
+DUMPER7_ASSERTS_USimpleTargetingSortTask;
+
+// Class TargetingSystem.TargetingFilterTask_ActorClass
+// 0x0020 (0x0048 - 0x0028)
+class UTargetingFilterTask_ActorClass final : public UTargetingFilterTask_BasicFilterTemplate
+{
+public:
+	TArray<TSubclassOf<class UObject>>            RequiredActorClassFilters;                         // 0x0028(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<TSubclassOf<class UObject>>            IgnoredActorClassFilters;                          // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingFilterTask_ActorClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingFilterTask_ActorClass")
+	}
+	static class UTargetingFilterTask_ActorClass* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingFilterTask_ActorClass>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingFilterTask_ActorClass;
 
 // Class TargetingSystem.TargetingFilterTask_SortByDistance
 // 0x0008 (0x0038 - 0x0030)
@@ -430,5 +329,123 @@ public:
 		return GetDefaultObjImpl<UTargetingFilterTask_SortByDistance>();
 	}
 };
+DUMPER7_ASSERTS_UTargetingFilterTask_SortByDistance;
+
+// Class TargetingSystem.TargetingSelectionTask_AOE
+// 0x00C8 (0x00F0 - 0x0028)
+class UTargetingSelectionTask_AOE final : public UTargetingTask
+{
+public:
+	ETargetingAOEShape                            ShapeType;                                         // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECollisionChannel                             CollisionChannel;                                  // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      CollisionObjectTypes;                              // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                DefaultSourceOffset;                               // 0x0048(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRotator                               DefaultSourceRotationOffset;                       // 0x0060(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bUseRelativeOffset : 1;                            // 0x0078(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreSourceActor : 1;                            // 0x0078(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0078(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bTraceComplex : 1;                                 // 0x0078(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HalfExtent;                                        // 0x0080(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         Radius;                                            // 0x0098(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         HalfHeight;                                        // 0x00C0(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	class FName                                   ComponentTag;                                      // 0x00E8(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FRotator GetSourceRotationOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingSelectionTask_AOE")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingSelectionTask_AOE")
+	}
+	static class UTargetingSelectionTask_AOE* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingSelectionTask_AOE>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingSelectionTask_AOE;
+
+// Class TargetingSystem.TargetingSelectionTask_SourceActor
+// 0x0000 (0x0028 - 0x0028)
+class UTargetingSelectionTask_SourceActor final : public UTargetingTask
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingSelectionTask_SourceActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingSelectionTask_SourceActor")
+	}
+	static class UTargetingSelectionTask_SourceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingSelectionTask_SourceActor>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingSelectionTask_SourceActor;
+
+// Class TargetingSystem.TargetingSelectionTask_Trace
+// 0x0150 (0x0178 - 0x0028)
+class UTargetingSelectionTask_Trace final : public UTargetingTask
+{
+public:
+	ETargetingTraceType                           TraceType;                                         // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ETraceTypeQuery                               TraceChannel;                                      // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         DefaultSweptTraceRadius;                           // 0x0038(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         DefaultSweptTraceCapsuleHalfHeight;                // 0x0060(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentX;                   // 0x0088(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentY;                   // 0x00B0(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         DefaultSweptTraceBoxHalfExtentZ;                   // 0x00D8(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FRotator                               DefaultSweptTraceRotation;                         // 0x0100(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         DefaultTraceLength;                                // 0x0118(0x0028)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                DefaultSourceOffset;                               // 0x0140(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector                                ExplicitTraceDirection;                            // 0x0158(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bComplexTrace : 1;                                 // 0x0170(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bMultiTrace : 1;                                   // 0x0170(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreSourceActor : 1;                            // 0x0170(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0170(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void GetAdditionalActorsToIgnore(const struct FTargetingRequestHandle& TargetingHandle, TArray<class AActor*>* OutAdditionalActorsToIgnore) const;
+	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSweptTraceBoxHalfExtents(const struct FTargetingRequestHandle& TargetingHandle) const;
+	float GetSweptTraceCapsuleHalfHeight(const struct FTargetingRequestHandle& TargetingHandle) const;
+	float GetSweptTraceRadius(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FRotator GetSweptTraceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetTraceDirection(const struct FTargetingRequestHandle& TargetingHandle) const;
+	float GetTraceLength(const struct FTargetingRequestHandle& TargetingHandle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TargetingSelectionTask_Trace")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TargetingSelectionTask_Trace")
+	}
+	static class UTargetingSelectionTask_Trace* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTargetingSelectionTask_Trace>();
+	}
+};
+DUMPER7_ASSERTS_UTargetingSelectionTask_Trace;
 
 SDK_NAMESPACE_END

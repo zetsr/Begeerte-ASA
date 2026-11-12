@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Buff_ASAPreventDismount.Buff_ASAPreventDismount_C
-// 0x0000 (0x0B48 - 0x0B48)
+// 0x0000 (0x0B68 - 0x0B68)
 class ABuff_ASAPreventDismount_C final : public APrimalBuff
 {
 public:
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<ABuff_ASAPreventDismount_C>();
 	}
 };
+DUMPER7_ASSERTS_ABuff_ASAPreventDismount_C;
 
 SDK_NAMESPACE_END

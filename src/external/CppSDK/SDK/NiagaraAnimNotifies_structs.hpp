@@ -13,6 +13,16 @@
 
 SDK_NAMESPACE_START
 
+// Enum NiagaraAnimNotifies.ENiagaraAnimNotifyProgressType
+// NumValues: 0x0004
+enum class ENiagaraAnimNotifyProgressType : uint8
+{
+	None                                     = 0,
+	Forward                                  = 1,
+	Reverse                                  = 2,
+	ENiagaraAnimNotifyProgressType_MAX       = 3,
+};
+
 // ScriptStruct NiagaraAnimNotifies.CurveParameterPair
 // 0x0010 (0x0010 - 0x0000)
 struct FCurveParameterPair final
@@ -21,5 +31,6 @@ public:
 	class FName                                   AnimCurveName;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   UserVariableName;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCurveParameterPair;
 
 SDK_NAMESPACE_END

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RagdollKinematicActor_BP.RagdollKinematicActor_BP_C
-// 0x0000 (0x04A0 - 0x04A0)
+// 0x0000 (0x04A8 - 0x04A8)
 class ARagdollKinematicActor_BP_C final : public AStaticMeshActor
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<ARagdollKinematicActor_BP_C>();
 	}
 };
+DUMPER7_ASSERTS_ARagdollKinematicActor_BP_C;
 
 SDK_NAMESPACE_END

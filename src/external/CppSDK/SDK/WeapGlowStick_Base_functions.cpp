@@ -20,10 +20,8 @@ SDK_NAMESPACE_START
 
 void AWeapGlowStick_Base_C::DoMultiFakeReload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapGlowStick_Base_C", "DoMultiFakeReload");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapGlowStick_Base_C", "DoMultiFakeReload", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -34,10 +32,8 @@ void AWeapGlowStick_Base_C::DoMultiFakeReload()
 
 void AWeapGlowStick_Base_C::DoMultiUnequipGlowStick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapGlowStick_Base_C", "DoMultiUnequipGlowStick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapGlowStick_Base_C", "DoMultiUnequipGlowStick", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

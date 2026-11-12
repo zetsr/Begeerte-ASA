@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponPaintbrush_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponPaintbrush_C;
 
 SDK_NAMESPACE_END

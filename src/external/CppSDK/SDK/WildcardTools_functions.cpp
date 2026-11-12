@@ -19,11 +19,11 @@ SDK_NAMESPACE_START
 // Function WildcardTools.WildcardHelpers.CreateJIRABug
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    Args                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    args                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    UploadDir                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    UploadExtension                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWildcardHelpers::CreateJIRABug(const class FString& Args, const class FString& UploadDir, const class FString& UploadExtension)
+void UWildcardHelpers::CreateJIRABug(const class FString& args, const class FString& UploadDir, const class FString& UploadExtension)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,7 +32,7 @@ void UWildcardHelpers::CreateJIRABug(const class FString& Args, const class FStr
 
 	Params::WildcardHelpers_CreateJIRABug Parms{};
 
-	Parms.Args = std::move(Args);
+	Parms.args = std::move(args);
 	Parms.UploadDir = std::move(UploadDir);
 	Parms.UploadExtension = std::move(UploadExtension);
 

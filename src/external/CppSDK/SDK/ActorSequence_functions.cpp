@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Function ActorSequence.ActorSequenceComponent.PauseSequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UActorSequenceComponent::PauseSequence()
 {
@@ -35,7 +35,7 @@ void UActorSequenceComponent::PauseSequence()
 
 
 // Function ActorSequence.ActorSequenceComponent.PlaySequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UActorSequenceComponent::PlaySequence()
 {
@@ -53,8 +53,27 @@ void UActorSequenceComponent::PlaySequence()
 }
 
 
+// Function ActorSequence.ActorSequenceComponent.PlaySequenceReverse
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UActorSequenceComponent::PlaySequenceReverse()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ActorSequenceComponent", "PlaySequenceReverse");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ActorSequence.ActorSequenceComponent.StopSequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UActorSequenceComponent::StopSequence()
 {

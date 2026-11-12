@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Button_UpvoteRate_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_UpvoteRate_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_UpvoteRate_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Button_UpvoteRate_C_GetRootCFWidget Parms{};
 

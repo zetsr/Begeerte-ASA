@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UReMainMenuUI_ASA_C::BndEvt__CreditsButton_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__CreditsButton_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__CreditsButton_K2Node_ComponentBoundEvent_116_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UReMainMenuUI_ASA_C::BndEvt__CreditsButton_K2Node_ComponentBoundEvent_116_O
 
 void UReMainMenuUI_ASA_C::BndEvt__MainMenuUI_WebLink_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__MainMenuUI_WebLink_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__MainMenuUI_WebLink_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UReMainMenuUI_ASA_C::BndEvt__MainMenuUI_WebLink_K2Node_ComponentBoundEvent_
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_DLC_Selector_K2Node_ComponentBoundEvent_11_OnBackSelected__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_DLC_Selector_K2Node_ComponentBoundEvent_11_OnBackSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_DLC_Selector_K2Node_ComponentBoundEvent_11_OnBackSelected__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_DLC_Selector_K
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_12_OnDLCStore__DelegateSignature(const class FString& DLC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_12_OnDLCStore__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_12_OnDLCStore__DelegateSignature", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_12_OnDLCStore__DelegateSignature Parms{};
 
@@ -83,10 +75,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_2_OnBackSelected__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_2_OnBackSelected__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_2_OnBackSelected__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +87,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_3_OnMultiplayerClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_3_OnMultiplayerClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_3_OnMultiplayerClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,10 +99,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_4_OnCreateGameClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_4_OnCreateGameClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_4_OnCreateGameClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +111,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_6_OnModsClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_6_OnModsClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_6_OnModsClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +123,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_1_OnStartButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_1_OnStartButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_1_OnStartButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +135,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_7_OnGoToLastPlayedButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_7_OnGoToLastPlayedButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_K2Node_ComponentBoundEvent_7_OnGoToLastPlayedButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +147,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_SettingsButton_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_SettingsButton_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_SettingsButton_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +159,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_SettingsButton_K2Node_Compone
 
 void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_W_ButtonDLC_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_W_ButtonDLC_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_W_ButtonDLC_K2Node_ComponentBoundEvent_10_OnClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,10 +174,8 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_W_ButtonDLC_K2Node_ComponentB
 
 bool UReMainMenuUI_ASA_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "BPGamepadReleased", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_BPGamepadReleased Parms{};
 
@@ -218,10 +192,8 @@ bool UReMainMenuUI_ASA_C::BPGamepadReleased(const struct FKey& theKey)
 
 void UReMainMenuUI_ASA_C::ClosedEvent_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "ClosedEvent_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "ClosedEvent_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -232,10 +204,8 @@ void UReMainMenuUI_ASA_C::ClosedEvent_Event()
 
 void UReMainMenuUI_ASA_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -246,10 +216,8 @@ void UReMainMenuUI_ASA_C::Construct()
 
 void UReMainMenuUI_ASA_C::CreateNotifManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "CreateNotifManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "CreateNotifManager", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +230,8 @@ void UReMainMenuUI_ASA_C::CreateNotifManager()
 
 void UReMainMenuUI_ASA_C::DeepLinkModPage(int64 RequestedModID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "DeepLinkModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "DeepLinkModPage", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_DeepLinkModPage Parms{};
 
@@ -280,10 +246,8 @@ void UReMainMenuUI_ASA_C::DeepLinkModPage(int64 RequestedModID)
 
 void UReMainMenuUI_ASA_C::EscapeMainMenuPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "EscapeMainMenuPressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "EscapeMainMenuPressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +260,8 @@ void UReMainMenuUI_ASA_C::EscapeMainMenuPressed()
 
 void UReMainMenuUI_ASA_C::ExecuteUbergraph_ReMainMenuUI_ASA(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "ExecuteUbergraph_ReMainMenuUI_ASA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "ExecuteUbergraph_ReMainMenuUI_ASA", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_ExecuteUbergraph_ReMainMenuUI_ASA Parms{};
 
@@ -314,10 +276,8 @@ void UReMainMenuUI_ASA_C::ExecuteUbergraph_ReMainMenuUI_ASA(int32 EntryPoint)
 
 void UReMainMenuUI_ASA_C::HandleDiscordButtonVisibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "HandleDiscordButtonVisibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "HandleDiscordButtonVisibility", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -328,10 +288,8 @@ void UReMainMenuUI_ASA_C::HandleDiscordButtonVisibility()
 
 void UReMainMenuUI_ASA_C::HighlightStartButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "HighlightStartButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "HighlightStartButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -342,10 +300,8 @@ void UReMainMenuUI_ASA_C::HighlightStartButton()
 
 void UReMainMenuUI_ASA_C::HighlightTheStartButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "HighlightTheStartButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "HighlightTheStartButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +312,8 @@ void UReMainMenuUI_ASA_C::HighlightTheStartButton()
 
 void UReMainMenuUI_ASA_C::JumpIntro()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "JumpIntro");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "JumpIntro", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -370,10 +324,8 @@ void UReMainMenuUI_ASA_C::JumpIntro()
 
 void UReMainMenuUI_ASA_C::OnBackClicked_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnBackClicked_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnBackClicked_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -384,10 +336,8 @@ void UReMainMenuUI_ASA_C::OnBackClicked_Event()
 
 void UReMainMenuUI_ASA_C::OnCFCoreUIControllerInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnCFCoreUIControllerInit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnCFCoreUIControllerInit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -398,10 +348,20 @@ void UReMainMenuUI_ASA_C::OnCFCoreUIControllerInit()
 
 void UReMainMenuUI_ASA_C::OnCreditsClicked_Event()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnCreditsClicked_Event", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnCreditsClicked_Event");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.OnDevModBrowserClicked_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UReMainMenuUI_ASA_C::OnDevModBrowserClicked_Event()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnDevModBrowserClicked_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -414,10 +374,8 @@ void UReMainMenuUI_ASA_C::OnCreditsClicked_Event()
 
 void UReMainMenuUI_ASA_C::OnGamepadActiveChangedBP(bool bIsGamepadActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnGamepadActiveChangedBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnGamepadActiveChangedBP", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_OnGamepadActiveChangedBP Parms{};
 
@@ -434,10 +392,8 @@ void UReMainMenuUI_ASA_C::OnGamepadActiveChangedBP(bool bIsGamepadActive)
 
 void UReMainMenuUI_ASA_C::OnGamepadSelectionChanged(class UWidget* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnGamepadSelectionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnGamepadSelectionChanged", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_OnGamepadSelectionChanged Parms{};
 
@@ -456,10 +412,8 @@ void UReMainMenuUI_ASA_C::OnGamepadSelectionChanged(class UWidget* Widget)
 
 struct FEventReply UReMainMenuUI_ASA_C::OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnKeyDownEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnKeyDownEvent", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_OnKeyDownEvent Parms{};
 
@@ -477,10 +431,8 @@ struct FEventReply UReMainMenuUI_ASA_C::OnKeyDownEvent(const struct FGeometry& M
 
 void UReMainMenuUI_ASA_C::OnMediaReachedEnd_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnMediaReachedEnd_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnMediaReachedEnd_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -491,10 +443,8 @@ void UReMainMenuUI_ASA_C::OnMediaReachedEnd_Event()
 
 void UReMainMenuUI_ASA_C::OnMediaReachedEnd_Event_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnMediaReachedEnd_Event_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnMediaReachedEnd_Event_0", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -505,10 +455,8 @@ void UReMainMenuUI_ASA_C::OnMediaReachedEnd_Event_0()
 
 void UReMainMenuUI_ASA_C::OnQuitGameClicked_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnQuitGameClicked_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnQuitGameClicked_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -519,10 +467,8 @@ void UReMainMenuUI_ASA_C::OnQuitGameClicked_Event()
 
 void UReMainMenuUI_ASA_C::OnSettingsClicked_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OnSettingsClicked_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OnSettingsClicked_Event", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -533,10 +479,8 @@ void UReMainMenuUI_ASA_C::OnSettingsClicked_Event()
 
 void UReMainMenuUI_ASA_C::OpenGameModeSelector()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OpenGameModeSelector");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OpenGameModeSelector", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -547,10 +491,8 @@ void UReMainMenuUI_ASA_C::OpenGameModeSelector()
 
 void UReMainMenuUI_ASA_C::OpenMainMenuLanding()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "OpenMainMenuLanding");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "OpenMainMenuLanding", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -561,10 +503,8 @@ void UReMainMenuUI_ASA_C::OpenMainMenuLanding()
 
 void UReMainMenuUI_ASA_C::RefreshGameModeSelection()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "RefreshGameModeSelection");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "RefreshGameModeSelection", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -575,10 +515,8 @@ void UReMainMenuUI_ASA_C::RefreshGameModeSelection()
 
 void UReMainMenuUI_ASA_C::RequestStartMainTitleMusic()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "RequestStartMainTitleMusic");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "RequestStartMainTitleMusic", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -589,10 +527,8 @@ void UReMainMenuUI_ASA_C::RequestStartMainTitleMusic()
 
 void UReMainMenuUI_ASA_C::RequestStopMainTitleMusic()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "RequestStopMainTitleMusic");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "RequestStopMainTitleMusic", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -605,10 +541,8 @@ void UReMainMenuUI_ASA_C::RequestStopMainTitleMusic()
 
 void UReMainMenuUI_ASA_C::SetMainJoinedButtonVisibility(ESlateVisibility newVisibilty)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "SetMainJoinedButtonVisibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "SetMainJoinedButtonVisibility", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_SetMainJoinedButtonVisibility Parms{};
 
@@ -625,10 +559,8 @@ void UReMainMenuUI_ASA_C::SetMainJoinedButtonVisibility(ESlateVisibility newVisi
 
 bool UReMainMenuUI_ASA_C::SettingsOverlayIsOpen()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "SettingsOverlayIsOpen");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "SettingsOverlayIsOpen", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_SettingsOverlayIsOpen Parms{};
 
@@ -643,10 +575,8 @@ bool UReMainMenuUI_ASA_C::SettingsOverlayIsOpen()
 
 void UReMainMenuUI_ASA_C::StartMainMenuPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "StartMainMenuPressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "StartMainMenuPressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -657,10 +587,8 @@ void UReMainMenuUI_ASA_C::StartMainMenuPressed()
 
 void UReMainMenuUI_ASA_C::StopAllCardAnims()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "StopAllCardAnims");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "StopAllCardAnims", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -671,10 +599,8 @@ void UReMainMenuUI_ASA_C::StopAllCardAnims()
 
 void UReMainMenuUI_ASA_C::StopIntroCinematic()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "StopIntroCinematic");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "StopIntroCinematic", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -688,10 +614,8 @@ void UReMainMenuUI_ASA_C::StopIntroCinematic()
 
 void UReMainMenuUI_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "Tick", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_Tick Parms{};
 
@@ -709,10 +633,8 @@ void UReMainMenuUI_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 void UReMainMenuUI_ASA_C::UpdateLeftTextPosition(bool isCTAVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "UpdateLeftTextPosition");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReMainMenuUI_ASA_C", "UpdateLeftTextPosition", FuncInfo);
 
 	Params::ReMainMenuUI_ASA_C_UpdateLeftTextPosition Parms{};
 

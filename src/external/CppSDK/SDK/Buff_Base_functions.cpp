@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ABuff_Base_C::BPDeactivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_Base_C", "BPDeactivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_Base_C", "BPDeactivated", FuncInfo);
 
 	Params::Buff_Base_C_BPDeactivated Parms{};
 
@@ -43,10 +41,8 @@ void ABuff_Base_C::BPDeactivated(class AActor* ForInstigator)
 
 void ABuff_Base_C::ExecuteUbergraph_Buff_Base(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_Base_C", "ExecuteUbergraph_Buff_Base");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_Base_C", "ExecuteUbergraph_Buff_Base", FuncInfo);
 
 	Params::Buff_Base_C_ExecuteUbergraph_Buff_Base Parms{};
 
@@ -61,10 +57,8 @@ void ABuff_Base_C::ExecuteUbergraph_Buff_Base(int32 EntryPoint)
 
 void ABuff_Base_C::PressedAltFire()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_Base_C", "PressedAltFire");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_Base_C", "PressedAltFire", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +73,8 @@ void ABuff_Base_C::PressedAltFire()
 
 void ABuff_Base_C::SetBuffHordeManagerData(double Time, bool Routing, bool SetRouting)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_Base_C", "SetBuffHordeManagerData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_Base_C", "SetBuffHordeManagerData", FuncInfo);
 
 	Params::Buff_Base_C_SetBuffHordeManagerData Parms{};
 
@@ -103,10 +95,8 @@ void ABuff_Base_C::SetBuffHordeManagerData(double Time, bool Routing, bool SetRo
 
 bool ABuff_Base_C::BPCustomAllowAddBuff(class APrimalCharacter* ForCharacter, class AActor* DamageCauser) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_Base_C", "BPCustomAllowAddBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_Base_C", "BPCustomAllowAddBuff", FuncInfo);
 
 	Params::Buff_Base_C_BPCustomAllowAddBuff Parms{};
 

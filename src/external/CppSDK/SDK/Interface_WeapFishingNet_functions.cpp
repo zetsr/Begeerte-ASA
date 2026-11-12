@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void IInterface_WeapFishingNet_C::get_has_fully_cooked(bool* has_fully_cooked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "get has fully cooked");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "get has fully cooked", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_get_has_fully_cooked Parms{};
 
@@ -44,10 +42,8 @@ void IInterface_WeapFishingNet_C::get_has_fully_cooked(bool* has_fully_cooked)
 
 void IInterface_WeapFishingNet_C::Get_is_currently_tossing_net(bool* ret_is_currently_tossing_net)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "Get is currently tossing net");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "Get is currently tossing net", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_Get_is_currently_tossing_net Parms{};
 
@@ -65,10 +61,8 @@ void IInterface_WeapFishingNet_C::Get_is_currently_tossing_net(bool* ret_is_curr
 
 void IInterface_WeapFishingNet_C::get_returned_to_idle(double* returned_to_idle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "get returned to idle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "get returned to idle", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_get_returned_to_idle Parms{};
 
@@ -86,10 +80,8 @@ void IInterface_WeapFishingNet_C::get_returned_to_idle(double* returned_to_idle)
 
 void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_bIsCookingGrenade(bool* ret_bIsCookingGrenade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get bIsCookingGrenade");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get bIsCookingGrenade", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_bIsCookingGrenade Parms{};
 
@@ -107,10 +99,8 @@ void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_bIsCookingGrenade
 
 void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_Casting_Buff(class UClass** Casting_Buff_class)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Casting Buff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Casting Buff", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Casting_Buff Parms{};
 
@@ -128,10 +118,8 @@ void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_Casting_Buff(clas
 
 void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_Caught_Animals(TArray<class AActor*>* ret_Caught_Animals)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Caught Animals");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Caught Animals", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Caught_Animals Parms{};
 
@@ -149,10 +137,8 @@ void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_Caught_Animals(TA
 
 void IInterface_WeapFishingNet_C::Interface_WeapFishingNet_Get_Net_Projectile(class AShooterProjectile** Net_Projectile_ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Net Projectile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_WeapFishingNet_C", "Interface_WeapFishingNet Get Net Projectile", FuncInfo);
 
 	Params::Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Net_Projectile Parms{};
 

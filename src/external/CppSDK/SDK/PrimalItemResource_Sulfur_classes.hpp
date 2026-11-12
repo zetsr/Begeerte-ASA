@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Sulfur_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Sulfur_C;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDeco_IsDoingLandToMe_C::ExecuteUbergraph_Deco_IsDoingLandToMe(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Deco_IsDoingLandToMe_C", "ExecuteUbergraph_Deco_IsDoingLandToMe");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Deco_IsDoingLandToMe_C", "ExecuteUbergraph_Deco_IsDoingLandToMe", FuncInfo);
 
 	Params::Deco_IsDoingLandToMe_C_ExecuteUbergraph_Deco_IsDoingLandToMe Parms{};
 
@@ -43,10 +41,8 @@ void UDeco_IsDoingLandToMe_C::ExecuteUbergraph_Deco_IsDoingLandToMe(int32 EntryP
 
 void UDeco_IsDoingLandToMe_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Deco_IsDoingLandToMe_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Deco_IsDoingLandToMe_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::Deco_IsDoingLandToMe_C_ReceiveConditionCheck Parms{};
 

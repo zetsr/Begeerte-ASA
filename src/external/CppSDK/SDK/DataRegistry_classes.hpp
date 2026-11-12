@@ -12,10 +12,10 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
-#include "DataRegistry_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "DataRegistry_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,7 +28,8 @@ public:
 	TArray<struct FDirectoryPath>                 DirectoriesToScan;                                 // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bInitializeAllLoadedRegistries;                    // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreMissingCookedAssetRegistryData;             // 0x0049(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bDelayLoadingDataRegistriesUntilPIE;               // 0x004A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +45,7 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySettings>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistrySettings;
 
 // Class DataRegistry.DataRegistry
 // 0x0098 (0x00C0 - 0x0028)
@@ -73,6 +75,7 @@ public:
 		return GetDefaultObjImpl<UDataRegistry>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistry;
 
 // Class DataRegistry.DataRegistrySource
 // 0x0010 (0x0038 - 0x0028)
@@ -96,6 +99,7 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistrySource;
 
 // Class DataRegistry.MetaDataRegistrySource
 // 0x00D0 (0x0108 - 0x0038)
@@ -122,6 +126,7 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource>();
 	}
 };
+DUMPER7_ASSERTS_UMetaDataRegistrySource;
 
 // Class DataRegistry.DataRegistrySource_CurveTable
 // 0x0068 (0x00A0 - 0x0038)
@@ -148,6 +153,7 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource_CurveTable>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistrySource_CurveTable;
 
 // Class DataRegistry.MetaDataRegistrySource_CurveTable
 // 0x0010 (0x0118 - 0x0108)
@@ -171,6 +177,7 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource_CurveTable>();
 	}
 };
+DUMPER7_ASSERTS_UMetaDataRegistrySource_CurveTable;
 
 // Class DataRegistry.DataRegistrySource_DataTable
 // 0x0068 (0x00A0 - 0x0038)
@@ -197,6 +204,7 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource_DataTable>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistrySource_DataTable;
 
 // Class DataRegistry.MetaDataRegistrySource_DataTable
 // 0x0010 (0x0118 - 0x0108)
@@ -220,13 +228,14 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource_DataTable>();
 	}
 };
+DUMPER7_ASSERTS_UMetaDataRegistrySource_DataTable;
 
 // Class DataRegistry.DataRegistrySubsystem
-// 0x00B0 (0x00E0 - 0x0030)
+// 0x00C8 (0x00F8 - 0x0030)
 class UDataRegistrySubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xC8];                                      // 0x0030(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool AcquireItemBP(const struct FDataRegistryId& ItemID, TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)> AcquireCallback);
@@ -259,5 +268,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UDataRegistrySubsystem;
 
 SDK_NAMESPACE_END

@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Interface_PrimalItemConsumableSeed.Interface_PrimalItemConsumableSeed_C
-// 0x0000 (0x0000 - 0x0000)
-class IInterface_PrimalItemConsumableSeed_C final
+// 0x0008 (0x0008 - 0x0000)
+class IInterface_PrimalItemConsumableSeed_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void Interface_PrimalItemConsumableSeed_Get_Crop_Plot_Emitter_VFX_To_Be_Active(uint8 Current_Crop_Stage, bool Is_Growing, class UFXSystemAsset** Emitter_To_Be_Active, struct FVector* Location_Offset);
 
@@ -45,5 +48,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IInterface_PrimalItemConsumableSeed_C;
 
 SDK_NAMESPACE_END

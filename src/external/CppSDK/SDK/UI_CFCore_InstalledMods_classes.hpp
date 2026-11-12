@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_CFCore_InstalledMods.UI_CFCore_InstalledMods_C
-// 0x0018 (0x0A20 - 0x0A08)
+// 0x0018 (0x0A80 - 0x0A68)
 class UUI_CFCore_InstalledMods_C final : public UUI_CFCore_ParentBrowser_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_InstalledMods_C;          // 0x0A08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<struct FInstallProgressMod>            NonInstallingMods;                                 // 0x0A10(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_InstalledMods_C;          // 0x0A68(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	TArray<struct FInstallProgressMod>            NonInstallingMods;                                 // 0x0A70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void Construct();
@@ -51,5 +51,6 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_InstalledMods_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_CFCore_InstalledMods_C;
 
 SDK_NAMESPACE_END

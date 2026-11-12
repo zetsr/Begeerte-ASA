@@ -14,6 +14,9 @@
 #include "StateTreeModule_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "GameplayStateTreeModule_structs.hpp"
+#include "GameplayTasks_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -42,17 +45,18 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunDynamicStateTree>();
 	}
 };
+DUMPER7_ASSERTS_UBTTask_RunDynamicStateTree;
 
 // Class GameplayStateTreeModule.BTTask_RunStateTree
-// 0x0048 (0x00B8 - 0x0070)
-class UBTTask_RunStateTree final : public UBTTaskNode
+// 0x0050 (0x00C0 - 0x0070)
+class UBTTask_RunStateTree final : public UBTTaskNode, public IStateTreeSchemaProvider
 {
 public:
-	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStateTreeReference                    StateTreeRef;                                      // 0x0078(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
 	struct FStateTreeInstanceData                 InstanceData;                                      // 0x00A0(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
 	float                                         Interval;                                          // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         RandomDeviation;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -68,24 +72,27 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunStateTree>();
 	}
 };
+DUMPER7_ASSERTS_UBTTask_RunStateTree;
 
 // Class GameplayStateTreeModule.StateTreeComponent
-// 0x0078 (0x01A0 - 0x0128)
-class UStateTreeComponent : public UBrainComponent
+// 0x0078 (0x01C8 - 0x0150)
+class UStateTreeComponent : public UBrainComponent, public IGameplayTaskOwnerInterface, public IStateTreeSchemaProvider
 {
 public:
-	uint8                                         Pad_128[0x10];                                     // 0x0128(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EStateTreeRunStatus StateTreeRunStatus)> OnStateTreeRunStatusChanged; // 0x0138(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	struct FStateTreeReference                    StateTreeRef;                                      // 0x0148(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FStateTreeReferenceOverrides           LinkedStateTreeOverrides;                          // 0x0170(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          bStartLogicAutomatically;                          // 0x0180(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStateTreeInstanceData                 InstanceData;                                      // 0x0188(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EStateTreeRunStatus StateTreeRunStatus)> OnStateTreeRunStatusChanged; // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	struct FStateTreeReference                    StateTreeRef;                                      // 0x0170(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FStateTreeReferenceOverrides           LinkedStateTreeOverrides;                          // 0x0198(0x0010)(Edit, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FStateTreeInstanceData                 InstanceData;                                      // 0x01A8(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
+	bool                                          bStartLogicAutomatically;                          // 0x01B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1B9[0xF];                                      // 0x01B9(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void AddLinkedStateTreeOverrides(const struct FGameplayTag& StateTag, const struct FStateTreeReference& StateTreeReference);
+	void RemoveLinkedStateTreeOverrides(const struct FGameplayTag& StateTag);
 	void SendStateTreeEvent(const struct FStateTreeEvent& Event);
 	void SetStartLogicAutomatically(const bool bInStartLogicAutomatically);
+	void SetStateTree(class UStateTree* StateTree);
+	void SetStateTreeReference(const struct FStateTreeReference& StateTreeReference);
 
 	EStateTreeRunStatus GetStateTreeRunStatus() const;
 
@@ -103,9 +110,10 @@ public:
 		return GetDefaultObjImpl<UStateTreeComponent>();
 	}
 };
+DUMPER7_ASSERTS_UStateTreeComponent;
 
 // Class GameplayStateTreeModule.StateTreeAIComponent
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x01C8 - 0x01C8)
 class UStateTreeAIComponent final : public UStateTreeComponent
 {
 public:
@@ -122,15 +130,17 @@ public:
 		return GetDefaultObjImpl<UStateTreeAIComponent>();
 	}
 };
+DUMPER7_ASSERTS_UStateTreeAIComponent;
 
 // Class GameplayStateTreeModule.StateTreeComponentSchema
-// 0x0030 (0x0058 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UStateTreeComponentSchema : public UStateTreeSchema
 {
 public:
 	TSubclassOf<class AActor>                     ContextActorClass;                                 // 0x0028(0x0008)(Edit, ZeroConstructor, NoClear, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FStateTreeExternalDataDesc             ContextActorDataDesc;                              // 0x0030(0x0018)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FStateTreeExternalDataDesc>     ContextDataDescs;                                  // 0x0048(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	EStateTreeComponentSchemaScheduledTickPolicy  ScheduledTickPolicy;                               // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FStateTreeExternalDataDesc>     ContextDataDescs;                                  // 0x0038(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -146,13 +156,14 @@ public:
 		return GetDefaultObjImpl<UStateTreeComponentSchema>();
 	}
 };
+DUMPER7_ASSERTS_UStateTreeComponentSchema;
 
 // Class GameplayStateTreeModule.StateTreeAIComponentSchema
-// 0x0008 (0x0060 - 0x0058)
+// 0x0008 (0x0050 - 0x0048)
 class UStateTreeAIComponentSchema final : public UStateTreeComponentSchema
 {
 public:
-	TSubclassOf<class AAIController>              AIControllerClass;                                 // 0x0058(0x0008)(Edit, ZeroConstructor, NoClear, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class AAIController>              AIControllerClass;                                 // 0x0048(0x0008)(Edit, ZeroConstructor, NoClear, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -168,5 +179,29 @@ public:
 		return GetDefaultObjImpl<UStateTreeAIComponentSchema>();
 	}
 };
+DUMPER7_ASSERTS_UStateTreeAIComponentSchema;
+
+// Class GameplayStateTreeModule.GameplayStateTreeBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UGameplayStateTreeBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool RunStateTree(class AActor* Actor, class UStateTree* StateTreeAsset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayStateTreeBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayStateTreeBlueprintFunctionLibrary")
+	}
+	static class UGameplayStateTreeBlueprintFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayStateTreeBlueprintFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayStateTreeBlueprintFunctionLibrary;
 
 SDK_NAMESPACE_END

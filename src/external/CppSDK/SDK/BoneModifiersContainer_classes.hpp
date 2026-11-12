@@ -38,5 +38,6 @@ public:
 		return GetDefaultObjImpl<UBoneModifiersContainer_C>();
 	}
 };
+DUMPER7_ASSERTS_UBoneModifiersContainer_C;
 
 SDK_NAMESPACE_END

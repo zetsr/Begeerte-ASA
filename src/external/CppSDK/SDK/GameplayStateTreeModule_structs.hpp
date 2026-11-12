@@ -17,6 +17,46 @@
 
 SDK_NAMESPACE_START
 
+// Enum GameplayStateTreeModule.EStateTreeComponentSchemaScheduledTickPolicy
+// NumValues: 0x0004
+enum class EStateTreeComponentSchemaScheduledTickPolicy : uint8
+{
+	Default                                  = 0,
+	Allowed                                  = 1,
+	Denied                                   = 2,
+	EStateTreeComponentSchemaScheduledTickPolicy_MAX = 3,
+};
+
+// ScriptStruct GameplayStateTreeModule.StateTreeAIConditionBase
+// 0x0000 (0x0028 - 0x0028)
+struct FStateTreeAIConditionBase final : public FStateTreeConditionBase
+{
+};
+DUMPER7_ASSERTS_FStateTreeAIConditionBase;
+
+// ScriptStruct GameplayStateTreeModule.StateTreeAITaskBase
+// 0x0000 (0x0028 - 0x0028)
+struct FStateTreeAITaskBase : public FStateTreeTaskBase
+{
+};
+DUMPER7_ASSERTS_FStateTreeAITaskBase;
+
+// ScriptStruct GameplayStateTreeModule.StateTreeAIActionTaskBase
+// 0x0000 (0x0028 - 0x0028)
+struct FStateTreeAIActionTaskBase : public FStateTreeAITaskBase
+{
+};
+DUMPER7_ASSERTS_FStateTreeAIActionTaskBase;
+
+// ScriptStruct GameplayStateTreeModule.StateTreeComponentExecutionExtension
+// 0x0008 (0x0010 - 0x0008)
+struct FStateTreeComponentExecutionExtension final : public FStateTreeExecutionExtension
+{
+public:
+	class UStateTreeComponent*                    Component;                                         // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FStateTreeComponentExecutionExtension;
+
 // ScriptStruct GameplayStateTreeModule.StateTreeGetActorLocationPropertyFunctionInstanceData
 // 0x0020 (0x0020 - 0x0000)
 struct FStateTreeGetActorLocationPropertyFunctionInstanceData final
@@ -25,50 +65,14 @@ public:
 	class AActor*                                 Input;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	struct FVector                                Output;                                            // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStateTreeGetActorLocationPropertyFunctionInstanceData;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeGetActorLocationPropertyFunction
 // 0x0000 (0x0020 - 0x0020)
 struct FStateTreeGetActorLocationPropertyFunction final : public FStateTreePropertyFunctionCommonBase
 {
 };
-
-// ScriptStruct GameplayStateTreeModule.StateTreeAIConditionBase
-// 0x0000 (0x0028 - 0x0028)
-struct FStateTreeAIConditionBase final : public FStateTreeConditionBase
-{
-};
-
-// ScriptStruct GameplayStateTreeModule.StateTreeAITaskBase
-// 0x0000 (0x0028 - 0x0028)
-struct FStateTreeAITaskBase : public FStateTreeTaskBase
-{
-};
-
-// ScriptStruct GameplayStateTreeModule.StateTreeAIActionTaskBase
-// 0x0000 (0x0028 - 0x0028)
-struct FStateTreeAIActionTaskBase : public FStateTreeAITaskBase
-{
-};
-
-// ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryInstanceData
-// 0x0048 (0x0048 - 0x0000)
-struct FStateTreeRunEnvQueryInstanceData final
-{
-public:
-	struct FStateTreePropertyRef                  Result;                                            // 0x0000(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 QueryOwner;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UEnvQuery*                              QueryTemplate;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FAIDynamicParam>                QueryConfig;                                       // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
-	EEnvQueryRunMode                              RunMode;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x1F];                                      // 0x0029(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryTask
-// 0x0000 (0x0028 - 0x0028)
-struct FStateTreeRunEnvQueryTask final : public FStateTreeTaskCommonBase
-{
-};
+DUMPER7_ASSERTS_FStateTreeGetActorLocationPropertyFunction;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeMoveToTaskInstanceData
 // 0x0058 (0x0058 - 0x0000)
@@ -76,7 +80,7 @@ struct FStateTreeMoveToTaskInstanceData final
 {
 public:
 	class AAIController*                          AIController;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FVector                                destination;                                       // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Destination;                                       // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 TargetActor;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	float                                         AcceptableRadius;                                  // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DestinationMoveTolerance;                          // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -92,11 +96,38 @@ public:
 	class UAITask_MoveTo*                         MoveToTask;                                        // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                   // 0x0048(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStateTreeMoveToTaskInstanceData;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeMoveToTask
-// 0x0000 (0x0028 - 0x0028)
+// 0x0008 (0x0030 - 0x0028)
 struct FStateTreeMoveToTask final : public FStateTreeAIActionTaskBase
 {
+public:
+	bool                                          bSavedShouldCallTick;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FStateTreeMoveToTask;
+
+// ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryInstanceData
+// 0x0030 (0x0030 - 0x0000)
+struct FStateTreeRunEnvQueryInstanceData final
+{
+public:
+	struct FStateTreePropertyRef                  Result;                                            // 0x0000(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 QueryOwner;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UEnvQuery*                              QueryTemplate;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FAIDynamicParam>                QueryConfig;                                       // 0x0018(0x0010)(Edit, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	EEnvQueryRunMode                              RunMode;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FStateTreeRunEnvQueryInstanceData;
+
+// ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryTask
+// 0x0000 (0x0028 - 0x0028)
+struct FStateTreeRunEnvQueryTask final : public FStateTreeTaskCommonBase
+{
+};
+DUMPER7_ASSERTS_FStateTreeRunEnvQueryTask;
 
 SDK_NAMESPACE_END

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UShooterCameraConfig_BP_C>();
 	}
 };
+DUMPER7_ASSERTS_UShooterCameraConfig_BP_C;
 
 SDK_NAMESPACE_END

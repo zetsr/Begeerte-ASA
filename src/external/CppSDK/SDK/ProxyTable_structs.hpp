@@ -21,14 +21,16 @@ SDK_NAMESPACE_START
 struct FChooserParameterProxyTableBase : public FChooserParameterBase
 {
 };
+DUMPER7_ASSERTS_FChooserParameterProxyTableBase;
 
 // ScriptStruct ProxyTable.ProxyTableContextProperty
-// 0x0028 (0x0030 - 0x0008)
+// 0x0030 (0x0038 - 0x0008)
 struct FProxyTableContextProperty final : public FChooserParameterProxyTableBase
 {
 public:
-	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0030)(Edit, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FProxyTableContextProperty;
 
 // ScriptStruct ProxyTable.LookupProxy
 // 0x0018 (0x0020 - 0x0008)
@@ -36,8 +38,9 @@ struct FLookupProxy final : public FObjectChooserBase
 {
 public:
 	class UProxyAsset*                            Proxy;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FInstancedStruct                       ProxyTable;                                        // 0x0010(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ProxyTable;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FLookupProxy;
 
 // ScriptStruct ProxyTable.LookupProxyWithOverrideTable
 // 0x0010 (0x0018 - 0x0008)
@@ -47,15 +50,17 @@ public:
 	class UProxyAsset*                            Proxy;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UProxyTable*                            OverrideProxyTable;                                // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FLookupProxyWithOverrideTable;
 
 // ScriptStruct ProxyTable.ProxyStructOutput
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FProxyStructOutput final
 {
 public:
-	struct FChooserStructPropertyBinding          Binding;                                           // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       Value;                                             // 0x0028(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FChooserStructPropertyBinding          Binding;                                           // 0x0000(0x0030)(Edit, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       Value;                                             // 0x0030(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FProxyStructOutput;
 
 // ScriptStruct ProxyTable.ProxyEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -64,9 +69,10 @@ struct FProxyEntry final
 public:
 	class UProxyAsset*                            Proxy;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class FName                                   Key;                                               // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ValueStruct;                                       // 0x0010(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ValueStruct;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
 	TArray<struct FProxyStructOutput>             OutputStructData;                                  // 0x0020(0x0010)(Edit, ZeroConstructor, NoClear, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FProxyEntry;
 
 // ScriptStruct ProxyTable.RuntimeProxyValue
 // 0x0028 (0x0028 - 0x0000)
@@ -74,8 +80,9 @@ struct FRuntimeProxyValue final
 {
 public:
 	class UProxyAsset*                            ProxyAsset;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FInstancedStruct                       Value;                                             // 0x0008(0x0010)(NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       Value;                                             // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FProxyStructOutput>             OutputStructData;                                  // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FRuntimeProxyValue;
 
 SDK_NAMESPACE_END

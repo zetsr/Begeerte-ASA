@@ -20,9 +20,10 @@ SDK_NAMESPACE_START
 struct FSTRUCT_FullButtonDesign final
 {
 public:
-	struct FSTRUCT_4StateColorDesign              FillColor_6_ED39E4864573AA18766917807E93307B;      // 0x0000(0x0064)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSTRUCT_4StateColorDesign              BorderColor_5_6AB4A0084C9C06A9F258BD9176A468AD;    // 0x0064(0x0064)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSTRUCT_4StateColorDesign              TextColor_7_4B15B5434D8CD5E536280F84683371C9;      // 0x00C8(0x0064)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSTRUCT_4StateColorDesign              FillColor_6_ED39E4864573AA18766917807E93307B;      // 0x0000(0x0064)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_4StateColorDesign              BorderColor_5_6AB4A0084C9C06A9F258BD9176A468AD;    // 0x0064(0x0064)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FSTRUCT_4StateColorDesign              TextColor_7_4B15B5434D8CD5E536280F84683371C9;      // 0x00C8(0x0064)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_FSTRUCT_FullButtonDesign;
 
 SDK_NAMESPACE_END

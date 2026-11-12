@@ -43,15 +43,16 @@ public:
 		return GetDefaultObjImpl<UMassSimulationSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimulationSettings;
 
 // Class MassSimulation.MassSimulationSubsystem
-// 0x04B0 (0x04E8 - 0x0038)
+// 0x0070 (0x00B0 - 0x0040)
 class UMassSimulationSubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         Pad_38[0x490];                                     // 0x0038(0x0490)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMassRuntimePipeline                   RuntimePipeline;                                   // 0x04C8(0x0018)(Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4E0[0x8];                                      // 0x04E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMassRuntimePipeline                   RuntimePipeline;                                   // 0x0090(0x0018)(Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -67,5 +68,6 @@ public:
 		return GetDefaultObjImpl<UMassSimulationSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimulationSubsystem;
 
 SDK_NAMESPACE_END

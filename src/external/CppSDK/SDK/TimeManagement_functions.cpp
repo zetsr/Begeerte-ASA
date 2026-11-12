@@ -16,6 +16,123 @@
 
 SDK_NAMESPACE_START
 
+// Function TimeManagement.MusicalTimeFunctionLibrary.BarAndBeat
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMusicalTime&              InMusicalTime                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Bar                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Beat                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMusicalTimeFunctionLibrary::BarAndBeat(const struct FMusicalTime& InMusicalTime, int32* Bar, float* Beat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MusicalTimeFunctionLibrary", "BarAndBeat");
+
+	Params::MusicalTimeFunctionLibrary_BarAndBeat Parms{};
+
+	Parms.InMusicalTime = std::move(InMusicalTime);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Bar != nullptr)
+		*Bar = Parms.Bar;
+
+	if (Beat != nullptr)
+		*Beat = Parms.Beat;
+}
+
+
+// Function TimeManagement.MusicalTimeFunctionLibrary.FractionalBars
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMusicalTime&              InMusicalTime                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMusicalTimeFunctionLibrary::FractionalBars(const struct FMusicalTime& InMusicalTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MusicalTimeFunctionLibrary", "FractionalBars");
+
+	Params::MusicalTimeFunctionLibrary_FractionalBars Parms{};
+
+	Parms.InMusicalTime = std::move(InMusicalTime);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TimeManagement.MusicalTimeFunctionLibrary.FractionalBeatsInBar
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMusicalTime&              InMusicalTime                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMusicalTimeFunctionLibrary::FractionalBeatsInBar(const struct FMusicalTime& InMusicalTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MusicalTimeFunctionLibrary", "FractionalBeatsInBar");
+
+	Params::MusicalTimeFunctionLibrary_FractionalBeatsInBar Parms{};
+
+	Parms.InMusicalTime = std::move(InMusicalTime);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TimeManagement.MusicalTimeFunctionLibrary.IsValid
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMusicalTime&              InMusicalTime                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMusicalTimeFunctionLibrary::IsValid(const struct FMusicalTime& InMusicalTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MusicalTimeFunctionLibrary", "IsValid");
+
+	Params::MusicalTimeFunctionLibrary_IsValid Parms{};
+
+	Parms.InMusicalTime = std::move(InMusicalTime);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function TimeManagement.TimeManagementBlueprintLibrary.Add_FrameNumberFrameNumber
 // (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -236,6 +353,56 @@ struct FFrameNumber UTimeManagementBlueprintLibrary::Divide_FrameNumberInteger(c
 
 	Parms.A = std::move(A);
 	Parms.B = B;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TimeManagement.TimeManagementBlueprintLibrary.GetCustomTimeStepFrameRate
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FFrameRate                       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameRate UTimeManagementBlueprintLibrary::GetCustomTimeStepFrameRate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TimeManagementBlueprintLibrary", "GetCustomTimeStepFrameRate");
+
+	Params::TimeManagementBlueprintLibrary_GetCustomTimeStepFrameRate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TimeManagement.TimeManagementBlueprintLibrary.GetEngineCustomTimeStep
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UEngineCustomTimeStep*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UEngineCustomTimeStep* UTimeManagementBlueprintLibrary::GetEngineCustomTimeStep()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TimeManagementBlueprintLibrary", "GetEngineCustomTimeStep");
+
+	Params::TimeManagementBlueprintLibrary_GetEngineCustomTimeStep Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

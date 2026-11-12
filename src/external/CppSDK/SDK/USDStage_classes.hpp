@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "USDClasses_structs.hpp"
 #include "UnrealUSDWrapper_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "USDStage_structs.hpp"
-#include "USDClasses_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,6 +41,7 @@ public:
 		return GetDefaultObjImpl<UUsdDynamicBindingResolverLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UUsdDynamicBindingResolverLibrary;
 
 // Class USDStage.UsdInfoCache
 // 0x0008 (0x0030 - 0x0028)
@@ -63,6 +64,7 @@ public:
 		return GetDefaultObjImpl<UUsdInfoCache>();
 	}
 };
+DUMPER7_ASSERTS_UUsdInfoCache;
 
 // Class USDStage.UsdPrimLinkCache
 // 0x0008 (0x0030 - 0x0028)
@@ -85,6 +87,7 @@ public:
 		return GetDefaultObjImpl<UUsdPrimLinkCache>();
 	}
 };
+DUMPER7_ASSERTS_UUsdPrimLinkCache;
 
 // Class USDStage.UsdPrimTwin
 // 0x0088 (0x00B0 - 0x0028)
@@ -111,50 +114,51 @@ public:
 		return GetDefaultObjImpl<UUsdPrimTwin>();
 	}
 };
+DUMPER7_ASSERTS_UUsdPrimTwin;
 
 // Class USDStage.UsdStageActor
-// 0x03D0 (0x0860 - 0x0490)
+// 0x03D0 (0x0868 - 0x0498)
 class AUsdStageActor final : public AActor
 {
 public:
-	struct FFilePath                              RootLayer;                                         // 0x0490(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdStageState                                StageState;                                        // 0x04A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUsdAssetCache3*                        AssetCache;                                        // 0x04A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UUsdInfoCache*                          UsdInfoCache;                                      // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UUsdPrimLinkCache*                      PrimLinkCache;                                     // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UUsdAssetCache2*                        UsdAssetCache;                                     // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	EUsdInitialLoadSet                            InitialLoadSet;                                    // 0x04C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdInterpolationType                         InterpolationType;                                 // 0x04C9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryCacheImport                          GeometryCacheImport;                               // 0x04CA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePrimKindsForCollapsing;                        // 0x04CB(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         KindsToCollapse;                                   // 0x04CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMergeIdenticalMaterialSlots;                      // 0x04D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShareAssetsForIdenticalPrims;                     // 0x04D1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReuseIdenticalAssets;                             // 0x04D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCollapseTopLevelPointInstancers;                  // 0x04D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PurposesToLoad;                                    // 0x04D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NaniteTriangleThreshold;                           // 0x04D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RenderContext;                                     // 0x04DC(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   MaterialPurpose;                                   // 0x04E4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdRootMotionHandling                        RootMotionHandling;                                // 0x04EC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4ED[0x3];                                      // 0x04ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SubdivisionLevel;                                  // 0x04F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F4[0x4];                                      // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUsdMetadataImportOptions              MetadataOptions;                                   // 0x04F8(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_518[0xA8];                                     // 0x0518(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComponent;                                    // 0x05C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	float                                         Time;                                              // 0x05C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5CC[0x4];                                      // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelSequence*                         LevelSequence;                                     // 0x05D0(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UUsdPrimTwin*                           RootUsdTwin;                                       // 0x05D8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TSet<class FString>                           PrimsToAnimate;                                    // 0x05E0(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	TMap<class UObject*, class FString>           ObjectsToWatch;                                    // 0x0630(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	class UUsdTransactor*                         Transactor;                                        // 0x0680(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_688[0x1D8];                                    // 0x0688(0x01D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFilePath                              RootLayer;                                         // 0x0498(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	EUsdStageState                                StageState;                                        // 0x04A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUsdAssetCache3*                        AssetCache;                                        // 0x04B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UUsdInfoCache*                          UsdInfoCache;                                      // 0x04B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UUsdPrimLinkCache*                      PrimLinkCache;                                     // 0x04C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UUsdAssetCache2*                        UsdAssetCache;                                     // 0x04C8(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	EUsdInitialLoadSet                            InitialLoadSet;                                    // 0x04D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdInterpolationType                         InterpolationType;                                 // 0x04D1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryCacheImport                          GeometryCacheImport;                               // 0x04D2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePrimKindsForCollapsing;                        // 0x04D3(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         KindsToCollapse;                                   // 0x04D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMergeIdenticalMaterialSlots;                      // 0x04D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShareAssetsForIdenticalPrims;                     // 0x04D9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReuseIdenticalAssets;                             // 0x04DA(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCollapseTopLevelPointInstancers;                  // 0x04DB(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PurposesToLoad;                                    // 0x04DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NaniteTriangleThreshold;                           // 0x04E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RenderContext;                                     // 0x04E4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   MaterialPurpose;                                   // 0x04EC(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdRootMotionHandling                        RootMotionHandling;                                // 0x04F4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdCollisionType                             FallbackCollisionType;                             // 0x04F5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4F6[0x2];                                      // 0x04F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SubdivisionLevel;                                  // 0x04F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4FC[0x4];                                      // 0x04FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUsdMetadataImportOptions              MetadataOptions;                                   // 0x0500(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
+	uint8                                         Pad_520[0xA8];                                     // 0x0520(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        SceneComponent;                                    // 0x05C8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	float                                         Time;                                              // 0x05D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequence*                         LevelSequence;                                     // 0x05D8(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UUsdPrimTwin*                           RootUsdTwin;                                       // 0x05E0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UUsdTransactor*                         Transactor;                                        // 0x05E8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TSet<class FString>                           PrimsToAnimate;                                    // 0x05F0(0x0050)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TMap<class UObject*, class FString>           ObjectsToWatch;                                    // 0x0640(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_690[0x1D8];                                    // 0x0690(0x01D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class ULevelSequence* GetLevelSequence();
 	void NewStage();
 	void SetAssetCache(class UUsdAssetCache2* NewCache);
 	void SetBlockedPrefixFilters(const TArray<class FString>& NewFilters);
@@ -162,6 +166,7 @@ public:
 	void SetCollectFromEntireSubtrees(bool bNewCollectValue);
 	void SetCollectMetadata(bool bNewCollectValue);
 	void SetCollectOnComponents(bool bNewCollectValue);
+	void SetFallbackCollisionType(EUsdCollisionType NewCollisionType);
 	void SetGeometryCacheImport(EGeometryCacheImport ImportOption);
 	void SetInitialLoadSet(EUsdInitialLoadSet NewLoadSet);
 	void SetInterpolationType(EUsdInterpolationType NewType);
@@ -186,6 +191,7 @@ public:
 	TArray<class UObject*> GetGeneratedAssets(const class FString& PrimPath) const;
 	class USceneComponent* GetGeneratedComponent(const class FString& PrimPath) const;
 	class FString GetIsolatedRootLayer() const;
+	class ULevelSequence* GetLevelSequence() const;
 	class FString GetSourcePrimPath(const class UObject* Object) const;
 	float GetTime() const;
 
@@ -203,6 +209,7 @@ public:
 		return GetDefaultObjImpl<AUsdStageActor>();
 	}
 };
+DUMPER7_ASSERTS_AUsdStageActor;
 
 // Class USDStage.UsdTransactor
 // 0x0010 (0x0038 - 0x0028)
@@ -225,5 +232,6 @@ public:
 		return GetDefaultObjImpl<UUsdTransactor>();
 	}
 };
+DUMPER7_ASSERTS_UUsdTransactor;
 
 SDK_NAMESPACE_END

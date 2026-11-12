@@ -91,25 +91,19 @@ EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(TScriptInterf
 
 
 // Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
-// (Final, RequiredAPI, Native, Public, HasOutParams)
-// Parameters:
-// const TArray<class UGameplayTask*>&     PreviousSimulatedTasks                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// (Final, RequiredAPI, Native, Public)
 
-void UGameplayTasksComponent::OnRep_SimulatedTasks(const TArray<class UGameplayTask*>& PreviousSimulatedTasks)
+void UGameplayTasksComponent::OnRep_SimulatedTasks()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GameplayTasksComponent", "OnRep_SimulatedTasks");
 
-	Params::GameplayTasksComponent_OnRep_SimulatedTasks Parms{};
-
-	Parms.PreviousSimulatedTasks = std::move(PreviousSimulatedTasks);
-
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

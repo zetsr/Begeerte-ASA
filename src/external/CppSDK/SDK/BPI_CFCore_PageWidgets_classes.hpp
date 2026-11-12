@@ -16,12 +16,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_CFCore_PageWidgets_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_CFCore_PageWidgets_C
 {
 public:
-	void UpdateSearch(const class FText& SearchInput);
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
 	void OnSearch(const class FText& Search_Input);
+	void UpdateSearch(const class FText& SearchInput);
 
 public:
 	static class UClass* StaticClass()
@@ -46,5 +49,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IBPI_CFCore_PageWidgets_C;
 
 SDK_NAMESPACE_END

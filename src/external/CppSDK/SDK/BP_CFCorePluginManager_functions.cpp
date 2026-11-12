@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void ABP_CFCorePluginManager_C::Accept_Terms()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Accept Terms");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Accept Terms", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void ABP_CFCorePluginManager_C::Accept_Terms()
 
 void ABP_CFCorePluginManager_C::ApplySomePCDefaults()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "ApplySomePCDefaults");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "ApplySomePCDefaults", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void ABP_CFCorePluginManager_C::ApplySomePCDefaults()
 
 void ABP_CFCorePluginManager_C::AttemptCreateOverwolfUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "AttemptCreateOverwolfUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "AttemptCreateOverwolfUI", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void ABP_CFCorePluginManager_C::AttemptCreateOverwolfUI()
 
 void ABP_CFCorePluginManager_C::AttemptUninstallMod(const struct FInstallProgressMod& ModDetails_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "AttemptUninstallMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "AttemptUninstallMod", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_AttemptUninstallMod Parms{};
 
@@ -83,10 +75,8 @@ void ABP_CFCorePluginManager_C::AttemptUninstallMod(const struct FInstallProgres
 
 void ABP_CFCorePluginManager_C::BackToFreedom_YouThenAddWhateverYouWantHere()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "BackToFreedom_YouThenAddWhateverYouWantHere");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "BackToFreedom_YouThenAddWhateverYouWantHere", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +90,8 @@ void ABP_CFCorePluginManager_C::BackToFreedom_YouThenAddWhateverYouWantHere()
 
 void ABP_CFCorePluginManager_C::Calculate_Total_Update_Size_Of_Mods(TArray<struct FInstallProgressMod>& Array, int64* Size)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Calculate Total Update Size Of Mods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Calculate Total Update Size Of Mods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Calculate_Total_Update_Size_Of_Mods Parms{};
 
@@ -123,10 +111,8 @@ void ABP_CFCorePluginManager_C::Calculate_Total_Update_Size_Of_Mods(TArray<struc
 
 void ABP_CFCorePluginManager_C::ContinueUninstallAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "ContinueUninstallAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "ContinueUninstallAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +123,8 @@ void ABP_CFCorePluginManager_C::ContinueUninstallAll()
 
 void ABP_CFCorePluginManager_C::Create_A_Mod_Page_From_ID()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Create A Mod Page From ID");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Create A Mod Page From ID", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +135,8 @@ void ABP_CFCorePluginManager_C::Create_A_Mod_Page_From_ID()
 
 void ABP_CFCorePluginManager_C::CreateNotifManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "CreateNotifManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "CreateNotifManager", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,10 +147,8 @@ void ABP_CFCorePluginManager_C::CreateNotifManager()
 
 void ABP_CFCorePluginManager_C::CreateSaveFile()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "CreateSaveFile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "CreateSaveFile", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +159,8 @@ void ABP_CFCorePluginManager_C::CreateSaveFile()
 
 void ABP_CFCorePluginManager_C::CreateServerModsPageStandalone()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "CreateServerModsPageStandalone");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "CreateServerModsPageStandalone", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +171,8 @@ void ABP_CFCorePluginManager_C::CreateServerModsPageStandalone()
 
 void ABP_CFCorePluginManager_C::CreateTermsAndConditions()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "CreateTermsAndConditions");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "CreateTermsAndConditions", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +183,8 @@ void ABP_CFCorePluginManager_C::CreateTermsAndConditions()
 
 void ABP_CFCorePluginManager_C::DebugSignIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "DebugSignIn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "DebugSignIn", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +195,8 @@ void ABP_CFCorePluginManager_C::DebugSignIn()
 
 void ABP_CFCorePluginManager_C::DestroyAllUIs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "DestroyAllUIs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "DestroyAllUIs", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +207,8 @@ void ABP_CFCorePluginManager_C::DestroyAllUIs()
 
 void ABP_CFCorePluginManager_C::DestroyPurchaseResponseHandle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "DestroyPurchaseResponseHandle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "DestroyPurchaseResponseHandle", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +219,8 @@ void ABP_CFCorePluginManager_C::DestroyPurchaseResponseHandle()
 
 void ABP_CFCorePluginManager_C::Event_On_CFCore_Init()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On CFCore Init");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On CFCore Init", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -265,10 +233,8 @@ void ABP_CFCorePluginManager_C::Event_On_CFCore_Init()
 
 void ABP_CFCorePluginManager_C::Event_On_CFCore_Init_Error(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On CFCore Init Error");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On CFCore Init Error", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Event_On_CFCore_Init_Error Parms{};
 
@@ -285,10 +251,8 @@ void ABP_CFCorePluginManager_C::Event_On_CFCore_Init_Error(const struct FCFCoreE
 
 void ABP_CFCorePluginManager_C::Event_On_Get_User_Info(const struct FMe& Me)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On Get User Info");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On Get User Info", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Event_On_Get_User_Info Parms{};
 
@@ -305,10 +269,8 @@ void ABP_CFCorePluginManager_C::Event_On_Get_User_Info(const struct FMe& Me)
 
 void ABP_CFCorePluginManager_C::Event_On_Get_User_Info_Failed(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On Get User Info Failed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On Get User Info Failed", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Event_On_Get_User_Info_Failed Parms{};
 
@@ -325,10 +287,8 @@ void ABP_CFCorePluginManager_C::Event_On_Get_User_Info_Failed(const struct FCFCo
 
 void ABP_CFCorePluginManager_C::Event_On_Sync_Installed_Mods_Error(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On Sync Installed Mods Error");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On Sync Installed Mods Error", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Event_On_Sync_Installed_Mods_Error Parms{};
 
@@ -343,10 +303,8 @@ void ABP_CFCorePluginManager_C::Event_On_Sync_Installed_Mods_Error(const struct 
 
 void ABP_CFCorePluginManager_C::Event_On_Sync_Installed_Mods_Success()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On Sync Installed Mods Success");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On Sync Installed Mods Success", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -357,10 +315,8 @@ void ABP_CFCorePluginManager_C::Event_On_Sync_Installed_Mods_Success()
 
 void ABP_CFCorePluginManager_C::Event_On_Uninstall_Aprroved()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event On Uninstall Aprroved");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event On Uninstall Aprroved", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -373,10 +329,8 @@ void ABP_CFCorePluginManager_C::Event_On_Uninstall_Aprroved()
 
 void ABP_CFCorePluginManager_C::Event_Result(bool is_authenticated)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Event Result");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Event Result", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_Event_Result Parms{};
 
@@ -393,10 +347,8 @@ void ABP_CFCorePluginManager_C::Event_Result(bool is_authenticated)
 
 void ABP_CFCorePluginManager_C::ExecuteUbergraph_BP_CFCorePluginManager(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "ExecuteUbergraph_BP_CFCorePluginManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "ExecuteUbergraph_BP_CFCorePluginManager", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_ExecuteUbergraph_BP_CFCorePluginManager Parms{};
 
@@ -413,10 +365,8 @@ void ABP_CFCorePluginManager_C::ExecuteUbergraph_BP_CFCorePluginManager(int32 En
 
 void ABP_CFCorePluginManager_C::FailedPremiumModsChecks(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "FailedPremiumModsChecks");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "FailedPremiumModsChecks", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_FailedPremiumModsChecks Parms{};
 
@@ -431,10 +381,8 @@ void ABP_CFCorePluginManager_C::FailedPremiumModsChecks(const struct FCFCoreErro
 
 void ABP_CFCorePluginManager_C::InitializeCfCorePlugin()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InitializeCfCorePlugin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InitializeCfCorePlugin", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +393,8 @@ void ABP_CFCorePluginManager_C::InitializeCfCorePlugin()
 
 void ABP_CFCorePluginManager_C::InitSoundMediaComponent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InitSoundMediaComponent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InitSoundMediaComponent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -461,10 +407,8 @@ void ABP_CFCorePluginManager_C::InitSoundMediaComponent()
 
 void ABP_CFCorePluginManager_C::InpActEvt_Eight_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Eight_K2Node_InputKeyEvent_2");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Eight_K2Node_InputKeyEvent_2", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Eight_K2Node_InputKeyEvent_2 Parms{};
 
@@ -481,10 +425,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Eight_K2Node_InputKeyEvent_2(const str
 
 void ABP_CFCorePluginManager_C::InpActEvt_Five_K2Node_InputKeyEvent_0(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Five_K2Node_InputKeyEvent_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Five_K2Node_InputKeyEvent_0", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Five_K2Node_InputKeyEvent_0 Parms{};
 
@@ -501,10 +443,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Five_K2Node_InputKeyEvent_0(const stru
 
 void ABP_CFCorePluginManager_C::InpActEvt_Four_K2Node_InputKeyEvent_4(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Four_K2Node_InputKeyEvent_4");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Four_K2Node_InputKeyEvent_4", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Four_K2Node_InputKeyEvent_4 Parms{};
 
@@ -521,10 +461,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Four_K2Node_InputKeyEvent_4(const stru
 
 void ABP_CFCorePluginManager_C::InpActEvt_Nine_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Nine_K2Node_InputKeyEvent_1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Nine_K2Node_InputKeyEvent_1", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Nine_K2Node_InputKeyEvent_1 Parms{};
 
@@ -541,10 +479,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Nine_K2Node_InputKeyEvent_1(const stru
 
 void ABP_CFCorePluginManager_C::InpActEvt_One_K2Node_InputKeyEvent_7(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_One_K2Node_InputKeyEvent_7");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_One_K2Node_InputKeyEvent_7", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_One_K2Node_InputKeyEvent_7 Parms{};
 
@@ -561,10 +497,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_One_K2Node_InputKeyEvent_7(const struc
 
 void ABP_CFCorePluginManager_C::InpActEvt_Seven_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Seven_K2Node_InputKeyEvent_3");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Seven_K2Node_InputKeyEvent_3", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Seven_K2Node_InputKeyEvent_3 Parms{};
 
@@ -581,10 +515,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Seven_K2Node_InputKeyEvent_3(const str
 
 void ABP_CFCorePluginManager_C::InpActEvt_Three_K2Node_InputKeyEvent_5(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Three_K2Node_InputKeyEvent_5");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Three_K2Node_InputKeyEvent_5", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Three_K2Node_InputKeyEvent_5 Parms{};
 
@@ -601,10 +533,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Three_K2Node_InputKeyEvent_5(const str
 
 void ABP_CFCorePluginManager_C::InpActEvt_Two_K2Node_InputKeyEvent_6(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "InpActEvt_Two_K2Node_InputKeyEvent_6");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "InpActEvt_Two_K2Node_InputKeyEvent_6", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_InpActEvt_Two_K2Node_InputKeyEvent_6 Parms{};
 
@@ -622,10 +552,8 @@ void ABP_CFCorePluginManager_C::InpActEvt_Two_K2Node_InputKeyEvent_6(const struc
 
 bool ABP_CFCorePluginManager_C::IsModPurchased(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "IsModPurchased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "IsModPurchased", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_IsModPurchased Parms{};
 
@@ -642,10 +570,8 @@ bool ABP_CFCorePluginManager_C::IsModPurchased(const struct FInstallProgressMod&
 
 void ABP_CFCorePluginManager_C::OnBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnBack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnBack", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -658,10 +584,8 @@ void ABP_CFCorePluginManager_C::OnBack()
 
 void ABP_CFCorePluginManager_C::OnClassCategoriesInfoFound(const TArray<struct FCategory>& Categories)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnClassCategoriesInfoFound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnClassCategoriesInfoFound", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnClassCategoriesInfoFound Parms{};
 
@@ -678,10 +602,8 @@ void ABP_CFCorePluginManager_C::OnClassCategoriesInfoFound(const TArray<struct F
 
 void ABP_CFCorePluginManager_C::OnClassCategoriesInfoFound_Error(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnClassCategoriesInfoFound_Error");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnClassCategoriesInfoFound_Error", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnClassCategoriesInfoFound_Error Parms{};
 
@@ -698,10 +620,8 @@ void ABP_CFCorePluginManager_C::OnClassCategoriesInfoFound_Error(const struct FC
 
 void ABP_CFCorePluginManager_C::OnDiscSpaceAvailable(const struct FModsDirInfo& ModsDirInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnDiscSpaceAvailable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnDiscSpaceAvailable", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnDiscSpaceAvailable Parms{};
 
@@ -718,10 +638,8 @@ void ABP_CFCorePluginManager_C::OnDiscSpaceAvailable(const struct FModsDirInfo& 
 
 void ABP_CFCorePluginManager_C::OnDiscSpaceCheckFail(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnDiscSpaceCheckFail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnDiscSpaceCheckFail", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnDiscSpaceCheckFail Parms{};
 
@@ -736,10 +654,8 @@ void ABP_CFCorePluginManager_C::OnDiscSpaceCheckFail(const struct FCFCoreError& 
 
 void ABP_CFCorePluginManager_C::OnError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnError", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -752,10 +668,8 @@ void ABP_CFCorePluginManager_C::OnError()
 
 void ABP_CFCorePluginManager_C::OnErrorGeneratePremium(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnErrorGeneratePremium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnErrorGeneratePremium", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnErrorGeneratePremium Parms{};
 
@@ -772,10 +686,8 @@ void ABP_CFCorePluginManager_C::OnErrorGeneratePremium(const struct FCFCoreError
 
 void ABP_CFCorePluginManager_C::OnErrorSpaceCheck(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnErrorSpaceCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnErrorSpaceCheck", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnErrorSpaceCheck Parms{};
 
@@ -792,10 +704,8 @@ void ABP_CFCorePluginManager_C::OnErrorSpaceCheck(const struct FCFCoreError& Err
 
 void ABP_CFCorePluginManager_C::OnErrorUpdateInstalledModProperties(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnErrorUpdateInstalledModProperties");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnErrorUpdateInstalledModProperties", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnErrorUpdateInstalledModProperties Parms{};
 
@@ -812,10 +722,8 @@ void ABP_CFCorePluginManager_C::OnErrorUpdateInstalledModProperties(const struct
 
 void ABP_CFCorePluginManager_C::OnFailGetMyPremiumMods(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnFailGetMyPremiumMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnFailGetMyPremiumMods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnFailGetMyPremiumMods Parms{};
 
@@ -828,18 +736,16 @@ void ABP_CFCorePluginManager_C::OnFailGetMyPremiumMods(const struct FCFCoreError
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnJoin
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CFCorePluginManager_C::OnJoin(int64 ServerID)
+void ABP_CFCorePluginManager_C::OnJoin(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnJoin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnJoin", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnJoin Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -848,18 +754,16 @@ void ABP_CFCorePluginManager_C::OnJoin(int64 ServerID)
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnReportFavorite
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CFCorePluginManager_C::OnReportFavorite(int64 ServerID)
+void ABP_CFCorePluginManager_C::OnReportFavorite(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnReportFavorite");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnReportFavorite", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnReportFavorite Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -872,10 +776,8 @@ void ABP_CFCorePluginManager_C::OnReportFavorite(int64 ServerID)
 
 void ABP_CFCorePluginManager_C::OnSuccessGeneratePremium(const class FString& URL)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnSuccessGeneratePremium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnSuccessGeneratePremium", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnSuccessGeneratePremium Parms{};
 
@@ -892,10 +794,8 @@ void ABP_CFCorePluginManager_C::OnSuccessGeneratePremium(const class FString& UR
 
 void ABP_CFCorePluginManager_C::OnSuccessGetMyPremiumMods(const struct FOwnedPremiumMods& OwnedPremiumMods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnSuccessGetMyPremiumMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnSuccessGetMyPremiumMods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnSuccessGetMyPremiumMods Parms{};
 
@@ -912,10 +812,8 @@ void ABP_CFCorePluginManager_C::OnSuccessGetMyPremiumMods(const struct FOwnedPre
 
 void ABP_CFCorePluginManager_C::OnSuccessPremiumModsCheck(const TArray<int64>& modIds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnSuccessPremiumModsCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnSuccessPremiumModsCheck", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnSuccessPremiumModsCheck Parms{};
 
@@ -932,10 +830,8 @@ void ABP_CFCorePluginManager_C::OnSuccessPremiumModsCheck(const TArray<int64>& m
 
 void ABP_CFCorePluginManager_C::OnSuccessSpaceCheck(const struct FModsDirInfo& ModsDirInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnSuccessSpaceCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnSuccessSpaceCheck", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_OnSuccessSpaceCheck Parms{};
 
@@ -950,10 +846,8 @@ void ABP_CFCorePluginManager_C::OnSuccessSpaceCheck(const struct FModsDirInfo& M
 
 void ABP_CFCorePluginManager_C::OnSuccessUpdateInstalledModProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "OnSuccessUpdateInstalledModProperties");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "OnSuccessUpdateInstalledModProperties", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -964,10 +858,8 @@ void ABP_CFCorePluginManager_C::OnSuccessUpdateInstalledModProperties()
 
 void ABP_CFCorePluginManager_C::PlayNotEnoughAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "PlayNotEnoughAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "PlayNotEnoughAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -978,10 +870,8 @@ void ABP_CFCorePluginManager_C::PlayNotEnoughAnimation()
 
 void ABP_CFCorePluginManager_C::PremiumModChecking()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "PremiumModChecking");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "PremiumModChecking", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -994,10 +884,8 @@ void ABP_CFCorePluginManager_C::PremiumModChecking()
 
 void ABP_CFCorePluginManager_C::PurchaseModsWithIds(const TArray<int64>& PurchasedMods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "PurchaseModsWithIds");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "PurchaseModsWithIds", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_PurchaseModsWithIds Parms{};
 
@@ -1014,10 +902,8 @@ void ABP_CFCorePluginManager_C::PurchaseModsWithIds(const TArray<int64>& Purchas
 
 void ABP_CFCorePluginManager_C::PurcherseMod(const int64& modId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "PurcherseMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "PurcherseMod", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_PurcherseMod Parms{};
 
@@ -1034,10 +920,8 @@ void ABP_CFCorePluginManager_C::PurcherseMod(const int64& modId)
 
 void ABP_CFCorePluginManager_C::PurcherseMods(const TArray<int64>& ModsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "PurcherseMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "PurcherseMods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_PurcherseMods Parms{};
 
@@ -1052,10 +936,8 @@ void ABP_CFCorePluginManager_C::PurcherseMods(const TArray<int64>& ModsId)
 
 void ABP_CFCorePluginManager_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1066,10 +948,8 @@ void ABP_CFCorePluginManager_C::ReceiveBeginPlay()
 
 void ABP_CFCorePluginManager_C::RefreshAllAfterCodeRedeem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "RefreshAllAfterCodeRedeem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "RefreshAllAfterCodeRedeem", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1080,10 +960,8 @@ void ABP_CFCorePluginManager_C::RefreshAllAfterCodeRedeem()
 
 void ABP_CFCorePluginManager_C::Reject_Terms()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "Reject Terms");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "Reject Terms", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1094,10 +972,8 @@ void ABP_CFCorePluginManager_C::Reject_Terms()
 
 void ABP_CFCorePluginManager_C::RemovePopup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "RemovePopup");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "RemovePopup", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1110,10 +986,8 @@ void ABP_CFCorePluginManager_C::RemovePopup()
 
 void ABP_CFCorePluginManager_C::RequestInstallMod(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "RequestInstallMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "RequestInstallMod", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_RequestInstallMod Parms{};
 
@@ -1128,10 +1002,8 @@ void ABP_CFCorePluginManager_C::RequestInstallMod(const struct FInstallProgressM
 
 void ABP_CFCorePluginManager_C::SortClassCategories()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "SortClassCategories");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "SortClassCategories", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1142,10 +1014,8 @@ void ABP_CFCorePluginManager_C::SortClassCategories()
 
 void ABP_CFCorePluginManager_C::TermsAlreadyAccepted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "TermsAlreadyAccepted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "TermsAlreadyAccepted", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1158,10 +1028,8 @@ void ABP_CFCorePluginManager_C::TermsAlreadyAccepted()
 
 void ABP_CFCorePluginManager_C::UninstallMods(const TArray<struct FInstallProgressMod>& Array)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "UninstallMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "UninstallMods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_UninstallMods Parms{};
 
@@ -1178,10 +1046,8 @@ void ABP_CFCorePluginManager_C::UninstallMods(const TArray<struct FInstallProgre
 
 void ABP_CFCorePluginManager_C::UpdateModEnabledStatuses(const TArray<struct FInstalledModProperties>& InInstalledModsProperties)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "UpdateModEnabledStatuses");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "UpdateModEnabledStatuses", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_UpdateModEnabledStatuses Parms{};
 
@@ -1198,10 +1064,8 @@ void ABP_CFCorePluginManager_C::UpdateModEnabledStatuses(const TArray<struct FIn
 
 void ABP_CFCorePluginManager_C::UpdateMods(const TArray<struct FInstallProgressMod>& ModsToUpdate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCorePluginManager_C", "UpdateMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCorePluginManager_C", "UpdateMods", FuncInfo);
 
 	Params::BP_CFCorePluginManager_C_UpdateMods Parms{};
 

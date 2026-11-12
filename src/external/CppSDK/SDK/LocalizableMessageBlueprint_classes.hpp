@@ -21,6 +21,7 @@ class ULocalizableMessageLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static class FText Conv_LocalizableMessageToText(class UObject* WorldContextObject, const struct FLocalizableMessage& Message);
+	static bool EqualEqual_LocalizableMessage(const struct FLocalizableMessage& A, const struct FLocalizableMessage& B);
 	static bool IsEmpty_LocalizableMessage(const struct FLocalizableMessage& Message);
 	static void Reset_LocalizableMessage(struct FLocalizableMessage& Message);
 
@@ -38,5 +39,6 @@ public:
 		return GetDefaultObjImpl<ULocalizableMessageLibrary>();
 	}
 };
+DUMPER7_ASSERTS_ULocalizableMessageLibrary;
 
 SDK_NAMESPACE_END

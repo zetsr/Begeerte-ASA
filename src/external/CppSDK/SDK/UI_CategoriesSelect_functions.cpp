@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CategoriesSelect_C::CreateAllCategoriesCategory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "CreateAllCategoriesCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "CreateAllCategoriesCategory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CategoriesSelect_C::CreateAllCategoriesCategory()
 
 void UUI_CategoriesSelect_C::ExecuteUbergraph_UI_CategoriesSelect(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "ExecuteUbergraph_UI_CategoriesSelect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "ExecuteUbergraph_UI_CategoriesSelect", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_ExecuteUbergraph_UI_CategoriesSelect Parms{};
 
@@ -57,10 +53,8 @@ void UUI_CategoriesSelect_C::ExecuteUbergraph_UI_CategoriesSelect(int32 EntryPoi
 
 void UUI_CategoriesSelect_C::FilterOutCategories(TArray<struct FCategory>& Categories)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "FilterOutCategories");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "FilterOutCategories", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_FilterOutCategories Parms{};
 
@@ -79,10 +73,8 @@ void UUI_CategoriesSelect_C::FilterOutCategories(TArray<struct FCategory>& Categ
 
 void UUI_CategoriesSelect_C::OnCategoriesInfoFound(const TArray<struct FCategory>& Categories)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "OnCategoriesInfoFound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "OnCategoriesInfoFound", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_OnCategoriesInfoFound Parms{};
 
@@ -99,10 +91,8 @@ void UUI_CategoriesSelect_C::OnCategoriesInfoFound(const TArray<struct FCategory
 
 void UUI_CategoriesSelect_C::OnCategoriesInfoFound_Error(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "OnCategoriesInfoFound_Error");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "OnCategoriesInfoFound_Error", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_OnCategoriesInfoFound_Error Parms{};
 
@@ -120,10 +110,8 @@ void UUI_CategoriesSelect_C::OnCategoriesInfoFound_Error(const struct FCFCoreErr
 
 void UUI_CategoriesSelect_C::OnOptionSelectedInterface(const class FString& Option, int64 ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "OnOptionSelectedInterface");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "OnOptionSelectedInterface", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_OnOptionSelectedInterface Parms{};
 
@@ -141,10 +129,8 @@ void UUI_CategoriesSelect_C::OnOptionSelectedInterface(const class FString& Opti
 
 void UUI_CategoriesSelect_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_PreConstruct Parms{};
 
@@ -162,10 +148,8 @@ void UUI_CategoriesSelect_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CategoriesSelect_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "Tick", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_Tick Parms{};
 
@@ -183,10 +167,8 @@ void UUI_CategoriesSelect_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 void UUI_CategoriesSelect_C::UpdateOptions(int64 Current_Class_Category_ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CategoriesSelect_C", "UpdateOptions");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CategoriesSelect_C", "UpdateOptions", FuncInfo);
 
 	Params::UI_CategoriesSelect_C_UpdateOptions Parms{};
 

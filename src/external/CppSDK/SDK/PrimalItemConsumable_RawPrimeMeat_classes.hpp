@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_RawPrimeMeat_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_RawPrimeMeat_C;
 
 SDK_NAMESPACE_END

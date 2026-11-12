@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class URandomWait_TK_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	double                                        FixedWait;                                         // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RandomWait;                                        // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RandomPower;                                       // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<URandomWait_TK_C>();
 	}
 };
+DUMPER7_ASSERTS_URandomWait_TK_C;
 
 SDK_NAMESPACE_END

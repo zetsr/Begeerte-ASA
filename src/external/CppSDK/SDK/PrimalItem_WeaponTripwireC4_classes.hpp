@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponTripwireC4_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponTripwireC4_C;
 
 SDK_NAMESPACE_END

@@ -24,6 +24,7 @@ struct RadialSlider_SetAngularOffset final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetAngularOffset;
 
 // Function AdvancedWidgets.RadialSlider.SetCenterBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -32,6 +33,7 @@ struct RadialSlider_SetCenterBackgroundColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetCenterBackgroundColor;
 
 // Function AdvancedWidgets.RadialSlider.SetCustomDefaultValue
 // 0x0004 (0x0004 - 0x0000)
@@ -40,6 +42,7 @@ struct RadialSlider_SetCustomDefaultValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetCustomDefaultValue;
 
 // Function AdvancedWidgets.RadialSlider.SetHandStartEndRatio
 // 0x0010 (0x0010 - 0x0000)
@@ -48,6 +51,7 @@ struct RadialSlider_SetHandStartEndRatio final
 public:
 	struct FVector2D                              InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetHandStartEndRatio;
 
 // Function AdvancedWidgets.RadialSlider.SetLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -56,6 +60,7 @@ struct RadialSlider_SetLocked final
 public:
 	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetLocked;
 
 // Function AdvancedWidgets.RadialSlider.SetShowSliderHand
 // 0x0001 (0x0001 - 0x0000)
@@ -64,6 +69,7 @@ struct RadialSlider_SetShowSliderHand final
 public:
 	bool                                          InShowSliderHand;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetShowSliderHand;
 
 // Function AdvancedWidgets.RadialSlider.SetShowSliderHandle
 // 0x0001 (0x0001 - 0x0000)
@@ -72,6 +78,7 @@ struct RadialSlider_SetShowSliderHandle final
 public:
 	bool                                          InShowSliderHandle;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetShowSliderHandle;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderBarColor
 // 0x0010 (0x0010 - 0x0000)
@@ -80,6 +87,7 @@ struct RadialSlider_SetSliderBarColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderBarColor;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderHandleColor
 // 0x0010 (0x0010 - 0x0000)
@@ -88,6 +96,7 @@ struct RadialSlider_SetSliderHandleColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderHandleColor;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderHandleEndAngle
 // 0x0004 (0x0004 - 0x0000)
@@ -96,6 +105,7 @@ struct RadialSlider_SetSliderHandleEndAngle final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderHandleEndAngle;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderHandleStartAngle
 // 0x0004 (0x0004 - 0x0000)
@@ -104,6 +114,7 @@ struct RadialSlider_SetSliderHandleStartAngle final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderHandleStartAngle;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderProgressColor
 // 0x0010 (0x0010 - 0x0000)
@@ -112,6 +123,7 @@ struct RadialSlider_SetSliderProgressColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderProgressColor;
 
 // Function AdvancedWidgets.RadialSlider.SetSliderRange
 // 0x0088 (0x0088 - 0x0000)
@@ -120,6 +132,7 @@ struct RadialSlider_SetSliderRange final
 public:
 	struct FRuntimeFloatCurve                     InSliderRange;                                     // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetSliderRange;
 
 // Function AdvancedWidgets.RadialSlider.SetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -128,6 +141,7 @@ struct RadialSlider_SetStepSize final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetStepSize;
 
 // Function AdvancedWidgets.RadialSlider.SetUseVerticalDrag
 // 0x0001 (0x0001 - 0x0000)
@@ -136,6 +150,7 @@ struct RadialSlider_SetUseVerticalDrag final
 public:
 	bool                                          InUseVerticalDrag;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetUseVerticalDrag;
 
 // Function AdvancedWidgets.RadialSlider.SetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -144,6 +159,7 @@ struct RadialSlider_SetValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetValue;
 
 // Function AdvancedWidgets.RadialSlider.SetValueTags
 // 0x0010 (0x0010 - 0x0000)
@@ -152,6 +168,7 @@ struct RadialSlider_SetValueTags final
 public:
 	TArray<float>                                 InValueTags;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_SetValueTags;
 
 // Function AdvancedWidgets.RadialSlider.GetCustomDefaultValue
 // 0x0004 (0x0004 - 0x0000)
@@ -160,6 +177,7 @@ struct RadialSlider_GetCustomDefaultValue final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_GetCustomDefaultValue;
 
 // Function AdvancedWidgets.RadialSlider.GetNormalizedSliderHandlePosition
 // 0x0004 (0x0004 - 0x0000)
@@ -168,6 +186,7 @@ struct RadialSlider_GetNormalizedSliderHandlePosition final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_GetNormalizedSliderHandlePosition;
 
 // Function AdvancedWidgets.RadialSlider.GetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -176,6 +195,7 @@ struct RadialSlider_GetValue final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_RadialSlider_GetValue;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

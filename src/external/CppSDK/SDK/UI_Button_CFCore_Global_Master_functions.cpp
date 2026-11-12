@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Browse
 
 void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K
 
 void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K
 
 void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Blue_Button_Main_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Blue_Button_Main_K
 
 void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Global_Base_Button_Main_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Global_Base_Button_Main_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "BndEvt__UI_Button_Ark_Global_Base_Button_Main_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UUI_Button_CFCore_Global_Master_C::BndEvt__UI_Button_Ark_Global_Base_Button
 
 void UUI_Button_CFCore_Global_Master_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +95,8 @@ void UUI_Button_CFCore_Global_Master_C::Construct()
 
 void UUI_Button_CFCore_Global_Master_C::ExecuteUbergraph_UI_Button_CFCore_Global_Master(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "ExecuteUbergraph_UI_Button_CFCore_Global_Master");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "ExecuteUbergraph_UI_Button_CFCore_Global_Master", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_ExecuteUbergraph_UI_Button_CFCore_Global_Master Parms{};
 
@@ -127,10 +113,8 @@ void UUI_Button_CFCore_Global_Master_C::ExecuteUbergraph_UI_Button_CFCore_Global
 
 void UUI_Button_CFCore_Global_Master_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_GetRootCFWidget Parms{};
 
@@ -148,10 +132,8 @@ void UUI_Button_CFCore_Global_Master_C::GetRootCFWidget(class UPanelWidget** Roo
 
 void UUI_Button_CFCore_Global_Master_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "PreConstruct", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_PreConstruct Parms{};
 
@@ -168,10 +150,8 @@ void UUI_Button_CFCore_Global_Master_C::PreConstruct(bool IsDesignTime)
 
 void UUI_Button_CFCore_Global_Master_C::Set_Selected(bool Selected_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "Set Selected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "Set Selected", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_Set_Selected Parms{};
 
@@ -184,14 +164,12 @@ void UUI_Button_CFCore_Global_Master_C::Set_Selected(bool Selected_0)
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetBorderToColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FSlateColor&               TintColor                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateColor&               TintColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void UUI_Button_CFCore_Global_Master_C::SetBorderToColor(const struct FSlateColor& TintColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "SetBorderToColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "SetBorderToColor", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_SetBorderToColor Parms{};
 
@@ -208,10 +186,8 @@ void UUI_Button_CFCore_Global_Master_C::SetBorderToColor(const struct FSlateColo
 
 void UUI_Button_CFCore_Global_Master_C::SetButtonColorPreset(ENUM_CFCore_ButtonStates State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "SetButtonColorPreset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "SetButtonColorPreset", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_SetButtonColorPreset Parms{};
 
@@ -224,14 +200,12 @@ void UUI_Button_CFCore_Global_Master_C::SetButtonColorPreset(ENUM_CFCore_ButtonS
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetFillToColor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FSlateColor&               TintColor                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateColor&               TintColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void UUI_Button_CFCore_Global_Master_C::SetFillToColor(const struct FSlateColor& TintColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "SetFillToColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "SetFillToColor", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_SetFillToColor Parms{};
 
@@ -248,10 +222,8 @@ void UUI_Button_CFCore_Global_Master_C::SetFillToColor(const struct FSlateColor&
 
 void UUI_Button_CFCore_Global_Master_C::SetWidgetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "SetWidgetText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "SetWidgetText", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_SetWidgetText Parms{};
 
@@ -269,10 +241,8 @@ void UUI_Button_CFCore_Global_Master_C::SetWidgetText(const class FText& InText)
 
 void UUI_Button_CFCore_Global_Master_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_Master_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_Master_C", "Tick", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_Master_C_Tick Parms{};
 

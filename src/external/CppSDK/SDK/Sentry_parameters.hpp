@@ -25,6 +25,7 @@ public:
 	class FString                                 Filename;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ContentType;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_InitializeWithData;
 
 // Function Sentry.SentryAttachment.InitializeWithPath
 // 0x0030 (0x0030 - 0x0000)
@@ -35,6 +36,7 @@ public:
 	class FString                                 Filename;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ContentType;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_InitializeWithPath;
 
 // Function Sentry.SentryAttachment.GetContentType
 // 0x0010 (0x0010 - 0x0000)
@@ -43,6 +45,7 @@ struct SentryAttachment_GetContentType final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_GetContentType;
 
 // Function Sentry.SentryAttachment.GetData
 // 0x0010 (0x0010 - 0x0000)
@@ -51,6 +54,7 @@ struct SentryAttachment_GetData final
 public:
 	TArray<uint8>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_GetData;
 
 // Function Sentry.SentryAttachment.GetFilename
 // 0x0010 (0x0010 - 0x0000)
@@ -59,6 +63,7 @@ struct SentryAttachment_GetFilename final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_GetFilename;
 
 // Function Sentry.SentryAttachment.GetPath
 // 0x0010 (0x0010 - 0x0000)
@@ -67,6 +72,7 @@ struct SentryAttachment_GetPath final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryAttachment_GetPath;
 
 // Function Sentry.SentryBeforeBreadcrumbHandler.HandleBeforeBreadcrumb
 // 0x0018 (0x0018 - 0x0000)
@@ -77,6 +83,7 @@ public:
 	class USentryHint*                            Hint;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryBreadcrumb*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBeforeBreadcrumbHandler_HandleBeforeBreadcrumb;
 
 // Function Sentry.SentryBeforeLogHandler.HandleBeforeLog
 // 0x0010 (0x0010 - 0x0000)
@@ -86,6 +93,7 @@ public:
 	class USentryLog*                             LogData;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryLog*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBeforeLogHandler_HandleBeforeLog;
 
 // Function Sentry.SentryBeforeSendHandler.HandleBeforeSend
 // 0x0018 (0x0018 - 0x0000)
@@ -96,6 +104,7 @@ public:
 	class USentryHint*                            Hint;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryEvent*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBeforeSendHandler_HandleBeforeSend;
 
 // Function Sentry.SentryBreadcrumb.SetCategory
 // 0x0010 (0x0010 - 0x0000)
@@ -104,6 +113,7 @@ struct SentryBreadcrumb_SetCategory final
 public:
 	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_SetCategory;
 
 // Function Sentry.SentryBreadcrumb.SetData
 // 0x0050 (0x0050 - 0x0000)
@@ -112,6 +122,7 @@ struct SentryBreadcrumb_SetData final
 public:
 	TMap<class FString, struct FSentryVariant>    Data;                                              // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_SetData;
 
 // Function Sentry.SentryBreadcrumb.SetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -120,6 +131,7 @@ struct SentryBreadcrumb_SetLevel final
 public:
 	ESentryLevel                                  Level;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_SetLevel;
 
 // Function Sentry.SentryBreadcrumb.SetMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -128,6 +140,7 @@ struct SentryBreadcrumb_SetMessage final
 public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_SetMessage;
 
 // Function Sentry.SentryBreadcrumb.SetType
 // 0x0010 (0x0010 - 0x0000)
@@ -136,6 +149,7 @@ struct SentryBreadcrumb_SetType final
 public:
 	class FString                                 Type;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_SetType;
 
 // Function Sentry.SentryBreadcrumb.GetCategory
 // 0x0010 (0x0010 - 0x0000)
@@ -144,6 +158,7 @@ struct SentryBreadcrumb_GetCategory final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_GetCategory;
 
 // Function Sentry.SentryBreadcrumb.GetData
 // 0x0050 (0x0050 - 0x0000)
@@ -152,6 +167,7 @@ struct SentryBreadcrumb_GetData final
 public:
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_GetData;
 
 // Function Sentry.SentryBreadcrumb.GetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -160,6 +176,7 @@ struct SentryBreadcrumb_GetLevel final
 public:
 	ESentryLevel                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_GetLevel;
 
 // Function Sentry.SentryBreadcrumb.GetMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -168,6 +185,7 @@ struct SentryBreadcrumb_GetMessage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_GetMessage;
 
 // Function Sentry.SentryBreadcrumb.GetType
 // 0x0010 (0x0010 - 0x0000)
@@ -176,6 +194,7 @@ struct SentryBreadcrumb_GetType final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryBreadcrumb_GetType;
 
 // Function Sentry.SentryEvent.RemoveContext
 // 0x0010 (0x0010 - 0x0000)
@@ -184,6 +203,7 @@ struct SentryEvent_RemoveContext final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_RemoveContext;
 
 // Function Sentry.SentryEvent.RemoveExtra
 // 0x0010 (0x0010 - 0x0000)
@@ -192,6 +212,7 @@ struct SentryEvent_RemoveExtra final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_RemoveExtra;
 
 // Function Sentry.SentryEvent.RemoveTag
 // 0x0010 (0x0010 - 0x0000)
@@ -200,6 +221,7 @@ struct SentryEvent_RemoveTag final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_RemoveTag;
 
 // Function Sentry.SentryEvent.SetContext
 // 0x0060 (0x0060 - 0x0000)
@@ -209,6 +231,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    Values;                                            // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetContext;
 
 // Function Sentry.SentryEvent.SetExtra
 // 0x0030 (0x0030 - 0x0000)
@@ -218,6 +241,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         Value;                                             // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetExtra;
 
 // Function Sentry.SentryEvent.SetExtras
 // 0x0050 (0x0050 - 0x0000)
@@ -226,6 +250,7 @@ struct SentryEvent_SetExtras final
 public:
 	TMap<class FString, struct FSentryVariant>    Extras;                                            // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetExtras;
 
 // Function Sentry.SentryEvent.SetFingerprint
 // 0x0010 (0x0010 - 0x0000)
@@ -234,6 +259,7 @@ struct SentryEvent_SetFingerprint final
 public:
 	TArray<class FString>                         fingerprint;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetFingerprint;
 
 // Function Sentry.SentryEvent.SetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -242,6 +268,7 @@ struct SentryEvent_SetLevel final
 public:
 	ESentryLevel                                  Level;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetLevel;
 
 // Function Sentry.SentryEvent.SetMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -250,6 +277,7 @@ struct SentryEvent_SetMessage final
 public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetMessage;
 
 // Function Sentry.SentryEvent.SetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -259,6 +287,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetTag;
 
 // Function Sentry.SentryEvent.SetTags
 // 0x0050 (0x0050 - 0x0000)
@@ -267,6 +296,7 @@ struct SentryEvent_SetTags final
 public:
 	TMap<class FString, class FString>            Tags;                                              // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_SetTags;
 
 // Function Sentry.SentryEvent.GetContext
 // 0x0060 (0x0060 - 0x0000)
@@ -276,6 +306,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetContext;
 
 // Function Sentry.SentryEvent.GetExtra
 // 0x0030 (0x0030 - 0x0000)
@@ -285,6 +316,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetExtra;
 
 // Function Sentry.SentryEvent.GetExtras
 // 0x0050 (0x0050 - 0x0000)
@@ -293,6 +325,7 @@ struct SentryEvent_GetExtras final
 public:
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetExtras;
 
 // Function Sentry.SentryEvent.GetFingerprint
 // 0x0010 (0x0010 - 0x0000)
@@ -301,6 +334,7 @@ struct SentryEvent_GetFingerprint final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetFingerprint;
 
 // Function Sentry.SentryEvent.GetId
 // 0x0010 (0x0010 - 0x0000)
@@ -309,6 +343,7 @@ struct SentryEvent_GetId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetId;
 
 // Function Sentry.SentryEvent.GetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -317,6 +352,7 @@ struct SentryEvent_GetLevel final
 public:
 	ESentryLevel                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetLevel;
 
 // Function Sentry.SentryEvent.GetMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -325,6 +361,7 @@ struct SentryEvent_GetMessage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetMessage;
 
 // Function Sentry.SentryEvent.GetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -334,6 +371,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetTag;
 
 // Function Sentry.SentryEvent.GetTags
 // 0x0050 (0x0050 - 0x0000)
@@ -342,6 +380,7 @@ struct SentryEvent_GetTags final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_GetTags;
 
 // Function Sentry.SentryEvent.IsAnr
 // 0x0001 (0x0001 - 0x0000)
@@ -350,6 +389,7 @@ struct SentryEvent_IsAnr final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_IsAnr;
 
 // Function Sentry.SentryEvent.IsCrash
 // 0x0001 (0x0001 - 0x0000)
@@ -358,6 +398,7 @@ struct SentryEvent_IsCrash final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryEvent_IsCrash;
 
 // Function Sentry.SentryEvent.TryGetContext
 // 0x0068 (0x0068 - 0x0000)
@@ -369,6 +410,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryEvent_TryGetContext;
 
 // Function Sentry.SentryEvent.TryGetExtra
 // 0x0038 (0x0038 - 0x0000)
@@ -380,6 +422,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryEvent_TryGetExtra;
 
 // Function Sentry.SentryEvent.TryGetTag
 // 0x0028 (0x0028 - 0x0000)
@@ -391,6 +434,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryEvent_TryGetTag;
 
 // Function Sentry.SentryFeedback.Initialize
 // 0x0010 (0x0010 - 0x0000)
@@ -399,6 +443,7 @@ struct SentryFeedback_Initialize final
 public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_Initialize;
 
 // Function Sentry.SentryFeedback.SetAssociatedEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -407,6 +452,7 @@ struct SentryFeedback_SetAssociatedEvent final
 public:
 	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_SetAssociatedEvent;
 
 // Function Sentry.SentryFeedback.SetContactEmail
 // 0x0010 (0x0010 - 0x0000)
@@ -415,6 +461,7 @@ struct SentryFeedback_SetContactEmail final
 public:
 	class FString                                 email;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_SetContactEmail;
 
 // Function Sentry.SentryFeedback.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -423,6 +470,7 @@ struct SentryFeedback_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_SetName;
 
 // Function Sentry.SentryFeedback.GetAssociatedEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -431,6 +479,7 @@ struct SentryFeedback_GetAssociatedEvent final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_GetAssociatedEvent;
 
 // Function Sentry.SentryFeedback.GetContactEmail
 // 0x0010 (0x0010 - 0x0000)
@@ -439,6 +488,7 @@ struct SentryFeedback_GetContactEmail final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_GetContactEmail;
 
 // Function Sentry.SentryFeedback.GetMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -447,6 +497,7 @@ struct SentryFeedback_GetMessage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_GetMessage;
 
 // Function Sentry.SentryFeedback.GetName
 // 0x0010 (0x0010 - 0x0000)
@@ -455,6 +506,7 @@ struct SentryFeedback_GetName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryFeedback_GetName;
 
 // Function Sentry.SentryHint.AddAttachment
 // 0x0008 (0x0008 - 0x0000)
@@ -463,6 +515,7 @@ struct SentryHint_AddAttachment final
 public:
 	class USentryAttachment*                      Attachment;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryHint_AddAttachment;
 
 // Function Sentry.SentryLibrary.ByteArrayToString
 // 0x0020 (0x0020 - 0x0000)
@@ -472,6 +525,7 @@ public:
 	TArray<uint8>                                 Array;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_ByteArrayToString;
 
 // Function Sentry.SentryLibrary.CreateSentryAttachmentWithData
 // 0x0038 (0x0038 - 0x0000)
@@ -483,6 +537,7 @@ public:
 	class FString                                 ContentType;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryAttachment*                      ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryAttachmentWithData;
 
 // Function Sentry.SentryLibrary.CreateSentryAttachmentWithPath
 // 0x0038 (0x0038 - 0x0000)
@@ -494,6 +549,7 @@ public:
 	class FString                                 ContentType;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryAttachment*                      ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryAttachmentWithPath;
 
 // Function Sentry.SentryLibrary.CreateSentryBreadcrumb
 // 0x0090 (0x0090 - 0x0000)
@@ -508,6 +564,7 @@ public:
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentryBreadcrumb*                      ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryBreadcrumb;
 
 // Function Sentry.SentryLibrary.CreateSentryEvent
 // 0x0020 (0x0020 - 0x0000)
@@ -519,6 +576,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentryEvent*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryEvent;
 
 // Function Sentry.SentryLibrary.CreateSentryFeedback
 // 0x0048 (0x0048 - 0x0000)
@@ -531,6 +589,7 @@ public:
 	class FString                                 EventId;                                           // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryFeedback*                        ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryFeedback;
 
 // Function Sentry.SentryLibrary.CreateSentryTransactionContext
 // 0x0028 (0x0028 - 0x0000)
@@ -541,6 +600,7 @@ public:
 	class FString                                 Operation;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USentryTransactionContext*              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryTransactionContext;
 
 // Function Sentry.SentryLibrary.CreateSentryUser
 // 0x0098 (0x0098 - 0x0000)
@@ -554,6 +614,7 @@ public:
 	TMap<class FString, class FString>            Data;                                              // 0x0040(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class USentryUser*                            ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_CreateSentryUser;
 
 // Function Sentry.SentryLibrary.SaveStringToFile
 // 0x0030 (0x0030 - 0x0000)
@@ -564,6 +625,7 @@ public:
 	class FString                                 Filename;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_SaveStringToFile;
 
 // Function Sentry.SentryLibrary.StringToBytesArray
 // 0x0020 (0x0020 - 0x0000)
@@ -573,6 +635,7 @@ public:
 	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLibrary_StringToBytesArray;
 
 // Function Sentry.SentryLog.SetBody
 // 0x0010 (0x0010 - 0x0000)
@@ -581,6 +644,7 @@ struct SentryLog_SetBody final
 public:
 	class FString                                 Body_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLog_SetBody;
 
 // Function Sentry.SentryLog.SetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -589,6 +653,7 @@ struct SentryLog_SetLevel final
 public:
 	ESentryLevel                                  Level_0;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLog_SetLevel;
 
 // Function Sentry.SentryLog.GetBody
 // 0x0010 (0x0010 - 0x0000)
@@ -597,6 +662,7 @@ struct SentryLog_GetBody final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLog_GetBody;
 
 // Function Sentry.SentryLog.GetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -605,6 +671,7 @@ struct SentryLog_GetLevel final
 public:
 	ESentryLevel                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryLog_GetLevel;
 
 // Function Sentry.SentrySamplingContext.GetCustomSamplingContext
 // 0x0050 (0x0050 - 0x0000)
@@ -613,6 +680,7 @@ struct SentrySamplingContext_GetCustomSamplingContext final
 public:
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySamplingContext_GetCustomSamplingContext;
 
 // Function Sentry.SentrySamplingContext.GetTransactionContext
 // 0x0008 (0x0008 - 0x0000)
@@ -621,6 +689,7 @@ struct SentrySamplingContext_GetTransactionContext final
 public:
 	class USentryTransactionContext*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySamplingContext_GetTransactionContext;
 
 // Function Sentry.SentryScope.AddAttachment
 // 0x0008 (0x0008 - 0x0000)
@@ -629,6 +698,7 @@ struct SentryScope_AddAttachment final
 public:
 	class USentryAttachment*                      Attachment;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_AddAttachment;
 
 // Function Sentry.SentryScope.AddBreadcrumb
 // 0x0008 (0x0008 - 0x0000)
@@ -637,6 +707,7 @@ struct SentryScope_AddBreadcrumb final
 public:
 	class USentryBreadcrumb*                      Breadcrumb;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_AddBreadcrumb;
 
 // Function Sentry.SentryScope.RemoveContext
 // 0x0010 (0x0010 - 0x0000)
@@ -645,6 +716,7 @@ struct SentryScope_RemoveContext final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_RemoveContext;
 
 // Function Sentry.SentryScope.RemoveExtra
 // 0x0010 (0x0010 - 0x0000)
@@ -653,6 +725,7 @@ struct SentryScope_RemoveExtra final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_RemoveExtra;
 
 // Function Sentry.SentryScope.RemoveTag
 // 0x0010 (0x0010 - 0x0000)
@@ -661,6 +734,7 @@ struct SentryScope_RemoveTag final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_RemoveTag;
 
 // Function Sentry.SentryScope.SetContext
 // 0x0060 (0x0060 - 0x0000)
@@ -670,6 +744,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    Values;                                            // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetContext;
 
 // Function Sentry.SentryScope.SetExtra
 // 0x0030 (0x0030 - 0x0000)
@@ -679,6 +754,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         Value;                                             // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetExtra;
 
 // Function Sentry.SentryScope.SetExtras
 // 0x0050 (0x0050 - 0x0000)
@@ -687,6 +763,7 @@ struct SentryScope_SetExtras final
 public:
 	TMap<class FString, struct FSentryVariant>    Extras;                                            // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetExtras;
 
 // Function Sentry.SentryScope.SetFingerprint
 // 0x0010 (0x0010 - 0x0000)
@@ -695,6 +772,7 @@ struct SentryScope_SetFingerprint final
 public:
 	TArray<class FString>                         fingerprint;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetFingerprint;
 
 // Function Sentry.SentryScope.SetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -703,6 +781,7 @@ struct SentryScope_SetLevel final
 public:
 	ESentryLevel                                  Level;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetLevel;
 
 // Function Sentry.SentryScope.SetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -712,6 +791,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetTag;
 
 // Function Sentry.SentryScope.SetTags
 // 0x0050 (0x0050 - 0x0000)
@@ -720,6 +800,7 @@ struct SentryScope_SetTags final
 public:
 	TMap<class FString, class FString>            Tags;                                              // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_SetTags;
 
 // Function Sentry.SentryScope.GetContext
 // 0x0060 (0x0060 - 0x0000)
@@ -729,6 +810,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetContext;
 
 // Function Sentry.SentryScope.GetExtra
 // 0x0030 (0x0030 - 0x0000)
@@ -738,6 +820,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetExtra;
 
 // Function Sentry.SentryScope.GetExtras
 // 0x0050 (0x0050 - 0x0000)
@@ -746,6 +829,7 @@ struct SentryScope_GetExtras final
 public:
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetExtras;
 
 // Function Sentry.SentryScope.GetFingerprint
 // 0x0010 (0x0010 - 0x0000)
@@ -754,6 +838,7 @@ struct SentryScope_GetFingerprint final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetFingerprint;
 
 // Function Sentry.SentryScope.GetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -762,6 +847,7 @@ struct SentryScope_GetLevel final
 public:
 	ESentryLevel                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetLevel;
 
 // Function Sentry.SentryScope.GetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -771,6 +857,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetTag;
 
 // Function Sentry.SentryScope.GetTags
 // 0x0050 (0x0050 - 0x0000)
@@ -779,6 +866,7 @@ struct SentryScope_GetTags final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryScope_GetTags;
 
 // Function Sentry.SentryScope.TryGetContext
 // 0x0068 (0x0068 - 0x0000)
@@ -790,6 +878,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryScope_TryGetContext;
 
 // Function Sentry.SentryScope.TryGetExtra
 // 0x0038 (0x0038 - 0x0000)
@@ -801,6 +890,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryScope_TryGetExtra;
 
 // Function Sentry.SentryScope.TryGetTag
 // 0x0028 (0x0028 - 0x0000)
@@ -812,6 +902,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryScope_TryGetTag;
 
 // Function Sentry.SentrySpan.FinishWithTimestamp
 // 0x0008 (0x0008 - 0x0000)
@@ -820,6 +911,7 @@ struct SentrySpan_FinishWithTimestamp final
 public:
 	int64                                         Timestamp;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_FinishWithTimestamp;
 
 // Function Sentry.SentrySpan.GetTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -829,6 +921,7 @@ public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_GetTrace;
 
 // Function Sentry.SentrySpan.RemoveData
 // 0x0010 (0x0010 - 0x0000)
@@ -837,6 +930,7 @@ struct SentrySpan_RemoveData final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_RemoveData;
 
 // Function Sentry.SentrySpan.RemoveTag
 // 0x0010 (0x0010 - 0x0000)
@@ -845,6 +939,7 @@ struct SentrySpan_RemoveTag final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_RemoveTag;
 
 // Function Sentry.SentrySpan.SetData
 // 0x0060 (0x0060 - 0x0000)
@@ -854,6 +949,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    Values;                                            // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_SetData;
 
 // Function Sentry.SentrySpan.SetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -863,6 +959,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_SetTag;
 
 // Function Sentry.SentrySpan.StartChild
 // 0x0030 (0x0030 - 0x0000)
@@ -875,6 +972,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentrySpan*                            ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_StartChild;
 
 // Function Sentry.SentrySpan.StartChildWithTimestamp
 // 0x0038 (0x0038 - 0x0000)
@@ -888,6 +986,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentrySpan*                            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_StartChildWithTimestamp;
 
 // Function Sentry.SentrySpan.IsFinished
 // 0x0001 (0x0001 - 0x0000)
@@ -896,6 +995,7 @@ struct SentrySpan_IsFinished final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySpan_IsFinished;
 
 // Function Sentry.SentrySubsystem.AddAttachment
 // 0x0008 (0x0008 - 0x0000)
@@ -904,6 +1004,7 @@ struct SentrySubsystem_AddAttachment final
 public:
 	class USentryAttachment*                      Attachment;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_AddAttachment;
 
 // Function Sentry.SentrySubsystem.AddBreadcrumb
 // 0x0008 (0x0008 - 0x0000)
@@ -912,6 +1013,7 @@ struct SentrySubsystem_AddBreadcrumb final
 public:
 	class USentryBreadcrumb*                      Breadcrumb;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_AddBreadcrumb;
 
 // Function Sentry.SentrySubsystem.AddBreadcrumbWithParams
 // 0x0088 (0x0088 - 0x0000)
@@ -925,6 +1027,7 @@ public:
 	ESentryLevel                                  Level;                                             // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentrySubsystem_AddBreadcrumbWithParams;
 
 // Function Sentry.SentrySubsystem.CaptureEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -934,6 +1037,7 @@ public:
 	class USentryEvent*                           Event;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureEvent;
 
 // Function Sentry.SentrySubsystem.CaptureEventWithScope
 // 0x0028 (0x0028 - 0x0000)
@@ -944,6 +1048,7 @@ public:
 	TDelegate<void(class USentryScope* Scope)>    OnConfigureScope;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureEventWithScope;
 
 // Function Sentry.SentrySubsystem.CaptureFeedback
 // 0x0008 (0x0008 - 0x0000)
@@ -952,6 +1057,7 @@ struct SentrySubsystem_CaptureFeedback final
 public:
 	class USentryFeedback*                        Feedback;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureFeedback;
 
 // Function Sentry.SentrySubsystem.CaptureFeedbackWithParams
 // 0x0040 (0x0040 - 0x0000)
@@ -963,6 +1069,7 @@ public:
 	class FString                                 email;                                             // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 EventId;                                           // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureFeedbackWithParams;
 
 // Function Sentry.SentrySubsystem.CaptureMessage
 // 0x0028 (0x0028 - 0x0000)
@@ -974,6 +1081,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureMessage;
 
 // Function Sentry.SentrySubsystem.CaptureMessageWithScope
 // 0x0038 (0x0038 - 0x0000)
@@ -986,6 +1094,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_CaptureMessageWithScope;
 
 // Function Sentry.SentrySubsystem.ContinueTrace
 // 0x0028 (0x0028 - 0x0000)
@@ -996,6 +1105,7 @@ public:
 	TArray<class FString>                         BaggageHeaders;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class USentryTransactionContext*              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_ContinueTrace;
 
 // Function Sentry.SentrySubsystem.InitializeWithSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -1004,6 +1114,7 @@ struct SentrySubsystem_InitializeWithSettings final
 public:
 	TDelegate<void(class USentrySettings* Settings)> OnConfigureSettings;                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_InitializeWithSettings;
 
 // Function Sentry.SentrySubsystem.LogDebug
 // 0x0020 (0x0020 - 0x0000)
@@ -1013,6 +1124,7 @@ public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Category;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_LogDebug;
 
 // Function Sentry.SentrySubsystem.LogError
 // 0x0020 (0x0020 - 0x0000)
@@ -1022,6 +1134,7 @@ public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Category;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_LogError;
 
 // Function Sentry.SentrySubsystem.LogFatal
 // 0x0020 (0x0020 - 0x0000)
@@ -1031,6 +1144,7 @@ public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Category;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_LogFatal;
 
 // Function Sentry.SentrySubsystem.LogInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -1040,6 +1154,7 @@ public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Category;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_LogInfo;
 
 // Function Sentry.SentrySubsystem.LogWarning
 // 0x0020 (0x0020 - 0x0000)
@@ -1049,6 +1164,7 @@ public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Category;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_LogWarning;
 
 // Function Sentry.SentrySubsystem.RemoveTag
 // 0x0010 (0x0010 - 0x0000)
@@ -1057,6 +1173,7 @@ struct SentrySubsystem_RemoveTag final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_RemoveTag;
 
 // Function Sentry.SentrySubsystem.SetContext
 // 0x0060 (0x0060 - 0x0000)
@@ -1066,6 +1183,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    Values;                                            // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_SetContext;
 
 // Function Sentry.SentrySubsystem.SetLevel
 // 0x0001 (0x0001 - 0x0000)
@@ -1074,6 +1192,7 @@ struct SentrySubsystem_SetLevel final
 public:
 	ESentryLevel                                  Level;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_SetLevel;
 
 // Function Sentry.SentrySubsystem.SetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -1083,6 +1202,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_SetTag;
 
 // Function Sentry.SentrySubsystem.SetUser
 // 0x0008 (0x0008 - 0x0000)
@@ -1091,6 +1211,7 @@ struct SentrySubsystem_SetUser final
 public:
 	class USentryUser*                            User;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_SetUser;
 
 // Function Sentry.SentrySubsystem.StartTransaction
 // 0x0030 (0x0030 - 0x0000)
@@ -1103,6 +1224,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentryTransaction*                     ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_StartTransaction;
 
 // Function Sentry.SentrySubsystem.StartTransactionWithContext
 // 0x0018 (0x0018 - 0x0000)
@@ -1114,6 +1236,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentryTransaction*                     ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_StartTransactionWithContext;
 
 // Function Sentry.SentrySubsystem.StartTransactionWithContextAndOptions
 // 0x0068 (0x0068 - 0x0000)
@@ -1124,6 +1247,7 @@ public:
 	struct FSentryTransactionOptions              Options;                                           // 0x0008(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class USentryTransaction*                     ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_StartTransactionWithContextAndOptions;
 
 // Function Sentry.SentrySubsystem.StartTransactionWithContextAndTimestamp
 // 0x0020 (0x0020 - 0x0000)
@@ -1136,6 +1260,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentryTransaction*                     ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_StartTransactionWithContextAndTimestamp;
 
 // Function Sentry.SentrySubsystem.GetUserConsent
 // 0x0001 (0x0001 - 0x0000)
@@ -1144,6 +1269,7 @@ struct SentrySubsystem_GetUserConsent final
 public:
 	EUserConsent                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_GetUserConsent;
 
 // Function Sentry.SentrySubsystem.IsCrashedLastRun
 // 0x0001 (0x0001 - 0x0000)
@@ -1152,6 +1278,7 @@ struct SentrySubsystem_IsCrashedLastRun final
 public:
 	ESentryCrashedLastRun                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_IsCrashedLastRun;
 
 // Function Sentry.SentrySubsystem.IsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -1160,6 +1287,7 @@ struct SentrySubsystem_IsEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_IsEnabled;
 
 // Function Sentry.SentrySubsystem.IsSupportedForCurrentSettings
 // 0x0001 (0x0001 - 0x0000)
@@ -1168,6 +1296,7 @@ struct SentrySubsystem_IsSupportedForCurrentSettings final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentrySubsystem_IsSupportedForCurrentSettings;
 
 // Function Sentry.SentryTraceSampler.Sample
 // 0x0010 (0x0010 - 0x0000)
@@ -1179,6 +1308,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryTraceSampler_Sample;
 
 // Function Sentry.SentryTransaction.FinishWithTimestamp
 // 0x0008 (0x0008 - 0x0000)
@@ -1187,6 +1317,7 @@ struct SentryTransaction_FinishWithTimestamp final
 public:
 	int64                                         Timestamp;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_FinishWithTimestamp;
 
 // Function Sentry.SentryTransaction.GetTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -1196,6 +1327,7 @@ public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_GetTrace;
 
 // Function Sentry.SentryTransaction.RemoveData
 // 0x0010 (0x0010 - 0x0000)
@@ -1204,6 +1336,7 @@ struct SentryTransaction_RemoveData final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_RemoveData;
 
 // Function Sentry.SentryTransaction.RemoveTag
 // 0x0010 (0x0010 - 0x0000)
@@ -1212,6 +1345,7 @@ struct SentryTransaction_RemoveTag final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_RemoveTag;
 
 // Function Sentry.SentryTransaction.SetData
 // 0x0060 (0x0060 - 0x0000)
@@ -1221,6 +1355,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    Values;                                            // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_SetData;
 
 // Function Sentry.SentryTransaction.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -1229,6 +1364,7 @@ struct SentryTransaction_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_SetName;
 
 // Function Sentry.SentryTransaction.SetTag
 // 0x0020 (0x0020 - 0x0000)
@@ -1238,6 +1374,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_SetTag;
 
 // Function Sentry.SentryTransaction.StartChildSpan
 // 0x0030 (0x0030 - 0x0000)
@@ -1250,6 +1387,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentrySpan*                            ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_StartChildSpan;
 
 // Function Sentry.SentryTransaction.StartChildSpanWithTimestamp
 // 0x0038 (0x0038 - 0x0000)
@@ -1263,6 +1401,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USentrySpan*                            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_StartChildSpanWithTimestamp;
 
 // Function Sentry.SentryTransaction.IsFinished
 // 0x0001 (0x0001 - 0x0000)
@@ -1271,6 +1410,7 @@ struct SentryTransaction_IsFinished final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransaction_IsFinished;
 
 // Function Sentry.SentryTransactionContext.Initialize
 // 0x0020 (0x0020 - 0x0000)
@@ -1280,6 +1420,7 @@ public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Operation;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransactionContext_Initialize;
 
 // Function Sentry.SentryTransactionContext.GetName
 // 0x0010 (0x0010 - 0x0000)
@@ -1288,6 +1429,7 @@ struct SentryTransactionContext_GetName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransactionContext_GetName;
 
 // Function Sentry.SentryTransactionContext.GetOperation
 // 0x0010 (0x0010 - 0x0000)
@@ -1296,6 +1438,7 @@ struct SentryTransactionContext_GetOperation final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryTransactionContext_GetOperation;
 
 // Function Sentry.SentryUser.SetData
 // 0x0050 (0x0050 - 0x0000)
@@ -1304,6 +1447,7 @@ struct SentryUser_SetData final
 public:
 	TMap<class FString, class FString>            Data;                                              // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_SetData;
 
 // Function Sentry.SentryUser.SetEmail
 // 0x0010 (0x0010 - 0x0000)
@@ -1312,6 +1456,7 @@ struct SentryUser_SetEmail final
 public:
 	class FString                                 email;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_SetEmail;
 
 // Function Sentry.SentryUser.SetId
 // 0x0010 (0x0010 - 0x0000)
@@ -1320,6 +1465,7 @@ struct SentryUser_SetId final
 public:
 	class FString                                 ID;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_SetId;
 
 // Function Sentry.SentryUser.SetIpAddress
 // 0x0010 (0x0010 - 0x0000)
@@ -1328,6 +1474,7 @@ struct SentryUser_SetIpAddress final
 public:
 	class FString                                 IpAddress;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_SetIpAddress;
 
 // Function Sentry.SentryUser.SetUsername
 // 0x0010 (0x0010 - 0x0000)
@@ -1336,6 +1483,7 @@ struct SentryUser_SetUsername final
 public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_SetUsername;
 
 // Function Sentry.SentryUser.GetData
 // 0x0050 (0x0050 - 0x0000)
@@ -1344,6 +1492,7 @@ struct SentryUser_GetData final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_GetData;
 
 // Function Sentry.SentryUser.GetEmail
 // 0x0010 (0x0010 - 0x0000)
@@ -1352,6 +1501,7 @@ struct SentryUser_GetEmail final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_GetEmail;
 
 // Function Sentry.SentryUser.GetId
 // 0x0010 (0x0010 - 0x0000)
@@ -1360,6 +1510,7 @@ struct SentryUser_GetId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_GetId;
 
 // Function Sentry.SentryUser.GetIpAddress
 // 0x0010 (0x0010 - 0x0000)
@@ -1368,6 +1519,7 @@ struct SentryUser_GetIpAddress final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_GetIpAddress;
 
 // Function Sentry.SentryUser.GetUsername
 // 0x0010 (0x0010 - 0x0000)
@@ -1376,6 +1528,7 @@ struct SentryUser_GetUsername final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryUser_GetUsername;
 
 // Function Sentry.SentryVariantHelper.Conv_ArrayToFSentryVariant
 // 0x0030 (0x0030 - 0x0000)
@@ -1385,6 +1538,7 @@ public:
 	TArray<struct FSentryVariant>                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_ArrayToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.Conv_BoolToFSentryVariant
 // 0x0028 (0x0028 - 0x0000)
@@ -1395,6 +1549,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_BoolToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.Conv_FloatToFSentryVariant
 // 0x0028 (0x0028 - 0x0000)
@@ -1405,6 +1560,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_FloatToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.Conv_IntToFSentryVariant
 // 0x0028 (0x0028 - 0x0000)
@@ -1415,6 +1571,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_IntToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.Conv_MapToFSentryVariant
 // 0x0070 (0x0070 - 0x0000)
@@ -1424,6 +1581,7 @@ public:
 	TMap<class FString, struct FSentryVariant>    Value;                                             // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0050(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_MapToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.Conv_StringToFSentryVariant
 // 0x0030 (0x0030 - 0x0000)
@@ -1433,6 +1591,7 @@ public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_Conv_StringToFSentryVariant;
 
 // Function Sentry.SentryVariantHelper.GetArray
 // 0x0030 (0x0030 - 0x0000)
@@ -1442,6 +1601,7 @@ public:
 	struct FSentryVariant                         Variant;                                           // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FSentryVariant>                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetArray;
 
 // Function Sentry.SentryVariantHelper.GetBool
 // 0x0028 (0x0028 - 0x0000)
@@ -1452,6 +1612,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetBool;
 
 // Function Sentry.SentryVariantHelper.GetFloat
 // 0x0028 (0x0028 - 0x0000)
@@ -1462,6 +1623,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetFloat;
 
 // Function Sentry.SentryVariantHelper.GetInteger
 // 0x0028 (0x0028 - 0x0000)
@@ -1472,6 +1634,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetInteger;
 
 // Function Sentry.SentryVariantHelper.GetMap
 // 0x0070 (0x0070 - 0x0000)
@@ -1481,6 +1644,7 @@ public:
 	struct FSentryVariant                         Variant;                                           // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FSentryVariant>    ReturnValue;                                       // 0x0020(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetMap;
 
 // Function Sentry.SentryVariantHelper.GetString
 // 0x0030 (0x0030 - 0x0000)
@@ -1490,6 +1654,7 @@ public:
 	struct FSentryVariant                         Variant;                                           // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetString;
 
 // Function Sentry.SentryVariantHelper.GetType
 // 0x0028 (0x0028 - 0x0000)
@@ -1500,6 +1665,7 @@ public:
 	ESentryVariantType                            ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_GetType;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromArray
 // 0x0030 (0x0030 - 0x0000)
@@ -1509,6 +1675,7 @@ public:
 	TArray<struct FSentryVariant>                 Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromArray;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromBool
 // 0x0028 (0x0028 - 0x0000)
@@ -1519,6 +1686,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromBool;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromFloat
 // 0x0028 (0x0028 - 0x0000)
@@ -1529,6 +1697,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromFloat;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromInteger
 // 0x0028 (0x0028 - 0x0000)
@@ -1539,6 +1708,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSentryVariant                         ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromInteger;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromMap
 // 0x0070 (0x0070 - 0x0000)
@@ -1548,6 +1718,7 @@ public:
 	TMap<class FString, struct FSentryVariant>    Value;                                             // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0050(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromMap;
 
 // Function Sentry.SentryVariantHelper.MakeSentryVariantFromString
 // 0x0030 (0x0030 - 0x0000)
@@ -1557,6 +1728,7 @@ public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSentryVariant                         ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SentryVariantHelper_MakeSentryVariantFromString;
 
 // Function Sentry.SentryVariantHelper.TryGetArray
 // 0x0038 (0x0038 - 0x0000)
@@ -1568,6 +1740,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetArray;
 
 // Function Sentry.SentryVariantHelper.TryGetBool
 // 0x0028 (0x0028 - 0x0000)
@@ -1579,6 +1752,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetBool;
 
 // Function Sentry.SentryVariantHelper.TryGetFloat
 // 0x0028 (0x0028 - 0x0000)
@@ -1590,6 +1764,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetFloat;
 
 // Function Sentry.SentryVariantHelper.TryGetInteger
 // 0x0028 (0x0028 - 0x0000)
@@ -1601,6 +1776,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetInteger;
 
 // Function Sentry.SentryVariantHelper.TryGetMap
 // 0x0078 (0x0078 - 0x0000)
@@ -1612,6 +1788,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetMap;
 
 // Function Sentry.SentryVariantHelper.TryGetString
 // 0x0038 (0x0038 - 0x0000)
@@ -1623,6 +1800,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SentryVariantHelper_TryGetString;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

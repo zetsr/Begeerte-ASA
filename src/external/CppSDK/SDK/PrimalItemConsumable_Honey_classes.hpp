@@ -20,7 +20,6 @@ SDK_NAMESPACE_START
 class UPrimalItemConsumable_Honey_C final : public UPrimalItemConsumableEatable_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 WasThrownBuffToAdd;                                // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -40,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Honey_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_Honey_C;
 
 SDK_NAMESPACE_END

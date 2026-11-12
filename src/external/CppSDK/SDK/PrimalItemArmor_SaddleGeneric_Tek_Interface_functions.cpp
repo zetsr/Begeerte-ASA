@@ -19,21 +19,19 @@ SDK_NAMESPACE_START
 // Function PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C.IGet Max Ammo
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32*                                  retVal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  RetVal                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int32* retVal)
+void IPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int32* RetVal)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("PrimalItemArmor_SaddleGeneric_Tek_Interface_C", "IGet Max Ammo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "PrimalItemArmor_SaddleGeneric_Tek_Interface_C", "IGet Max Ammo", FuncInfo);
 
 	Params::PrimalItemArmor_SaddleGeneric_Tek_Interface_C_IGet_Max_Ammo Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (retVal != nullptr)
-		*retVal = Parms.retVal;
+	if (RetVal != nullptr)
+		*RetVal = Parms.RetVal;
 }
 
 
@@ -42,10 +40,8 @@ void IPrimalItemArmor_SaddleGeneric_Tek_Interface_C::IGet_Max_Ammo(int32* retVal
 
 void IPrimalItemArmor_SaddleGeneric_Tek_Interface_C::ISetElementToMax()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("PrimalItemArmor_SaddleGeneric_Tek_Interface_C", "ISetElementToMax");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "PrimalItemArmor_SaddleGeneric_Tek_Interface_C", "ISetElementToMax", FuncInfo);
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

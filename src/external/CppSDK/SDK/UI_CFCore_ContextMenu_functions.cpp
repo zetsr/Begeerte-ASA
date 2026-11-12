@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Install_K2Node_ComponentBoundEvent_13_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Install_K2Node_ComponentBoundEvent_13_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Install_K2Node_ComponentBoundEvent_13_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Install_K2Node_
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Like_K2Node_ComponentBoundEvent_16_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Like_K2Node_ComponentBoundEvent_16_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Like_K2Node_ComponentBoundEvent_16_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Like_K2Node_Com
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Report_K2Node_ComponentBoundEvent_14_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Report_K2Node_ComponentBoundEvent_14_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Report_K2Node_ComponentBoundEvent_14_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Report_K2Node_C
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Uninstall_K2Node_ComponentBoundEvent_15_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Uninstall_K2Node_ComponentBoundEvent_15_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_DropdownMenu_UI_Button_Uninstall_K2Node_ComponentBoundEvent_15_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_DropdownMenu_UI_Button_Uninstall_K2Nod
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_Cancel_K2Node
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_Update_K2Node_ComponentBoundEvent_24_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_Update_K2Node_ComponentBoundEvent_24_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_Update_K2Node_ComponentBoundEvent_24_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +93,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_Update_K2Node
 
 void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_View_K2Node_ComponentBoundEvent_25_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_View_K2Node_ComponentBoundEvent_25_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "BndEvt__UI_RightClickMenu_UI_Button_View_K2Node_ComponentBoundEvent_25_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +105,8 @@ void UUI_CFCore_ContextMenu_C::BndEvt__UI_RightClickMenu_UI_Button_View_K2Node_C
 
 void UUI_CFCore_ContextMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -135,10 +119,8 @@ void UUI_CFCore_ContextMenu_C::Construct()
 
 void UUI_CFCore_ContextMenu_C::CustomEvent_3(const class FString& temp_user_token)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "CustomEvent_3");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "CustomEvent_3", FuncInfo);
 
 	Params::UI_CFCore_ContextMenu_C_CustomEvent_3 Parms{};
 
@@ -155,10 +137,8 @@ void UUI_CFCore_ContextMenu_C::CustomEvent_3(const class FString& temp_user_toke
 
 void UUI_CFCore_ContextMenu_C::CustomEvent_4(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "CustomEvent_4");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "CustomEvent_4", FuncInfo);
 
 	Params::UI_CFCore_ContextMenu_C_CustomEvent_4 Parms{};
 
@@ -173,10 +153,8 @@ void UUI_CFCore_ContextMenu_C::CustomEvent_4(const struct FCFCoreError& Error)
 
 void UUI_CFCore_ContextMenu_C::DecideWhichOptionsToDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "DecideWhichOptionsToDisplay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "DecideWhichOptionsToDisplay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -187,10 +165,8 @@ void UUI_CFCore_ContextMenu_C::DecideWhichOptionsToDisplay()
 
 void UUI_CFCore_ContextMenu_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,10 +177,8 @@ void UUI_CFCore_ContextMenu_C::Destruct()
 
 void UUI_CFCore_ContextMenu_C::Event_Set_To_Like()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "Event Set To Like");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "Event Set To Like", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -215,10 +189,8 @@ void UUI_CFCore_ContextMenu_C::Event_Set_To_Like()
 
 void UUI_CFCore_ContextMenu_C::Event_Set_To_Unlike()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "Event Set To Unlike");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "Event Set To Unlike", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +203,8 @@ void UUI_CFCore_ContextMenu_C::Event_Set_To_Unlike()
 
 void UUI_CFCore_ContextMenu_C::ExecuteUbergraph_UI_CFCore_ContextMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "ExecuteUbergraph_UI_CFCore_ContextMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "ExecuteUbergraph_UI_CFCore_ContextMenu", FuncInfo);
 
 	Params::UI_CFCore_ContextMenu_C_ExecuteUbergraph_UI_CFCore_ContextMenu Parms{};
 
@@ -249,24 +219,20 @@ void UUI_CFCore_ContextMenu_C::ExecuteUbergraph_UI_CFCore_ContextMenu(int32 Entr
 
 void UUI_CFCore_ContextMenu_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "OnInitialized");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "OnInitialized", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.PlayFadeInOnBeginPlay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ContextMenu_C::PlayFadeInOnBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "PlayFadeInOnBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "PlayFadeInOnBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +245,8 @@ void UUI_CFCore_ContextMenu_C::PlayFadeInOnBeginPlay()
 
 void UUI_CFCore_ContextMenu_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ContextMenu_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ContextMenu_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_ContextMenu_C_PreConstruct Parms{};
 

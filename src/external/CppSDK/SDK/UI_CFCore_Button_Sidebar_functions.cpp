@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Button_Sidebar_C::BndEvt__UI_Button_Sidebar_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "BndEvt__UI_Button_Sidebar_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "BndEvt__UI_Button_Sidebar_Button_BrowseMods_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Button_Sidebar_C::BndEvt__UI_Button_Sidebar_Button_BrowseMods_K2
 
 void UUI_CFCore_Button_Sidebar_C::ButtonDeselected()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "ButtonDeselected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "ButtonDeselected", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_Button_Sidebar_C::ButtonDeselected()
 
 void UUI_CFCore_Button_Sidebar_C::ButtonSelected()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "ButtonSelected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "ButtonSelected", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,26 +57,22 @@ void UUI_CFCore_Button_Sidebar_C::ButtonSelected()
 
 void UUI_CFCore_Button_Sidebar_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.ExecuteUbergraph_UI_CFCore_Button_Sidebar
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUI_CFCore_Button_Sidebar_C::ExecuteUbergraph_UI_CFCore_Button_Sidebar(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "ExecuteUbergraph_UI_CFCore_Button_Sidebar");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "ExecuteUbergraph_UI_CFCore_Button_Sidebar", FuncInfo);
 
 	Params::UI_CFCore_Button_Sidebar_C_ExecuteUbergraph_UI_CFCore_Button_Sidebar Parms{};
 
@@ -99,10 +89,8 @@ void UUI_CFCore_Button_Sidebar_C::ExecuteUbergraph_UI_CFCore_Button_Sidebar(int3
 
 void UUI_CFCore_Button_Sidebar_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Button_Sidebar_C_GetRootCFWidget Parms{};
 
@@ -118,10 +106,8 @@ void UUI_CFCore_Button_Sidebar_C::GetRootCFWidget(class UPanelWidget** RootPanel
 
 void UUI_CFCore_Button_Sidebar_C::InitSideButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "InitSideButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "InitSideButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +120,8 @@ void UUI_CFCore_Button_Sidebar_C::InitSideButton()
 
 void UUI_CFCore_Button_Sidebar_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Button_Sidebar_C_PreConstruct Parms{};
 
@@ -154,10 +138,8 @@ void UUI_CFCore_Button_Sidebar_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_Button_Sidebar_C::UpdateSlelectionTo(bool Condition)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "UpdateSlelectionTo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "UpdateSlelectionTo", FuncInfo);
 
 	Params::UI_CFCore_Button_Sidebar_C_UpdateSlelectionTo Parms{};
 
@@ -172,10 +154,8 @@ void UUI_CFCore_Button_Sidebar_C::UpdateSlelectionTo(bool Condition)
 
 void UUI_CFCore_Button_Sidebar_C::UpdateThemeData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_Sidebar_C", "UpdateThemeData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_Sidebar_C", "UpdateThemeData", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

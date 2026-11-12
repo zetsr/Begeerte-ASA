@@ -14,7 +14,7 @@
 SDK_NAMESPACE_START
 
 // Enum InterchangeCommon.EInterchangeMaterialXShaders
-// NumValues: 0x0009
+// NumValues: 0x000C
 enum class EInterchangeMaterialXShaders : uint8
 {
 	OpenPBRSurface                           = 0,
@@ -24,12 +24,15 @@ enum class EInterchangeMaterialXShaders : uint8
 	SurfaceUnlit                             = 4,
 	UsdPreviewSurface                        = 5,
 	Surface                                  = 6,
-	MaxShaderCount                           = 7,
-	EInterchangeMaterialXShaders_MAX         = 8,
+	Displacement                             = 7,
+	Volume                                   = 8,
+	GltfPBR                                  = 9,
+	MaxShaderCount                           = 10,
+	EInterchangeMaterialXShaders_MAX         = 11,
 };
 
 // Enum InterchangeCommon.EInterchangeMaterialXBSDF
-// NumValues: 0x000B
+// NumValues: 0x000C
 enum class EInterchangeMaterialXBSDF : uint8
 {
 	OrenNayarDiffuse                         = 0,
@@ -40,9 +43,10 @@ enum class EInterchangeMaterialXBSDF : uint8
 	GeneralizedSchlick                       = 5,
 	Subsurface                               = 6,
 	Sheen                                    = 7,
-	ThinFilm                                 = 8,
-	MaxBSDFCount                             = 9,
-	EInterchangeMaterialXBSDF_MAX            = 10,
+	ChiangHair                               = 8,
+	ThinFilm                                 = 9,
+	MaxBSDFCount                             = 10,
+	EInterchangeMaterialXBSDF_MAX            = 11,
 };
 
 // Enum InterchangeCommon.EInterchangeMaterialXEDF
@@ -64,6 +68,26 @@ enum class EInterchangeMaterialXVDF : uint8
 	Anisotropic                              = 1,
 	MaxVDFCount                              = 2,
 	EInterchangeMaterialXVDF_MAX             = 3,
+};
+
+// Enum InterchangeCommon.EInterchangeUsdPrimvar
+// NumValues: 0x0004
+enum class EInterchangeUsdPrimvar : uint8
+{
+	Standard                                 = 0,
+	Bake                                     = 1,
+	All                                      = 2,
+	EInterchangeUsdPrimvar_MAX               = 3,
+};
+
+// Enum InterchangeCommon.EInterchangeSparseVolumeTextureFormat
+// NumValues: 0x0004
+enum class EInterchangeSparseVolumeTextureFormat : uint8
+{
+	Unorm8                                   = 0,
+	Float16                                  = 1,
+	Float32                                  = 2,
+	EInterchangeSparseVolumeTextureFormat_MAX = 3,
 };
 
 SDK_NAMESPACE_END

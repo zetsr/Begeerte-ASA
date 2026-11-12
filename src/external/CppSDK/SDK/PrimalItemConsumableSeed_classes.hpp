@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumableSeed_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumableSeed_C;
 
 SDK_NAMESPACE_END

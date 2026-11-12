@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowBefore_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowBefore_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowBefore_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonA
 
 void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowNext_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowNext_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonArrowNext_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_DLC_Selector_ButtonA
 
 void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_GameModeSelect_BackButton_K2Node_ComponentBoundEvent_8_OnButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_GameModeSelect_BackButton_K2Node_ComponentBoundEvent_8_OnButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "BndEvt__ASAUI_MainMenu_GameModeSelect_BackButton_K2Node_ComponentBoundEvent_8_OnButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +60,8 @@ void UASAUI_MainMenu_DLC_Selector_C::BndEvt__ASAUI_MainMenu_GameModeSelect_BackB
 
 bool UASAUI_MainMenu_DLC_Selector_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "BPGamepadReleased", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_BPGamepadReleased Parms{};
 
@@ -86,10 +78,8 @@ bool UASAUI_MainMenu_DLC_Selector_C::BPGamepadReleased(const struct FKey& theKey
 
 void UASAUI_MainMenu_DLC_Selector_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +90,8 @@ void UASAUI_MainMenu_DLC_Selector_C::Construct()
 
 void UASAUI_MainMenu_DLC_Selector_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +104,8 @@ void UASAUI_MainMenu_DLC_Selector_C::Destruct()
 
 void UASAUI_MainMenu_DLC_Selector_C::ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector Parms{};
 
@@ -134,10 +120,8 @@ void UASAUI_MainMenu_DLC_Selector_C::ExecuteUbergraph_ASAUI_MainMenu_DLC_Selecto
 
 void UASAUI_MainMenu_DLC_Selector_C::NextIndexHiglights()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "NextIndexHiglights");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "NextIndexHiglights", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +136,8 @@ void UASAUI_MainMenu_DLC_Selector_C::NextIndexHiglights()
 
 void UASAUI_MainMenu_DLC_Selector_C::NextPage(bool bNext, int32 EntriesToSkip, bool bChangePage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "NextPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "NextPage", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_NextPage Parms{};
 
@@ -174,10 +156,8 @@ void UASAUI_MainMenu_DLC_Selector_C::NextPage(bool bNext, int32 EntriesToSkip, b
 
 void UASAUI_MainMenu_DLC_Selector_C::OnCardClickedRef_Event(class UASAUI_MainMenuWidget_Card_C* ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "OnCardClickedRef_Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "OnCardClickedRef_Event", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_OnCardClickedRef_Event Parms{};
 
@@ -196,10 +176,8 @@ void UASAUI_MainMenu_DLC_Selector_C::OnCardClickedRef_Event(class UASAUI_MainMen
 
 struct FEventReply UASAUI_MainMenu_DLC_Selector_C::OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "OnKeyDownEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "OnKeyDownEvent", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_OnKeyDownEvent Parms{};
 
@@ -219,10 +197,8 @@ struct FEventReply UASAUI_MainMenu_DLC_Selector_C::OnKeyDownEvent(const struct F
 
 void UASAUI_MainMenu_DLC_Selector_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "PreConstruct", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_PreConstruct Parms{};
 
@@ -237,10 +213,8 @@ void UASAUI_MainMenu_DLC_Selector_C::PreConstruct(bool IsDesignTime)
 
 void UASAUI_MainMenu_DLC_Selector_C::RefreshAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "RefreshAnim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "RefreshAnim", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -253,10 +227,8 @@ void UASAUI_MainMenu_DLC_Selector_C::RefreshAnim()
 
 void UASAUI_MainMenu_DLC_Selector_C::SelectionChanged(class UCustomButtonWidget* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "SelectionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "SelectionChanged", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_SelectionChanged Parms{};
 
@@ -271,10 +243,8 @@ void UASAUI_MainMenu_DLC_Selector_C::SelectionChanged(class UCustomButtonWidget*
 
 void UASAUI_MainMenu_DLC_Selector_C::StopAllCardAnims()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "StopAllCardAnims");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "StopAllCardAnims", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -288,10 +258,8 @@ void UASAUI_MainMenu_DLC_Selector_C::StopAllCardAnims()
 
 void UASAUI_MainMenu_DLC_Selector_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "Tick", FuncInfo);
 
 	Params::ASAUI_MainMenu_DLC_Selector_C_Tick Parms{};
 
@@ -307,10 +275,8 @@ void UASAUI_MainMenu_DLC_Selector_C::Tick(const struct FGeometry& MyGeometry, fl
 
 void UASAUI_MainMenu_DLC_Selector_C::WidgetAddedToViewport()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_MainMenu_DLC_Selector_C", "WidgetAddedToViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_MainMenu_DLC_Selector_C", "WidgetAddedToViewport", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

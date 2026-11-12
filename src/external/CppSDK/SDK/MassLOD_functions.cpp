@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function MassLOD.MassLODSubsystem.OnPlayerControllerEndPlay
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EEndPlayReason                          EndPlayReason                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

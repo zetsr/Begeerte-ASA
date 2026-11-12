@@ -12,37 +12,12 @@
 
 #include "DeveloperSettings_classes.hpp"
 #include "Engine_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "OpenColorIO_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Class OpenColorIO.OpenColorIOSettings
-// 0x0008 (0x0040 - 0x0038)
-class UOpenColorIOSettings final : public UDeveloperSettings
-{
-public:
-	uint8                                         bUseLegacyProcessor : 1;                           // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUse32fLUT : 1;                                    // 0x0038(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSupportInverseViewTransforms : 1;                 // 0x0038(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OpenColorIOSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OpenColorIOSettings")
-	}
-	static class UOpenColorIOSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOpenColorIOSettings>();
-	}
-};
 
 // Class OpenColorIO.OpenColorIOBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -65,9 +40,10 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UOpenColorIOBlueprintLibrary;
 
 // Class OpenColorIO.OpenColorIOColorTransform
-// 0x00E0 (0x0108 - 0x0028)
+// 0x00A0 (0x00C8 - 0x0028)
 class UOpenColorIOColorTransform final : public UObject
 {
 public:
@@ -79,8 +55,8 @@ public:
 	class FString                                 View;                                              // 0x0060(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOpenColorIOViewTransformDirection            DisplayViewDirection;                              // 0x0070(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class UTexture*>                  Textures;                                          // 0x0078(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_C8[0x40];                                      // 0x00C8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UTexture*>                       LookupTextures;                                    // 0x0078(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_88[0x40];                                      // 0x0088(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -96,22 +72,26 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOColorTransform>();
 	}
 };
+DUMPER7_ASSERTS_UOpenColorIOColorTransform;
 
 // Class OpenColorIO.OpenColorIOConfiguration
 // 0x00D0 (0x00F8 - 0x0028)
 class UOpenColorIOConfiguration final : public UObject
 {
 public:
-	struct FFilePath                              ConfigurationFile;                                 // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FOpenColorIOColorSpace>         DesiredColorSpaces;                                // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FOpenColorIODisplayView>        DesiredDisplayViews;                               // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            Context;                                           // 0x0058(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<struct FOpenColorIOColorSpace>         DesiredColorSpaces;                                // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FOpenColorIODisplayView>        DesiredDisplayViews;                               // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            Context;                                           // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FFilePath                              ConfigurationFile;                                 // 0x0098(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPrivate)
 	TArray<class UOpenColorIOColorTransform*>     ColorTransforms;                                   // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_B8[0x30];                                      // 0x00B8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ConfigHash;                                        // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void ReloadExistingColorspaces(bool bForce);
+	void SetConfigurationFile(const struct FFilePath& InFilePath);
+
+	const struct FFilePath GetConfigurationFile() const;
 
 public:
 	static class UClass* StaticClass()
@@ -127,6 +107,7 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOConfiguration>();
 	}
 };
+DUMPER7_ASSERTS_UOpenColorIOConfiguration;
 
 // Class OpenColorIO.OpenColorIODisplayExtensionWrapper
 // 0x0010 (0x0038 - 0x0028)
@@ -160,5 +141,32 @@ public:
 		return GetDefaultObjImpl<UOpenColorIODisplayExtensionWrapper>();
 	}
 };
+DUMPER7_ASSERTS_UOpenColorIODisplayExtensionWrapper;
+
+// Class OpenColorIO.OpenColorIOSettings
+// 0x0008 (0x0040 - 0x0038)
+class UOpenColorIOSettings final : public UDeveloperSettings
+{
+public:
+	uint8                                         bUseLegacyProcessor : 1;                           // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUse32fLUT : 1;                                    // 0x0038(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSupportInverseViewTransforms : 1;                 // 0x0038(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OpenColorIOSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OpenColorIOSettings")
+	}
+	static class UOpenColorIOSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOpenColorIOSettings>();
+	}
+};
+DUMPER7_ASSERTS_UOpenColorIOSettings;
 
 SDK_NAMESPACE_END

@@ -15,24 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum EngineCameras.EOscillatorWaveform
-// NumValues: 0x0003
-enum class EOscillatorWaveform : uint8
-{
-	SineWave                                 = 0,
-	PerlinNoise                              = 1,
-	EOscillatorWaveform_MAX                  = 2,
-};
-
-// Enum EngineCameras.EInitialOscillatorOffset
-// NumValues: 0x0003
-enum class EInitialOscillatorOffset : uint8
-{
-	EOO_OffsetRandom                         = 0,
-	EOO_OffsetZero                           = 1,
-	EOO_MAX                                  = 2,
-};
-
 // Enum EngineCameras.ECameraAnimationPlaySpace
 // NumValues: 0x0004
 enum class ECameraAnimationPlaySpace : uint8
@@ -58,6 +40,24 @@ enum class ECameraAnimationEasingType : uint8
 	ECameraAnimationEasingType_MAX           = 8,
 };
 
+// Enum EngineCameras.EOscillatorWaveform
+// NumValues: 0x0003
+enum class EOscillatorWaveform : uint8
+{
+	SineWave                                 = 0,
+	PerlinNoise                              = 1,
+	EOscillatorWaveform_MAX                  = 2,
+};
+
+// Enum EngineCameras.EInitialOscillatorOffset
+// NumValues: 0x0003
+enum class EInitialOscillatorOffset : uint8
+{
+	EOO_OffsetRandom                         = 0,
+	EOO_OffsetZero                           = 1,
+	EOO_MAX                                  = 2,
+};
+
 // Enum EngineCameras.EInitialWaveOscillatorOffsetType
 // NumValues: 0x0003
 enum class EInitialWaveOscillatorOffsetType : uint8
@@ -65,38 +65,6 @@ enum class EInitialWaveOscillatorOffsetType : uint8
 	Random                                   = 0,
 	Zero                                     = 1,
 	EInitialWaveOscillatorOffsetType_MAX     = 2,
-};
-
-// ScriptStruct EngineCameras.FOscillator
-// 0x000C (0x000C - 0x0000)
-struct FFOscillator final
-{
-public:
-	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInitialOscillatorOffset                      InitialOffset;                                     // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOscillatorWaveform                           Waveform;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct EngineCameras.ROscillator
-// 0x0024 (0x0024 - 0x0000)
-struct FROscillator final
-{
-public:
-	struct FFOscillator                           Pitch;                                             // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Yaw;                                               // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Roll;                                              // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct EngineCameras.VOscillator
-// 0x0024 (0x0024 - 0x0000)
-struct FVOscillator final
-{
-public:
-	struct FFOscillator                           X;                                                 // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Y;                                                 // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFOscillator                           Z;                                                 // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 
 // ScriptStruct EngineCameras.CameraAnimationParams
@@ -122,6 +90,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               UserPlaySpaceRot;                                  // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCameraAnimationParams;
 
 // ScriptStruct EngineCameras.CameraAnimationHandle
 // 0x0004 (0x0004 - 0x0000)
@@ -130,6 +99,7 @@ struct alignas(0x02) FCameraAnimationHandle final
 public:
 	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCameraAnimationHandle;
 
 // ScriptStruct EngineCameras.ActiveCameraAnimationInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -148,6 +118,42 @@ public:
 	bool                                          bIsEasingOut;                                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FActiveCameraAnimationInfo;
+
+// ScriptStruct EngineCameras.FOscillator
+// 0x000C (0x000C - 0x0000)
+struct FFOscillator final
+{
+public:
+	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInitialOscillatorOffset                      InitialOffset;                                     // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOscillatorWaveform                           Waveform;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFOscillator;
+
+// ScriptStruct EngineCameras.ROscillator
+// 0x0024 (0x0024 - 0x0000)
+struct FROscillator final
+{
+public:
+	struct FFOscillator                           Pitch;                                             // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Yaw;                                               // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Roll;                                              // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FROscillator;
+
+// ScriptStruct EngineCameras.VOscillator
+// 0x0024 (0x0024 - 0x0000)
+struct FVOscillator final
+{
+public:
+	struct FFOscillator                           X;                                                 // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Y;                                                 // 0x000C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFOscillator                           Z;                                                 // 0x0018(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVOscillator;
 
 // ScriptStruct EngineCameras.PerlinNoiseShaker
 // 0x0008 (0x0008 - 0x0000)
@@ -157,6 +163,7 @@ public:
 	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPerlinNoiseShaker;
 
 // ScriptStruct EngineCameras.WaveOscillator
 // 0x000C (0x000C - 0x0000)
@@ -168,5 +175,6 @@ public:
 	EInitialWaveOscillatorOffsetType              InitialOffsetType;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FWaveOscillator;
 
 SDK_NAMESPACE_END

@@ -29,10 +29,8 @@ SDK_NAMESPACE_START
 
 bool ABuff_ASAPreventDismount_C::BPBypassPreventDinoDismount(bool FromRider, bool bCancelForceLand, bool SpawnDinoDefaultController, int32 OverrideUnboardDirection, bool bForceEvenIfBuffPreventsClear, bool bFromUse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_ASAPreventDismount_C", "BPBypassPreventDinoDismount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_ASAPreventDismount_C", "BPBypassPreventDinoDismount", FuncInfo);
 
 	Params::Buff_ASAPreventDismount_C_BPBypassPreventDinoDismount Parms{};
 

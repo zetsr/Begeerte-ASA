@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 // Parameters:
 // int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   StateIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    MainText                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const class FString&                    ExtendedInfoText                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UTexture2D*                       Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -32,18 +32,16 @@ SDK_NAMESPACE_START
 // double                                  CustomRichTextScale                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FHUDElement*                     OutHUDElement                                          (Parm, OutParm)
 
-void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo(int32 SlotIndex, int32 StateIndex, double progress, const class FString& MainText, const class FString& ExtendedInfoText, class UTexture2D* Icon, const struct FLinearColor& CustomBGColor, const struct FLinearColor& CustomProgressColor, int32 Style, const class FString& CustomRichText, double CustomRichTextScale, struct FHUDElement* OutHUDElement)
+void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo(int32 SlotIndex, int32 StateIndex, double Progress, const class FString& MainText, const class FString& ExtendedInfoText, class UTexture2D* Icon, const struct FLinearColor& CustomBGColor, const struct FLinearColor& CustomProgressColor, int32 Style, const class FString& CustomRichText, double CustomRichTextScale, struct FHUDElement* OutHUDElement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo", FuncInfo);
 
 	Params::GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo Parms{};
 
 	Parms.SlotIndex = SlotIndex;
 	Parms.StateIndex = StateIndex;
-	Parms.progress = progress;
+	Parms.Progress = Progress;
 	Parms.MainText = std::move(MainText);
 	Parms.ExtendedInfoText = std::move(ExtendedInfoText);
 	Parms.Icon = Icon;
@@ -66,23 +64,21 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo(int32 SlotIndex, int
 // int32                                   SlotOffset                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   SlotSpan                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   StateIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    ExtendedInfoText                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // struct FHUDElement*                     OutHUDElement                                          (Parm, OutParm)
 
-void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int32 SlotOffset, int32 SlotSpan, int32 StateIndex, double progress, const class FString& ExtendedInfoText, struct FHUDElement* OutHUDElement)
+void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int32 SlotOffset, int32 SlotSpan, int32 StateIndex, double Progress, const class FString& ExtendedInfoText, struct FHUDElement* OutHUDElement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo_ExtraBar");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo_ExtraBar", FuncInfo);
 
 	Params::GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_ExtraBar Parms{};
 
 	Parms.SlotOffset = SlotOffset;
 	Parms.SlotSpan = SlotSpan;
 	Parms.StateIndex = StateIndex;
-	Parms.progress = progress;
+	Parms.Progress = Progress;
 	Parms.ExtendedInfoText = std::move(ExtendedInfoText);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -105,10 +101,8 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int32 SlotO
 
 void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_Frame(const struct FHUDElement& InHUDElement, const struct FLinearColor& CustomColor, int32 Style, const class FString& CustomRichText, bool UseInElementTextColor, double CustomRichTextScale, struct FHUDElement* OutHUDElement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo_Frame");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GlobalUIData_BP_C", "BPGetHUDElements_Module_FuelOrAmmo_Frame", FuncInfo);
 
 	Params::GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_Frame Parms{};
 
@@ -138,10 +132,8 @@ void UGlobalUIData_BP_C::BPGetHUDElements_Module_FuelOrAmmo_Frame(const struct F
 
 void UGlobalUIData_BP_C::BPGetHUDElements_Module_Struggle(class APlayerController* ForPC, double StruggleProgressPercent, const class FString& RichTextOverride, class AActor* Instigator, TArray<struct FHUDElement>* Elements, struct FHUDRichTextOverlayData* OutHUDRichTextOverlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GlobalUIData_BP_C", "BPGetHUDElements_Module_Struggle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GlobalUIData_BP_C", "BPGetHUDElements_Module_Struggle", FuncInfo);
 
 	Params::GlobalUIData_BP_C_BPGetHUDElements_Module_Struggle Parms{};
 

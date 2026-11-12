@@ -10,19 +10,23 @@
 
 #include "Basic.hpp"
 
+#include "ProxyTable_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 #include "Chooser_structs.hpp"
-#include "ProxyTable_structs.hpp"
+#include "Chooser_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ProxyTable.ChooserParameterProxyTable
-// 0x0000 (0x0000 - 0x0000)
-class IChooserParameterProxyTable final
+// 0x0008 (0x0008 - 0x0000)
+class IChooserParameterProxyTable
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -46,13 +50,14 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IChooserParameterProxyTable;
 
 // Class ProxyTable.ProxyAsset
 // 0x0050 (0x0078 - 0x0028)
-class UProxyAsset final : public UObject
+class UProxyAsset final : public UObject, public IHasContextClass
 {
 public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UObject>                    Type;                                              // 0x0048(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	EObjectChooserResultType                      ResultType;                                        // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -73,6 +78,7 @@ public:
 		return GetDefaultObjImpl<UProxyAsset>();
 	}
 };
+DUMPER7_ASSERTS_UProxyAsset;
 
 // Class ProxyTable.ProxyTable
 // 0x0020 (0x0048 - 0x0028)
@@ -96,6 +102,7 @@ public:
 		return GetDefaultObjImpl<UProxyTable>();
 	}
 };
+DUMPER7_ASSERTS_UProxyTable;
 
 // Class ProxyTable.ProxyTableFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -121,5 +128,6 @@ public:
 		return GetDefaultObjImpl<UProxyTableFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UProxyTableFunctionLibrary;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_FailedToLoad_C::BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_BackFailed_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_FailedToLoad_C", "BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_BackFailed_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_FailedToLoad_C", "BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_BackFailed_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,26 +33,22 @@ void UUI_CFCore_FailedToLoad_C::BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_
 
 void UUI_CFCore_FailedToLoad_C::BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_TryAgain_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_FailedToLoad_C", "BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_TryAgain_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_FailedToLoad_C", "BndEvt__UI_CFCore_FailedToLoad_UI_Button_CFCore_Global_TryAgain_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_FailedToLoad.UI_CFCore_FailedToLoad_C.ExecuteUbergraph_UI_CFCore_FailedToLoad
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUI_CFCore_FailedToLoad_C::ExecuteUbergraph_UI_CFCore_FailedToLoad(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_FailedToLoad_C", "ExecuteUbergraph_UI_CFCore_FailedToLoad");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_FailedToLoad_C", "ExecuteUbergraph_UI_CFCore_FailedToLoad", FuncInfo);
 
 	Params::UI_CFCore_FailedToLoad_C_ExecuteUbergraph_UI_CFCore_FailedToLoad Parms{};
 
@@ -69,10 +63,8 @@ void UUI_CFCore_FailedToLoad_C::ExecuteUbergraph_UI_CFCore_FailedToLoad(int32 En
 
 void UUI_CFCore_FailedToLoad_C::FadeOutLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_FailedToLoad_C", "FadeOutLoading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_FailedToLoad_C", "FadeOutLoading", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +77,8 @@ void UUI_CFCore_FailedToLoad_C::FadeOutLoading()
 
 void UUI_CFCore_FailedToLoad_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_FailedToLoad_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_FailedToLoad_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_FailedToLoad_C_GetRootCFWidget Parms{};
 

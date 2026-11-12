@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_C
 
 void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::MapSelect_Entry_C_BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -60,10 +56,8 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_Componen
 
 void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::MapSelect_Entry_C_BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -79,10 +73,8 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_Componen
 
 void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +85,8 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Nod
 
 void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +97,8 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Nod
 
 void UMapSelect_Entry_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,10 +111,8 @@ void UMapSelect_Entry_C::Construct()
 
 void UMapSelect_Entry_C::ExecuteUbergraph_MapSelect_Entry(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "ExecuteUbergraph_MapSelect_Entry");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "ExecuteUbergraph_MapSelect_Entry", FuncInfo);
 
 	Params::MapSelect_Entry_C_ExecuteUbergraph_MapSelect_Entry Parms{};
 
@@ -141,10 +127,8 @@ void UMapSelect_Entry_C::ExecuteUbergraph_MapSelect_Entry(int32 EntryPoint)
 
 void UMapSelect_Entry_C::FixupComboBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "FixupComboBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "FixupComboBox", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,10 +141,8 @@ void UMapSelect_Entry_C::FixupComboBox()
 
 void UMapSelect_Entry_C::IsSelected(bool* Selected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "IsSelected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "IsSelected", FuncInfo);
 
 	Params::MapSelect_Entry_C_IsSelected Parms{};
 
@@ -178,10 +160,8 @@ void UMapSelect_Entry_C::IsSelected(bool* Selected)
 
 void UMapSelect_Entry_C::Set_To_Map_Select_View(bool IsMapSelectView)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Set To Map Select View");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "Set To Map Select View", FuncInfo);
 
 	Params::MapSelect_Entry_C_Set_To_Map_Select_View Parms{};
 
@@ -198,10 +178,8 @@ void UMapSelect_Entry_C::Set_To_Map_Select_View(bool IsMapSelectView)
 
 void UMapSelect_Entry_C::SetSelected(bool IsSelected_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "SetSelected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "SetSelected", FuncInfo);
 
 	Params::MapSelect_Entry_C_SetSelected Parms{};
 
@@ -220,10 +198,8 @@ void UMapSelect_Entry_C::SetSelected(bool IsSelected_0)
 
 void UMapSelect_Entry_C::SetupUsingHostSession(class UUI_HostSession* HostSession, class UMapSelect_Session_C* MapSelectSession, int32 WithIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "SetupUsingHostSession");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "SetupUsingHostSession", FuncInfo);
 
 	Params::MapSelect_Entry_C_SetupUsingHostSession Parms{};
 
@@ -242,10 +218,8 @@ void UMapSelect_Entry_C::SetupUsingHostSession(class UUI_HostSession* HostSessio
 
 void UMapSelect_Entry_C::Show_Hide_Locked_Images(bool IsLocked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Show Hide Locked Images");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "Show Hide Locked Images", FuncInfo);
 
 	Params::MapSelect_Entry_C_Show_Hide_Locked_Images Parms{};
 
@@ -263,10 +237,8 @@ void UMapSelect_Entry_C::Show_Hide_Locked_Images(bool IsLocked)
 
 void UMapSelect_Entry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "Tick", FuncInfo);
 
 	Params::MapSelect_Entry_C_Tick Parms{};
 
@@ -282,10 +254,8 @@ void UMapSelect_Entry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 void UMapSelect_Entry_C::UpdateDeleteSaveButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "UpdateDeleteSaveButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Entry_C", "UpdateDeleteSaveButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

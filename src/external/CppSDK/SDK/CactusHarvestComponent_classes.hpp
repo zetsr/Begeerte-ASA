@@ -16,13 +16,13 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass CactusHarvestComponent.CactusHarvestComponent_C
-// 0x0018 (0x0250 - 0x0238)
+// 0x0018 (0x0278 - 0x0260)
 class UCactusHarvestComponent_C final : public UAttackHarvestComponent_Base_C
 {
 public:
-	double                                        PlayerGiveWaterAmount;                             // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PlayerGiveWaterSpeed;                              // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MorellatopsGiveWaterAmount;                        // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PlayerGiveWaterAmount;                             // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PlayerGiveWaterSpeed;                              // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MorellatopsGiveWaterAmount;                        // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	int32 BPCustomHarvestResource(class UPrimalInventoryComponent* invComp, int32 NumToGive, TSubclassOf<class UDamageType> DamageTypeClass, class AActor* ToActor);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UCactusHarvestComponent_C>();
 	}
 };
+DUMPER7_ASSERTS_UCactusHarvestComponent_C;
 
 SDK_NAMESPACE_END

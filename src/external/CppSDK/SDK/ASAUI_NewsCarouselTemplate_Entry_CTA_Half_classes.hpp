@@ -17,23 +17,23 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ASAUI_NewsCarouselTemplate_Entry_CTA_Half.ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C
-// 0x0030 (0x03E0 - 0x03B0)
+// 0x0030 (0x0440 - 0x0410)
 class UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C final : public UUI_MenuCarouselEntryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 MainImage;                                         // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        AutoScrollWaitAtStart;                             // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultAutoScrollSpeed;                            // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AutoScrollTracker;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AutoScrollWaitAtEnd;                               // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UImage*                                 MainImage;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        AutoScrollWaitAtStart;                             // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultAutoScrollSpeed;                            // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AutoScrollTracker;                                 // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AutoScrollWaitAtEnd;                               // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void BlueprintInit(const class FString& RawExtraData);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover);
+	void EntryFocusStart(bool bInstigatedByAutoRollover);
+	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTA_Half(int32 EntryPoint);
-	void EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick);
-	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
-	void BlueprintInit(const class FString& RawExtraData_BlueprintInit);
 
 public:
 	static class UClass* StaticClass()
@@ -49,5 +49,6 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C>();
 	}
 };
+DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UBaseHumanAnimBP_Fists_C::UpdateLayeringValues()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BaseHumanAnimBP_Fists_C", "UpdateLayeringValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BaseHumanAnimBP_Fists_C", "UpdateLayeringValues", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

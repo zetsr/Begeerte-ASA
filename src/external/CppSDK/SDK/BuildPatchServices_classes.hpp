@@ -29,7 +29,7 @@ public:
 	class FString                                 BuildVersion;                                      // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LaunchExe;                                         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LaunchCommand;                                     // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FString>                           PrereqIds;                                         // 0x0070(0x0050)(NativeAccessSpecifierPublic)
+	TSet<class FString>                           PrereqIds;                                         // 0x0070(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 PrereqName;                                        // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PrereqPath;                                        // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PrereqArgs;                                        // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -51,5 +51,6 @@ public:
 		return GetDefaultObjImpl<UBuildPatchManifest>();
 	}
 };
+DUMPER7_ASSERTS_UBuildPatchManifest;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDyeUI_C::ExecuteUbergraph_DyeUI(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeUI_C", "ExecuteUbergraph_DyeUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeUI_C", "ExecuteUbergraph_DyeUI", FuncInfo);
 
 	Params::DyeUI_C_ExecuteUbergraph_DyeUI Parms{};
 
@@ -41,10 +39,8 @@ void UDyeUI_C::ExecuteUbergraph_DyeUI(int32 EntryPoint)
 
 void UDyeUI_C::FixConsoleIcons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeUI_C", "FixConsoleIcons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeUI_C", "FixConsoleIcons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UDyeUI_C::FixConsoleIcons()
 
 ESlateVisibility UDyeUI_C::GetVisibility_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeUI_C", "GetVisibility_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeUI_C", "GetVisibility_0", FuncInfo);
 
 	Params::DyeUI_C_GetVisibility_0 Parms{};
 
@@ -78,10 +72,8 @@ ESlateVisibility UDyeUI_C::GetVisibility_0()
 
 void UDyeUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeUI_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeUI_C", "Tick", FuncInfo);
 
 	Params::DyeUI_C_Tick Parms{};
 

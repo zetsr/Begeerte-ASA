@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void USkeletalMeshComponent_CharacterSkin_C::AddedAsPrimalItemAttachment()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SkeletalMeshComponent_CharacterSkin_C", "AddedAsPrimalItemAttachment");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SkeletalMeshComponent_CharacterSkin_C", "AddedAsPrimalItemAttachment", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void USkeletalMeshComponent_CharacterSkin_C::AddedAsPrimalItemAttachment()
 
 void USkeletalMeshComponent_CharacterSkin_C::BPOnComponentDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SkeletalMeshComponent_CharacterSkin_C", "BPOnComponentDestroyed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SkeletalMeshComponent_CharacterSkin_C", "BPOnComponentDestroyed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -42,6 +42,7 @@ public:
 	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_BPCanUseFemaleBoneModifiers;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.ExecuteUbergraph_PreviewScene_Base
 // 0x0160 (0x0160 - 0x0000)
@@ -79,6 +80,7 @@ public:
 	float                                         K2Node_SetFieldsInStruct_DepthOfFieldFocalDistance_ImplicitCast; // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_SetFieldsInStruct_DepthOfFieldFstop_ImplicitCast; // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_ExecuteUbergraph_PreviewScene_Base;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.NotifyPreviewSceneUpdated
 // 0x0004 (0x0004 - 0x0000)
@@ -87,6 +89,7 @@ struct PreviewScene_Base_C_NotifyPreviewSceneUpdated final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_NotifyPreviewSceneUpdated;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.NotifySetupPreviewScene
 // 0x0020 (0x0020 - 0x0000)
@@ -97,6 +100,7 @@ public:
 	TArray<class USceneComponent*>                ForChildComps;                                     // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	class AShooterPlayerController*               ForPC;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_NotifySetupPreviewScene;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.SetDebugLightIntensity
 // 0x0008 (0x0008 - 0x0000)
@@ -105,6 +109,7 @@ struct PreviewScene_Base_C_SetDebugLightIntensity final
 public:
 	double                                        NewIntensity;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_SetDebugLightIntensity;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.SetDebugLightRotation
 // 0x0018 (0x0018 - 0x0000)
@@ -113,6 +118,7 @@ struct PreviewScene_Base_C_SetDebugLightRotation final
 public:
 	struct FRotator                               NewRotation;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_SetDebugLightRotation;
 
 // Function PreviewScene_Base.PreviewScene_Base_C.UpdateFloorLocation
 // 0x0001 (0x0001 - 0x0000)
@@ -121,6 +127,7 @@ struct PreviewScene_Base_C_UpdateFloorLocation final
 public:
 	bool                                          IsFemale_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PreviewScene_Base_C_UpdateFloorLocation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

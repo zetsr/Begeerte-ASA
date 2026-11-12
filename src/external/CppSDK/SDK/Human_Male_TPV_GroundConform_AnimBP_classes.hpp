@@ -12,49 +12,48 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Human_Male_TPV_GroundConform_AnimBP.Human_Male_TPV_GroundConform_AnimBP_C
-// 0x0990 (0x0D60 - 0x03D0)
+// 0x0980 (0x0D30 - 0x03B0)
 class UHuman_Male_TPV_GroundConform_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03D8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E0(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03E8(0x0020)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x0408(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x04D0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0550(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0578(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x05A0(0x04E0)(ContainsInstancedReference)
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0A80(0x00B8)()
-	uint8                                         Pad_B38[0x8];                                      // 0x0B38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0B40(0x01A0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0CE0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D00(0x0020)()
-	bool                                          __CustomProperty_bHasDynamicBase__B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_IsFalling_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D21(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_Interpolate_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D22(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_Swimming_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D23(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_GroundConform_IsBeingDragged_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D24(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D25[0x3];                                      // 0x0D25(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_MeshScale_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0D28(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ground_Conform_Is_Being_Dragged;                   // 0x0D40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Swimming;                                          // 0x0D41(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ground_Conform_Interpolate;                        // 0x0D42(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ground_Conform_Is_Falling;                         // 0x0D43(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D44[0x4];                                      // 0x0D44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          AnimInstance;                                      // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasBeingDragged;                                   // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasHitTheGroundOnce;                               // 0x0D51(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasDynamicBase_;                                  // 0x0D52(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03B0(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03B8(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03C0(0x0020)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x03E0(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x04A8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0528(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0550(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x0578(0x04D8)(ContainsInstancedReference)
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0A50(0x00B8)()
+	uint8                                         Pad_B08[0x8];                                      // 0x0B08(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0B10(0x01A0)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0CB0(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0CD0(0x0020)()
+	bool                                          __CustomProperty_bHasDynamicBase__B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_IsFalling_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_Interpolate_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_Swimming_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_GroundConform_IsBeingDragged_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CF5[0x3];                                      // 0x0CF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_MeshScale_B4E411E4465178B3E5F3448ECAF8EF2E; // 0x0CF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ground_Conform_Is_Being_Dragged;                   // 0x0D10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Swimming;                                          // 0x0D11(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ground_Conform_Interpolate;                        // 0x0D12(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ground_Conform_Is_Falling;                         // 0x0D13(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D14[0x4];                                      // 0x0D14(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          AnimInstance;                                      // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasBeingDragged;                                   // 0x0D20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasHitTheGroundOnce;                               // 0x0D21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasDynamicBase_;                                  // 0x0D22(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
@@ -79,5 +78,6 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_GroundConform_AnimBP_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_Male_TPV_GroundConform_AnimBP_C;
 
 SDK_NAMESPACE_END

@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UBP_CFCoreUIModel_C final : public UCFCoreUIModel
 {
 public:
-	bool OnEventReceived_LibraryProgress(const EGameModsEvent& evt_OnEventReceived_LibraryProgress, const struct FLibraryProgress& progress_OnEventReceived_LibraryProgress, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived_LibraryProgress);
+	bool OnEventReceived_LibraryProgress(const EGameModsEvent& evt_OnEventReceived_LibraryProgress, const struct FLibraryProgress& Progress_OnEventReceived_LibraryProgress, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived_LibraryProgress);
 	bool OnEventReceived(const EGameModsEvent& evt_OnEventReceived, const TArray<struct FCFCoreMod>& InModsList_OnEventReceived, TArray<struct FInstallProgressMod>* OutModsList_OnEventReceived);
 
 public:
@@ -38,5 +38,6 @@ public:
 		return GetDefaultObjImpl<UBP_CFCoreUIModel_C>();
 	}
 };
+DUMPER7_ASSERTS_UBP_CFCoreUIModel_C;
 
 SDK_NAMESPACE_END

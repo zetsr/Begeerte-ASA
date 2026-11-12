@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // Class ImgMediaEngine.ImgMediaPlaybackComponent
-// 0x0028 (0x00F8 - 0x00D0)
+// 0x0028 (0x0120 - 0x00F8)
 class UImgMediaPlaybackComponent final : public UActorComponent
 {
 public:
-	float                                         LODBias;                                           // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D4[0x24];                                      // 0x00D4(0x0024)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         LODBias;                                           // 0x00F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x24];                                      // 0x00FC(0x0024)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UImgMediaPlaybackComponent>();
 	}
 };
+DUMPER7_ASSERTS_UImgMediaPlaybackComponent;
 
 SDK_NAMESPACE_END

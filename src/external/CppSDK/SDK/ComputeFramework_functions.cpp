@@ -16,23 +16,51 @@
 
 SDK_NAMESPACE_START
 
-// Function ComputeFramework.ComputeGraphComponent.CreateDataProviders
-// (Final, Native, Public, BlueprintCallable)
+// Function ComputeFramework.ComputeGraphComponent.GetBindingObject
+// (Native, Event, Protected, BlueprintEvent)
 // Parameters:
 // int32                                   InBindingIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          InBindingObject                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UComputeGraphComponent::CreateDataProviders(int32 InBindingIndex, class UObject* InBindingObject)
+class UObject* UComputeGraphComponent::GetBindingObject(int32 InBindingIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ComputeGraphComponent", "CreateDataProviders");
+		Func = Class->GetFunction("ComputeGraphComponent", "GetBindingObject");
 
-	Params::ComputeGraphComponent_CreateDataProviders Parms{};
+	Params::ComputeGraphComponent_GetBindingObject Parms{};
 
 	Parms.InBindingIndex = InBindingIndex;
-	Parms.InBindingObject = InBindingObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ComputeFramework.ComputeGraphComponent.InitializeProvider
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   InDataInterfaceIndex                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          InOutDataProvider                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UComputeGraphComponent::InitializeProvider(int32 InDataInterfaceIndex, class UObject* InOutDataProvider)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ComputeGraphComponent", "InitializeProvider");
+
+	Params::ComputeGraphComponent_InitializeProvider Parms{};
+
+	Parms.InDataInterfaceIndex = InDataInterfaceIndex;
+	Parms.InOutDataProvider = InOutDataProvider;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -43,27 +71,8 @@ void UComputeGraphComponent::CreateDataProviders(int32 InBindingIndex, class UOb
 }
 
 
-// Function ComputeFramework.ComputeGraphComponent.DestroyDataProviders
-// (Final, Native, Public, BlueprintCallable)
-
-void UComputeGraphComponent::DestroyDataProviders()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ComputeGraphComponent", "DestroyDataProviders");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ComputeFramework.ComputeGraphComponent.QueueExecute
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UComputeGraphComponent::QueueExecute()
 {

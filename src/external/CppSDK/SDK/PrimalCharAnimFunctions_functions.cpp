@@ -30,10 +30,8 @@ SDK_NAMESPACE_START
 
 void UPrimalCharAnimFunctions_C::UpdateGroundConformingVariables(class APrimalCharacter* PrimalCharacter, bool Has_Hit_The_Ground_Once, class UObject* __WorldContext, bool* IsBeingDragged, bool* IsSwimming, bool* IsFalling, bool* Should_Mark_Has_Hit_Ground_once, bool* Interpolate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("PrimalCharAnimFunctions_C", "UpdateGroundConformingVariables");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "PrimalCharAnimFunctions_C", "UpdateGroundConformingVariables", FuncInfo);
 
 	Params::PrimalCharAnimFunctions_C_UpdateGroundConformingVariables Parms{};
 

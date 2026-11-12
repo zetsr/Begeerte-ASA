@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_BerrySoup_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_BerrySoup_C;
 
 SDK_NAMESPACE_END

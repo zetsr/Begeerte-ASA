@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_Button_CFCore_Global_LikeDislike_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_LikeDislike_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_LikeDislike_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_Button_CFCore_Global_LikeDislike_C::Construct()
 
 void UUI_Button_CFCore_Global_LikeDislike_C::ExecuteUbergraph_UI_Button_CFCore_Global_LikeDislike(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_LikeDislike_C", "ExecuteUbergraph_UI_Button_CFCore_Global_LikeDislike");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_LikeDislike_C", "ExecuteUbergraph_UI_Button_CFCore_Global_LikeDislike", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_LikeDislike_C_ExecuteUbergraph_UI_Button_CFCore_Global_LikeDislike Parms{};
 
@@ -57,10 +53,8 @@ void UUI_Button_CFCore_Global_LikeDislike_C::ExecuteUbergraph_UI_Button_CFCore_G
 
 bool UUI_Button_CFCore_Global_LikeDislike_C::IsCurrentButtonEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_LikeDislike_C", "IsCurrentButtonEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_LikeDislike_C", "IsCurrentButtonEnabled", FuncInfo);
 
 	Params::UI_Button_CFCore_Global_LikeDislike_C_IsCurrentButtonEnabled Parms{};
 
@@ -75,10 +69,8 @@ bool UUI_Button_CFCore_Global_LikeDislike_C::IsCurrentButtonEnabled()
 
 void UUI_Button_CFCore_Global_LikeDislike_C::UpdateButtonStatus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_LikeDislike_C", "UpdateButtonStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_LikeDislike_C", "UpdateButtonStatus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -89,10 +81,8 @@ void UUI_Button_CFCore_Global_LikeDislike_C::UpdateButtonStatus()
 
 void UUI_Button_CFCore_Global_LikeDislike_C::UpdateToNewRatingAction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_CFCore_Global_LikeDislike_C", "UpdateToNewRatingAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_CFCore_Global_LikeDislike_C", "UpdateToNewRatingAction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

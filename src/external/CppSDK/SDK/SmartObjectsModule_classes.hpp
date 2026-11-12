@@ -10,481 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "SmartObjectsModule_structs.hpp"
 #include "WorldConditions_structs.hpp"
 #include "WorldConditions_classes.hpp"
+#include "Engine_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "AIModule_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "AIModule_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "PropertyBindingUtils_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class SmartObjectsModule.EnvQueryGenerator_SmartObjects
-// 0x0100 (0x0150 - 0x0050)
-class UEnvQueryGenerator_SmartObjects final : public UEnvQueryGenerator
-{
-public:
-	TSubclassOf<class UEnvQueryContext>           QueryOriginContext;                                // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              SmartObjectRequestFilter;                          // 0x0060(0x00D0)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                QueryBoxExtent;                                    // 0x0130(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bOnlyClaimable;                                    // 0x0148(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EnvQueryGenerator_SmartObjects")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EnvQueryGenerator_SmartObjects")
-	}
-	static class UEnvQueryGenerator_SmartObjects* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEnvQueryGenerator_SmartObjects>();
-	}
-};
-
-// Class SmartObjectsModule.EnvQueryItemType_SmartObject
-// 0x0000 (0x0030 - 0x0030)
-class UEnvQueryItemType_SmartObject final : public UEnvQueryItemType_VectorBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EnvQueryItemType_SmartObject")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EnvQueryItemType_SmartObject")
-	}
-	static class UEnvQueryItemType_SmartObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEnvQueryItemType_SmartObject>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectSettings
-// 0x0018 (0x0050 - 0x0038)
-class USmartObjectSettings final : public UDeveloperSettings
-{
-public:
-	ESmartObjectTagFilteringPolicy                DefaultUserTagsFilteringPolicy;                    // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESmartObjectTagMergingPolicy                  DefaultActivityTagsMergingPolicy;                  // 0x0039(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class USmartObjectWorldConditionSchema> DefaultWorldConditionSchemaClass;            // 0x0040(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldExcludePreConditionsOnDedicatedClient;      // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectSettings")
-	}
-	static class USmartObjectSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectSettings>();
-	}
-};
-
-// Class SmartObjectsModule.BlackboardKeyType_SOClaimHandle
-// 0x0020 (0x0050 - 0x0030)
-class UBlackboardKeyType_SOClaimHandle final : public UBlackboardKeyType
-{
-public:
-	struct FSmartObjectClaimHandle                Handle;                                            // 0x0030(0x0020)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlackboardKeyType_SOClaimHandle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlackboardKeyType_SOClaimHandle")
-	}
-	static class UBlackboardKeyType_SOClaimHandle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlackboardKeyType_SOClaimHandle>();
-	}
-};
-
-// Class SmartObjectsModule.GenericSmartObject
-// 0x0008 (0x0498 - 0x0490)
-class AGenericSmartObject final : public AActor
-{
-public:
-	class USmartObjectComponent*                  SOComponent;                                       // 0x0490(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GenericSmartObject")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GenericSmartObject")
-	}
-	static class AGenericSmartObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AGenericSmartObject>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class USmartObjectBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool AddMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors);
-	static bool AddOrRemoveMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors, const bool bAdd);
-	static bool AddOrRemoveSmartObject(class AActor* SmartObject, const bool bEnabled);
-	static bool AddSmartObject(class AActor* SmartObjectActor);
-	static class FString Conv_SmartObjectClaimHandleToString(const struct FSmartObjectClaimHandle& Result);
-	static class FString Conv_SmartObjectDefinitionToString(const class USmartObjectDefinition* Definition);
-	static class FString Conv_SmartObjectHandleToString(const struct FSmartObjectHandle& Handle);
-	static class FString Conv_SmartObjectRequestResultToString(const struct FSmartObjectRequestResult& Result);
-	static class FString Conv_SmartObjectSlotHandleToString(const struct FSmartObjectSlotHandle& Handle);
-	static bool Equal_SmartObjectHandleSmartObjectHandle(const struct FSmartObjectHandle& A, const struct FSmartObjectHandle& B);
-	static bool Equal_SmartObjectSlotHandleSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& A, const struct FSmartObjectSlotHandle& B);
-	static bool FindSmartObjectsInActor(const struct FSmartObjectRequestFilter& Filter, class AActor* SearchActor, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
-	static bool FindSmartObjectsInComponent(const struct FSmartObjectRequestFilter& Filter, class USmartObjectComponent* SmartObjectComponent, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
-	static bool FindSmartObjectsInList(class UObject* WorldContextObject, const struct FSmartObjectRequestFilter& Filter, const TArray<class AActor*>& ActorList, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
-	static bool FindSmartObjectsInTargetingRequest(class UObject* WorldContextObject, const struct FSmartObjectRequestFilter& Filter, const struct FTargetingRequestHandle& TargetingHandle, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
-	static struct FSmartObjectClaimHandle GetBlackboardValueAsSOClaimHandle(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key);
-	static struct FSmartObjectClaimHandle GetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName);
-	static bool IsValidSmartObjectClaimHandle(const struct FSmartObjectClaimHandle& Handle);
-	static bool IsValidSmartObjectHandle(const struct FSmartObjectHandle& Handle);
-	static bool IsValidSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& Handle);
-	static struct FSmartObjectClaimHandle MarkSmartObjectSlotAsClaimed(class UObject* WorldContextObject, const struct FSmartObjectSlotHandle& SlotHandle, const class AActor* UserActor, ESmartObjectClaimPriority ClaimPriority);
-	static bool MarkSmartObjectSlotAsFree(class UObject* WorldContextObject, const struct FSmartObjectClaimHandle& ClaimHandle);
-	static const class USmartObjectBehaviorDefinition* MarkSmartObjectSlotAsOccupied(class UObject* WorldContextObject, const struct FSmartObjectClaimHandle& ClaimHandle, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass);
-	static bool NotEqual_SmartObjectHandleSmartObjectHandle(const struct FSmartObjectHandle& A, const struct FSmartObjectHandle& B);
-	static bool NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& A, const struct FSmartObjectSlotHandle& B);
-	static bool RemoveMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors);
-	static bool RemoveSmartObject(class AActor* SmartObjectActor);
-	static void SetBlackboardValueAsSOClaimHandle(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FSmartObjectClaimHandle& Value);
-	static bool SetMultipleSmartObjectsEnabled(const TArray<class AActor*>& SmartObjectActors, const bool bEnabled);
-	static bool SetSmartObjectEnabled(class AActor* SmartObjectActor, const bool bEnabled);
-	static void SetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName, const struct FSmartObjectClaimHandle& Value);
-	static struct FSmartObjectClaimHandle SmartObjectClaimHandle_Invalid();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectBlueprintFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectBlueprintFunctionLibrary")
-	}
-	static class USmartObjectBlueprintFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectBlueprintFunctionLibrary>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectCollection
-// 0x00B0 (0x0540 - 0x0490)
-class ASmartObjectCollection final : public AActor
-{
-public:
-	struct FBox                                   Bounds;                                            // 0x0490(0x0038)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FSmartObjectCollectionEntry>    CollectionEntries;                                 // 0x04C8(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
-	TMap<struct FSmartObjectHandle, struct FSoftObjectPath> RegisteredIdToObjectMap;                 // 0x04D8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TArray<class USmartObjectDefinition*>         Definitions;                                       // 0x0528(0x0010)(Edit, ZeroConstructor, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_538[0x8];                                      // 0x0538(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectCollection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectCollection")
-	}
-	static class ASmartObjectCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASmartObjectCollection>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectComponent
-// 0x0070 (0x02F0 - 0x0280)
-class USmartObjectComponent final : public USceneComponent
-{
-public:
-	TMulticastInlineDelegate<void(const struct FSmartObjectEventData& EventData, const class AActor* Interactor)> OnSmartObjectEvent; // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_288[0x18];                                     // 0x0288(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectDefinitionReference        DefinitionRef;                                     // 0x02A0(0x0028)(Edit, Net, Protected, NativeAccessSpecifierProtected)
-	struct FSmartObjectHandle                     RegisteredHandle;                                  // 0x02C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2D0[0x10];                                     // 0x02D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bCanBePartOfCollection;                            // 0x02E0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USmartObjectDefinition*                 CachedDefinitionAssetVariation;                    // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-
-public:
-	void ReceiveOnEvent(const struct FSmartObjectEventData& EventData, const class AActor* Interactor);
-	void SetDefinition(class USmartObjectDefinition* DefinitionAsset);
-
-	const class USmartObjectDefinition* GetDefinition() const;
-	bool IsBoundToSimulation() const;
-	bool IsSmartObjectEnabled() const;
-	bool IsSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag) const;
-	bool SetSmartObjectEnabled(const bool bEnable) const;
-	bool SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectComponent")
-	}
-	static class USmartObjectComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectComponent>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectContainerRenderingComponent
-// 0x0000 (0x0620 - 0x0620)
-class USmartObjectContainerRenderingComponent final : public UPrimitiveComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectContainerRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectContainerRenderingComponent")
-	}
-	static class USmartObjectContainerRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectContainerRenderingComponent>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectDebugRenderingComponent
-// 0x0000 (0x0670 - 0x0670)
-class USmartObjectDebugRenderingComponent : public UDebugDrawComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectDebugRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectDebugRenderingComponent")
-	}
-	static class USmartObjectDebugRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectDebugRenderingComponent>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectBehaviorDefinition
-// 0x0000 (0x0028 - 0x0028)
-class USmartObjectBehaviorDefinition : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectBehaviorDefinition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectBehaviorDefinition")
-	}
-	static class USmartObjectBehaviorDefinition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectBehaviorDefinition>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectDefinition
-// 0x0110 (0x0140 - 0x0030)
-class USmartObjectDefinition final : public UDataAsset
-{
-public:
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedPropertyBag                  Parameters;                                        // 0x0040(0x0010)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FGuid                                  ParametersID;                                      // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGuid                                  RootID;                                            // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FSmartObjectDefinitionPropertyBinding> PropertyBindings;                           // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FSmartObjectSlotDefinition>     Slots;                                             // 0x0080(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<class USmartObjectBehaviorDefinition*> DefaultBehaviorDefinitions;                        // 0x0090(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	struct FGameplayTagQuery                      UserTagFilter;                                     // 0x00A0(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FWorldConditionQueryDefinition         Preconditions;                                     // 0x00E8(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FGameplayTagContainer                  ActivityTags;                                      // 0x0100(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TArray<struct FSmartObjectDefinitionDataProxy> DefinitionData;                                   // 0x0120(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	TSubclassOf<class USmartObjectWorldConditionSchema> WorldConditionSchemaClass;                   // 0x0130(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ESmartObjectTagMergingPolicy                  ActivityTagsMergingPolicy;                         // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ESmartObjectTagFilteringPolicy                UserTagsFilteringPolicy;                           // 0x0139(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FSmartObjectSlotDefinition GetMutableSlot(const int32 Index_0);
-	void SetUserTagFilter(const struct FGameplayTagQuery& InUserTagFilter);
-
-	const struct FGameplayTagContainer GetActivityTags() const;
-	struct FBox GetBounds() const;
-	void GetSlotActivityTags(const int32 SlotIndex, struct FGameplayTagContainer* OutActivityTags) const;
-	struct FTransform GetSlotWorldTransform(const int32 SlotIndex, const struct FTransform& OwnerTransform) const;
-	const struct FGameplayTagQuery GetUserTagFilter() const;
-	ESmartObjectTagFilteringPolicy GetUserTagsFilteringPolicy() const;
-	bool IsValidSlotIndex(const int32 SlotIndex) const;
-	const TArray<struct FSmartObjectSlotDefinition> K2_GetSlots() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectDefinition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectDefinition")
-	}
-	static class USmartObjectDefinition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectDefinition>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectSpacePartition
-// 0x0000 (0x0028 - 0x0028)
-class USmartObjectSpacePartition : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectSpacePartition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectSpacePartition")
-	}
-	static class USmartObjectSpacePartition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectSpacePartition>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectHashGrid
-// 0x00A8 (0x00D0 - 0x0028)
-class USmartObjectHashGrid final : public USmartObjectSpacePartition
-{
-public:
-	uint8                                         Pad_28[0xA8];                                      // 0x0028(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectHashGrid")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectHashGrid")
-	}
-	static class USmartObjectHashGrid* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectHashGrid>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectOctree
-// 0x00C8 (0x00F0 - 0x0028)
-class USmartObjectOctree final : public USmartObjectSpacePartition
-{
-public:
-	uint8                                         Pad_28[0xC8];                                      // 0x0028(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectOctree")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectOctree")
-	}
-	static class USmartObjectOctree* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectOctree>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectPersistentCollection
-// 0x00B8 (0x0548 - 0x0490)
-class ASmartObjectPersistentCollection final : public AActor
-{
-public:
-	struct FSmartObjectContainer                  SmartObjectContainer;                              // 0x0490(0x00B0)(Edit, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_540[0x8];                                      // 0x0540(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectPersistentCollection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectPersistentCollection")
-	}
-	static class ASmartObjectPersistentCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ASmartObjectPersistentCollection>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectRenderingComponent
-// 0x0000 (0x0620 - 0x0620)
-class USmartObjectRenderingComponent final : public UPrimitiveComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectRenderingComponent")
-	}
-	static class USmartObjectRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
-	}
-};
-
 // Class SmartObjectsModule.SmartObjectSubsystem
-// 0x0170 (0x01A0 - 0x0030)
+// 0x0170 (0x01A8 - 0x0038)
 class USmartObjectSubsystem final : public UWorldSubsystem
 {
 public:
-	struct FSoftClassPath                         SpacePartitionClassName;                           // 0x0030(0x0020)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class USmartObjectSpacePartition> SpacePartitionClass;                               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USmartObjectSpacePartition*             SpacePartition;                                    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class ASmartObjectSubsystemRenderingActor*    RenderingActor;                                    // 0x0060(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	struct FSmartObjectContainer                  SmartObjectContainer;                              // 0x0068(0x00B0)(Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FSmartObjectHandle, struct FSmartObjectRuntime> RuntimeSmartObjects;                 // 0x0128(0x0050)(Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class USmartObjectComponent*>          RegisteredSOComponents;                            // 0x0178(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<class USmartObjectComponent*>          PendingSmartObjectRegistration;                    // 0x0188(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSoftClassPath                         SpacePartitionClassName;                           // 0x0038(0x0020)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class USmartObjectSpacePartition> SpacePartitionClass;                               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USmartObjectSpacePartition*             SpacePartition;                                    // 0x0060(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class ASmartObjectSubsystemRenderingActor*    RenderingActor;                                    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	struct FSmartObjectContainer                  SmartObjectContainer;                              // 0x0070(0x00B0)(Transient, ContainsInstancedReference, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_120[0x10];                                     // 0x0120(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FSmartObjectHandle, struct FSmartObjectRuntime> RuntimeSmartObjects;                 // 0x0130(0x0050)(Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class USmartObjectComponent*>          RegisteredSOComponents;                            // 0x0180(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class USmartObjectComponent*>          PendingSmartObjectRegistration;                    // 0x0190(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_1A0[0x8];                                      // 0x01A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddTagToInstance(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& Tag);
@@ -527,47 +81,106 @@ public:
 		return GetDefaultObjImpl<USmartObjectSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectSubsystem;
 
-// Class SmartObjectsModule.SmartObjectSubsystemRenderingComponent
-// 0x0000 (0x0670 - 0x0670)
-class USmartObjectSubsystemRenderingComponent final : public USmartObjectDebugRenderingComponent
+// Class SmartObjectsModule.SmartObjectSettings
+// 0x0018 (0x0050 - 0x0038)
+class USmartObjectSettings final : public UDeveloperSettings
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectSubsystemRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectSubsystemRenderingComponent")
-	}
-	static class USmartObjectSubsystemRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectSubsystemRenderingComponent>();
-	}
-};
-
-// Class SmartObjectsModule.SmartObjectSubsystemRenderingActor
-// 0x0008 (0x0498 - 0x0490)
-class ASmartObjectSubsystemRenderingActor final : public AActor
-{
-public:
-	class USmartObjectSubsystemRenderingComponent* RenderingComponent;                               // 0x0490(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	ESmartObjectTagFilteringPolicy                DefaultUserTagsFilteringPolicy;                    // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESmartObjectTagMergingPolicy                  DefaultActivityTagsMergingPolicy;                  // 0x0039(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class USmartObjectWorldConditionSchema> DefaultWorldConditionSchemaClass;            // 0x0040(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldExcludePreConditionsOnDedicatedClient;      // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SmartObjectSubsystemRenderingActor")
+		STATIC_CLASS_IMPL("SmartObjectSettings")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SmartObjectSubsystemRenderingActor")
+		STATIC_NAME_IMPL(L"SmartObjectSettings")
 	}
-	static class ASmartObjectSubsystemRenderingActor* GetDefaultObj()
+	static class USmartObjectSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ASmartObjectSubsystemRenderingActor>();
+		return GetDefaultObjImpl<USmartObjectSettings>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectSettings;
+
+// Class SmartObjectsModule.BlackboardKeyType_SOClaimHandle
+// 0x0028 (0x0058 - 0x0030)
+class UBlackboardKeyType_SOClaimHandle final : public UBlackboardKeyType
+{
+public:
+	struct FSmartObjectClaimHandle                Handle;                                            // 0x0030(0x0028)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlackboardKeyType_SOClaimHandle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlackboardKeyType_SOClaimHandle")
+	}
+	static class UBlackboardKeyType_SOClaimHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlackboardKeyType_SOClaimHandle>();
+	}
+};
+DUMPER7_ASSERTS_UBlackboardKeyType_SOClaimHandle;
+
+// Class SmartObjectsModule.EnvQueryGenerator_SmartObjects
+// 0x00F0 (0x0140 - 0x0050)
+class UEnvQueryGenerator_SmartObjects final : public UEnvQueryGenerator
+{
+public:
+	TSubclassOf<class UEnvQueryContext>           QueryOriginContext;                                // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              SmartObjectRequestFilter;                          // 0x0060(0x00C0)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                QueryBoxExtent;                                    // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bOnlyClaimable;                                    // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EnvQueryGenerator_SmartObjects")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EnvQueryGenerator_SmartObjects")
+	}
+	static class UEnvQueryGenerator_SmartObjects* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEnvQueryGenerator_SmartObjects>();
+	}
+};
+DUMPER7_ASSERTS_UEnvQueryGenerator_SmartObjects;
+
+// Class SmartObjectsModule.EnvQueryItemType_SmartObject
+// 0x0000 (0x0030 - 0x0030)
+class UEnvQueryItemType_SmartObject final : public UEnvQueryItemType_VectorBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EnvQueryItemType_SmartObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EnvQueryItemType_SmartObject")
+	}
+	static class UEnvQueryItemType_SmartObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEnvQueryItemType_SmartObject>();
+	}
+};
+DUMPER7_ASSERTS_UEnvQueryItemType_SmartObject;
 
 // Class SmartObjectsModule.SmartObjectTest
 // 0x0008 (0x0030 - 0x0028)
@@ -590,14 +203,15 @@ public:
 		return GetDefaultObjImpl<USmartObjectTest>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectTest;
 
 // Class SmartObjectsModule.SmartObjectSimpleQueryTest
-// 0x0120 (0x0150 - 0x0030)
+// 0x0110 (0x0140 - 0x0030)
 class USmartObjectSimpleQueryTest final : public USmartObjectTest
 {
 public:
-	struct FSmartObjectRequest                    Request;                                           // 0x0030(0x0110)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FSmartObjectRequestResult>      Results;                                           // 0x0140(0x0010)(Edit, ZeroConstructor, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	struct FSmartObjectRequest                    Request;                                           // 0x0030(0x0100)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FSmartObjectRequestResult>      Results;                                           // 0x0130(0x0010)(Edit, ZeroConstructor, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -613,9 +227,448 @@ public:
 		return GetDefaultObjImpl<USmartObjectSimpleQueryTest>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectSimpleQueryTest;
+
+// Class SmartObjectsModule.GenericSmartObject
+// 0x0008 (0x04A0 - 0x0498)
+class AGenericSmartObject final : public AActor
+{
+public:
+	class USmartObjectComponent*                  SOComponent;                                       // 0x0498(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoClear, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GenericSmartObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GenericSmartObject")
+	}
+	static class AGenericSmartObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGenericSmartObject>();
+	}
+};
+DUMPER7_ASSERTS_AGenericSmartObject;
+
+// Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class USmartObjectBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool AddMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors);
+	static bool AddOrRemoveMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors, const bool bAdd);
+	static bool AddOrRemoveSmartObject(class AActor* SmartObject, const bool bEnabled);
+	static bool AddSmartObject(class AActor* SmartObjectActor);
+	static class FString Conv_SmartObjectClaimHandleToString(const struct FSmartObjectClaimHandle& Result);
+	static class FString Conv_SmartObjectDefinitionToString(const class USmartObjectDefinition* Definition);
+	static class FString Conv_SmartObjectHandleToString(const struct FSmartObjectHandle& Handle);
+	static class FString Conv_SmartObjectRequestResultToString(const struct FSmartObjectRequestResult& Result);
+	static class FString Conv_SmartObjectSlotHandleToString(const struct FSmartObjectSlotHandle& Handle);
+	static bool Equal_SmartObjectHandleSmartObjectHandle(const struct FSmartObjectHandle& A, const struct FSmartObjectHandle& B);
+	static bool Equal_SmartObjectSlotHandleSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& A, const struct FSmartObjectSlotHandle& B);
+	static bool FindSmartObjectsInActor(const struct FSmartObjectRequestFilter& Filter, class AActor* SearchActor, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
+	static bool FindSmartObjectsInComponent(const struct FSmartObjectRequestFilter& Filter, class USmartObjectComponent* SmartObjectComponent, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
+	static bool FindSmartObjectsInList(class UObject* WorldContextObject, const struct FSmartObjectRequestFilter& Filter, const TArray<class AActor*>& ActorList, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
+	static bool FindSmartObjectsInTargetingRequest(class UObject* WorldContextObject, const struct FSmartObjectRequestFilter& Filter, const struct FTargetingRequestHandle& TargetingHandle, TArray<struct FSmartObjectRequestResult>* OutResults, const class AActor* UserActor);
+	static struct FSmartObjectClaimHandle GetBlackboardValueAsSOClaimHandle(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key);
+	static int32 GetNumSlotEntrances(const class USmartObjectDefinition* Definition, int32 SlotIndex);
+	static bool GetSlotDefinitionDataByType(const class USmartObjectDefinition* Definition, int32 SlotIndex, TArray<int32>* OutDefinitionData);
+	static bool GetSlotEntranceOffsetAndRotation(const class USmartObjectDefinition* Definition, int32 SlotIndex, int32 EntranceIndex, struct FVector* OutOffset, struct FRotator* OutRotation);
+	static bool GetSlotEntranceTransform(const class USmartObjectDefinition* Definition, int32 SlotIndex, int32 EntranceIndex, struct FTransform* OutTransform);
+	static struct FSmartObjectClaimHandle GetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName);
+	static bool IsValidSmartObjectClaimHandle(const struct FSmartObjectClaimHandle& Handle);
+	static bool IsValidSmartObjectHandle(const struct FSmartObjectHandle& Handle);
+	static bool IsValidSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& Handle);
+	static struct FSmartObjectClaimHandle MarkSmartObjectSlotAsClaimed(class UObject* WorldContextObject, const struct FSmartObjectSlotHandle& SlotHandle, const class AActor* UserActor, ESmartObjectClaimPriority ClaimPriority);
+	static bool MarkSmartObjectSlotAsFree(class UObject* WorldContextObject, const struct FSmartObjectClaimHandle& ClaimHandle);
+	static const class USmartObjectBehaviorDefinition* MarkSmartObjectSlotAsOccupied(class UObject* WorldContextObject, const struct FSmartObjectClaimHandle& ClaimHandle, TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass);
+	static bool NotEqual_SmartObjectHandleSmartObjectHandle(const struct FSmartObjectHandle& A, const struct FSmartObjectHandle& B);
+	static bool NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& A, const struct FSmartObjectSlotHandle& B);
+	static bool RemoveMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors);
+	static bool RemoveSmartObject(class AActor* SmartObjectActor);
+	static void SetBlackboardValueAsSOClaimHandle(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FSmartObjectClaimHandle& Value);
+	static bool SetMultipleSmartObjectsEnabled(const TArray<class AActor*>& SmartObjectActors, const bool bEnabled);
+	static bool SetSmartObjectEnabled(class AActor* SmartObjectActor, const bool bEnabled);
+	static void SetValueAsSOClaimHandle(class UBlackboardComponent* BlackboardComponent, const class FName& KeyName, const struct FSmartObjectClaimHandle& Value);
+	static struct FSmartObjectClaimHandle SmartObjectClaimHandle_Invalid();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectBlueprintFunctionLibrary")
+	}
+	static class USmartObjectBlueprintFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectBlueprintFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectBlueprintFunctionLibrary;
+
+// Class SmartObjectsModule.SmartObjectCollection
+// 0x00B0 (0x0548 - 0x0498)
+class ASmartObjectCollection final : public AActor
+{
+public:
+	struct FBox                                   Bounds;                                            // 0x0498(0x0038)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FSmartObjectCollectionEntry>    CollectionEntries;                                 // 0x04D0(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
+	TMap<struct FSmartObjectHandle, struct FSoftObjectPath> RegisteredIdToObjectMap;                 // 0x04E0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TArray<class USmartObjectDefinition*>         Definitions;                                       // 0x0530(0x0010)(Edit, ZeroConstructor, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_540[0x8];                                      // 0x0540(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectCollection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectCollection")
+	}
+	static class ASmartObjectCollection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASmartObjectCollection>();
+	}
+};
+DUMPER7_ASSERTS_ASmartObjectCollection;
+
+// Class SmartObjectsModule.SmartObjectDebugRenderingComponent
+// 0x0000 (0x0710 - 0x0710)
+class USmartObjectDebugRenderingComponent : public UDebugDrawComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectDebugRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectDebugRenderingComponent")
+	}
+	static class USmartObjectDebugRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectDebugRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectDebugRenderingComponent;
+
+// Class SmartObjectsModule.SmartObjectSubsystemRenderingComponent
+// 0x0000 (0x0710 - 0x0710)
+class USmartObjectSubsystemRenderingComponent final : public USmartObjectDebugRenderingComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectSubsystemRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectSubsystemRenderingComponent")
+	}
+	static class USmartObjectSubsystemRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectSubsystemRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectSubsystemRenderingComponent;
+
+// Class SmartObjectsModule.SmartObjectComponent
+// 0x0080 (0x0320 - 0x02A0)
+class USmartObjectComponent final : public USceneComponent
+{
+public:
+	TMulticastInlineDelegate<void(const struct FSmartObjectEventData& EventData, const class AActor* Interactor)> OnSmartObjectEvent; // 0x0298(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2A8[0x18];                                     // 0x02A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  ComponentGUID;                                     // 0x02C0(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FSmartObjectDefinitionReference        DefinitionRef;                                     // 0x02D0(0x0028)(Edit, Net, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FSmartObjectHandle                     RegisteredHandle;                                  // 0x02F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, Net, Transient, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_308[0x9];                                      // 0x0308(0x0009)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bCanBePartOfCollection;                            // 0x0311(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_312[0x6];                                      // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USmartObjectDefinition*                 CachedDefinitionAssetVariation;                    // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	void ReceiveOnEvent(const struct FSmartObjectEventData& EventData, const class AActor* Interactor);
+	void SetDefinition(class USmartObjectDefinition* DefinitionAsset);
+
+	const class USmartObjectDefinition* GetDefinition() const;
+	bool IsBoundToSimulation() const;
+	bool IsSmartObjectEnabled() const;
+	bool IsSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag) const;
+	bool K2_SetSmartObjectEnabled(const bool bEnable) const;
+	bool K2_SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const;
+	bool SetSmartObjectEnabled(const bool bEnable) const;
+	bool SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectComponent")
+	}
+	static class USmartObjectComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectComponent;
+
+// Class SmartObjectsModule.SmartObjectUserComponent
+// 0x0008 (0x0100 - 0x00F8)
+class USmartObjectUserComponent final : public UActorComponent
+{
+public:
+	TSubclassOf<class USmartObjectSlotValidationFilter> ValidationFilter;                            // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectUserComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectUserComponent")
+	}
+	static class USmartObjectUserComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectUserComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectUserComponent;
+
+// Class SmartObjectsModule.SmartObjectContainerRenderingComponent
+// 0x0000 (0x06B0 - 0x06B0)
+class USmartObjectContainerRenderingComponent final : public UPrimitiveComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectContainerRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectContainerRenderingComponent")
+	}
+	static class USmartObjectContainerRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectContainerRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectContainerRenderingComponent;
+
+// Class SmartObjectsModule.SmartObjectBehaviorDefinition
+// 0x0000 (0x0028 - 0x0028)
+class USmartObjectBehaviorDefinition : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectBehaviorDefinition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectBehaviorDefinition")
+	}
+	static class USmartObjectBehaviorDefinition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectBehaviorDefinition>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectBehaviorDefinition;
+
+// Class SmartObjectsModule.SmartObjectDefinition
+// 0x01F8 (0x0220 - 0x0028)
+class USmartObjectDefinition final : public UDataAsset, public IPropertyBindingBindingCollectionOwner
+{
+public:
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedPropertyBag                  Parameters;                                        // 0x0040(0x0010)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FGuid                                  ParametersID;                                      // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  RootID;                                            // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FSmartObjectBindingCollection          BindingCollection;                                 // 0x0070(0x00E0)(Edit, EditConst, AdvancedDisplay, NativeAccessSpecifierPrivate)
+	TArray<struct FSmartObjectSlotDefinition>     Slots;                                             // 0x0150(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TArray<class USmartObjectBehaviorDefinition*> DefaultBehaviorDefinitions;                        // 0x0160(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FGameplayTagQuery                      UserTagFilter;                                     // 0x0170(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FWorldConditionQueryDefinition         Preconditions;                                     // 0x01B8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FGameplayTagContainer                  ActivityTags;                                      // 0x01E0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TArray<struct FSmartObjectDefinitionDataProxy> DefinitionData;                                   // 0x0200(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	TSubclassOf<class USmartObjectWorldConditionSchema> WorldConditionSchemaClass;                   // 0x0210(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ESmartObjectTagMergingPolicy                  ActivityTagsMergingPolicy;                         // 0x0218(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ESmartObjectTagFilteringPolicy                UserTagsFilteringPolicy;                           // 0x0219(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_21A[0x6];                                      // 0x021A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FSmartObjectSlotDefinition GetMutableSlot(const int32 Index_0);
+	void SetUserTagFilter(const struct FGameplayTagQuery& InUserTagFilter);
+
+	const struct FGameplayTagContainer GetActivityTags() const;
+	struct FBox GetBounds() const;
+	void GetSlotActivityTags(const int32 SlotIndex, struct FGameplayTagContainer* OutActivityTags) const;
+	struct FTransform GetSlotWorldTransform(const int32 SlotIndex, const struct FTransform& OwnerTransform) const;
+	const struct FGameplayTagQuery GetUserTagFilter() const;
+	ESmartObjectTagFilteringPolicy GetUserTagsFilteringPolicy() const;
+	bool IsValidSlotIndex(const int32 SlotIndex) const;
+	const TArray<struct FSmartObjectSlotDefinition> K2_GetSlots() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectDefinition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectDefinition")
+	}
+	static class USmartObjectDefinition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectDefinition>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectDefinition;
+
+// Class SmartObjectsModule.SmartObjectSpacePartition
+// 0x0000 (0x0028 - 0x0028)
+class USmartObjectSpacePartition : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectSpacePartition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectSpacePartition")
+	}
+	static class USmartObjectSpacePartition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectSpacePartition>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectSpacePartition;
+
+// Class SmartObjectsModule.SmartObjectHashGrid
+// 0x00A8 (0x00D0 - 0x0028)
+class USmartObjectHashGrid final : public USmartObjectSpacePartition
+{
+public:
+	uint8                                         Pad_28[0xA8];                                      // 0x0028(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectHashGrid")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectHashGrid")
+	}
+	static class USmartObjectHashGrid* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectHashGrid>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectHashGrid;
+
+// Class SmartObjectsModule.SmartObjectOctree
+// 0x00C8 (0x00F0 - 0x0028)
+class USmartObjectOctree final : public USmartObjectSpacePartition
+{
+public:
+	uint8                                         Pad_28[0xC8];                                      // 0x0028(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectOctree")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectOctree")
+	}
+	static class USmartObjectOctree* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectOctree>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectOctree;
+
+// Class SmartObjectsModule.SmartObjectPersistentCollection
+// 0x00B8 (0x0550 - 0x0498)
+class ASmartObjectPersistentCollection final : public AActor
+{
+public:
+	struct FSmartObjectContainer                  SmartObjectContainer;                              // 0x0498(0x00B0)(Edit, EditConst, ContainsInstancedReference, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_548[0x8];                                      // 0x0548(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectPersistentCollection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectPersistentCollection")
+	}
+	static class ASmartObjectPersistentCollection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASmartObjectPersistentCollection>();
+	}
+};
+DUMPER7_ASSERTS_ASmartObjectPersistentCollection;
+
+// Class SmartObjectsModule.SmartObjectRenderingComponent
+// 0x0000 (0x06B0 - 0x06B0)
+class USmartObjectRenderingComponent final : public UPrimitiveComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectRenderingComponent")
+	}
+	static class USmartObjectRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectRenderingComponent;
+
+// Class SmartObjectsModule.SmartObjectSubsystemRenderingActor
+// 0x0008 (0x04A0 - 0x0498)
+class ASmartObjectSubsystemRenderingActor final : public AActor
+{
+public:
+	class USmartObjectSubsystemRenderingComponent* RenderingComponent;                               // 0x0498(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectSubsystemRenderingActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectSubsystemRenderingActor")
+	}
+	static class ASmartObjectSubsystemRenderingActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ASmartObjectSubsystemRenderingActor>();
+	}
+};
+DUMPER7_ASSERTS_ASmartObjectSubsystemRenderingActor;
 
 // Class SmartObjectsModule.SmartObjectTestRenderingComponent
-// 0x0000 (0x0670 - 0x0670)
+// 0x0000 (0x0710 - 0x0710)
 class USmartObjectTestRenderingComponent final : public USmartObjectDebugRenderingComponent
 {
 public:
@@ -632,17 +685,18 @@ public:
 		return GetDefaultObjImpl<USmartObjectTestRenderingComponent>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectTestRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectTestingActor
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x04C0 - 0x0498)
 class ASmartObjectTestingActor final : public AActor
 {
 public:
-	TArray<class USmartObjectTest*>               Tests;                                             // 0x0490(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USmartObjectTestRenderingComponent*     RenderingComponent;                                // 0x04A0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class USmartObjectSubsystem*                  SmartObjectSubsystem;                              // 0x04A8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	bool                                          bRunTestsEachFrame;                                // 0x04B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class USmartObjectTest*>               Tests;                                             // 0x0498(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class USmartObjectTestRenderingComponent*     RenderingComponent;                                // 0x04A8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class USmartObjectSubsystem*                  SmartObjectSubsystem;                              // 0x04B0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	bool                                          bRunTestsEachFrame;                                // 0x04B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ResetTests();
@@ -662,6 +716,7 @@ public:
 		return GetDefaultObjImpl<ASmartObjectTestingActor>();
 	}
 };
+DUMPER7_ASSERTS_ASmartObjectTestingActor;
 
 // Class SmartObjectsModule.SmartObjectSlotValidationFilter
 // 0x0108 (0x0130 - 0x0028)
@@ -687,28 +742,7 @@ public:
 		return GetDefaultObjImpl<USmartObjectSlotValidationFilter>();
 	}
 };
-
-// Class SmartObjectsModule.SmartObjectUserComponent
-// 0x0008 (0x00D8 - 0x00D0)
-class USmartObjectUserComponent final : public UActorComponent
-{
-public:
-	TSubclassOf<class USmartObjectSlotValidationFilter> ValidationFilter;                            // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectUserComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectUserComponent")
-	}
-	static class USmartObjectUserComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectUserComponent>();
-	}
-};
+DUMPER7_ASSERTS_USmartObjectSlotValidationFilter;
 
 // Class SmartObjectsModule.SmartObjectWorldConditionSchema
 // 0x0040 (0x0078 - 0x0038)
@@ -731,5 +765,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectWorldConditionSchema>();
 	}
 };
+DUMPER7_ASSERTS_USmartObjectWorldConditionSchema;
 
 SDK_NAMESPACE_END

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponGun_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponGun_C;
 
 SDK_NAMESPACE_END

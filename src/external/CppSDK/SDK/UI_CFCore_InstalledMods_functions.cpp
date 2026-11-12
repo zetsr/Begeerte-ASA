@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_InstalledMods_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_InstalledMods_C::Construct()
 
 void UUI_CFCore_InstalledMods_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_InstalledMods_C::Destruct()
 
 void UUI_CFCore_InstalledMods_C::ExecuteUbergraph_UI_CFCore_InstalledMods(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "ExecuteUbergraph_UI_CFCore_InstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "ExecuteUbergraph_UI_CFCore_InstalledMods", FuncInfo);
 
 	Params::UI_CFCore_InstalledMods_C_ExecuteUbergraph_UI_CFCore_InstalledMods Parms{};
 
@@ -72,10 +66,8 @@ void UUI_CFCore_InstalledMods_C::ExecuteUbergraph_UI_CFCore_InstalledMods(int32 
 
 void UUI_CFCore_InstalledMods_C::FilterOutNonInstalling(const TArray<struct FInstallProgressMod>& Full_list, TArray<struct FInstallProgressMod>* FilteredList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "FilterOutNonInstalling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "FilterOutNonInstalling", FuncInfo);
 
 	Params::UI_CFCore_InstalledMods_C_FilterOutNonInstalling Parms{};
 
@@ -93,10 +85,8 @@ void UUI_CFCore_InstalledMods_C::FilterOutNonInstalling(const TArray<struct FIns
 
 void UUI_CFCore_InstalledMods_C::GetMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "GetMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "GetMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +102,8 @@ void UUI_CFCore_InstalledMods_C::GetMods()
 
 bool UUI_CFCore_InstalledMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_InstalledMods_C_OnEventBroadcasted Parms{};
 
@@ -134,10 +122,8 @@ bool UUI_CFCore_InstalledMods_C::OnEventBroadcasted(EGameModsEvent evt, const TA
 
 void UUI_CFCore_InstalledMods_C::PullModsFromAPI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "PullModsFromAPI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "PullModsFromAPI", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +134,8 @@ void UUI_CFCore_InstalledMods_C::PullModsFromAPI()
 
 void UUI_CFCore_InstalledMods_C::UninstallAllinstalledMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "UninstallAllinstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "UninstallAllinstalledMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -162,10 +146,8 @@ void UUI_CFCore_InstalledMods_C::UninstallAllinstalledMods()
 
 void UUI_CFCore_InstalledMods_C::UpdateAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "UpdateAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "UpdateAllMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +158,8 @@ void UUI_CFCore_InstalledMods_C::UpdateAllMods()
 
 void UUI_CFCore_InstalledMods_C::UpdatePageAfterUninstallAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_InstalledMods_C", "UpdatePageAfterUninstallAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_InstalledMods_C", "UpdatePageAfterUninstallAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -516,14 +516,14 @@ class UUniformScalar* UUniformScalar::SetUniformScalar(float Magnitude_0)
 // Parameters:
 // float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   position_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Wavelength_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   WaveLength_0                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Period_0                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EWaveFunctionType                       Function_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EFieldFalloffType                       Falloff_0                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWaveScalar*                      ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FVector& position_0, float Wavelength_0, float Period_0, float Time, EWaveFunctionType Function_0, EFieldFalloffType Falloff_0)
+class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FVector& position_0, float WaveLength_0, float Period_0, float Time, EWaveFunctionType Function_0, EFieldFalloffType Falloff_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -534,7 +534,7 @@ class UWaveScalar* UWaveScalar::SetWaveScalar(float Magnitude_0, const struct FV
 
 	Parms.Magnitude_0 = Magnitude_0;
 	Parms.position_0 = std::move(position_0);
-	Parms.Wavelength_0 = Wavelength_0;
+	Parms.WaveLength_0 = WaveLength_0;
 	Parms.Period_0 = Period_0;
 	Parms.Time = Time;
 	Parms.Function_0 = Function_0;
@@ -751,6 +751,40 @@ class URadialVector* URadialVector::SetRadialVector(float Magnitude_0, const str
 
 	Parms.Magnitude_0 = Magnitude_0;
 	Parms.position_0 = std::move(position_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function FieldSystemEngine.RotatedRadialVector.SetRotatedRadialVector
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Magnitude_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   position_0                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Angle_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Axis_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class URotatedRadialVector*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class URotatedRadialVector* URotatedRadialVector::SetRotatedRadialVector(float Magnitude_0, const struct FVector& position_0, float Angle_0, const struct FVector& Axis_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RotatedRadialVector", "SetRotatedRadialVector");
+
+	Params::RotatedRadialVector_SetRotatedRadialVector Parms{};
+
+	Parms.Magnitude_0 = Magnitude_0;
+	Parms.position_0 = std::move(position_0);
+	Parms.Angle_0 = Angle_0;
+	Parms.Axis_0 = std::move(Axis_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

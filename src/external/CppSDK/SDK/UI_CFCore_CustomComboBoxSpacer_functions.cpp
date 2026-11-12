@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CustomComboBoxSpacer_C::ExecuteUbergraph_UI_CFCore_CustomComboBoxSpacer(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBoxSpacer_C", "ExecuteUbergraph_UI_CFCore_CustomComboBoxSpacer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBoxSpacer_C", "ExecuteUbergraph_UI_CFCore_CustomComboBoxSpacer", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBoxSpacer_C_ExecuteUbergraph_UI_CFCore_CustomComboBoxSpacer Parms{};
 
@@ -43,10 +41,8 @@ void UUI_CFCore_CustomComboBoxSpacer_C::ExecuteUbergraph_UI_CFCore_CustomComboBo
 
 void UUI_CFCore_CustomComboBoxSpacer_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBoxSpacer_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBoxSpacer_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBoxSpacer_C_GetRootCFWidget Parms{};
 
@@ -64,10 +60,8 @@ void UUI_CFCore_CustomComboBoxSpacer_C::GetRootCFWidget(class UPanelWidget** Roo
 
 void UUI_CFCore_CustomComboBoxSpacer_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBoxSpacer_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBoxSpacer_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBoxSpacer_C_PreConstruct Parms{};
 

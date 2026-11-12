@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_Button_CFCore_Global_Install.UI_Button_CFCore_Global_Install_C
-// 0x0000 (0x0B00 - 0x0B00)
+// 0x0000 (0x0B60 - 0x0B60)
 class UUI_Button_CFCore_Global_Install_C final : public UUI_Button_CFCore_Global_Master_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UUI_Button_CFCore_Global_Install_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_Button_CFCore_Global_Install_C;
 
 SDK_NAMESPACE_END

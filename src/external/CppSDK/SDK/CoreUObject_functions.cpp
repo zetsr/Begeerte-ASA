@@ -156,6 +156,107 @@ void UObject::ExecuteUbergraph(int32 EntryPoint)
 }
 
 
+// Function CoreUObject.WeakObjectPtrTest.InOutWeakPtr
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// TWeakObjectPtr<class UObject>*          InOutWeakPtr_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWeakObjectPtrTest::InOutWeakPtr(TWeakObjectPtr<class UObject>* InOutWeakPtr_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakObjectPtrTest", "InOutWeakPtr");
+
+	Params::WeakObjectPtrTest_InOutWeakPtr Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (InOutWeakPtr_0 != nullptr)
+		*InOutWeakPtr_0 = Parms.InOutWeakPtr_0;
+}
+
+
+// Function CoreUObject.WeakObjectPtrTest.InputRefWeakPtr
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const TWeakObjectPtr<class UObject>&    InWeakPtr                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWeakObjectPtrTest::InputRefWeakPtr(const TWeakObjectPtr<class UObject>& InWeakPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakObjectPtrTest", "InputRefWeakPtr");
+
+	Params::WeakObjectPtrTest_InputRefWeakPtr Parms{};
+
+	Parms.InWeakPtr = InWeakPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CoreUObject.WeakObjectPtrTest.InputValWeakPtr
+// (Final, Native, Public)
+// Parameters:
+// TWeakObjectPtr<class UObject>           InWeakPtr                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWeakObjectPtrTest::InputValWeakPtr(TWeakObjectPtr<class UObject> InWeakPtr)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakObjectPtrTest", "InputValWeakPtr");
+
+	Params::WeakObjectPtrTest_InputValWeakPtr Parms{};
+
+	Parms.InWeakPtr = InWeakPtr;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CoreUObject.WeakObjectPtrTest.ReturnWeakPtr
+// (Final, Native, Public)
+// Parameters:
+// TWeakObjectPtr<class UObject>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TWeakObjectPtr<class UObject> UWeakObjectPtrTest::ReturnWeakPtr()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WeakObjectPtrTest", "ReturnWeakPtr");
+
+	Params::WeakObjectPtrTest_ReturnWeakPtr Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Predefined Function
 // Checks if this class has a certain base
 

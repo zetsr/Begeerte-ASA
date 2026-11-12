@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UGetRandomFleePoint_TK_C::ExecuteUbergraph_GetRandomFleePoint_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GetRandomFleePoint_TK_C", "ExecuteUbergraph_GetRandomFleePoint_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GetRandomFleePoint_TK_C", "ExecuteUbergraph_GetRandomFleePoint_TK", FuncInfo);
 
 	Params::GetRandomFleePoint_TK_C_ExecuteUbergraph_GetRandomFleePoint_TK Parms{};
 
@@ -43,10 +41,8 @@ void UGetRandomFleePoint_TK_C::ExecuteUbergraph_GetRandomFleePoint_TK(int32 Entr
 
 void UGetRandomFleePoint_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GetRandomFleePoint_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GetRandomFleePoint_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::GetRandomFleePoint_TK_C_ReceiveExecute Parms{};
 

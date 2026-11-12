@@ -10,28 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+
 
 SDK_NAMESPACE_START
-
-// Enum MediaAssets.MediaTextureOutputFormat
-// NumValues: 0x0003
-enum class EMediaTextureOutputFormat : uint8
-{
-	MTOF_Default                             = 0,
-	MTOF_SRGB_LINOUT                         = 1,
-	MTOF_MAX                                 = 2,
-};
-
-// Enum MediaAssets.MediaTextureOrientation
-// NumValues: 0x0005
-enum class EMediaTextureOrientation : uint8
-{
-	MTORI_Original                           = 0,
-	MTORI_CW90                               = 1,
-	MTORI_CW180                              = 2,
-	MTORI_CW270                              = 3,
-	MTORI_MAX                                = 4,
-};
 
 // Enum MediaAssets.EMediaPlayerTrack
 // NumValues: 0x0008
@@ -77,6 +60,17 @@ enum class EMediaSoundComponentFFTSize : uint8
 	EMediaSoundComponentFFTSize_MAX          = 4,
 };
 
+// Enum MediaAssets.MediaTextureOrientation
+// NumValues: 0x0005
+enum class EMediaTextureOrientation : uint8
+{
+	MTORI_Original                           = 0,
+	MTORI_CW90                               = 1,
+	MTORI_CW180                              = 2,
+	MTORI_CW270                              = 3,
+	MTORI_MAX                                = 4,
+};
+
 // Enum MediaAssets.EMediaTextureVisibleMipsTiles
 // NumValues: 0x0004
 enum class EMediaTextureVisibleMipsTiles : uint8
@@ -85,6 +79,30 @@ enum class EMediaTextureVisibleMipsTiles : uint8
 	Plane                                    = 1,
 	Sphere                                   = 2,
 	EMediaTextureVisibleMipsTiles_MAX        = 3,
+};
+
+// Enum MediaAssets.EMediaSourceEncoding
+// NumValues: 0x0007
+enum class EMediaSourceEncoding : uint8
+{
+	MSE_None                                 = 0,
+	MSE_Linear                               = 1,
+	MSE_sRGB                                 = 2,
+	MSE_ST2084                               = 3,
+	MSE_SLog3                                = 12,
+	MSE_HLG                                  = 17,
+	MSE_MAX                                  = 18,
+};
+
+// Enum MediaAssets.EMediaReferenceWhite
+// NumValues: 0x0005
+enum class EMediaReferenceWhite : uint8
+{
+	MRW_None                                 = 0,
+	MRW_DisableNormalization                 = 1,
+	MRW_BT2408                               = 2,
+	MRW_BT1886                               = 3,
+	MRW_MAX                                  = 4,
 };
 
 // Enum MediaAssets.EMediaAudioCaptureDeviceFilter
@@ -133,6 +151,7 @@ public:
 	class FString                                 StringData;                                        // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 BinaryData;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaMetadataItemBPT;
 
 // ScriptStruct MediaAssets.MediaMetadataItemsBPT
 // 0x0010 (0x0010 - 0x0000)
@@ -141,6 +160,7 @@ struct FMediaMetadataItemsBPT final
 public:
 	TArray<struct FMediaMetadataItemBPT>          Items;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaMetadataItemsBPT;
 
 // ScriptStruct MediaAssets.MediaSoundComponentSpectralData
 // 0x0008 (0x0008 - 0x0000)
@@ -150,6 +170,7 @@ public:
 	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaSoundComponentSpectralData;
 
 // ScriptStruct MediaAssets.MediaSourceCacheSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -160,6 +181,25 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeToLookAhead;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaSourceCacheSettings;
+
+// ScriptStruct MediaAssets.MediaSourceColorSettings
+// 0x0050 (0x0050 - 0x0000)
+struct FMediaSourceColorSettings final
+{
+public:
+	EMediaSourceEncoding                          EncodingOverride;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureColorSpace                            ColorSpaceOverride;                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              RedChromaticityCoordinate;                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              GreenChromaticityCoordinate;                       // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              BlueChromaticityCoordinate;                        // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              WhiteChromaticityCoordinate;                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureChromaticAdaptationMethod             ChromaticAdaptationMethod;                         // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaReferenceWhite                          ReferenceWhiteOverride;                            // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMediaSourceColorSettings;
 
 // ScriptStruct MediaAssets.MediaCaptureDevice
 // 0x0020 (0x0020 - 0x0000)
@@ -169,5 +209,6 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
 	class FString                                 URL;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaCaptureDevice;
 
 SDK_NAMESPACE_END

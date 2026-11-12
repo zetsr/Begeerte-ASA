@@ -13,18 +13,8 @@
 
 SDK_NAMESPACE_START
 
-// Enum MediaPlate.EMediaPlateResourceType
-// NumValues: 0x0004
-enum class EMediaPlateResourceType : uint8
-{
-	Playlist                                 = 0,
-	External                                 = 1,
-	Asset                                    = 2,
-	EMediaPlateResourceType_MAX              = 3,
-};
-
 // Enum MediaPlate.EMediaPlateEventState
-// NumValues: 0x000A
+// NumValues: 0x000E
 enum class EMediaPlateEventState : uint8
 {
 	Play                                     = 0,
@@ -36,30 +26,43 @@ enum class EMediaPlateEventState : uint8
 	Rewind                                   = 6,
 	Next                                     = 7,
 	Previous                                 = 8,
-	MAX                                      = 9,
+	PlayReverse                              = 9,
+	JumpToEnd                                = 10,
+	StepForward                              = 11,
+	StepBackward                             = 12,
+	MAX                                      = 13,
 };
 
-// ScriptStruct MediaPlate.MediaPlateResource
-// 0x0078 (0x0078 - 0x0000)
-struct FMediaPlateResource final
+// Enum MediaPlate.EMediaPlateResourceType
+// NumValues: 0x0004
+enum class EMediaPlateResourceType : uint8
 {
-public:
-	EMediaPlateResourceType                       Type;                                              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ExternalMediaPath;                                 // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMediaSource*                           ExternalMedia;                                     // 0x0018(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TSoftObjectPtr<class UMediaSource>            MediaAsset;                                        // 0x0020(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMediaPlaylist*                         ActivePlaylist;                                    // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	Playlist                                 = 0,
+	External                                 = 1,
+	Asset                                    = 2,
+	EMediaPlateResourceType_MAX              = 3,
 };
 
 // ScriptStruct MediaPlate.MediaTextureResourceSettings
-// 0x0002 (0x0002 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct FMediaTextureResourceSettings final
 {
 public:
 	bool                                          bEnableGenMips;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         CurrentNumMips;                                    // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaTextureResourceSettings;
+
+// ScriptStruct MediaPlate.MediaPlateResource
+// 0x0068 (0x0068 - 0x0000)
+struct FMediaPlateResource final
+{
+public:
+	EMediaPlateResourceType                       Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ExternalMediaPath;                                 // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UMediaSource>            MediaAsset;                                        // 0x0018(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FMediaPlateResource;
 
 SDK_NAMESPACE_END

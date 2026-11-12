@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ModelingOperators_structs.hpp"
+#include "InteractiveToolsFramework_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "InteractiveToolsFramework_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -55,6 +55,7 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsToolProperties>();
 	}
 };
+DUMPER7_ASSERTS_URecomputeUVsToolProperties;
 
 // Class ModelingOperators.UVLayoutProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -87,15 +88,39 @@ public:
 		return GetDefaultObjImpl<UUVLayoutProperties>();
 	}
 };
+DUMPER7_ASSERTS_UUVLayoutProperties;
+
+// Class ModelingOperators.GenerateCrossSectionOpFactory
+// 0x00A0 (0x00C8 - 0x0028)
+class UGenerateCrossSectionOpFactory final : public UObject
+{
+public:
+	uint8                                         Pad_28[0xA0];                                      // 0x0028(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GenerateCrossSectionOpFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GenerateCrossSectionOpFactory")
+	}
+	static class UGenerateCrossSectionOpFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGenerateCrossSectionOpFactory>();
+	}
+};
+DUMPER7_ASSERTS_UGenerateCrossSectionOpFactory;
 
 // Class ModelingOperators.RecomputeUVsOpFactory
-// 0x0118 (0x0140 - 0x0028)
+// 0x0108 (0x0130 - 0x0028)
 class alignas(0x10) URecomputeUVsOpFactory final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URecomputeUVsToolProperties*            Settings;                                          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_38[0x108];                                     // 0x0038(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0xF8];                                      // 0x0038(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -111,6 +136,7 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsOpFactory>();
 	}
 };
+DUMPER7_ASSERTS_URecomputeUVsOpFactory;
 
 // Class ModelingOperators.UVEditorTexelDensitySettings
 // 0x0018 (0x00C0 - 0x00A8)
@@ -141,15 +167,16 @@ public:
 		return GetDefaultObjImpl<UUVEditorTexelDensitySettings>();
 	}
 };
+DUMPER7_ASSERTS_UUVEditorTexelDensitySettings;
 
 // Class ModelingOperators.UVTexelDensityOperatorFactory
-// 0x0168 (0x0190 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class alignas(0x10) UUVTexelDensityOperatorFactory final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUVEditorTexelDensitySettings*          Settings;                                          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_38[0x158];                                     // 0x0038(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x148];                                     // 0x0038(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -165,15 +192,16 @@ public:
 		return GetDefaultObjImpl<UUVTexelDensityOperatorFactory>();
 	}
 };
+DUMPER7_ASSERTS_UUVTexelDensityOperatorFactory;
 
 // Class ModelingOperators.UVLayoutOperatorFactory
-// 0x0168 (0x0190 - 0x0028)
+// 0x0158 (0x0180 - 0x0028)
 class alignas(0x10) UUVLayoutOperatorFactory final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUVLayoutProperties*                    Settings;                                          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_38[0x158];                                     // 0x0038(0x0158)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x148];                                     // 0x0038(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -189,5 +217,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutOperatorFactory>();
 	}
 };
+DUMPER7_ASSERTS_UUVLayoutOperatorFactory;
 
 SDK_NAMESPACE_END

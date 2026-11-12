@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AttackHarvestComponent_Base.AttackHarvestComponent_Base_C
-// 0x0000 (0x0238 - 0x0238)
+// 0x0000 (0x0260 - 0x0260)
 class UAttackHarvestComponent_Base_C : public UPrimalHarvestingComponent
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UAttackHarvestComponent_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UAttackHarvestComponent_Base_C;
 
 SDK_NAMESPACE_END

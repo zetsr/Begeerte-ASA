@@ -16,32 +16,45 @@
 
 SDK_NAMESPACE_START
 
-// Class DataflowSimulation.DataflowSimulationManager
-// 0x0068 (0x00A8 - 0x0040)
-class UDataflowSimulationManager final : public UTickableWorldSubsystem
+// Class DataflowSimulation.DataflowGeometryCachable
+// 0x0008 (0x0008 - 0x0000)
+class IDataflowGeometryCachable
 {
 public:
-	uint8                                         Pad_40[0x68];                                      // 0x0040(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DataflowSimulationManager")
+		STATIC_CLASS_IMPL("DataflowGeometryCachable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DataflowSimulationManager")
+		STATIC_NAME_IMPL(L"DataflowGeometryCachable")
 	}
-	static class UDataflowSimulationManager* GetDefaultObj()
+	static class IDataflowGeometryCachable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UDataflowSimulationManager>();
+		return GetDefaultObjImpl<IDataflowGeometryCachable>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowGeometryCachable;
 
 // Class DataflowSimulation.DataflowSimulationInterface
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowSimulationInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IDataflowSimulationInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -65,68 +78,40 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowSimulationInterface;
 
-// Class DataflowSimulation.DataflowCollisionObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowCollisionObjectInterface final
+// Class DataflowSimulation.DataflowSimulationManager
+// 0x0068 (0x00B0 - 0x0048)
+class UDataflowSimulationManager final : public UTickableWorldSubsystem
 {
+public:
+	uint8                                         Pad_48[0x68];                                      // 0x0048(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DataflowCollisionObjectInterface")
+		STATIC_CLASS_IMPL("DataflowSimulationManager")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DataflowCollisionObjectInterface")
+		STATIC_NAME_IMPL(L"DataflowSimulationManager")
 	}
-	static class IDataflowCollisionObjectInterface* GetDefaultObj()
+	static class UDataflowSimulationManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IDataflowCollisionObjectInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<UDataflowSimulationManager>();
 	}
 };
-
-// Class DataflowSimulation.DataflowConstraintObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowConstraintObjectInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DataflowConstraintObjectInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DataflowConstraintObjectInterface")
-	}
-	static class IDataflowConstraintObjectInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IDataflowConstraintObjectInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
+DUMPER7_ASSERTS_UDataflowSimulationManager;
 
 // Class DataflowSimulation.DataflowSimulationActor
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowSimulationActor final
+// 0x0008 (0x0008 - 0x0000)
+class IDataflowSimulationActor
 {
 public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	void OnDataflowSimulationEnabledChanged(const bool bSimulationEnabled);
 	void PostDataflowSimulationTick(const float SimulationTime, const float DeltaTime);
 	void PreDataflowSimulationTick(const float SimulationTime, const float DeltaTime);
 
@@ -153,23 +138,24 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowSimulationActor;
 
-// Class DataflowSimulation.DataflowGeometryCachable
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowGeometryCachable final
+// Class DataflowSimulation.DataflowCollisionObjectInterface
+// 0x0000 (0x0008 - 0x0008)
+class IDataflowCollisionObjectInterface : public IDataflowSimulationInterface
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DataflowGeometryCachable")
+		STATIC_CLASS_IMPL("DataflowCollisionObjectInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DataflowGeometryCachable")
+		STATIC_NAME_IMPL(L"DataflowCollisionObjectInterface")
 	}
-	static class IDataflowGeometryCachable* GetDefaultObj()
+	static class IDataflowCollisionObjectInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IDataflowGeometryCachable>();
+		return GetDefaultObjImpl<IDataflowCollisionObjectInterface>();
 	}
 
 	class UObject* AsUObject()
@@ -181,23 +167,24 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowCollisionObjectInterface;
 
-// Class DataflowSimulation.DataflowPhysicsSolverInterface
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowPhysicsSolverInterface final
+// Class DataflowSimulation.DataflowConstraintObjectInterface
+// 0x0000 (0x0008 - 0x0008)
+class IDataflowConstraintObjectInterface : public IDataflowSimulationInterface
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DataflowPhysicsSolverInterface")
+		STATIC_CLASS_IMPL("DataflowConstraintObjectInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DataflowPhysicsSolverInterface")
+		STATIC_NAME_IMPL(L"DataflowConstraintObjectInterface")
 	}
-	static class IDataflowPhysicsSolverInterface* GetDefaultObj()
+	static class IDataflowConstraintObjectInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IDataflowPhysicsSolverInterface>();
+		return GetDefaultObjImpl<IDataflowConstraintObjectInterface>();
 	}
 
 	class UObject* AsUObject()
@@ -209,10 +196,11 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowConstraintObjectInterface;
 
 // Class DataflowSimulation.DataflowPhysicsObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class IDataflowPhysicsObjectInterface final
+// 0x0000 (0x0008 - 0x0008)
+class IDataflowPhysicsObjectInterface : public IDataflowSimulationInterface
 {
 public:
 	static class UClass* StaticClass()
@@ -237,5 +225,35 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IDataflowPhysicsObjectInterface;
+
+// Class DataflowSimulation.DataflowPhysicsSolverInterface
+// 0x0000 (0x0008 - 0x0008)
+class IDataflowPhysicsSolverInterface : public IDataflowSimulationInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DataflowPhysicsSolverInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DataflowPhysicsSolverInterface")
+	}
+	static class IDataflowPhysicsSolverInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IDataflowPhysicsSolverInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IDataflowPhysicsSolverInterface;
 
 SDK_NAMESPACE_END

@@ -17,14 +17,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_NoModProjects.UI_NoModProjects_C
-// 0x0020 (0x0890 - 0x0870)
+// 0x0020 (0x08F0 - 0x08D0)
 class UUI_NoModProjects_C final : public UCFCoreWidget_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_NoModProjects_C;                 // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMultiLineEditableTextBox*              MultiLineEditableTextBox_1;                        // 0x0878(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           Notif_NoModsProjects;                              // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_0;                                         // 0x0888(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_NoModProjects_C;                 // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UOverlay*                               Overlay_0;                                         // 0x08D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           Notif_NoModsProjects;                              // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMultiLineEditableTextBox*              MultiLineEditableTextBox_1;                        // 0x08E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_UI_NoModProjects(int32 EntryPoint);
@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<UUI_NoModProjects_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_NoModProjects_C;
 
 SDK_NAMESPACE_END

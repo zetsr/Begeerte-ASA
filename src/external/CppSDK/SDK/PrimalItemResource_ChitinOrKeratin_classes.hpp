@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_ChitinOrKeratin_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_ChitinOrKeratin_C;
 
 SDK_NAMESPACE_END

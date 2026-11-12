@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponHarpoon_Hunt_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponHarpoon_Hunt_C;
 
 SDK_NAMESPACE_END

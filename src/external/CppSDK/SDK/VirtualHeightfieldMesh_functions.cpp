@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function VirtualHeightfieldMesh.VirtualHeightfieldMeshComponent.GatherHideFlags
-// (Final, Native, Protected, HasOutParams, Const)
+// (Final, RequiredAPI, Native, Protected, HasOutParams, Const)
 // Parameters:
 // bool*                                   InOutHidePrimitivesInEditor                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool*                                   InOutHidePrimitivesInGame                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // Function ZoneGraphDebug.ZoneGraphTestingComponent.DisableCustomTests
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UZoneGraphTestingComponent::DisableCustomTests()
 {
@@ -35,7 +35,7 @@ void UZoneGraphTestingComponent::DisableCustomTests()
 
 
 // Function ZoneGraphDebug.ZoneGraphTestingComponent.EnableCustomTests
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UZoneGraphTestingComponent::EnableCustomTests()
 {

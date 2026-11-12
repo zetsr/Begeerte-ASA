@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void USetRunning_C::ExecuteUbergraph_SetRunning(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SetRunning_C", "ExecuteUbergraph_SetRunning");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SetRunning_C", "ExecuteUbergraph_SetRunning", FuncInfo);
 
 	Params::SetRunning_C_ExecuteUbergraph_SetRunning Parms{};
 
@@ -43,10 +41,8 @@ void USetRunning_C::ExecuteUbergraph_SetRunning(int32 EntryPoint)
 
 void USetRunning_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SetRunning_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SetRunning_C", "ReceiveExecute", FuncInfo);
 
 	Params::SetRunning_C_ReceiveExecute Parms{};
 

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void APlayerPawnTest_C::AscensionCheck()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "AscensionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "AscensionCheck", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void APlayerPawnTest_C::AscensionCheck()
 
 void APlayerPawnTest_C::AssignAssetsFromVoiceCollection()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "AssignAssetsFromVoiceCollection");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "AssignAssetsFromVoiceCollection", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void APlayerPawnTest_C::AssignAssetsFromVoiceCollection()
 
 void APlayerPawnTest_C::BPApplyBodyColors(class USkeletalMeshComponent* toMesh)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPApplyBodyColors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPApplyBodyColors", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPApplyBodyColors Parms{};
 
@@ -71,10 +65,8 @@ void APlayerPawnTest_C::BPApplyBodyColors(class USkeletalMeshComponent* toMesh)
 
 void APlayerPawnTest_C::BPApplyPreviewData(class USkeletalMeshComponent* toMesh)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPApplyPreviewData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPApplyPreviewData", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPApplyPreviewData Parms{};
 
@@ -95,10 +87,8 @@ void APlayerPawnTest_C::BPApplyPreviewData(class USkeletalMeshComponent* toMesh)
 
 bool APlayerPawnTest_C::BPCustomRequest(class FName RequestName, int32* OutIndex, int32 InIndex, class AActor* FromActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPCustomRequest");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPCustomRequest", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPCustomRequest Parms{};
 
@@ -125,10 +115,8 @@ bool APlayerPawnTest_C::BPCustomRequest(class FName RequestName, int32* OutIndex
 
 bool APlayerPawnTest_C::BPGetCustomBlueprintData(class FName DataName, const struct FBPNetExecParams& InData, struct FBPNetExecParams* OutData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPGetCustomBlueprintData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPGetCustomBlueprintData", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPGetCustomBlueprintData Parms{};
 
@@ -154,10 +142,8 @@ bool APlayerPawnTest_C::BPGetCustomBlueprintData(class FName DataName, const str
 
 void APlayerPawnTest_C::BPGetOverrideCameraInterpSpeed(float DefaultTPVCameraSpeedInterpolationMultiplier, float DefaultTPVOffsetInterpSpeed, float* TPVCameraSpeedInterpolationMultiplier, float* TPVOffsetInterpSpeed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPGetOverrideCameraInterpSpeed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPGetOverrideCameraInterpSpeed", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPGetOverrideCameraInterpSpeed Parms{};
 
@@ -181,10 +167,8 @@ void APlayerPawnTest_C::BPGetOverrideCameraInterpSpeed(float DefaultTPVCameraSpe
 
 int32 APlayerPawnTest_C::BPGetPlayerHexagonCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPGetPlayerHexagonCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPGetPlayerHexagonCount", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPGetPlayerHexagonCount Parms{};
 
@@ -201,10 +185,8 @@ int32 APlayerPawnTest_C::BPGetPlayerHexagonCount()
 
 void APlayerPawnTest_C::BPGetShowDebugAnimationComponents(TArray<class USkeletalMeshComponent*>* SkelMeshComponents)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPGetShowDebugAnimationComponents");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPGetShowDebugAnimationComponents", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPGetShowDebugAnimationComponents Parms{};
 
@@ -225,10 +207,8 @@ void APlayerPawnTest_C::BPGetShowDebugAnimationComponents(TArray<class USkeletal
 
 bool APlayerPawnTest_C::BPOverrideCameraArmLength(const struct FPrimalCameraParams& CameraParams, float CurrentCameraArmLength, float& DesiredCameraArmLength)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraArmLength");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraArmLength", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraArmLength Parms{};
 
@@ -253,10 +233,8 @@ bool APlayerPawnTest_C::BPOverrideCameraArmLength(const struct FPrimalCameraPara
 
 bool APlayerPawnTest_C::BPOverrideCameraArmLengthInterpParams(const struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& OutInterpParams)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraArmLengthInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraArmLengthInterpParams", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraArmLengthInterpParams Parms{};
 
@@ -280,10 +258,8 @@ bool APlayerPawnTest_C::BPOverrideCameraArmLengthInterpParams(const struct FPrim
 
 bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotLocation(const struct FVector& CurrentCameraPivotLocation, struct FVector& DesiredCameraPivotLocation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraDesiredPivotLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraDesiredPivotLocation", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraDesiredPivotLocation Parms{};
 
@@ -307,10 +283,8 @@ bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotLocation(const struct FVecto
 
 bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotOffset(const struct FPrimalCameraParams& CameraParams, struct FVector& DesiredCameraOffset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraDesiredPivotOffset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraDesiredPivotOffset", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraDesiredPivotOffset Parms{};
 
@@ -334,10 +308,8 @@ bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotOffset(const struct FPrimalC
 
 bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotRotation(const struct FRotator& CurrentCameraPivotRotation, struct FRotator& DesiredCameraPivotRotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraDesiredPivotRotation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraDesiredPivotRotation", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraDesiredPivotRotation Parms{};
 
@@ -367,10 +339,8 @@ bool APlayerPawnTest_C::BPOverrideCameraDesiredPivotRotation(const struct FRotat
 
 bool APlayerPawnTest_C::BPOverrideCameraPivotLocationInterpParams(const struct FPrimalCameraParams& CameraParams, const struct FPrimalCameraPivotZInterpOverrides& PivotZInterpOverrides, const struct FPrimalCameraInterpParams& LastInterpParamsX, const struct FPrimalCameraInterpParams& LastInterpParamsY, const struct FPrimalCameraInterpParams& LastInterpParamsZ, struct FPrimalCameraInterpParams& OutInterpParamsX, struct FPrimalCameraInterpParams& OutInterpParamsY, struct FPrimalCameraInterpParams& OutInterpParamsZ)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPOverrideCameraPivotLocationInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPOverrideCameraPivotLocationInterpParams", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPOverrideCameraPivotLocationInterpParams Parms{};
 
@@ -400,10 +370,8 @@ bool APlayerPawnTest_C::BPOverrideCameraPivotLocationInterpParams(const struct F
 
 void APlayerPawnTest_C::BPSetFirstPersonMasterPoseComponent(class USkeletalMeshComponent* firstPersonMasterPosecomponent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPSetFirstPersonMasterPoseComponent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPSetFirstPersonMasterPoseComponent", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPSetFirstPersonMasterPoseComponent Parms{};
 
@@ -421,10 +389,8 @@ void APlayerPawnTest_C::BPSetFirstPersonMasterPoseComponent(class USkeletalMeshC
 
 bool APlayerPawnTest_C::BPSetPlayerHexagonCount(int32 NewHexagonCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPSetPlayerHexagonCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPSetPlayerHexagonCount", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPSetPlayerHexagonCount Parms{};
 
@@ -441,10 +407,8 @@ bool APlayerPawnTest_C::BPSetPlayerHexagonCount(int32 NewHexagonCount)
 
 void APlayerPawnTest_C::BPSetupFirstPersonHandsMesh()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPSetupFirstPersonHandsMesh");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPSetupFirstPersonHandsMesh", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -458,10 +422,8 @@ void APlayerPawnTest_C::BPSetupFirstPersonHandsMesh()
 
 void APlayerPawnTest_C::BPSpawnAttackerDamageImpactFX(class FName SocketName, class APrimalCharacter* VictimChar)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPSpawnAttackerDamageImpactFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPSpawnAttackerDamageImpactFX", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPSpawnAttackerDamageImpactFX Parms{};
 
@@ -479,10 +441,8 @@ void APlayerPawnTest_C::BPSpawnAttackerDamageImpactFX(class FName SocketName, cl
 
 void APlayerPawnTest_C::BPUnlockedAllBTTExplorerNotes(int32 exp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPUnlockedAllBTTExplorerNotes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPUnlockedAllBTTExplorerNotes", FuncInfo);
 
 	Params::PlayerPawnTest_C_BPUnlockedAllBTTExplorerNotes Parms{};
 
@@ -497,10 +457,8 @@ void APlayerPawnTest_C::BPUnlockedAllBTTExplorerNotes(int32 exp)
 
 void APlayerPawnTest_C::BPUnlockedAllExplorerNotes()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "BPUnlockedAllExplorerNotes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "BPUnlockedAllExplorerNotes", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -517,10 +475,8 @@ void APlayerPawnTest_C::BPUnlockedAllExplorerNotes()
 
 void APlayerPawnTest_C::ClientShowHUDNotification(const class FString& Text, const struct FLinearColor& Color, double LifetimeSeconds, double DisplayScale, class USoundCue* SoundToPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "ClientShowHUDNotification");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "ClientShowHUDNotification", FuncInfo);
 
 	Params::PlayerPawnTest_C_ClientShowHUDNotification Parms{};
 
@@ -543,10 +499,8 @@ void APlayerPawnTest_C::ClientShowHUDNotification(const class FString& Text, con
 
 void APlayerPawnTest_C::DefeatedBoss(class APrimalDinoCharacter* BossCharacter, class FName BossTag, int32 BossDifficulty)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "DefeatedBoss");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "DefeatedBoss", FuncInfo);
 
 	Params::PlayerPawnTest_C_DefeatedBoss Parms{};
 
@@ -563,10 +517,8 @@ void APlayerPawnTest_C::DefeatedBoss(class APrimalDinoCharacter* BossCharacter, 
 
 void APlayerPawnTest_C::DisableFluidInteraction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "DisableFluidInteraction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "DisableFluidInteraction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -577,10 +529,8 @@ void APlayerPawnTest_C::DisableFluidInteraction()
 
 void APlayerPawnTest_C::DontCreateAnyMoreSpawnUIs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "DontCreateAnyMoreSpawnUIs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "DontCreateAnyMoreSpawnUIs", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -591,10 +541,8 @@ void APlayerPawnTest_C::DontCreateAnyMoreSpawnUIs()
 
 void APlayerPawnTest_C::EnableFluidInteraction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "EnableFluidInteraction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "EnableFluidInteraction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -607,10 +555,8 @@ void APlayerPawnTest_C::EnableFluidInteraction()
 
 void APlayerPawnTest_C::ExecuteUbergraph_PlayerPawnTest(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "ExecuteUbergraph_PlayerPawnTest");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "ExecuteUbergraph_PlayerPawnTest", FuncInfo);
 
 	Params::PlayerPawnTest_C_ExecuteUbergraph_PlayerPawnTest Parms{};
 
@@ -627,10 +573,8 @@ void APlayerPawnTest_C::ExecuteUbergraph_PlayerPawnTest(int32 EntryPoint)
 
 void APlayerPawnTest_C::GetFaceCustomization(class UAC_FaceCustomization_C** FaceCustomization)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "GetFaceCustomization");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "GetFaceCustomization", FuncInfo);
 
 	Params::PlayerPawnTest_C_GetFaceCustomization Parms{};
 
@@ -648,10 +592,8 @@ void APlayerPawnTest_C::GetFaceCustomization(class UAC_FaceCustomization_C** Fac
 
 struct FLinearColor APlayerPawnTest_C::GetFXBloodColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "GetFXBloodColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "GetFXBloodColor", FuncInfo);
 
 	Params::PlayerPawnTest_C_GetFXBloodColor Parms{};
 
@@ -668,10 +610,8 @@ struct FLinearColor APlayerPawnTest_C::GetFXBloodColor()
 
 void APlayerPawnTest_C::GetShooterHud(class AShooterHUD** ShooterHUD)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "GetShooterHud");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "GetShooterHud", FuncInfo);
 
 	Params::PlayerPawnTest_C_GetShooterHud Parms{};
 
@@ -689,10 +629,8 @@ void APlayerPawnTest_C::GetShooterHud(class AShooterHUD** ShooterHUD)
 
 void APlayerPawnTest_C::GetTheNumChibiLevelUps(int32* OutVal)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "GetTheNumChibiLevelUps");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "GetTheNumChibiLevelUps", FuncInfo);
 
 	Params::PlayerPawnTest_C_GetTheNumChibiLevelUps Parms{};
 
@@ -710,10 +648,8 @@ void APlayerPawnTest_C::GetTheNumChibiLevelUps(int32* OutVal)
 
 void APlayerPawnTest_C::HasEquipToHideImplant(bool* ShouldHideImplant)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "HasEquipToHideImplant");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "HasEquipToHideImplant", FuncInfo);
 
 	Params::PlayerPawnTest_C_HasEquipToHideImplant Parms{};
 
@@ -731,10 +667,8 @@ void APlayerPawnTest_C::HasEquipToHideImplant(bool* ShouldHideImplant)
 
 void APlayerPawnTest_C::InterceptInputEvent(const class FString& InputName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "InterceptInputEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "InterceptInputEvent", FuncInfo);
 
 	Params::PlayerPawnTest_C_InterceptInputEvent Parms{};
 
@@ -753,10 +687,8 @@ void APlayerPawnTest_C::InterceptInputEvent(const class FString& InputName)
 
 void APlayerPawnTest_C::NetClientAscend(int32 AscendIndex, bool bImmediateAscend, bool bIsCheatAscend)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "NetClientAscend");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "NetClientAscend", FuncInfo);
 
 	Params::PlayerPawnTest_C_NetClientAscend Parms{};
 
@@ -773,10 +705,8 @@ void APlayerPawnTest_C::NetClientAscend(int32 AscendIndex, bool bImmediateAscend
 
 void APlayerPawnTest_C::NetClientPreLoadAcension()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "NetClientPreLoadAcension");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "NetClientPreLoadAcension", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -789,10 +719,8 @@ void APlayerPawnTest_C::NetClientPreLoadAcension()
 
 void APlayerPawnTest_C::OnBossfightTeleport(class FName DataName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "OnBossfightTeleport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "OnBossfightTeleport", FuncInfo);
 
 	Params::PlayerPawnTest_C_OnBossfightTeleport Parms{};
 
@@ -807,10 +735,8 @@ void APlayerPawnTest_C::OnBossfightTeleport(class FName DataName)
 
 void APlayerPawnTest_C::OnJumped()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "OnJumped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "OnJumped", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -823,10 +749,8 @@ void APlayerPawnTest_C::OnJumped()
 
 void APlayerPawnTest_C::OnLanded(const struct FHitResult& Hit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "OnLanded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "OnLanded", FuncInfo);
 
 	Params::PlayerPawnTest_C_OnLanded Parms{};
 
@@ -844,10 +768,8 @@ void APlayerPawnTest_C::OnLanded(const struct FHitResult& Hit)
 
 class FString APlayerPawnTest_C::PlayerCommand(const class FString& TheCommand)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "PlayerCommand");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "PlayerCommand", FuncInfo);
 
 	Params::PlayerPawnTest_C_PlayerCommand Parms{};
 
@@ -864,10 +786,8 @@ class FString APlayerPawnTest_C::PlayerCommand(const class FString& TheCommand)
 
 void APlayerPawnTest_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -883,10 +803,8 @@ void APlayerPawnTest_C::ReceiveBeginPlay()
 
 void APlayerPawnTest_C::ServerAscend(int32 DifficultyIndex, bool bImmediateAscend, bool bSuppressAchievements, bool bIsCheatAscend)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "ServerAscend");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "ServerAscend", FuncInfo);
 
 	Params::PlayerPawnTest_C_ServerAscend Parms{};
 
@@ -906,10 +824,8 @@ void APlayerPawnTest_C::ServerAscend(int32 DifficultyIndex, bool bImmediateAscen
 
 void APlayerPawnTest_C::SetGeneralizedUnlockedAchievementTags(TArray<class FName>& GeneralizedUnlockedAchievementTags_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "SetGeneralizedUnlockedAchievementTags");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "SetGeneralizedUnlockedAchievementTags", FuncInfo);
 
 	Params::PlayerPawnTest_C_SetGeneralizedUnlockedAchievementTags Parms{};
 
@@ -928,10 +844,8 @@ void APlayerPawnTest_C::SetGeneralizedUnlockedAchievementTags(TArray<class FName
 
 void APlayerPawnTest_C::SetNumChibiLevelUps(int32 NewNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "SetNumChibiLevelUps");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "SetNumChibiLevelUps", FuncInfo);
 
 	Params::PlayerPawnTest_C_SetNumChibiLevelUps Parms{};
 
@@ -948,10 +862,8 @@ void APlayerPawnTest_C::SetNumChibiLevelUps(int32 NewNum)
 
 void APlayerPawnTest_C::SetupMeshes(bool bForce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "SetupMeshes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "SetupMeshes", FuncInfo);
 
 	Params::PlayerPawnTest_C_SetupMeshes Parms{};
 
@@ -972,10 +884,8 @@ void APlayerPawnTest_C::SetupMeshes(bool bForce)
 
 void APlayerPawnTest_C::ShowHUDNotification(const class FString& Text, const struct FLinearColor& Color, double LifetimeSeconds, double DisplayScale, class USoundCue* SoundToPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "ShowHUDNotification");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "ShowHUDNotification", FuncInfo);
 
 	Params::PlayerPawnTest_C_ShowHUDNotification Parms{};
 
@@ -994,10 +904,8 @@ void APlayerPawnTest_C::ShowHUDNotification(const class FString& Text, const str
 
 void APlayerPawnTest_C::TrySpawnMound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "TrySpawnMound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "TrySpawnMound", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1011,10 +919,8 @@ void APlayerPawnTest_C::TrySpawnMound()
 
 void APlayerPawnTest_C::TrySpawnMoundEx(double Angle, double Range)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "TrySpawnMoundEx");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "TrySpawnMoundEx", FuncInfo);
 
 	Params::PlayerPawnTest_C_TrySpawnMoundEx Parms{};
 
@@ -1030,10 +936,8 @@ void APlayerPawnTest_C::TrySpawnMoundEx(double Angle, double Range)
 
 void APlayerPawnTest_C::UpdateFace()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "UpdateFace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "UpdateFace", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1044,10 +948,8 @@ void APlayerPawnTest_C::UpdateFace()
 
 void APlayerPawnTest_C::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "UserConstructionScript");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "UserConstructionScript", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1061,10 +963,8 @@ void APlayerPawnTest_C::UserConstructionScript()
 
 void APlayerPawnTest_C::PlayVOLine(Enum_VoiceCollectionLine Voiceline, double VolumeMultiplier) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "PlayVOLine");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "PlayVOLine", FuncInfo);
 
 	Params::PlayerPawnTest_C_PlayVOLine Parms{};
 
@@ -1084,10 +984,8 @@ void APlayerPawnTest_C::PlayVOLine(Enum_VoiceCollectionLine Voiceline, double Vo
 
 void APlayerPawnTest_C::SelectVOSound(class UPDA_VoiceCollection_C* VoiceCollection, Enum_VoiceCollectionLine VoiceLineSelection, class USoundBase** VoiceSoundReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerPawnTest_C", "SelectVOSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PlayerPawnTest_C", "SelectVOSound", FuncInfo);
 
 	Params::PlayerPawnTest_C_SelectVOSound Parms{};
 

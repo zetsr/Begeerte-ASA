@@ -57,5 +57,6 @@ public:
 		return GetDefaultObjImpl<USPInterpolatorsBPLibrary>();
 	}
 };
+DUMPER7_ASSERTS_USPInterpolatorsBPLibrary;
 
 SDK_NAMESPACE_END

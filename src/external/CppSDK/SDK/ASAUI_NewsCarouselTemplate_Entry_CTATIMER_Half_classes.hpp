@@ -17,45 +17,45 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C
-// 0x0100 (0x04B0 - 0x03B0)
+// 0x0100 (0x0510 - 0x0410)
 class UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C final : public UUI_MenuCarouselEntryWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             CountDownTimerTextBox;                             // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MainImage;                                         // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        AutoScrollWaitAtStart;                             // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultAutoScrollSpeed;                            // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AutoScrollTracker;                                 // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AutoScrollWaitAtEnd;                               // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   MessageFormatText;                                 // 0x03E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FString                                 TimeFormatText;                                    // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FText                                   TimePassedText;                                    // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int64                                         UTCTimerDeadline;                                  // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHideOnExpire;                                     // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DayString;                                         // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 HourString;                                        // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 MinuteString;                                      // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 SecondString;                                      // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 DayString_Code;                                    // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 HourString_Code;                                   // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 MinuteString_Code;                                 // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	class FString                                 SecondString_Code;                                 // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	bool                                          bUseCompact;                                       // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0410(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UImage*                                 MainImage;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             CountDownTimerTextBox;                             // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        AutoScrollWaitAtStart;                             // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultAutoScrollSpeed;                            // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AutoScrollTracker;                                 // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AutoScrollWaitAtEnd;                               // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   MessageFormatText;                                 // 0x0448(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FString                                 TimeFormatText;                                    // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FText                                   TimePassedText;                                    // 0x0468(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int64                                         UTCTimerDeadline;                                  // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHideOnExpire;                                     // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DayString;                                         // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 HourString;                                        // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 MinuteString;                                      // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 SecondString;                                      // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 DayString_Code;                                    // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 HourString_Code;                                   // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 MinuteString_Code;                                 // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	class FString                                 SecondString_Code;                                 // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	bool                                          bUseCompact;                                       // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool ShouldHideEntry();
-	void ReplaceTimeCode(class FString& FormatString, const class FString& Timecode, const class FString& SuperiorTimeCode, const class FString& InferiorTimeCode, const class FString& PlacementText, int32 CounterValue, int32* CorrectedCounterValue);
-	bool HasAnyActiveTimeCodes(const class FString& FormatString);
-	void GetTimerText(class FText* TimerText);
-	void GetAdjustedTimerFormatText(const class FString& BaseTimerFormatString, int32 Days, int32 Hours, int32 Minutes, int32 Seconds, class FString* CorrectedTimerFormatString, int32* CorrectedDays, int32* CorrectedHours, int32* CorrectedMinutes, int32* CorrectedSeconds);
-	class FText Get_CountDownTimerTextBox_Text();
+	void BlueprintInit(const class FString& RawExtraData);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover);
+	void EntryFocusStart(bool bInstigatedByAutoRollover);
+	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half(int32 EntryPoint);
-	void EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick);
-	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
-	void BlueprintInit(const class FString& RawExtraData_BlueprintInit);
+	class FText Get_CountDownTimerTextBox_Text();
+	void GetAdjustedTimerFormatText(const class FString& BaseTimerFormatString, int32 Days, int32 Hours, int32 Minutes, int32 Seconds, class FString* CorrectedTimerFormatString, int32* CorrectedDays, int32* CorrectedHours, int32* CorrectedMinutes, int32* CorrectedSeconds);
+	void GetTimerText(class FText* TimerText);
+	bool HasAnyActiveTimeCodes(const class FString& FormatString);
+	void ReplaceTimeCode(class FString& FormatString, const class FString& Timecode, const class FString& SuperiorTimeCode, const class FString& InferiorTimeCode, const class FString& PlacementText, int32 CounterValue, int32* CorrectedCounterValue);
+	bool ShouldHideEntry();
 
 public:
 	static class UClass* StaticClass()
@@ -71,5 +71,6 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C>();
 	}
 };
+DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C;
 
 SDK_NAMESPACE_END

@@ -10,53 +10,350 @@
 
 #include "Basic.hpp"
 
+#include "ChaosClothAssetEngine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DataflowSimulation_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "DataflowSimulation_classes.hpp"
+#include "DataflowEngine_structs.hpp"
+#include "DataflowEngine_classes.hpp"
+#include "ClothingSystemRuntimeInterface_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class ChaosClothAssetEngine.ChaosClothComponent
-// 0x00D0 (0x0AC0 - 0x09F0)
-class UChaosClothComponent final : public USkinnedMeshComponent
+// Class ChaosClothAssetEngine.ClothAssetSkeletalMeshConverter
+// 0x0000 (0x0028 - 0x0028)
+class UClothAssetSkeletalMeshConverter final : public UObject
 {
 public:
-	uint8                                         Pad_9F0[0x8];                                      // 0x09F0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowSimulationAsset               SimulationAsset;                                   // 0x09F8(0x0058)(Edit, AdvancedDisplay, NativeAccessSpecifierPrivate)
-	uint8                                         bUseAttachedParentAsPoseComponent : 1;             // 0x0A50(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bWaitForParallelTask : 1;                          // 0x0A50(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bEnableSimulation : 1;                             // 0x0A50(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bSuspendSimulation : 1;                            // 0x0A50(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bBindToLeaderComponent : 1;                        // 0x0A50(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bTeleport : 1;                                     // 0x0A50(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bReset : 1;                                        // 0x0A50(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_A51[0x3];                                      // 0x0A51(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BlendWeight;                                       // 0x0A54(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ClothGeometryScale;                                // 0x0A58(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A5C[0x4];                                      // 0x0A5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UChaosClothAssetInteractor*             ClothOutfitInteractor;                             // 0x0A60(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_A68[0x58];                                     // 0x0A68(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothAssetSkeletalMeshConverter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothAssetSkeletalMeshConverter")
+	}
+	static class UClothAssetSkeletalMeshConverter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothAssetSkeletalMeshConverter>();
+	}
+};
+DUMPER7_ASSERTS_UClothAssetSkeletalMeshConverter;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetBase
+// 0x0298 (0x03F0 - 0x0158)
+class UChaosClothAssetBase : public USkinnedAsset, public IDataflowContentOwner, public MIPad::Pad<0x18, 0x178>, public IDataflowInstanceInterface
+{
+public:
+	struct FDataflowInstance                      DataflowInstance;                                  // 0x0180(0x0040)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FSkeletalMaterial>              Materials;                                         // 0x01C0(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FSkeletalMeshLODInfo>           LODInfo;                                           // 0x01D0(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelInt                    MinQualityLevelLOD;                                // 0x01E0(0x0068)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FPerPlatformBool                       DisableBelowMinLodStripping;                       // 0x0248(0x0001)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_249[0x3];                                      // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformInt                        MinLOD;                                            // 0x024C(0x0004)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bSupportRayTracing : 1;                            // 0x0250(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RayTracingMinLOD;                                  // 0x0254(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPhysicsAsset*                          ShadowPhysicsAsset;                                // 0x0258(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AssetRegistrySearchable, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UMaterialInterface*                     OverlayMaterial;                                   // 0x0260(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	float                                         OverlayMaterialMaxDrawDistance;                    // 0x0268(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bHasVertexColors : 1;                              // 0x026C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_26D[0x11B];                                    // 0x026D(0x011B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       Bounds;                                            // 0x0388(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3C0[0x30];                                     // 0x03C0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetOverlayMaterial(class UMaterialInterface* NewOverlayMaterial);
+	void SetOverlayMaterialMaxDrawDistance(float InMaxDrawDistance);
+
+	class UMaterialInterface* GetOverlayMaterial() const;
+	float GetOverlayMaterialMaxDrawDistance() const;
+	class UPhysicsAsset* GetShadowPhysicsAsset() const;
+	bool HasDataflow() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetBase")
+	}
+	static class UChaosClothAssetBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetBase>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetBase;
+
+// Class ChaosClothAssetEngine.ChaosClothAsset
+// 0x0048 (0x0438 - 0x03F0)
+class UChaosClothAsset final : public UChaosClothAssetBase
+{
+public:
+	class USkeleton*                              Skeleton;                                          // 0x03F0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x03F8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	bool                                          bSmoothTransition;                                 // 0x0400(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bUseMultipleInfluences;                            // 0x0401(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_402[0x2];                                      // 0x0402(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkinningKernelRadius;                              // 0x0404(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  AssetGuid;                                         // 0x0408(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_418[0x20];                                     // 0x0418(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAsset")
+	}
+	static class UChaosClothAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAsset>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAsset;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetInteractor
+// 0x0010 (0x0040 - 0x0030)
+class UChaosClothAssetInteractor final : public UClothingInteractor
+{
+public:
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value);
+	void SetFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
+	void SetHighFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value);
+	void SetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
+	void SetIntPropertyValue(const class FName PropertyName, int32 LODIndex, int32 Value);
+	void SetIntValue(const class FString& PropertyName, int32 LODIndex, int32 Value);
+	void SetLowFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float Value);
+	void SetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
+	void SetPropertySet(const struct FClothAssetInteractorPropertyBag& PropertySet, int32 LODIndex);
+	void SetStringPropertyValue(const class FName PropertyName, int32 LODIndex, const class FString& Value);
+	void SetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& Value);
+	void SetVectorPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector& Value);
+	void SetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& Value);
+	void SetWeightedFloatPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector2D& Value);
+	void SetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& Value);
+
+	TArray<class FString> GetAllProperties(int32 LODIndex) const;
+	TArray<class FName> GetAllPropertyNames(int32 LODIndex) const;
+	float GetFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const;
+	float GetFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
+	float GetHighFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const;
+	float GetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
+	int32 GetIntPropertyValue(const class FName PropertyName, int32 LODIndex, int32 DefaultValue) const;
+	int32 GetIntValue(const class FString& PropertyName, int32 LODIndex, int32 DefaultValue) const;
+	float GetLowFloatPropertyValue(const class FName PropertyName, int32 LODIndex, float DefaultValue) const;
+	float GetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
+	class FString GetStringPropertyValue(const class FName PropertyName, int32 LODIndex, const class FString& DefaultValue) const;
+	class FString GetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& DefaultValue) const;
+	struct FVector GetVectorPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const;
+	struct FVector GetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const;
+	struct FVector2D GetWeightedFloatPropertyValue(const class FName PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const;
+	struct FVector2D GetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetInteractor")
+	}
+	static class UChaosClothAssetInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetInteractor>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetInteractor;
+
+// Class ChaosClothAssetEngine.ClothAssetInteractorDataAsset
+// 0x0060 (0x0088 - 0x0028)
+class UClothAssetInteractorDataAsset final : public UDataAsset
+{
+public:
+	struct FClothAssetInteractorPropertyBag       DefaultProperties;                                 // 0x0028(0x0010)(Edit, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FClothAssetInteractorPropertyBag> PropertySets;                         // 0x0038(0x0050)(Edit, NativeAccessSpecifierPrivate)
+
+public:
+	void SynchronizePropertySets();
+
+	const struct FClothAssetInteractorPropertyBag GetPropertySet(const class FName SetName) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothAssetInteractorDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothAssetInteractorDataAsset")
+	}
+	static class UClothAssetInteractorDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothAssetInteractorDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UClothAssetInteractorDataAsset;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetSKMClothingAsset
+// 0x0020 (0x0058 - 0x0038)
+class UChaosClothAssetSKMClothingAsset final : public UClothingAssetBase
+{
+public:
+	class UChaosClothAssetBase*                   Asset;                                             // 0x0038(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	int32                                         ClothSimulationModelIndex;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_44[0x14];                                      // 0x0044(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TArray<class FString> GetClothSimulationModelIds() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetSKMClothingAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetSKMClothingAsset")
+	}
+	static class UChaosClothAssetSKMClothingAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetSKMClothingAsset>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetSKMClothingAsset;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetSKMClothingSimulationFactory
+// 0x0000 (0x0028 - 0x0028)
+class UChaosClothAssetSKMClothingSimulationFactory final : public UClothingSimulationFactory
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetSKMClothingSimulationFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetSKMClothingSimulationFactory")
+	}
+	static class UChaosClothAssetSKMClothingSimulationFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetSKMClothingSimulationFactory>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetSKMClothingSimulationFactory;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetSKMClothingInteractor
+// 0x0008 (0x0038 - 0x0030)
+class UChaosClothAssetSKMClothingInteractor final : public UClothingInteractor
+{
+public:
+	class UChaosClothAssetSKMClothingAsset*       ClothingAsset;                                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetSKMClothingInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetSKMClothingInteractor")
+	}
+	static class UChaosClothAssetSKMClothingInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetSKMClothingInteractor>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetSKMClothingInteractor;
+
+// Class ChaosClothAssetEngine.ChaosClothAssetSKMClothingSimulationInteractor
+// 0x0010 (0x00A0 - 0x0090)
+class UChaosClothAssetSKMClothingSimulationInteractor final : public UClothingSimulationInteractor
+{
+public:
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ChaosClothAssetSKMClothingSimulationInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothAssetSKMClothingSimulationInteractor")
+	}
+	static class UChaosClothAssetSKMClothingSimulationInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UChaosClothAssetSKMClothingSimulationInteractor>();
+	}
+};
+DUMPER7_ASSERTS_UChaosClothAssetSKMClothingSimulationInteractor;
+
+// Class ChaosClothAssetEngine.ChaosClothComponent
+// 0x01B0 (0x0CA0 - 0x0AF0)
+class UChaosClothComponent final : public USkinnedMeshComponent, public IDataflowPhysicsSolverInterface
+{
+public:
+	uint8                                         Pad_AF8[0x40];                                     // 0x0AF8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowSimulationAsset               SimulationAsset;                                   // 0x0B38(0x0058)(Edit, AdvancedDisplay, NativeAccessSpecifierPrivate)
+	float                                         BlendWeight;                                       // 0x0B90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ClothGeometryScale;                                // 0x0B94(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         bUseAttachedParentAsPoseComponent : 1;             // 0x0B98(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bWaitForParallelTask : 1;                          // 0x0B98(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bEnableSimulation : 1;                             // 0x0B98(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bSuspendSimulation : 1;                            // 0x0B98(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bBindToLeaderComponent : 1;                        // 0x0B98(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bTeleport : 1;                                     // 0x0B98(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bReset : 1;                                        // 0x0B98(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bCollideWithEnvironment : 1;                       // 0x0B98(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_B99[0x3];                                      // 0x0B99(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UChaosClothComponent>    LeaderClothComponent;                              // 0x0B9C(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         TeleportDistanceThreshold;                         // 0x0BA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         TeleportRotationThreshold;                         // 0x0BA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_BAC[0xAC];                                     // 0x0BAC(0x00AC)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FChaosClothSimulationProperties> ClothSimulationProperties;                        // 0x0C58(0x0010)(ZeroConstructor, Transient, NonTransactional, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C68[0x30];                                     // 0x0C68(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCollisionSource(class USkinnedMeshComponent* SourceComponent, const class UPhysicsAsset* SourcePhysicsAsset, bool bUseSphylsOnly);
 	void ForceNextUpdateTeleport();
 	void ForceNextUpdateTeleportAndReset();
-	class UChaosClothAssetInteractor* GetClothOutfitInteractor();
+	class UChaosClothAssetInteractor* GetClothOutfitInteractor(int32 ModelIndex, const class FName ClothSimulationModelName);
 	void RecreateClothSimulationProxy();
 	void RemoveCollisionSource(const class USkinnedMeshComponent* SourceComponent, const class UPhysicsAsset* SourcePhysicsAsset);
 	void RemoveCollisionSources(const class USkinnedMeshComponent* SourceComponent);
 	void ResetCollisionSources();
 	void ResetConfigProperties();
+	void ResetRestLengthsWithMorphTarget(const class FString& MorphTargetName);
 	void ResetTeleportMode();
 	void ResumeSimulation();
+	void SetAsset(class UChaosClothAssetBase* InAsset);
 	void SetClothAsset(class UChaosClothAsset* InClothAsset);
+	void SetCollideWithEnvironment(bool bCollide);
 	void SetEnableSimulation(bool bEnable);
+	void SetSimulateInEditor(const bool bInSimulateInEditor);
+	void SetTeleportDistanceThreshold(float Threshold);
+	void SetTeleportRotationThreshold(float Threshold);
 	void SuspendSimulation();
 
+	class UChaosClothAssetBase* GetAsset() const;
 	class UChaosClothAsset* GetClothAsset() const;
+	bool GetCollideWithEnvironment() const;
+	float GetTeleportDistanceThreshold() const;
+	float GetTeleportRotationThreshold() const;
 	bool IsSimulationEnabled() const;
 	bool IsSimulationSuspended() const;
 
@@ -74,90 +371,6 @@ public:
 		return GetDefaultObjImpl<UChaosClothComponent>();
 	}
 };
-
-// Class ChaosClothAssetEngine.ChaosClothAsset
-// 0x02A0 (0x03E8 - 0x0148)
-class UChaosClothAsset final : public USkinnedAsset
-{
-public:
-	uint8                                         Pad_148[0x20];                                     // 0x0148(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataflow*                              DataflowAsset;                                     // 0x0168(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class FString                                 DataflowTerminal;                                  // 0x0170(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FSkeletalMaterial>              Materials;                                         // 0x0180(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	class USkeleton*                              Skeleton;                                          // 0x0190(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0198(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TArray<struct FSkeletalMeshLODInfo>           LODInfo;                                           // 0x01A0(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
-	struct FPerQualityLevelInt                    MinQualityLevelLOD;                                // 0x01B0(0x0068)(Edit, NativeAccessSpecifierPrivate)
-	struct FPerPlatformBool                       DisableBelowMinLodStripping;                       // 0x0218(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformInt                        MinLOD;                                            // 0x021C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         bSupportRayTracing : 1;                            // 0x0220(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RayTracingMinLOD;                                  // 0x0224(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bSmoothTransition;                                 // 0x0228(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bUseMultipleInfluences;                            // 0x0229(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_22A[0x2];                                      // 0x022A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkinningKernelRadius;                              // 0x022C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPhysicsAsset*                          ShadowPhysicsAsset;                                // 0x0230(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	struct FGuid                                  AssetGuid;                                         // 0x0238(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_248[0x1A0];                                    // 0x0248(0x01A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UPhysicsAsset* GetShadowPhysicsAsset() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChaosClothAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChaosClothAsset")
-	}
-	static class UChaosClothAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChaosClothAsset>();
-	}
-};
-
-// Class ChaosClothAssetEngine.ChaosClothAssetInteractor
-// 0x0010 (0x0038 - 0x0028)
-class UChaosClothAssetInteractor final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
-	void SetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
-	void SetIntValue(const class FString& PropertyName, int32 LODIndex, int32 Value);
-	void SetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float Value);
-	void SetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& Value);
-	void SetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& Value);
-	void SetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& Value);
-
-	TArray<class FString> GetAllProperties(int32 LODIndex) const;
-	float GetFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
-	float GetHighFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
-	int32 GetIntValue(const class FString& PropertyName, int32 LODIndex, int32 DefaultValue) const;
-	float GetLowFloatValue(const class FString& PropertyName, int32 LODIndex, float DefaultValue) const;
-	class FString GetStringValue(const class FString& PropertyName, int32 LODIndex, const class FString& DefaultValue) const;
-	struct FVector GetVectorValue(const class FString& PropertyName, int32 LODIndex, const struct FVector& DefaultValue) const;
-	struct FVector2D GetWeightedFloatValue(const class FString& PropertyName, int32 LODIndex, const struct FVector2D& DefaultValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ChaosClothAssetInteractor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ChaosClothAssetInteractor")
-	}
-	static class UChaosClothAssetInteractor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UChaosClothAssetInteractor>();
-	}
-};
+DUMPER7_ASSERTS_UChaosClothComponent;
 
 SDK_NAMESPACE_END

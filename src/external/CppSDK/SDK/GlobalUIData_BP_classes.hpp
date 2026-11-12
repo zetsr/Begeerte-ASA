@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ShooterGame_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -59,8 +59,8 @@ public:
 	TArray<class UTexture2D*>                     FuelOrAmmoHUDForegroundImageOverrides;             // 0x0E48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BPGetHUDElements_Module_FuelOrAmmo(int32 SlotIndex, int32 StateIndex, double progress, const class FString& MainText, const class FString& ExtendedInfoText, class UTexture2D* Icon, const struct FLinearColor& CustomBGColor, const struct FLinearColor& CustomProgressColor, int32 Style, const class FString& CustomRichText, double CustomRichTextScale, struct FHUDElement* OutHUDElement);
-	void BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int32 SlotOffset, int32 SlotSpan, int32 StateIndex, double progress, const class FString& ExtendedInfoText, struct FHUDElement* OutHUDElement);
+	void BPGetHUDElements_Module_FuelOrAmmo(int32 SlotIndex, int32 StateIndex, double Progress, const class FString& MainText, const class FString& ExtendedInfoText, class UTexture2D* Icon, const struct FLinearColor& CustomBGColor, const struct FLinearColor& CustomProgressColor, int32 Style, const class FString& CustomRichText, double CustomRichTextScale, struct FHUDElement* OutHUDElement);
+	void BPGetHUDElements_Module_FuelOrAmmo_ExtraBar(int32 SlotOffset, int32 SlotSpan, int32 StateIndex, double Progress, const class FString& ExtendedInfoText, struct FHUDElement* OutHUDElement);
 	void BPGetHUDElements_Module_FuelOrAmmo_Frame(const struct FHUDElement& InHUDElement, const struct FLinearColor& CustomColor, int32 Style, const class FString& CustomRichText, bool UseInElementTextColor, double CustomRichTextScale, struct FHUDElement* OutHUDElement);
 	void BPGetHUDElements_Module_Struggle(class APlayerController* ForPC, double StruggleProgressPercent, const class FString& RichTextOverride, class AActor* Instigator, TArray<struct FHUDElement>* Elements, struct FHUDRichTextOverlayData* OutHUDRichTextOverlay);
 
@@ -78,5 +78,6 @@ public:
 		return GetDefaultObjImpl<UGlobalUIData_BP_C>();
 	}
 };
+DUMPER7_ASSERTS_UGlobalUIData_BP_C;
 
 SDK_NAMESPACE_END

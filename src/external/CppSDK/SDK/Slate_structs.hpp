@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum Slate.EVirtualKeyboardTrigger
-// NumValues: 0x0004
-enum class EVirtualKeyboardTrigger : uint8
-{
-	OnFocusByPointer                         = 0,
-	OnAllFocusEvents                         = 1,
-	OnJustDontUseIt                          = 2,
-	EVirtualKeyboardTrigger_MAX              = 3,
-};
-
-// Enum Slate.EVirtualKeyboardDismissAction
-// NumValues: 0x0004
-enum class EVirtualKeyboardDismissAction : uint8
-{
-	TextChangeOnDismiss                      = 0,
-	TextCommitOnAccept                       = 1,
-	TextCommitOnDismiss                      = 2,
-	EVirtualKeyboardDismissAction_MAX        = 3,
-};
-
 // Enum Slate.ESelectionMode
 // NumValues: 0x0005
 enum class ESelectionMode : uint8
@@ -58,7 +38,7 @@ enum class ETableViewMode : uint8
 };
 
 // Enum Slate.EMultiBoxType
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EMultiBoxType : uint8
 {
 	MenuBar                                  = 0,
@@ -69,7 +49,8 @@ enum class EMultiBoxType : uint8
 	Menu                                     = 5,
 	ButtonRow                                = 6,
 	SlimHorizontalUniformToolBar             = 7,
-	EMultiBoxType_MAX                        = 8,
+	SlimWrappingToolBar                      = 8,
+	EMultiBoxType_MAX                        = 9,
 };
 
 // Enum Slate.EMultiBlockType
@@ -88,6 +69,25 @@ enum class EMultiBlockType : uint8
 	EMultiBlockType_MAX                      = 9,
 };
 
+// Enum Slate.EFontFacesLoadingPaintPolicy
+// NumValues: 0x0003
+enum class EFontFacesLoadingPaintPolicy : uint8
+{
+	DoNotPaint                               = 0,
+	PaintAvailableGlyphs                     = 1,
+	EFontFacesLoadingPaintPolicy_MAX         = 2,
+};
+
+// Enum Slate.ECustomizedToolMenuVisibility
+// NumValues: 0x0004
+enum class ECustomizedToolMenuVisibility : uint32
+{
+	None                                     = 0,
+	Visible                                  = 1,
+	Hidden                                   = 2,
+	ECustomizedToolMenuVisibility_MAX        = 3,
+};
+
 // Enum Slate.EInputPreProcessorType
 // NumValues: 0x0009
 enum class EInputPreProcessorType : uint8
@@ -103,35 +103,13 @@ enum class EInputPreProcessorType : uint8
 	EInputPreProcessorType_MAX               = 8,
 };
 
-// Enum Slate.EDescendantScrollDestination
-// NumValues: 0x0005
-enum class EDescendantScrollDestination : uint8
+// Enum Slate.EPopupLayoutMode
+// NumValues: 0x0003
+enum class EPopupLayoutMode : uint8
 {
-	IntoView                                 = 0,
-	TopOrLeft                                = 1,
-	Center                                   = 2,
-	BottomOrRight                            = 3,
-	EDescendantScrollDestination_MAX         = 4,
-};
-
-// Enum Slate.EScrollWhenFocusChanges
-// NumValues: 0x0004
-enum class EScrollWhenFocusChanges : uint8
-{
-	NoScroll                                 = 0,
-	InstantScroll                            = 1,
-	AnimatedScroll                           = 2,
-	EScrollWhenFocusChanges_MAX              = 3,
-};
-
-// Enum Slate.ECustomizedToolMenuVisibility
-// NumValues: 0x0004
-enum class ECustomizedToolMenuVisibility : uint32
-{
-	None                                     = 0,
-	Visible                                  = 1,
-	Hidden                                   = 2,
-	ECustomizedToolMenuVisibility_MAX        = 3,
+	Menu                                     = 0,
+	ToolTip                                  = 1,
+	EPopupLayoutMode_MAX                     = 2,
 };
 
 // Enum Slate.EUserInterfaceActionType
@@ -215,6 +193,27 @@ enum class EStretch : uint8
 	EStretch_MAX                             = 9,
 };
 
+// Enum Slate.EDescendantScrollDestination
+// NumValues: 0x0005
+enum class EDescendantScrollDestination : uint8
+{
+	IntoView                                 = 0,
+	TopOrLeft                                = 1,
+	Center                                   = 2,
+	BottomOrRight                            = 3,
+	EDescendantScrollDestination_MAX         = 4,
+};
+
+// Enum Slate.EScrollWhenFocusChanges
+// NumValues: 0x0004
+enum class EScrollWhenFocusChanges : uint8
+{
+	NoScroll                                 = 0,
+	InstantScroll                            = 1,
+	AnimatedScroll                           = 2,
+	EScrollWhenFocusChanges_MAX              = 3,
+};
+
 // Enum Slate.EProgressBarFillType
 // NumValues: 0x0008
 enum class EProgressBarFillType : uint8
@@ -236,6 +235,26 @@ enum class EProgressBarFillStyle : uint8
 	Mask                                     = 0,
 	Scale                                    = 1,
 	EProgressBarFillStyle_MAX                = 2,
+};
+
+// Enum Slate.EVirtualKeyboardTrigger
+// NumValues: 0x0004
+enum class EVirtualKeyboardTrigger : uint8
+{
+	OnFocusByPointer                         = 0,
+	OnAllFocusEvents                         = 1,
+	OnJustDontUseIt                          = 2,
+	EVirtualKeyboardTrigger_MAX              = 3,
+};
+
+// Enum Slate.EVirtualKeyboardDismissAction
+// NumValues: 0x0004
+enum class EVirtualKeyboardDismissAction : uint8
+{
+	TextChangeOnDismiss                      = 0,
+	TextCommitOnAccept                       = 1,
+	TextCommitOnDismiss                      = 2,
+	EVirtualKeyboardDismissAction_MAX        = 3,
 };
 
 // Enum Slate.EListItemAlignment
@@ -263,6 +282,56 @@ enum class EScrollIntoViewAlignment : uint8
 	EScrollIntoViewAlignment_MAX             = 4,
 };
 
+// ScriptStruct Slate.CustomizedToolMenuNameArray
+// 0x0010 (0x0010 - 0x0000)
+struct FCustomizedToolMenuNameArray final
+{
+public:
+	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
+
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
+
+// ScriptStruct Slate.CustomizedToolMenuSection
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuSection final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuSection;
+
+// ScriptStruct Slate.ToolMenuProfile
+// 0x0198 (0x0198 - 0x0000)
+struct FToolMenuProfile
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0008(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0058(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SuppressExtenders;                                 // 0x00A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0xE0];                                      // 0x00B8(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FToolMenuProfile;
+
+// ScriptStruct Slate.CustomizedToolMenu
+// 0x0060 (0x01F8 - 0x0198)
+struct FCustomizedToolMenu final : public FToolMenuProfile
+{
+public:
+	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x0198(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SectionOrder;                                      // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenu;
+
 // ScriptStruct Slate.VirtualKeyboardOptions
 // 0x0018 (0x0018 - 0x0000)
 struct FVirtualKeyboardOptions final
@@ -272,6 +341,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ConsoleHint;                                       // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
@@ -285,23 +355,7 @@ public:
 	uint8                                         bCmd : 1;                                          // 0x0018(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct Slate.CustomizedToolMenuEntry
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct Slate.CharRange
-// 0x0004 (0x0004 - 0x0000)
-struct FCharRange final
-{
-public:
-	uint16                                        First;                                             // 0x0000(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        Last;                                              // 0x0002(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FInputChord;
 
 // ScriptStruct Slate.Anchors
 // 0x0020 (0x0020 - 0x0000)
@@ -311,14 +365,7 @@ public:
 	struct FVector2D                              Minimum;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              Maximum;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct Slate.CharRangeList
-// 0x0010 (0x0010 - 0x0000)
-struct FCharRangeList final
-{
-public:
-	TArray<struct FCharRange>                     Ranges;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FAnchors;
 
 // ScriptStruct Slate.InputPreprocessorRegistrationKey
 // 0x0008 (0x0008 - 0x0000)
@@ -329,42 +376,25 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x0004(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInputPreprocessorRegistrationKey;
 
-// ScriptStruct Slate.CustomizedToolMenuSection
+// ScriptStruct Slate.CharRange
 // 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuSection final
+struct FCharRange final
 {
 public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        First;                                             // 0x0000(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        Last;                                              // 0x0002(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCharRange;
 
-// ScriptStruct Slate.CustomizedToolMenuNameArray
+// ScriptStruct Slate.CharRangeList
 // 0x0010 (0x0010 - 0x0000)
-struct FCustomizedToolMenuNameArray final
+struct FCharRangeList final
 {
 public:
-	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FCharRange>                     Ranges;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct Slate.ToolMenuProfile
-// 0x01A0 (0x01A0 - 0x0000)
-struct FToolMenuProfile
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0008(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0058(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FName>                           SuppressExtenders;                                 // 0x00A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0xE8];                                      // 0x00B8(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct Slate.CustomizedToolMenu
-// 0x0060 (0x0200 - 0x01A0)
-struct FCustomizedToolMenu final : public FToolMenuProfile
-{
-public:
-	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x01A0(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FName>                           SectionOrder;                                      // 0x01F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FCharRangeList;
 
 SDK_NAMESPACE_END

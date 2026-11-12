@@ -20,7 +20,6 @@ SDK_NAMESPACE_START
 class UPrimalItemArmorGeneric_C : public UPrimalItem_Base_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPDA_FoleyCollection_C*                 FoleyCollection;                                   // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -37,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmorGeneric_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmorGeneric_C;
 
 SDK_NAMESPACE_END

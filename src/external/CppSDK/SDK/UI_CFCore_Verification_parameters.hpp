@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "ENUM_CFCore_InputDevices_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "cfcore_structs.hpp"
+#include "ENUM_CFCore_InputDevices_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,6 +27,7 @@ struct UI_CFCore_Verification_C_BndEvt__Verification_UI_Code_UI_K2Node_Component
 public:
 	class FString                                 Digits;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_BndEvt__Verification_UI_Code_UI_K2Node_ComponentBoundEvent_3_OnDigitsFilled__DelegateSignature;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.Event Bind On Input Device Changed
 // 0x0008 (0x0008 - 0x0000)
@@ -35,6 +36,7 @@ struct UI_CFCore_Verification_C_Event_Bind_On_Input_Device_Changed final
 public:
 	class UUI_CFCore_StoreMenu_C*                 StoreMenuRef;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_Event_Bind_On_Input_Device_Changed;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.Event On Failed To Generate Auth Code
 // 0x0038 (0x0038 - 0x0000)
@@ -43,6 +45,7 @@ struct UI_CFCore_Verification_C_Event_On_Failed_To_Generate_Auth_Code final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_Event_On_Failed_To_Generate_Auth_Code;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.Event On Input Device Changed
 // 0x0001 (0x0001 - 0x0000)
@@ -51,6 +54,7 @@ struct UI_CFCore_Verification_C_Event_On_Input_Device_Changed final
 public:
 	ENUM_CFCore_InputDevices                      device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_Event_On_Input_Device_Changed;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.ExecuteUbergraph_UI_CFCore_Verification
 // 0x01A0 (0x01A0 - 0x0000)
@@ -58,12 +62,12 @@ struct UI_CFCore_Verification_C_ExecuteUbergraph_UI_CFCore_Verification final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0004(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0018(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x002C(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0040(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0054(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0068(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0004(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0018(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x002C(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0040(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0054(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0068(0x0014)(NoDestructor)
 	ENUM_CFCore_InputDevices                      Temp_byte_Variable;                                // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(ENUM_CFCore_InputDevices device)> K2Node_CreateDelegate_OutputDelegate;           // 0x0080(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -81,7 +85,7 @@ public:
 	ENUM_CFCore_InputDevices                      CallFunc_CheckPlayerInputDevices_UsingGamepad_;    // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_6;                    // 0x00E8(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_6;                    // 0x00E8(0x0014)(NoDestructor)
 	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCFCoreError                           K2Node_CustomEvent_error;                          // 0x0100(0x0038)(ConstParm)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -89,32 +93,35 @@ public:
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x015C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_15D[0x3];                                      // 0x015D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_7;                    // 0x0160(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_8;                    // 0x0174(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_9;                    // 0x0188(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_7;                    // 0x0160(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_8;                    // 0x0174(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_9;                    // 0x0188(0x0014)(NoDestructor)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_ExecuteUbergraph_UI_CFCore_Verification;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.OnKeyDown
-// 0x0150 (0x0150 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct UI_CFCore_Verification_C_OnKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0138(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_OnKeyDown;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.OnPreviewKeyDown
-// 0x0130 (0x0130 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct UI_CFCore_Verification_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_OnPreviewKeyDown;
 
 // Function UI_CFCore_Verification.UI_CFCore_Verification_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -123,6 +130,7 @@ struct UI_CFCore_Verification_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Verification_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

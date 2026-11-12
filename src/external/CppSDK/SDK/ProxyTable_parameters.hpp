@@ -26,6 +26,7 @@ public:
 	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProxyTableFunctionLibrary_EvaluateProxyAsset;
 
 // Function ProxyTable.ProxyTableFunctionLibrary.EvaluateProxyTable
 // 0x0020 (0x0020 - 0x0000)
@@ -37,6 +38,7 @@ public:
 	class FName                                   Key;                                               // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProxyTableFunctionLibrary_EvaluateProxyTable;
 
 // Function ProxyTable.ProxyTableFunctionLibrary.MakeLookupProxy
 // 0x0018 (0x0018 - 0x0000)
@@ -44,8 +46,9 @@ struct ProxyTableFunctionLibrary_MakeLookupProxy final
 {
 public:
 	class UProxyAsset*                            Proxy;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProxyTableFunctionLibrary_MakeLookupProxy;
 
 // Function ProxyTable.ProxyTableFunctionLibrary.MakeLookupProxyWithOverrideTable
 // 0x0020 (0x0020 - 0x0000)
@@ -54,8 +57,9 @@ struct ProxyTableFunctionLibrary_MakeLookupProxyWithOverrideTable final
 public:
 	class UProxyAsset*                            Proxy;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UProxyTable*                            ProxyTable;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProxyTableFunctionLibrary_MakeLookupProxyWithOverrideTable;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

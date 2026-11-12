@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void Acamelsaurus_Character_Base_BP_C::AddWater(double Amount, double* NewWaterAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("camelsaurus_Character_Base_BP_C", "AddWater");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "camelsaurus_Character_Base_BP_C", "AddWater", FuncInfo);
 
 	Params::camelsaurus_Character_Base_BP_C_AddWater Parms{};
 
@@ -47,10 +45,8 @@ void Acamelsaurus_Character_Base_BP_C::AddWater(double Amount, double* NewWaterA
 
 void Acamelsaurus_Character_Base_BP_C::ExecuteUbergraph_camelsaurus_Character_Base_BP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("camelsaurus_Character_Base_BP_C", "ExecuteUbergraph_camelsaurus_Character_Base_BP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "camelsaurus_Character_Base_BP_C", "ExecuteUbergraph_camelsaurus_Character_Base_BP", FuncInfo);
 
 	Params::camelsaurus_Character_Base_BP_C_ExecuteUbergraph_camelsaurus_Character_Base_BP Parms{};
 
@@ -65,10 +61,8 @@ void Acamelsaurus_Character_Base_BP_C::ExecuteUbergraph_camelsaurus_Character_Ba
 
 void Acamelsaurus_Character_Base_BP_C::OnRep_WaterAmount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("camelsaurus_Character_Base_BP_C", "OnRep_WaterAmount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "camelsaurus_Character_Base_BP_C", "OnRep_WaterAmount", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +73,8 @@ void Acamelsaurus_Character_Base_BP_C::OnRep_WaterAmount()
 
 void Acamelsaurus_Character_Base_BP_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("camelsaurus_Character_Base_BP_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "camelsaurus_Character_Base_BP_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +85,8 @@ void Acamelsaurus_Character_Base_BP_C::ReceiveBeginPlay()
 
 void Acamelsaurus_Character_Base_BP_C::UpdateWaterAmount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("camelsaurus_Character_Base_BP_C", "UpdateWaterAmount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "camelsaurus_Character_Base_BP_C", "UpdateWaterAmount", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -16,6 +16,30 @@
 
 SDK_NAMESPACE_START
 
+// Function GeometryFramework.DynamicMeshProcessorBlueprint.ProcessDynamicMesh
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bFailed                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicMeshProcessorBlueprint::ProcessDynamicMesh(class UDynamicMesh* TargetMesh, bool* bFailed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicMeshProcessorBlueprint", "ProcessDynamicMesh");
+
+	Params::DynamicMeshProcessorBlueprint_ProcessDynamicMesh Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bFailed != nullptr)
+		*bFailed = Parms.bFailed;
+}
+
+
 // Function GeometryFramework.BaseDynamicMeshComponent.ClearOverrideRenderMaterial
 // (RequiredAPI, Native, Public, BlueprintCallable)
 
@@ -25,6 +49,44 @@ void UBaseDynamicMeshComponent::ClearOverrideRenderMaterial()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BaseDynamicMeshComponent", "ClearOverrideRenderMaterial");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.ClearOverrideSecondaryWireframeRenderMaterial
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void UBaseDynamicMeshComponent::ClearOverrideSecondaryWireframeRenderMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "ClearOverrideSecondaryWireframeRenderMaterial");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.ClearOverrideWireframeRenderMaterial
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void UBaseDynamicMeshComponent::ClearOverrideWireframeRenderMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "ClearOverrideWireframeRenderMaterial");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -130,7 +192,7 @@ void UBaseDynamicMeshComponent::SetConstantOverrideColor(const struct FColor& Ne
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetDistanceFieldMode
-// (RequiredAPI, Native, Public, BlueprintCallable)
+// (Native, Public)
 // Parameters:
 // EDynamicMeshComponentDistanceFieldMode  NewDistFieldMode                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -267,6 +329,56 @@ void UBaseDynamicMeshComponent::SetOverrideRenderMaterial(class UMaterialInterfa
 		Func = Class->GetFunction("BaseDynamicMeshComponent", "SetOverrideRenderMaterial");
 
 	Params::BaseDynamicMeshComponent_SetOverrideRenderMaterial Parms{};
+
+	Parms.Material = Material;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideSecondaryWireframeRenderMaterial
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               Material                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseDynamicMeshComponent::SetOverrideSecondaryWireframeRenderMaterial(class UMaterialInterface* Material)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "SetOverrideSecondaryWireframeRenderMaterial");
+
+	Params::BaseDynamicMeshComponent_SetOverrideSecondaryWireframeRenderMaterial Parms{};
+
+	Parms.Material = Material;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideWireframeRenderMaterial
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               Material                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseDynamicMeshComponent::SetOverrideWireframeRenderMaterial(class UMaterialInterface* Material)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "SetOverrideWireframeRenderMaterial");
+
+	Params::BaseDynamicMeshComponent_SetOverrideWireframeRenderMaterial Parms{};
 
 	Parms.Material = Material;
 
@@ -455,7 +567,7 @@ struct FColor UBaseDynamicMeshComponent::GetConstantOverrideColor() const
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetDistanceFieldMode
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, Const)
 // Parameters:
 // EDynamicMeshComponentDistanceFieldMode  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -595,6 +707,56 @@ class UMaterialInterface* UBaseDynamicMeshComponent::GetOverrideRenderMaterial(i
 	Params::BaseDynamicMeshComponent_GetOverrideRenderMaterial Parms{};
 
 	Parms.MaterialIndex = MaterialIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.GetOverrideSecondaryWireframeRenderMaterial
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInterface* UBaseDynamicMeshComponent::GetOverrideSecondaryWireframeRenderMaterial() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "GetOverrideSecondaryWireframeRenderMaterial");
+
+	Params::BaseDynamicMeshComponent_GetOverrideSecondaryWireframeRenderMaterial Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryFramework.BaseDynamicMeshComponent.GetOverrideWireframeRenderMaterial
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInterface* UBaseDynamicMeshComponent::GetOverrideWireframeRenderMaterial() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "GetOverrideWireframeRenderMaterial");
+
+	Params::BaseDynamicMeshComponent_GetOverrideWireframeRenderMaterial Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -857,7 +1019,7 @@ void UDynamicMeshComponent::NotifyMeshVertexAttributesModified(bool bPositions, 
 
 
 // Function GeometryFramework.DynamicMeshComponent.SetAllowsGeometrySelection
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInAllowsGeometrySelection                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1041,7 +1203,7 @@ bool UDynamicMeshComponent::ValidateMaterialSlots(bool bCreateIfMissing, bool bD
 
 
 // Function GeometryFramework.DynamicMeshComponent.AllowsGeometrySelection
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

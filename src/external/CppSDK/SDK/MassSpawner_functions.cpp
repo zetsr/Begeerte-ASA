@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function MassSpawner.MassSpawner.ClearTemplates
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AMassSpawner::ClearTemplates()
 {
@@ -36,7 +36,7 @@ void AMassSpawner::ClearTemplates()
 
 
 // Function MassSpawner.MassSpawner.DoDespawning
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AMassSpawner::DoDespawning()
 {
@@ -55,7 +55,7 @@ void AMassSpawner::DoDespawning()
 
 
 // Function MassSpawner.MassSpawner.DoSpawning
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AMassSpawner::DoSpawning()
 {
@@ -99,7 +99,7 @@ void AMassSpawner::ScaleSpawningCount(float Scale)
 
 
 // Function MassSpawner.MassSpawner.UnloadConfig
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AMassSpawner::UnloadConfig()
 {
@@ -118,7 +118,7 @@ void AMassSpawner::UnloadConfig()
 
 
 // Function MassSpawner.MassSpawner.GetCount
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -143,7 +143,7 @@ int32 AMassSpawner::GetCount() const
 
 
 // Function MassSpawner.MassSpawner.GetSpawningCountScale
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function LiveLinkComponents.LiveLinkComponentController.SetControlledComponent
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class ULiveLinkRole>        InRoleClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UActorComponent*                  InComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -44,7 +44,7 @@ void ULiveLinkComponentController::SetControlledComponent(TSubclassOf<class ULiv
 
 
 // Function LiveLinkComponents.LiveLinkComponentController.SetSubjectRepresentation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FLiveLinkSubjectRepresentation&InSubjectRepresentation                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -69,7 +69,7 @@ void ULiveLinkComponentController::SetSubjectRepresentation(const struct FLiveLi
 
 
 // Function LiveLinkComponents.LiveLinkComponentController.GetControlledComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TSubclassOf<class ULiveLinkRole>        InRoleClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UActorComponent*                  ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

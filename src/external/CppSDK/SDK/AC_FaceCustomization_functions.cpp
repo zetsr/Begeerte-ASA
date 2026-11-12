@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UAC_FaceCustomization_C::ResetFaceWeights()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ResetFaceWeights");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ResetFaceWeights", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UAC_FaceCustomization_C::ResetFaceWeights()
 
 void UAC_FaceCustomization_C::SetParamsRecursively()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "SetParamsRecursively");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "SetParamsRecursively", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UAC_FaceCustomization_C::SetParamsRecursively()
 
 void UAC_FaceCustomization_C::ClearMaterialParamArrays()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ClearMaterialParamArrays");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ClearMaterialParamArrays", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UAC_FaceCustomization_C::ClearMaterialParamArrays()
 
 void UAC_FaceCustomization_C::UpdateSkinTextures()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "UpdateSkinTextures");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "UpdateSkinTextures", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +72,8 @@ void UAC_FaceCustomization_C::UpdateSkinTextures()
 
 void UAC_FaceCustomization_C::ClampFaceAlphas(TArray<double>& FaceCurrent, TArray<double>& FacePrev)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ClampFaceAlphas");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ClampFaceAlphas", FuncInfo);
 
 	Params::AC_FaceCustomization_C_ClampFaceAlphas Parms{};
 
@@ -102,10 +92,8 @@ void UAC_FaceCustomization_C::ClampFaceAlphas(TArray<double>& FaceCurrent, TArra
 
 void UAC_FaceCustomization_C::UpdateDeltaMaps()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "UpdateDeltaMaps");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "UpdateDeltaMaps", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +104,8 @@ void UAC_FaceCustomization_C::UpdateDeltaMaps()
 
 void UAC_FaceCustomization_C::UpdateFaceRegionValues()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "UpdateFaceRegionValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "UpdateFaceRegionValues", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -130,10 +116,8 @@ void UAC_FaceCustomization_C::UpdateFaceRegionValues()
 
 void UAC_FaceCustomization_C::InitMaterials()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "InitMaterials");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "InitMaterials", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +128,8 @@ void UAC_FaceCustomization_C::InitMaterials()
 
 void UAC_FaceCustomization_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +140,8 @@ void UAC_FaceCustomization_C::ReceiveBeginPlay()
 
 void UAC_FaceCustomization_C::ForceTick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ForceTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ForceTick", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +154,8 @@ void UAC_FaceCustomization_C::ForceTick()
 
 void UAC_FaceCustomization_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ReceiveTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ReceiveTick", FuncInfo);
 
 	Params::AC_FaceCustomization_C_ReceiveTick Parms{};
 
@@ -194,10 +172,8 @@ void UAC_FaceCustomization_C::ReceiveTick(float DeltaSeconds)
 
 void UAC_FaceCustomization_C::ExecuteUbergraph_AC_FaceCustomization(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "ExecuteUbergraph_AC_FaceCustomization");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "ExecuteUbergraph_AC_FaceCustomization", FuncInfo);
 
 	Params::AC_FaceCustomization_C_ExecuteUbergraph_AC_FaceCustomization Parms{};
 
@@ -214,10 +190,8 @@ void UAC_FaceCustomization_C::ExecuteUbergraph_AC_FaceCustomization(int32 EntryP
 
 void UAC_FaceCustomization_C::GetFaceEars(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceEars");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceEars", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceEars Parms{};
 
@@ -235,10 +209,8 @@ void UAC_FaceCustomization_C::GetFaceEars(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceJaw(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceJaw");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceJaw", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceJaw Parms{};
 
@@ -256,10 +228,8 @@ void UAC_FaceCustomization_C::GetFaceJaw(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceMouth(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceMouth");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceMouth", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceMouth Parms{};
 
@@ -277,10 +247,8 @@ void UAC_FaceCustomization_C::GetFaceMouth(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceNose(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceNose");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceNose", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceNose Parms{};
 
@@ -298,10 +266,8 @@ void UAC_FaceCustomization_C::GetFaceNose(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceEyes(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceEyes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceEyes", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceEyes Parms{};
 
@@ -319,10 +285,8 @@ void UAC_FaceCustomization_C::GetFaceEyes(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceBrows(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceBrows");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceBrows", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceBrows Parms{};
 
@@ -340,10 +304,8 @@ void UAC_FaceCustomization_C::GetFaceBrows(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceScalp(TArray<double>* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceScalp");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceScalp", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceScalp Parms{};
 
@@ -361,10 +323,8 @@ void UAC_FaceCustomization_C::GetFaceScalp(TArray<double>* Value) const
 
 void UAC_FaceCustomization_C::GetFaceA(EHuman_Male_Faces_Enum* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AC_FaceCustomization_C", "GetFaceA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AC_FaceCustomization_C", "GetFaceA", FuncInfo);
 
 	Params::AC_FaceCustomization_C_GetFaceA Parms{};
 

@@ -16,8 +16,70 @@
 
 SDK_NAMESPACE_START
 
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.ApplyDeltaToOffsetRootBone
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FOffsetRootBoneAnimNodeReference&OffsetRootBoneNode                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FVector&                   TranslationWorld                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuat&                     RotationWorld                                          (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAnimationWarpingLibrary::ApplyDeltaToOffsetRootBone(const struct FOffsetRootBoneAnimNodeReference& OffsetRootBoneNode, const struct FVector& TranslationWorld, const struct FQuat& RotationWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationWarpingLibrary", "ApplyDeltaToOffsetRootBone");
+
+	Params::AnimationWarpingLibrary_ApplyDeltaToOffsetRootBone Parms{};
+
+	Parms.OffsetRootBoneNode = std::move(OffsetRootBoneNode);
+	Parms.TranslationWorld = std::move(TranslationWorld);
+	Parms.RotationWorld = std::move(RotationWorld);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.ConvertToOffsetRootBoneNodePure
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FOffsetRootBoneAnimNodeReference*OffsetRootBoneNode                                     (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAnimationWarpingLibrary::ConvertToOffsetRootBoneNodePure(const struct FAnimNodeReference& Node, struct FOffsetRootBoneAnimNodeReference* OffsetRootBoneNode, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationWarpingLibrary", "ConvertToOffsetRootBoneNodePure");
+
+	Params::AnimationWarpingLibrary_ConvertToOffsetRootBoneNodePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OffsetRootBoneNode != nullptr)
+		*OffsetRootBoneNode = std::move(Parms.OffsetRootBoneNode);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
 // Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetCurveValueFromAnimation
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UAnimSequenceBase*          Animation                                              (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             CurveName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -52,8 +114,42 @@ bool UAnimationWarpingLibrary::GetCurveValueFromAnimation(const class UAnimSeque
 }
 
 
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetFloatValueFromCurve
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class UCurveFloat*                InCurve                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimationWarpingLibrary::GetFloatValueFromCurve(const class UCurveFloat* InCurve, float Time, float* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationWarpingLibrary", "GetFloatValueFromCurve");
+
+	Params::AnimationWarpingLibrary_GetFloatValueFromCurve Parms{};
+
+	Parms.InCurve = InCurve;
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetOffsetRootTransform
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -75,6 +171,40 @@ struct FTransform UAnimationWarpingLibrary::GetOffsetRootTransform(const struct 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetVectorValueFromCurve
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class UCurveVector*               InCurve                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimationWarpingLibrary::GetVectorValueFromCurve(const class UCurveVector* InCurve, float Time, struct FVector* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimationWarpingLibrary", "GetVectorValueFromCurve");
+
+	Params::AnimationWarpingLibrary_GetVectorValueFromCurve Parms{};
+
+	Parms.InCurve = InCurve;
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = std::move(Parms.OutValue);
 
 	return Parms.ReturnValue;
 }

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_DmgMetal_TekSword_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_Melee_DmgMetal_TekSword_C;
 
 SDK_NAMESPACE_END

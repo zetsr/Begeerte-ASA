@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Propellant_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Propellant_C;
 
 SDK_NAMESPACE_END

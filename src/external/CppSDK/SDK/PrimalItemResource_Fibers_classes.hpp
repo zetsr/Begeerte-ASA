@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Fibers_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Fibers_C;
 
 SDK_NAMESPACE_END

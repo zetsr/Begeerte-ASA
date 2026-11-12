@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Berry_Mejoberry_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_Berry_Mejoberry_C;
 
 SDK_NAMESPACE_END

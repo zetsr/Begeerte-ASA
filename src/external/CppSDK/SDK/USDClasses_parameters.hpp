@@ -17,6 +17,127 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function USDClasses.UsdDrawModeComponent.SetBoundsColor
+// 0x0010 (0x0010 - 0x0000)
+struct UsdDrawModeComponent_SetBoundsColor final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetBoundsColor;
+
+// Function USDClasses.UsdDrawModeComponent.SetBoundsMax
+// 0x0018 (0x0018 - 0x0000)
+struct UsdDrawModeComponent_SetBoundsMax final
+{
+public:
+	struct FVector                                NewMax;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetBoundsMax;
+
+// Function USDClasses.UsdDrawModeComponent.SetBoundsMin
+// 0x0018 (0x0018 - 0x0000)
+struct UsdDrawModeComponent_SetBoundsMin final
+{
+public:
+	struct FVector                                NewMin;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetBoundsMin;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardGeometry
+// 0x0004 (0x0004 - 0x0000)
+struct UsdDrawModeComponent_SetCardGeometry final
+{
+public:
+	EUsdModelCardGeometry                         NewGeometry;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardGeometry;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureXNeg
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureXNeg final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureXNeg;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureXPos
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureXPos final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureXPos;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureYNeg
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureYNeg final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureYNeg;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureYPos
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureYPos final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureYPos;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureZNeg
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureZNeg final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureZNeg;
+
+// Function USDClasses.UsdDrawModeComponent.SetCardTextureZPos
+// 0x0008 (0x0008 - 0x0000)
+struct UsdDrawModeComponent_SetCardTextureZPos final
+{
+public:
+	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetCardTextureZPos;
+
+// Function USDClasses.UsdDrawModeComponent.SetDrawMode
+// 0x0004 (0x0004 - 0x0000)
+struct UsdDrawModeComponent_SetDrawMode final
+{
+public:
+	EUsdDrawMode                                  NewDrawMode;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetDrawMode;
+
+// Function USDClasses.UsdDrawModeComponent.SetTextureForFace
+// 0x0010 (0x0010 - 0x0000)
+struct UsdDrawModeComponent_SetTextureForFace final
+{
+public:
+	EUsdModelCardFace                             Face;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_SetTextureForFace;
+
+// Function USDClasses.UsdDrawModeComponent.GetTextureForFace
+// 0x0010 (0x0010 - 0x0000)
+struct UsdDrawModeComponent_GetTextureForFace final
+{
+public:
+	EUsdModelCardFace                             Face;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UsdDrawModeComponent_GetTextureForFace;
+
 // Function USDClasses.UsdAssetCache2.AddAssetReference
 // 0x0018 (0x0018 - 0x0000)
 struct UsdAssetCache2_AddAssetReference final
@@ -27,6 +148,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_AddAssetReference;
 
 // Function USDClasses.UsdAssetCache2.CacheAsset
 // 0x0020 (0x0020 - 0x0000)
@@ -37,6 +159,7 @@ public:
 	class UObject*                                Asset;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	const class UObject*                          Referencer;                                        // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_CacheAsset;
 
 // Function USDClasses.UsdAssetCache2.CanRemoveAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -47,6 +170,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_CanRemoveAsset;
 
 // Function USDClasses.UsdAssetCache2.GetCachedAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -56,6 +180,7 @@ public:
 	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetCachedAsset;
 
 // Function USDClasses.UsdAssetCache2.RemoveAllAssetReferences
 // 0x0010 (0x0010 - 0x0000)
@@ -66,6 +191,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_RemoveAllAssetReferences;
 
 // Function USDClasses.UsdAssetCache2.RemoveAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -75,6 +201,7 @@ public:
 	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_RemoveAsset;
 
 // Function USDClasses.UsdAssetCache2.RemoveAssetReference
 // 0x0018 (0x0018 - 0x0000)
@@ -86,6 +213,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_RemoveAssetReference;
 
 // Function USDClasses.UsdAssetCache2.TouchAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -97,6 +225,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_TouchAsset;
 
 // Function USDClasses.UsdAssetCache2.GetAllAssetHashes
 // 0x0010 (0x0010 - 0x0000)
@@ -105,6 +234,7 @@ struct UsdAssetCache2_GetAllAssetHashes final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetAllAssetHashes;
 
 // Function USDClasses.UsdAssetCache2.GetAllCachedAssetPaths
 // 0x0010 (0x0010 - 0x0000)
@@ -113,6 +243,7 @@ struct UsdAssetCache2_GetAllCachedAssetPaths final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetAllCachedAssetPaths;
 
 // Function USDClasses.UsdAssetCache2.GetAllLoadedAssets
 // 0x0010 (0x0010 - 0x0000)
@@ -121,6 +252,7 @@ struct UsdAssetCache2_GetAllLoadedAssets final
 public:
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetAllLoadedAssets;
 
 // Function USDClasses.UsdAssetCache2.GetHashForAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -130,6 +262,7 @@ public:
 	const class UObject*                          Asset;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetHashForAsset;
 
 // Function USDClasses.UsdAssetCache2.GetNumAssets
 // 0x0004 (0x0004 - 0x0000)
@@ -138,6 +271,7 @@ struct UsdAssetCache2_GetNumAssets final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache2_GetNumAssets;
 
 // Function USDClasses.UsdAssetCache2.IsAssetOwnedByCache
 // 0x0018 (0x0018 - 0x0000)
@@ -148,6 +282,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache2_IsAssetOwnedByCache;
 
 // Function USDClasses.UsdAssetCache3.AddAssetReferencer
 // 0x0018 (0x0018 - 0x0000)
@@ -159,6 +294,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_AddAssetReferencer;
 
 // Function USDClasses.UsdAssetCache3.CacheAsset
 // 0x0038 (0x0038 - 0x0000)
@@ -169,6 +305,7 @@ public:
 	struct FSoftObjectPath                        AssetPath;                                         // 0x0010(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	const class UObject*                          Referencer;                                        // 0x0030(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_CacheAsset;
 
 // Function USDClasses.UsdAssetCache3.DeleteUnreferencedAssets
 // 0x0001 (0x0001 - 0x0000)
@@ -177,6 +314,7 @@ struct UsdAssetCache3_DeleteUnreferencedAssets final
 public:
 	bool                                          bShowConfirmation;                                 // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_DeleteUnreferencedAssets;
 
 // Function USDClasses.UsdAssetCache3.GetOrCreateCachedAsset
 // 0x0040 (0x0040 - 0x0000)
@@ -192,6 +330,7 @@ public:
 	const class UObject*                          Referencer;                                        // 0x0030(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetOrCreateCachedAsset;
 
 // Function USDClasses.UsdAssetCache3.RemoveAllAssetReferencers
 // 0x0001 (0x0001 - 0x0000)
@@ -200,6 +339,7 @@ struct UsdAssetCache3_RemoveAllAssetReferencers final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_RemoveAllAssetReferencers;
 
 // Function USDClasses.UsdAssetCache3.RemoveAllReferencerAssets
 // 0x0010 (0x0010 - 0x0000)
@@ -210,6 +350,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_RemoveAllReferencerAssets;
 
 // Function USDClasses.UsdAssetCache3.RemoveAllReferencersForAsset
 // 0x0010 (0x0010 - 0x0000)
@@ -220,6 +361,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_RemoveAllReferencersForAsset;
 
 // Function USDClasses.UsdAssetCache3.RemoveAssetReferencer
 // 0x0018 (0x0018 - 0x0000)
@@ -231,6 +373,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_RemoveAssetReferencer;
 
 // Function USDClasses.UsdAssetCache3.SetAssetDeletable
 // 0x0010 (0x0010 - 0x0000)
@@ -241,6 +384,7 @@ public:
 	bool                                          bIsDeletable;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_SetAssetDeletable;
 
 // Function USDClasses.UsdAssetCache3.StopTrackingAsset
 // 0x0030 (0x0030 - 0x0000)
@@ -250,6 +394,7 @@ public:
 	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_StopTrackingAsset;
 
 // Function USDClasses.UsdAssetCache3.GetAllTrackedAssets
 // 0x0050 (0x0050 - 0x0000)
@@ -258,6 +403,7 @@ struct UsdAssetCache3_GetAllTrackedAssets final
 public:
 	TMap<class FString, struct FSoftObjectPath>   ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetAllTrackedAssets;
 
 // Function USDClasses.UsdAssetCache3.GetCachedAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -267,6 +413,7 @@ public:
 	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetCachedAsset;
 
 // Function USDClasses.UsdAssetCache3.GetCachedAssetPath
 // 0x0030 (0x0030 - 0x0000)
@@ -276,6 +423,7 @@ public:
 	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetCachedAssetPath;
 
 // Function USDClasses.UsdAssetCache3.GetHashForAsset
 // 0x0030 (0x0030 - 0x0000)
@@ -285,6 +433,7 @@ public:
 	struct FSoftObjectPath                        AssetPath;                                         // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetHashForAsset;
 
 // Function USDClasses.UsdAssetCache3.GetNumAssets
 // 0x0004 (0x0004 - 0x0000)
@@ -293,6 +442,7 @@ struct UsdAssetCache3_GetNumAssets final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_UsdAssetCache3_GetNumAssets;
 
 // Function USDClasses.UsdAssetCache3.IsAssetDeletable
 // 0x0010 (0x0010 - 0x0000)
@@ -303,6 +453,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_IsAssetDeletable;
 
 // Function USDClasses.UsdAssetCache3.IsAssetTrackedByCache
 // 0x0028 (0x0028 - 0x0000)
@@ -313,6 +464,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_UsdAssetCache3_IsAssetTrackedByCache;
 
 // Function USDClasses.UsdAssetCache3.LoadAndGetAllTrackedAssets
 // 0x0050 (0x0050 - 0x0000)
@@ -321,114 +473,7 @@ struct UsdAssetCache3_LoadAndGetAllTrackedAssets final
 public:
 	TMap<class FString, class UObject*>           ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsColor
-// 0x0010 (0x0010 - 0x0000)
-struct UsdDrawModeComponent_SetBoundsColor final
-{
-public:
-	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsMax
-// 0x0018 (0x0018 - 0x0000)
-struct UsdDrawModeComponent_SetBoundsMax final
-{
-public:
-	struct FVector                                NewMax;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetBoundsMin
-// 0x0018 (0x0018 - 0x0000)
-struct UsdDrawModeComponent_SetBoundsMin final
-{
-public:
-	struct FVector                                NewMin;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardGeometry
-// 0x0004 (0x0004 - 0x0000)
-struct UsdDrawModeComponent_SetCardGeometry final
-{
-public:
-	EUsdModelCardGeometry                         NewGeometry;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureXNeg
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureXNeg final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureXPos
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureXPos final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureYNeg
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureYNeg final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureYPos
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureYPos final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureZNeg
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureZNeg final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetCardTextureZPos
-// 0x0008 (0x0008 - 0x0000)
-struct UsdDrawModeComponent_SetCardTextureZPos final
-{
-public:
-	class UTexture2D*                             NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetDrawMode
-// 0x0004 (0x0004 - 0x0000)
-struct UsdDrawModeComponent_SetDrawMode final
-{
-public:
-	EUsdDrawMode                                  NewDrawMode;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.SetTextureForFace
-// 0x0010 (0x0010 - 0x0000)
-struct UsdDrawModeComponent_SetTextureForFace final
-{
-public:
-	EUsdModelCardFace                             Face;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function USDClasses.UsdDrawModeComponent.GetTextureForFace
-// 0x0010 (0x0010 - 0x0000)
-struct UsdDrawModeComponent_GetTextureForFace final
-{
-public:
-	EUsdModelCardFace                             Face;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_UsdAssetCache3_LoadAndGetAllTrackedAssets;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

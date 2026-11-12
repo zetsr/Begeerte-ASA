@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UHostSession_Switch_C::BndEvt__HostSession_Switch_EasyPresetButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BndEvt__HostSession_Switch_EasyPresetButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BndEvt__HostSession_Switch_EasyPresetButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UHostSession_Switch_C::BndEvt__HostSession_Switch_EasyPresetButton_K2Node_C
 
 void UHostSession_Switch_C::BndEvt__HostSession_Switch_HardPresetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BndEvt__HostSession_Switch_HardPresetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BndEvt__HostSession_Switch_HardPresetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UHostSession_Switch_C::BndEvt__HostSession_Switch_HardPresetButton_K2Node_C
 
 void UHostSession_Switch_C::BndEvt__HostSession_Switch_MediumPresetButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BndEvt__HostSession_Switch_MediumPresetButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BndEvt__HostSession_Switch_MediumPresetButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UHostSession_Switch_C::BndEvt__HostSession_Switch_MediumPresetButton_K2Node
 
 void UHostSession_Switch_C::BPOnUpdateSavedDataButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BPOnUpdateSavedDataButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BPOnUpdateSavedDataButtons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +71,8 @@ void UHostSession_Switch_C::BPOnUpdateSavedDataButtons()
 
 TArray<struct FInstalledMod> UHostSession_Switch_C::BPPopulateMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BPPopulateMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BPPopulateMods", FuncInfo);
 
 	Params::HostSession_Switch_C_BPPopulateMods Parms{};
 
@@ -97,10 +87,8 @@ TArray<struct FInstalledMod> UHostSession_Switch_C::BPPopulateMods()
 
 void UHostSession_Switch_C::BPPostPopulateMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "BPPostPopulateMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "BPPostPopulateMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,10 +99,8 @@ void UHostSession_Switch_C::BPPostPopulateMods()
 
 void UHostSession_Switch_C::ConfirmedChangeSettingsToEasy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "ConfirmedChangeSettingsToEasy");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "ConfirmedChangeSettingsToEasy", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +111,8 @@ void UHostSession_Switch_C::ConfirmedChangeSettingsToEasy()
 
 void UHostSession_Switch_C::ConfirmedChangeSettingsToHard()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "ConfirmedChangeSettingsToHard");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "ConfirmedChangeSettingsToHard", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +123,8 @@ void UHostSession_Switch_C::ConfirmedChangeSettingsToHard()
 
 void UHostSession_Switch_C::ConfirmedChangeSettingsToMedium()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "ConfirmedChangeSettingsToMedium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "ConfirmedChangeSettingsToMedium", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +135,8 @@ void UHostSession_Switch_C::ConfirmedChangeSettingsToMedium()
 
 void UHostSession_Switch_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +149,8 @@ void UHostSession_Switch_C::Construct()
 
 void UHostSession_Switch_C::DoSettingsMatchAnyDefaults(bool* Matches)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "DoSettingsMatchAnyDefaults");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "DoSettingsMatchAnyDefaults", FuncInfo);
 
 	Params::HostSession_Switch_C_DoSettingsMatchAnyDefaults Parms{};
 
@@ -190,10 +168,8 @@ void UHostSession_Switch_C::DoSettingsMatchAnyDefaults(bool* Matches)
 
 void UHostSession_Switch_C::ExecuteUbergraph_HostSession_Switch(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "ExecuteUbergraph_HostSession_Switch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "ExecuteUbergraph_HostSession_Switch", FuncInfo);
 
 	Params::HostSession_Switch_C_ExecuteUbergraph_HostSession_Switch Parms{};
 
@@ -210,10 +186,8 @@ void UHostSession_Switch_C::ExecuteUbergraph_HostSession_Switch(int32 EntryPoint
 
 class UScrollBox* UHostSession_Switch_C::GetMapSelectScrollBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "GetMapSelectScrollBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "GetMapSelectScrollBox", FuncInfo);
 
 	Params::HostSession_Switch_C_GetMapSelectScrollBox Parms{};
 
@@ -230,10 +204,8 @@ class UScrollBox* UHostSession_Switch_C::GetMapSelectScrollBox()
 
 int32 UHostSession_Switch_C::GetSelectedMapIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "GetSelectedMapIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "GetSelectedMapIndex", FuncInfo);
 
 	Params::HostSession_Switch_C_GetSelectedMapIndex Parms{};
 
@@ -250,10 +222,8 @@ int32 UHostSession_Switch_C::GetSelectedMapIndex()
 
 bool UHostSession_Switch_C::IsInMapSelectView()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "IsInMapSelectView");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "IsInMapSelectView", FuncInfo);
 
 	Params::HostSession_Switch_C_IsInMapSelectView Parms{};
 
@@ -268,10 +238,8 @@ bool UHostSession_Switch_C::IsInMapSelectView()
 
 void UHostSession_Switch_C::MoveToMainScreen()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "MoveToMainScreen");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "MoveToMainScreen", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +250,8 @@ void UHostSession_Switch_C::MoveToMainScreen()
 
 void UHostSession_Switch_C::MoveToMapScreen()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "MoveToMapScreen");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "MoveToMapScreen", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -298,10 +264,8 @@ void UHostSession_Switch_C::MoveToMapScreen()
 
 void UHostSession_Switch_C::OnGetInstalledMods(const TArray<struct FInstalledMod>& installed_mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "OnGetInstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "OnGetInstalledMods", FuncInfo);
 
 	Params::HostSession_Switch_C_OnGetInstalledMods Parms{};
 
@@ -318,10 +282,8 @@ void UHostSession_Switch_C::OnGetInstalledMods(const TArray<struct FInstalledMod
 
 void UHostSession_Switch_C::OnIsAuthenticated(bool is_authenticated)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "OnIsAuthenticated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "OnIsAuthenticated", FuncInfo);
 
 	Params::HostSession_Switch_C_OnIsAuthenticated Parms{};
 
@@ -338,10 +300,8 @@ void UHostSession_Switch_C::OnIsAuthenticated(bool is_authenticated)
 
 void UHostSession_Switch_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "PreConstruct", FuncInfo);
 
 	Params::HostSession_Switch_C_PreConstruct Parms{};
 
@@ -356,10 +316,8 @@ void UHostSession_Switch_C::PreConstruct(bool IsDesignTime)
 
 void UHostSession_Switch_C::SelectMapButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "SelectMapButtonPressed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "SelectMapButtonPressed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -372,10 +330,8 @@ void UHostSession_Switch_C::SelectMapButtonPressed()
 
 void UHostSession_Switch_C::SetMainMapSelectEntry(int32 MapIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "SetMainMapSelectEntry");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "SetMainMapSelectEntry", FuncInfo);
 
 	Params::HostSession_Switch_C_SetMainMapSelectEntry Parms{};
 
@@ -392,10 +348,8 @@ void UHostSession_Switch_C::SetMainMapSelectEntry(int32 MapIndex)
 
 void UHostSession_Switch_C::SetSelectedMapIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "SetSelectedMapIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "SetSelectedMapIndex", FuncInfo);
 
 	Params::HostSession_Switch_C_SetSelectedMapIndex Parms{};
 
@@ -410,10 +364,8 @@ void UHostSession_Switch_C::SetSelectedMapIndex(int32 Index_0)
 
 void UHostSession_Switch_C::SetupMapSelectEntries()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "SetupMapSelectEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "SetupMapSelectEntries", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -427,10 +379,8 @@ void UHostSession_Switch_C::SetupMapSelectEntries()
 
 void UHostSession_Switch_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HostSession_Switch_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HostSession_Switch_C", "Tick", FuncInfo);
 
 	Params::HostSession_Switch_C_Tick Parms{};
 

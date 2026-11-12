@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_FlameArrow_Gauntlet_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_FlameArrow_Gauntlet_C;
 
 SDK_NAMESPACE_END

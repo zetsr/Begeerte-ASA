@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,11 +23,12 @@ struct FSTRUCT_CFCore_UITheme final
 public:
 	class UFont*                                  FontFamily1_25_10CCA6794CD3D9621B78F69194E2D2AA;   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             BackgroundImage_2_FF4EA6314F51CC1F07654D9615506AE0; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            FontColor1_8_0B07C5954DE41E8F3DD1319E9E8C7909;     // 0x0010(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            FontColor2_11_255609DC485710774F3174A4A632EB3F;    // 0x0024(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            FontColor3_12_929F2300401240C6979460AFC19A2B94;    // 0x0038(0x0014)(Edit, BlueprintVisible)
+	struct FSlateColor                            FontColor1_8_0B07C5954DE41E8F3DD1319E9E8C7909;     // 0x0010(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            FontColor2_11_255609DC485710774F3174A4A632EB3F;    // 0x0024(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	struct FSlateColor                            FontColor3_12_929F2300401240C6979460AFC19A2B94;    // 0x0038(0x0014)(Edit, BlueprintVisible, NoDestructor)
 	struct FLinearColor                           WindowBackgroundColor1_19_B6B295314B9EE41BAF53E89956F30D90; // 0x004C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           WindowBackgroundColor2_21_92AB1C9645E714A5E67EEFA87D627747; // 0x005C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_FSTRUCT_CFCore_UITheme;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 bool ABuff_TekArmor_C::AllowPostProcessEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "AllowPostProcessEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "AllowPostProcessEffect", FuncInfo);
 
 	Params::Buff_TekArmor_C_AllowPostProcessEffect Parms{};
 
@@ -43,10 +41,8 @@ bool ABuff_TekArmor_C::AllowPostProcessEffect()
 
 void ABuff_TekArmor_C::AreAnyTekAbilitiesActive(bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "AreAnyTekAbilitiesActive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "AreAnyTekAbilitiesActive", FuncInfo);
 
 	Params::Buff_TekArmor_C_AreAnyTekAbilitiesActive Parms{};
 
@@ -64,10 +60,8 @@ void ABuff_TekArmor_C::AreAnyTekAbilitiesActive(bool* Result)
 
 void ABuff_TekArmor_C::BPActivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "BPActivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "BPActivated", FuncInfo);
 
 	Params::Buff_TekArmor_C_BPActivated Parms{};
 
@@ -84,10 +78,8 @@ void ABuff_TekArmor_C::BPActivated(class AActor* ForInstigator)
 
 void ABuff_TekArmor_C::BPDeactivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "BPDeactivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "BPDeactivated", FuncInfo);
 
 	Params::Buff_TekArmor_C_BPDeactivated Parms{};
 
@@ -104,10 +96,8 @@ void ABuff_TekArmor_C::BPDeactivated(class AActor* ForInstigator)
 
 void ABuff_TekArmor_C::BPSetupForInstigator(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "BPSetupForInstigator");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "BPSetupForInstigator", FuncInfo);
 
 	Params::Buff_TekArmor_C_BPSetupForInstigator Parms{};
 
@@ -125,10 +115,8 @@ void ABuff_TekArmor_C::BPSetupForInstigator(class AActor* ForInstigator)
 
 void ABuff_TekArmor_C::CanUseTekAbility(bool bNotifyIfOutOfElement, bool* bResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "CanUseTekAbility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "CanUseTekAbility", FuncInfo);
 
 	Params::Buff_TekArmor_C_CanUseTekAbility Parms{};
 
@@ -149,10 +137,8 @@ void ABuff_TekArmor_C::CanUseTekAbility(bool bNotifyIfOutOfElement, bool* bResul
 
 void ABuff_TekArmor_C::check_genesis_restrictions_for_player(class APrimalCharacter* Player, bool* is_restricted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "check genesis restrictions for player");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "check genesis restrictions for player", FuncInfo);
 
 	Params::Buff_TekArmor_C_check_genesis_restrictions_for_player Parms{};
 
@@ -170,10 +156,8 @@ void ABuff_TekArmor_C::check_genesis_restrictions_for_player(class APrimalCharac
 
 void ABuff_TekArmor_C::CheckForArmorRef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "CheckForArmorRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "CheckForArmorRef", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -187,10 +171,8 @@ void ABuff_TekArmor_C::CheckForArmorRef()
 
 void ABuff_TekArmor_C::Client_Consume_Element_After_Time(double DeltaTime, int32 elementCost)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Client_Consume Element After Time");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Client_Consume Element After Time", FuncInfo);
 
 	Params::Buff_TekArmor_C_Client_Consume_Element_After_Time Parms{};
 
@@ -209,10 +191,8 @@ void ABuff_TekArmor_C::Client_Consume_Element_After_Time(double DeltaTime, int32
 
 void ABuff_TekArmor_C::DisplayTekArmorMessage(const class FString& Message, class USoundBase* Sound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "DisplayTekArmorMessage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "DisplayTekArmorMessage", FuncInfo);
 
 	Params::Buff_TekArmor_C_DisplayTekArmorMessage Parms{};
 
@@ -230,10 +210,8 @@ void ABuff_TekArmor_C::DisplayTekArmorMessage(const class FString& Message, clas
 
 void ABuff_TekArmor_C::Equipped_SetToMaxElement(EPrimalEquipmentType ItemSlot)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Equipped_SetToMaxElement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Equipped_SetToMaxElement", FuncInfo);
 
 	Params::Buff_TekArmor_C_Equipped_SetToMaxElement Parms{};
 
@@ -251,10 +229,8 @@ void ABuff_TekArmor_C::Equipped_SetToMaxElement(EPrimalEquipmentType ItemSlot)
 
 void ABuff_TekArmor_C::Equipped_TryToDecreaseElement(int32 AmountToDecreaseBy, EPrimalEquipmentType ItemSlot)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Equipped_TryToDecreaseElement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Equipped_TryToDecreaseElement", FuncInfo);
 
 	Params::Buff_TekArmor_C_Equipped_TryToDecreaseElement Parms{};
 
@@ -272,10 +248,8 @@ void ABuff_TekArmor_C::Equipped_TryToDecreaseElement(int32 AmountToDecreaseBy, E
 
 void ABuff_TekArmor_C::ExecuteUbergraph_Buff_TekArmor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "ExecuteUbergraph_Buff_TekArmor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "ExecuteUbergraph_Buff_TekArmor", FuncInfo);
 
 	Params::Buff_TekArmor_C_ExecuteUbergraph_Buff_TekArmor Parms{};
 
@@ -292,10 +266,8 @@ void ABuff_TekArmor_C::ExecuteUbergraph_Buff_TekArmor(int32 EntryPoint)
 
 void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Get DefaultTekBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Get DefaultTekBuff", FuncInfo);
 
 	Params::Buff_TekArmor_C_Get_DefaultTekBuff Parms{};
 
@@ -313,10 +285,8 @@ void ABuff_TekArmor_C::Get_DefaultTekBuff(class ABuff_TekArmor_C** ref)
 
 void ABuff_TekArmor_C::Get_Is_Player_in_SealedSpace(bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Get Is Player in SealedSpace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Get Is Player in SealedSpace", FuncInfo);
 
 	Params::Buff_TekArmor_C_Get_Is_Player_in_SealedSpace Parms{};
 
@@ -334,10 +304,8 @@ void ABuff_TekArmor_C::Get_Is_Player_in_SealedSpace(bool* Result)
 
 void ABuff_TekArmor_C::Get_Ref_Owning_PlayerController(class AShooterPlayerController** Controller)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Get Ref Owning PlayerController");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Get Ref Owning PlayerController", FuncInfo);
 
 	Params::Buff_TekArmor_C_Get_Ref_Owning_PlayerController Parms{};
 
@@ -355,10 +323,8 @@ void ABuff_TekArmor_C::Get_Ref_Owning_PlayerController(class AShooterPlayerContr
 
 void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementComponent** Movement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Get Ref Owning PlayerMovement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Get Ref Owning PlayerMovement", FuncInfo);
 
 	Params::Buff_TekArmor_C_Get_Ref_Owning_PlayerMovement Parms{};
 
@@ -376,10 +342,8 @@ void ABuff_TekArmor_C::Get_Ref_Owning_PlayerMovement(class UCharacterMovementCom
 
 void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCameraManager** ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Get RefOwningPlayer Camera Manager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Get RefOwningPlayer Camera Manager", FuncInfo);
 
 	Params::Buff_TekArmor_C_Get_RefOwningPlayer_Camera_Manager Parms{};
 
@@ -397,10 +361,8 @@ void ABuff_TekArmor_C::Get_RefOwningPlayer_Camera_Manager(class AShooterPlayerCa
 
 void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "GetDefaultPlayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "GetDefaultPlayer", FuncInfo);
 
 	Params::Buff_TekArmor_C_GetDefaultPlayer Parms{};
 
@@ -418,10 +380,8 @@ void ABuff_TekArmor_C::GetDefaultPlayer(class APrimalCharacter** ref)
 
 void ABuff_TekArmor_C::GetRef_OwningPlayer(class AShooterCharacter** Player)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "GetRef_OwningPlayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "GetRef_OwningPlayer", FuncInfo);
 
 	Params::Buff_TekArmor_C_GetRef_OwningPlayer Parms{};
 
@@ -439,10 +399,8 @@ void ABuff_TekArmor_C::GetRef_OwningPlayer(class AShooterCharacter** Player)
 
 void ABuff_TekArmor_C::GetRelatedTekArmorRef(class UPrimalItemArmor_Base_Tek_C** tekArmorRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "GetRelatedTekArmorRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "GetRelatedTekArmorRef", FuncInfo);
 
 	Params::Buff_TekArmor_C_GetRelatedTekArmorRef Parms{};
 
@@ -460,10 +418,8 @@ void ABuff_TekArmor_C::GetRelatedTekArmorRef(class UPrimalItemArmor_Base_Tek_C**
 
 void ABuff_TekArmor_C::HasRequiredEngrams(bool* HasEngrams)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "HasRequiredEngrams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "HasRequiredEngrams", FuncInfo);
 
 	Params::Buff_TekArmor_C_HasRequiredEngrams Parms{};
 
@@ -482,10 +438,8 @@ void ABuff_TekArmor_C::HasRequiredEngrams(bool* HasEngrams)
 
 void ABuff_TekArmor_C::HideBoostIcon(bool* ShouldSet, bool* WithValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "HideBoostIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "HideBoostIcon", FuncInfo);
 
 	Params::Buff_TekArmor_C_HideBoostIcon Parms{};
 
@@ -506,10 +460,8 @@ void ABuff_TekArmor_C::HideBoostIcon(bool* ShouldSet, bool* WithValue)
 
 void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0", FuncInfo);
 
 	Params::Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0 Parms{};
 
@@ -526,10 +478,8 @@ void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0(con
 
 void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1", FuncInfo);
 
 	Params::Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1 Parms{};
 
@@ -546,10 +496,8 @@ void ABuff_TekArmor_C::InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1(con
 
 void ABuff_TekArmor_C::Is_Restricted_Because_Of_Genesis_Map(bool* restricted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Is Restricted Because Of Genesis Map");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Is Restricted Because Of Genesis Map", FuncInfo);
 
 	Params::Buff_TekArmor_C_Is_Restricted_Because_Of_Genesis_Map Parms{};
 
@@ -567,10 +515,8 @@ void ABuff_TekArmor_C::Is_Restricted_Because_Of_Genesis_Map(bool* restricted)
 
 void ABuff_TekArmor_C::IsAbilityValid(bool* OutValid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsAbilityValid");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsAbilityValid", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsAbilityValid Parms{};
 
@@ -588,10 +534,8 @@ void ABuff_TekArmor_C::IsAbilityValid(bool* OutValid)
 
 void ABuff_TekArmor_C::IsPlayerGrounded(bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsPlayerGrounded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsPlayerGrounded", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsPlayerGrounded Parms{};
 
@@ -610,10 +554,8 @@ void ABuff_TekArmor_C::IsPlayerGrounded(bool* Result)
 
 void ABuff_TekArmor_C::IsPlayerInWaterVolume(bool* Result, double* waterVolumeTopZ)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsPlayerInWaterVolume");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsPlayerInWaterVolume", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsPlayerInWaterVolume Parms{};
 
@@ -635,10 +577,8 @@ void ABuff_TekArmor_C::IsPlayerInWaterVolume(bool* Result, double* waterVolumeTo
 
 void ABuff_TekArmor_C::IsTekArmorUsingAbility_(uint8 ArmorType, bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsTekArmorUsingAbility?");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsTekArmorUsingAbility?", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsTekArmorUsingAbility_ Parms{};
 
@@ -658,10 +598,8 @@ void ABuff_TekArmor_C::IsTekArmorUsingAbility_(uint8 ArmorType, bool* Result)
 
 void ABuff_TekArmor_C::IsTekBuffDisabled(bool* bIsDisabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsTekBuffDisabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsTekBuffDisabled", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsTekBuffDisabled Parms{};
 
@@ -679,10 +617,8 @@ void ABuff_TekArmor_C::IsTekBuffDisabled(bool* bIsDisabled)
 
 void ABuff_TekArmor_C::IsWarping_FOV(bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "IsWarping FOV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "IsWarping FOV", FuncInfo);
 
 	Params::Buff_TekArmor_C_IsWarping_FOV Parms{};
 
@@ -704,10 +640,8 @@ void ABuff_TekArmor_C::IsWarping_FOV(bool* Result)
 
 void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* ParticleTemplate, class USoundBase* Sound, const struct FTransform& Transform, double SoundVolume, double soundPitch)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Multi_SpawnFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Multi_SpawnFX", FuncInfo);
 
 	Params::Buff_TekArmor_C_Multi_SpawnFX Parms{};
 
@@ -726,10 +660,8 @@ void ABuff_TekArmor_C::Multi_SpawnFX(class UParticleSystem* ParticleTemplate, cl
 
 void ABuff_TekArmor_C::RateLimitedGenesisAbilityWarning()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "RateLimitedGenesisAbilityWarning");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "RateLimitedGenesisAbilityWarning", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -740,10 +672,8 @@ void ABuff_TekArmor_C::RateLimitedGenesisAbilityWarning()
 
 void ABuff_TekArmor_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -754,10 +684,8 @@ void ABuff_TekArmor_C::ReceiveBeginPlay()
 
 void ABuff_TekArmor_C::ReceiveDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "ReceiveDestroyed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "ReceiveDestroyed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -768,10 +696,8 @@ void ABuff_TekArmor_C::ReceiveDestroyed()
 
 void ABuff_TekArmor_C::ResetPlayerFOV()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "ResetPlayerFOV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "ResetPlayerFOV", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -782,10 +708,8 @@ void ABuff_TekArmor_C::ResetPlayerFOV()
 
 void ABuff_TekArmor_C::ResetTargetFOV()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "ResetTargetFOV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "ResetTargetFOV", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -798,10 +722,8 @@ void ABuff_TekArmor_C::ResetTargetFOV()
 
 void ABuff_TekArmor_C::Server_SetTekAbilityActive(bool newActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Server_SetTekAbilityActive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Server_SetTekAbilityActive", FuncInfo);
 
 	Params::Buff_TekArmor_C_Server_SetTekAbilityActive Parms{};
 
@@ -816,10 +738,8 @@ void ABuff_TekArmor_C::Server_SetTekAbilityActive(bool newActive)
 
 void ABuff_TekArmor_C::SetCastedArmorPieceRef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "SetCastedArmorPieceRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "SetCastedArmorPieceRef", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -832,10 +752,8 @@ void ABuff_TekArmor_C::SetCastedArmorPieceRef()
 
 void ABuff_TekArmor_C::SetJetpackOffset(const struct FTransform& AddTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "SetJetpackOffset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "SetJetpackOffset", FuncInfo);
 
 	Params::Buff_TekArmor_C_SetJetpackOffset Parms{};
 
@@ -852,10 +770,8 @@ void ABuff_TekArmor_C::SetJetpackOffset(const struct FTransform& AddTransform)
 
 void ABuff_TekArmor_C::SetTekIgnoreLookInput(bool newIgnore)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "SetTekIgnoreLookInput");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "SetTekIgnoreLookInput", FuncInfo);
 
 	Params::Buff_TekArmor_C_SetTekIgnoreLookInput Parms{};
 
@@ -872,10 +788,8 @@ void ABuff_TekArmor_C::SetTekIgnoreLookInput(bool newIgnore)
 
 void ABuff_TekArmor_C::SetTekIgnoreMoveInput(bool newIgnore)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "SetTekIgnoreMoveInput");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "SetTekIgnoreMoveInput", FuncInfo);
 
 	Params::Buff_TekArmor_C_SetTekIgnoreMoveInput Parms{};
 
@@ -893,10 +807,8 @@ void ABuff_TekArmor_C::SetTekIgnoreMoveInput(bool newIgnore)
 
 void ABuff_TekArmor_C::Should_Damage_Actor(class AActor* Victim, bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "Should Damage Actor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "Should Damage Actor", FuncInfo);
 
 	Params::Buff_TekArmor_C_Should_Damage_Actor Parms{};
 
@@ -920,10 +832,8 @@ void ABuff_TekArmor_C::Should_Damage_Actor(class AActor* Victim, bool* Result)
 
 void ABuff_TekArmor_C::SpawnFX(class UParticleSystem* EmitterTemplate, struct FTransform& InTransform, class USoundBase* Sound, double VolumeMultiplier, double PitchMultiplier)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "SpawnFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "SpawnFX", FuncInfo);
 
 	Params::Buff_TekArmor_C_SpawnFX Parms{};
 
@@ -944,10 +854,8 @@ void ABuff_TekArmor_C::SpawnFX(class UParticleSystem* EmitterTemplate, struct FT
 
 void ABuff_TekArmor_C::UpdateColorsFromItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "UpdateColorsFromItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "UpdateColorsFromItem", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -961,10 +869,8 @@ void ABuff_TekArmor_C::UpdateColorsFromItem()
 
 void ABuff_TekArmor_C::UpdatePlayerFOV(double intensityRatio, bool warpIn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "UpdatePlayerFOV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "UpdatePlayerFOV", FuncInfo);
 
 	Params::Buff_TekArmor_C_UpdatePlayerFOV Parms{};
 
@@ -982,10 +888,8 @@ void ABuff_TekArmor_C::UpdatePlayerFOV(double intensityRatio, bool warpIn)
 
 void ABuff_TekArmor_C::GetWeaponMesh(class USkeletalMeshComponent** OutMesh) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_TekArmor_C", "GetWeaponMesh");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_TekArmor_C", "GetWeaponMesh", FuncInfo);
 
 	Params::Buff_TekArmor_C_GetWeaponMesh Parms{};
 

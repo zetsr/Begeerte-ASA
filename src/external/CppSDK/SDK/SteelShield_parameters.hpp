@@ -22,6 +22,7 @@ public:
 	TSubclassOf<class USteelShieldTokenProvider>  TokenProviderClass;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USteelShieldTokenProvider*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SteelShieldSubsystem_SetTokenProvider;
 
 // Function SteelShield.SteelShieldSubsystem.Start
 // 0x0008 (0x0008 - 0x0000)
@@ -32,6 +33,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SteelShieldSubsystem_Start;
 
 // Function SteelShield.SteelShieldSubsystem.GetTokenProvider
 // 0x0008 (0x0008 - 0x0000)
@@ -40,6 +42,7 @@ struct SteelShieldSubsystem_GetTokenProvider final
 public:
 	class USteelShieldTokenProvider*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SteelShieldSubsystem_GetTokenProvider;
 
 // Function SteelShield.SteelShieldSubsystem.IsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -48,6 +51,7 @@ struct SteelShieldSubsystem_IsEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SteelShieldSubsystem_IsEnabled;
 
 // Function SteelShield.SteelShieldSubsystem.IsRolloverInProgress
 // 0x0001 (0x0001 - 0x0000)
@@ -56,6 +60,7 @@ struct SteelShieldSubsystem_IsRolloverInProgress final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SteelShieldSubsystem_IsRolloverInProgress;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UDataListButton_Widget_ASA_C::BndEvt__DataListButton_Widget_ASA_DinoExpirationLabel_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "BndEvt__DataListButton_Widget_ASA_DinoExpirationLabel_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "BndEvt__DataListButton_Widget_ASA_DinoExpirationLabel_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_BndEvt__DataListButton_Widget_ASA_DinoExpirationLabel_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature Parms{};
 
@@ -43,10 +41,8 @@ void UDataListButton_Widget_ASA_C::BndEvt__DataListButton_Widget_ASA_DinoExpirat
 
 void UDataListButton_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UDataListButton_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_But
 
 void UDataListButton_Widget_ASA_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +67,8 @@ void UDataListButton_Widget_ASA_C::Construct()
 
 void UDataListButton_Widget_ASA_C::ExecuteUbergraph_DataListButton_Widget_ASA(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "ExecuteUbergraph_DataListButton_Widget_ASA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "ExecuteUbergraph_DataListButton_Widget_ASA", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_ExecuteUbergraph_DataListButton_Widget_ASA Parms{};
 
@@ -93,10 +85,8 @@ void UDataListButton_Widget_ASA_C::ExecuteUbergraph_DataListButton_Widget_ASA(in
 
 bool UDataListButton_Widget_ASA_C::GetIsAlternativeColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "GetIsAlternativeColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "GetIsAlternativeColor", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_GetIsAlternativeColor Parms{};
 
@@ -115,10 +105,8 @@ bool UDataListButton_Widget_ASA_C::GetIsAlternativeColor()
 
 void UDataListButton_Widget_ASA_C::GetVisibleChildIndex(class UPanelWidget* Parent, class UWidget* Widget, int32* Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "GetVisibleChildIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "GetVisibleChildIndex", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_GetVisibleChildIndex Parms{};
 
@@ -139,10 +127,8 @@ void UDataListButton_Widget_ASA_C::GetVisibleChildIndex(class UPanelWidget* Pare
 
 void UDataListButton_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "PreConstruct", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_PreConstruct Parms{};
 
@@ -161,10 +147,8 @@ void UDataListButton_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 
 void UDataListButton_Widget_ASA_C::SetTextButton(const class FText& NewText, bool CanEditTextVariable_0, bool UseOverrideValueText_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "SetTextButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "SetTextButton", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_SetTextButton Parms{};
 
@@ -184,10 +168,8 @@ void UDataListButton_Widget_ASA_C::SetTextButton(const class FText& NewText, boo
 
 void UDataListButton_Widget_ASA_C::SetupToggledState(bool Condition, bool FromSelectOtherOption)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "SetupToggledState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "SetupToggledState", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_SetupToggledState Parms{};
 
@@ -205,10 +187,8 @@ void UDataListButton_Widget_ASA_C::SetupToggledState(bool Condition, bool FromSe
 
 void UDataListButton_Widget_ASA_C::SetValueText(const class FText& ValueText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "SetValueText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "SetValueText", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_SetValueText Parms{};
 
@@ -226,10 +206,8 @@ void UDataListButton_Widget_ASA_C::SetValueText(const class FText& ValueText)
 
 void UDataListButton_Widget_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "Tick", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_Tick Parms{};
 
@@ -247,10 +225,8 @@ void UDataListButton_Widget_ASA_C::Tick(const struct FGeometry& MyGeometry, floa
 
 void UDataListButton_Widget_ASA_C::UpdateColorBrush(const struct FLinearColor& InBrushColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_Widget_ASA_C", "UpdateColorBrush");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_Widget_ASA_C", "UpdateColorBrush", FuncInfo);
 
 	Params::DataListButton_Widget_ASA_C_UpdateColorBrush Parms{};
 

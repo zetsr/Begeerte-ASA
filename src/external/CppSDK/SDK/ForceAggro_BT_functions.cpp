@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UForceAggro_BT_C::ExecuteUbergraph_ForceAggro_BT(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ForceAggro_BT_C", "ExecuteUbergraph_ForceAggro_BT");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ForceAggro_BT_C", "ExecuteUbergraph_ForceAggro_BT", FuncInfo);
 
 	Params::ForceAggro_BT_C_ExecuteUbergraph_ForceAggro_BT Parms{};
 
@@ -43,10 +41,8 @@ void UForceAggro_BT_C::ExecuteUbergraph_ForceAggro_BT(int32 EntryPoint)
 
 void UForceAggro_BT_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ForceAggro_BT_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ForceAggro_BT_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::ForceAggro_BT_C_ReceiveConditionCheck Parms{};
 

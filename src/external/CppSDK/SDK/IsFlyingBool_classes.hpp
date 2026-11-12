@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UIsFlyingBool_C final : public UBTDecorator_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_IsFlyingBool(int32 EntryPoint);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UIsFlyingBool_C>();
 	}
 };
+DUMPER7_ASSERTS_UIsFlyingBool_C;
 
 SDK_NAMESPACE_END

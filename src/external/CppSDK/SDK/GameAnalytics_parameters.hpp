@@ -16,593 +16,164 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function GameAnalytics.GameAnalytics.GetInstance
+// 0x0008 (0x0008 - 0x0000)
+struct GameAnalytics_GetInstance final
+{
+public:
+	class UGameAnalytics*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_GetInstance;
+
 // Function GameAnalytics.GameAnalytics.AddAdEvent
-// 0x0028 (0x0028 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct GameAnalytics_AddAdEvent final
 {
 public:
 	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGAAdType                                     AdType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0028(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddAdEvent;
 
 // Function GameAnalytics.GameAnalytics.AddAdEventWithDuration
-// 0x0030 (0x0030 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct GameAnalytics_AddAdEventWithDuration final
 {
 public:
 	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGAAdType                                     AdType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int64                                         Duration;                                          // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddAdEventWithDuration;
 
-// Function GameAnalytics.GameAnalytics.AddAdEventWithDurationAndFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddAdEventWithDurationAndFields final
+// Function GameAnalytics.GameAnalytics.AddAdEventWithReason
+// 0x0048 (0x0048 - 0x0000)
+struct GameAnalytics_AddAdEventWithReason final
 {
 public:
 	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGAAdType                                     AdType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         Duration;                                          // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithDurationAndMergeFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddAdEventWithDurationAndMergeFields final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         Duration;                                          // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithFields
-// 0x0038 (0x0038 - 0x0000)
-struct GameAnalytics_AddAdEventWithFields final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithMergeFields
-// 0x0038 (0x0038 - 0x0000)
-struct GameAnalytics_AddAdEventWithMergeFields final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReason
-// 0x0030 (0x0030 - 0x0000)
-struct GameAnalytics_AddAdEventWithNoAdReason final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdError                                    noAdReason;                                        // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReasonAndFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddAdEventWithNoAdReasonAndFields final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdError                                    noAdReason;                                        // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AdPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGAAdError                                    Reason;                                            // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReasonAndMergeFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddAdEventWithNoAdReasonAndMergeFields final
-{
-public:
-	EGAAdAction                                   Action;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdType                                     adType;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 adSdkName;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 adPlacement;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGAAdError                                    noAdReason;                                        // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_GameAnalytics_AddAdEventWithReason;
 
 // Function GameAnalytics.GameAnalytics.AddBusinessEvent
-// 0x0048 (0x0048 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct GameAnalytics_AddBusinessEvent final
 {
 public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Currency;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemType;                                          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemID;                                            // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CartType;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Receipt;                                           // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0058(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddBusinessEvent;
 
 // Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceipt
-// 0x0048 (0x0048 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct GameAnalytics_AddBusinessEventAndAutoFetchReceipt final
 {
 public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Currency;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemType;                                          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemID;                                            // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CartType;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0048(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddBusinessEventAndAutoFetchReceipt;
 
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceiptWithFields
-// 0x0058 (0x0058 - 0x0000)
-struct GameAnalytics_AddBusinessEventAndAutoFetchReceiptWithFields final
+// Function GameAnalytics.GameAnalytics.AddBusinessEventWithReceipt
+// 0x0090 (0x0090 - 0x0000)
+struct GameAnalytics_AddBusinessEventWithReceipt final
 {
 public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Currency;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ItemType;                                          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemID;                                            // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CartType;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Receipt;                                           // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Store;                                             // 0x0058(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Signature;                                         // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0078(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0088(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceiptWithMergeFields
-// 0x0058 (0x0058 - 0x0000)
-struct GameAnalytics_AddBusinessEventAndAutoFetchReceiptWithMergeFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroid
-// 0x0068 (0x0068 - 0x0000)
-struct GameAnalytics_AddBusinessEventAndroid final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Signature;                                         // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroidWithFields
-// 0x0078 (0x0078 - 0x0000)
-struct GameAnalytics_AddBusinessEventAndroidWithFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Signature;                                         // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroidWithMergeFields
-// 0x0078 (0x0078 - 0x0000)
-struct GameAnalytics_AddBusinessEventAndroidWithMergeFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Signature;                                         // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOS
-// 0x0058 (0x0058 - 0x0000)
-struct GameAnalytics_AddBusinessEventIOS final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOSWithFields
-// 0x0068 (0x0068 - 0x0000)
-struct GameAnalytics_AddBusinessEventIOSWithFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0058(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOSWithMergeFields
-// 0x0068 (0x0068 - 0x0000)
-struct GameAnalytics_AddBusinessEventIOSWithMergeFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Receipt;                                           // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0058(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventWithFields
-// 0x0058 (0x0058 - 0x0000)
-struct GameAnalytics_AddBusinessEventWithFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventWithMergeFields
-// 0x0058 (0x0058 - 0x0000)
-struct GameAnalytics_AddBusinessEventWithMergeFields final
-{
-public:
-	class FString                                 Currency;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Amount;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CartType;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_GameAnalytics_AddBusinessEventWithReceipt;
 
 // Function GameAnalytics.GameAnalytics.AddDesignEvent
-// 0x0010 (0x0010 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct GameAnalytics_AddDesignEvent final
 {
 public:
 	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0010(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithFields
-// 0x0020 (0x0020 - 0x0000)
-struct GameAnalytics_AddDesignEventWithFields final
-{
-public:
-	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithMergeFields
-// 0x0020 (0x0020 - 0x0000)
-struct GameAnalytics_AddDesignEventWithMergeFields final
-{
-public:
-	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_GameAnalytics_AddDesignEvent;
 
 // Function GameAnalytics.GameAnalytics.AddDesignEventWithValue
-// 0x0018 (0x0018 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GameAnalytics_AddDesignEventWithValue final
 {
 public:
 	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithValueAndFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddDesignEventWithValueAndFields final
-{
-public:
-	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithValueAndMergeFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddDesignEventWithValueAndMergeFields final
-{
-public:
-	class FString                                 EventId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_GameAnalytics_AddDesignEventWithValue;
 
 // Function GameAnalytics.GameAnalytics.AddErrorEvent
-// 0x0018 (0x0018 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct GameAnalytics_AddErrorEvent final
 {
 public:
 	EGAErrorSeverity                              Severity;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddErrorEvent;
 
-// Function GameAnalytics.GameAnalytics.AddErrorEventWithFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddErrorEventWithFields final
-{
-public:
-	EGAErrorSeverity                              Severity;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddErrorEventWithMergeFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddErrorEventWithMergeFields final
-{
-public:
-	EGAErrorSeverity                              Severity;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOne
-// 0x0018 (0x0018 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOne final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneAndFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndMergeFields
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneAndMergeFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndScore
-// 0x0020 (0x0020 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneAndScore final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndTwo
-// 0x0028 (0x0028 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneAndTwo final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneScoreAndFields
-// 0x0030 (0x0030 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneScoreAndFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneScoreAndMergeFields
-// 0x0030 (0x0030 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneScoreAndMergeFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndFields
-// 0x0038 (0x0038 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoAndFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndMergeFields
-// 0x0038 (0x0038 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoAndMergeFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndScore
-// 0x0030 (0x0030 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoAndScore final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndThree
-// 0x0038 (0x0038 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoAndThree final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoScoreAndFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoScoreAndFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoScoreAndMergeFields
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoScoreAndMergeFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndFields
-// 0x0048 (0x0048 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoThreeAndFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndMergeFields
-// 0x0048 (0x0048 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoThreeAndMergeFields final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndScore
-// 0x0040 (0x0040 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoThreeAndScore final
-{
-public:
-	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeScoreAndFields
+// Function GameAnalytics.GameAnalytics.AddProgressionEvent
 // 0x0050 (0x0050 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoThreeScoreAndFields final
+struct GameAnalytics_AddProgressionEvent final
 {
 public:
 	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -610,28 +181,31 @@ public:
 	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0038(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddProgressionEvent;
 
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeScoreAndMergeFields
+// Function GameAnalytics.GameAnalytics.AddProgressionEventWithScore
 // 0x0050 (0x0050 - 0x0000)
-struct GameAnalytics_AddProgressionEventWithOneTwoThreeScoreAndMergeFields final
+struct GameAnalytics_AddProgressionEventWithScore final
 {
 public:
 	EGAProgressionStatus                          ProgressionStatus;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         score;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Progression01;                                     // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Progression02;                                     // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Progression03;                                     // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         score;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0038(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddProgressionEventWithScore;
 
 // Function GameAnalytics.GameAnalytics.AddResourceEvent
-// 0x0040 (0x0040 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct GameAnalytics_AddResourceEvent final
 {
 public:
@@ -642,45 +216,119 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ItemType;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ItemID;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGACustomFields                        CustomFields;                                      // 0x0040(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	bool                                          MergeFields;                                       // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_GameAnalytics_AddResourceEvent;
 
-// Function GameAnalytics.GameAnalytics.AddResourceEventWithFields
-// 0x0050 (0x0050 - 0x0000)
-struct GameAnalytics_AddResourceEventWithFields final
-{
-public:
-	EGAResourceFlowType                           FlowType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Currency;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Amount;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.AddResourceEventWithMergeFields
-// 0x0050 (0x0050 - 0x0000)
-struct GameAnalytics_AddResourceEventWithMergeFields final
-{
-public:
-	EGAResourceFlowType                           FlowType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Currency;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Amount;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ItemType;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemID;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameAnalyticsCustomEventField> CustomFields;                                      // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.DisableAdvertisingId
+// Function GameAnalytics.GameAnalytics.ConfigureAutoDetectAppVersion
 // 0x0001 (0x0001 - 0x0000)
-struct GameAnalytics_DisableAdvertisingId final
+struct GameAnalytics_ConfigureAutoDetectAppVersion final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAutoDetectAppVersion;
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions01
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureAvailableCustomDimensions01 final
+{
+public:
+	TArray<class FString>                         List;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAvailableCustomDimensions01;
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions02
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureAvailableCustomDimensions02 final
+{
+public:
+	TArray<class FString>                         List;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAvailableCustomDimensions02;
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions03
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureAvailableCustomDimensions03 final
+{
+public:
+	TArray<class FString>                         List;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAvailableCustomDimensions03;
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableResourceCurrencies
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureAvailableResourceCurrencies final
+{
+public:
+	TArray<class FString>                         List;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAvailableResourceCurrencies;
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableResourceItemTypes
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureAvailableResourceItemTypes final
+{
+public:
+	TArray<class FString>                         List;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureAvailableResourceItemTypes;
+
+// Function GameAnalytics.GameAnalytics.ConfigureBuild
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureBuild final
+{
+public:
+	class FString                                 Build;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureBuild;
+
+// Function GameAnalytics.GameAnalytics.ConfigureExternalUserId
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureExternalUserId final
+{
+public:
+	class FString                                 UserId;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureExternalUserId;
+
+// Function GameAnalytics.GameAnalytics.ConfigureGameEngineVersion
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureGameEngineVersion final
+{
+public:
+	class FString                                 GameEngineVersion;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureGameEngineVersion;
+
+// Function GameAnalytics.GameAnalytics.ConfigureSdkGameEngineVersion
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureSdkGameEngineVersion final
+{
+public:
+	class FString                                 GameEngineSdkVersion;                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureSdkGameEngineVersion;
+
+// Function GameAnalytics.GameAnalytics.ConfigureUserId
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_ConfigureUserId final
+{
+public:
+	class FString                                 UserId;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_ConfigureUserId;
+
+// Function GameAnalytics.GameAnalytics.EnableAdvertisingId
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_EnableAdvertisingId final
 {
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_EnableAdvertisingId;
 
 // Function GameAnalytics.GameAnalytics.EnableFpsHistogram
 // 0x0001 (0x0001 - 0x0000)
@@ -689,6 +337,7 @@ struct GameAnalytics_EnableFpsHistogram final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_EnableFpsHistogram;
 
 // Function GameAnalytics.GameAnalytics.EnableHealthHardwareInfo
 // 0x0001 (0x0001 - 0x0000)
@@ -697,6 +346,7 @@ struct GameAnalytics_EnableHealthHardwareInfo final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_EnableHealthHardwareInfo;
 
 // Function GameAnalytics.GameAnalytics.EnableMemoryHistogram
 // 0x0001 (0x0001 - 0x0000)
@@ -705,6 +355,7 @@ struct GameAnalytics_EnableMemoryHistogram final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_EnableMemoryHistogram;
 
 // Function GameAnalytics.GameAnalytics.EnableSDKInitEvent
 // 0x0001 (0x0001 - 0x0000)
@@ -713,6 +364,7 @@ struct GameAnalytics_EnableSDKInitEvent final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_EnableSDKInitEvent;
 
 // Function GameAnalytics.GameAnalytics.GetABTestingId
 // 0x0010 (0x0010 - 0x0000)
@@ -721,6 +373,7 @@ struct GameAnalytics_GetABTestingId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_GetABTestingId;
 
 // Function GameAnalytics.GameAnalytics.GetABTestingVariantId
 // 0x0010 (0x0010 - 0x0000)
@@ -729,6 +382,34 @@ struct GameAnalytics_GetABTestingVariantId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_GetABTestingVariantId;
+
+// Function GameAnalytics.GameAnalytics.GetElapsedSessionTime
+// 0x0008 (0x0008 - 0x0000)
+struct GameAnalytics_GetElapsedSessionTime final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_GetElapsedSessionTime;
+
+// Function GameAnalytics.GameAnalytics.GetElapsedTimeFromAllSessions
+// 0x0008 (0x0008 - 0x0000)
+struct GameAnalytics_GetElapsedTimeFromAllSessions final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_GetElapsedTimeFromAllSessions;
+
+// Function GameAnalytics.GameAnalytics.GetExternalUserId
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_GetExternalUserId final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_GetExternalUserId;
 
 // Function GameAnalytics.GameAnalytics.GetRemoteConfigsContentAsString
 // 0x0010 (0x0010 - 0x0000)
@@ -737,25 +418,37 @@ struct GameAnalytics_GetRemoteConfigsContentAsString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_GetRemoteConfigsContentAsString;
 
 // Function GameAnalytics.GameAnalytics.GetRemoteConfigsValueAsString
-// 0x0020 (0x0020 - 0x0000)
-struct GameAnalytics_GetRemoteConfigsValueAsString final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function GameAnalytics.GameAnalytics.GetRemoteConfigsValueAsStringWithDefaultValue
 // 0x0030 (0x0030 - 0x0000)
-struct GameAnalytics_GetRemoteConfigsValueAsStringWithDefaultValue final
+struct GameAnalytics_GetRemoteConfigsValueAsString final
 {
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DefaultValue;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_GetRemoteConfigsValueAsString;
+
+// Function GameAnalytics.GameAnalytics.GetUserId
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_GetUserId final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_GetUserId;
+
+// Function GameAnalytics.GameAnalytics.Initialize
+// 0x0020 (0x0020 - 0x0000)
+struct GameAnalytics_Initialize final
+{
+public:
+	class FString                                 GameKey;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GameSecret;                                        // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_Initialize;
 
 // Function GameAnalytics.GameAnalytics.IsRemoteConfigsReady
 // 0x0001 (0x0001 - 0x0000)
@@ -764,6 +457,7 @@ struct GameAnalytics_IsRemoteConfigsReady final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_IsRemoteConfigsReady;
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension01
 // 0x0010 (0x0010 - 0x0000)
@@ -772,6 +466,7 @@ struct GameAnalytics_SetCustomDimension01 final
 public:
 	class FString                                 CustomDimension;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_SetCustomDimension01;
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension02
 // 0x0010 (0x0010 - 0x0000)
@@ -780,6 +475,7 @@ struct GameAnalytics_SetCustomDimension02 final
 public:
 	class FString                                 CustomDimension;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_SetCustomDimension02;
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension03
 // 0x0010 (0x0010 - 0x0000)
@@ -788,6 +484,61 @@ struct GameAnalytics_SetCustomDimension03 final
 public:
 	class FString                                 CustomDimension;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_GameAnalytics_SetCustomDimension03;
+
+// Function GameAnalytics.GameAnalytics.SetEnabledErrorReporting
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_SetEnabledErrorReporting final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetEnabledErrorReporting;
+
+// Function GameAnalytics.GameAnalytics.SetEnabledEventSubmission
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_SetEnabledEventSubmission final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetEnabledEventSubmission;
+
+// Function GameAnalytics.GameAnalytics.SetEnabledInfoLog
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_SetEnabledInfoLog final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetEnabledInfoLog;
+
+// Function GameAnalytics.GameAnalytics.SetEnabledManualSessionHandling
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_SetEnabledManualSessionHandling final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetEnabledManualSessionHandling;
+
+// Function GameAnalytics.GameAnalytics.SetEnabledVerboseLog
+// 0x0001 (0x0001 - 0x0000)
+struct GameAnalytics_SetEnabledVerboseLog final
+{
+public:
+	bool                                          Flag;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetEnabledVerboseLog;
+
+// Function GameAnalytics.GameAnalytics.SetWritablePath
+// 0x0010 (0x0010 - 0x0000)
+struct GameAnalytics_SetWritablePath final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameAnalytics_SetWritablePath;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

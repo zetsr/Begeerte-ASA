@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_ArrowTranq_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_ArrowTranq_C;
 
 SDK_NAMESPACE_END

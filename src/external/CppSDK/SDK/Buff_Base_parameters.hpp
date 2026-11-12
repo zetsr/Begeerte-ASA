@@ -21,6 +21,7 @@ struct Buff_Base_C_BPDeactivated final
 public:
 	class AActor*                                 ForInstigator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Buff_Base_C_BPDeactivated;
 
 // Function Buff_Base.Buff_Base_C.ExecuteUbergraph_Buff_Base
 // 0x0028 (0x0028 - 0x0000)
@@ -35,6 +36,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APrimalBuff*                            CallFunc_StaticAddBuff_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Buff_Base_C_ExecuteUbergraph_Buff_Base;
 
 // Function Buff_Base.Buff_Base_C.SetBuffHordeManagerData
 // 0x0010 (0x0010 - 0x0000)
@@ -45,6 +47,7 @@ public:
 	bool                                          Routing;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SetRouting;                                        // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Buff_Base_C_SetBuffHordeManagerData;
 
 // Function Buff_Base.Buff_Base_C.BPCustomAllowAddBuff
 // 0x0050 (0x0050 - 0x0000)
@@ -71,6 +74,7 @@ public:
 	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Buff_Base_C_BPCustomAllowAddBuff;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

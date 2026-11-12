@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_AdvancedSniperBullet_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_AdvancedSniperBullet_C;
 
 SDK_NAMESPACE_END

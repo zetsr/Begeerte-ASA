@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 bool UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::AllowAutoscrollNavFrom()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "AllowAutoscrollNavFrom");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "AllowAutoscrollNavFrom", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_AllowAutoscrollNavFrom Parms{};
 
@@ -43,10 +41,8 @@ bool UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::AllowAutoscrollNavFro
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::BlueprintInit(const class FString& RawExtraData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "BlueprintInit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "BlueprintInit", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_BlueprintInit Parms{};
 
@@ -64,10 +60,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::BlueprintInit(const c
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryClickAction(const class FName& SecondaryZoneClicked, bool bIsFromGamepad)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryClickAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryClickAction", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryDoSecondaryClickAction Parms{};
 
@@ -85,10 +79,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryClick
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryHovered(const class FName& SecondaryZoneHovered)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryHovered");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryHovered", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryDoSecondaryHovered Parms{};
 
@@ -105,10 +97,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryHover
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryUnhovered(const class FName& SecondaryZoneUnhovered)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryUnhovered");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryDoSecondaryUnhovered", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryDoSecondaryUnhovered Parms{};
 
@@ -125,10 +115,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryDoSecondaryUnhov
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusEnd(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusEnd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusEnd", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryFocusEnd Parms{};
 
@@ -145,10 +133,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusEnd(bool bI
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusStart(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusStart", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryFocusStart Parms{};
 
@@ -166,10 +152,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusStart(bool 
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusTick(float DeltaTime, bool bIsHighlighted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "EntryFocusTick", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_EntryFocusTick Parms{};
 
@@ -187,10 +171,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::EntryFocusTick(float 
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video_Image(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video_Image");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video_Image", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video_Image Parms{};
 
@@ -205,10 +187,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::ExecuteUbergraph_ASAU
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnCarouselPaused()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnCarouselPaused");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnCarouselPaused", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -219,10 +199,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnCarouselPaused()
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnCarouselUnpaused()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnCarouselUnpaused");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnCarouselUnpaused", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +213,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnCarouselUnpaused()
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnFail_72594C78445BE3B711D3C9A5F43E4038(const class FString& CacheVideoName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnFail_72594C78445BE3B711D3C9A5F43E4038");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnFail_72594C78445BE3B711D3C9A5F43E4038", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_OnFail_72594C78445BE3B711D3C9A5F43E4038 Parms{};
 
@@ -255,10 +231,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnFail_72594C78445BE3
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnSuccess_72594C78445BE3B711D3C9A5F43E4038(const class FString& CacheVideoName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnSuccess_72594C78445BE3B711D3C9A5F43E4038");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "OnSuccess_72594C78445BE3B711D3C9A5F43E4038", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C_OnSuccess_72594C78445BE3B711D3C9A5F43E4038 Parms{};
 
@@ -273,10 +247,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::OnSuccess_72594C78445
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C::RebootVideo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "RebootVideo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Video_Image_C", "RebootVideo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ImageCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ImageCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,6 +26,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_GetHeight;
 
 // Function ImageCore.SharedImageConstRefBlueprintFns.GetPixelLinearColor
 // 0x0038 (0x0038 - 0x0000)
@@ -41,6 +42,7 @@ public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_GetPixelLinearColor;
 
 // Function ImageCore.SharedImageConstRefBlueprintFns.GetPixelValue
 // 0x0030 (0x0030 - 0x0000)
@@ -54,6 +56,7 @@ public:
 	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4f                              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_GetPixelValue;
 
 // Function ImageCore.SharedImageConstRefBlueprintFns.GetSize
 // 0x0010 (0x0010 - 0x0000)
@@ -63,6 +66,7 @@ public:
 	struct FSharedImageConstRefBlueprint          Image;                                             // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVector2f                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_GetSize;
 
 // Function ImageCore.SharedImageConstRefBlueprintFns.GetWidth
 // 0x0010 (0x0010 - 0x0000)
@@ -73,6 +77,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_GetWidth;
 
 // Function ImageCore.SharedImageConstRefBlueprintFns.IsValid
 // 0x0010 (0x0010 - 0x0000)
@@ -83,6 +88,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SharedImageConstRefBlueprintFns_IsValid;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,6 +25,7 @@ public:
 	struct FChaosPhysicsCollisionInfo             PhysicsCollision;                                  // 0x0000(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FHitResult                             ReturnValue;                                       // 0x00C0(0x0108)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult;
 
 // Function ChaosSolverEngine.ChaosSolverActor.SetSolverActive
 // 0x0001 (0x0001 - 0x0000)
@@ -33,6 +34,7 @@ struct ChaosSolverActor_SetSolverActive final
 public:
 	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosSolverActor_SetSolverActive;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

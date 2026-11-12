@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UHasWildParent_BT_C::ExecuteUbergraph_HasWildParent_BT(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HasWildParent_BT_C", "ExecuteUbergraph_HasWildParent_BT");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HasWildParent_BT_C", "ExecuteUbergraph_HasWildParent_BT", FuncInfo);
 
 	Params::HasWildParent_BT_C_ExecuteUbergraph_HasWildParent_BT Parms{};
 
@@ -43,10 +41,8 @@ void UHasWildParent_BT_C::ExecuteUbergraph_HasWildParent_BT(int32 EntryPoint)
 
 void UHasWildParent_BT_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HasWildParent_BT_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HasWildParent_BT_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::HasWildParent_BT_C_ReceiveConditionCheck Parms{};
 

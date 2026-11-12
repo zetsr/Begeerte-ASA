@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ATekArmor_EffectActor_C::ExecuteUbergraph_TekArmor_EffectActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "ExecuteUbergraph_TekArmor_EffectActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "ExecuteUbergraph_TekArmor_EffectActor", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_ExecuteUbergraph_TekArmor_EffectActor Parms{};
 
@@ -46,10 +44,8 @@ void ATekArmor_EffectActor_C::ExecuteUbergraph_TekArmor_EffectActor(int32 EntryP
 
 void ATekArmor_EffectActor_C::InitTekEffect(class UParticleSystem* particle, const struct FVector& ParticleScale_0, class USoundBase* Sound, class APrimalCharacter* Player)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "InitTekEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "InitTekEffect", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_InitTekEffect Parms{};
 
@@ -67,10 +63,8 @@ void ATekArmor_EffectActor_C::InitTekEffect(class UParticleSystem* particle, con
 
 void ATekArmor_EffectActor_C::OnRep_bParticlesOn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "OnRep_bParticlesOn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "OnRep_bParticlesOn", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -81,10 +75,8 @@ void ATekArmor_EffectActor_C::OnRep_bParticlesOn()
 
 void ATekArmor_EffectActor_C::OnRep_bSoundOn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "OnRep_bSoundOn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "OnRep_bSoundOn", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -95,10 +87,8 @@ void ATekArmor_EffectActor_C::OnRep_bSoundOn()
 
 void ATekArmor_EffectActor_C::OnRep_ParticleScale()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "OnRep_ParticleScale");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "OnRep_ParticleScale", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,10 +99,8 @@ void ATekArmor_EffectActor_C::OnRep_ParticleScale()
 
 void ATekArmor_EffectActor_C::OnRep_TekParticleTemplate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "OnRep_TekParticleTemplate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "OnRep_TekParticleTemplate", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,10 +111,8 @@ void ATekArmor_EffectActor_C::OnRep_TekParticleTemplate()
 
 void ATekArmor_EffectActor_C::OnRep_TekSoundRef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "OnRep_TekSoundRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "OnRep_TekSoundRef", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +125,8 @@ void ATekArmor_EffectActor_C::OnRep_TekSoundRef()
 
 void ATekArmor_EffectActor_C::PlayerDied(class APrimalCharacter* DiedCharacter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "PlayerDied");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "PlayerDied", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_PlayerDied Parms{};
 
@@ -159,10 +143,8 @@ void ATekArmor_EffectActor_C::PlayerDied(class APrimalCharacter* DiedCharacter)
 
 void ATekArmor_EffectActor_C::Replicate_SetParticleState(bool Active)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "Replicate_SetParticleState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "Replicate_SetParticleState", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_Replicate_SetParticleState Parms{};
 
@@ -179,10 +161,8 @@ void ATekArmor_EffectActor_C::Replicate_SetParticleState(bool Active)
 
 void ATekArmor_EffectActor_C::Replicate_SetSoundState(bool Active)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "Replicate_SetSoundState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "Replicate_SetSoundState", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_Replicate_SetSoundState Parms{};
 
@@ -199,10 +179,8 @@ void ATekArmor_EffectActor_C::Replicate_SetSoundState(bool Active)
 
 void ATekArmor_EffectActor_C::Set_ParticleActive(bool Active)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "Set ParticleActive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "Set ParticleActive", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_Set_ParticleActive Parms{};
 
@@ -220,10 +198,8 @@ void ATekArmor_EffectActor_C::Set_ParticleActive(bool Active)
 
 void ATekArmor_EffectActor_C::SetSoundActive(bool Active, double StartTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "SetSoundActive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "SetSoundActive", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_SetSoundActive Parms{};
 
@@ -243,10 +219,8 @@ void ATekArmor_EffectActor_C::SetSoundActive(bool Active, double StartTime)
 
 void ATekArmor_EffectActor_C::SetTekFX(class UParticleSystem* particle, const struct FVector& ParticleScale_0, class USoundBase* Sound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TekArmor_EffectActor_C", "SetTekFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TekArmor_EffectActor_C", "SetTekFX", FuncInfo);
 
 	Params::TekArmor_EffectActor_C_SetTekFX Parms{};
 

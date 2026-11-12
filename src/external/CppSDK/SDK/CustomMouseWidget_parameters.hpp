@@ -23,6 +23,7 @@ struct CustomMouseWidget_C_ExecuteUbergraph_CustomMouseWidget final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_ExecuteUbergraph_CustomMouseWidget;
 
 // Function CustomMouseWidget.CustomMouseWidget_C.SetArrowAlpha
 // 0x0038 (0x0038 - 0x0000)
@@ -42,6 +43,7 @@ public:
 	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast_6; // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast_7; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_SetArrowAlpha;
 
 // Function CustomMouseWidget.CustomMouseWidget_C.SetInnerRingScales
 // 0x0048 (0x0048 - 0x0000)
@@ -55,6 +57,7 @@ public:
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_SetInnerRingScales;
 
 // Function CustomMouseWidget.CustomMouseWidget_C.SetPointerColorAdd
 // 0x0018 (0x0018 - 0x0000)
@@ -65,6 +68,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_SetPointerColorAdd;
 
 // Function CustomMouseWidget.CustomMouseWidget_C.SetPointerScale
 // 0x0018 (0x0018 - 0x0000)
@@ -74,6 +78,7 @@ public:
 	double                                        NewParam;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_SetPointerScale;
 
 // Function CustomMouseWidget.CustomMouseWidget_C.ShowReticule
 // 0x0001 (0x0001 - 0x0000)
@@ -82,6 +87,7 @@ struct CustomMouseWidget_C_ShowReticule final
 public:
 	bool                                          show;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomMouseWidget_C_ShowReticule;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

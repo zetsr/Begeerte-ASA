@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "LiveLinkInterface_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "LiveLinkComponents_structs.hpp"
+#include "LiveLinkInterface_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -43,14 +43,15 @@ public:
 		return GetDefaultObjImpl<ULiveLinkComponentSettings>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkComponentSettings;
 
 // Class LiveLinkComponents.LiveLinkControllerBase
-// 0x0040 (0x0068 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class ULiveLinkControllerBase : public UObject
 {
 public:
 	struct FComponentReference                    ComponentPicker;                                   // 0x0028(0x0028)(Edit, DisableEditOnTemplate, ContainsInstancedReference, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -66,33 +67,15 @@ public:
 		return GetDefaultObjImpl<ULiveLinkControllerBase>();
 	}
 };
-
-// Class LiveLinkComponents.LiveLinkLightController
-// 0x0000 (0x0068 - 0x0068)
-class ULiveLinkLightController final : public ULiveLinkControllerBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkLightController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkLightController")
-	}
-	static class ULiveLinkLightController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkLightController>();
-	}
-};
+DUMPER7_ASSERTS_ULiveLinkControllerBase;
 
 // Class LiveLinkComponents.LiveLinkTransformController
-// 0x00C8 (0x0130 - 0x0068)
-class ULiveLinkTransformController final : public ULiveLinkControllerBase
+// 0x00D0 (0x0130 - 0x0060)
+class ULiveLinkTransformController : public ULiveLinkControllerBase
 {
 public:
-	struct FLiveLinkTransformControllerData       TransformData;                                     // 0x0068(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkTransformControllerData       TransformData;                                     // 0x0060(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_66[0xA];                                       // 0x0066(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OffsetTransform;                                   // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D0[0x60];                                      // 0x00D0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -110,22 +93,63 @@ public:
 		return GetDefaultObjImpl<ULiveLinkTransformController>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkTransformController;
+
+// Class LiveLinkComponents.LiveLinkCharacterController
+// 0x0000 (0x0130 - 0x0130)
+class ULiveLinkCharacterController final : public ULiveLinkTransformController
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkCharacterController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkCharacterController")
+	}
+	static class ULiveLinkCharacterController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkCharacterController>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkCharacterController;
+
+// Class LiveLinkComponents.LiveLinkLightController
+// 0x0000 (0x0060 - 0x0060)
+class ULiveLinkLightController final : public ULiveLinkControllerBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkLightController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkLightController")
+	}
+	static class ULiveLinkLightController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkLightController>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkLightController;
 
 // Class LiveLinkComponents.LiveLinkComponentController
-// 0x00A8 (0x0178 - 0x00D0)
+// 0x00A8 (0x01A0 - 0x00F8)
 class ULiveLinkComponentController final : public UActorComponent
 {
 public:
-	struct FLiveLinkSubjectRepresentation         SubjectRepresentation;                             // 0x00D0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TMap<TSubclassOf<class ULiveLinkRole>, class ULiveLinkControllerBase*> ControllerMap;            // 0x00E0(0x0050)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, NoClear, Interp, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          bUpdateInEditor;                                   // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float DeltaTime)> OnLiveLinkUpdated;                               // 0x0138(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnControllerMapUpdatedDelegate;                    // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          bDisableEvaluateLiveLinkWhenSpawnable;             // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEvaluateLiveLink;                                 // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateInPreviewEditor;                            // 0x015A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15B[0x1D];                                     // 0x015B(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkSubjectRepresentation         SubjectRepresentation;                             // 0x00F8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TMap<TSubclassOf<class ULiveLinkRole>, class ULiveLinkControllerBase*> ControllerMap;            // 0x0108(0x0050)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, NoClear, Interp, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bUpdateInEditor;                                   // 0x0158(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(float DeltaTime)> OnLiveLinkUpdated;                               // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnControllerMapUpdatedDelegate;                    // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bDisableEvaluateLiveLinkWhenSpawnable;             // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEvaluateLiveLink;                                 // 0x0181(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateInPreviewEditor;                            // 0x0182(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_183[0x1D];                                     // 0x0183(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetControlledComponent(TSubclassOf<class ULiveLinkRole> InRoleClass, class UActorComponent* InComponent);
@@ -148,5 +172,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkComponentController>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkComponentController;
 
 SDK_NAMESPACE_END

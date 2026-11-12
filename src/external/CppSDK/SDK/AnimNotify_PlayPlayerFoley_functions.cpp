@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UAnimNotify_PlayPlayerFoley_C::SelectSound(class UPDA_FoleyCollection_C* FolleyColletion, class USoundBase** FoleySoundReferance) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerFoley_C", "SelectSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerFoley_C", "SelectSound", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerFoley_C_SelectSound Parms{};
 
@@ -47,10 +45,8 @@ void UAnimNotify_PlayPlayerFoley_C::SelectSound(class UPDA_FoleyCollection_C* Fo
 
 class FString UAnimNotify_PlayPlayerFoley_C::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerFoley_C", "GetNotifyName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerFoley_C", "GetNotifyName", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerFoley_C_GetNotifyName Parms{};
 
@@ -70,10 +66,8 @@ class FString UAnimNotify_PlayPlayerFoley_C::GetNotifyName() const
 
 bool UAnimNotify_PlayPlayerFoley_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_PlayPlayerFoley_C", "Received_Notify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AnimNotify_PlayPlayerFoley_C", "Received_Notify", FuncInfo);
 
 	Params::AnimNotify_PlayPlayerFoley_C_Received_Notify Parms{};
 

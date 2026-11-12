@@ -16,8 +16,17 @@
 
 SDK_NAMESPACE_START
 
+// Enum PCG.EPCGGenerationStatus
+// NumValues: 0x0003
+enum class EPCGGenerationStatus : uint8
+{
+	Completed                                = 0,
+	Aborted                                  = 1,
+	EPCGGenerationStatus_MAX                 = 2,
+};
+
 // Enum PCG.EPCGAttributeAccessorFlags
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EPCGAttributeAccessorFlags : uint8
 {
 	StrictType                               = 1,
@@ -25,8 +34,987 @@ enum class EPCGAttributeAccessorFlags : uint8
 	AllowConstructible                       = 4,
 	AllowSetDefaultValue                     = 8,
 	AllowReuseMetadataEntryKey               = 16,
+	AllowRangeOfValuesIntoSingleContainer    = 32,
 	AllowBroadcastAndConstructible           = 6,
-	EPCGAttributeAccessorFlags_MAX           = 17,
+	EPCGAttributeAccessorFlags_MAX           = 33,
+};
+
+// Enum PCG.EPCGDataOverrideKeyPolicy
+// NumValues: 0x0005
+enum class EPCGDataOverrideKeyPolicy : uint8
+{
+	None                                     = 0,
+	Spatial                                  = 1,
+	ByIndex                                  = 2,
+	ByAttribute                              = 3,
+	EPCGDataOverrideKeyPolicy_MAX            = 4,
+};
+
+// Enum PCG.EPCGSpatialKeyTarget
+// NumValues: 0x0004
+enum class EPCGSpatialKeyTarget : uint8
+{
+	Position                                 = 0,
+	Transform                                = 1,
+	AABB                                     = 2,
+	EPCGSpatialKeyTarget_MAX                 = 3,
+};
+
+// Enum PCG.EPCGDataOverridePhase
+// NumValues: 0x0004
+enum class EPCGDataOverridePhase : uint8
+{
+	None                                     = 0,
+	PrepareData                              = 1,
+	PostExecute                              = 2,
+	EPCGDataOverridePhase_MAX                = 3,
+};
+
+// Enum PCG.EPCGKeyCollisionResolution
+// NumValues: 0x0004
+enum class EPCGKeyCollisionResolution : uint8
+{
+	NoOp                                     = 0,
+	TakeFirst                                = 1,
+	Fail                                     = 2,
+	EPCGKeyCollisionResolution_MAX           = 3,
+};
+
+// Enum PCG.EPCGKeyCollisionResponse
+// NumValues: 0x0005
+enum class EPCGKeyCollisionResponse : uint8
+{
+	DoNothing                                = 0,
+	Log                                      = 1,
+	Warning                                  = 2,
+	Error                                    = 3,
+	EPCGKeyCollisionResponse_MAX             = 4,
+};
+
+// Enum PCG.EPCGDataViewAttributeLayout
+// NumValues: 0x0003
+enum class EPCGDataViewAttributeLayout : uint8
+{
+	ByElement                                = 0,
+	ByAttribute                              = 1,
+	EPCGDataViewAttributeLayout_MAX          = 2,
+};
+
+// Enum PCG.EPCGDataViewCSVOutput
+// NumValues: 0x0004
+enum class EPCGDataViewCSVOutput : uint8
+{
+	Name                                     = 0,
+	Value                                    = 1,
+	Both                                     = 2,
+	EPCGDataViewCSVOutput_MAX                = 3,
+};
+
+// Enum PCG.EPCGSettingDefaultValueExtraFlags
+// NumValues: 0x0004
+enum class EPCGSettingDefaultValueExtraFlags : uint8
+{
+	None                                     = 0,
+	WideText                                 = 1,
+	MultiLineText                            = 2,
+	EPCGSettingDefaultValueExtraFlags_MAX    = 3,
+};
+
+// Enum PCG.EPCGAssetListSource
+// NumValues: 0x0003
+enum class EPCGAssetListSource : uint8
+{
+	Folder                                   = 0,
+	Collection                               = 1,
+	EPCGAssetListSource_MAX                  = 2,
+};
+
+// Enum PCG.EPCGMeshAttribute
+// NumValues: 0x0003
+enum class EPCGMeshAttribute : uint8
+{
+	LocalPosition                            = 0,
+	Mask                                     = 1,
+	EPCGMeshAttribute_MAX                    = 2,
+};
+
+// Enum PCG.EPCGMeshSelectorMaterialOverrideMode
+// NumValues: 0x0004
+enum class EPCGMeshSelectorMaterialOverrideMode : uint8
+{
+	NoOverride                               = 0,
+	StaticOverride                           = 1,
+	ByAttributeOverride                      = 2,
+	EPCGMeshSelectorMaterialOverrideMode_MAX = 3,
+};
+
+// Enum PCG.EPCGMetadataArrayOperation
+// NumValues: 0x0012
+enum class EPCGMetadataArrayOperation : uint16
+{
+	OneInput                                 = 1024,
+	ConvertToArray                           = 1025,
+	Flatten                                  = 1026,
+	MakeArray                                = 1027,
+	Pop                                      = 1028,
+	Length                                   = 1029,
+	TwoInputs                                = 2048,
+	Add                                      = 2049,
+	AddUnique                                = 2050,
+	Get                                      = 2051,
+	Append                                   = 2052,
+	Find                                     = 2053,
+	Contains                                 = 2054,
+	RemoveAtIndex                            = 2055,
+	ThreeInputs                              = 4096,
+	Insert                                   = 4097,
+	ReplaceAtIndex                           = 4098,
+	EPCGMetadataArrayOperation_MAX           = 4099,
+};
+
+// Enum PCG.EPCGPointNativeProperties
+// NumValues: 0x000C
+enum class EPCGPointNativeProperties : uint8
+{
+	None                                     = 0,
+	Transform                                = 1,
+	Density                                  = 2,
+	BoundsMin                                = 4,
+	BoundsMax                                = 8,
+	Color                                    = 16,
+	Steepness                                = 32,
+	Seed                                     = 64,
+	MetadataEntry                            = 128,
+	All                                      = 255,
+	AllProperties                            = 127,
+	EPCGPointNativeProperties_MAX            = 256,
+};
+
+// Enum PCG.EPCGPolygonJoinType
+// NumValues: 0x0004
+enum class EPCGPolygonJoinType : uint8
+{
+	Square                                   = 0,
+	Round                                    = 1,
+	Miter                                    = 2,
+	EPCGPolygonJoinType_MAX                  = 3,
+};
+
+// Enum PCG.EPCGPolygonEndType
+// NumValues: 0x0005
+enum class EPCGPolygonEndType : uint8
+{
+	Polygon                                  = 0,
+	Butt                                     = 1,
+	Square                                   = 2,
+	Round                                    = 3,
+	EPCGPolygonEndType_MAX                   = 4,
+};
+
+// Enum PCG.EPCGProjectionColorBlendMode
+// NumValues: 0x0006
+enum class EPCGProjectionColorBlendMode : uint8
+{
+	SourceValue                              = 0,
+	TargetValue                              = 1,
+	Add                                      = 2,
+	Subtract                                 = 3,
+	Multiply                                 = 4,
+	EPCGProjectionColorBlendMode_MAX         = 5,
+};
+
+// Enum PCG.EPCGProjectionTagMergeMode
+// NumValues: 0x0004
+enum class EPCGProjectionTagMergeMode : uint8
+{
+	Source                                   = 0,
+	Target                                   = 1,
+	Both                                     = 2,
+	EPCGProjectionTagMergeMode_MAX           = 3,
+};
+
+// Enum PCG.EPCGObjectExtractorBehavior
+// NumValues: 0x0003
+enum class EPCGObjectExtractorBehavior : uint32
+{
+	NoExtract                                = 0,
+	Extract                                  = 1,
+	EPCGObjectExtractorBehavior_MAX          = 2,
+};
+
+// Enum PCG.EPCGStructExtractorBehavior
+// NumValues: 0x0004
+enum class EPCGStructExtractorBehavior : uint32
+{
+	ExtractRootOnly                          = 0,
+	NoExtract                                = 1,
+	Extract                                  = 2,
+	EPCGStructExtractorBehavior_MAX          = 3,
+};
+
+// Enum PCG.EPCGContainerExtractorBehavior
+// NumValues: 0x0004
+enum class EPCGContainerExtractorBehavior : uint32
+{
+	FlattenLastAndDiscardNested              = 0,
+	NoFlattenLast                            = 1,
+	FlattenLast                              = 2,
+	EPCGContainerExtractorBehavior_MAX       = 3,
+};
+
+// Enum PCG.EPCGMaxNumUniqueValuesSource
+// NumValues: 0x0005
+enum class EPCGMaxNumUniqueValuesSource : uint8
+{
+	Invalid                                  = 0,
+	StringKeyValues                          = 1,
+	ExplicitMaxValue                         = 2,
+	UniqueValueTable                         = 3,
+	EPCGMaxNumUniqueValuesSource_MAX         = 4,
+};
+
+// Enum PCG.EPCGComputeGraphExecutionPhase
+// NumValues: 0x000F
+enum class EPCGComputeGraphExecutionPhase : uint8
+{
+	None                                     = 0,
+	GetComputeGraph                          = 1,
+	InitializeDataBindingAndComputeGraph     = 2,
+	InitializeKernelParams                   = 3,
+	PreExecuteReadbacks                      = 4,
+	PrimeDataDescriptionsAndValidateData     = 5,
+	PrepareForExecute                        = 6,
+	ValidateComputeGraphCompilation          = 7,
+	ScheduleComputeGraph                     = 8,
+	WaitForExecutionComplete                 = 9,
+	PostExecute                              = 10,
+	DebugAndInspection                       = 11,
+	WaitForPerformanceData                   = 12,
+	Done                                     = 13,
+	EPCGComputeGraphExecutionPhase_MAX       = 14,
+};
+
+// Enum PCG.EPCGKernelType
+// NumValues: 0x000A
+enum class EPCGKernelType : uint8
+{
+	PointProcessor                           = 0,
+	PointGenerator                           = 1,
+	TextureProcessor                         = 2,
+	TextureGenerator                         = 3,
+	Custom                                   = 4,
+	AttributeSetProcessor                    = 5,
+	AttributeSetGenerator                    = 6,
+	TextureArrayGenerator                    = 7,
+	TextureArrayProcessor                    = 8,
+	EPCGKernelType_MAX                       = 9,
+};
+
+// Enum PCG.EPCGDispatchThreadCount
+// NumValues: 0x0004
+enum class EPCGDispatchThreadCount : uint8
+{
+	FromFirstOutputPin                       = 0,
+	Fixed                                    = 1,
+	FromProductOfInputPins                   = 2,
+	EPCGDispatchThreadCount_MAX              = 3,
+};
+
+// Enum PCG.EPCGExportMode
+// NumValues: 0x0005
+enum class EPCGExportMode : uint8
+{
+	NoExport                                 = 0,
+	ComputeGraphOutput                       = 1,
+	Inspection                               = 2,
+	DebugVisualization                       = 4,
+	EPCGExportMode_MAX                       = 5,
+};
+
+// Enum PCG.EPCGElementDimension
+// NumValues: 0x0005
+enum class EPCGElementDimension : uint8
+{
+	One                                      = 0,
+	Two                                      = 1,
+	Three                                    = 2,
+	Four                                     = 3,
+	EPCGElementDimension_MAX                 = 4,
+};
+
+// Enum PCG.EPCGRenderTargetFormat
+// NumValues: 0x000A
+enum class EPCGRenderTargetFormat : uint8
+{
+	R8                                       = 0,
+	RG8                                      = 1,
+	RGBA8                                    = 2,
+	R16f                                     = 4,
+	RG16f                                    = 5,
+	RGBA16f                                  = 6,
+	R32f                                     = 7,
+	RG32f                                    = 8,
+	RGBA32f                                  = 9,
+	EPCGRenderTargetFormat_MAX               = 10,
+};
+
+// Enum PCG.EPCGComputeKernelFlags
+// NumValues: 0x0005
+enum class EPCGComputeKernelFlags : uint32
+{
+	None                                     = 0,
+	HasStaticValidationErrors                = 1,
+	LogDataDescriptions                      = 2,
+	RepeatDispatchForProfiling               = 4,
+	EPCGComputeKernelFlags_MAX               = 5,
+};
+
+// Enum PCG.EPCGKernelLogVerbosity
+// NumValues: 0x0004
+enum class EPCGKernelLogVerbosity : uint32
+{
+	Verbose                                  = 0,
+	Warning                                  = 1,
+	Error                                    = 2,
+	EPCGKernelLogVerbosity_MAX               = 3,
+};
+
+// Enum PCG.EPCGKernelAttributeType
+// NumValues: 0x000D
+enum class EPCGKernelAttributeType : uint8
+{
+	Bool                                     = 1,
+	Int                                      = 2,
+	Float                                    = 3,
+	Float2                                   = 4,
+	Float3                                   = 5,
+	Float4                                   = 6,
+	Rotator                                  = 7,
+	Quat                                     = 8,
+	Transform                                = 9,
+	StringKey                                = 10,
+	Name                                     = 11,
+	Invalid                                  = 255,
+	EPCGKernelAttributeType_MAX              = 256,
+};
+
+// Enum PCG.EPCGPinInitMode
+// NumValues: 0x0003
+enum class EPCGPinInitMode : uint8
+{
+	FromInputPins                            = 0,
+	Custom                                   = 1,
+	EPCGPinInitMode_MAX                      = 2,
+};
+
+// Enum PCG.EPCGDataCountMode
+// NumValues: 0x0003
+enum class EPCGDataCountMode : uint8
+{
+	FromInputData                            = 0,
+	Fixed                                    = 1,
+	EPCGDataCountMode_MAX                    = 2,
+};
+
+// Enum PCG.EPCGElementCountMode
+// NumValues: 0x0003
+enum class EPCGElementCountMode : uint8
+{
+	FromInputData                            = 0,
+	Fixed                                    = 1,
+	EPCGElementCountMode_MAX                 = 2,
+};
+
+// Enum PCG.EPCGDataMultiplicity
+// NumValues: 0x0003
+enum class EPCGDataMultiplicity : uint8
+{
+	Pairwise                                 = 0,
+	CartesianProduct                         = 1,
+	EPCGDataMultiplicity_MAX                 = 2,
+};
+
+// Enum PCG.EPCGElementMultiplicity
+// NumValues: 0x0003
+enum class EPCGElementMultiplicity : uint8
+{
+	Product                                  = 0,
+	Sum                                      = 1,
+	EPCGElementMultiplicity_MAX              = 2,
+};
+
+// Enum PCG.EPCGAttributeInheritanceMode
+// NumValues: 0x0003
+enum class EPCGAttributeInheritanceMode : uint8
+{
+	None                                     = 0,
+	CopyAttributeSetup                       = 1,
+	EPCGAttributeInheritanceMode_MAX         = 2,
+};
+
+// Enum PCG.EPCGPropertyInheritanceMode
+// NumValues: 0x0003
+enum class EPCGPropertyInheritanceMode : uint8
+{
+	FromInput                                = 0,
+	Custom                                   = 1,
+	EPCGPropertyInheritanceMode_MAX          = 2,
+};
+
+// Enum PCG.EPCGCollisionShapeType
+// NumValues: 0x0005
+enum class EPCGCollisionShapeType : uint8
+{
+	Line                                     = 0,
+	Box                                      = 1,
+	Sphere                                   = 2,
+	Capsule                                  = 3,
+	EPCGCollisionShapeType_MAX               = 4,
+};
+
+// Enum PCG.EPCGCollisionQueryFlag
+// NumValues: 0x0005
+enum class EPCGCollisionQueryFlag : uint8
+{
+	Simple                                   = 0,
+	Complex                                  = 1,
+	SimpleFirst                              = 2,
+	ComplexFirst                             = 3,
+	EPCGCollisionQueryFlag_MAX               = 4,
+};
+
+// Enum PCG.EPCGDifferenceDensityFunction
+// NumValues: 0x0004
+enum class EPCGDifferenceDensityFunction : uint8
+{
+	Minimum                                  = 0,
+	ClampedSubstraction                      = 1,
+	Binary                                   = 2,
+	EPCGDifferenceDensityFunction_MAX        = 3,
+};
+
+// Enum PCG.EPCGDifferenceMode
+// NumValues: 0x0004
+enum class EPCGDifferenceMode : uint8
+{
+	Inferred                                 = 0,
+	Continuous                               = 1,
+	Discrete                                 = 2,
+	EPCGDifferenceMode_MAX                   = 3,
+};
+
+// Enum PCG.EPCGIntersectionDensityFunction
+// NumValues: 0x0003
+enum class EPCGIntersectionDensityFunction : uint8
+{
+	Multiply                                 = 0,
+	Minimum                                  = 1,
+	EPCGIntersectionDensityFunction_MAX      = 2,
+};
+
+// Enum PCG.EPCGPolygon2DProperties
+// NumValues: 0x0008
+enum class EPCGPolygon2DProperties : uint8
+{
+	Position                                 = 0,
+	Rotation                                 = 1,
+	SegmentIndex                             = 2,
+	HoleIndex                                = 3,
+	SegmentLength                            = 4,
+	LocalPosition                            = 5,
+	LocalRotation                            = 6,
+	EPCGPolygon2DProperties_MAX              = 7,
+};
+
+// Enum PCG.EPCGPolygon2DDataProperties
+// NumValues: 0x000B
+enum class EPCGPolygon2DDataProperties : uint8
+{
+	Transform                                = 0,
+	Area                                     = 1,
+	Perimeter                                = 2,
+	BoundsMin                                = 3,
+	BoundsMax                                = 4,
+	SegmentCount                             = 5,
+	OuterSegmentCount                        = 6,
+	HoleCount                                = 7,
+	LongestOuterSegmentIndex                 = 8,
+	IsClockwise                              = 9,
+	EPCGPolygon2DDataProperties_MAX          = 10,
+};
+
+// Enum PCG.EPCGSplineStructProperties
+// NumValues: 0x000C
+enum class EPCGSplineStructProperties : uint8
+{
+	Position                                 = 0,
+	Rotation                                 = 1,
+	Scale                                    = 2,
+	Transform                                = 3,
+	ArriveTangent                            = 4,
+	LeaveTangent                             = 5,
+	InterpType                               = 6,
+	LocalPosition                            = 7,
+	LocalRotation                            = 8,
+	LocalScale                               = 9,
+	LocalTransform                           = 10,
+	EPCGSplineStructProperties_MAX           = 11,
+};
+
+// Enum PCG.EPCGSplineDataProperties
+// NumValues: 0x0004
+enum class EPCGSplineDataProperties : uint8
+{
+	SplineTransform                          = 0,
+	IsClosed                                 = 1,
+	Length                                   = 2,
+	EPCGSplineDataProperties_MAX             = 3,
+};
+
+// Enum PCG.EPCGTextureColorChannel
+// NumValues: 0x0005
+enum class EPCGTextureColorChannel : uint8
+{
+	Red                                      = 0,
+	Green                                    = 1,
+	Blue                                     = 2,
+	Alpha                                    = 3,
+	EPCGTextureColorChannel_MAX              = 4,
+};
+
+// Enum PCG.EPCGTextureDensityFunction
+// NumValues: 0x0003
+enum class EPCGTextureDensityFunction : uint8
+{
+	Ignore                                   = 0,
+	Multiply                                 = 1,
+	EPCGTextureDensityFunction_MAX           = 2,
+};
+
+// Enum PCG.EPCGTextureAddressMode
+// NumValues: 0x0003
+enum class EPCGTextureAddressMode : uint8
+{
+	Clamp                                    = 0,
+	Wrap                                     = 1,
+	EPCGTextureAddressMode_MAX               = 2,
+};
+
+// Enum PCG.EPCGUnionType
+// NumValues: 0x0004
+enum class EPCGUnionType : uint8
+{
+	LeftToRightPriority                      = 0,
+	RightToLeftPriority                      = 1,
+	KeepAll                                  = 2,
+	EPCGUnionType_MAX                        = 3,
+};
+
+// Enum PCG.EPCGUnionDensityFunction
+// NumValues: 0x0004
+enum class EPCGUnionDensityFunction : uint8
+{
+	Maximum                                  = 0,
+	ClampedAddition                          = 1,
+	Binary                                   = 2,
+	EPCGUnionDensityFunction_MAX             = 3,
+};
+
+// Enum PCG.EPCGWorldQueryFilterByTag
+// NumValues: 0x0004
+enum class EPCGWorldQueryFilterByTag : uint8
+{
+	NoTagFilter                              = 0,
+	IncludeTagged                            = 1,
+	ExcludeTagged                            = 2,
+	EPCGWorldQueryFilterByTag_MAX            = 3,
+};
+
+// Enum PCG.EPCGWorldQueryFilter
+// NumValues: 0x0008
+enum class EPCGWorldQueryFilter : uint8
+{
+	None                                     = 0,
+	Include                                  = 1,
+	Exclude                                  = 2,
+	Require                                  = 3,
+	NoTagFilter                              = 0,
+	IncludeTagged                            = 1,
+	ExcludeTagged                            = 2,
+	EPCGWorldQueryFilter_MAX                 = 4,
+};
+
+// Enum PCG.EPCGWorldQuerySelectLandscapeHits
+// NumValues: 0x0004
+enum class EPCGWorldQuerySelectLandscapeHits : uint8
+{
+	Exclude                                  = 0,
+	Include                                  = 1,
+	Require                                  = 2,
+	EPCGWorldQuerySelectLandscapeHits_MAX    = 3,
+};
+
+// Enum PCG.EPCGGraphEditorFiltering
+// NumValues: 0x0003
+enum class EPCGGraphEditorFiltering : uint32
+{
+	Allow                                    = 0,
+	Disallow                                 = 1,
+	EPCGGraphEditorFiltering_MAX             = 2,
+};
+
+// Enum PCG.EPCGControlFlowSelectionMode
+// NumValues: 0x0004
+enum class EPCGControlFlowSelectionMode : uint8
+{
+	Integer                                  = 0,
+	Enum                                     = 1,
+	String                                   = 2,
+	EPCGControlFlowSelectionMode_MAX         = 3,
+};
+
+// Enum PCG.EPCGSelectGrammarComparator
+// NumValues: 0x000B
+enum class EPCGSelectGrammarComparator : uint16
+{
+	BinaryOps                                = 32,
+	Select                                   = 33,
+	LessThan                                 = 34,
+	LessThanEqualTo                          = 35,
+	EqualTo                                  = 36,
+	GreaterThanEqualTo                       = 37,
+	GreaterThan                              = 38,
+	TernaryOps                               = 64,
+	RangeExclusive                           = 65,
+	RangeInclusive                           = 66,
+	EPCGSelectGrammarComparator_MAX          = 67,
+};
+
+// Enum PCG.EPCGExportAttributesFormat
+// NumValues: 0x0003
+enum class EPCGExportAttributesFormat : uint8
+{
+	Binary                                   = 0,
+	Json                                     = 1,
+	EPCGExportAttributesFormat_MAX           = 2,
+};
+
+// Enum PCG.EPCGExportAttributesLayout
+// NumValues: 0x0003
+enum class EPCGExportAttributesLayout : uint8
+{
+	ByElement                                = 0,
+	ByAttribute                              = 1,
+	EPCGExportAttributesLayout_MAX           = 2,
+};
+
+// Enum PCG.EPCGMetadataBitwiseOperation
+// NumValues: 0x0007
+enum class EPCGMetadataBitwiseOperation : uint16
+{
+	And                                      = 0,
+	Not                                      = 1,
+	Or                                       = 2,
+	Xor                                      = 3,
+	ShiftLeft                                = 4,
+	ShiftRight                               = 5,
+	EPCGMetadataBitwiseOperation_MAX         = 6,
+};
+
+// Enum PCG.EPCGMetadataBooleanOperation
+// NumValues: 0x000A
+enum class EPCGMetadataBooleanOperation : uint16
+{
+	And                                      = 0,
+	Not                                      = 1,
+	Or                                       = 2,
+	Xor                                      = 3,
+	Nand                                     = 4,
+	Nor                                      = 5,
+	Xnor                                     = 6,
+	Imply                                    = 7,
+	Nimply                                   = 8,
+	EPCGMetadataBooleanOperation_MAX         = 9,
+};
+
+// Enum PCG.EPCGMetadataCompareOperation
+// NumValues: 0x0007
+enum class EPCGMetadataCompareOperation : uint16
+{
+	Equal                                    = 0,
+	NotEqual                                 = 1,
+	Greater                                  = 2,
+	GreaterOrEqual                           = 3,
+	Less                                     = 4,
+	LessOrEqual                              = 5,
+	EPCGMetadataCompareOperation_MAX         = 6,
+};
+
+// Enum PCG.EPCGMetadataMakeRotatorOp
+// NumValues: 0x000C
+enum class EPCGMetadataMakeRotatorOp : uint8
+{
+	MakeRotFromX                             = 0,
+	MakeRotFromY                             = 1,
+	MakeRotFromZ                             = 2,
+	MakeRotFromXY                            = 3,
+	MakeRotFromYX                            = 4,
+	MakeRotFromXZ                            = 5,
+	MakeRotFromZX                            = 6,
+	MakeRotFromYZ                            = 7,
+	MakeRotFromZY                            = 8,
+	MakeRotFromAxes                          = 9,
+	MakeRotFromAngles                        = 10,
+	EPCGMetadataMakeRotatorOp_MAX            = 11,
+};
+
+// Enum PCG.EPCGMetadataMakeVector3
+// NumValues: 0x0003
+enum class EPCGMetadataMakeVector3 : uint8
+{
+	ThreeValues                              = 0,
+	Vector2AndValue                          = 1,
+	EPCGMetadataMakeVector3_MAX              = 2,
+};
+
+// Enum PCG.EPCGMetadataMakeVector4
+// NumValues: 0x0005
+enum class EPCGMetadataMakeVector4 : uint8
+{
+	FourValues                               = 0,
+	Vector2AndTwoValues                      = 1,
+	TwoVector2                               = 2,
+	Vector3AndValue                          = 3,
+	EPCGMetadataMakeVector4_MAX              = 4,
+};
+
+// Enum PCG.EPCGMetadataMathsOperation
+// NumValues: 0x001E
+enum class EPCGMetadataMathsOperation : uint16
+{
+	UnaryOp                                  = 1024,
+	Sign                                     = 1025,
+	Frac                                     = 1026,
+	Truncate                                 = 1027,
+	Round                                    = 1028,
+	Sqrt                                     = 1029,
+	Abs                                      = 1030,
+	Floor                                    = 1031,
+	Ceil                                     = 1032,
+	OneMinus                                 = 1033,
+	Inc                                      = 1034,
+	Dec                                      = 1035,
+	Negate                                   = 1036,
+	BinaryOp                                 = 2048,
+	Add                                      = 2049,
+	Subtract                                 = 2050,
+	Multiply                                 = 2051,
+	Divide                                   = 2052,
+	Max                                      = 2053,
+	Min                                      = 2054,
+	Pow                                      = 2055,
+	ClampMin                                 = 2056,
+	ClampMax                                 = 2057,
+	Modulo                                   = 2058,
+	Set                                      = 2059,
+	TernaryOp                                = 4096,
+	Clamp                                    = 4097,
+	Lerp                                     = 4098,
+	MulAdd                                   = 4099,
+	AddModulo                                = 4100,
+};
+
+// Enum PCG.EPCGMetadataSettingsBaseMode
+// NumValues: 0x0004
+enum class EPCGMetadataSettingsBaseMode : uint8
+{
+	Inferred                                 = 0,
+	NoBroadcast                              = 1,
+	Broadcast                                = 2,
+	EPCGMetadataSettingsBaseMode_MAX         = 3,
+};
+
+// Enum PCG.EPCGMetadataSettingsBaseTypes
+// NumValues: 0x0003
+enum class EPCGMetadataSettingsBaseTypes : uint8
+{
+	AutoUpcastTypes                          = 0,
+	StrictTypes                              = 1,
+	EPCGMetadataSettingsBaseTypes_MAX        = 2,
+};
+
+// Enum PCG.EPCGMetadataRotatorOperation
+// NumValues: 0x0009
+enum class EPCGMetadataRotatorOperation : uint16
+{
+	RotatorOp                                = 0,
+	Combine                                  = 1,
+	Invert                                   = 2,
+	Lerp                                     = 3,
+	Normalize                                = 4,
+	TransformOp                              = 100,
+	TransformRotation                        = 101,
+	InverseTransformRotation                 = 102,
+	EPCGMetadataRotatorOperation_MAX         = 103,
+};
+
+// Enum PCG.EPCGMetadataStringOperation
+// NumValues: 0x0013
+enum class EPCGMetadataStringOperation : uint16
+{
+	Append                                   = 0,
+	Replace                                  = 1,
+	Substring                                = 2,
+	Matches                                  = 3,
+	ToUpper                                  = 4,
+	ToLower                                  = 5,
+	TrimStart                                = 6,
+	TrimEnd                                  = 7,
+	TrimStartAndEnd                          = 8,
+	Left                                     = 9,
+	LeftChop                                 = 10,
+	Right                                    = 11,
+	RightChop                                = 12,
+	Mid                                      = 13,
+	RemoveFromStart                          = 14,
+	RemoveFromEnd                            = 15,
+	Find                                     = 16,
+	FindLast                                 = 17,
+	EPCGMetadataStringOperation_MAX          = 18,
+};
+
+// Enum PCG.EPCGMetadataTransformOperation
+// NumValues: 0x0004
+enum class EPCGMetadataTransformOperation : uint16
+{
+	Compose                                  = 0,
+	Invert                                   = 1,
+	Lerp                                     = 2,
+	EPCGMetadataTransformOperation_MAX       = 3,
+};
+
+// Enum PCG.EPCGTransformLerpMode
+// NumValues: 0x0004
+enum class EPCGTransformLerpMode : uint16
+{
+	QuatInterp                               = 0,
+	EulerInterp                              = 1,
+	DualQuatInterp                           = 2,
+	EPCGTransformLerpMode_MAX                = 3,
+};
+
+// Enum PCG.EPCGMetadataTrigOperation
+// NumValues: 0x000A
+enum class EPCGMetadataTrigOperation : uint16
+{
+	Acos                                     = 0,
+	Asin                                     = 1,
+	Atan                                     = 2,
+	Atan2                                    = 3,
+	Cos                                      = 4,
+	Sin                                      = 5,
+	Tan                                      = 6,
+	DegToRad                                 = 7,
+	RadToDeg                                 = 8,
+	EPCGMetadataTrigOperation_MAX            = 9,
+};
+
+// Enum PCG.EPCGMetadataVectorOperation
+// NumValues: 0x0010
+enum class EPCGMetadataVectorOperation : uint16
+{
+	VectorOp                                 = 0,
+	Cross                                    = 1,
+	Dot                                      = 2,
+	Distance                                 = 3,
+	Normalize                                = 4,
+	Length                                   = 5,
+	RotateAroundAxis                         = 6,
+	RotatorBetweenVectors                    = 7,
+	EulerBetweenVectors                      = 8,
+	AngleBetweenVector2D                     = 9,
+	TransformOp                              = 100,
+	TransformDirection                       = 101,
+	TransformLocation                        = 102,
+	InverseTransformDirection                = 103,
+	InverseTransformLocation                 = 104,
+	EPCGMetadataVectorOperation_MAX          = 105,
+};
+
+// Enum PCG.EPCGActorSelection
+// NumValues: 0x0006
+enum class EPCGActorSelection : uint8
+{
+	ByTag                                    = 0,
+	ByName                                   = 1,
+	ByClass                                  = 2,
+	ByPath                                   = 3,
+	Unknown                                  = 4,
+	EPCGActorSelection_MAX                   = 5,
+};
+
+// Enum PCG.EPCGComponentSelection
+// NumValues: 0x0004
+enum class EPCGComponentSelection : uint8
+{
+	ByTag                                    = 0,
+	ByClass                                  = 1,
+	Unknown                                  = 2,
+	EPCGComponentSelection_MAX               = 3,
+};
+
+// Enum PCG.EPCGActorFilter
+// NumValues: 0x0007
+enum class EPCGActorFilter : uint8
+{
+	Self                                     = 0,
+	Parent                                   = 1,
+	Root                                     = 2,
+	AllWorldActors                           = 3,
+	Original                                 = 4,
+	FromInput                                = 5,
+	EPCGActorFilter_MAX                      = 6,
+};
+
+// Enum PCG.EPCGIsolatedActorIncludeFlag
+// NumValues: 0x0004
+enum class EPCGIsolatedActorIncludeFlag : uint8
+{
+	Ignore                                   = 0,
+	Include                                  = 1,
+	Only                                     = 2,
+	EPCGIsolatedActorIncludeFlag_MAX         = 3,
+};
+
+// Enum PCG.EPCGAlignPointsAxisReferential
+// NumValues: 0x0003
+enum class EPCGAlignPointsAxisReferential : uint8
+{
+	Min                                      = 0,
+	Max                                      = 1,
+	Center                                   = 2,
+};
+
+// Enum PCG.EPCGAlignPointsSpatialReferential
+// NumValues: 0x0005
+enum class EPCGAlignPointsSpatialReferential : uint8
+{
+	Target                                   = 0,
+	LocalToTarget                            = 1,
+	Source                                   = 2,
+	World                                    = 3,
+	EPCGAlignPointsSpatialReferential_MAX    = 4,
+};
+
+// Enum PCG.EPCGApplyHierarchyOption
+// NumValues: 0x0005
+enum class EPCGApplyHierarchyOption : uint8
+{
+	Always                                   = 0,
+	Never                                    = 1,
+	OptInByAttribute                         = 2,
+	OptOutByAttribute                        = 3,
+	EPCGApplyHierarchyOption_MAX             = 4,
 };
 
 // Enum PCG.EPCGAttractMode
@@ -56,22 +1044,57 @@ enum class EPCGAttributeFilterOperator : uint8
 	EPCGAttributeFilterOperator_MAX          = 9,
 };
 
-// Enum PCG.EPCGAttributePropertySelection
-// NumValues: 0x0004
-enum class EPCGAttributePropertySelection : uint32
+// Enum PCG.EPCGAttributeNoiseMode
+// NumValues: 0x0006
+enum class EPCGAttributeNoiseMode : uint8
 {
-	Attribute                                = 0,
-	PointProperty                            = 1,
-	ExtraProperty                            = 2,
-	EPCGAttributePropertySelection_MAX       = 3,
+	Set                                      = 0,
+	Minimum                                  = 1,
+	Maximum                                  = 2,
+	Add                                      = 3,
+	Multiply                                 = 4,
+	EPCGAttributeNoiseMode_MAX               = 5,
 };
 
-// Enum PCG.EPCGExtraProperties
-// NumValues: 0x0002
-enum class EPCGExtraProperties : uint8
+// Enum PCG.EPCGAttributeReduceOperation
+// NumValues: 0x0005
+enum class EPCGAttributeReduceOperation : uint32
 {
-	Index                                    = 0,
-	EPCGExtraProperties_MAX                  = 1,
+	Average                                  = 0,
+	Max                                      = 1,
+	Min                                      = 2,
+	Sum                                      = 3,
+	Join                                     = 4,
+};
+
+// Enum PCG.EPCGAttributeRemapMode
+// NumValues: 0x0003
+enum class EPCGAttributeRemapMode : uint32
+{
+	Ranges                                   = 0,
+	Curve                                    = 1,
+	EPCGAttributeRemapMode_MAX               = 2,
+};
+
+// Enum PCG.EPCGAttributeSelectOperation
+// NumValues: 0x0003
+enum class EPCGAttributeSelectOperation : uint32
+{
+	Min                                      = 0,
+	Max                                      = 1,
+	Median                                   = 2,
+};
+
+// Enum PCG.EPCGAttributeSelectAxis
+// NumValues: 0x0006
+enum class EPCGAttributeSelectAxis : uint32
+{
+	X                                        = 0,
+	Y                                        = 1,
+	Z                                        = 2,
+	W                                        = 3,
+	CustomAxis                               = 4,
+	EPCGAttributeSelectAxis_MAX              = 5,
 };
 
 // Enum PCG.EPCGBlurElementMode
@@ -82,6 +1105,18 @@ enum class EPCGBlurElementMode : uint32
 	Linear                                   = 1,
 	Gaussian                                 = 2,
 	EPCGBlurElementMode_MAX                  = 3,
+};
+
+// Enum PCG.EPCGBoundsModifierMode
+// NumValues: 0x0006
+enum class EPCGBoundsModifierMode : uint8
+{
+	Set                                      = 0,
+	Intersect                                = 1,
+	Include                                  = 2,
+	Translate                                = 3,
+	Scale                                    = 4,
+	EPCGBoundsModifierMode_MAX               = 5,
 };
 
 // Enum PCG.EPCGControlPointFuseMode
@@ -133,9 +1168,823 @@ enum class EPCGCollapseVisitOrder : uint8
 	EPCGCollapseVisitOrder_MAX               = 4,
 };
 
+// Enum PCG.EPCGCopyAttributesOperation
+// NumValues: 0x0004
+enum class EPCGCopyAttributesOperation : uint32
+{
+	CopyEachSourceToEachTargetRespectively   = 0,
+	MergeSourcesAndCopyToAllTargets          = 1,
+	CopyEachSourceOnEveryTarget              = 2,
+	EPCGCopyAttributesOperation_MAX          = 3,
+};
+
+// Enum PCG.EPCGCopyPointsInheritanceMode
+// NumValues: 0x0004
+enum class EPCGCopyPointsInheritanceMode : uint8
+{
+	Relative                                 = 0,
+	Source                                   = 1,
+	Target                                   = 2,
+	EPCGCopyPointsInheritanceMode_MAX        = 3,
+};
+
+// Enum PCG.EPCGCopyPointsTagInheritanceMode
+// NumValues: 0x0004
+enum class EPCGCopyPointsTagInheritanceMode : uint8
+{
+	Both                                     = 0,
+	Source                                   = 1,
+	Target                                   = 2,
+	EPCGCopyPointsTagInheritanceMode_MAX     = 3,
+};
+
+// Enum PCG.EPCGCopyPointsMetadataInheritanceMode
+// NumValues: 0x0006
+enum class EPCGCopyPointsMetadataInheritanceMode : uint8
+{
+	SourceFirst                              = 0,
+	TargetFirst                              = 1,
+	SourceOnly                               = 2,
+	TargetOnly                               = 3,
+	None                                     = 4,
+	EPCGCopyPointsMetadataInheritanceMode_MAX = 5,
+};
+
+// Enum PCG.EPCGLocalGridPivot
+// NumValues: 0x0004
+enum class EPCGLocalGridPivot : uint8
+{
+	Global                                   = 0,
+	OriginalComponent                        = 1,
+	LocalComponent                           = 2,
+	EPCGLocalGridPivot_MAX                   = 3,
+};
+
+// Enum PCG.EPCGPointPosition
+// NumValues: 0x0003
+enum class EPCGPointPosition : uint8
+{
+	CellCenter                               = 0,
+	CellCorners                              = 1,
+	EPCGPointPosition_MAX                    = 2,
+};
+
+// Enum PCG.EPCGGridPivot
+// NumValues: 0x0004
+enum class EPCGGridPivot : uint8
+{
+	Global                                   = 0,
+	OriginalComponent                        = 1,
+	LocalComponent                           = 2,
+	EPCGGridPivot_MAX                        = 3,
+};
+
+// Enum PCG.EPCGSphereGeneration
+// NumValues: 0x0006
+enum class EPCGSphereGeneration : uint8
+{
+	Geodesic                                 = 0,
+	Angle                                    = 1,
+	Segments                                 = 2,
+	Random                                   = 3,
+	Poisson                                  = 4,
+	EPCGSphereGeneration_MAX                 = 5,
+};
+
+// Enum PCG.EPCGGeodesicSphereRepresentation
+// NumValues: 0x0002
+enum class EPCGGeodesicSphereRepresentation : uint8
+{
+	Icosahedron                              = 0,
+	EPCGGeodesicSphereRepresentation_MAX     = 1,
+};
+
+// Enum PCG.EPCGSpherePointOrientation
+// NumValues: 0x0004
+enum class EPCGSpherePointOrientation : uint8
+{
+	Radial                                   = 0,
+	Centric                                  = 1,
+	None                                     = 2,
+	EPCGSpherePointOrientation_MAX           = 3,
+};
+
+// Enum PCG.EPCGCreateSplineMode
+// NumValues: 0x0003
+enum class EPCGCreateSplineMode : uint8
+{
+	CreateDataOnly                           = 0,
+	CreateComponent                          = 1,
+	EPCGCreateSplineMode_MAX                 = 2,
+};
+
+// Enum PCG.EPCGCullPointsMode
+// NumValues: 0x0003
+enum class EPCGCullPointsMode : uint8
+{
+	Ordered                                  = 0,
+	Unordered                                = 1,
+	EPCGCullPointsMode_MAX                   = 2,
+};
+
+// Enum PCG.EPCGGetDataFromActorMode
+// NumValues: 0x0009
+enum class EPCGGetDataFromActorMode : uint8
+{
+	ParseActorComponents                     = 0,
+	GetSinglePoint                           = 1,
+	GetDataFromProperty                      = 2,
+	GetDataFromPCGComponent                  = 3,
+	GetDataFromPCGComponentOrParseComponents = 4,
+	GetActorReference                        = 5,
+	GetComponentsReference                   = 6,
+	GetPointData                             = 7,
+	EPCGGetDataFromActorMode_MAX             = 8,
+};
+
+// Enum PCG.EPCGAttributeFilterOperation
+// NumValues: 0x0003
+enum class EPCGAttributeFilterOperation : uint32
+{
+	KeepSelectedAttributes                   = 0,
+	DeleteSelectedAttributes                 = 1,
+	EPCGAttributeFilterOperation_MAX         = 2,
+};
+
+// Enum PCG.EPCGTagFilterOperation
+// NumValues: 0x0003
+enum class EPCGTagFilterOperation : uint32
+{
+	KeepOnlySelectedTags                     = 0,
+	DeleteSelectedTags                       = 1,
+	EPCGTagFilterOperation_MAX               = 2,
+};
+
+// Enum PCG.PCGDistanceShape
+// NumValues: 0x0004
+enum class EPCGDistanceShape : uint32
+{
+	SphereBounds                             = 0,
+	BoxBounds                                = 1,
+	Center                                   = 2,
+	PCGDistanceShape_MAX                     = 3,
+};
+
+// Enum PCG.EPCGDownsampleTextureType
+// NumValues: 0x0003
+enum class EPCGDownsampleTextureType : uint8
+{
+	Texture2D                                = 0,
+	Texture2DArray                           = 1,
+	EPCGDownsampleTextureType_MAX            = 2,
+};
+
+// Enum PCG.EPCGFilterByAttributeMode
+// NumValues: 0x0004
+enum class EPCGFilterByAttributeMode : uint32
+{
+	FilterByExistence                        = 0,
+	FilterByValue                            = 1,
+	FilterByValueRange                       = 2,
+	EPCGFilterByAttributeMode_MAX            = 3,
+};
+
+// Enum PCG.EPCGFilterByAttributeValueMode
+// NumValues: 0x0003
+enum class EPCGFilterByAttributeValueMode : uint32
+{
+	AnyOf                                    = 0,
+	AllOf                                    = 1,
+	EPCGFilterByAttributeValueMode_MAX       = 2,
+};
+
+// Enum PCG.EPCGFilterByTagOperation
+// NumValues: 0x0003
+enum class EPCGFilterByTagOperation : uint32
+{
+	KeepTagged                               = 0,
+	RemoveTagged                             = 1,
+	EPCGFilterByTagOperation_MAX             = 2,
+};
+
+// Enum PCG.EPCGGenerateSeedSource
+// NumValues: 0x0004
+enum class EPCGGenerateSeedSource : uint8
+{
+	RandomStream                             = 0,
+	HashEachSourceAttribute                  = 1,
+	HashStringConstant                       = 2,
+	EPCGGenerateSeedSource_MAX               = 3,
+};
+
+// Enum PCG.EPCGGetExecutionContextMode
+// NumValues: 0x000D
+enum class EPCGGetExecutionContextMode : uint8
+{
+	IsEditor                                 = 0,
+	IsRuntime                                = 1,
+	IsOriginal                               = 2,
+	IsLocal                                  = 3,
+	IsPartitioned                            = 4,
+	IsRuntimeGeneration                      = 5,
+	IsDedicatedServer                        = 6,
+	IsListenServer                           = 7,
+	HasAuthority                             = 8,
+	IsBuilder                                = 9,
+	TrackingPriority                         = 10,
+	IsGameWorld                              = 11,
+	EPCGGetExecutionContextMode_MAX          = 12,
+};
+
+// Enum PCG.EPCGSubgraphDepthMode
+// NumValues: 0x0003
+enum class EPCGSubgraphDepthMode : uint8
+{
+	Depth                                    = 0,
+	RecursiveDepth                           = 1,
+	EPCGSubgraphDepthMode_MAX                = 2,
+};
+
+// Enum PCG.EPCGProxyInterfaceMode
+// NumValues: 0x0004
+enum class EPCGProxyInterfaceMode : uint8
+{
+	ByNativeElement                          = 0,
+	ByBlueprintElement                       = 1,
+	BySettings                               = 2,
+	EPCGProxyInterfaceMode_MAX               = 3,
+};
+
+// Enum PCG.EPCGMatchMaxDistanceMode
+// NumValues: 0x0004
+enum class EPCGMatchMaxDistanceMode : uint32
+{
+	NoMaxDistance                            = 0,
+	UseConstantMaxDistance                   = 1,
+	AttributeMaxDistance                     = 2,
+	EPCGMatchMaxDistanceMode_MAX             = 3,
+};
+
+// Enum PCG.EPCGMergeTagsMode
+// NumValues: 0x0005
+enum class EPCGMergeTagsMode : uint8
+{
+	MergeAllTags                             = 0,
+	MergeTagsFromFirstPin                    = 1,
+	SelectTagsFromFirstData                  = 2,
+	None                                     = 3,
+	EPCGMergeTagsMode_MAX                    = 4,
+};
+
+// Enum PCG.PCGNormalToDensityMode
+// NumValues: 0x0008
+enum class EPCGNormalToDensityMode : uint8
+{
+	Set                                      = 0,
+	Minimum                                  = 1,
+	Maximum                                  = 2,
+	Add                                      = 3,
+	Subtract                                 = 4,
+	Multiply                                 = 5,
+	Divide                                   = 6,
+	PCGNormalToDensityMode_MAX               = 7,
+};
+
+// Enum PCG.EPCGPathfindingSplineMode
+// NumValues: 0x0003
+enum class EPCGPathfindingSplineMode : uint8
+{
+	Curve                                    = 0,
+	Linear                                   = 1,
+	EPCGPathfindingSplineMode_MAX            = 2,
+};
+
+// Enum PCG.EPCGPathfindingCostFunctionMode
+// NumValues: 0x0004
+enum class EPCGPathfindingCostFunctionMode : uint8
+{
+	Distance                                 = 0,
+	FitnessScore                             = 1,
+	CostMultiplier                           = 2,
+	EPCGPathfindingCostFunctionMode_MAX      = 3,
+};
+
+// Enum PCG.EPCGPathfindingGoalMappingMode
+// NumValues: 0x0004
+enum class EPCGPathfindingGoalMappingMode : uint8
+{
+	EachStartToNearestGoal                   = 0,
+	EachStartToEachGoal                      = 1,
+	EachStartToPairwiseGoal                  = 2,
+	EPCGPathfindingGoalMappingMode_MAX       = 3,
+};
+
+// Enum PCG.EPCGPointExtentsModifierMode
+// NumValues: 0x0006
+enum class EPCGPointExtentsModifierMode : uint8
+{
+	Set                                      = 0,
+	Minimum                                  = 1,
+	Maximum                                  = 2,
+	Add                                      = 3,
+	Multiply                                 = 4,
+	EPCGPointExtentsModifierMode_MAX         = 5,
+};
+
+// Enum PCG.EPCGPointNeighborhoodDensityMode
+// NumValues: 0x0004
+enum class EPCGPointNeighborhoodDensityMode : uint32
+{
+	None                                     = 0,
+	SetNormalizedDistanceToDensity           = 1,
+	SetAverageDensity                        = 2,
+	EPCGPointNeighborhoodDensityMode_MAX     = 3,
+};
+
+// Enum PCG.EPCGPrintVerbosity
+// NumValues: 0x0006
+enum class EPCGPrintVerbosity : uint8
+{
+	NoLogging                                = 0,
+	Log                                      = 5,
+	Warning                                  = 3,
+	Error                                    = 2,
+	Display                                  = 4,
+	EPCGPrintVerbosity_MAX                   = 6,
+};
+
+// Enum PCG.EPCGTextureMappingMethod
+// NumValues: 0x0003
+enum class EPCGTextureMappingMethod : uint8
+{
+	Planar                                   = 0,
+	UVCoordinates                            = 1,
+	EPCGTextureMappingMethod_MAX             = 2,
+};
+
+// Enum PCG.EPCGSceneCaptureOrientationMode
+// NumValues: 0x0004
+enum class EPCGSceneCaptureOrientationMode : uint8
+{
+	FromExecutionSource                      = 0,
+	FromBoundingShape                        = 1,
+	Explicit                                 = 2,
+	EPCGSceneCaptureOrientationMode_MAX      = 3,
+};
+
+// Enum PCG.EPCGSelfPruningType
+// NumValues: 0x0006
+enum class EPCGSelfPruningType : uint8
+{
+	LargeToSmall                             = 0,
+	SmallToLarge                             = 1,
+	AllEqual                                 = 2,
+	None                                     = 3,
+	RemoveDuplicates                         = 4,
+	EPCGSelfPruningType_MAX                  = 5,
+};
+
+// Enum PCG.EPCGSortMethod
+// NumValues: 0x0003
+enum class EPCGSortMethod : uint8
+{
+	Ascending                                = 0,
+	Descending                               = 1,
+	EPCGSortMethod_MAX                       = 2,
+};
+
+// Enum PCG.PCGSpatialNoiseMode
+// NumValues: 0x0006
+enum class EPCGSpatialNoiseMode : uint32
+{
+	Perlin2D                                 = 0,
+	Caustic2D                                = 1,
+	Voronoi2D                                = 2,
+	FractionalBrownian2D                     = 3,
+	EdgeMask2D                               = 4,
+	PCGSpatialNoiseMode_MAX                  = 5,
+};
+
+// Enum PCG.PCGSpatialNoiseMask2DMode
+// NumValues: 0x0004
+enum class EPCGSpatialNoiseMask2DMode : uint32
+{
+	Perlin                                   = 0,
+	Caustic                                  = 1,
+	FractionalBrownian                       = 2,
+	PCGSpatialNoiseMask2DMode_MAX            = 3,
+};
+
+// Enum PCG.EPCGSpawnActorOption
+// NumValues: 0x0004
+enum class EPCGSpawnActorOption : uint8
+{
+	CollapseActors                           = 0,
+	MergePCGOnly                             = 1,
+	NoMerging                                = 2,
+	EPCGSpawnActorOption_MAX                 = 3,
+};
+
+// Enum PCG.EPCGSpawnActorGenerationTrigger
+// NumValues: 0x0005
+enum class EPCGSpawnActorGenerationTrigger : uint8
+{
+	Default                                  = 0,
+	ForceGenerate                            = 1,
+	DoNotGenerateInEditor                    = 2,
+	DoNotGenerate                            = 3,
+	EPCGSpawnActorGenerationTrigger_MAX      = 4,
+};
+
+// Enum PCG.EPCGReverseSplineOperation
+// NumValues: 0x0004
+enum class EPCGReverseSplineOperation : uint32
+{
+	Reverse                                  = 0,
+	ForceClockwise                           = 1,
+	ForceCounterClockwise                    = 2,
+	EPCGReverseSplineOperation_MAX           = 3,
+};
+
+// Enum PCG.EPCGSplineIntersectionType
+// NumValues: 0x0003
+enum class EPCGSplineIntersectionType : uint8
+{
+	Self                                     = 0,
+	AgainstOtherSplines                      = 1,
+	EPCGSplineIntersectionType_MAX           = 2,
+};
+
+// Enum PCG.EPCGSplineIntersectionOutput
+// NumValues: 0x0003
+enum class EPCGSplineIntersectionOutput : uint8
+{
+	IntersectionPointsOnly                   = 0,
+	OriginalSplinesWithIntersections         = 1,
+	EPCGSplineIntersectionOutput_MAX         = 2,
+};
+
+// Enum PCG.EPCGSplineIntersectionPointType
+// NumValues: 0x0005
+enum class EPCGSplineIntersectionPointType : uint8
+{
+	NotAnIntersection                        = 0,
+	SinglePointIntersection                  = 1,
+	IntersectionStart                        = 2,
+	IntersectionEnd                          = 3,
+	EPCGSplineIntersectionPointType_MAX      = 4,
+};
+
+// Enum PCG.EPCGSplineMeshForwardAxis
+// NumValues: 0x0004
+enum class EPCGSplineMeshForwardAxis : uint32
+{
+	X                                        = 0,
+	Y                                        = 1,
+	Z                                        = 2,
+	EPCGSplineMeshForwardAxis_MAX            = 3,
+};
+
+// Enum PCG.EPCGSplineSamplingMode
+// NumValues: 0x0004
+enum class EPCGSplineSamplingMode : uint8
+{
+	Subdivision                              = 0,
+	Distance                                 = 1,
+	NumberOfSamples                          = 2,
+	EPCGSplineSamplingMode_MAX               = 3,
+};
+
+// Enum PCG.EPCGSplineSamplingDimension
+// NumValues: 0x0006
+enum class EPCGSplineSamplingDimension : uint8
+{
+	OnSpline                                 = 0,
+	OnHorizontal                             = 1,
+	OnVertical                               = 2,
+	OnVolume                                 = 3,
+	OnInterior                               = 4,
+	EPCGSplineSamplingDimension_MAX          = 5,
+};
+
+// Enum PCG.EPCGSplineSamplingFill
+// NumValues: 0x0003
+enum class EPCGSplineSamplingFill : uint8
+{
+	Fill                                     = 0,
+	EdgesOnly                                = 1,
+	EPCGSplineSamplingFill_MAX               = 2,
+};
+
+// Enum PCG.EPCGSplineSamplingInteriorOrientation
+// NumValues: 0x0003
+enum class EPCGSplineSamplingInteriorOrientation : uint8
+{
+	Uniform                                  = 0,
+	FollowCurvature                          = 1,
+	EPCGSplineSamplingInteriorOrientation_MAX = 2,
+};
+
+// Enum PCG.EPCGSplineSamplingSeedingMode
+// NumValues: 0x0003
+enum class EPCGSplineSamplingSeedingMode : uint8
+{
+	SeedFromPosition                         = 0,
+	SeedFromIndex                            = 1,
+	EPCGSplineSamplingSeedingMode_MAX        = 2,
+};
+
+// Enum PCG.EPCGSplitAxis
+// NumValues: 0x0004
+enum class EPCGSplitAxis : uint32
+{
+	X                                        = 0,
+	Y                                        = 1,
+	Z                                        = 2,
+	EPCGSplitAxis_MAX                        = 3,
+};
+
+// Enum PCG.EPCGSplitSplineMode
+// NumValues: 0x0005
+enum class EPCGSplitSplineMode : uint32
+{
+	ByKey                                    = 0,
+	ByDistance                               = 1,
+	ByAlpha                                  = 2,
+	ByPredicateOnControlPoints               = 3,
+	EPCGSplitSplineMode_MAX                  = 4,
+};
+
+// Enum PCG.EPCGSplitSplineDataBehavior
+// NumValues: 0x0004
+enum class EPCGSplitSplineDataBehavior : uint32
+{
+	KeepAllSplines                           = 0,
+	KeepCutSplines                           = 1,
+	KeepInteriorSplinesOnly                  = 2,
+	EPCGSplitSplineDataBehavior_MAX          = 3,
+};
+
+// Enum PCG.EPCGUserParameterSource
+// NumValues: 0x0004
+enum class EPCGUserParameterSource : uint8
+{
+	Current                                  = 0,
+	Upstream                                 = 1,
+	Root                                     = 2,
+	EPCGUserParameterSource_MAX              = 3,
+};
+
+// Enum PCG.EPCGClipPathOperation
+// NumValues: 0x0003
+enum class EPCGClipPathOperation : uint8
+{
+	Intersection                             = 0,
+	Difference                               = 1,
+	EPCGClipPathOperation_MAX                = 2,
+};
+
+// Enum PCG.EPCGCreatePolygonInputType
+// NumValues: 0x0004
+enum class EPCGCreatePolygonInputType : uint8
+{
+	Automatic                                = 0,
+	ForceOpen                                = 1,
+	ForceClosed                              = 2,
+	EPCGCreatePolygonInputType_MAX           = 3,
+};
+
+// Enum PCG.EPCGCreatePolygonDefaultNormalBehavior
+// NumValues: 0x0004
+enum class EPCGCreatePolygonDefaultNormalBehavior : uint8
+{
+	OnlyForDegenerateCases                   = 0,
+	OnlyForOpenPolygons                      = 1,
+	Always                                   = 2,
+	EPCGCreatePolygonDefaultNormalBehavior_MAX = 3,
+};
+
+// Enum PCG.EPCGPolygonOffsetOperation
+// NumValues: 0x0004
+enum class EPCGPolygonOffsetOperation : uint32
+{
+	Offset                                   = 0,
+	Open                                     = 1,
+	Close                                    = 2,
+	EPCGPolygonOffsetOperation_MAX           = 3,
+};
+
+// Enum PCG.EPCGPolygonOperation
+// NumValues: 0x0008
+enum class EPCGPolygonOperation : uint8
+{
+	Union                                    = 0,
+	Difference                               = 1,
+	Intersection                             = 2,
+	PairwiseIntersection                     = 3,
+	InnerIntersection                        = 4,
+	ExclusiveOr                              = 5,
+	CutWithPaths                             = 6,
+	EPCGPolygonOperation_MAX                 = 7,
+};
+
+// Enum PCG.EPCGPolygonOperationMetadataMode
+// NumValues: 0x0004
+enum class EPCGPolygonOperationMetadataMode : uint8
+{
+	None                                     = 0,
+	SourceOnly                               = 1,
+	Full                                     = 2,
+	EPCGPolygonOperationMetadataMode_MAX     = 3,
+};
+
+// Enum PCG.EPCGElementSource
+// NumValues: 0x0006
+enum class EPCGElementSource : uint32
+{
+	Trivial                                  = 0,
+	TrivialPostGraph                         = 1,
+	Gather                                   = 2,
+	FromNode                                 = 3,
+	FromCookedSettings                       = 4,
+	EPCGElementSource_MAX                    = 5,
+};
+
+// Enum PCG.EPCGLandscapeCacheSerializationMode
+// NumValues: 0x0004
+enum class EPCGLandscapeCacheSerializationMode : uint8
+{
+	SerializeOnlyAtCook                      = 0,
+	NeverSerialize                           = 1,
+	AlwaysSerialize                          = 2,
+	EPCGLandscapeCacheSerializationMode_MAX  = 3,
+};
+
+// Enum PCG.EPCGLandscapeCacheSerializationContents
+// NumValues: 0x0004
+enum class EPCGLandscapeCacheSerializationContents : uint8
+{
+	SerializeOnlyPositionsAndNormals         = 0,
+	SerializeOnlyLayerData                   = 1,
+	SerializeAll                             = 2,
+	EPCGLandscapeCacheSerializationContents_MAX = 3,
+};
+
+// Enum PCG.EPCGConversionStatus
+// NumValues: 0x0007
+enum class EPCGConversionStatus : uint8
+{
+	Uninitialized                            = 0,
+	InitializedGraph                         = 1,
+	InitializedSource                        = 2,
+	DataPrepared                             = 4,
+	StructuralChangesApplied                 = 8,
+	Complete                                 = 15,
+	EPCGConversionStatus_MAX                 = 16,
+};
+
+// Enum PCG.EPCGDataLayerSource
+// NumValues: 0x0003
+enum class EPCGDataLayerSource : uint8
+{
+	Self                                     = 0,
+	DataLayerReferences                      = 1,
+	EPCGDataLayerSource_MAX                  = 2,
+};
+
+// Enum PCG.EPCGHLODSource
+// NumValues: 0x0004
+enum class EPCGHLODSource : uint8
+{
+	Self                                     = 0,
+	Reference                                = 1,
+	Template                                 = 2,
+	EPCGHLODSource_MAX                       = 3,
+};
+
+// Enum PCG.EPCGWorldRaycastMode
+// NumValues: 0x0005
+enum class EPCGWorldRaycastMode : uint8
+{
+	Infinite                                 = 0,
+	ScaledVector                             = 1,
+	NormalizedWithLength                     = 2,
+	Segments                                 = 3,
+	EPCGWorldRaycastMode_MAX                 = 4,
+};
+
+// Enum PCG.EPCGAttributePropertySelection
+// NumValues: 0x0005
+enum class EPCGAttributePropertySelection : uint32
+{
+	Attribute                                = 0,
+	PointProperty                            = 1,
+	ExtraProperty                            = 2,
+	Property                                 = 3,
+	EPCGAttributePropertySelection_MAX       = 4,
+};
+
+// Enum PCG.EPCGExtraProperties
+// NumValues: 0x0003
+enum class EPCGExtraProperties : uint8
+{
+	Index                                    = 0,
+	NumElements                              = 1,
+	EPCGExtraProperties_MAX                  = 2,
+};
+
+// Enum PCG.EPCGMetadataOp
+// NumValues: 0x0008
+enum class EPCGMetadataOp : uint8
+{
+	Min                                      = 0,
+	Max                                      = 1,
+	Sub                                      = 2,
+	Add                                      = 3,
+	Mul                                      = 4,
+	Div                                      = 5,
+	SourceValue                              = 6,
+	TargetValue                              = 7,
+};
+
+// Enum PCG.EPCGMetadataFilterMode
+// NumValues: 0x0003
+enum class EPCGMetadataFilterMode : uint8
+{
+	ExcludeAttributes                        = 0,
+	IncludeAttributes                        = 1,
+	EPCGMetadataFilterMode_MAX               = 2,
+};
+
+// Enum PCG.EPCGMetadataDomainFlag
+// NumValues: 0x0006
+enum class EPCGMetadataDomainFlag : uint8
+{
+	Default                                  = 0,
+	Data                                     = 1,
+	Elements                                 = 2,
+	Invalid                                  = 254,
+	Custom                                   = 255,
+	EPCGMetadataDomainFlag_MAX               = 256,
+};
+
+// Enum PCG.EPCGMetadataTypes
+// NumValues: 0x001B
+enum class EPCGMetadataTypes : uint8
+{
+	Float                                    = 0,
+	Double                                   = 1,
+	Integer32                                = 2,
+	Integer64                                = 3,
+	Vector2                                  = 4,
+	Vector                                   = 5,
+	Vector4                                  = 6,
+	Quaternion                               = 7,
+	Transform                                = 8,
+	String                                   = 9,
+	Boolean                                  = 10,
+	Rotator                                  = 11,
+	Name                                     = 12,
+	SoftObjectPath                           = 13,
+	SoftClassPath                            = 14,
+	EndLegacyTypes                           = 15,
+	Byte                                     = 16,
+	Text                                     = 17,
+	Enum                                     = 18,
+	Struct                                   = 19,
+	Object                                   = 20,
+	SoftObject                               = 21,
+	Class                                    = 22,
+	SoftClass                                = 23,
+	Count                                    = 24,
+	Unknown                                  = 255,
+	EPCGMetadataTypes_MAX                    = 256,
+};
+
+// Enum PCG.EPCGMetadataAttributeContainerTypes
+// NumValues: 0x0005
+enum class EPCGMetadataAttributeContainerTypes : uint8
+{
+	None                                     = 0,
+	Array                                    = 1,
+	Set                                      = 2,
+	Map                                      = 3,
+	EPCGMetadataAttributeContainerTypes_MAX  = 4,
+};
+
+// Enum PCG.EPCGMetadataTypesConstantStructStringMode
+// NumValues: 0x0004
+enum class EPCGMetadataTypesConstantStructStringMode : uint32
+{
+	String                                   = 0,
+	SoftObjectPath                           = 1,
+	SoftClassPath                            = 2,
+	EPCGMetadataTypesConstantStructStringMode_MAX = 3,
+};
+
 // Enum PCG.EPCGChangeType
-// NumValues: 0x000A
-enum class EPCGChangeType : uint8
+// NumValues: 0x000C
+enum class EPCGChangeType : uint16
 {
 	None                                     = 0,
 	Cosmetic                                 = 1,
@@ -146,39 +1995,49 @@ enum class EPCGChangeType : uint8
 	Structural                               = 32,
 	GenerationGrid                           = 64,
 	ShaderSource                             = 128,
-	EPCGChangeType_MAX                       = 129,
+	GraphCustomization                       = 256,
+	ExternalModification                     = 512,
+	EPCGChangeType_MAX                       = 513,
 };
 
 // Enum PCG.EPCGDataType
-// NumValues: 0x0016
+// NumValues: 0x001E
 enum class EPCGDataType : uint32
 {
 	None                                     = 0,
 	Point                                    = 2,
 	Spline                                   = 4,
 	LandscapeSpline                          = 8,
-	PolyLine                                 = 12,
+	Polygon2D                                = 8192,
+	PolyLine                                 = 8204,
 	Landscape                                = 16,
 	Texture                                  = 32,
 	RenderTarget                             = 64,
+	VirtualTexture                           = 4096,
 	BaseTexture                              = 96,
-	Surface                                  = 112,
+	Surface                                  = 4208,
 	Volume                                   = 128,
 	Primitive                                = 256,
 	DynamicMesh                              = 1024,
-	Concrete                                 = 1534,
+	StaticMeshResource                       = 2048,
+	Concrete                                 = 13822,
 	Composite                                = 512,
-	Spatial                                  = 2046,
+	Spatial                                  = 14334,
+	Resource                                 = 2048,
+	ProxyForGPU                              = 67108864,
 	Param                                    = 134217728,
 	PointOrParam                             = 134217730,
+	VolumeOrPrimitiveOrDynamicMesh           = 1408,
+	PointOrSpline                            = 6,
 	Settings                                 = 268435456,
 	Other                                    = 536870912,
 	Any                                      = 1073741823,
-	EPCGDataType_MAX                         = 1073741824,
+	DeprecationSentinel                      = 2147483648,
+	EPCGDataType_MAX                         = 2147483649,
 };
 
 // Enum PCG.EPCGExclusiveDataType
-// NumValues: 0x0016
+// NumValues: 0x001A
 enum class EPCGExclusiveDataType : uint8
 {
 	None                                     = 0,
@@ -189,20 +2048,36 @@ enum class EPCGExclusiveDataType : uint8
 	Landscape                                = 5,
 	Texture                                  = 6,
 	RenderTarget                             = 7,
-	BaseTexture                              = 8,
-	Surface                                  = 9,
-	Volume                                   = 10,
-	Primitive                                = 11,
-	Concrete                                 = 12,
-	Composite                                = 13,
-	Spatial                                  = 14,
-	Param                                    = 15,
-	Settings                                 = 16,
-	Other                                    = 17,
-	Any                                      = 18,
-	PointOrParam                             = 19,
-	DynamicMesh                              = 20,
-	EPCGExclusiveDataType_MAX                = 21,
+	VirtualTexture                           = 8,
+	BaseTexture                              = 9,
+	Surface                                  = 10,
+	Volume                                   = 11,
+	Primitive                                = 12,
+	Concrete                                 = 13,
+	Composite                                = 14,
+	Spatial                                  = 15,
+	Param                                    = 16,
+	Settings                                 = 17,
+	Other                                    = 18,
+	Any                                      = 19,
+	PointOrParam                             = 20,
+	DynamicMesh                              = 21,
+	StaticMeshResource                       = 22,
+	Resource                                 = 23,
+	Polygon2D                                = 24,
+	EPCGExclusiveDataType_MAX                = 25,
+};
+
+// Enum PCG.EPCGContainerType
+// NumValues: 0x0006
+enum class EPCGContainerType : uint8
+{
+	Element                                  = 0,
+	None                                     = 0,
+	Array                                    = 1,
+	Map                                      = 2,
+	Set                                      = 3,
+	EPCGContainerType_MAX                    = 4,
 };
 
 // Enum PCG.EPCGCoordinateSpace
@@ -303,500 +2178,14 @@ enum class EPCGDensityMergeOperation : uint8
 	EPCGDensityMergeOperation_MAX            = 8,
 };
 
-// Enum PCG.EPCGGenerationStatus
-// NumValues: 0x0003
-enum class EPCGGenerationStatus : uint8
-{
-	Completed                                = 0,
-	Aborted                                  = 1,
-	EPCGGenerationStatus_MAX                 = 2,
-};
-
-// Enum PCG.EPCGControlFlowSelectionMode
+// Enum PCG.EPCGTextureResourceType
 // NumValues: 0x0004
-enum class EPCGControlFlowSelectionMode : uint8
+enum class EPCGTextureResourceType : uint8
 {
-	Integer                                  = 0,
-	Enum                                     = 1,
-	String                                   = 2,
-	EPCGControlFlowSelectionMode_MAX         = 3,
-};
-
-// Enum PCG.EPCGCopyAttributesOperation
-// NumValues: 0x0004
-enum class EPCGCopyAttributesOperation : uint32
-{
-	CopyEachSourceToEachTargetRespectively   = 0,
-	MergeSourcesAndCopyToAllTargets          = 1,
-	CopyEachSourceOnEveryTarget              = 2,
-	EPCGCopyAttributesOperation_MAX          = 3,
-};
-
-// Enum PCG.EPCGLocalGridPivot
-// NumValues: 0x0004
-enum class EPCGLocalGridPivot : uint8
-{
-	Global                                   = 0,
-	OriginalComponent                        = 1,
-	LocalComponent                           = 2,
-	EPCGLocalGridPivot_MAX                   = 3,
-};
-
-// Enum PCG.EPCGPointPosition
-// NumValues: 0x0003
-enum class EPCGPointPosition : uint8
-{
-	CellCenter                               = 0,
-	CellCorners                              = 1,
-	EPCGPointPosition_MAX                    = 2,
-};
-
-// Enum PCG.EPCGGridPivot
-// NumValues: 0x0004
-enum class EPCGGridPivot : uint8
-{
-	Global                                   = 0,
-	OriginalComponent                        = 1,
-	LocalComponent                           = 2,
-	EPCGGridPivot_MAX                        = 3,
-};
-
-// Enum PCG.EPCGCullPointsMode
-// NumValues: 0x0003
-enum class EPCGCullPointsMode : uint8
-{
-	Ordered                                  = 0,
-	Unordered                                = 1,
-	EPCGCullPointsMode_MAX                   = 2,
-};
-
-// Enum PCG.EPCGReadbackMode
-// NumValues: 0x0005
-enum class EPCGReadbackMode : uint8
-{
-	None                                     = 0,
-	GraphOutput                              = 2,
-	Inspection                               = 4,
-	DebugVisualization                       = 8,
-	EPCGReadbackMode_MAX                     = 9,
-};
-
-// Enum PCG.EPCGKernelAttributeType
-// NumValues: 0x000E
-enum class EPCGKernelAttributeType : uint8
-{
-	None                                     = 0,
-	Bool                                     = 1,
-	Int                                      = 2,
-	Float                                    = 3,
-	Float2                                   = 4,
-	Float3                                   = 5,
-	Float4                                   = 6,
-	Rotator                                  = 7,
-	Quat                                     = 8,
-	Transform                                = 9,
-	StringKey                                = 10,
-	Name                                     = 11,
-	Invalid                                  = 255,
-	EPCGKernelAttributeType_MAX              = 256,
-};
-
-// Enum PCG.EPCGAttributeFilterOperation
-// NumValues: 0x0003
-enum class EPCGAttributeFilterOperation : uint32
-{
-	KeepSelectedAttributes                   = 0,
-	DeleteSelectedAttributes                 = 1,
-	EPCGAttributeFilterOperation_MAX         = 2,
-};
-
-// Enum PCG.EPCGTagFilterOperation
-// NumValues: 0x0003
-enum class EPCGTagFilterOperation : uint32
-{
-	KeepOnlySelectedTags                     = 0,
-	DeleteSelectedTags                       = 1,
-	EPCGTagFilterOperation_MAX               = 2,
-};
-
-// Enum PCG.PCGDistanceShape
-// NumValues: 0x0004
-enum class EPCGDistanceShape : uint32
-{
-	SphereBounds                             = 0,
-	BoxBounds                                = 1,
-	Center                                   = 2,
-	PCGDistanceShape_MAX                     = 3,
-};
-
-// Enum PCG.EPCGUnitTestDummyEnum
-// NumValues: 0x0004
-enum class EPCGUnitTestDummyEnum : uint64
-{
-	One                                      = 0,
-	Two                                      = 1,
-	Three                                    = 2,
-	EPCGUnitTestDummyEnum_MAX                = 3,
-};
-
-// Enum PCG.EPCGMetadataTypes
-// NumValues: 0x0012
-enum class EPCGMetadataTypes : uint8
-{
-	Float                                    = 0,
-	Double                                   = 1,
-	Integer32                                = 2,
-	Integer64                                = 3,
-	Vector2                                  = 4,
-	Vector                                   = 5,
-	Vector4                                  = 6,
-	Quaternion                               = 7,
-	Transform                                = 8,
-	String                                   = 9,
-	Boolean                                  = 10,
-	Rotator                                  = 11,
-	Name                                     = 12,
-	SoftObjectPath                           = 13,
-	SoftClassPath                            = 14,
-	Count                                    = 15,
-	Unknown                                  = 255,
-	EPCGMetadataTypes_MAX                    = 256,
-};
-
-// Enum PCG.EPCGMetadataOp
-// NumValues: 0x0008
-enum class EPCGMetadataOp : uint8
-{
-	Min                                      = 0,
-	Max                                      = 1,
-	Sub                                      = 2,
-	Add                                      = 3,
-	Mul                                      = 4,
-	Div                                      = 5,
-	SourceValue                              = 6,
-	TargetValue                              = 7,
-};
-
-// Enum PCG.EPCGMetadataFilterMode
-// NumValues: 0x0003
-enum class EPCGMetadataFilterMode : uint8
-{
-	ExcludeAttributes                        = 0,
-	IncludeAttributes                        = 1,
-	EPCGMetadataFilterMode_MAX               = 2,
-};
-
-// Enum PCG.EPCGMetadataMakeRotatorOp
-// NumValues: 0x000C
-enum class EPCGMetadataMakeRotatorOp : uint8
-{
-	MakeRotFromX                             = 0,
-	MakeRotFromY                             = 1,
-	MakeRotFromZ                             = 2,
-	MakeRotFromXY                            = 3,
-	MakeRotFromYX                            = 4,
-	MakeRotFromXZ                            = 5,
-	MakeRotFromZX                            = 6,
-	MakeRotFromYZ                            = 7,
-	MakeRotFromZY                            = 8,
-	MakeRotFromAxes                          = 9,
-	MakeRotFromAngles                        = 10,
-	EPCGMetadataMakeRotatorOp_MAX            = 11,
-};
-
-// Enum PCG.EPCGMetadataTypesConstantStructStringMode
-// NumValues: 0x0004
-enum class EPCGMetadataTypesConstantStructStringMode : uint32
-{
-	String                                   = 0,
-	SoftObjectPath                           = 1,
-	SoftClassPath                            = 2,
-	EPCGMetadataTypesConstantStructStringMode_MAX = 3,
-};
-
-// Enum PCG.PCGNormalToDensityMode
-// NumValues: 0x0008
-enum class EPCGNormalToDensityMode : uint8
-{
-	Set                                      = 0,
-	Minimum                                  = 1,
-	Maximum                                  = 2,
-	Add                                      = 3,
-	Subtract                                 = 4,
-	Multiply                                 = 5,
-	Divide                                   = 6,
-	PCGNormalToDensityMode_MAX               = 7,
-};
-
-// Enum PCG.EPCGPathfindingSplineMode
-// NumValues: 0x0003
-enum class EPCGPathfindingSplineMode : uint8
-{
-	Curve                                    = 0,
-	Linear                                   = 1,
-	EPCGPathfindingSplineMode_MAX            = 2,
-};
-
-// Enum PCG.EPCGPathfindingCostFunctionMode
-// NumValues: 0x0004
-enum class EPCGPathfindingCostFunctionMode : uint8
-{
-	Distance                                 = 0,
-	FitnessScore                             = 1,
-	CostMultiplier                           = 2,
-	EPCGPathfindingCostFunctionMode_MAX      = 3,
-};
-
-// Enum PCG.EPCGPointNeighborhoodDensityMode
-// NumValues: 0x0004
-enum class EPCGPointNeighborhoodDensityMode : uint32
-{
-	None                                     = 0,
-	SetNormalizedDistanceToDensity           = 1,
-	SetAverageDensity                        = 2,
-	EPCGPointNeighborhoodDensityMode_MAX     = 3,
-};
-
-// Enum PCG.EPCGPrintVerbosity
-// NumValues: 0x0004
-enum class EPCGPrintVerbosity : uint8
-{
-	Log                                      = 5,
-	Warning                                  = 3,
-	Error                                    = 2,
-	EPCGPrintVerbosity_MAX                   = 6,
-};
-
-// Enum PCG.EPCGProjectionColorBlendMode
-// NumValues: 0x0006
-enum class EPCGProjectionColorBlendMode : uint8
-{
-	SourceValue                              = 0,
-	TargetValue                              = 1,
-	Add                                      = 2,
-	Subtract                                 = 3,
-	Multiply                                 = 4,
-	EPCGProjectionColorBlendMode_MAX         = 5,
-};
-
-// Enum PCG.EPCGProjectionTagMergeMode
-// NumValues: 0x0004
-enum class EPCGProjectionTagMergeMode : uint8
-{
-	Source                                   = 0,
-	Target                                   = 1,
-	Both                                     = 2,
-	EPCGProjectionTagMergeMode_MAX           = 3,
-};
-
-// Enum PCG.EPCGTextureMappingMethod
-// NumValues: 0x0003
-enum class EPCGTextureMappingMethod : uint8
-{
-	Planar                                   = 0,
-	UVCoordinates                            = 1,
-	EPCGTextureMappingMethod_MAX             = 2,
-};
-
-// Enum PCG.EPCGSelectGrammarComparator
-// NumValues: 0x000B
-enum class EPCGSelectGrammarComparator : uint16
-{
-	BinaryOps                                = 32,
-	Select                                   = 33,
-	LessThan                                 = 34,
-	LessThanEqualTo                          = 35,
-	EqualTo                                  = 36,
-	GreaterThanEqualTo                       = 37,
-	GreaterThan                              = 38,
-	TernaryOps                               = 64,
-	RangeExclusive                           = 65,
-	RangeInclusive                           = 66,
-	EPCGSelectGrammarComparator_MAX          = 67,
-};
-
-// Enum PCG.EPCGSortMethod
-// NumValues: 0x0003
-enum class EPCGSortMethod : uint8
-{
-	Ascending                                = 0,
-	Descending                               = 1,
-	EPCGSortMethod_MAX                       = 2,
-};
-
-// Enum PCG.EPCGReverseSplineOperation
-// NumValues: 0x0004
-enum class EPCGReverseSplineOperation : uint32
-{
-	Reverse                                  = 0,
-	ForceClockwise                           = 1,
-	ForceCounterClockwise                    = 2,
-	EPCGReverseSplineOperation_MAX           = 3,
-};
-
-// Enum PCG.EPCGSplitAxis
-// NumValues: 0x0004
-enum class EPCGSplitAxis : uint32
-{
-	X                                        = 0,
-	Y                                        = 1,
-	Z                                        = 2,
-	EPCGSplitAxis_MAX                        = 3,
-};
-
-// Enum PCG.EPCGUserParameterSource
-// NumValues: 0x0004
-enum class EPCGUserParameterSource : uint8
-{
-	Current                                  = 0,
-	Upstream                                 = 1,
-	Root                                     = 2,
-	EPCGUserParameterSource_MAX              = 3,
-};
-
-// Enum PCG.EPCGWorldRaycastMode
-// NumValues: 0x0005
-enum class EPCGWorldRaycastMode : uint8
-{
-	Infinite                                 = 0,
-	ScaledVector                             = 1,
-	NormalizedWithLength                     = 2,
-	Segments                                 = 3,
-	EPCGWorldRaycastMode_MAX                 = 4,
-};
-
-// Enum PCG.EPCGKernelType
-// NumValues: 0x0004
-enum class EPCGKernelType : uint8
-{
-	PointProcessor                           = 0,
-	PointGenerator                           = 1,
-	Custom                                   = 2,
-	EPCGKernelType_MAX                       = 3,
-};
-
-// Enum PCG.EPCGDispatchThreadCount
-// NumValues: 0x0004
-enum class EPCGDispatchThreadCount : uint8
-{
-	FromFirstOutputPin                       = 0,
-	Fixed                                    = 1,
-	FromProductOfInputPins                   = 2,
-	EPCGDispatchThreadCount_MAX              = 3,
-};
-
-// Enum PCG.EPCGPinInitMode
-// NumValues: 0x0003
-enum class EPCGPinInitMode : uint8
-{
-	FromInputPins                            = 0,
-	Custom                                   = 1,
-	EPCGPinInitMode_MAX                      = 2,
-};
-
-// Enum PCG.EPCGDataCountMode
-// NumValues: 0x0003
-enum class EPCGDataCountMode : uint8
-{
-	FromInputData                            = 0,
-	Fixed                                    = 1,
-	EPCGDataCountMode_MAX                    = 2,
-};
-
-// Enum PCG.EPCGElementCountMode
-// NumValues: 0x0003
-enum class EPCGElementCountMode : uint8
-{
-	FromInputData                            = 0,
-	Fixed                                    = 1,
-	EPCGElementCountMode_MAX                 = 2,
-};
-
-// Enum PCG.EPCGDataMultiplicity
-// NumValues: 0x0003
-enum class EPCGDataMultiplicity : uint8
-{
-	Pairwise                                 = 0,
-	CartesianProduct                         = 1,
-	EPCGDataMultiplicity_MAX                 = 2,
-};
-
-// Enum PCG.EPCGElementMultiplicity
-// NumValues: 0x0003
-enum class EPCGElementMultiplicity : uint8
-{
-	Product                                  = 0,
-	Sum                                      = 1,
-	EPCGElementMultiplicity_MAX              = 2,
-};
-
-// Enum PCG.EPCGAttributeInheritanceMode
-// NumValues: 0x0003
-enum class EPCGAttributeInheritanceMode : uint8
-{
-	None                                     = 0,
-	CopyAttributeSetup                       = 1,
-	EPCGAttributeInheritanceMode_MAX         = 2,
-};
-
-// Enum PCG.EPCGCollisionQueryFlag
-// NumValues: 0x0005
-enum class EPCGCollisionQueryFlag : uint8
-{
-	Simple                                   = 0,
-	Complex                                  = 1,
-	SimpleFirst                              = 2,
-	ComplexFirst                             = 3,
-	EPCGCollisionQueryFlag_MAX               = 4,
-};
-
-// Enum PCG.EPCGDifferenceDensityFunction
-// NumValues: 0x0004
-enum class EPCGDifferenceDensityFunction : uint8
-{
-	Minimum                                  = 0,
-	ClampedSubstraction                      = 1,
-	Binary                                   = 2,
-	EPCGDifferenceDensityFunction_MAX        = 3,
-};
-
-// Enum PCG.EPCGDifferenceMode
-// NumValues: 0x0004
-enum class EPCGDifferenceMode : uint8
-{
-	Inferred                                 = 0,
-	Continuous                               = 1,
-	Discrete                                 = 2,
-	EPCGDifferenceMode_MAX                   = 3,
-};
-
-// Enum PCG.EPCGIntersectionDensityFunction
-// NumValues: 0x0003
-enum class EPCGIntersectionDensityFunction : uint8
-{
-	Multiply                                 = 0,
-	Minimum                                  = 1,
-	EPCGIntersectionDensityFunction_MAX      = 2,
-};
-
-// Enum PCG.EPCGTextureColorChannel
-// NumValues: 0x0005
-enum class EPCGTextureColorChannel : uint8
-{
-	Red                                      = 0,
-	Green                                    = 1,
-	Blue                                     = 2,
-	Alpha                                    = 3,
-	EPCGTextureColorChannel_MAX              = 4,
-};
-
-// Enum PCG.EPCGTextureDensityFunction
-// NumValues: 0x0003
-enum class EPCGTextureDensityFunction : uint8
-{
-	Ignore                                   = 0,
-	Multiply                                 = 1,
-	EPCGTextureDensityFunction_MAX           = 2,
+	TextureObject                            = 0,
+	ExportedTexture                          = 1,
+	Invalid                                  = 2,
+	EPCGTextureResourceType_MAX              = 3,
 };
 
 // Enum PCG.EPCGTextureFilter
@@ -806,615 +2195,6 @@ enum class EPCGTextureFilter : uint8
 	Point                                    = 0,
 	Bilinear                                 = 1,
 	EPCGTextureFilter_MAX                    = 2,
-};
-
-// Enum PCG.EPCGTextureAddressMode
-// NumValues: 0x0003
-enum class EPCGTextureAddressMode : uint8
-{
-	Clamp                                    = 0,
-	Wrap                                     = 1,
-	EPCGTextureAddressMode_MAX               = 2,
-};
-
-// Enum PCG.EPCGUnionType
-// NumValues: 0x0004
-enum class EPCGUnionType : uint8
-{
-	LeftToRightPriority                      = 0,
-	RightToLeftPriority                      = 1,
-	KeepAll                                  = 2,
-	EPCGUnionType_MAX                        = 3,
-};
-
-// Enum PCG.EPCGUnionDensityFunction
-// NumValues: 0x0004
-enum class EPCGUnionDensityFunction : uint8
-{
-	Maximum                                  = 0,
-	ClampedAddition                          = 1,
-	Binary                                   = 2,
-	EPCGUnionDensityFunction_MAX             = 3,
-};
-
-// Enum PCG.EPCGWorldQueryFilterByTag
-// NumValues: 0x0004
-enum class EPCGWorldQueryFilterByTag : uint32
-{
-	NoTagFilter                              = 0,
-	IncludeTagged                            = 1,
-	ExcludeTagged                            = 2,
-	EPCGWorldQueryFilterByTag_MAX            = 3,
-};
-
-// Enum PCG.EPCGWorldQuerySelectLandscapeHits
-// NumValues: 0x0004
-enum class EPCGWorldQuerySelectLandscapeHits : uint8
-{
-	Exclude                                  = 0,
-	Include                                  = 1,
-	Require                                  = 2,
-	EPCGWorldQuerySelectLandscapeHits_MAX    = 3,
-};
-
-// Enum PCG.EPCGMetadataBitwiseOperation
-// NumValues: 0x0005
-enum class EPCGMetadataBitwiseOperation : uint16
-{
-	And                                      = 0,
-	Not                                      = 1,
-	Or                                       = 2,
-	Xor                                      = 3,
-	EPCGMetadataBitwiseOperation_MAX         = 4,
-};
-
-// Enum PCG.EPCGMetadataBooleanOperation
-// NumValues: 0x0005
-enum class EPCGMetadataBooleanOperation : uint16
-{
-	And                                      = 0,
-	Not                                      = 1,
-	Or                                       = 2,
-	Xor                                      = 3,
-	EPCGMetadataBooleanOperation_MAX         = 4,
-};
-
-// Enum PCG.EPCGMetadataCompareOperation
-// NumValues: 0x0007
-enum class EPCGMetadataCompareOperation : uint16
-{
-	Equal                                    = 0,
-	NotEqual                                 = 1,
-	Greater                                  = 2,
-	GreaterOrEqual                           = 3,
-	Less                                     = 4,
-	LessOrEqual                              = 5,
-	EPCGMetadataCompareOperation_MAX         = 6,
-};
-
-// Enum PCG.EPCGMetadataMakeVector3
-// NumValues: 0x0003
-enum class EPCGMetadataMakeVector3 : uint8
-{
-	ThreeValues                              = 0,
-	Vector2AndValue                          = 1,
-	EPCGMetadataMakeVector3_MAX              = 2,
-};
-
-// Enum PCG.EPCGMetadataMakeVector4
-// NumValues: 0x0005
-enum class EPCGMetadataMakeVector4 : uint8
-{
-	FourValues                               = 0,
-	Vector2AndTwoValues                      = 1,
-	TwoVector2                               = 2,
-	Vector3AndValue                          = 3,
-	EPCGMetadataMakeVector4_MAX              = 4,
-};
-
-// Enum PCG.EPCGMetadataMathsOperation
-// NumValues: 0x001C
-enum class EPCGMetadataMathsOperation : uint16
-{
-	UnaryOp                                  = 1024,
-	Sign                                     = 1025,
-	Frac                                     = 1026,
-	Truncate                                 = 1027,
-	Round                                    = 1028,
-	Sqrt                                     = 1029,
-	Abs                                      = 1030,
-	Floor                                    = 1031,
-	Ceil                                     = 1032,
-	OneMinus                                 = 1033,
-	Inc                                      = 1034,
-	Dec                                      = 1035,
-	Negate                                   = 1036,
-	BinaryOp                                 = 2048,
-	Add                                      = 2049,
-	Subtract                                 = 2050,
-	Multiply                                 = 2051,
-	Divide                                   = 2052,
-	Max                                      = 2053,
-	Min                                      = 2054,
-	Pow                                      = 2055,
-	ClampMin                                 = 2056,
-	ClampMax                                 = 2057,
-	Modulo                                   = 2058,
-	Set                                      = 2059,
-	TernaryOp                                = 4096,
-	Clamp                                    = 4097,
-	Lerp                                     = 4098,
-};
-
-// Enum PCG.EPCGMetadataSettingsBaseMode
-// NumValues: 0x0004
-enum class EPCGMetadataSettingsBaseMode : uint8
-{
-	Inferred                                 = 0,
-	NoBroadcast                              = 1,
-	Broadcast                                = 2,
-	EPCGMetadataSettingsBaseMode_MAX         = 3,
-};
-
-// Enum PCG.EPCGMetadataSettingsBaseTypes
-// NumValues: 0x0003
-enum class EPCGMetadataSettingsBaseTypes : uint8
-{
-	AutoUpcastTypes                          = 0,
-	StrictTypes                              = 1,
-	EPCGMetadataSettingsBaseTypes_MAX        = 2,
-};
-
-// Enum PCG.EPCGMetadataRotatorOperation
-// NumValues: 0x0009
-enum class EPCGMetadataRotatorOperation : uint16
-{
-	RotatorOp                                = 0,
-	Combine                                  = 1,
-	Invert                                   = 2,
-	Lerp                                     = 3,
-	Normalize                                = 4,
-	TransformOp                              = 100,
-	TransformRotation                        = 101,
-	InverseTransformRotation                 = 102,
-	EPCGMetadataRotatorOperation_MAX         = 103,
-};
-
-// Enum PCG.EPCGMetadataStringOperation
-// NumValues: 0x0003
-enum class EPCGMetadataStringOperation : uint16
-{
-	Append                                   = 0,
-	Replace                                  = 1,
-	EPCGMetadataStringOperation_MAX          = 2,
-};
-
-// Enum PCG.EPCGMetadataTransformOperation
-// NumValues: 0x0004
-enum class EPCGMetadataTransformOperation : uint16
-{
-	Compose                                  = 0,
-	Invert                                   = 1,
-	Lerp                                     = 2,
-	EPCGMetadataTransformOperation_MAX       = 3,
-};
-
-// Enum PCG.EPCGTransformLerpMode
-// NumValues: 0x0004
-enum class EPCGTransformLerpMode : uint16
-{
-	QuatInterp                               = 0,
-	EulerInterp                              = 1,
-	DualQuatInterp                           = 2,
-	EPCGTransformLerpMode_MAX                = 3,
-};
-
-// Enum PCG.EPCGMetadataTrigOperation
-// NumValues: 0x000A
-enum class EPCGMetadataTrigOperation : uint16
-{
-	Acos                                     = 0,
-	Asin                                     = 1,
-	Atan                                     = 2,
-	Atan2                                    = 3,
-	Cos                                      = 4,
-	Sin                                      = 5,
-	Tan                                      = 6,
-	DegToRad                                 = 7,
-	RadToDeg                                 = 8,
-	EPCGMetadataTrigOperation_MAX            = 9,
-};
-
-// Enum PCG.EPCGMetadataVectorOperation
-// NumValues: 0x000D
-enum class EPCGMetadataVectorOperation : uint16
-{
-	VectorOp                                 = 0,
-	Cross                                    = 1,
-	Dot                                      = 2,
-	Distance                                 = 3,
-	Normalize                                = 4,
-	Length                                   = 5,
-	RotateAroundAxis                         = 6,
-	TransformOp                              = 100,
-	TransformDirection                       = 101,
-	TransformLocation                        = 102,
-	InverseTransformDirection                = 103,
-	InverseTransformLocation                 = 104,
-	EPCGMetadataVectorOperation_MAX          = 105,
-};
-
-// Enum PCG.EPCGActorSelection
-// NumValues: 0x0006
-enum class EPCGActorSelection : uint8
-{
-	ByTag                                    = 0,
-	ByName                                   = 1,
-	ByClass                                  = 2,
-	ByPath                                   = 3,
-	Unknown                                  = 4,
-	EPCGActorSelection_MAX                   = 5,
-};
-
-// Enum PCG.EPCGComponentSelection
-// NumValues: 0x0004
-enum class EPCGComponentSelection : uint8
-{
-	ByTag                                    = 0,
-	ByClass                                  = 1,
-	Unknown                                  = 2,
-	EPCGComponentSelection_MAX               = 3,
-};
-
-// Enum PCG.EPCGActorFilter
-// NumValues: 0x0007
-enum class EPCGActorFilter : uint8
-{
-	Self                                     = 0,
-	Parent                                   = 1,
-	Root                                     = 2,
-	AllWorldActors                           = 3,
-	Original                                 = 4,
-	FromInput                                = 5,
-	EPCGActorFilter_MAX                      = 6,
-};
-
-// Enum PCG.EPCGAttributeNoiseMode
-// NumValues: 0x0006
-enum class EPCGAttributeNoiseMode : uint8
-{
-	Set                                      = 0,
-	Minimum                                  = 1,
-	Maximum                                  = 2,
-	Add                                      = 3,
-	Multiply                                 = 4,
-	EPCGAttributeNoiseMode_MAX               = 5,
-};
-
-// Enum PCG.EPCGAttributeReduceOperation
-// NumValues: 0x0005
-enum class EPCGAttributeReduceOperation : uint32
-{
-	Average                                  = 0,
-	Max                                      = 1,
-	Min                                      = 2,
-	Sum                                      = 3,
-	Join                                     = 4,
-};
-
-// Enum PCG.EPCGAttributeSelectOperation
-// NumValues: 0x0003
-enum class EPCGAttributeSelectOperation : uint32
-{
-	Min                                      = 0,
-	Max                                      = 1,
-	Median                                   = 2,
-};
-
-// Enum PCG.EPCGAttributeSelectAxis
-// NumValues: 0x0006
-enum class EPCGAttributeSelectAxis : uint32
-{
-	X                                        = 0,
-	Y                                        = 1,
-	Z                                        = 2,
-	W                                        = 3,
-	CustomAxis                               = 4,
-	EPCGAttributeSelectAxis_MAX              = 5,
-};
-
-// Enum PCG.EPCGBoundsModifierMode
-// NumValues: 0x0006
-enum class EPCGBoundsModifierMode : uint8
-{
-	Set                                      = 0,
-	Intersect                                = 1,
-	Include                                  = 2,
-	Translate                                = 3,
-	Scale                                    = 4,
-	EPCGBoundsModifierMode_MAX               = 5,
-};
-
-// Enum PCG.EPCGCopyPointsInheritanceMode
-// NumValues: 0x0004
-enum class EPCGCopyPointsInheritanceMode : uint8
-{
-	Relative                                 = 0,
-	Source                                   = 1,
-	Target                                   = 2,
-	EPCGCopyPointsInheritanceMode_MAX        = 3,
-};
-
-// Enum PCG.EPCGCopyPointsTagInheritanceMode
-// NumValues: 0x0004
-enum class EPCGCopyPointsTagInheritanceMode : uint8
-{
-	Both                                     = 0,
-	Source                                   = 1,
-	Target                                   = 2,
-	EPCGCopyPointsTagInheritanceMode_MAX     = 3,
-};
-
-// Enum PCG.EPCGCopyPointsMetadataInheritanceMode
-// NumValues: 0x0006
-enum class EPCGCopyPointsMetadataInheritanceMode : uint8
-{
-	SourceFirst                              = 0,
-	TargetFirst                              = 1,
-	SourceOnly                               = 2,
-	TargetOnly                               = 3,
-	None                                     = 4,
-	EPCGCopyPointsMetadataInheritanceMode_MAX = 5,
-};
-
-// Enum PCG.EPCGSphereGeneration
-// NumValues: 0x0006
-enum class EPCGSphereGeneration : uint8
-{
-	Geodesic                                 = 0,
-	Angle                                    = 1,
-	Segments                                 = 2,
-	Random                                   = 3,
-	Poisson                                  = 4,
-	EPCGSphereGeneration_MAX                 = 5,
-};
-
-// Enum PCG.EPCGGeodesicSphereRepresentation
-// NumValues: 0x0002
-enum class EPCGGeodesicSphereRepresentation : uint8
-{
-	Icosahedron                              = 0,
-	EPCGGeodesicSphereRepresentation_MAX     = 1,
-};
-
-// Enum PCG.EPCGSpherePointOrientation
-// NumValues: 0x0004
-enum class EPCGSpherePointOrientation : uint8
-{
-	Radial                                   = 0,
-	Centric                                  = 1,
-	None                                     = 2,
-	EPCGSpherePointOrientation_MAX           = 3,
-};
-
-// Enum PCG.EPCGCreateSplineMode
-// NumValues: 0x0003
-enum class EPCGCreateSplineMode : uint8
-{
-	CreateDataOnly                           = 0,
-	CreateComponent                          = 1,
-	EPCGCreateSplineMode_MAX                 = 2,
-};
-
-// Enum PCG.EPCGGetDataFromActorMode
-// NumValues: 0x0008
-enum class EPCGGetDataFromActorMode : uint8
-{
-	ParseActorComponents                     = 0,
-	GetSinglePoint                           = 1,
-	GetDataFromProperty                      = 2,
-	GetDataFromPCGComponent                  = 3,
-	GetDataFromPCGComponentOrParseComponents = 4,
-	GetActorReference                        = 5,
-	GetComponentsReference                   = 6,
-	EPCGGetDataFromActorMode_MAX             = 7,
-};
-
-// Enum PCG.EPCGFilterByTagOperation
-// NumValues: 0x0003
-enum class EPCGFilterByTagOperation : uint32
-{
-	KeepTagged                               = 0,
-	RemoveTagged                             = 1,
-	EPCGFilterByTagOperation_MAX             = 2,
-};
-
-// Enum PCG.EPCGProxyInterfaceMode
-// NumValues: 0x0004
-enum class EPCGProxyInterfaceMode : uint8
-{
-	ByNativeElement                          = 0,
-	ByBlueprintElement                       = 1,
-	BySettings                               = 2,
-	EPCGProxyInterfaceMode_MAX               = 3,
-};
-
-// Enum PCG.EPCGMatchMaxDistanceMode
-// NumValues: 0x0004
-enum class EPCGMatchMaxDistanceMode : uint32
-{
-	NoMaxDistance                            = 0,
-	UseConstantMaxDistance                   = 1,
-	AttributeMaxDistance                     = 2,
-	EPCGMatchMaxDistanceMode_MAX             = 3,
-};
-
-// Enum PCG.EPCGPointExtentsModifierMode
-// NumValues: 0x0006
-enum class EPCGPointExtentsModifierMode : uint8
-{
-	Set                                      = 0,
-	Minimum                                  = 1,
-	Maximum                                  = 2,
-	Add                                      = 3,
-	Multiply                                 = 4,
-	EPCGPointExtentsModifierMode_MAX         = 5,
-};
-
-// Enum PCG.EPCGSelfPruningType
-// NumValues: 0x0006
-enum class EPCGSelfPruningType : uint8
-{
-	LargeToSmall                             = 0,
-	SmallToLarge                             = 1,
-	AllEqual                                 = 2,
-	None                                     = 3,
-	RemoveDuplicates                         = 4,
-	EPCGSelfPruningType_MAX                  = 5,
-};
-
-// Enum PCG.PCGSpatialNoiseMode
-// NumValues: 0x0006
-enum class EPCGSpatialNoiseMode : uint32
-{
-	Perlin2D                                 = 0,
-	Caustic2D                                = 1,
-	Voronoi2D                                = 2,
-	FractionalBrownian2D                     = 3,
-	EdgeMask2D                               = 4,
-	PCGSpatialNoiseMode_MAX                  = 5,
-};
-
-// Enum PCG.PCGSpatialNoiseMask2DMode
-// NumValues: 0x0004
-enum class EPCGSpatialNoiseMask2DMode : uint32
-{
-	Perlin                                   = 0,
-	Caustic                                  = 1,
-	FractionalBrownian                       = 2,
-	PCGSpatialNoiseMask2DMode_MAX            = 3,
-};
-
-// Enum PCG.EPCGSpawnActorOption
-// NumValues: 0x0004
-enum class EPCGSpawnActorOption : uint8
-{
-	CollapseActors                           = 0,
-	MergePCGOnly                             = 1,
-	NoMerging                                = 2,
-	EPCGSpawnActorOption_MAX                 = 3,
-};
-
-// Enum PCG.EPCGSpawnActorGenerationTrigger
-// NumValues: 0x0005
-enum class EPCGSpawnActorGenerationTrigger : uint8
-{
-	Default                                  = 0,
-	ForceGenerate                            = 1,
-	DoNotGenerateInEditor                    = 2,
-	DoNotGenerate                            = 3,
-	EPCGSpawnActorGenerationTrigger_MAX      = 4,
-};
-
-// Enum PCG.EPCGSplineMeshForwardAxis
-// NumValues: 0x0004
-enum class EPCGSplineMeshForwardAxis : uint32
-{
-	X                                        = 0,
-	Y                                        = 1,
-	Z                                        = 2,
-	EPCGSplineMeshForwardAxis_MAX            = 3,
-};
-
-// Enum PCG.EPCGSplineSamplingMode
-// NumValues: 0x0004
-enum class EPCGSplineSamplingMode : uint8
-{
-	Subdivision                              = 0,
-	Distance                                 = 1,
-	NumberOfSamples                          = 2,
-	EPCGSplineSamplingMode_MAX               = 3,
-};
-
-// Enum PCG.EPCGSplineSamplingDimension
-// NumValues: 0x0006
-enum class EPCGSplineSamplingDimension : uint8
-{
-	OnSpline                                 = 0,
-	OnHorizontal                             = 1,
-	OnVertical                               = 2,
-	OnVolume                                 = 3,
-	OnInterior                               = 4,
-	EPCGSplineSamplingDimension_MAX          = 5,
-};
-
-// Enum PCG.EPCGSplineSamplingFill
-// NumValues: 0x0003
-enum class EPCGSplineSamplingFill : uint8
-{
-	Fill                                     = 0,
-	EdgesOnly                                = 1,
-	EPCGSplineSamplingFill_MAX               = 2,
-};
-
-// Enum PCG.EPCGSplineSamplingInteriorOrientation
-// NumValues: 0x0003
-enum class EPCGSplineSamplingInteriorOrientation : uint8
-{
-	Uniform                                  = 0,
-	FollowCurvature                          = 1,
-	EPCGSplineSamplingInteriorOrientation_MAX = 2,
-};
-
-// Enum PCG.EPCGSplineSamplingSeedingMode
-// NumValues: 0x0003
-enum class EPCGSplineSamplingSeedingMode : uint8
-{
-	SeedFromPosition                         = 0,
-	SeedFromIndex                            = 1,
-	EPCGSplineSamplingSeedingMode_MAX        = 2,
-};
-
-// Enum PCG.EPCGElementSource
-// NumValues: 0x0006
-enum class EPCGElementSource : uint32
-{
-	Trivial                                  = 0,
-	TrivialPostGraph                         = 1,
-	Gather                                   = 2,
-	FromNode                                 = 3,
-	FromCookedSettings                       = 4,
-	EPCGElementSource_MAX                    = 5,
-};
-
-// Enum PCG.EPCGLandscapeCacheSerializationMode
-// NumValues: 0x0004
-enum class EPCGLandscapeCacheSerializationMode : uint8
-{
-	SerializeOnlyAtCook                      = 0,
-	NeverSerialize                           = 1,
-	AlwaysSerialize                          = 2,
-	EPCGLandscapeCacheSerializationMode_MAX  = 3,
-};
-
-// Enum PCG.EPCGLandscapeCacheSerializationContents
-// NumValues: 0x0004
-enum class EPCGLandscapeCacheSerializationContents : uint8
-{
-	SerializeOnlyPositionsAndNormals         = 0,
-	SerializeOnlyLayerData                   = 1,
-	SerializeAll                             = 2,
-	EPCGLandscapeCacheSerializationContents_MAX = 3,
-};
-
-// Enum PCG.EPCGMeshSelectorMaterialOverrideMode
-// NumValues: 0x0004
-enum class EPCGMeshSelectorMaterialOverrideMode : uint8
-{
-	NoOverride                               = 0,
-	StaticOverride                           = 1,
-	ByAttributeOverride                      = 2,
-	EPCGMeshSelectorMaterialOverrideMode_MAX = 3,
 };
 
 // Enum PCG.EPCGComponentInput
@@ -1450,6 +2230,18 @@ enum class EPCGComponentDirtyFlag : uint8
 	EPCGComponentDirtyFlag_MAX               = 16,
 };
 
+// Enum PCG.EPCGIgnoreChangeOriginReason
+// NumValues: 0x0006
+enum class EPCGIgnoreChangeOriginReason : uint8
+{
+	None                                     = 0,
+	ComponentDisabledLandscapeTracking       = 1,
+	GraphDisabledLandscapeTracking           = 2,
+	GenerationIgnoredObject                  = 3,
+	GraphIgnoredClass                        = 4,
+	EPCGIgnoreChangeOriginReason_MAX         = 5,
+};
+
 // Enum PCG.EPCGExecutionPhase
 // NumValues: 0x0006
 enum class EPCGExecutionPhase : uint8
@@ -1462,6 +2254,18 @@ enum class EPCGExecutionPhase : uint8
 	EPCGExecutionPhase_MAX                   = 5,
 };
 
+// Enum PCG.EPCGDataUsage
+// NumValues: 0x0006
+enum class EPCGDataUsage : uint8
+{
+	None                                     = 0,
+	GraphExecutorTaskOutput                  = 1,
+	ComponentOutputData                      = 2,
+	ComponentPerPinOutputData                = 4,
+	ComponentInspectionData                  = 8,
+	EPCGDataUsage_MAX                        = 9,
+};
+
 // Enum PCG.EPCGDebugVisScaleMethod
 // NumValues: 0x0004
 enum class EPCGDebugVisScaleMethod : uint8
@@ -1470,6 +2274,16 @@ enum class EPCGDebugVisScaleMethod : uint8
 	Absolute                                 = 1,
 	Extents                                  = 2,
 	EPCGDebugVisScaleMethod_MAX              = 3,
+};
+
+// Enum PCG.EPCGGraphUsage
+// NumValues: 0x0004
+enum class EPCGGraphUsage : uint8
+{
+	Standard                                 = 0,
+	Asset                                    = 1,
+	Level                                    = 2,
+	EPCGGraphUsage_MAX                       = 3,
 };
 
 // Enum PCG.EPCGPinUsage
@@ -1494,6 +2308,15 @@ enum class EPCGPinStatus : uint8
 	EPCGPinStatus_MAX                        = 4,
 };
 
+// Enum PCG.EPCGPinDirection
+// NumValues: 0x0003
+enum class EPCGPinDirection : uint8
+{
+	Input                                    = 0,
+	Output                                   = 1,
+	EPCGPinDirection_MAX                     = 2,
+};
+
 // Enum PCG.EPCGTypeConversion
 // NumValues: 0x0007
 enum class EPCGTypeConversion : uint8
@@ -1508,7 +2331,7 @@ enum class EPCGTypeConversion : uint8
 };
 
 // Enum PCG.EPCGPointProperties
-// NumValues: 0x000F
+// NumValues: 0x0010
 enum class EPCGPointProperties : uint8
 {
 	Density                                  = 0,
@@ -1525,7 +2348,8 @@ enum class EPCGPointProperties : uint8
 	Seed                                     = 11,
 	LocalSize                                = 12,
 	ScaledLocalSize                          = 13,
-	EPCGPointProperties_MAX                  = 14,
+	Invalid                                  = 255,
+	EPCGPointProperties_MAX                  = 256,
 };
 
 // Enum PCG.EPCGSettingsExecutionMode
@@ -1540,7 +2364,7 @@ enum class EPCGSettingsExecutionMode : uint8
 };
 
 // Enum PCG.EPCGSettingsType
-// NumValues: 0x0014
+// NumValues: 0x0016
 enum class EPCGSettingsType : uint8
 {
 	InputOutput                              = 0,
@@ -1562,7 +2386,30 @@ enum class EPCGSettingsType : uint8
 	Reroute                                  = 16,
 	GPU                                      = 17,
 	DynamicMesh                              = 18,
-	EPCGSettingsType_MAX                     = 19,
+	DataLayers                               = 19,
+	Resource                                 = 20,
+	EPCGSettingsType_MAX                     = 21,
+};
+
+// Enum PCG.EPCGGridStreamingDependencyMode
+// NumValues: 0x0005
+enum class EPCGGridStreamingDependencyMode : uint32
+{
+	AllGridsExceptUnbounded                  = 0,
+	AllGrids                                 = 1,
+	SpecificGrids                            = 2,
+	NoGrids                                  = 3,
+	EPCGGridStreamingDependencyMode_MAX      = 4,
+};
+
+// Enum PCG.EPCGSchedulingPolicyNetworkMode
+// NumValues: 0x0004
+enum class EPCGSchedulingPolicyNetworkMode : uint8
+{
+	Client                                   = 0,
+	Server                                   = 1,
+	All                                      = 2,
+	EPCGSchedulingPolicyNetworkMode_MAX      = 3,
 };
 
 // Enum PCG.EDeterminismLevel
@@ -1579,64 +2426,110 @@ enum class EDeterminismLevel : uint8
 	EDeterminismLevel_MAX                    = 5,
 };
 
-// ScriptStruct PCG.PCGAssetExporterParameters
-// 0x0030 (0x0030 - 0x0000)
-struct FPCGAssetExporterParameters final
+// Enum PCG.EPCGUnitTestDummyEnum
+// NumValues: 0x0004
+enum class EPCGUnitTestDummyEnum : uint64
 {
-public:
-	bool                                          bOpenSaveDialog;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AssetName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AssetPath;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSaveOnExportEnded;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	One                                      = 0,
+	Two                                      = 1,
+	Three                                    = 2,
+	EPCGUnitTestDummyEnum_MAX                = 3,
 };
 
-// ScriptStruct PCG.PCGAttributeExtractorTestStructDepth2
-// 0x0004 (0x0004 - 0x0000)
-struct FPCGAttributeExtractorTestStructDepth2 final
-{
-public:
-	int32                                         IntValue;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGAttributeExtractorTestStructDepth1
+// ScriptStruct PCG.PCGDataTypeBaseId
 // 0x0008 (0x0008 - 0x0000)
-struct FPCGAttributeExtractorTestStructDepth1 final
+struct FPCGDataTypeBaseId final
 {
 public:
-	struct FPCGAttributeExtractorTestStructDepth2 Depth2Struct;                                      // 0x0000(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	float                                         FloatValue;                                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UScriptStruct*                          Struct;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPCGDataTypeBaseId;
 
-// ScriptStruct PCG.PCGAttributeExtractorTestStruct
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGAttributeExtractorTestStruct final
+// ScriptStruct PCG.PCGDataTypeIdentifier
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGDataTypeIdentifier final
 {
 public:
-	struct FPCGAttributeExtractorTestStructDepth1 DepthStruct;                                       // 0x0000(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-	class UPCGAttributeExtractorTestObject*       Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FPCGDataTypeBaseId>             ids;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	int32                                         CustomSubtype;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGDataTypeIdentifier;
 
-// ScriptStruct PCG.PCGAttributePropertySelector
+// ScriptStruct PCG.PCGPinProperties
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGPinProperties
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPinUsage                                  Usage;                                             // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGDataTypeIdentifier                 AllowedTypes;                                      // 0x0010(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultipleData;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPinStatus                                 PinStatus;                                         // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvisiblePin;                                     // 0x002A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultipleConnections;                         // 0x002B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGPinProperties;
+
+// ScriptStruct PCG.PCGAssetCachedPins
 // 0x0028 (0x0028 - 0x0000)
-struct FPCGAttributePropertySelector
+struct FPCGAssetCachedPins final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	EPCGAttributePropertySelection                Selection;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   AttributeName;                                     // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EPCGPointProperties                           PointProperty;                                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EPCGExtraProperties                           ExtraProperty;                                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         ExtraNames;                                        // 0x0018(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FPCGPinProperties>              InputPins;                                         // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPCGPinProperties>              OutputPins;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHasCachedPins;                                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGAssetCachedPins;
 
-// ScriptStruct PCG.PCGAttributePropertyInputSelector
-// 0x0000 (0x0028 - 0x0028)
-struct FPCGAttributePropertyInputSelector final : public FPCGAttributePropertySelector
+// ScriptStruct PCG.PCGCrc
+// 0x0008 (0x0008 - 0x0000)
+struct FPCGCrc final
 {
+public:
+	uint32                                        Value;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bValid;                                            // 0x0004(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGCrc;
+
+// ScriptStruct PCG.PCGDataAssetCachedPins
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGDataAssetCachedPins final
+{
+public:
+	TArray<struct FPCGPinProperties>              CachedPins;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHasCachedPins;                                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataAssetCachedPins;
+
+// ScriptStruct PCG.PCGDeltaSettings
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGDeltaSettings final
+{
+public:
+	EPCGDataOverrideKeyPolicy                     KeyPolicy;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AttributeName;                                     // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PinLabel;                                          // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSpatialKeyTarget                          KeyTarget;                                         // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SpatialTolerance;                                  // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDeltaSettings;
+
+// ScriptStruct PCG.PCGDeltaKey
+// 0x0008 (0x0008 - 0x0000)
+struct FPCGDeltaKey final
+{
+public:
+	uint64                                        Hash;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDeltaKey;
 
 // ScriptStruct PCG.PCGMetadataTypesConstantStruct
 // 0x0170 (0x0170 - 0x0000)
@@ -1666,151 +2559,198 @@ public:
 	bool                                          bAllowsTypeChange;                                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGMetadataTypesConstantStruct;
 
-// ScriptStruct PCG.PCGAttributeFilterThresholdSettings
-// 0x01B0 (0x01B0 - 0x0000)
-struct FPCGAttributeFilterThresholdSettings final
+// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
+// 0x0180 (0x0180 - 0x0000)
+struct FPCGMatchAndSetWeightedEntry final
 {
 public:
-	bool                                          bInclusive;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseConstantThreshold;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGAttributePropertyInputSelector     ThresholdAttribute;                                // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSpatialQuery;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGMetadataTypesConstantStruct        AttributeTypes;                                    // 0x0040(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_174[0xC];                                      // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGMatchAndSetWeightedEntry;
 
-// ScriptStruct PCG.PCGAttributePropertyOutputSelector
-// 0x0000 (0x0028 - 0x0028)
-struct FPCGAttributePropertyOutputSelector final : public FPCGAttributePropertySelector
-{
-};
-
-// ScriptStruct PCG.PCGAttributePropertyOutputNoSourceSelector
-// 0x0000 (0x0028 - 0x0028)
-struct FPCGAttributePropertyOutputNoSourceSelector final : public FPCGAttributePropertySelector
-{
-};
-
-// ScriptStruct PCG.PCGRuntimeGenerationRadii
-// 0x0060 (0x0060 - 0x0000)
-struct FPCGRuntimeGenerationRadii final
+// ScriptStruct PCG.PCGDeltaBase
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGDeltaBase
 {
 public:
-	double                                        GenerationRadius;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius400;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius800;                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius1600;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius3200;                              // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius6400;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius12800;                             // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius25600;                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius51200;                             // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius102400;                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GenerationRadius204800;                            // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        CleanupRadiusMultiplier;                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGDeltaBase;
 
-// ScriptStruct PCG.PCGPartitionActorRecord
+// ScriptStruct PCG.PCGDeltaCollection
+// 0x0070 (0x0070 - 0x0000)
+struct FPCGDeltaCollection final
+{
+public:
+	struct FPCGDeltaSettings                      Settings;                                          // 0x0000(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	TMap<struct FPCGDeltaKey, struct FInstancedStruct> Deltas;                                       // 0x0020(0x0050)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGDeltaCollection;
+
+// ScriptStruct PCG.PCGGridDescriptor
+// 0x0014 (0x0014 - 0x0000)
+struct FPCGGridDescriptor final
+{
+public:
+	uint32                                        GridSize;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIs2DGrid;                                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsRuntime;                                        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        RuntimeHash;                                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C[0x8];                                        // 0x000C(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGGridDescriptor;
+
+// ScriptStruct PCG.PCGGridCellDescriptor
 // 0x0020 (0x0020 - 0x0000)
-struct FPCGPartitionActorRecord final
+struct FPCGGridCellDescriptor final
 {
 public:
-	struct FGuid                                  GridGuid;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        GridSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGGridDescriptor                     Descriptor;                                        // 0x0000(0x0014)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntVector                             GridCoords;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGGridCellDescriptor;
 
-// ScriptStruct PCG.EnumSelector
-// 0x0010 (0x0010 - 0x0000)
-struct FEnumSelector final
+// ScriptStruct PCG.PCGPointDeltaBase
+// 0x00A8 (0x00B0 - 0x0008)
+struct FPCGPointDeltaBase : public FPCGDeltaBase
 {
 public:
-	class UEnum*                                  Class;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int64                                         Value;                                             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OriginalTransform;                                 // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   Bounds;                                            // 0x0070(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPointDeltaBase;
 
-// ScriptStruct PCG.PCGCrc
-// 0x0008 (0x0008 - 0x0000)
-struct FPCGCrc final
+// ScriptStruct PCG.PCGPointTransformDelta
+// 0x0070 (0x0120 - 0x00B0)
+struct FPCGPointTransformDelta final : public FPCGPointDeltaBase
 {
 public:
-	uint32                                        Value;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bValid;                                            // 0x0004(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TransformOverride;                                 // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverridePosition;                                 // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideRotation;                                 // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideScale;                                    // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_113[0xD];                                      // 0x0113(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPointTransformDelta;
 
-// ScriptStruct PCG.PCGSpawnerPrimitives
-// 0x0068 (0x0068 - 0x0000)
-struct FPCGSpawnerPrimitives final
+// ScriptStruct PCG.PCGSoftISMComponentDescriptor
+// 0x0020 (0x0288 - 0x0268)
+struct FPCGSoftISMComponentDescriptor final : public FSoftISMComponentDescriptor
 {
 public:
-	TArray<class UPrimitiveComponent*>            Primitives;                                        // 0x0000(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FBox>                           PrimitiveMeshBounds;                               // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 SelectionCDF;                                      // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint32                                        NumCustomFloats;                                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FUintVector4>                   AttributeIdOffsetStrides;                          // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         SelectorAttributeId;                               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 PrimitiveStringKeys;                               // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint32                                        NumInstancesAllPrimitives;                         // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ComponentTags;                                     // 0x0268(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 AdditionalCommaSeparatedTags;                      // 0x0278(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGSoftISMComponentDescriptor;
 
-// ScriptStruct PCG.PCGKernelAttributeKey
-// 0x000C (0x000C - 0x0000)
-struct FPCGKernelAttributeKey final
+// ScriptStruct PCG.PCGMeshSelectorWeightedEntry
+// 0x0290 (0x0290 - 0x0000)
+struct FPCGMeshSelectorWeightedEntry final
 {
 public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGKernelAttributeType                       Type;                                              // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPCGSoftISMComponentDescriptor         Descriptor;                                        // 0x0000(0x0288)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGMeshSelectorWeightedEntry;
 
-// ScriptStruct PCG.PCGKernelAttributeIDAndType
-// 0x0008 (0x0008 - 0x0000)
-struct FPCGKernelAttributeIDAndType final
+// ScriptStruct PCG.PCGPointTransformOffsetDelta
+// 0x0070 (0x0120 - 0x00B0)
+struct FPCGPointTransformOffsetDelta final : public FPCGPointDeltaBase
 {
 public:
-	int32                                         ID;                                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGKernelAttributeType                       Type;                                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TransformOffset;                                   // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetPosition;                                   // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetRotation;                                   // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetScale;                                      // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_113[0xD];                                      // 0x0113(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPointTransformOffsetDelta;
 
-// ScriptStruct PCG.PCGTaggedData
-// 0x0068 (0x0068 - 0x0000)
-struct FPCGTaggedData final
+// ScriptStruct PCG.PCGPointDeletionDelta
+// 0x0000 (0x00B0 - 0x00B0)
+struct FPCGPointDeletionDelta final : public FPCGPointDeltaBase
 {
-public:
-	class UPCGData*                               Data;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TSet<class FString>                           Tags;                                              // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FName                                   Pin;                                               // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPinlessData;                                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsUsedMultipleTimes;                              // 0x0061(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPointDeletionDelta;
 
-// ScriptStruct PCG.PCGDataCollection
-// 0x0030 (0x0030 - 0x0000)
-struct FPCGDataCollection final
-{
-public:
-	TArray<struct FPCGTaggedData>                 TaggedData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bCancelExecutionOnEmpty;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x1F];                                      // 0x0011(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct PCG.PCGDataForGPU
+// ScriptStruct PCG.PCGPoint
 // 0x00D0 (0x00D0 - 0x0000)
-struct FPCGDataForGPU final
+struct FPCGPoint final
 {
 public:
-	TSet<TSoftObjectPtr<class UPCGPin>>           InputPins;                                         // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
-	TMap<TSoftObjectPtr<class UPCGPin>, class FName> InputPinLabelAliases;                           // 0x0050(0x0050)(NativeAccessSpecifierPublic)
-	struct FPCGDataCollection                     InputDataCollection;                               // 0x00A0(0x0030)(NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Density;                                           // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BoundsMin;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsMax;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               Color;                                             // 0x00A0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Steepness;                                         // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seed;                                              // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         MetadataEntry;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGPoint;
+
+// ScriptStruct PCG.PCGPointInsertionDelta
+// 0x0010 (0x0018 - 0x0008)
+struct FPCGPointInsertionDelta final : public FPCGDeltaBase
+{
+public:
+	TArray<struct FPCGPoint>                      InsertedPoints;                                    // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPointInsertionDelta;
+
+// ScriptStruct PCG.PCGSkinnedMeshInstance
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x10) FPCGSkinnedMeshInstance final
+{
+public:
+	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSkinnedMeshInstance;
+
+// ScriptStruct PCG.PCGPolygon2DDataDelta
+// 0x0078 (0x0080 - 0x0008)
+struct FPCGPolygon2DDataDelta final : public FPCGDeltaBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OriginalStartTransform;                            // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGPolygon2DData*                      PolygonOverride;                                   // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGPolygon2DDataDelta;
+
+// ScriptStruct PCG.PCGSplineDataDelta
+// 0x0078 (0x0080 - 0x0008)
+struct FPCGSplineDataDelta final : public FPCGDeltaBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OriginalStartTransform;                            // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGSplineData*                         SplineOverride;                                    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSplineDataDelta;
+
+// ScriptStruct PCG.PCGSkinnedMeshPackedCustomData
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGSkinnedMeshPackedCustomData final
+{
+public:
+	int32                                         SequenceIndex;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumCustomDataFloats;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 CustomData;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSkinnedMeshPackedCustomData;
 
 // ScriptStruct PCG.PCGDataTableRowToParamDataTestStruct
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1830,6 +2770,140 @@ public:
 	struct FVector4                               V4;                                                // 0x0060(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        SoftPath;                                          // 0x0080(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGDataTableRowToParamDataTestStruct;
+
+// ScriptStruct PCG.PCGAttributePropertySelector
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGAttributePropertySelector
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGAttributePropertySelection                Selection;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   DomainName;                                        // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   AttributeName;                                     // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   PropertyName;                                      // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         ExtraNames;                                        // 0x0028(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	EPCGExtraProperties                           ExtraProperty;                                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGAttributePropertySelector;
+
+// ScriptStruct PCG.PCGDataViewSelection
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGDataViewSelection final
+{
+public:
+	bool                                          bAllAttributes;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLimitByDomain;                                    // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreProperties;                                 // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGAttributePropertySelector>  Attributes;                                        // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FName                                   domain;                                            // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataViewSelection;
+
+// ScriptStruct PCG.PCGMetadataAttributeDesc
+// 0x0038 (0x0038 - 0x0000)
+struct FPCGMetadataAttributeDesc final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGMetadataTypes                             ValueType;                                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<T4ByteEnum<EPCGMetadataAttributeContainerTypes>> ContainerTypes;                          // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UObject*                                ValueTypeObject;                                   // 0x0020(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	EPCGMetadataTypes                             KeyType;                                           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                KeyTypeObject;                                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FPCGMetadataAttributeDesc;
+
+// ScriptStruct PCG.PCGDataView
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGDataView final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPCGData*                               ViewedData;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FPCGDataViewSelection                  Selection;                                         // 0x0010(0x0020)(Edit, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataView;
+
+// ScriptStruct PCG.PCGStackFrame
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGStackFrame final
+{
+public:
+	TSoftObjectPtr<class UObject>                 Object;                                            // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LoopIndex;                                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGStackFrame;
+
+// ScriptStruct PCG.PCGDataViewCSVParameters
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGDataViewCSVParameters final
+{
+public:
+	EPCGDataViewCSVOutput                         Output;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 NameValueSeparator;                                // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValueDelimiter;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AttributeDelimiter;                                // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOmitDomain;                                       // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataViewCSVParameters;
+
+// ScriptStruct PCG.PCGDataViewCSVOutput
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPCGDataViewCSVOutput final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataViewCSVOutput;
+
+// ScriptStruct PCG.PCGDataViewJsonParameters
+// 0x0002 (0x0002 - 0x0000)
+struct FPCGDataViewJsonParameters final
+{
+public:
+	EPCGDataViewAttributeLayout                   AttributeLayout;                                   // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrettyJson;                                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataViewJsonParameters;
+
+// ScriptStruct PCG.PCGDataViewJsonOutput
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPCGDataViewJsonOutput final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataViewJsonOutput;
+
+// ScriptStruct PCG.PCGAnimBankDataRow
+// 0x0018 (0x0020 - 0x0008)
+struct FPCGAnimBankDataRow final : public FTableRowBase
+{
+public:
+	class USkeletalMesh*                          Mesh;                                              // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UAnimBank*                              Bank;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint32                                        SequenceIndex;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGAnimBankDataRow;
+
+// ScriptStruct PCG.PCGPinDefaultValueInfo
+// 0x0001 (0x0001 - 0x0000)
+struct FPCGPinDefaultValueInfo final
+{
+public:
+	EPCGMetadataTypes                             CurrentType;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPinDefaultValueInfo;
 
 // ScriptStruct PCG.PCGDeterminismSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -1841,75 +2915,50 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UPCGDeterminismTestBlueprintBase> DeterminismTestBlueprint;                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGDeterminismSettings;
 
-// ScriptStruct PCG.PCGDummyGetPropertyLevel2Struct
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGDummyGetPropertyLevel2Struct final
+// ScriptStruct PCG.PCGAttributePropertyInputSelector
+// 0x0000 (0x0040 - 0x0040)
+struct FPCGAttributePropertyInputSelector final : public FPCGAttributePropertySelector
 {
-public:
-	TArray<double>                                DoubleArrayProperty;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct PCG.PCGDummyGetPropertyStruct
-// 0x0028 (0x0028 - 0x0000)
-struct FPCGDummyGetPropertyStruct final
-{
-public:
-	TArray<int32>                                 IntArrayProperty;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         FloatProperty;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGDummyGetPropertyLevel2Struct       Level2Struct;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGTestMyColorStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FPCGTestMyColorStruct final
-{
-public:
-	double                                        B;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        G;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        R;                                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        A;                                                 // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FPCGAttributePropertyInputSelector;
 
 // ScriptStruct PCG.PCGGrammarSelection
-// 0x0040 (0x0040 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct FPCGGrammarSelection final
 {
 public:
 	bool                                          bGrammarAsAttribute;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 GrammarString;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     GrammarAttribute;                                  // 0x0018(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     GrammarAttribute;                                  // 0x0018(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGGrammarSelection;
 
-// ScriptStruct PCG.PCGPinProperties
-// 0x0014 (0x0014 - 0x0000)
-struct FPCGPinProperties
+// ScriptStruct PCG.PCGDefaultValueContainer
+// 0x0060 (0x0060 - 0x0000)
+struct FPCGDefaultValueContainer final
 {
 public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPinUsage                                  Usage;                                             // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	EPCGDataType                                  AllowedTypes;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultipleData;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPinStatus                                 PinStatus;                                         // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvisiblePin;                                     // 0x0012(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultipleConnections;                         // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSet<class FName>                             ActivatedProperties;                               // 0x0000(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  PropertyBag;                                       // 0x0050(0x0010)(NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FPCGDefaultValueContainer;
 
 // ScriptStruct PCG.PCGGraphTaskInput
-// 0x0040 (0x0040 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct FPCGGraphTaskInput final
 {
 public:
 	uint64                                        TaskId;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TOptional<struct FPCGPinProperties>           UpstreamPin;                                       // 0x0008(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TOptional<struct FPCGPinProperties>           DownstreamPin;                                     // 0x0020(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bProvideData;                                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsUsedMultipleTimes;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TOptional<struct FPCGPinProperties>           UpstreamPin;                                       // 0x0008(0x0038)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TOptional<struct FPCGPinProperties>           DownstreamPin;                                     // 0x0040(0x0038)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bProvideData;                                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUsedMultipleTimes;                              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGGraphTaskInput;
 
 // ScriptStruct PCG.PCGPinDependencyExpression
 // 0x0010 (0x0010 - 0x0000)
@@ -1918,9 +2967,10 @@ struct FPCGPinDependencyExpression final
 public:
 	TArray<uint64>                                Expression;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FPCGPinDependencyExpression;
 
 // ScriptStruct PCG.PCGGraphTask
-// 0x0140 (0x0140 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct FPCGGraphTask final
 {
 public:
@@ -1934,8 +2984,9 @@ public:
 	uint64                                        ParentId;                                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPCGPinDependencyExpression            PinDependency;                                     // 0x0060(0x0010)(NativeAccessSpecifierPublic)
 	int32                                         StackIndex;                                        // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0xCC];                                      // 0x0074(0x00CC)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0xD4];                                      // 0x0074(0x00D4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGGraphTask;
 
 // ScriptStruct PCG.PCGGraphTasks
 // 0x0010 (0x0010 - 0x0000)
@@ -1944,6 +2995,17 @@ struct FPCGGraphTasks final
 public:
 	TArray<struct FPCGGraphTask>                  GraphTasks;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGGraphTasks;
+
+// ScriptStruct PCG.PCGActorPropertyOverride
+// 0x0050 (0x0050 - 0x0000)
+struct FPCGActorPropertyOverride final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0040)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PropertyTarget;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGActorPropertyOverride;
 
 // ScriptStruct PCG.PCGComputeGraphs
 // 0x0010 (0x0010 - 0x0000)
@@ -1952,90 +3014,136 @@ struct FPCGComputeGraphs final
 public:
 	TArray<class UPCGComputeGraph*>               ComputeGraphs;                                     // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPCGComputeGraphs;
 
-// ScriptStruct PCG.PCGGridDescriptor
-// 0x0014 (0x0014 - 0x0000)
-struct FPCGGridDescriptor final
+// ScriptStruct PCG.PCGPerExecutionCacheData
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGPerExecutionCacheData
 {
 public:
-	uint32                                        GridSize;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIs2DGrid;                                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsRuntime;                                        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        RuntimeHash;                                       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C[0x8];                                        // 0x000C(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPerExecutionCacheData;
 
-// ScriptStruct PCG.PCGGridCellDescriptor
-// 0x0020 (0x0020 - 0x0000)
-struct FPCGGridCellDescriptor final
+// ScriptStruct PCG.PCGPerExecutionCachePCGData
+// 0x0008 (0x0010 - 0x0008)
+struct FPCGPerExecutionCachePCGData final : public FPCGPerExecutionCacheData
 {
 public:
-	struct FPCGGridDescriptor                     Descriptor;                                        // 0x0000(0x0014)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntVector                             GridCoords;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPerExecutionCachePCGData;
 
-// ScriptStruct PCG.PCGObjectPropertyOverrideDescription
-// 0x0038 (0x0038 - 0x0000)
-struct FPCGObjectPropertyOverrideDescription final
+// ScriptStruct PCG.PCGPerExecutionCacheBounds
+// 0x0038 (0x0040 - 0x0008)
+struct FPCGPerExecutionCacheBounds final : public FPCGPerExecutionCacheData
 {
 public:
-	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0028)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PropertyTarget;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x38];                                       // 0x0008(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPerExecutionCacheBounds;
 
-// ScriptStruct PCG.PCGActorPropertyOverride
-// 0x0038 (0x0038 - 0x0000)
-struct FPCGActorPropertyOverride final
-{
-public:
-	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0028)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PropertyTarget;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGProceduralISMComponentDescriptor
-// 0x00B8 (0x00B8 - 0x0000)
-struct FPCGProceduralISMComponentDescriptor final
+// ScriptStruct PCG.PCGManagedResourceContainer
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGManagedResourceContainer final
 {
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        Hash;                                              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            StaticMesh;                                        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x0018(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UMaterialInterface*                     OverlayMaterial;                                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class URuntimeVirtualTexture*>         RuntimeVirtualTextures;                            // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int32                                         NumInstances;                                      // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumCustomFloats;                                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   LocalBounds;                                       // 0x0048(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         InstanceStartCullDistance;                         // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InstanceEndCullDistance;                           // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ComponentTags;                                     // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	EComponentMobility                            Mobility;                                          // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERuntimeVirtualTextureMainPassType            VirtualTextureRenderPassType;                      // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLightingChannels                      LightingChannels;                                  // 0x009A(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
-	ERendererStencilMask                          CustomDepthStencilWriteMask;                       // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         VirtualTextureCullMips;                            // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TranslucencySortPriority;                          // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CustomDepthStencilValue;                           // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bCastShadow : 1;                                   // 0x00A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEmissiveLightSource : 1;                          // 0x00A8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastDynamicShadow : 1;                            // 0x00A8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastStaticShadow : 1;                             // 0x00A8(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastContactShadow : 1;                            // 0x00A8(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastShadowAsTwoSided : 1;                         // 0x00A8(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bCastHiddenShadow : 1;                             // 0x00A8(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReceivesDecals : 1;                               // 0x00A8(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseAsOccluder : 1;                                // 0x00A9(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bRenderCustomDepth : 1;                            // 0x00A9(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEvaluateWorldPositionOffset : 1;                  // 0x00A9(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReverseCulling : 1;                               // 0x00A9(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WorldPositionOffsetDisableDistance;                // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EShadowCacheInvalidationBehavior              ShadowCacheInvalidationBehavior;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDetailMode                                   DetailMode;                                        // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UPCGManagedResource*>            GeneratedResources;                                // 0x0008(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPCGManagedResourceContainer;
+
+// ScriptStruct PCG.PCGBakeMeshAttributesParams
+// 0x0014 (0x0014 - 0x0000)
+struct FPCGBakeMeshAttributesParams final
+{
+public:
+	struct FIntPoint                              Resolution;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureRenderTargetFormat                    Format;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGMeshAttribute                             Attribute;                                         // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Padding;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UVChannelIndex;                                    // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGBakeMeshAttributesParams;
+
+// ScriptStruct PCG.PCGPropertyAliases
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGPropertyAliases final
+{
+public:
+	TArray<class FName>                           Aliases;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPropertyAliases;
+
+// ScriptStruct PCG.PCGSettingsOverridableParam
+// 0x0088 (0x0088 - 0x0000)
+struct FPCGSettingsOverridableParam final
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           PropertiesNames;                                   // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UStruct*                                PropertyClass;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TMap<int32, struct FPCGPropertyAliases>       MapOfAliases;                                      // 0x0020(0x0050)(NativeAccessSpecifierPublic)
+	bool                                          bHasNameClash;                                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportsGPU;                                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequiresGPUReadback;                              // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_73[0x1];                                       // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumContainers;                                     // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x10];                                      // 0x0078(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSettingsOverridableParam;
+
+// ScriptStruct PCG.PCGMetadataDomainHandle
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FPCGMetadataDomainHandle final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGMetadataDomainHandle;
+
+// ScriptStruct PCG.PCGPreconfiguredInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGPreconfiguredInfo
+{
+public:
+	int32                                         PreconfiguredIndex;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Label;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPreconfiguredInfo;
+
+// ScriptStruct PCG.PCGDataPtrWrapper
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGDataPtrWrapper final
+{
+public:
+	class UPCGData*                               Data;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataPtrWrapper;
+
+// ScriptStruct PCG.PCGTaggedData
+// 0x0070 (0x0070 - 0x0000)
+struct FPCGTaggedData final
+{
+public:
+	struct FPCGDataPtrWrapper                     Data;                                              // 0x0000(0x0010)(Edit, EditConst, NativeAccessSpecifierPublic)
+	TSet<class FString>                           Tags;                                              // 0x0010(0x0050)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FName                                   Pin;                                               // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPinlessData;                                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUsedMultipleTimes;                              // 0x0069(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGTaggedData;
+
+// ScriptStruct PCG.PCGPreConfiguredSettingsInfo
+// 0x0000 (0x0018 - 0x0018)
+struct FPCGPreConfiguredSettingsInfo final : public FPCGPreconfiguredInfo
+{
+};
+DUMPER7_ASSERTS_FPCGPreConfiguredSettingsInfo;
 
 // ScriptStruct PCG.PCGProjectionParams
 // 0x0020 (0x0020 - 0x0000)
@@ -2053,6 +3161,944 @@ public:
 	EPCGProjectionTagMergeMode                    TagMergeOperation;                                 // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGProjectionParams;
+
+// ScriptStruct PCG.PCGAttributeExtractorTestStructDepth2
+// 0x0004 (0x0004 - 0x0000)
+struct FPCGAttributeExtractorTestStructDepth2 final
+{
+public:
+	int32                                         IntValue;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGAttributeExtractorTestStructDepth2;
+
+// ScriptStruct PCG.PCGAttributeExtractorTestStructDepth1
+// 0x0008 (0x0008 - 0x0000)
+struct FPCGAttributeExtractorTestStructDepth1 final
+{
+public:
+	struct FPCGAttributeExtractorTestStructDepth2 Depth2Struct;                                      // 0x0000(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
+	float                                         FloatValue;                                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGAttributeExtractorTestStructDepth1;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingBaseData
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPCGInteractiveToolWorkingBaseData
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   WorkingDataIdentifier;                             // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingBaseData;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData
+// 0x0000 (0x0010 - 0x0010)
+struct FPCGInteractiveToolWorkingData : public FPCGInteractiveToolWorkingBaseData
+{
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData_Actors
+// 0x0008 (0x0018 - 0x0010)
+struct FPCGInteractiveToolWorkingData_Actors final : public FPCGInteractiveToolWorkingData
+{
+public:
+	class UPCGParamData*                          SelectedActorsData;                                // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData_Actors;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingDataGeneratedResources
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGInteractiveToolWorkingDataGeneratedResources final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingDataGeneratedResources;
+
+// ScriptStruct PCG.PCGDummyGetPropertyLevel2Struct
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGDummyGetPropertyLevel2Struct final
+{
+public:
+	TArray<double>                                DoubleArrayProperty;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDummyGetPropertyLevel2Struct;
+
+// ScriptStruct PCG.PCGDummyGetPropertyStruct
+// 0x0028 (0x0028 - 0x0000)
+struct FPCGDummyGetPropertyStruct final
+{
+public:
+	TArray<int32>                                 IntArrayProperty;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         FloatProperty;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGDummyGetPropertyLevel2Struct       Level2Struct;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDummyGetPropertyStruct;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingDataContext
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGInteractiveToolWorkingDataContext final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingDataContext;
+
+// ScriptStruct PCG.PCGGraphInstanceToolDataOverrides
+// 0x0028 (0x0028 - 0x0000)
+struct FPCGGraphInstanceToolDataOverrides final
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class FText                                   ToolTip;                                           // 0x0010(0x0010)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bIsPreset;                                         // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGGraphInstanceToolDataOverrides;
+
+// ScriptStruct PCG.PCGPointArray
+// 0x01A0 (0x01A0 - 0x0000)
+struct alignas(0x10) FPCGPointArray final
+{
+public:
+	uint8                                         Pad_0[0x1A0];                                      // 0x0000(0x01A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGPointArray;
+
+// ScriptStruct PCG.PCGGraphToolData
+// 0x0050 (0x0050 - 0x0000)
+struct FPCGGraphToolData final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DisplayName;                                       // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class FText                                   ToolTip;                                           // 0x0018(0x0010)(Edit, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CompatibleToolTags;                                // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     InitialActorClassToSpawn;                          // 0x0038(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NewActorLabel;                                     // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPreset;                                         // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGGraphToolData;
+
+// ScriptStruct PCG.PCGInteractiveToolDataContainer
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGInteractiveToolDataContainer final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FInstancedStruct>               ToolData;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolDataContainer;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData_PointArrayData
+// 0x0008 (0x0018 - 0x0010)
+struct FPCGInteractiveToolWorkingData_PointArrayData final : public FPCGInteractiveToolWorkingData
+{
+public:
+	class UPCGPointArrayData*                     GeneratedPointData;                                // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData_PointArrayData;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData_Spline
+// 0x0028 (0x0038 - 0x0010)
+struct FPCGInteractiveToolWorkingData_Spline : public FPCGInteractiveToolWorkingData
+{
+public:
+	TSoftObjectPtr<class USplineComponent>        SplineComponent;                                   // 0x0010(0x0028)(Edit, ExportObject, EditConst, InstancedReference, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData_Spline;
+
+// ScriptStruct PCG.PCGSelectionKey
+// 0x0080 (0x0080 - 0x0000)
+struct FPCGSelectionKey final
+{
+public:
+	EPCGActorFilter                               ActorFilter;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGActorSelection                            Selection;                                         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Tag;                                               // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    SelectionClass;                                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ObjectPath;                                        // 0x0018(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    OptionalExtraDependency;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FInstancedStruct                       CustomKey;                                         // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBox>                           OptionalBounds;                                    // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0x20];                                      // 0x0060(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSelectionKey;
+
+// ScriptStruct PCG.DynamicTrackedKeyInstanceData
+// 0x00B0 (0x00B0 - 0x0000)
+struct FDynamicTrackedKeyInstanceData final
+{
+public:
+	struct FPCGSelectionKey                       SelectionKey;                                      // 0x0000(0x0080)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UPCGSettings>            Settings;                                          // 0x0080(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValue;                                            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDynamicTrackedKeyInstanceData;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData_SplineSurface
+// 0x0000 (0x0038 - 0x0038)
+struct FPCGInteractiveToolWorkingData_SplineSurface final : public FPCGInteractiveToolWorkingData_Spline
+{
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData_SplineSurface;
+
+// ScriptStruct PCG.PCGInteractiveToolWorkingData_Volume
+// 0x0058 (0x0068 - 0x0010)
+struct FPCGInteractiveToolWorkingData_Volume final : public FPCGInteractiveToolWorkingData
+{
+public:
+	class AVolume*                                Volume;                                            // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSoftObjectPtr<class UBrushComponent>         BrushComponent;                                    // 0x0018(0x0028)(Edit, ExportObject, EditConst, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UBoxComponent>           BoxComponent;                                      // 0x0040(0x0028)(Edit, ExportObject, EditConst, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGInteractiveToolWorkingData_Volume;
+
+// ScriptStruct PCG.PCGSourceDataStorageValue
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGSourceDataStorageValue final
+{
+public:
+	struct FSharedStruct                          Data;                                              // 0x0000(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSourceDataStorageValue;
+
+// ScriptStruct PCG.PCGProceduralISMComponentDescriptor
+// 0x0010 (0x00E0 - 0x00D0)
+struct FPCGProceduralISMComponentDescriptor final : public FProceduralISMComponentDescriptor
+{
+public:
+	TArray<class FName>                           ComponentTags;                                     // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGProceduralISMComponentDescriptor;
+
+// ScriptStruct PCG.PCGDataTypeInfo
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGDataTypeInfo
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfo;
+
+// ScriptStruct PCG.DeterminismTestResult
+// 0x00A8 (0x00A8 - 0x0000)
+struct FDeterminismTestResult final
+{
+public:
+	int64                                         Index;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TestResultTitle;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TestResultName;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seed;                                              // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGDataTypeIdentifier                 DataTypesTested;                                   // 0x0028(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, EDeterminismLevel>          TestResults;                                       // 0x0040(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AdditionalDetails;                                 // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bFlagRaised;                                       // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDeterminismTestResult;
+
+// ScriptStruct PCG.PCGDataTypeInfoProxyForGPU
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoProxyForGPU final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoProxyForGPU;
+
+// ScriptStruct PCG.PCGDataTypeInfoRawBuffer
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoRawBuffer final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoRawBuffer;
+
+// ScriptStruct PCG.PCGStack
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGStack final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGStackFrame>                 StackFrames;                                       // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGStack;
+
+// ScriptStruct PCG.PCGStackContext
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGStackContext final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGStack>                      Stacks;                                            // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	int32                                         CurrentStackIndex;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGStackContext;
+
+// ScriptStruct PCG.PCGMetadataDomainID
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGMetadataDomainID final
+{
+public:
+	EPCGMetadataDomainFlag                        Flag;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CustomFlag;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGMetadataDomainID;
+
+// ScriptStruct PCG.PCGAttributeIdentifier
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGAttributeIdentifier final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGMetadataDomainID                   MetadataDomain;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGAttributeIdentifier;
+
+// ScriptStruct PCG.PCGAttributePropertyOutputNoSourceSelector
+// 0x0000 (0x0040 - 0x0040)
+struct FPCGAttributePropertyOutputNoSourceSelector : public FPCGAttributePropertySelector
+{
+};
+DUMPER7_ASSERTS_FPCGAttributePropertyOutputNoSourceSelector;
+
+// ScriptStruct PCG.PCGKernelAttributeKey
+// 0x0060 (0x0060 - 0x0000)
+struct FPCGKernelAttributeKey final
+{
+public:
+	struct FPCGAttributeIdentifier                Identifier;                                        // 0x0000(0x0018)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EPCGKernelAttributeType                       Type;                                              // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyOutputNoSourceSelector Name;                                         // 0x0020(0x0040)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGKernelAttributeKey;
+
+// ScriptStruct PCG.PCGKernelAttributeKeyList
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGKernelAttributeKeyList final
+{
+public:
+	TArray<struct FPCGKernelAttributeKey>         Keys;                                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGKernelAttributeKeyList;
+
+// ScriptStruct PCG.PCGOverrideInstancedPropertyBag
+// 0x0060 (0x0060 - 0x0000)
+struct FPCGOverrideInstancedPropertyBag final
+{
+public:
+	struct FInstancedPropertyBag                  Parameters;                                        // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
+	TSet<struct FGuid>                            PropertiesIDsOverridden;                           // 0x0010(0x0050)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGOverrideInstancedPropertyBag;
+
+// ScriptStruct PCG.PCGDataLayerReferenceSelector
+// 0x0058 (0x0058 - 0x0000)
+struct FPCGDataLayerReferenceSelector final
+{
+public:
+	bool                                          bAsInput;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     Attribute;                                         // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UDataLayerAsset>> DataLayers;                                        // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataLayerReferenceSelector;
+
+// ScriptStruct PCG.PCGParsedAttributeFunction
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGParsedAttributeFunction final
+{
+public:
+	class FString                                 PinLabel;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FunctionName;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         AttributeType;                                     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AttributeName;                                     // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MatchBeginning;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGParsedAttributeFunction;
+
+// ScriptStruct PCG.PCGParsedCopyElementFunction
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGParsedCopyElementFunction final
+{
+public:
+	class FString                                 SourcePin;                                         // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TargetPin;                                         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGParsedCopyElementFunction;
+
+// ScriptStruct PCG.PCGCustomHLSLParsedSource
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGCustomHLSLParsedSource final
+{
+public:
+	TArray<struct FPCGParsedAttributeFunction>    AttributeFunctions;                                // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGCustomHLSLParsedSource;
+
+// ScriptStruct PCG.PCGSettingsPropertyDefinition
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGSettingsPropertyDefinition final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FullName;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ToolTip;                                           // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CPPType;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSettingsPropertyDefinition;
+
+// ScriptStruct PCG.PCGKernelPin
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGKernelPin final
+{
+public:
+	int32                                         KernelIndex;                                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PinLabel;                                          // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInput;                                          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGKernelPin;
+
+// ScriptStruct PCG.PCGDataLabels
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGDataLabels final
+{
+public:
+	TArray<class FString>                         Labels;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataLabels;
+
+// ScriptStruct PCG.PCGVirtualTexturePrimingInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGVirtualTexturePrimingInfo final
+{
+public:
+	TSoftObjectPtr<class URuntimeVirtualTexture>  VirtualTexture;                                    // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGHiGenGrid                                 Grid;                                              // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldTexelSize;                                    // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGVirtualTexturePrimingInfo;
+
+// ScriptStruct PCG.PCGPinDataLabels
+// 0x0050 (0x0050 - 0x0000)
+struct FPCGPinDataLabels final
+{
+public:
+	TMap<class FName, struct FPCGDataLabels>      PinToDataLabels;                                   // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPinDataLabels;
+
+// ScriptStruct PCG.PCGKernelLogEntry
+// 0x0018 (0x0018 - 0x0000)
+struct FPCGKernelLogEntry final
+{
+public:
+	class FText                                   Message;                                           // 0x0000(0x0010)(NativeAccessSpecifierPublic)
+	EPCGKernelLogVerbosity                        Verbosity;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGKernelLogEntry;
+
+// ScriptStruct PCG.PCGKernelOverridableParam
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGKernelOverridableParam final
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           PropertiesNames;                                   // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bRequiresGPUReadback;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPropertyOverriddenByPin;                        // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGMetadataTypes                             UnderlyingType;                                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGKernelOverridableParam;
+
+// ScriptStruct PCG.PCGSpawnerPrimitives
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x08) FPCGSpawnerPrimitives final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSpawnerPrimitives;
+
+// ScriptStruct PCG.PCGDataToDebug
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPCGDataToDebug final
+{
+public:
+	class UPCGData*                               Data;                                              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UPCGData*                               DataPendingInit;                                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TWeakObjectPtr<class UPCGSettings>            ProducerSettings;                                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PinLabel;                                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PinLabelAlias;                                     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<class FString>                           Tags;                                              // 0x0028(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TSet<class FString>                           AdditionalTags;                                    // 0x0078(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataToDebug;
+
+// ScriptStruct PCG.PCGKernelAttributeTable
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGKernelAttributeTable final
+{
+public:
+	TArray<struct FPCGKernelAttributeKey>         AttributeTable;                                    // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGKernelAttributeTable;
+
+// ScriptStruct PCG.PCGPinPropertiesGPUStruct
+// 0x00C0 (0x00C0 - 0x0000)
+struct FPCGPinPropertiesGPUStruct final
+{
+public:
+	EPCGPinInitMode                               InitializationMode;                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           PinsToInititalizeFrom;                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	EPCGDataCountMode                             DataCountMode;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGDataMultiplicity                          DataMultiplicity;                                  // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DataCount;                                         // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGElementCountMode                          ElementCountMode;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGElementMultiplicity                       ElementMultiplicity;                               // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ElementCount;                                      // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              NumElements2D;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPropertyInheritanceMode                   TextureFormatInheritanceMode;                      // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGRenderTargetFormat                        TextureFormat;                                     // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitializeTextureTransformFromGenerationVolume;   // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPropertyInheritanceMode                   TextureTransformInheritanceMode;                   // 0x0033(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TextureTransform;                                  // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPropertyInheritanceMode                   TextureFilterInheritanceMode;                      // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGTextureFilter                             TextureFilter;                                     // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPropertyInheritanceMode                   TextureArraySizeInheritanceMode;                   // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A3[0x1];                                       // 0x00A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TextureArraySize;                                  // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ElementCountMultiplier;                            // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitializeToZero;                                 // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoInitializeOutput;                             // 0x00AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAttributeInheritanceMode                  AttributeInheritanceMode;                          // 0x00AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AF[0x1];                                       // 0x00AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGKernelAttributeKey>         CreatedKernelAttributeKeys;                        // 0x00B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPinPropertiesGPUStruct;
+
+// ScriptStruct PCG.PCGPinPropertiesGPU
+// 0x00C0 (0x00F0 - 0x0030)
+struct FPCGPinPropertiesGPU final : public FPCGPinProperties
+{
+public:
+	struct FPCGPinPropertiesGPUStruct             PropertiesGPU;                                     // 0x0030(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPinPropertiesGPU;
+
+// ScriptStruct PCG.PCGDataTypeInfoDataView
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoDataView final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoDataView;
+
+// ScriptStruct PCG.PCGPointInputRange
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGPointInputRange final
+{
+public:
+	class UPCGBasePointData*                      PointData;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         RangeStartIndex;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RangeSize;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPointInputRange;
+
+// ScriptStruct PCG.PCGPointOutputRange
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGPointOutputRange final
+{
+public:
+	class UPCGBasePointData*                      PointData;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         RangeStartIndex;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RangeSize;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPointOutputRange;
+
+// ScriptStruct PCG.PCGDataTypeInfoSpatial
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoSpatial : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoSpatial;
+
+// ScriptStruct PCG.PCGDataTypeInfoConcrete
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoConcrete : public FPCGDataTypeInfoSpatial
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoConcrete;
+
+// ScriptStruct PCG.PCGDataTypeInfoPoint
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoPoint : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoPoint;
+
+// ScriptStruct PCG.PCGCollisionShape
+// 0x0048 (0x0048 - 0x0000)
+struct FPCGCollisionShape final
+{
+public:
+	EPCGCollisionShapeType                        ShapeType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BoxHalfExtent;                                     // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SphereRadius;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleRadius;                                     // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleHalfHeight;                                 // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ShapeRotation;                                     // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGCollisionShape;
+
+// ScriptStruct PCG.PCGDataTypeInfoDynamicMesh
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoDynamicMesh final : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoDynamicMesh;
+
+// ScriptStruct PCG.PCGLandscapeDataProps
+// 0x0007 (0x0007 - 0x0000)
+struct FPCGLandscapeDataProps final
+{
+public:
+	bool                                          bGetHeightOnly;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetLayerWeights;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetActorReference;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetPhysicalMaterial;                              // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetComponentCoordinates;                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSampleVirtualTextures;                            // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSampleVirtualTextureNormals;                      // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGLandscapeDataProps;
+
+// ScriptStruct PCG.PCGDataTypeInfoSurface
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoSurface : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoSurface;
+
+// ScriptStruct PCG.PCGDataTypeInfoLandscape
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoLandscape final : public FPCGDataTypeInfoSurface
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoLandscape;
+
+// ScriptStruct PCG.PCGDataTypeInfoPolyline
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoPolyline : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoPolyline;
+
+// ScriptStruct PCG.PCGDataTypeInfoLandscapeSpline
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoLandscapeSpline final : public FPCGDataTypeInfoPolyline
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoLandscapeSpline;
+
+// ScriptStruct PCG.PCGDataTypeInfoPolygon2D
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoPolygon2D final : public FPCGDataTypeInfoPolyline
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoPolygon2D;
+
+// ScriptStruct PCG.PCGDataTypeInfoPrimitive
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoPrimitive final : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoPrimitive;
+
+// ScriptStruct PCG.PCGDataTypeInfoTexture2DBase
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoTexture2DBase : public FPCGDataTypeInfoSurface
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoTexture2DBase;
+
+// ScriptStruct PCG.PCGDataTypeInfoTexture2DSingleBase
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoTexture2DSingleBase : public FPCGDataTypeInfoTexture2DBase
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoTexture2DSingleBase;
+
+// ScriptStruct PCG.PCGDataTypeInfoRenderTarget2D
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoRenderTarget2D final : public FPCGDataTypeInfoTexture2DSingleBase
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoRenderTarget2D;
+
+// ScriptStruct PCG.PCGDataTypeInfoResource
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoResource : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoResource;
+
+// ScriptStruct PCG.PCGInitializeFromDataParams
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGInitializeFromDataParams final
+{
+public:
+	class UPCGSpatialData*                        Source;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UPCGSpatialData*                        SourceOverride;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bInheritMetadata;                                  // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInheritAttributes;                                // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInheritSpatialData;                               // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13[0x2D];                                      // 0x0013(0x002D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGInitializeFromDataParams;
+
+// ScriptStruct PCG.PCGDataTypeInfoComposite
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoComposite final : public FPCGDataTypeInfoSpatial
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoComposite;
+
+// ScriptStruct PCG.PCGPointDataCache
+// 0x0028 (0x0028 - 0x0000)
+struct FPCGPointDataCache final
+{
+public:
+	class UPCGBasePointData*                      CachedPointData;                                   // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FBox>                           CachedBoundedPointDataBoxes;                       // 0x0008(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class UPCGBasePointData*>              CachedBoundedPointData;                            // 0x0018(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FPCGPointDataCache;
+
+// ScriptStruct PCG.PCGDataTypeInfoSpline
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoSpline final : public FPCGDataTypeInfoPolyline
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoSpline;
+
+// ScriptStruct PCG.PCGSplineStruct
+// 0x01A0 (0x01A0 - 0x0000)
+struct FPCGSplineStruct final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DefaultUpVector;                                   // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReparamStepsPerSegment;                            // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClosedLoop;                                       // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       LocalBounds;                                       // 0x0080(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       Bounds;                                            // 0x00B8(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSplineCurves                          SplineCurves;                                      // 0x00F0(0x0068)(Protected, NativeAccessSpecifierProtected)
+	TArray<int64>                                 ControlPointsEntryKeys;                            // 0x0158(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FSpline                                Spline;                                            // 0x0168(0x0018)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_180[0x20];                                     // 0x0180(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSplineStruct;
+
+// ScriptStruct PCG.PCGDataTypeInfoStaticMeshResource
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoStaticMeshResource final : public FPCGDataTypeInfoResource
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoStaticMeshResource;
+
+// ScriptStruct PCG.PCGDataTypeInfoTexture2DArray
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoTexture2DArray final : public FPCGDataTypeInfoTexture2DBase
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoTexture2DArray;
+
+// ScriptStruct PCG.PCGDataTypeInfoTexture2D
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoTexture2D final : public FPCGDataTypeInfoTexture2DSingleBase
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoTexture2D;
+
+// ScriptStruct PCG.PCGDataTypeInfoVirtualTexture
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoVirtualTexture final : public FPCGDataTypeInfoSurface
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoVirtualTexture;
+
+// ScriptStruct PCG.PCGDataTypeInfoVolume
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoVolume final : public FPCGDataTypeInfoConcrete
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoVolume;
+
+// ScriptStruct PCG.PCGWorldCommonQueryParams
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPCGWorldCommonQueryParams
+{
+public:
+	bool                                          bIgnorePCGHits;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreSelfHits;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreInstancedFoliageHits;                       // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionChannel                             CollisionChannel;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTraceComplex;                                     // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGWorldQueryFilter                          ActorTagFilter;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ActorTagsList;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGWorldQueryFilter                          ActorClassFilter;                                  // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class AActor>                     ActorClass;                                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGWorldQueryFilter                          ActorFilterFromInput;                              // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ActorFilterInputSource;                            // 0x0030(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGWorldQuerySelectLandscapeHits             SelectLandscapeHits;                               // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetReferenceToActorHit;                           // 0x0071(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetReferenceToPhysicalMaterial;                   // 0x0072(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class FName>                             ParsedActorTagsList;                               // 0x0078(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGWorldCommonQueryParams;
+
+// ScriptStruct PCG.PCGWorldRaycastQueryParams
+// 0x0078 (0x0140 - 0x00C8)
+struct FPCGWorldRaycastQueryParams : public FPCGWorldCommonQueryParams
+{
+public:
+	uint8                                         bIgnoreBackfaceHits : 1;                           // 0x00C8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetImpact : 1;                                    // 0x00C8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetImpactPoint : 1;                               // 0x00C8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetImpactNormal : 1;                              // 0x00C8(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetReflection : 1;                                // 0x00C8(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetDistance : 1;                                  // 0x00C8(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetLocalImpactPoint : 1;                          // 0x00C8(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetReferenceToRenderMaterial : 1;                 // 0x00C8(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetReferenceToStaticMesh : 1;                     // 0x00C9(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetHitActorTags : 1;                              // 0x00C9(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 HitActorTagsToRecord;                              // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<class FName>                             ParsedHitActorTagsToRecord;                        // 0x00E0(0x0050)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         bGetFaceIndex : 1;                                 // 0x0130(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetUVCoords : 1;                                  // 0x0130(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetElementIndex : 1;                              // 0x0130(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGetSectionIndex : 1;                              // 0x0130(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bApplyMetadataFromLandscape : 1;                   // 0x0130(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseRenderMaterialIndex : 1;                       // 0x0130(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RenderMaterialIndex;                               // 0x0134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bGetRenderMaterialIndex : 1;                       // 0x0138(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         UVChannel;                                         // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGWorldRaycastQueryParams;
+
+// ScriptStruct PCG.PCGAttributePropertyOutputSelector
+// 0x0000 (0x0040 - 0x0040)
+struct FPCGAttributePropertyOutputSelector final : public FPCGAttributePropertyOutputNoSourceSelector
+{
+};
+DUMPER7_ASSERTS_FPCGAttributePropertyOutputSelector;
+
+// ScriptStruct PCG.PCGWorldVolumetricQueryParams
+// 0x0008 (0x00D0 - 0x00C8)
+struct FPCGWorldVolumetricQueryParams final : public FPCGWorldCommonQueryParams
+{
+public:
+	bool                                          bSearchForOverlap;                                 // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGWorldVolumetricQueryParams;
+
+// ScriptStruct PCG.PCGWorldRayHitQueryParams
+// 0x0040 (0x0180 - 0x0140)
+struct FPCGWorldRayHitQueryParams final : public FPCGWorldRaycastQueryParams
+{
+public:
+	bool                                          bOverrideDefaultParams;                            // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RayOrigin;                                         // 0x0148(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RayDirection;                                      // 0x0160(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        RayLength;                                         // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGWorldRayHitQueryParams;
+
+// ScriptStruct PCG.PCGWorldQueryActorFilterCache
+// 0x0068 (0x0068 - 0x0000)
+struct FPCGWorldQueryActorFilterCache final
+{
+public:
+	TArray<TSoftObjectPtr<class AActor>>          FilterActors;                                      // 0x0000(0x0010)(ZeroConstructor, Deprecated, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_10[0x58];                                      // 0x0010(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGWorldQueryActorFilterCache;
+
+// ScriptStruct PCG.PCGDataTypeInfoOther
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoOther final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoOther;
+
+// ScriptStruct PCG.PCGGraphCommentNodeData
+// 0x0001 (0x0001 - 0x0000)
+struct FPCGGraphCommentNodeData final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGGraphCommentNodeData;
+
+// ScriptStruct PCG.PCGGraphEditorCustomization
+// 0x00C8 (0x00C8 - 0x0000)
+struct FPCGGraphEditorCustomization final
+{
+public:
+	bool                                          bFilterNodesByCategory;                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGGraphEditorFiltering                      NodeFilterType;                                    // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<class FString>                           FilteredCategories;                                // 0x0008(0x0050)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bFilterSubgraphs;                                  // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGGraphEditorFiltering                      SubgraphFilterType;                                // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<TSoftObjectPtr<class UPCGGraph>>         FilteredSubgraphTypes;                             // 0x0060(0x0050)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	bool                                          bFilterSettings;                                   // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGGraphEditorFiltering                      SettingsFilterType;                                // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UPCGSettings>>       FilteredSettingsTypes;                             // 0x00B8(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGGraphEditorCustomization;
+
+// ScriptStruct PCG.EnumSelector
+// 0x0010 (0x0010 - 0x0000)
+struct FEnumSelector final
+{
+public:
+	class UEnum*                                  Class;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int64                                         Value;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnumSelector;
 
 // ScriptStruct PCG.PCGSelectGrammarCriterion
 // 0x0030 (0x0030 - 0x0000)
@@ -2066,6 +4112,7 @@ public:
 	double                                        SecondValue;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Grammar;                                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGSelectGrammarCriterion;
 
 // ScriptStruct PCG.PCGSelectGrammarCriteriaAttributeNames
 // 0x0028 (0x0028 - 0x0000)
@@ -2078,22 +4125,7 @@ public:
 	class FName                                   SecondValueAttributeName;                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   GrammarAttributeName;                              // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct PCG.PCGContext
-// 0x01B8 (0x01B8 - 0x0000)
-struct alignas(0x08) FPCGContext
-{
-public:
-	uint8                                         Pad_0[0x1B8];                                      // 0x0000(0x01B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct PCG.PCGStaticMeshSpawnerContext
-// 0x0208 (0x03C0 - 0x01B8)
-struct FPCGStaticMeshSpawnerContext final : public FPCGContext
-{
-public:
-	uint8                                         Pad_1B8[0x208];                                    // 0x01B8(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FPCGSelectGrammarCriteriaAttributeNames;
 
 // ScriptStruct PCG.PCGSubdivisionSubmodule
 // 0x0040 (0x0040 - 0x0000)
@@ -2106,6 +4138,7 @@ public:
 	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               DebugColor;                                        // 0x0020(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGSubdivisionSubmodule;
 
 // ScriptStruct PCG.PCGSubdivisionModuleAttributeNames
 // 0x0028 (0x0028 - 0x0000)
@@ -2121,176 +4154,46 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DebugColorAttributeName;                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGSubdivisionModuleAttributeNames;
 
-// ScriptStruct PCG.PCGPinPropertiesGPUStruct
-// 0x0040 (0x0040 - 0x0000)
-struct FPCGPinPropertiesGPUStruct final
+// ScriptStruct PCG.PCGCustomSelectionKey
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FPCGCustomSelectionKey final
 {
 public:
-	EPCGPinInitMode                               InitializationMode;                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PinsToInititalizeFrom;                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	EPCGDataCountMode                             DataCountMode;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGDataMultiplicity                          DataMultiplicity;                                  // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DataCount;                                         // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGElementCountMode                          ElementCountMode;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGElementMultiplicity                       ElementMultiplicity;                               // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ElementCount;                                      // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGAttributeInheritanceMode                  AttributeInheritanceMode;                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGKernelAttributeKey>         CreatedKernelAttributeKeys;                        // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct PCG.PCGPinPropertiesGPU
-// 0x0044 (0x0058 - 0x0014)
-struct FPCGPinPropertiesGPU final : public FPCGPinProperties
-{
-public:
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGPinPropertiesGPUStruct             PropertiesGPU;                                     // 0x0018(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGLandscapeDataProps
-// 0x0005 (0x0005 - 0x0000)
-struct FPCGLandscapeDataProps final
-{
-public:
-	bool                                          bGetHeightOnly;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetLayerWeights;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetActorReference;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetPhysicalMaterial;                              // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetComponentCoordinates;                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGSplineStruct
-// 0x0160 (0x0160 - 0x0000)
-struct FPCGSplineStruct final
-{
-public:
-	struct FSplineCurves                          SplineCurves;                                      // 0x0000(0x0068)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                DefaultUpVector;                                   // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReparamStepsPerSegment;                            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClosedLoop;                                       // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       LocalBounds;                                       // 0x00F0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoxSphereBounds                       Bounds;                                            // 0x0128(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGWorldCommonQueryParams
-// 0x0078 (0x0078 - 0x0000)
-struct FPCGWorldCommonQueryParams
-{
-public:
-	bool                                          bIgnorePCGHits;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreSelfHits;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreInstancedFoliageHits;                       // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECollisionChannel                             CollisionChannel;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTraceComplex;                                     // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	EPCGWorldQueryFilterByTag                     ActorTagFilter;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ActorTagsList;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGWorldQuerySelectLandscapeHits             SelectLandscapeHits;                               // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetReferenceToActorHit;                           // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetReferenceToPhysicalMaterial;                   // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class FName>                             ParsedActorTagsList;                               // 0x0028(0x0050)(NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGWorldRaycastQueryParams
-// 0x0078 (0x00F0 - 0x0078)
-struct FPCGWorldRaycastQueryParams : public FPCGWorldCommonQueryParams
-{
-public:
-	uint8                                         bIgnoreBackfaceHits : 1;                           // 0x0078(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetImpact : 1;                                    // 0x0078(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetImpactPoint : 1;                               // 0x0078(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetImpactNormal : 1;                              // 0x0078(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetReflection : 1;                                // 0x0078(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetDistance : 1;                                  // 0x0078(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetLocalImpactPoint : 1;                          // 0x0078(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetReferenceToRenderMaterial : 1;                 // 0x0078(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetReferenceToStaticMesh : 1;                     // 0x0079(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetHitActorTags : 1;                              // 0x0079(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 HitActorTagsToRecord;                              // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<class FName>                             ParsedHitActorTagsToRecord;                        // 0x0090(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         bGetFaceIndex : 1;                                 // 0x00E0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetUVCoords : 1;                                  // 0x00E0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGetElementIndex : 1;                              // 0x00E0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bApplyMetadataFromLandscape : 1;                   // 0x00E0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RenderMaterialIndex;                               // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UVChannel;                                         // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct PCG.PCGWorldVolumetricQueryParams
-// 0x0008 (0x0080 - 0x0078)
-struct FPCGWorldVolumetricQueryParams final : public FPCGWorldCommonQueryParams
-{
-public:
-	bool                                          bSearchForOverlap;                                 // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct PCG.PCGWorldRayHitQueryParams
-// 0x0040 (0x0130 - 0x00F0)
-struct FPCGWorldRayHitQueryParams final : public FPCGWorldRaycastQueryParams
-{
-public:
-	bool                                          bOverrideDefaultParams;                            // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RayOrigin;                                         // 0x00F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RayDirection;                                      // 0x0110(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        RayLength;                                         // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGSelectionKey
-// 0x0040 (0x0040 - 0x0000)
-struct FPCGSelectionKey final
-{
-public:
-	EPCGActorFilter                               ActorFilter;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGActorSelection                            Selection;                                         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Tag;                                               // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    SelectionClass;                                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ObjectPath;                                        // 0x0018(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UObject>                    OptionalExtraDependency;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
+DUMPER7_ASSERTS_FPCGCustomSelectionKey;
 
 // ScriptStruct PCG.PCGActorSelectorSettings
-// 0x0048 (0x0048 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct FPCGActorSelectorSettings final
 {
 public:
 	EPCGActorFilter                               ActorFilter;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMustOverlapSelf;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIncludeChildren;                                  // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableFilter;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGActorSelection                            ActorSelection;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGIsolatedActorIncludeFlag                  IncludeIsolatedActors;                             // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableFilter;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGActorSelection                            ActorSelection;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ActorSelectionTag;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     ActorSelectionClass;                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     ActorReferenceSelector;                            // 0x0018(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSelectMultiple;                                   // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreSelfAndChildren;                            // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowActorFilter;                                  // 0x0042(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIncludeChildren;                              // 0x0043(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowActorSelection;                               // 0x0044(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowActorSelectionClass;                          // 0x0045(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowSelectMultiple;                               // 0x0046(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowIgnoreSelfAndChildren;                        // 0x0047(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     ActorReferenceSelector;                            // 0x0018(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSelectMultiple;                                   // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreSelfAndChildren;                            // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowActorFilter;                                  // 0x005A(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowIncludeChildren;                              // 0x005B(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowActorSelection;                               // 0x005C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowActorSelectionClass;                          // 0x005D(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowSelectMultiple;                               // 0x005E(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowIgnoreSelfAndChildren;                        // 0x005F(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0x18];                                      // 0x0060(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGActorSelectorSettings;
 
 // ScriptStruct PCG.PCGComponentSelectorSettings
-// 0x0030 (0x0030 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct FPCGComponentSelectorSettings final
 {
 public:
@@ -2301,28 +4204,91 @@ public:
 	TSubclassOf<class UActorComponent>            ComponentSelectionClass;                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowComponentSelection;                           // 0x0018(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowComponentSelectionClass;                      // 0x0019(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x16];                                      // 0x001A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2E];                                      // 0x001A(0x002E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGComponentSelectorSettings;
+
+// ScriptStruct PCG.PCGAlignPointsAxisSettings
+// 0x0003 (0x0003 - 0x0000)
+struct FPCGAlignPointsAxisSettings final
+{
+public:
+	bool                                          bApplyToAxis;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAlignPointsAxisReferential                SourceReferential;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAlignPointsAxisReferential                TargetReferential;                                 // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGAlignPointsAxisSettings;
+
+// ScriptStruct PCG.PCGAttributeFilterThresholdSettings
+// 0x01C0 (0x01C0 - 0x0000)
+struct FPCGAttributeFilterThresholdSettings final
+{
+public:
+	bool                                          bInclusive;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseConstantThreshold;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ThresholdAttribute;                                // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSpatialQuery;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilterEachInputWithEachFilterDataRespectively;    // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGMetadataTypesConstantStruct        AttributeTypes;                                    // 0x0050(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGAttributeFilterThresholdSettings;
+
+// ScriptStruct PCG.PCGFilterByAttributeThresholdSettings
+// 0x01C0 (0x01C0 - 0x0000)
+struct FPCGFilterByAttributeThresholdSettings
+{
+public:
+	bool                                          bUseConstantThreshold;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ThresholdAttribute;                                // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGMetadataTypesConstantStruct        AttributeTypes;                                    // 0x0050(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGFilterByAttributeThresholdSettings;
+
+// ScriptStruct PCG.PCGFilterByAttributeThresholdSettingsRange
+// 0x0010 (0x01D0 - 0x01C0)
+struct FPCGFilterByAttributeThresholdSettingsRange final : public FPCGFilterByAttributeThresholdSettings
+{
+public:
+	bool                                          bInclusive;                                        // 0x01C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C1[0xF];                                      // 0x01C1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGFilterByAttributeThresholdSettingsRange;
 
 // ScriptStruct PCG.PCGSelfPruningParameters
-// 0x0068 (0x0068 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct FPCGSelfPruningParameters final
 {
 public:
 	EPCGSelfPruningType                           PruningType;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGAttributePropertyInputSelector     ComparisonSource;                                  // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RadiusSimilarityFactor;                            // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRandomizedPruning;                                // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCollisionAttribute;                            // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGAttributePropertyInputSelector     CollisionAttribute;                                // 0x0038(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGCollisionQueryFlag                        CollisionQueryFlag;                                // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ComparisonSource;                                  // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RadiusSimilarityFactor;                            // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRandomizedPruning;                                // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCollisionAttribute;                            // 0x004D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     CollisionAttribute;                                // 0x0050(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGCollisionQueryFlag                        CollisionQueryFlag;                                // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGSelfPruningParameters;
+
+// ScriptStruct PCG.PCGSortAttributeEntry
+// 0x0048 (0x0048 - 0x0000)
+struct FPCGSortAttributeEntry final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSortMethod                                SortMethod;                                        // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSortAttributeEntry;
 
 // ScriptStruct PCG.PCGSplineMeshParams
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct FPCGSplineMeshParams final
 {
 public:
@@ -2336,18 +4302,21 @@ public:
 	float                                         SplineBoundaryMax;                                 // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSmoothInterpRollScale;                            // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                StartPosition;                                     // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                StartTangent;                                      // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartRollDegrees;                                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              StartScale;                                        // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                EndPosition;                                       // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                EndTangent;                                        // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndRollDegrees;                                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              EndScale;                                          // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              StartOffset;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              EndOffset;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                StartPosition;                                     // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                StartTangent;                                      // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartRollDegrees;                                  // 0x0080(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              StartScale;                                        // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndPosition;                                       // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndTangent;                                        // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndRollDegrees;                                    // 0x00C8(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              EndScale;                                          // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGSplineMeshParams;
 
 // ScriptStruct PCG.PCGSplineSamplerParams
 // 0x0138 (0x0138 - 0x0000)
@@ -2408,36 +4377,46 @@ public:
 	bool                                          bSeedFrom2DPosition;                               // 0x0132(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGSplineSamplerParams;
 
-// ScriptStruct PCG.PCGStackFrame
-// 0x0030 (0x0030 - 0x0000)
-struct FPCGStackFrame final
+// ScriptStruct PCG.PCGContext
+// 0x0258 (0x0258 - 0x0000)
+struct alignas(0x08) FPCGContext
 {
 public:
-	TSoftObjectPtr<class UObject>                 Object;                                            // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LoopIndex;                                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x258];                                      // 0x0000(0x0258)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGContext;
 
-// ScriptStruct PCG.PCGStack
-// 0x0018 (0x0018 - 0x0000)
-struct FPCGStack final
+// ScriptStruct PCG.PCGStaticMeshSpawnerContext
+// 0x02F0 (0x0548 - 0x0258)
+struct FPCGStaticMeshSpawnerContext final : public FPCGContext
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGStackFrame>                 StackFrames;                                       // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_258[0x2F0];                                    // 0x0258(0x02F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGStaticMeshSpawnerContext;
 
-// ScriptStruct PCG.PCGStackContext
-// 0x0020 (0x0020 - 0x0000)
-struct FPCGStackContext final
+// ScriptStruct PCG.PCGSourceDataStorageKey
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGSourceDataStorageKey final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGStack>                      Stacks;                                            // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	int32                                         CurrentStackIndex;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Label;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint64                                        Hash;                                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGSourceDataStorageKey;
+
+// ScriptStruct PCG.PCGSourceDataContainer
+// 0x0058 (0x0058 - 0x0000)
+struct FPCGSourceDataContainer final
+{
+public:
+	TMap<struct FPCGSourceDataStorageKey, struct FPCGSourceDataStorageValue> DataStorage;            // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0x4];                                       // 0x0050(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        DirtyGeneration;                                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGSourceDataContainer;
 
 // ScriptStruct PCG.PCGLandscapeLayerWeight
 // 0x000C (0x000C - 0x0000)
@@ -2447,16 +4426,44 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGLandscapeLayerWeight;
+
+// ScriptStruct PCG.PCGDataLayerSettings
+// 0x0150 (0x0150 - 0x0000)
+struct FPCGDataLayerSettings final
+{
+public:
+	EPCGDataLayerSource                           DataLayerSourceType;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     DataLayerReferenceAttribute;                       // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGDataLayerReferenceSelector         IncludedDataLayers;                                // 0x0048(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGDataLayerReferenceSelector         ExcludedDataLayers;                                // 0x00A0(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGDataLayerReferenceSelector         AddDataLayers;                                     // 0x00F8(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGDataLayerSettings;
+
+// ScriptStruct PCG.PCGHLODSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGHLODSettings final
+{
+public:
+	EPCGHLODSource                                HLODSourceType;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHLODLayer*                             HLODLayer;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FPCGHLODSettings;
 
 // ScriptStruct PCG.PCGPackedCustomData
-// 0x0018 (0x0018 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FPCGPackedCustomData final
 {
 public:
 	int32                                         NumCustomDataFloats;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 CustomData;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGPackedCustomData;
 
 // ScriptStruct PCG.PCGMatchAndSetByAttributeEntry
 // 0x02E0 (0x02E0 - 0x0000)
@@ -2466,16 +4473,7 @@ public:
 	struct FPCGMetadataTypesConstantStruct        ValueToMatch;                                      // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0170(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
-// 0x0180 (0x0180 - 0x0000)
-struct FPCGMatchAndSetWeightedEntry final
-{
-public:
-	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_174[0xC];                                      // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FPCGMatchAndSetByAttributeEntry;
 
 // ScriptStruct PCG.PCGMatchAndSetWeightedByCategoryEntryList
 // 0x0190 (0x0190 - 0x0000)
@@ -2488,36 +4486,21 @@ public:
 	TArray<struct FPCGMatchAndSetWeightedEntry>   WeightedEntries;                                   // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-
-// ScriptStruct PCG.PCGSoftISMComponentDescriptor
-// 0x0010 (0x0230 - 0x0220)
-struct FPCGSoftISMComponentDescriptor final : public FSoftISMComponentDescriptor
-{
-public:
-	TArray<class FName>                           ComponentTags;                                     // 0x0220(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FPCGMatchAndSetWeightedByCategoryEntryList;
 
 // ScriptStruct PCG.PCGMeshInstanceList
-// 0x0260 (0x0260 - 0x0000)
+// 0x02C8 (0x02C8 - 0x0000)
 struct FPCGMeshInstanceList final
 {
 public:
-	struct FPCGSoftISMComponentDescriptor         Descriptor;                                        // 0x0000(0x0230)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Instances;                                         // 0x0230(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UPCGPointData>           PointData;                                         // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 InstancesIndices;                                  // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FPCGSoftISMComponentDescriptor         Descriptor;                                        // 0x0000(0x0288)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Instances;                                         // 0x0288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UPCGBasePointData>       PointData;                                         // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InstancesIndices;                                  // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 CustomPrimitiveData;                               // 0x02B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct PCG.PCGMeshSelectorWeightedEntry
-// 0x0238 (0x0238 - 0x0000)
-struct FPCGMeshSelectorWeightedEntry final
-{
-public:
-	struct FPCGSoftISMComponentDescriptor         Descriptor;                                        // 0x0000(0x0230)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FPCGMeshInstanceList;
 
 // ScriptStruct PCG.PCGWeightedByCategoryEntryList
 // 0x0028 (0x0028 - 0x0000)
@@ -2529,6 +4512,120 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPCGMeshSelectorWeightedEntry>  WeightedMeshEntries;                               // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGWeightedByCategoryEntryList;
+
+// ScriptStruct PCG.PCGSoftSkinnedMeshComponentDescriptor
+// 0x0020 (0x0280 - 0x0260)
+struct FPCGSoftSkinnedMeshComponentDescriptor final : public FSoftSkinnedMeshComponentDescriptor
+{
+public:
+	TArray<class FName>                           ComponentTags;                                     // 0x0260(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 AdditionalCommaSeparatedTags;                      // 0x0270(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSoftSkinnedMeshComponentDescriptor;
+
+// ScriptStruct PCG.PCGSkinnedMeshInstanceList
+// 0x02B0 (0x02B0 - 0x0000)
+struct FPCGSkinnedMeshInstanceList final
+{
+public:
+	struct FPCGSoftSkinnedMeshComponentDescriptor Descriptor;                                        // 0x0000(0x0280)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPCGSkinnedMeshInstance>        Instances;                                         // 0x0280(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UPCGPointData>           PointData;                                         // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InstancePointIndices;                              // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSkinnedMeshInstanceList;
+
+// ScriptStruct PCG.PCGInlineConstantState
+// 0x00B0 (0x00B0 - 0x0000)
+struct FPCGInlineConstantState final
+{
+public:
+	TMap<class FName, struct FPCGPinDefaultValueInfo> DefaultValueMap;                               // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
+	struct FPCGDefaultValueContainer              DefaultValues;                                     // 0x0050(0x0060)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPCGInlineConstantState;
+
+// ScriptStruct PCG.PCGObjectPropertyOverrideDescription
+// 0x0050 (0x0050 - 0x0000)
+struct FPCGObjectPropertyOverrideDescription final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0040)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PropertyTarget;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGObjectPropertyOverrideDescription;
+
+// ScriptStruct PCG.PCGAssetExporterParameters
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGAssetExporterParameters final
+{
+public:
+	bool                                          bOpenSaveDialog;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AssetPath;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSaveOnExportEnded;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGAssetExporterParameters;
+
+// ScriptStruct PCG.PCGRuntimeGenerationRadii
+// 0x0548 (0x0548 - 0x0000)
+struct FPCGRuntimeGenerationRadii final
+{
+public:
+	struct FPerQualityLevelFloat                  RadiusUnbounded;                                   // 0x0000(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius400;                                         // 0x0068(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius800;                                         // 0x00D0(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius1600;                                        // 0x0138(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius3200;                                        // 0x01A0(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius6400;                                        // 0x0208(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius12800;                                       // 0x0270(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius25600;                                       // 0x02D8(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius51200;                                       // 0x0340(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius102400;                                      // 0x03A8(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  Radius204800;                                      // 0x0410(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	struct FPerQualityLevelFloat                  CleanupRadiusScalar;                               // 0x0478(0x0068)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4E0[0x8];                                      // 0x04E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        GenerationRadius;                                  // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius400;                               // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius800;                               // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius1600;                              // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius3200;                              // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius6400;                              // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius12800;                             // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius25600;                             // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius51200;                             // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius102400;                            // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius204800;                            // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        CleanupRadiusMultiplier;                           // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGRuntimeGenerationRadii;
+
+// ScriptStruct PCG.PCGPartitionActorRecord
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGPartitionActorRecord final
+{
+public:
+	struct FGuid                                  GridGuid;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        GridSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntVector                             GridCoords;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPartitionActorRecord;
+
+// ScriptStruct PCG.PCGTrackedKeyInstanceData
+// 0x00B0 (0x00B0 - 0x0000)
+struct FPCGTrackedKeyInstanceData final
+{
+public:
+	struct FPCGSelectionKey                       SelectionKey;                                      // 0x0000(0x0080)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UPCGSettings>            Settings;                                          // 0x0080(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValue;                                            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGTrackedKeyInstanceData;
 
 // ScriptStruct PCG.PCGComponentInstanceData
 // 0x0008 (0x0070 - 0x0068)
@@ -2537,6 +4634,27 @@ struct FPCGComponentInstanceData final : public FActorComponentInstanceData
 public:
 	class UPCGComponent*                          SourceComponent;                                   // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPCGComponentInstanceData;
+
+// ScriptStruct PCG.PCGBlueprintContextHandle
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPCGBlueprintContextHandle final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGBlueprintContextHandle;
+
+// ScriptStruct PCG.PCGDataCollection
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGDataCollection final
+{
+public:
+	TArray<struct FPCGTaggedData>                 TaggedData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bCancelExecutionOnEmpty;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x1F];                                      // 0x0011(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGDataCollection;
 
 // ScriptStruct PCG.PCGDebugVisualizationSettings
 // 0x0058 (0x0058 - 0x0000)
@@ -2549,78 +4667,73 @@ public:
 	TSoftObjectPtr<class UStaticMesh>             PointMesh;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterialInterface>      MaterialOverride;                                  // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGDebugVisualizationSettings;
 
-// ScriptStruct PCG.PCGOverrideInstancedPropertyBag
-// 0x0060 (0x0060 - 0x0000)
-struct FPCGOverrideInstancedPropertyBag final
-{
-public:
-	struct FInstancedPropertyBag                  Parameters;                                        // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
-	TSet<struct FGuid>                            PropertiesIDsOverridden;                           // 0x0010(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGPoint
-// 0x00D0 (0x00D0 - 0x0000)
-struct FPCGPoint final
-{
-public:
-	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Density;                                           // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BoundsMin;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsMax;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               Color;                                             // 0x00A0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Steepness;                                         // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Seed;                                              // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         MetadataEntry;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct PCG.PCGPropertyAliases
+// ScriptStruct PCG.PCGDynamicPinContainer
 // 0x0010 (0x0010 - 0x0000)
-struct FPCGPropertyAliases final
+struct FPCGDynamicPinContainer final
 {
 public:
-	TArray<class FName>                           Aliases;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPCGPinProperties>              PinProperties;                                     // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPCGDynamicPinContainer;
 
-// ScriptStruct PCG.PCGSettingsOverridableParam
-// 0x0088 (0x0088 - 0x0000)
-struct FPCGSettingsOverridableParam final
+// ScriptStruct PCG.PCGGraphDocumentInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGGraphDocumentInfo final
 {
 public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           PropertiesNames;                                   // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UStruct*                                PropertyClass;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TMap<int32, struct FPCGPropertyAliases>       MapOfAliases;                                      // 0x0020(0x0050)(NativeAccessSpecifierPublic)
-	bool                                          bHasNameClash;                                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x17];                                      // 0x0071(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        EditedObjectPath;                                  // 0x0000(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2f                              SavedViewOffset;                                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SavedZoomAmount;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGGraphDocumentInfo;
 
-// ScriptStruct PCG.PCGPreConfiguredSettingsInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FPCGPreConfiguredSettingsInfo final
+// ScriptStruct PCG.PCGSoftGraphExecutionSource
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGSoftGraphExecutionSource final
 {
 public:
-	int32                                         PreconfiguredIndex;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Label;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UObject>                 SoftObjectPtr;                                     // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPCGSoftGraphExecutionSource;
 
-// ScriptStruct PCG.DeterminismTestResult
-// 0x0090 (0x0090 - 0x0000)
-struct FDeterminismTestResult final
+// ScriptStruct PCG.PCGDataTypeInfoParam
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoParam final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoParam;
+
+// ScriptStruct PCG.PCGDataTypeInfoSettings
+// 0x0000 (0x0008 - 0x0008)
+struct FPCGDataTypeInfoSettings final : public FPCGDataTypeInfo
+{
+};
+DUMPER7_ASSERTS_FPCGDataTypeInfoSettings;
+
+// ScriptStruct PCG.PCGAttributeExtractorTestStruct
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGAttributeExtractorTestStruct final
 {
 public:
-	int64                                         Index;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TestResultTitle;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TestResultName;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Seed;                                              // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGDataType                                  DataTypesTested;                                   // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, EDeterminismLevel>          TestResults;                                       // 0x0028(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AdditionalDetails;                                 // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bFlagRaised;                                       // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributeExtractorTestStructDepth1 DepthStruct;                                       // 0x0000(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	class UPCGAttributeExtractorTestObject*       Object;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPCGAttributeExtractorTestStruct;
+
+// ScriptStruct PCG.PCGTestMyColorStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGTestMyColorStruct final
+{
+public:
+	double                                        B;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        G;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        R;                                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        A;                                                 // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGTestMyColorStruct;
 
 SDK_NAMESPACE_END

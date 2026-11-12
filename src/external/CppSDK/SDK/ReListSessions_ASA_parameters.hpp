@@ -26,6 +26,7 @@ public:
 	class FString                                 SelectedItem;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   SelectionType;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_BndEvt__ReListSessions_ASA_ModFilterList_K2Node_ComponentBoundEvent_16_OnSelectionChangedEvent__DelegateSignature;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -34,6 +35,7 @@ struct ReListSessions_ASA_C_BndEvt__ReListSessions_ASA_ShowPlatformSpecificServe
 public:
 	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -42,6 +44,7 @@ struct ReListSessions_ASA_C_BndEvt__ShowProtectedServersCheckBox_K2Node_Componen
 public:
 	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.CreateNotifManager
 // 0x0010 (0x0010 - 0x0000)
@@ -51,6 +54,7 @@ public:
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Create_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_CreateNotifManager;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ExecuteUbergraph_ReListSessions_ASA
 // 0x0178 (0x0178 - 0x0000)
@@ -70,8 +74,8 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_1;            // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_2;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 ServerId)>               K2Node_CreateDelegate_OutputDelegate_1;            // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 ServerId)>               K2Node_CreateDelegate_OutputDelegate_2;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bNeedInit;                            // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int64>                                 K2Node_Event_ModIds;                               // 0x0050(0x0010)(ConstParm, ReferenceParm)
@@ -99,7 +103,7 @@ public:
 	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue_1;          // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_4;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 ServerId)>               K2Node_CreateDelegate_OutputDelegate_4;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsChecked_ReturnValue_4;                  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -114,6 +118,7 @@ public:
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_ExecuteUbergraph_ReListSessions_ASA;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.GetSizeboxForExtraHandheldScaling
 // 0x0008 (0x0008 - 0x0000)
@@ -122,6 +127,7 @@ struct ReListSessions_ASA_C_GetSizeboxForExtraHandheldScaling final
 public:
 	class USizeBox*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_GetSizeboxForExtraHandheldScaling;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.GetWidgetToScaleForHandheld
 // 0x0008 (0x0008 - 0x0000)
@@ -130,6 +136,7 @@ struct ReListSessions_ASA_C_GetWidgetToScaleForHandheld final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_GetWidgetToScaleForHandheld;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.HandleAscendDescendSwitch
 // 0x0018 (0x0018 - 0x0000)
@@ -141,72 +148,78 @@ public:
 	int32                                         CallFunc_GetSelectedIndex_ReturnValue;             // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_HandleAscendDescendSwitch;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIFavoriteEvent
 // 0x0008 (0x0008 - 0x0000)
 struct ReListSessions_ASA_C_ModUIFavoriteEvent final
 {
 public:
-	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_ModUIFavoriteEvent;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIJoinEvent
 // 0x0008 (0x0008 - 0x0000)
 struct ReListSessions_ASA_C_ModUIJoinEvent final
 {
 public:
-	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_ModUIJoinEvent;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIReportEvent
 // 0x0008 (0x0008 - 0x0000)
 struct ReListSessions_ASA_C_ModUIReportEvent final
 {
 public:
-	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_ModUIReportEvent;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.OnKeyDown
-// 0x02E8 (0x02E8 - 0x0000)
+// 0x02F0 (0x02F0 - 0x0000)
 struct ReListSessions_ASA_C_OnKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   LocalKey;                                          // 0x0130(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0148(0x0018)(HasGetValueTypeHash)
-	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_OnKeyDown_ReturnValue;                    // 0x0168(0x00B8)()
-	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0230(0x00B8)()
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKey                                   LocalKey;                                          // 0x0138(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0150(0x0018)(HasGetValueTypeHash)
+	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_OnKeyDown_ReturnValue;                    // 0x0170(0x00B8)()
+	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0238(0x00B8)()
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_OnKeyDown;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.OnKeyDownEvent
-// 0x02E0 (0x02E0 - 0x0000)
+// 0x02E8 (0x02E8 - 0x0000)
 struct ReListSessions_ASA_C_OnKeyDownEvent final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyboardEvent;                                   // 0x0038(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x014B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_OnKeyDown_ReturnValue;                    // 0x0150(0x00B8)()
-	class UComboBoxString*                        CallFunc_GetOpenComboBox_ReturnValue;              // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0228(0x00B8)()
+	struct FKeyEvent                              InKeyboardEvent;                                   // 0x0038(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0138(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x0153(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_OnKeyDown_ReturnValue;                    // 0x0158(0x00B8)()
+	class UComboBoxString*                        CallFunc_GetOpenComboBox_ReturnValue;              // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_SwitchButton_Widget;                      // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_SwitchButton_Widget_1;                    // 0x0228(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0230(0x00B8)()
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_OnKeyDownEvent;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.OnServerListingClickedModPopup
 // 0x0030 (0x0030 - 0x0000)
@@ -216,9 +229,10 @@ public:
 	bool                                          bNeedInit;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int64>                                 modIds;                                            // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FString                                 serverName;                                        // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int64                                         ServerID;                                          // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ServerName;                                        // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_OnServerListingClickedModPopup;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.SetCurrentServerSearchType
 // 0x0004 (0x0004 - 0x0000)
@@ -227,6 +241,7 @@ struct ReListSessions_ASA_C_SetCurrentServerSearchType final
 public:
 	int32                                         ServerType;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_SetCurrentServerSearchType;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.SetupPlatformSpecificTextBox
 // 0x0048 (0x0048 - 0x0000)
@@ -239,6 +254,7 @@ public:
 	class FString                                 CallFunc_GetPlatformName_ReturnValue;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_SetupPlatformSpecificTextBox;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -248,6 +264,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_Tick;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.Update Horizontal Tab Enabled States
 // 0x0018 (0x0018 - 0x0000)
@@ -263,6 +280,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_Update_Horizontal_Tab_Enabled_States;
 
 // Function ReListSessions_ASA.ReListSessions_ASA_C.UpdateFavoritesTab
 // 0x0001 (0x0001 - 0x0000)
@@ -271,6 +289,7 @@ struct ReListSessions_ASA_C_UpdateFavoritesTab final
 public:
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ReListSessions_ASA_C_UpdateFavoritesTab;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

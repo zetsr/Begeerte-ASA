@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
+#include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "cfcore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,9 +27,10 @@ struct UI_CFCore_InstallationStatus_C_Event_Set_Bindings_To_Game_Slot final
 public:
 	class UUI_CFCore_GameSlot_C*                  GameSlot;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_Event_Set_Bindings_To_Game_Slot;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.ExecuteUbergraph_UI_CFCore_InstallationStatus
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct UI_CFCore_InstallationStatus_C_ExecuteUbergraph_UI_CFCore_InstallationStatus final
 {
 public:
@@ -37,13 +39,14 @@ public:
 	class UUI_CFCore_GameSlot_C*                  K2Node_CustomEvent_GameSlot;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_Duration;                       // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_CustomEvent_Message;                        // 0x0028(0x0010)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RetriggerableDelay_Duration_ImplicitCast; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0010)(HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Duration;                       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_CustomEvent_Message;                        // 0x0030(0x0010)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_RetriggerableDelay_Duration_ImplicitCast; // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_ExecuteUbergraph_UI_CFCore_InstallationStatus;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -53,6 +56,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_GetRootCFWidget;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.GetTrueProgress
 // 0x00B0 (0x00B0 - 0x0000)
@@ -87,6 +91,7 @@ public:
 	double                                        K2Node_Select_Default;                             // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_GetTrueProgress;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.PlayNotificationUpdate
 // 0x0018 (0x0018 - 0x0000)
@@ -96,6 +101,7 @@ public:
 	double                                        Duration;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   Message;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_PlayNotificationUpdate;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.SetTextBasedOnState
 // 0x00A8 (0x00A8 - 0x0000)
@@ -116,6 +122,7 @@ public:
 	class FText                                   K2Node_Select_Default;                             // 0x0088(0x0010)()
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0010)()
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_SetTextBasedOnState;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.UpdateColor
 // 0x0088 (0x0088 - 0x0000)
@@ -135,13 +142,14 @@ public:
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0074(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_UpdateColor;
 
 // Function UI_CFCore_InstallationStatus.UI_CFCore_InstallationStatus_C.UpdateModProgress
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct UI_CFCore_InstallationStatus_C_UpdateModProgress final
 {
 public:
-	int32                                         progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EInstallStatus                                NewInstallationStatus;                             // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELibraryProgressState                         InstallationPhase;                                 // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -154,12 +162,13 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_InstallationStatus_C_UpdateModProgress;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

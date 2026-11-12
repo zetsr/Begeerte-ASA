@@ -16,11 +16,14 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PrimalItemArmor_SaddleGeneric_Tek_Interface.PrimalItemArmor_SaddleGeneric_Tek_Interface_C
-// 0x0000 (0x0000 - 0x0000)
-class IPrimalItemArmor_SaddleGeneric_Tek_Interface_C final
+// 0x0008 (0x0008 - 0x0000)
+class IPrimalItemArmor_SaddleGeneric_Tek_Interface_C
 {
 public:
-	void IGet_Max_Ammo(int32* retVal);
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	void IGet_Max_Ammo(int32* RetVal);
 	void ISetElementToMax();
 
 public:
@@ -46,5 +49,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IPrimalItemArmor_SaddleGeneric_Tek_Interface_C;
 
 SDK_NAMESPACE_END

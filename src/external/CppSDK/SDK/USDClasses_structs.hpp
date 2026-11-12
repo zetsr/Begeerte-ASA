@@ -13,6 +13,16 @@
 
 SDK_NAMESPACE_START
 
+// Enum USDClasses.EUsdDuplicateType
+// NumValues: 0x0004
+enum class EUsdDuplicateType : uint8
+{
+	FlattenComposedPrim                      = 0,
+	SingleLayerSpecs                         = 1,
+	AllLocalLayerSpecs                       = 2,
+	EUsdDuplicateType_MAX                    = 3,
+};
+
 // Enum USDClasses.EUsdDrawMode
 // NumValues: 0x0006
 enum class EUsdDrawMode : uint32
@@ -49,16 +59,6 @@ enum class EUsdModelCardFace : uint32
 	EUsdModelCardFace_MAX                    = 33,
 };
 
-// Enum USDClasses.EUsdDuplicateType
-// NumValues: 0x0004
-enum class EUsdDuplicateType : uint8
-{
-	FlattenComposedPrim                      = 0,
-	SingleLayerSpecs                         = 1,
-	AllLocalLayerSpecs                       = 2,
-	EUsdDuplicateType_MAX                    = 3,
-};
-
 // Enum USDClasses.EUsdSaveDialogBehavior
 // NumValues: 0x0004
 enum class EUsdSaveDialogBehavior : uint8
@@ -79,6 +79,17 @@ enum class EUsdEditInInstanceBehavior : uint8
 	EUsdEditInInstanceBehavior_MAX           = 3,
 };
 
+// Enum USDClasses.EReferencerTypeHandling
+// NumValues: 0x0005
+enum class EReferencerTypeHandling : uint8
+{
+	Ignore                                   = 0,
+	MatchReferencedType                      = 1,
+	ClearReferencerType                      = 2,
+	ShowPrompt                               = 3,
+	EReferencerTypeHandling_MAX              = 4,
+};
+
 // Enum USDClasses.EUsdUpAxis
 // NumValues: 0x0003
 enum class EUsdUpAxis : uint8
@@ -95,6 +106,7 @@ struct FUsdPrimPathList final
 public:
 	TArray<class FString>                         PrimPaths;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUsdPrimPathList;
 
 // ScriptStruct USDClasses.UsdMetadataValue
 // 0x0020 (0x0020 - 0x0000)
@@ -104,6 +116,7 @@ public:
 	class FString                                 TypeName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StringifiedValue;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUsdMetadataValue;
 
 // ScriptStruct USDClasses.UsdPrimMetadata
 // 0x0050 (0x0050 - 0x0000)
@@ -112,6 +125,7 @@ struct FUsdPrimMetadata final
 public:
 	TMap<class FString, struct FUsdMetadataValue> MetaData;                                          // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUsdPrimMetadata;
 
 // ScriptStruct USDClasses.UsdCombinedPrimMetadata
 // 0x0050 (0x0050 - 0x0000)
@@ -120,30 +134,7 @@ struct FUsdCombinedPrimMetadata final
 public:
 	TMap<class FString, struct FUsdPrimMetadata>  PrimPathToMetadata;                                // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct USDClasses.UsdMetadataImportOptions
-// 0x0020 (0x0020 - 0x0000)
-struct FUsdMetadataImportOptions final
-{
-public:
-	bool                                          bCollectMetadata;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCollectFromEntireSubtrees;                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCollectOnComponents;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         BlockedPrefixFilters;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	bool                                          bInvertFilters;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct USDClasses.UsdStageOptions
-// 0x0008 (0x0008 - 0x0000)
-struct FUsdStageOptions final
-{
-public:
-	float                                         MetersPerUnit;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdUpAxis                                    UpAxis;                                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FUsdCombinedPrimMetadata;
 
 // ScriptStruct USDClasses.UsdUnrealAssetInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -158,5 +149,32 @@ public:
 	class FString                                 UnrealExportTime;                                  // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UnrealEngineVersion;                               // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FUsdUnrealAssetInfo;
+
+// ScriptStruct USDClasses.UsdMetadataImportOptions
+// 0x0020 (0x0020 - 0x0000)
+struct FUsdMetadataImportOptions final
+{
+public:
+	bool                                          bCollectMetadata;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCollectFromEntireSubtrees;                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCollectOnComponents;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         BlockedPrefixFilters;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          bInvertFilters;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUsdMetadataImportOptions;
+
+// ScriptStruct USDClasses.UsdStageOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FUsdStageOptions final
+{
+public:
+	double                                        MetersPerUnit;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdUpAxis                                    UpAxis;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUsdStageOptions;
 
 SDK_NAMESPACE_END

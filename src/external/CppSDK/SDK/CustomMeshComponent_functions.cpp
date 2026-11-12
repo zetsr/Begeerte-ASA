@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FCustomMeshTriangle>&Triangles                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -42,7 +42,7 @@ void UCustomMeshComponent::AddCustomMeshTriangles(const TArray<struct FCustomMes
 
 
 // Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UCustomMeshComponent::ClearCustomMeshTriangles()
 {
@@ -61,7 +61,7 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 
 
 // Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const TArray<struct FCustomMeshTriangle>&Triangles                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

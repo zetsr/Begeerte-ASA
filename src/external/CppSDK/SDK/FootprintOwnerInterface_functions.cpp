@@ -20,10 +20,8 @@ SDK_NAMESPACE_START
 
 void IFootprintOwnerInterface_C::RightBeforeSpawningFootprint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("FootprintOwnerInterface_C", "RightBeforeSpawningFootprint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "FootprintOwnerInterface_C", "RightBeforeSpawningFootprint", FuncInfo);
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

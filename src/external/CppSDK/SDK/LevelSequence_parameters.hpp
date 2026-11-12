@@ -11,7 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "MovieSceneTracks_parameters.hpp"
+#include "Engine_parameters.hpp"
 #include "MovieScene_structs.hpp"
+#include "MovieScene_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -25,6 +28,7 @@ public:
 	class UObject*                                InMetaData;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequence_CopyMetaData;
 
 // Function LevelSequence.LevelSequence.FindOrAddMetaDataByClass
 // 0x0010 (0x0010 - 0x0000)
@@ -34,6 +38,7 @@ public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequence_FindOrAddMetaDataByClass;
 
 // Function LevelSequence.LevelSequence.RemoveMetaDataByClass
 // 0x0008 (0x0008 - 0x0000)
@@ -42,6 +47,7 @@ struct LevelSequence_RemoveMetaDataByClass final
 public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequence_RemoveMetaDataByClass;
 
 // Function LevelSequence.LevelSequence.FindMetaDataByClass
 // 0x0010 (0x0010 - 0x0000)
@@ -51,6 +57,7 @@ public:
 	TSubclassOf<class UObject>                    InClass;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequence_FindMetaDataByClass;
 
 // Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
 // 0x0020 (0x0020 - 0x0000)
@@ -59,6 +66,7 @@ struct LevelSequenceBurnInOptions_SetBurnIn final
 public:
 	struct FSoftClassPath                         InBurnInClass;                                     // 0x0000(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceBurnInOptions_SetBurnIn;
 
 // Function LevelSequence.LevelSequenceActor.AddBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -70,6 +78,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LevelSequenceActor_AddBinding;
 
 // Function LevelSequence.LevelSequenceActor.AddBindingByTag
 // 0x0018 (0x0018 - 0x0000)
@@ -81,6 +90,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LevelSequenceActor_AddBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.RemoveBinding
 // 0x0020 (0x0020 - 0x0000)
@@ -90,6 +100,7 @@ public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_RemoveBinding;
 
 // Function LevelSequence.LevelSequenceActor.RemoveBindingByTag
 // 0x0010 (0x0010 - 0x0000)
@@ -99,6 +110,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_RemoveBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.ResetBinding
 // 0x0018 (0x0018 - 0x0000)
@@ -107,6 +119,7 @@ struct LevelSequenceActor_ResetBinding final
 public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_ResetBinding;
 
 // Function LevelSequence.LevelSequenceActor.SetBinding
 // 0x0030 (0x0030 - 0x0000)
@@ -118,6 +131,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LevelSequenceActor_SetBinding;
 
 // Function LevelSequence.LevelSequenceActor.SetBindingByTag
 // 0x0020 (0x0020 - 0x0000)
@@ -129,6 +143,7 @@ public:
 	bool                                          bAllowBindingsFromAsset;                           // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LevelSequenceActor_SetBindingByTag;
 
 // Function LevelSequence.LevelSequenceActor.SetReplicatePlayback
 // 0x0001 (0x0001 - 0x0000)
@@ -137,6 +152,7 @@ struct LevelSequenceActor_SetReplicatePlayback final
 public:
 	bool                                          ReplicatePlayback;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_SetReplicatePlayback;
 
 // Function LevelSequence.LevelSequenceActor.SetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -145,6 +161,7 @@ struct LevelSequenceActor_SetSequence final
 public:
 	class ULevelSequence*                         InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_SetSequence;
 
 // Function LevelSequence.LevelSequenceActor.FindNamedBinding
 // 0x0020 (0x0020 - 0x0000)
@@ -154,6 +171,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneObjectBindingID             ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_FindNamedBinding;
 
 // Function LevelSequence.LevelSequenceActor.FindNamedBindings
 // 0x0018 (0x0018 - 0x0000)
@@ -163,6 +181,7 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FMovieSceneObjectBindingID>     ReturnValue;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_FindNamedBindings;
 
 // Function LevelSequence.LevelSequenceActor.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -171,6 +190,7 @@ struct LevelSequenceActor_GetSequence final
 public:
 	class ULevelSequence*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_GetSequence;
 
 // Function LevelSequence.LevelSequenceActor.GetSequencePlayer
 // 0x0008 (0x0008 - 0x0000)
@@ -179,6 +199,7 @@ struct LevelSequenceActor_GetSequencePlayer final
 public:
 	class ULevelSequencePlayer*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceActor_GetSequencePlayer;
 
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -187,6 +208,7 @@ struct LevelSequenceBurnIn_SetSettings final
 public:
 	class UObject*                                InSettings;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceBurnIn_SetSettings;
 
 // Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
 // 0x0008 (0x0008 - 0x0000)
@@ -195,6 +217,7 @@ struct LevelSequenceBurnIn_GetSettingsClass final
 public:
 	TSubclassOf<class ULevelSequenceBurnInInitSettings> ReturnValue;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceBurnIn_GetSettingsClass;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundActor
 // 0x0020 (0x0020 - 0x0000)
@@ -204,6 +227,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundActor;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundActors
 // 0x0028 (0x0028 - 0x0000)
@@ -213,6 +237,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundActors;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundObject
 // 0x0020 (0x0020 - 0x0000)
@@ -222,6 +247,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundObject;
 
 // Function LevelSequence.LevelSequenceDirector.GetBoundObjects
 // 0x0028 (0x0028 - 0x0000)
@@ -231,6 +257,7 @@ public:
 	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetBoundObjects;
 
 // Function LevelSequence.LevelSequenceDirector.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -239,6 +266,7 @@ struct LevelSequenceDirector_GetSequence final
 public:
 	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetSequence;
 
 // Function LevelSequence.LevelSequenceDirector.GetCurrentTime
 // 0x0010 (0x0010 - 0x0000)
@@ -247,6 +275,16 @@ struct LevelSequenceDirector_GetCurrentTime final
 public:
 	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetCurrentTime;
+
+// Function LevelSequence.LevelSequenceDirector.GetRootSequenceCustomClock
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceDirector_GetRootSequenceCustomClock final
+{
+public:
+	class UMovieSceneClock*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceDirector_GetRootSequenceCustomClock;
 
 // Function LevelSequence.LevelSequenceDirector.GetRootSequenceTime
 // 0x0010 (0x0010 - 0x0000)
@@ -255,6 +293,16 @@ struct LevelSequenceDirector_GetRootSequenceTime final
 public:
 	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceDirector_GetRootSequenceTime;
+
+// Function LevelSequence.LevelSequenceDirector.GetSequenceCustomClock
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceDirector_GetSequenceCustomClock final
+{
+public:
+	class UMovieSceneClock*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceDirector_GetSequenceCustomClock;
 
 // Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
 // 0x0048 (0x0048 - 0x0000)
@@ -267,6 +315,7 @@ public:
 	class ALevelSequenceActor*                    OutActor;                                          // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequencePlayer*                   ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequencePlayer_CreateLevelSequencePlayer;
 
 // Function LevelSequence.LevelSequencePlayer.GetActiveCameraComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -275,6 +324,382 @@ struct LevelSequencePlayer_GetActiveCameraComponent final
 public:
 	class UCameraComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequencePlayer_GetActiveCameraComponent;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearFavoriteRating
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearFavoriteRating final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsFlagged
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsFlagged final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsNoGood
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsNoGood final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsRecorded
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsRecorded final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.ClearIsSubSequence
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_ClearIsSubSequence final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_ClearIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRating final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutFavoriteRating;                                 // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRatingAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRatingAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetFavoriteRatingByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetFavoriteRatingByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutFavoriteRating;                                 // 0x0050(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0054(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetFavoriteRatingByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlagged final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsFlagged;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlaggedAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlaggedAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsFlaggedByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsFlaggedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsFlagged;                                     // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsFlaggedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGood final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutNoGood;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGoodAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGoodAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsNoGoodByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsNoGoodByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutNoGood;                                        // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsNoGoodByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecorded final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsRecorded;                                    // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecordedAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecordedAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsRecordedByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsRecordedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsRecorded;                                    // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsRecordedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequence final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsSubSequence;                                 // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceAssetTag
+// 0x0008 (0x0008 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequenceAssetTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequenceAssetTag;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.GetIsSubSequenceByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_GetIsSubSequenceByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutIsSubSequence;                                 // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_GetIsSubSequenceByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasFavoriteRating final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasFavoriteRatingByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasFavoriteRatingByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasFavoriteRatingByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsFlagged final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsFlaggedByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsFlaggedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsFlaggedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsNoGood final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsNoGoodByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsNoGoodByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsNoGoodByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsRecorded final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsRecordedByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsRecordedByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsRecordedByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsSubSequence final
+{
+public:
+	const class ULevelSequence*                   InLevelSequence;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsSubSequence;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.HasIsSubSequenceByAssetData
+// 0x0058 (0x0058 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_HasIsSubSequenceByAssetData final
+{
+public:
+	struct FAssetData                             InAssetData;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_HasIsSubSequenceByAssetData;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetFavoriteRating
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetFavoriteRating final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InFavoriteRating;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetFavoriteRating;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsFlagged
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsFlagged final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsFlagged;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsFlagged;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsNoGood
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsNoGood final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsNoGood;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsNoGood;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsRecorded
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsRecorded final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsRecorded;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsRecorded;
+
+// Function LevelSequence.LevelSequenceShotMetaDataLibrary.SetIsSubSequence
+// 0x0010 (0x0010 - 0x0000)
+struct LevelSequenceShotMetaDataLibrary_SetIsSubSequence final
+{
+public:
+	class ULevelSequence*                         InLevelSequence;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInIsSubSequence;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LevelSequenceShotMetaDataLibrary_SetIsSubSequence;
 
 // Function LevelSequence.LevelSequenceMediaController.SynchronizeToServer
 // 0x0004 (0x0004 - 0x0000)
@@ -283,6 +708,7 @@ struct LevelSequenceMediaController_SynchronizeToServer final
 public:
 	float                                         DesyncThresholdSeconds;                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceMediaController_SynchronizeToServer;
 
 // Function LevelSequence.LevelSequenceMediaController.GetMediaComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -291,6 +717,7 @@ struct LevelSequenceMediaController_GetMediaComponent final
 public:
 	class UMediaComponent*                        ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceMediaController_GetMediaComponent;
 
 // Function LevelSequence.LevelSequenceMediaController.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -299,6 +726,7 @@ struct LevelSequenceMediaController_GetSequence final
 public:
 	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LevelSequenceMediaController_GetSequence;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

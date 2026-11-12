@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MovieSceneTracks_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,6 +27,7 @@ struct MovieSceneTransformOrigin_BP_GetTransformOrigin final
 public:
 	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneTransformOrigin_BP_GetTransformOrigin;
 
 // Function MovieSceneTracks.MovieSceneReplaceableActorBinding_BPBase.BP_InitReplaceableBinding
 // 0x0010 (0x0010 - 0x0000)
@@ -36,15 +37,17 @@ public:
 	class UObject*                                SourceObject;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieScene*                            OwnerMovieScene;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneReplaceableActorBinding_BPBase_BP_InitReplaceableBinding;
 
 // Function MovieSceneTracks.MovieSceneReplaceableActorBinding_BPBase.BP_ResolveRuntimeBinding
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct MovieSceneReplaceableActorBinding_BPBase_BP_ResolveRuntimeBinding final
 {
 public:
 	struct FMovieSceneBindingResolveContext       ResolveContext;                                    // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMovieSceneBindingResolveResult        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMovieSceneBindingResolveResult        ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneReplaceableActorBinding_BPBase_BP_ResolveRuntimeBinding;
 
 // Function MovieSceneTracks.MovieSceneReplaceableActorBinding_BPBase.BP_SupportsBindingCreationFromObject
 // 0x0010 (0x0010 - 0x0000)
@@ -55,6 +58,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneReplaceableActorBinding_BPBase_BP_SupportsBindingCreationFromObject;
 
 // Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
 // 0x0018 (0x0018 - 0x0000)
@@ -63,6 +67,7 @@ struct MovieScene3DConstraintSection_SetConstraintBindingID final
 public:
 	struct FMovieSceneObjectBindingID             InConstraintBindingID;                             // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieScene3DConstraintSection_SetConstraintBindingID;
 
 // Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
 // 0x0018 (0x0018 - 0x0000)
@@ -71,6 +76,16 @@ struct MovieScene3DConstraintSection_GetConstraintBindingID final
 public:
 	struct FMovieSceneObjectBindingID             ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieScene3DConstraintSection_GetConstraintBindingID;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.IsRepeatingCVarEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneAudioSection_IsRepeatingCVarEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_IsRepeatingCVarEnabled;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetAttenuationSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -79,6 +94,7 @@ struct MovieSceneAudioSection_SetAttenuationSettings final
 public:
 	class USoundAttenuation*                      InAttenuationSettings;                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetAttenuationSettings;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetLooping
 // 0x0001 (0x0001 - 0x0000)
@@ -87,6 +103,7 @@ struct MovieSceneAudioSection_SetLooping final
 public:
 	bool                                          bInLooping;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetLooping;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetOverrideAttenuation
 // 0x0001 (0x0001 - 0x0000)
@@ -95,6 +112,25 @@ struct MovieSceneAudioSection_SetOverrideAttenuation final
 public:
 	bool                                          bInOverrideAttenuation;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetOverrideAttenuation;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.SetPlayUntilFinished
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneAudioSection_SetPlayUntilFinished final
+{
+public:
+	bool                                          bInPlayUntilFinished;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetPlayUntilFinished;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.SetRepeating
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneAudioSection_SetRepeating final
+{
+public:
+	bool                                          bInRepeating;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetRepeating;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetSound
 // 0x0008 (0x0008 - 0x0000)
@@ -103,6 +139,7 @@ struct MovieSceneAudioSection_SetSound final
 public:
 	class USoundBase*                             InSound;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetSound;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetStartOffset
 // 0x0004 (0x0004 - 0x0000)
@@ -111,6 +148,7 @@ struct MovieSceneAudioSection_SetStartOffset final
 public:
 	struct FFrameNumber                           InStartOffset;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetStartOffset;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetSuppressSubtitles
 // 0x0001 (0x0001 - 0x0000)
@@ -119,6 +157,7 @@ struct MovieSceneAudioSection_SetSuppressSubtitles final
 public:
 	bool                                          bInSuppressSubtitles;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_SetSuppressSubtitles;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetAttenuationSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -127,6 +166,7 @@ struct MovieSceneAudioSection_GetAttenuationSettings final
 public:
 	class USoundAttenuation*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetAttenuationSettings;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetLooping
 // 0x0001 (0x0001 - 0x0000)
@@ -135,6 +175,7 @@ struct MovieSceneAudioSection_GetLooping final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetLooping;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetOverrideAttenuation
 // 0x0001 (0x0001 - 0x0000)
@@ -143,6 +184,25 @@ struct MovieSceneAudioSection_GetOverrideAttenuation final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetOverrideAttenuation;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.GetPlaybackSound
+// 0x0008 (0x0008 - 0x0000)
+struct MovieSceneAudioSection_GetPlaybackSound final
+{
+public:
+	class USoundBase*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetPlaybackSound;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.GetPlayUntilFinished
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneAudioSection_GetPlayUntilFinished final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetPlayUntilFinished;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetSound
 // 0x0008 (0x0008 - 0x0000)
@@ -151,6 +211,7 @@ struct MovieSceneAudioSection_GetSound final
 public:
 	class USoundBase*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetSound;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetStartOffset
 // 0x0004 (0x0004 - 0x0000)
@@ -159,6 +220,7 @@ struct MovieSceneAudioSection_GetStartOffset final
 public:
 	struct FFrameNumber                           ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetStartOffset;
 
 // Function MovieSceneTracks.MovieSceneAudioSection.GetSuppressSubtitles
 // 0x0001 (0x0001 - 0x0000)
@@ -167,6 +229,16 @@ struct MovieSceneAudioSection_GetSuppressSubtitles final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAudioSection_GetSuppressSubtitles;
+
+// Function MovieSceneTracks.MovieSceneAudioSection.IsPlayUntilFinishedEditable
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneAudioSection_IsPlayUntilFinishedEditable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneAudioSection_IsPlayUntilFinishedEditable;
 
 // Function MovieSceneTracks.MovieSceneCameraCutSection.SetCameraBindingID
 // 0x0018 (0x0018 - 0x0000)
@@ -175,6 +247,7 @@ struct MovieSceneCameraCutSection_SetCameraBindingID final
 public:
 	struct FMovieSceneObjectBindingID             InCameraBindingID;                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCameraCutSection_SetCameraBindingID;
 
 // Function MovieSceneTracks.MovieSceneCameraCutSection.GetCameraBindingID
 // 0x0018 (0x0018 - 0x0000)
@@ -183,6 +256,7 @@ struct MovieSceneCameraCutSection_GetCameraBindingID final
 public:
 	struct FMovieSceneObjectBindingID             ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCameraCutSection_GetCameraBindingID;
 
 // Function MovieSceneTracks.MovieSceneCinematicShotSection.SetShotDisplayName
 // 0x0010 (0x0010 - 0x0000)
@@ -191,6 +265,7 @@ struct MovieSceneCinematicShotSection_SetShotDisplayName final
 public:
 	class FString                                 InShotDisplayName;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCinematicShotSection_SetShotDisplayName;
 
 // Function MovieSceneTracks.MovieSceneCinematicShotSection.GetShotDisplayName
 // 0x0010 (0x0010 - 0x0000)
@@ -199,9 +274,10 @@ struct MovieSceneCinematicShotSection_GetShotDisplayName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCinematicShotSection_GetShotDisplayName;
 
 // Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddColorParameterKey
-// 0x0088 (0x0088 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct MovieSceneComponentMaterialParameterSection_AddColorParameterKey final
 {
 public:
@@ -212,10 +288,13 @@ public:
 	class FString                                 InLayerName;                                       // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InAssetName;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FParameterChannelNames                 InChannelNames;                                    // 0x0048(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0088(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneComponentMaterialParameterSection_AddColorParameterKey;
 
 // Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddScalarParameterKey
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct MovieSceneComponentMaterialParameterSection_AddScalarParameterKey final
 {
 public:
@@ -224,7 +303,10 @@ public:
 	float                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InLayerName;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InAssetName;                                       // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneComponentMaterialParameterSection_AddScalarParameterKey;
 
 // Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveColorParameter
 // 0x0014 (0x0014 - 0x0000)
@@ -235,6 +317,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneComponentMaterialParameterSection_RemoveColorParameter;
 
 // Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveScalarParameter
 // 0x0014 (0x0014 - 0x0000)
@@ -245,6 +328,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneComponentMaterialParameterSection_RemoveScalarParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
 // 0x0010 (0x0010 - 0x0000)
@@ -256,29 +340,36 @@ public:
 	bool                                          InValue;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddBoolParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddColorParameterKey
-// 0x001C (0x001C - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct MovieSceneParameterSection_AddColorParameterKey final
 {
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           InValue;                                           // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddColorParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddScalarParameterKey
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct MovieSceneParameterSection_AddScalarParameterKey final
 {
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InValue;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddScalarParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddTransformParameterKey
-// 0x0070 (0x0070 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct MovieSceneParameterSection_AddTransformParameterKey final
 {
 public:
@@ -286,10 +377,13 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddTransformParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddVector2DParameterKey
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct MovieSceneParameterSection_AddVector2DParameterKey final
 {
 public:
@@ -297,10 +391,13 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              InValue;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddVector2DParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.AddVectorParameterKey
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct MovieSceneParameterSection_AddVectorParameterKey final
 {
 public:
@@ -308,7 +405,10 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                InValue;                                           // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneKeyInterpolation                   DefaultInterpolation;                              // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_AddVectorParameterKey;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveBoolParameter
 // 0x000C (0x000C - 0x0000)
@@ -319,6 +419,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveBoolParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveColorParameter
 // 0x000C (0x000C - 0x0000)
@@ -329,6 +430,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveColorParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveScalarParameter
 // 0x000C (0x000C - 0x0000)
@@ -339,6 +441,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveScalarParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveTransformParameter
 // 0x000C (0x000C - 0x0000)
@@ -349,6 +452,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveTransformParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveVector2DParameter
 // 0x000C (0x000C - 0x0000)
@@ -359,6 +463,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveVector2DParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.RemoveVectorParameter
 // 0x000C (0x000C - 0x0000)
@@ -369,14 +474,16 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_RemoveVectorParameter;
 
 // Function MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
 // 0x0050 (0x0050 - 0x0000)
 struct MovieSceneParameterSection_GetParameterNames final
 {
 public:
-	TSet<class FName>                             ParameterNames;                                    // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TSet<class FName>                             ParameterNames;                                    // 0x0000(0x0050)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneParameterSection_GetParameterNames;
 
 // Function MovieSceneTracks.MovieSceneCVarSection.SetFromString
 // 0x0010 (0x0010 - 0x0000)
@@ -385,6 +492,7 @@ struct MovieSceneCVarSection_SetFromString final
 public:
 	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCVarSection_SetFromString;
 
 // Function MovieSceneTracks.MovieSceneCVarSection.GetString
 // 0x0010 (0x0010 - 0x0000)
@@ -393,6 +501,7 @@ struct MovieSceneCVarSection_GetString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneCVarSection_GetString;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetDataLayerAssets
 // 0x0010 (0x0010 - 0x0000)
@@ -401,6 +510,7 @@ struct MovieSceneDataLayerSection_SetDataLayerAssets final
 public:
 	TArray<class UDataLayerAsset*>                InDataLayerAssets;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetDataLayerAssets;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetDesiredState
 // 0x0001 (0x0001 - 0x0000)
@@ -409,6 +519,7 @@ struct MovieSceneDataLayerSection_SetDesiredState final
 public:
 	EDataLayerRuntimeState                        InDesiredState;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetDesiredState;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnActivated
 // 0x0001 (0x0001 - 0x0000)
@@ -417,6 +528,7 @@ struct MovieSceneDataLayerSection_SetFlushOnActivated final
 public:
 	bool                                          bFlushOnActivated_0;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetFlushOnActivated;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnUnload
 // 0x0001 (0x0001 - 0x0000)
@@ -425,6 +537,7 @@ struct MovieSceneDataLayerSection_SetFlushOnUnload final
 public:
 	bool                                          bFlushOnUnload_0;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetFlushOnUnload;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetPerformGCOnUnload
 // 0x0001 (0x0001 - 0x0000)
@@ -433,6 +546,7 @@ struct MovieSceneDataLayerSection_SetPerformGCOnUnload final
 public:
 	bool                                          bPerformGCOnUnload_0;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetPerformGCOnUnload;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetPrerollState
 // 0x0001 (0x0001 - 0x0000)
@@ -441,6 +555,7 @@ struct MovieSceneDataLayerSection_SetPrerollState final
 public:
 	EDataLayerRuntimeState                        InPrerollState;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_SetPrerollState;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetDataLayerAssets
 // 0x0010 (0x0010 - 0x0000)
@@ -449,6 +564,7 @@ struct MovieSceneDataLayerSection_GetDataLayerAssets final
 public:
 	TArray<class UDataLayerAsset*>                ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetDataLayerAssets;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetDesiredState
 // 0x0001 (0x0001 - 0x0000)
@@ -457,6 +573,7 @@ struct MovieSceneDataLayerSection_GetDesiredState final
 public:
 	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetDesiredState;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetFlushOnActivated
 // 0x0001 (0x0001 - 0x0000)
@@ -465,6 +582,7 @@ struct MovieSceneDataLayerSection_GetFlushOnActivated final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetFlushOnActivated;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetFlushOnUnload
 // 0x0001 (0x0001 - 0x0000)
@@ -473,6 +591,7 @@ struct MovieSceneDataLayerSection_GetFlushOnUnload final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetFlushOnUnload;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetPerformGCOnUnload
 // 0x0001 (0x0001 - 0x0000)
@@ -481,6 +600,7 @@ struct MovieSceneDataLayerSection_GetPerformGCOnUnload final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetPerformGCOnUnload;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetPrerollState
 // 0x0001 (0x0001 - 0x0000)
@@ -489,6 +609,7 @@ struct MovieSceneDataLayerSection_GetPrerollState final
 public:
 	EDataLayerRuntimeState                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_GetPrerollState;
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.HasPreRoll
 // 0x0001 (0x0001 - 0x0000)
@@ -497,6 +618,7 @@ struct MovieSceneDataLayerSection_HasPreRoll final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneDataLayerSection_HasPreRoll;
 
 // Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
 // 0x0010 (0x0010 - 0x0000)
@@ -505,6 +627,7 @@ struct MovieSceneLevelVisibilitySection_SetLevelNames final
 public:
 	TArray<class FName>                           InLevelNames;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneLevelVisibilitySection_SetLevelNames;
 
 // Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -513,6 +636,7 @@ struct MovieSceneLevelVisibilitySection_SetVisibility final
 public:
 	ELevelVisibility                              InVisibility;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneLevelVisibilitySection_SetVisibility;
 
 // Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetLevelNames
 // 0x0010 (0x0010 - 0x0000)
@@ -521,6 +645,7 @@ struct MovieSceneLevelVisibilitySection_GetLevelNames final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneLevelVisibilitySection_GetLevelNames;
 
 // Function MovieSceneTracks.MovieSceneLevelVisibilitySection.GetVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -529,6 +654,7 @@ struct MovieSceneLevelVisibilitySection_GetVisibility final
 public:
 	ELevelVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneLevelVisibilitySection_GetVisibility;
 
 // Function MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictLocalTransformAtFrame
 // 0x0020 (0x0020 - 0x0000)
@@ -540,6 +666,7 @@ public:
 	struct FFrameTime                             FrameTime;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                    // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAsyncAction_SequencePrediction_PredictLocalTransformAtFrame;
 
 // Function MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictLocalTransformAtTime
 // 0x0020 (0x0020 - 0x0000)
@@ -552,6 +679,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                    // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAsyncAction_SequencePrediction_PredictLocalTransformAtTime;
 
 // Function MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictWorldTransformAtFrame
 // 0x0020 (0x0020 - 0x0000)
@@ -563,6 +691,7 @@ public:
 	struct FFrameTime                             FrameTime;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                    // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAsyncAction_SequencePrediction_PredictWorldTransformAtFrame;
 
 // Function MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictWorldTransformAtTime
 // 0x0020 (0x0020 - 0x0000)
@@ -575,6 +704,18 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                    // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneAsyncAction_SequencePrediction_PredictWorldTransformAtTime;
+
+// Function MovieSceneTracks.MovieSceneFadeTrackTestLibrary.GetManualFadeAmount
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneFadeTrackTestLibrary_GetManualFadeAmount final
+{
+public:
+	class APlayerCameraManager*                   PlayerCameraManager;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneFadeTrackTestLibrary_GetManualFadeAmount;
 
 // Function MovieSceneTracks.MovieSceneSkeletalAnimationTrack.SetSwapRootBone
 // 0x0001 (0x0001 - 0x0000)
@@ -583,6 +724,7 @@ struct MovieSceneSkeletalAnimationTrack_SetSwapRootBone final
 public:
 	ESwapRootBone                                 InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneSkeletalAnimationTrack_SetSwapRootBone;
 
 // Function MovieSceneTracks.MovieSceneSkeletalAnimationTrack.GetSwapRootBone
 // 0x0001 (0x0001 - 0x0000)
@@ -591,6 +733,7 @@ struct MovieSceneSkeletalAnimationTrack_GetSwapRootBone final
 public:
 	ESwapRootBone                                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MovieSceneSkeletalAnimationTrack_GetSwapRootBone;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

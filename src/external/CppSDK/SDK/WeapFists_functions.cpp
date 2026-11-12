@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 class FName AWeapFists_C::BPOverrideMeleeSwingSocket(class FName FromSocket)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapFists_C", "BPOverrideMeleeSwingSocket");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapFists_C", "BPOverrideMeleeSwingSocket", FuncInfo);
 
 	Params::WeapFists_C_BPOverrideMeleeSwingSocket Parms{};
 

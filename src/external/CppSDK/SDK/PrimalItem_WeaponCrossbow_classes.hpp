@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponCrossbow_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponCrossbow_C;
 
 SDK_NAMESPACE_END

@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "AudioAnalyzer_classes.hpp"
-#include "AudioSynesthesia_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AudioSynesthesia_structs.hpp"
+#include "AudioSynesthesiaCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -35,44 +36,7 @@ public:
 		return GetDefaultObjImpl<UAudioSynesthesiaSettings>();
 	}
 };
-
-// Class AudioSynesthesia.AudioSynesthesiaNRTSettings
-// 0x0000 (0x0028 - 0x0028)
-class UAudioSynesthesiaNRTSettings : public UAudioAnalyzerNRTSettings
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioSynesthesiaNRTSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioSynesthesiaNRTSettings")
-	}
-	static class UAudioSynesthesiaNRTSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSynesthesiaNRTSettings>();
-	}
-};
-
-// Class AudioSynesthesia.AudioSynesthesiaNRT
-// 0x0000 (0x0078 - 0x0078)
-class UAudioSynesthesiaNRT : public UAudioAnalyzerNRT
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioSynesthesiaNRT")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioSynesthesiaNRT")
-	}
-	static class UAudioSynesthesiaNRT* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
-	}
-};
+DUMPER7_ASSERTS_UAudioSynesthesiaSettings;
 
 // Class AudioSynesthesia.ConstantQSettings
 // 0x0020 (0x0048 - 0x0028)
@@ -106,6 +70,47 @@ public:
 		return GetDefaultObjImpl<UConstantQSettings>();
 	}
 };
+DUMPER7_ASSERTS_UConstantQSettings;
+
+// Class AudioSynesthesia.AudioSynesthesiaNRTSettings
+// 0x0000 (0x0028 - 0x0028)
+class UAudioSynesthesiaNRTSettings : public UAudioAnalyzerNRTSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioSynesthesiaNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSynesthesiaNRTSettings")
+	}
+	static class UAudioSynesthesiaNRTSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSynesthesiaNRTSettings>();
+	}
+};
+DUMPER7_ASSERTS_UAudioSynesthesiaNRTSettings;
+
+// Class AudioSynesthesia.AudioSynesthesiaNRT
+// 0x0000 (0x0078 - 0x0078)
+class UAudioSynesthesiaNRT : public UAudioAnalyzerNRT
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioSynesthesiaNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSynesthesiaNRT")
+	}
+	static class UAudioSynesthesiaNRT* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
+	}
+};
+DUMPER7_ASSERTS_UAudioSynesthesiaNRT;
 
 // Class AudioSynesthesia.ConstantQAnalyzer
 // 0x0058 (0x00F8 - 0x00A0)
@@ -137,6 +142,7 @@ public:
 		return GetDefaultObjImpl<UConstantQAnalyzer>();
 	}
 };
+DUMPER7_ASSERTS_UConstantQAnalyzer;
 
 // Class AudioSynesthesia.ConstantQNRTSettings
 // 0x0020 (0x0048 - 0x0028)
@@ -170,6 +176,7 @@ public:
 		return GetDefaultObjImpl<UConstantQNRTSettings>();
 	}
 };
+DUMPER7_ASSERTS_UConstantQNRTSettings;
 
 // Class AudioSynesthesia.ConstantQNRT
 // 0x0008 (0x0080 - 0x0078)
@@ -196,6 +203,129 @@ public:
 		return GetDefaultObjImpl<UConstantQNRT>();
 	}
 };
+DUMPER7_ASSERTS_UConstantQNRT;
+
+// Class AudioSynesthesia.LKFSSettings
+// 0x0018 (0x0040 - 0x0028)
+class ULKFSSettings final : public UAudioSynesthesiaSettings
+{
+public:
+	float                                         AnalysisPeriod;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnalysisWindowDuration;                            // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShortTermLoudnessDuration;                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IntegratedLoudnessAnalysisPeriod;                  // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IntegratedLoudnessDuration;                        // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCalculatePerChannelLoudnessRange;                 // 0x003C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCalculateOverallLoudnessRange;                    // 0x003D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LKFSSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LKFSSettings")
+	}
+	static class ULKFSSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULKFSSettings>();
+	}
+};
+DUMPER7_ASSERTS_ULKFSSettings;
+
+// Class AudioSynesthesia.LKFSAnalyzer
+// 0x00A8 (0x0148 - 0x00A0)
+class ULKFSAnalyzer final : public UAudioAnalyzer
+{
+public:
+	class ULKFSSettings*                          Settings;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TMulticastInlineDelegate<void(const TArray<struct FLKFSResults>& LKFSResults)> OnOverallLKFSResults; // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x18];                                      // 0x00B8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 ChannelIndex, const TArray<struct FLKFSResults>& LKFSResults)> OnPerChannelLKFSResults; // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0x18];                                      // 0x00E0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(const struct FLKFSResults& LatestOverallLKFSResults)> OnLatestOverallLKFSResults; // 0x00F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0x18];                                     // 0x0108(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 ChannelIndex, const struct FLKFSResults& LatestLKFSResults)> OnLatestPerChannelLKFSResults; // 0x0120(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_130[0x18];                                     // 0x0130(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LKFSAnalyzer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LKFSAnalyzer")
+	}
+	static class ULKFSAnalyzer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULKFSAnalyzer>();
+	}
+};
+DUMPER7_ASSERTS_ULKFSAnalyzer;
+
+// Class AudioSynesthesia.LKFSNRTSettings
+// 0x0010 (0x0038 - 0x0028)
+class ULKFSNRTSettings final : public UAudioSynesthesiaNRTSettings
+{
+public:
+	float                                         AnalysisPeriod;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnalysisWindowDuration;                            // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShortTermLoudnessDuration;                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LKFSNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LKFSNRTSettings")
+	}
+	static class ULKFSNRTSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULKFSNRTSettings>();
+	}
+};
+DUMPER7_ASSERTS_ULKFSNRTSettings;
+
+// Class AudioSynesthesia.LKFSNRT
+// 0x0008 (0x0080 - 0x0078)
+class ULKFSNRT final : public UAudioSynesthesiaNRT
+{
+public:
+	class ULKFSNRTSettings*                       Settings;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	void GetChannelLoudnessAtTime(const float InSeconds, const int32 InChannel, float* OutLoudness) const;
+	float GetGatedLoudness() const;
+	float GetGatedLoudnessForChannel(int32 InChannel) const;
+	float GetIntegratedLoudness() const;
+	float GetIntegratedLoudnessForChannel(int32 InChannel) const;
+	void GetLoudnessAtTime(const float InSeconds, float* OutLoudness) const;
+	TArray<struct FLKFSNRTResults> GetLoudnessData() const;
+	struct FLKFSNRTResults GetLoudnessDataAtTime(const float InSeconds) const;
+	TArray<struct FLKFSNRTResults> GetLoudnessDataForChannel(int32 InChannel) const;
+	struct FLKFSNRTResults GetLoudnessDataForChannelAtTime(const float InSeconds, int32 InChannel) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LKFSNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LKFSNRT")
+	}
+	static class ULKFSNRT* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULKFSNRT>();
+	}
+};
+DUMPER7_ASSERTS_ULKFSNRT;
 
 // Class AudioSynesthesia.LoudnessSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -224,13 +354,14 @@ public:
 		return GetDefaultObjImpl<ULoudnessSettings>();
 	}
 };
+DUMPER7_ASSERTS_ULoudnessSettings;
 
 // Class AudioSynesthesia.LoudnessAnalyzer
 // 0x0048 (0x00E8 - 0x00A0)
 class ULoudnessAnalyzer final : public UAudioAnalyzer
 {
 public:
-	class ULoudnessSettings*                      Settings;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class ULoudnessSettings*                      Settings;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TMulticastInlineDelegate<void(const TArray<struct FLoudnessResults>& OverallLoudnessResults)> OnOverallLoudnessResults; // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 ChannelIndex, const TArray<struct FLoudnessResults>& LoudnessResults)> OnPerChannelLoudnessResults; // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const struct FLoudnessResults& LatestOverallLoudnessResults)> OnLatestOverallLoudnessResults; // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -250,6 +381,7 @@ public:
 		return GetDefaultObjImpl<ULoudnessAnalyzer>();
 	}
 };
+DUMPER7_ASSERTS_ULoudnessAnalyzer;
 
 // Class AudioSynesthesia.LoudnessNRTSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -278,13 +410,14 @@ public:
 		return GetDefaultObjImpl<ULoudnessNRTSettings>();
 	}
 };
+DUMPER7_ASSERTS_ULoudnessNRTSettings;
 
 // Class AudioSynesthesia.LoudnessNRT
 // 0x0008 (0x0080 - 0x0078)
 class ULoudnessNRT final : public UAudioSynesthesiaNRT
 {
 public:
-	class ULoudnessNRTSettings*                   Settings;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class ULoudnessNRTSettings*                   Settings;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	void GetChannelLoudnessAtTime(const float InSeconds, const int32 InChannel, float* OutLoudness) const;
@@ -306,9 +439,10 @@ public:
 		return GetDefaultObjImpl<ULoudnessNRT>();
 	}
 };
+DUMPER7_ASSERTS_ULoudnessNRT;
 
 // Class AudioSynesthesia.MeterSettings
-// 0x0018 (0x0040 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UMeterSettings final : public UAudioSynesthesiaSettings
 {
 public:
@@ -319,6 +453,8 @@ public:
 	int32                                         MeterReleaseTime;                                  // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PeakHoldTime;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClippingThreshold;                                 // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsAnalog;                                         // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -334,6 +470,7 @@ public:
 		return GetDefaultObjImpl<UMeterSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMeterSettings;
 
 // Class AudioSynesthesia.MeterAnalyzer
 // 0x00A8 (0x0148 - 0x00A0)
@@ -364,6 +501,7 @@ public:
 		return GetDefaultObjImpl<UMeterAnalyzer>();
 	}
 };
+DUMPER7_ASSERTS_UMeterAnalyzer;
 
 // Class AudioSynesthesia.OnsetNRTSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -392,6 +530,7 @@ public:
 		return GetDefaultObjImpl<UOnsetNRTSettings>();
 	}
 };
+DUMPER7_ASSERTS_UOnsetNRTSettings;
 
 // Class AudioSynesthesia.OnsetNRT
 // 0x0008 (0x0080 - 0x0078)
@@ -418,6 +557,7 @@ public:
 		return GetDefaultObjImpl<UOnsetNRT>();
 	}
 };
+DUMPER7_ASSERTS_UOnsetNRT;
 
 // Class AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -444,6 +584,7 @@ public:
 		return GetDefaultObjImpl<USynesthesiaSpectrumAnalysisSettings>();
 	}
 };
+DUMPER7_ASSERTS_USynesthesiaSpectrumAnalysisSettings;
 
 // Class AudioSynesthesia.SynesthesiaSpectrumAnalyzer
 // 0x0058 (0x00F8 - 0x00A0)
@@ -475,5 +616,6 @@ public:
 		return GetDefaultObjImpl<USynesthesiaSpectrumAnalyzer>();
 	}
 };
+DUMPER7_ASSERTS_USynesthesiaSpectrumAnalyzer;
 
 SDK_NAMESPACE_END

@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Interface_TekSpear.Interface_TekSpear_C
-// 0x0000 (0x0000 - 0x0000)
-class IInterface_TekSpear_C final
+// 0x0008 (0x0008 - 0x0000)
+class IInterface_TekSpear_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void Interface_ProjSpear_Tek_get_damage_multiplier_for_attack(uint8 attack_index, double* damage_multiplier);
 	void Interface_ProjSpear_Tek_get_rotation_towards_projectile(struct FRotator* out_rotation);
@@ -26,7 +29,7 @@ public:
 	void Interface_ProjSpear_Tek_set_rotation_towards_projectile(const struct FRotator& in_rot, bool* success);
 	void Interface_TekSpear__Destroy_Projectile(bool* success);
 	void Interface_TekSpear__Get_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* Held_Blocking_Loop, struct FStruct_WeapAnimWith3P_V3* Block_Recoil, struct FStruct_WeapAnimWith3P_V3* Perfect_Block, struct FStruct_WeapAnimWith3P_V3* Held_Deflecting_Loop, struct FStruct_WeapAnimWith3P_V3* Deflect_Recoil, struct FStruct_WeapAnimWith3P_V3* Perfect_Deflect, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* Held_Air_Stab_Charge_Loop, struct FStruct_WeapAnimWith3P_V3* Air_Stab_Release, struct FStruct_WeapAnimWith3P_V3* Ground_Slam_Falling_Loop, struct FStruct_WeapAnimWith3P_V3* Ground_Slam_Land, struct FStruct_WeapAnimWith3P_V3* Held_Spear_Toss_Pullback_Loop, struct FStruct_WeapAnimWith3P_V3* Teleport_To_Spear_Midair, struct FStruct_WeapAnimWith3P_V3* Teleport_To_Spear_Grounded, struct FStruct_WeapAnimWith3P_V3* Fallback_Standard_Stab_like_in_water);
-	void Interface_TekSpear__Get_Awaiting_Server_Response_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* bLock, struct FStruct_WeapAnimWith3P_V3* Deflect, struct FStruct_WeapAnimWith3P_V3* AirStabCharge, struct FStruct_WeapAnimWith3P_V3* AirStabRelease, struct FStruct_WeapAnimWith3P_V3* pullback, struct FStruct_WeapAnimWith3P_V3* Toss, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* GroundSlamDive, struct FStruct_WeapAnimWith3P_V3* GroundSlamLand, struct FStruct_WeapAnimWith3P_V3* Fallback_Stab, struct FStruct_WeapAnimWith3P_V3* TPToSpear);
+	void Interface_TekSpear__Get_Awaiting_Server_Response_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* bLock, struct FStruct_WeapAnimWith3P_V3* Deflect, struct FStruct_WeapAnimWith3P_V3* AirStabCharge, struct FStruct_WeapAnimWith3P_V3* AirStabRelease, struct FStruct_WeapAnimWith3P_V3* PullBack, struct FStruct_WeapAnimWith3P_V3* Toss, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* GroundSlamDive, struct FStruct_WeapAnimWith3P_V3* GroundSlamLand, struct FStruct_WeapAnimWith3P_V3* Fallback_Stab, struct FStruct_WeapAnimWith3P_V3* TPToSpear);
 	void Torp_Mode_0(bool* Is_Damage_Mode, bool* Is_Tranq_Mode);
 	void Interface_TekSpear__Get_Ground_Slam_Final_Hit_dmg_types(class UClass** Regular_dmg_type, class UClass** torpor_dmg_type);
 	void Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used(bool* Value);
@@ -72,5 +75,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IInterface_TekSpear_C;
 
 SDK_NAMESPACE_END

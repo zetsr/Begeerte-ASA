@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UFPVMeleeWeaponAnimBP_Lance_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FPVMeleeWeaponAnimBP_Lance_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FPVMeleeWeaponAnimBP_Lance_C", "AnimGraph", FuncInfo);
 
 	Params::FPVMeleeWeaponAnimBP_Lance_C_AnimGraph Parms{};
 
@@ -44,10 +42,8 @@ void UFPVMeleeWeaponAnimBP_Lance_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UFPVMeleeWeaponAnimBP_Lance_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FPVMeleeWeaponAnimBP_Lance_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FPVMeleeWeaponAnimBP_Lance_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::FPVMeleeWeaponAnimBP_Lance_C_BlueprintUpdateAnimation Parms{};
 
@@ -64,10 +60,8 @@ void UFPVMeleeWeaponAnimBP_Lance_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void UFPVMeleeWeaponAnimBP_Lance_C::ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FPVMeleeWeaponAnimBP_Lance_C", "ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FPVMeleeWeaponAnimBP_Lance_C", "ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance", FuncInfo);
 
 	Params::FPVMeleeWeaponAnimBP_Lance_C_ExecuteUbergraph_FPVMeleeWeaponAnimBP_Lance Parms{};
 

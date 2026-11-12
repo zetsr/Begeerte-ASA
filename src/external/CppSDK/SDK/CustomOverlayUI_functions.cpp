@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void UCustomOverlayUI_C::AddChildToCanvas(class UUserWidget* Child, const struct FVector2D& Size, int32 ZOrder)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "AddChildToCanvas");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "AddChildToCanvas", FuncInfo);
 
 	Params::CustomOverlayUI_C_AddChildToCanvas Parms{};
 
@@ -45,10 +43,8 @@ void UCustomOverlayUI_C::AddChildToCanvas(class UUserWidget* Child, const struct
 
 void UCustomOverlayUI_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -61,10 +57,8 @@ void UCustomOverlayUI_C::Construct()
 
 void UCustomOverlayUI_C::ExecuteUbergraph_CustomOverlayUI(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "ExecuteUbergraph_CustomOverlayUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "ExecuteUbergraph_CustomOverlayUI", FuncInfo);
 
 	Params::CustomOverlayUI_C_ExecuteUbergraph_CustomOverlayUI Parms{};
 
@@ -82,10 +76,8 @@ void UCustomOverlayUI_C::ExecuteUbergraph_CustomOverlayUI(int32 EntryPoint)
 
 void UCustomOverlayUI_C::SetArrowAlpha(float theLeftRightAlpha, float theUpDownAlpha)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "SetArrowAlpha");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "SetArrowAlpha", FuncInfo);
 
 	Params::CustomOverlayUI_C_SetArrowAlpha Parms{};
 
@@ -105,10 +97,8 @@ void UCustomOverlayUI_C::SetArrowAlpha(float theLeftRightAlpha, float theUpDownA
 
 void UCustomOverlayUI_C::SetInnerRingScales(float scale0, float scale1, float scale2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "SetInnerRingScales");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "SetInnerRingScales", FuncInfo);
 
 	Params::CustomOverlayUI_C_SetInnerRingScales Parms{};
 
@@ -127,10 +117,8 @@ void UCustomOverlayUI_C::SetInnerRingScales(float scale0, float scale1, float sc
 
 void UCustomOverlayUI_C::SetPointerColorAdd(float Add)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "SetPointerColorAdd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "SetPointerColorAdd", FuncInfo);
 
 	Params::CustomOverlayUI_C_SetPointerColorAdd Parms{};
 
@@ -147,10 +135,8 @@ void UCustomOverlayUI_C::SetPointerColorAdd(float Add)
 
 void UCustomOverlayUI_C::SetPointerScale(float Scale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "SetPointerScale");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "SetPointerScale", FuncInfo);
 
 	Params::CustomOverlayUI_C_SetPointerScale Parms{};
 
@@ -167,10 +153,8 @@ void UCustomOverlayUI_C::SetPointerScale(float Scale)
 
 void UCustomOverlayUI_C::ShowReticule(bool show)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "ShowReticule");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "ShowReticule", FuncInfo);
 
 	Params::CustomOverlayUI_C_ShowReticule Parms{};
 
@@ -188,10 +172,8 @@ void UCustomOverlayUI_C::ShowReticule(bool show)
 
 void UCustomOverlayUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CustomOverlayUI_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CustomOverlayUI_C", "Tick", FuncInfo);
 
 	Params::CustomOverlayUI_C_Tick Parms{};
 

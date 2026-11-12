@@ -16,6 +16,31 @@
 
 SDK_NAMESPACE_START
 
+// Function DataflowSimulation.DataflowSimulationActor.OnDataflowSimulationEnabledChanged
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const bool                              bSimulationEnabled                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IDataflowSimulationActor::OnDataflowSimulationEnabledChanged(const bool bSimulationEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("DataflowSimulationActor", "OnDataflowSimulationEnabledChanged");
+
+	Params::DataflowSimulationActor_OnDataflowSimulationEnabledChanged Parms{};
+
+	Parms.bSimulationEnabled = bSimulationEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function DataflowSimulation.DataflowSimulationActor.PostDataflowSimulationTick
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

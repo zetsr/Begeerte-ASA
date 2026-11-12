@@ -54,16 +54,6 @@ enum class ESubLevelStripMode : uint8
 	ESubLevelStripMode_MAX                   = 2,
 };
 
-// ScriptStruct EngineSettings.AutoCompleteCommand
-// 0x0028 (0x0028 - 0x0000)
-struct FAutoCompleteCommand final
-{
-public:
-	class FString                                 Command;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Desc;                                              // 0x0010(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // ScriptStruct EngineSettings.GameModeName
 // 0x0030 (0x0030 - 0x0000)
 struct FGameModeName final
@@ -72,6 +62,7 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FGameModeName;
 
 // ScriptStruct EngineSettings.TemplateMapInfoOverride
 // 0x0050 (0x0050 - 0x0000)
@@ -82,5 +73,17 @@ public:
 	struct FSoftObjectPath                        Map;                                               // 0x0020(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayName;                                       // 0x0040(0x0010)(Edit, Config, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FTemplateMapInfoOverride;
+
+// ScriptStruct EngineSettings.AutoCompleteCommand
+// 0x0028 (0x0028 - 0x0000)
+struct FAutoCompleteCommand final
+{
+public:
+	class FString                                 Command;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Desc;                                              // 0x0010(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAutoCompleteCommand;
 
 SDK_NAMESPACE_END

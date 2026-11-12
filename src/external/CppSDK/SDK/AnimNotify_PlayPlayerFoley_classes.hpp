@@ -44,5 +44,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayPlayerFoley_C>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotify_PlayPlayerFoley_C;
 
 SDK_NAMESPACE_END

@@ -67,6 +67,7 @@ public:
 	class UPrimalCharacterMovement*               CallFunc_CharacterMovementToPCM_ReturnValue;       // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPrimalCharacterMovement*               CallFunc_CharacterMovementToPCM_ReturnValue_1;     // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MoveAroundBlockade_DR_C_ExecuteUbergraph_MoveAroundBlockade_DR;
 
 // Function MoveAroundBlockade_DR.MoveAroundBlockade_DR_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -75,6 +76,7 @@ struct MoveAroundBlockade_DR_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MoveAroundBlockade_DR_C_ReceiveConditionCheck;
 
 // Function MoveAroundBlockade_DR.MoveAroundBlockade_DR_C.ReceiveExecutionFinish
 // 0x0010 (0x0010 - 0x0000)
@@ -84,6 +86,7 @@ public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EBTNodeResult                                 NodeResult;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MoveAroundBlockade_DR_C_ReceiveExecutionFinish;
 
 // Function MoveAroundBlockade_DR.MoveAroundBlockade_DR_C.ReceiveExecutionStart
 // 0x0008 (0x0008 - 0x0000)
@@ -92,6 +95,7 @@ struct MoveAroundBlockade_DR_C_ReceiveExecutionStart final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_MoveAroundBlockade_DR_C_ReceiveExecutionStart;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

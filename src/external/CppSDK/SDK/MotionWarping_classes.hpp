@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "MotionWarping_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "MotionWarping_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,28 +40,7 @@ public:
 		return GetDefaultObjImpl<UMotionWarpingBaseAdapter>();
 	}
 };
-
-// Class MotionWarping.MotionWarpingCharacterAdapter
-// 0x0008 (0x0040 - 0x0038)
-class UMotionWarpingCharacterAdapter final : public UMotionWarpingBaseAdapter
-{
-public:
-	class ACharacter*                             TargetCharacter;                                   // 0x0038(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MotionWarpingCharacterAdapter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MotionWarpingCharacterAdapter")
-	}
-	static class UMotionWarpingCharacterAdapter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMotionWarpingCharacterAdapter>();
-	}
-};
+DUMPER7_ASSERTS_UMotionWarpingBaseAdapter;
 
 // Class MotionWarping.AnimNotifyState_MotionWarping
 // 0x0008 (0x0040 - 0x0038)
@@ -93,18 +72,19 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_MotionWarping>();
 	}
 };
+DUMPER7_ASSERTS_UAnimNotifyState_MotionWarping;
 
 // Class MotionWarping.AttributeBasedRootMotionComponent
-// 0x00F0 (0x01C0 - 0x00D0)
+// 0x00E0 (0x01D8 - 0x00F8)
 class UAttributeBasedRootMotionComponent final : public UActorComponent
 {
 public:
-	bool                                          bEnableRootMotion;                                 // 0x00D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	EAttributeBasedRootMotionMode                 Mode;                                              // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x38];                                      // 0x00D8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class ACharacter>              CharacterOwner;                                    // 0x0110(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_118[0xA8];                                     // 0x0118(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableRootMotion;                                 // 0x00F8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EAttributeBasedRootMotionMode                 Mode;                                              // 0x00FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_100[0x38];                                     // 0x0100(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class ACharacter>              CharacterOwner;                                    // 0x0138(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_140[0x98];                                     // 0x0140(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -120,12 +100,37 @@ public:
 		return GetDefaultObjImpl<UAttributeBasedRootMotionComponent>();
 	}
 };
+DUMPER7_ASSERTS_UAttributeBasedRootMotionComponent;
+
+// Class MotionWarping.MotionWarpingCharacterAdapter
+// 0x0008 (0x0040 - 0x0038)
+class UMotionWarpingCharacterAdapter final : public UMotionWarpingBaseAdapter
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingCharacterAdapter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingCharacterAdapter")
+	}
+	static class UMotionWarpingCharacterAdapter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingCharacterAdapter>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingCharacterAdapter;
 
 // Class MotionWarping.MotionWarpingUtilities
 // 0x0000 (0x0028 - 0x0028)
 class UMotionWarpingUtilities final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ExtractBoneTransformFromAnimationAtTime(const class UAnimInstance* AnimInstance, const class UAnimSequenceBase* Animation, float Time, bool bExtractRootMotion, class FName BoneName, bool bLocalSpace, struct FTransform* OutTransform);
 	static struct FTransform ExtractRootMotionFromAnimation(const class UAnimSequenceBase* Animation, float StartTime, float EndTime);
 	static void GetMotionWarpingWindowsForWarpTargetFromAnimation(const class UAnimSequenceBase* Animation, class FName WarpTargetName, TArray<struct FMotionWarpingWindowData>* OutWindows);
 	static void GetMotionWarpingWindowsFromAnimation(const class UAnimSequenceBase* Animation, TArray<struct FMotionWarpingWindowData>* OutWindows);
@@ -144,26 +149,34 @@ public:
 		return GetDefaultObjImpl<UMotionWarpingUtilities>();
 	}
 };
+DUMPER7_ASSERTS_UMotionWarpingUtilities;
 
 // Class MotionWarping.MotionWarpingComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0068 (0x0160 - 0x00F8)
 class UMotionWarpingComponent final : public UActorComponent
 {
 public:
-	bool                                          bSearchForWindowsInAnimsWithinMontages;            // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UMotionWarpingComponent* MotionWarpingComp)> OnPreUpdate;    // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UMotionWarpingBaseAdapter*              OwnerAdapter;                                      // 0x00E8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<class URootMotionModifier*>            Modifiers;                                         // 0x00F0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<struct FMotionWarpingTarget>           WarpTargets;                                       // 0x0100(0x0010)(Net, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	bool                                          bSearchForWindowsInAnimsWithinMontages;            // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UMotionWarpingComponent* MotionWarpingComp)> OnPreUpdate;    // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UMotionWarpingBaseAdapter*              OwnerAdapter;                                      // 0x0110(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UMotionWarpingBaseAdapter*              PredictionAdapter;                                 // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UMotionWarpingBaseAdapter*              CachedOwnerAdapter;                                // 0x0120(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class URootMotionModifier*>            Modifiers;                                         // 0x0128(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<struct FMotionWarpingTarget>           WarpTargets;                                       // 0x0138(0x0010)(Edit, Net, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FSwitchOffConditionData>        SwitchOffConditions;                               // 0x0148(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, Protected, NativeAccessSpecifierProtected)
+	bool                                          bPredictingTrajectory;                             // 0x0158(0x0001)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddOrUpdateWarpTarget(const struct FMotionWarpingTarget& WarpTarget);
-	void AddOrUpdateWarpTargetFromComponent(class FName WarpTargetName, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, const struct FVector& LocationOffset, const struct FRotator& RotationOffset);
+	void AddOrUpdateWarpTargetFromComponent(class FName WarpTargetName, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, EWarpTargetLocationOffsetDirection LocationOffsetDirection, const struct FVector& LocationOffset, const struct FRotator& RotationOffset);
 	void AddOrUpdateWarpTargetFromLocation(class FName WarpTargetName, const struct FVector& TargetLocation);
 	void AddOrUpdateWarpTargetFromLocationAndRotation(class FName WarpTargetName, const struct FVector& TargetLocation, const struct FRotator& TargetRotation);
 	void AddOrUpdateWarpTargetFromTransform(class FName WarpTargetName, const struct FTransform& TargetTransform);
+	void AddSwitchOffCondition(class FName WarpTargetName, class UMotionWarpingSwitchOffCondition* Condition);
 	void DisableAllRootMotionModifiers();
+	void FindWarpTarget(class FName WarpTargetName, struct FMotionWarpingTarget* MotionWarpingTarget, bool* bFound);
 	int32 RemoveAllWarpTargets();
 	int32 RemoveWarpTarget(class FName WarpTargetName);
 	int32 RemoveWarpTargets(const TArray<class FName>& WarpTargetNames);
@@ -182,6 +195,197 @@ public:
 		return GetDefaultObjImpl<UMotionWarpingComponent>();
 	}
 };
+DUMPER7_ASSERTS_UMotionWarpingComponent;
+
+// Class MotionWarping.MotionWarpingFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMotionWarpingFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FMotionWarpingTarget MakeMotionWarpingTarget(const class FName Name_0, const struct FVector& Location, const struct FRotator& Rotation, const class USceneComponent* Component, class FName BoneName, bool bFollowComponent, EWarpTargetLocationOffsetDirection LocationOffsetDirection, const class AActor* AvatarActor, const struct FVector& LocationOffset, const struct FRotator& RotationOffset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingFunctionLibrary")
+	}
+	static class UMotionWarpingFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingFunctionLibrary;
+
+// Class MotionWarping.MotionWarpingMontageTrajectoryAdapter
+// 0x0108 (0x0140 - 0x0038)
+class alignas(0x10) UMotionWarpingMontageTrajectoryAdapter final : public UMotionWarpingBaseAdapter
+{
+public:
+	struct FMotionWarpingSwapState                CachedWarpState;                                   // 0x0038(0x0040)(Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           Montage;                                           // 0x0078(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_80[0xB8];                                      // 0x0080(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingMontageTrajectoryAdapter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingMontageTrajectoryAdapter")
+	}
+	static class UMotionWarpingMontageTrajectoryAdapter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingMontageTrajectoryAdapter>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingMontageTrajectoryAdapter;
+
+// Class MotionWarping.MotionWarpingSwitchOffCondition
+// 0x0020 (0x0048 - 0x0028)
+class UMotionWarpingSwitchOffCondition : public UObject
+{
+public:
+	bool                                          bUseWarpTargetAsTargetLocation;                    // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESwitchOffConditionEffect                     Effect;                                            // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OwnerActor;                                        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class AActor*                                 TargetActor;                                       // 0x0038(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingSwitchOffCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingSwitchOffCondition")
+	}
+	static class UMotionWarpingSwitchOffCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingSwitchOffCondition>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingSwitchOffCondition;
+
+// Class MotionWarping.MotionWarpingSwitchOffDistanceCondition
+// 0x0008 (0x0050 - 0x0048)
+class UMotionWarpingSwitchOffDistanceCondition final : public UMotionWarpingSwitchOffCondition
+{
+public:
+	ESwitchOffConditionDistanceOp                 Operator;                                          // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESwitchOffConditionDistanceAxesType           AxesType;                                          // 0x0049(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Distance;                                          // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UMotionWarpingSwitchOffDistanceCondition* CreateSwitchOffDistanceCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, ESwitchOffConditionDistanceOp InOperator, ESwitchOffConditionDistanceAxesType InAxesType, float InDistance, bool InbUseWarpTargetAsTargetLocation, class AActor* InTargetActor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingSwitchOffDistanceCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingSwitchOffDistanceCondition")
+	}
+	static class UMotionWarpingSwitchOffDistanceCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingSwitchOffDistanceCondition>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingSwitchOffDistanceCondition;
+
+// Class MotionWarping.MotionWarpingSwitchOffAngleToTargetCondition
+// 0x0010 (0x0058 - 0x0048)
+class UMotionWarpingSwitchOffAngleToTargetCondition final : public UMotionWarpingSwitchOffCondition
+{
+public:
+	ESwitchOffConditionAngleOp                    Operator;                                          // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Angle;                                             // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIgnoreZAxis;                                      // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UMotionWarpingSwitchOffAngleToTargetCondition* CreateSwitchOffAngleToTargetCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, ESwitchOffConditionAngleOp InOperator, float InAngle, bool bInIgnoreZAxis, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingSwitchOffAngleToTargetCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingSwitchOffAngleToTargetCondition")
+	}
+	static class UMotionWarpingSwitchOffAngleToTargetCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingSwitchOffAngleToTargetCondition>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingSwitchOffAngleToTargetCondition;
+
+// Class MotionWarping.MotionWarpingSwitchOffCompositeCondition
+// 0x0018 (0x0060 - 0x0048)
+class UMotionWarpingSwitchOffCompositeCondition final : public UMotionWarpingSwitchOffCondition
+{
+public:
+	class UMotionWarpingSwitchOffCondition*       SwitchOffConditionA;                               // 0x0048(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	ESwitchOffConditionCompositeOp                LogicOperator;                                     // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMotionWarpingSwitchOffCondition*       SwitchOffConditionB;                               // 0x0058(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+
+public:
+	static class UMotionWarpingSwitchOffCompositeCondition* CreateSwitchOffCompositeCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, class UMotionWarpingSwitchOffCondition*& InSwitchOffConditionA, ESwitchOffConditionCompositeOp InLogicOperator, class UMotionWarpingSwitchOffCondition*& InSwitchOffConditionB, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingSwitchOffCompositeCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingSwitchOffCompositeCondition")
+	}
+	static class UMotionWarpingSwitchOffCompositeCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingSwitchOffCompositeCondition>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingSwitchOffCompositeCondition;
+
+// Class MotionWarping.MotionWarpingSwitchOffBlueprintableCondition
+// 0x0000 (0x0048 - 0x0048)
+class UMotionWarpingSwitchOffBlueprintableCondition final : public UMotionWarpingSwitchOffCondition
+{
+public:
+	static class UMotionWarpingSwitchOffBlueprintableCondition* CreateSwitchOffBlueprintableCondition(class AActor*& InOwnerActor, ESwitchOffConditionEffect InEffect, TSubclassOf<class UMotionWarpingSwitchOffBlueprintableCondition> InBlueprintableCondition, bool bInUseWarpTargetAsTargetLocation, class AActor* InTargetActor);
+
+	bool BP_Check(const class AActor* InOwnerActor, const class AActor* InTargetActor, const struct FVector& InTargetLocation, bool bInUseWarpTargetAsTargetLocation) const;
+	class FString BP_ExtraDebugInfo(const class AActor* InOwnerActor, const class AActor* InTargetActor, const struct FVector& InTargetLocation, bool bInUseWarpTargetAsTargetLocation) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MotionWarpingSwitchOffBlueprintableCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionWarpingSwitchOffBlueprintableCondition")
+	}
+	static class UMotionWarpingSwitchOffBlueprintableCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionWarpingSwitchOffBlueprintableCondition>();
+	}
+};
+DUMPER7_ASSERTS_UMotionWarpingSwitchOffBlueprintableCondition;
 
 // Class MotionWarping.RootMotionModifier
 // 0x0138 (0x0160 - 0x0028)
@@ -195,7 +399,8 @@ public:
 	float                                         PreviousPosition;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CurrentPosition;                                   // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Weight;                                            // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlayRate;                                          // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             StartTransform;                                    // 0x0050(0x0060)(BlueprintVisible, BlueprintReadOnly, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ActualStartTime;                                   // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B4[0xC];                                       // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
@@ -221,10 +426,12 @@ public:
 	}
 };
 #pragma pack(pop)
+DUMPER7_ASSERTS_URootMotionModifier;
 
 // Class MotionWarping.RootMotionModifier_Warp
-// 0x0170 (0x02D0 - 0x0160)
-class URootMotionModifier_Warp : public URootMotionModifier
+// 0x0210 (0x0370 - 0x0160)
+#pragma pack(push, 0x1)
+class SDK_ALIGN(0x10) URootMotionModifier_Warp : public URootMotionModifier
 {
 public:
 	class FName                                   WarpTargetName;                                    // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -234,18 +441,21 @@ public:
 	class FName                                   WarpPointAnimBoneName;                             // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWarpTranslation;                                  // 0x01D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreZAxis;                                      // 0x01D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAlphaBlendOption                             AddTranslationEasingFunc;                          // 0x01DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DB[0x5];                                      // 0x01DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bWarpToFeetLocation;                               // 0x01DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAlphaBlendOption                             AddTranslationEasingFunc;                          // 0x01DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            AddTranslationEasingCurve;                         // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	bool                                          bWarpRotation;                                     // 0x01E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMotionWarpRotationType                       RotationType;                                      // 0x01E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMotionWarpRotationMethod                     RotationMethod;                                    // 0x01EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EB[0x1];                                      // 0x01EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WarpRotationTimeMultiplier;                        // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WarpMaxRotationRate;                               // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F4[0xC];                                      // 0x01F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CachedTargetTransform;                             // 0x0200(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_260[0x70];                                     // 0x0260(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSubtractRemainingRootMotion;                      // 0x01EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               AdditionalRotationOffset;                          // 0x01F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         WarpRotationTimeMultiplier;                        // 0x0208(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WarpMaxRotationRate;                               // 0x020C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             CachedTargetTransform;                             // 0x0210(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             RootMotionRemainingAfterNotify;                    // 0x0270(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2D0[0x98];                                     // 0x02D0(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -261,9 +471,11 @@ public:
 		return GetDefaultObjImpl<URootMotionModifier_Warp>();
 	}
 };
+#pragma pack(pop)
+DUMPER7_ASSERTS_URootMotionModifier_Warp;
 
 // Class MotionWarping.RootMotionModifier_SimpleWarp
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x0370 - 0x0370)
 class URootMotionModifier_SimpleWarp final : public URootMotionModifier_Warp
 {
 public:
@@ -280,6 +492,7 @@ public:
 		return GetDefaultObjImpl<URootMotionModifier_SimpleWarp>();
 	}
 };
+DUMPER7_ASSERTS_URootMotionModifier_SimpleWarp;
 
 // Class MotionWarping.RootMotionModifier_Scale
 // 0x0010 (0x0170 - 0x0160)
@@ -305,20 +518,43 @@ public:
 		return GetDefaultObjImpl<URootMotionModifier_Scale>();
 	}
 };
+DUMPER7_ASSERTS_URootMotionModifier_Scale;
+
+// Class MotionWarping.RootMotionModifier_Blueprintable
+// 0x0000 (0x0160 - 0x0160)
+class URootMotionModifier_Blueprintable final : public URootMotionModifier
+{
+public:
+	struct FTransform BP_ProcessRootMotion(const class AActor* Actor, const class USkeletalMeshComponent* Mesh, const struct FTransform& InRootMotion, float DeltaSeconds) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RootMotionModifier_Blueprintable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RootMotionModifier_Blueprintable")
+	}
+	static class URootMotionModifier_Blueprintable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URootMotionModifier_Blueprintable>();
+	}
+};
+DUMPER7_ASSERTS_URootMotionModifier_Blueprintable;
 
 // Class MotionWarping.RootMotionModifier_AdjustmentBlendWarp
-// 0x0160 (0x0430 - 0x02D0)
+// 0x0150 (0x04C0 - 0x0370)
 class URootMotionModifier_AdjustmentBlendWarp final : public URootMotionModifier_Warp
 {
 public:
-	bool                                          bWarpIKBones;                                      // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           IKBones;                                           // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E8[0x8];                                      // 0x02E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CachedMeshTransform;                               // 0x02F0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             CachedMeshRelativeTransform;                       // 0x0350(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             CachedRootMotion;                                  // 0x03B0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FAnimSequenceTrackContainer            Result;                                            // 0x0410(0x0020)(Protected, NativeAccessSpecifierProtected)
+	bool                                          bWarpIKBones;                                      // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           IKBones;                                           // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FTransform                             CachedMeshTransform;                               // 0x0380(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             CachedMeshRelativeTransform;                       // 0x03E0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             CachedRootMotion;                                  // 0x0440(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FAnimSequenceTrackContainer            Result;                                            // 0x04A0(0x0020)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -334,11 +570,54 @@ public:
 		return GetDefaultObjImpl<URootMotionModifier_AdjustmentBlendWarp>();
 	}
 };
+DUMPER7_ASSERTS_URootMotionModifier_AdjustmentBlendWarp;
+
+// Class MotionWarping.RootMotionModifier_PrecomputedWarp
+// 0x0290 (0x0600 - 0x0370)
+class URootMotionModifier_PrecomputedWarp final : public URootMotionModifier_Warp
+{
+public:
+	struct FPrecomputedWarpCurve                  TranslationWarpingCurve;                           // 0x0368(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bSeparateTranslationCurves;                        // 0x0374(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375[0x3];                                      // 0x0375(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPrecomputedWarpCurve                  TranslationWarpingCurve_InMovementDirection;       // 0x0378(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPrecomputedWarpCurve                  TranslationWarpingCurve_OutOfMovementDirection;    // 0x0384(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPrecomputedWarpCurve                  RotationWarpingCurve;                              // 0x0390(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             AlignOffset;                                       // 0x03A0(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceTargetTransformUpright;                      // 0x0400(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPrecomputedWarpUpdateMode                    UpdateMode;                                        // 0x0404(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Disable;                                           // 0x0408(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableSteering;                                   // 0x0410(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_411[0x3];                                      // 0x0411(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPrecomputedWarpSteeringSettings       SteeringSettings;                                  // 0x0414(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_424[0x1DC];                                    // 0x0424(0x01DC)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RootMotionModifier_PrecomputedWarp")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RootMotionModifier_PrecomputedWarp")
+	}
+	static class URootMotionModifier_PrecomputedWarp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URootMotionModifier_PrecomputedWarp>();
+	}
+};
+DUMPER7_ASSERTS_URootMotionModifier_PrecomputedWarp;
 
 // Class MotionWarping.RootMotionModifier_SkewWarp
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x0370 - 0x0370)
 class URootMotionModifier_SkewWarp final : public URootMotionModifier_Warp
 {
+public:
+	float                                         MaxSpeedClampRatio;                                // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_36C[0x4];                                      // 0x036C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class URootMotionModifier_SkewWarp* AddRootMotionModifierSkewWarp(class UMotionWarpingComponent* InMotionWarpingComp, const class UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, class FName InWarpTargetName, EWarpPointAnimProvider InWarpPointAnimProvider, const struct FTransform& InWarpPointAnimTransform, class FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, EMotionWarpRotationType InRotationType, EMotionWarpRotationMethod InRotationMethod, float InWarpRotationTimeMultiplier, float InWarpMaxRotationRate);
 
@@ -356,5 +635,6 @@ public:
 		return GetDefaultObjImpl<URootMotionModifier_SkewWarp>();
 	}
 };
+DUMPER7_ASSERTS_URootMotionModifier_SkewWarp;
 
 SDK_NAMESPACE_END

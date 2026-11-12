@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItem_GlowStick_C::BPItemBroken()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_GlowStick_C", "BPItemBroken");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_GlowStick_C", "BPItemBroken", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UPrimalItem_GlowStick_C::BPItemBroken()
 
 void UPrimalItem_GlowStick_C::BPPostInitializeItem(class UWorld* OptionalInitWorld)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_GlowStick_C", "BPPostInitializeItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_GlowStick_C", "BPPostInitializeItem", FuncInfo);
 
 	Params::PrimalItem_GlowStick_C_BPPostInitializeItem Parms{};
 

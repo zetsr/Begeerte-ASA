@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Background_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Background_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_Background_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_Background_C::Construct()
 
 void UUI_CFCore_Background_C::ExecuteUbergraph_UI_CFCore_Background(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "ExecuteUbergraph_UI_CFCore_Background");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "ExecuteUbergraph_UI_CFCore_Background", FuncInfo);
 
 	Params::UI_CFCore_Background_C_ExecuteUbergraph_UI_CFCore_Background Parms{};
 
@@ -72,10 +66,8 @@ void UUI_CFCore_Background_C::ExecuteUbergraph_UI_CFCore_Background(int32 EntryP
 
 void UUI_CFCore_Background_C::FadeTowards(EUMGSequencePlayMode PlayMode, double PlaybackSpeed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "FadeTowards");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "FadeTowards", FuncInfo);
 
 	Params::UI_CFCore_Background_C_FadeTowards Parms{};
 
@@ -91,10 +83,8 @@ void UUI_CFCore_Background_C::FadeTowards(EUMGSequencePlayMode PlayMode, double 
 
 void UUI_CFCore_Background_C::MakeSureBackgroundImageLoaded()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "MakeSureBackgroundImageLoaded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "MakeSureBackgroundImageLoaded", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +97,8 @@ void UUI_CFCore_Background_C::MakeSureBackgroundImageLoaded()
 
 void UUI_CFCore_Background_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Background_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Background_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Background_C_PreConstruct Parms{};
 

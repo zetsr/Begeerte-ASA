@@ -21,6 +21,43 @@ struct Object_ExecuteUbergraph final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_Object_ExecuteUbergraph;
+
+// Function CoreUObject.WeakObjectPtrTest.InOutWeakPtr
+// 0x0008 (0x0008 - 0x0000)
+struct WeakObjectPtrTest_InOutWeakPtr final
+{
+public:
+	TWeakObjectPtr<class UObject>                 InOutWeakPtr_0;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WeakObjectPtrTest_InOutWeakPtr;
+
+// Function CoreUObject.WeakObjectPtrTest.InputRefWeakPtr
+// 0x0008 (0x0008 - 0x0000)
+struct WeakObjectPtrTest_InputRefWeakPtr final
+{
+public:
+	TWeakObjectPtr<class UObject>                 InWeakPtr;                                         // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WeakObjectPtrTest_InputRefWeakPtr;
+
+// Function CoreUObject.WeakObjectPtrTest.InputValWeakPtr
+// 0x0008 (0x0008 - 0x0000)
+struct WeakObjectPtrTest_InputValWeakPtr final
+{
+public:
+	TWeakObjectPtr<class UObject>                 InWeakPtr;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WeakObjectPtrTest_InputValWeakPtr;
+
+// Function CoreUObject.WeakObjectPtrTest.ReturnWeakPtr
+// 0x0008 (0x0008 - 0x0000)
+struct WeakObjectPtrTest_ReturnWeakPtr final
+{
+public:
+	TWeakObjectPtr<class UObject>                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WeakObjectPtrTest_ReturnWeakPtr;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

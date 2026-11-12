@@ -25,6 +25,19 @@ public:
 	struct FLocalizableMessage                    Message;                                           // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LocalizableMessageLibrary_Conv_LocalizableMessageToText;
+
+// Function LocalizableMessageBlueprint.LocalizableMessageLibrary.EqualEqual_LocalizableMessage
+// 0x0068 (0x0068 - 0x0000)
+struct LocalizableMessageLibrary_EqualEqual_LocalizableMessage final
+{
+public:
+	struct FLocalizableMessage                    A;                                                 // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLocalizableMessage                    B;                                                 // 0x0030(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LocalizableMessageLibrary_EqualEqual_LocalizableMessage;
 
 // Function LocalizableMessageBlueprint.LocalizableMessageLibrary.IsEmpty_LocalizableMessage
 // 0x0038 (0x0038 - 0x0000)
@@ -35,6 +48,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LocalizableMessageLibrary_IsEmpty_LocalizableMessage;
 
 // Function LocalizableMessageBlueprint.LocalizableMessageLibrary.Reset_LocalizableMessage
 // 0x0030 (0x0030 - 0x0000)
@@ -43,6 +57,7 @@ struct LocalizableMessageLibrary_Reset_LocalizableMessage final
 public:
 	struct FLocalizableMessage                    Message;                                           // 0x0000(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LocalizableMessageLibrary_Reset_LocalizableMessage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

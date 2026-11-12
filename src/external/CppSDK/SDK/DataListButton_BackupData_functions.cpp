@@ -19,22 +19,20 @@ SDK_NAMESPACE_START
 // Function DataListButton_BackupData.DataListButton_BackupData_C.OnPaint
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FPaintContext&                   Context_OnPaint                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// struct FPaintContext&                   Context                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void UDataListButton_BackupData_C::OnPaint(struct FPaintContext& Context_OnPaint) const
+void UDataListButton_BackupData_C::OnPaint(struct FPaintContext& Context) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_BackupData_C", "OnPaint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_BackupData_C", "OnPaint", FuncInfo);
 
 	Params::DataListButton_BackupData_C_OnPaint Parms{};
 
-	Parms.Context_OnPaint = std::move(Context_OnPaint);
+	Parms.Context = std::move(Context);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Context_OnPaint = std::move(Parms.Context_OnPaint);
+	Context = std::move(Parms.Context);
 }
 
 

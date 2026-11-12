@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItemArmor_Base_Tek_C::ApplyingSkinOntoItem(class UPrimalItem* ToOwnerItem, bool bIsFirstTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "ApplyingSkinOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "ApplyingSkinOntoItem", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_ApplyingSkinOntoItem Parms{};
 
@@ -45,10 +43,8 @@ void UPrimalItemArmor_Base_Tek_C::ApplyingSkinOntoItem(class UPrimalItem* ToOwne
 
 void UPrimalItemArmor_Base_Tek_C::BlueprintEquipped(bool bIsFromSaveGame)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "BlueprintEquipped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "BlueprintEquipped", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_BlueprintEquipped Parms{};
 
@@ -65,10 +61,8 @@ void UPrimalItemArmor_Base_Tek_C::BlueprintEquipped(bool bIsFromSaveGame)
 
 void UPrimalItemArmor_Base_Tek_C::BlueprintOwnerPosssessed(class AController* PossessedByController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "BlueprintOwnerPosssessed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "BlueprintOwnerPosssessed", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_BlueprintOwnerPosssessed Parms{};
 
@@ -83,10 +77,8 @@ void UPrimalItemArmor_Base_Tek_C::BlueprintOwnerPosssessed(class AController* Po
 
 void UPrimalItemArmor_Base_Tek_C::BlueprintUnequipped()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "BlueprintUnequipped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "BlueprintUnequipped", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,10 +91,8 @@ void UPrimalItemArmor_Base_Tek_C::BlueprintUnequipped()
 
 class FString UPrimalItemArmor_Base_Tek_C::BPGetCustomInventoryWidgetText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "BPGetCustomInventoryWidgetText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "BPGetCustomInventoryWidgetText", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_BPGetCustomInventoryWidgetText Parms{};
 
@@ -119,10 +109,8 @@ class FString UPrimalItemArmor_Base_Tek_C::BPGetCustomInventoryWidgetText()
 
 int32 UPrimalItemArmor_Base_Tek_C::BPGetMaxAmmo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "BPGetMaxAmmo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "BPGetMaxAmmo", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_BPGetMaxAmmo Parms{};
 
@@ -141,10 +129,8 @@ int32 UPrimalItemArmor_Base_Tek_C::BPGetMaxAmmo()
 
 void UPrimalItemArmor_Base_Tek_C::Can_Element_Decrease(int32 AmountToDecreaseBy, bool PreventCheckingInventory, bool* CanDecrease)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "Can Element Decrease");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "Can Element Decrease", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_Can_Element_Decrease Parms{};
 
@@ -165,10 +151,8 @@ void UPrimalItemArmor_Base_Tek_C::Can_Element_Decrease(int32 AmountToDecreaseBy,
 
 void UPrimalItemArmor_Base_Tek_C::ExecuteUbergraph_PrimalItemArmor_Base_Tek(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "ExecuteUbergraph_PrimalItemArmor_Base_Tek");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "ExecuteUbergraph_PrimalItemArmor_Base_Tek", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_ExecuteUbergraph_PrimalItemArmor_Base_Tek Parms{};
 
@@ -183,10 +167,8 @@ void UPrimalItemArmor_Base_Tek_C::ExecuteUbergraph_PrimalItemArmor_Base_Tek(int3
 
 void UPrimalItemArmor_Base_Tek_C::FillEmptyArmorElementWhenAvailable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "FillEmptyArmorElementWhenAvailable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "FillEmptyArmorElementWhenAvailable", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +182,8 @@ void UPrimalItemArmor_Base_Tek_C::FillEmptyArmorElementWhenAvailable()
 
 void UPrimalItemArmor_Base_Tek_C::GetInternalMapRestrictedTekArmorBuff(class AShooterCharacter* OwningPlayer, class UClass** TekArmorBuff)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "GetInternalMapRestrictedTekArmorBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "GetInternalMapRestrictedTekArmorBuff", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_GetInternalMapRestrictedTekArmorBuff Parms{};
 
@@ -223,10 +203,8 @@ void UPrimalItemArmor_Base_Tek_C::GetInternalMapRestrictedTekArmorBuff(class ASh
 
 void UPrimalItemArmor_Base_Tek_C::GetResolvedTekArmorBuff(class UClass** ResolvedTekArmorBuff)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "GetResolvedTekArmorBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "GetResolvedTekArmorBuff", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_GetResolvedTekArmorBuff Parms{};
 
@@ -244,10 +222,8 @@ void UPrimalItemArmor_Base_Tek_C::GetResolvedTekArmorBuff(class UClass** Resolve
 
 void UPrimalItemArmor_Base_Tek_C::IncreaseElement(double Percent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "IncreaseElement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "IncreaseElement", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_IncreaseElement Parms{};
 
@@ -262,10 +238,8 @@ void UPrimalItemArmor_Base_Tek_C::IncreaseElement(double Percent)
 
 void UPrimalItemArmor_Base_Tek_C::InitBuff()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "InitBuff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "InitBuff", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -278,10 +252,8 @@ void UPrimalItemArmor_Base_Tek_C::InitBuff()
 
 void UPrimalItemArmor_Base_Tek_C::IsInfiniteAmmo(bool* IsInfinite)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "IsInfiniteAmmo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "IsInfiniteAmmo", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_IsInfiniteAmmo Parms{};
 
@@ -300,10 +272,8 @@ void UPrimalItemArmor_Base_Tek_C::IsInfiniteAmmo(bool* IsInfinite)
 
 void UPrimalItemArmor_Base_Tek_C::RemovedSkinFromItem(class UPrimalItem* FromOwnerItem, bool bIsFirstTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "RemovedSkinFromItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "RemovedSkinFromItem", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_RemovedSkinFromItem Parms{};
 
@@ -319,10 +289,8 @@ void UPrimalItemArmor_Base_Tek_C::RemovedSkinFromItem(class UPrimalItem* FromOwn
 
 void UPrimalItemArmor_Base_Tek_C::SetElementToMax()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "SetElementToMax");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "SetElementToMax", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -333,10 +301,8 @@ void UPrimalItemArmor_Base_Tek_C::SetElementToMax()
 
 void UPrimalItemArmor_Base_Tek_C::TekArmorSkinApplied()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "TekArmorSkinApplied");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "TekArmorSkinApplied", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -347,10 +313,8 @@ void UPrimalItemArmor_Base_Tek_C::TekArmorSkinApplied()
 
 void UPrimalItemArmor_Base_Tek_C::TekArmorSkinRemoved()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "TekArmorSkinRemoved");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "TekArmorSkinRemoved", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -363,10 +327,8 @@ void UPrimalItemArmor_Base_Tek_C::TekArmorSkinRemoved()
 
 void UPrimalItemArmor_Base_Tek_C::TryToDecreaseElement(int32 AmountToDecreaseBy)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_Base_Tek_C", "TryToDecreaseElement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_Base_Tek_C", "TryToDecreaseElement", FuncInfo);
 
 	Params::PrimalItemArmor_Base_Tek_C_TryToDecreaseElement Parms{};
 

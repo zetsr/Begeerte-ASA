@@ -18,40 +18,40 @@
 SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass Human_AlternateIK_CtrlRig.Human_AlternateIK_CtrlRig_C
-// 0x0450 (0x0F20 - 0x0AD0)
+// 0x0450 (0x1170 - 0x0D20)
 class UHuman_AlternateIK_CtrlRig_C final : public UControlRig
 {
 public:
-	float                                         HandL_Alpha;                                       // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HandR_Alpha;                                       // 0x0AD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD8[0x8];                                      // 0x0AD8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             HandR_Target;                                      // 0x0AE0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             HandL_Target;                                      // 0x0B40(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             LFoot_Transform;                                   // 0x0BA0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             RFoot_Transform;                                   // 0x0C00(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Pelvis_Transform;                                  // 0x0C60(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             RidingDinoTransform_relative;                      // 0x0CC0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseLegIKTargets;                                   // 0x0D20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D21[0xF];                                      // 0x0D21(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             FootR_Target;                                      // 0x0D30(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             FootL_Target;                                      // 0x0D90(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FootL_Alpha;                                       // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FootR_Alpha;                                       // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UsingTurret;                                       // 0x0E00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Debug;                                             // 0x0E01(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HipAdjust;                                         // 0x0E02(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E03[0x5];                                      // 0x0E03(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HipAdjust_Target;                                  // 0x0E08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LegLengthPercentage;                               // 0x0E20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseHandIK;                                         // 0x0E28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPassengerRightSeat;                              // 0x0E29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInDriverSeat;                                    // 0x0E2A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E2B[0x5];                                      // 0x0E2B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HandIKAlpha;                                       // 0x0E30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRigPose                               LArm_Pose;                                         // 0x0E38(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRigPose                               RArm_Pose;                                         // 0x0EA8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         HandL_Alpha_Current;                               // 0x0F18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HandR_Alpha_Current;                               // 0x0F1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HandL_Alpha;                                       // 0x0D20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HandR_Alpha;                                       // 0x0D24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D28[0x8];                                      // 0x0D28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             HandR_Target;                                      // 0x0D30(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             HandL_Target;                                      // 0x0D90(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             LFoot_Transform;                                   // 0x0DF0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             RFoot_Transform;                                   // 0x0E50(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Pelvis_Transform;                                  // 0x0EB0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             RidingDinoTransform_relative;                      // 0x0F10(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseLegIKTargets;                                   // 0x0F70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F71[0xF];                                      // 0x0F71(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             FootR_Target;                                      // 0x0F80(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             FootL_Target;                                      // 0x0FE0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FootL_Alpha;                                       // 0x1040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FootR_Alpha;                                       // 0x1048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UsingTurret;                                       // 0x1050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Debug;                                             // 0x1051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HipAdjust;                                         // 0x1052(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1053[0x5];                                     // 0x1053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HipAdjust_Target;                                  // 0x1058(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LegLengthPercentage;                               // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseHandIK;                                         // 0x1078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPassengerRightSeat;                              // 0x1079(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInDriverSeat;                                    // 0x107A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_107B[0x5];                                     // 0x107B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HandIKAlpha;                                       // 0x1080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRigPose                               LArm_Pose;                                         // 0x1088(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRigPose                               RArm_Pose;                                         // 0x10F8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         HandL_Alpha_Current;                               // 0x1168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HandR_Alpha_Current;                               // 0x116C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -67,5 +67,6 @@ public:
 		return GetDefaultObjImpl<UHuman_AlternateIK_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_AlternateIK_CtrlRig_C;
 
 SDK_NAMESPACE_END

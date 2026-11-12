@@ -42,7 +42,7 @@ public:
 	void DeleteTriangle(const struct FTriangleID& TriangleID, TArray<struct FEdgeID>* OrphanedEdges, TArray<struct FVertexInstanceID>* OrphanedVertexInstances, TArray<struct FPolygonGroupID>* OrphanedPolygonGroupsPtr);
 	void DeleteVertex(const struct FVertexID& VertexID);
 	void DeleteVertexInstance(const struct FVertexInstanceID& VertexInstanceID, TArray<struct FVertexID>* OrphanedVertices);
-	void Empty();
+	void empty();
 	void ReserveNewEdges(int32 NumberOfNewEdges);
 	void ReserveNewPolygonGroups(int32 NumberOfNewPolygonGroups);
 	void ReserveNewPolygons(const int32 NumberOfNewPolygons);
@@ -130,6 +130,7 @@ public:
 		return GetDefaultObjImpl<UMeshDescriptionBase>();
 	}
 };
+DUMPER7_ASSERTS_UMeshDescriptionBase;
 
 // Class MeshDescription.MeshDescriptionBaseBulkData
 // 0x0000 (0x0028 - 0x0028)
@@ -149,5 +150,6 @@ public:
 		return GetDefaultObjImpl<UMeshDescriptionBaseBulkData>();
 	}
 };
+DUMPER7_ASSERTS_UMeshDescriptionBaseBulkData;
 
 SDK_NAMESPACE_END

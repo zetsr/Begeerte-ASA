@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHM_TPV_Empty_PoseLayer_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HM_TPV_Empty_PoseLayer_AnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HM_TPV_Empty_PoseLayer_AnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::HM_TPV_Empty_PoseLayer_AnimBP_C_AnimGraph Parms{};
 

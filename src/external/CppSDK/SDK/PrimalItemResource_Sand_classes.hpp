@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Sand_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Sand_C;
 
 SDK_NAMESPACE_END

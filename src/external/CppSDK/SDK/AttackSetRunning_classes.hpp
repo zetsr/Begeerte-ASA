@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UAttackSetRunning_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_AttackSetRunning(int32 EntryPoint);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UAttackSetRunning_C>();
 	}
 };
+DUMPER7_ASSERTS_UAttackSetRunning_C;
 
 SDK_NAMESPACE_END

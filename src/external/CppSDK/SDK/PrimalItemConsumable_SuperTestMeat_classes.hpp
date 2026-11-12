@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_SuperTestMeat_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_SuperTestMeat_C;
 
 SDK_NAMESPACE_END

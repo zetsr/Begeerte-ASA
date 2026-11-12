@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -31,6 +31,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntPoint                              CallFunc_GetDesktopResolution_ReturnValue;         // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_ApplySomePCDefaults;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.AttemptUninstallMod
 // 0x0610 (0x0610 - 0x0000)
@@ -39,6 +40,7 @@ struct BP_CFCorePluginManager_C_AttemptUninstallMod final
 public:
 	struct FInstallProgressMod                    ModDetails_0;                                      // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_AttemptUninstallMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Calculate Total Update Size Of Mods
 // 0x0680 (0x0680 - 0x0000)
@@ -63,6 +65,7 @@ public:
 	uint8                                         Pad_675[0x3];                                      // 0x0675(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0678(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Calculate_Total_Update_Size_Of_Mods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.CreateNotifManager
 // 0x0010 (0x0010 - 0x0000)
@@ -73,6 +76,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_CreateNotifManager;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.CreateSaveFile
 // 0x0028 (0x0028 - 0x0000)
@@ -88,6 +92,7 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USave_CfCoreUI_C*                       CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_CreateSaveFile;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.DestroyAllUIs
 // 0x0003 (0x0003 - 0x0000)
@@ -98,6 +103,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_DestroyAllUIs;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.DestroyPurchaseResponseHandle
 // 0x0001 (0x0001 - 0x0000)
@@ -106,6 +112,7 @@ struct BP_CFCorePluginManager_C_DestroyPurchaseResponseHandle final
 public:
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_DestroyPurchaseResponseHandle;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On CFCore Init Error
 // 0x0038 (0x0038 - 0x0000)
@@ -114,6 +121,7 @@ struct BP_CFCorePluginManager_C_Event_On_CFCore_Init_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_CFCore_Init_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Get User Info
 // 0x0090 (0x0090 - 0x0000)
@@ -122,6 +130,7 @@ struct BP_CFCorePluginManager_C_Event_On_Get_User_Info final
 public:
 	struct FMe                                    Me;                                                // 0x0000(0x0090)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Get_User_Info;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Get User Info Failed
 // 0x0038 (0x0038 - 0x0000)
@@ -130,6 +139,7 @@ struct BP_CFCorePluginManager_C_Event_On_Get_User_Info_Failed final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Get_User_Info_Failed;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Sync Installed Mods Error
 // 0x0038 (0x0038 - 0x0000)
@@ -138,6 +148,7 @@ struct BP_CFCorePluginManager_C_Event_On_Sync_Installed_Mods_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Sync_Installed_Mods_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event Result
 // 0x0001 (0x0001 - 0x0000)
@@ -146,6 +157,7 @@ struct BP_CFCorePluginManager_C_Event_Result final
 public:
 	bool                                          is_authenticated;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_Result;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.ExecuteUbergraph_BP_CFCorePluginManager
 // 0x25A0 (0x25A0 - 0x0000)
@@ -154,222 +166,223 @@ struct BP_CFCorePluginManager_C_ExecuteUbergraph_BP_CFCorePluginManager final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOwnedPremiumMods                      K2Node_CustomEvent_OwnedPremiumMods;               // 0x0008(0x0020)(ConstParm)
-	class UUI_CFCore_Prompt_Uninstall_C*          CallFunc_Create_ReturnValue;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FModsDirInfo& ModsDirInfo)> K2Node_CreateDelegate_OutputDelegate_1;  // 0x0058(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_2;        // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUI_CFCore_Prompt_UninstallAll_C*       CallFunc_Create_ReturnValue_1;                     // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x00C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_6;        // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const TArray<struct FCategory>& Categories)> K2Node_CreateDelegate_OutputDelegate_7; // 0x00E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_8;        // 0x0108(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FOwnedPremiumMods& OwnedPremiumMods)> K2Node_CreateDelegate_OutputDelegate_9; // 0x0118(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_10;       // 0x013C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_11;           // 0x014C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_12;           // 0x015C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x0180(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUI_CFCore_TermsAndConditions_C*        CallFunc_Create_ReturnValue_2;                     // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_14;           // 0x0198(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_2;        // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUI_CFCore_ModPage_C*                   CallFunc_CreateModPageFromID_ReturnValue;          // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int64                                         K2Node_CustomEvent_ServerId_1;                     // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         K2Node_CustomEvent_ServerId;                       // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_15;           // 0x01CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CFCore_ServerModsWidget_C*          CallFunc_Create_ReturnValue_3;                     // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FModsDirInfo& ModsDirInfo)> K2Node_CreateDelegate_OutputDelegate_16; // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int64                                         K2Node_CustomEvent_modId;                          // 0x01F8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int64>                                 K2Node_CustomEvent_ModsId;                         // 0x0200(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int64>                                 K2Node_MakeArray_Array;                            // 0x0220(0x0010)(ReferenceParm)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_17;           // 0x0230(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FCFCoreError                           K2Node_CustomEvent_error_9;                        // 0x0240(0x0038)(ConstParm)
-	struct FCFCoreSettings                        CallFunc_MakeSettingsFromProjectConfig_ReturnValue; // 0x0278(0x0160)()
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBindButtonSystem*                      CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RegisterModelClass_ReturnValue;           // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x03F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_is_authenticated;               // 0x0404(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405[0x3];                                      // 0x0405(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCFCoreError                           K2Node_CustomEvent_error_8;                        // 0x0410(0x0038)(ConstParm)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_18;       // 0x0448(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FMe                                    K2Node_CustomEvent_me;                             // 0x0458(0x0090)(ConstParm)
-	struct FCFCoreError                           K2Node_CustomEvent_error_7;                        // 0x04E8(0x0038)(ConstParm)
-	TDelegate<void(const TArray<int64>& modIds)>  K2Node_CreateDelegate_OutputDelegate_19;           // 0x0520(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_20;           // 0x0530(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0540(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_21;       // 0x0548(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& URL)>     K2Node_CreateDelegate_OutputDelegate_22;           // 0x0558(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FCFCoreError                           K2Node_CustomEvent_error_6;                        // 0x0568(0x0038)(ConstParm)
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_6;         // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x05A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_7;         // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_url;                            // 0x05B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FCFCoreError                           K2Node_CustomEvent_error_5;                        // 0x05C8(0x0038)(ConstParm)
-	bool                                          CallFunc_CanLaunchURL_ReturnValue;                 // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_8;         // 0x0608(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_23;       // 0x0610(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_24;           // 0x0620(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_6;   // 0x0630(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<int64>                                 K2Node_CustomEvent_ModIds;                         // 0x0638(0x0010)(ConstParm, ReferenceParm)
-	struct FCFCoreError                           K2Node_CustomEvent_error_4;                        // 0x0648(0x0038)(ConstParm)
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_9;         // 0x0680(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_25;       // 0x0688(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FMe& Me)>         K2Node_CreateDelegate_OutputDelegate_26;           // 0x0698(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x06A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A9[0x7];                                      // 0x06A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int64>                                 K2Node_CustomEvent_PurchasedMods;                  // 0x06B0(0x0010)(ConstParm, ReferenceParm)
-	struct FGenPremiumCheckoutUrlRequest          K2Node_MakeStruct_GenPremiumCheckoutUrlRequest;    // 0x06C0(0x0078)()
-	bool                                          CallFunc_DidAllTheModsGetBought_ReturnValue;       // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_739[0x3];                                      // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_27;       // 0x073C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74C[0x4];                                      // 0x074C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_10;        // 0x0750(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_3;        // 0x0758(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_4;        // 0x0760(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_28;           // 0x0768(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool is_authenticated)>        K2Node_CreateDelegate_OutputDelegate_29;           // 0x0778(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_789[0x7];                                      // 0x0789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FModsDirInfo                           K2Node_CustomEvent_ModsDirInfo_1;                  // 0x0790(0x0020)(ConstParm)
-	struct FCFCoreError                           K2Node_CustomEvent_error_3;                        // 0x07B0(0x0038)(ConstParm)
-	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_30;       // 0x07E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_31;           // 0x07F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Is_There_Enough_Space_to_Install_Mod_EnoughSpace; // 0x0809(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_80A[0x6];                                      // 0x080A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUI_CFCore_NotificationManager_C*       CallFunc_GetNotifManager_Output;                   // 0x0810(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_819[0x7];                                      // 0x0819(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCategory                              CallFunc_Array_Get_Item;                           // 0x0820(0x0078)()
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0898(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x089C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x089D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x089E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89F[0x1];                                      // 0x089F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x08A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x08A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x08A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A9[0x3];                                      // 0x08A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x08AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInstallProgressMod                    K2Node_CustomEvent_ModInfo;                        // 0x08B0(0x0610)(ConstParm, ContainsInstancedReference)
-	struct FInstallProgressMod                    K2Node_CustomEvent_ModDetails;                     // 0x0EC0(0x0610)(ConstParm, ContainsInstancedReference)
-	bool                                          CallFunc_GetIsModPaidStatus_Premium;               // 0x14D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsModPaidStatus_Is_Freemium;           // 0x14D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsModPaidStatus_Purchased;             // 0x14D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14D3[0x5];                                     // 0x14D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetIsModPaidStatus_Tier_Price;            // 0x14D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetIsModPaidStatus_Currency_Symbol;       // 0x14E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FPremiumDetailsPlatformData            CallFunc_GetIsModPaidStatus_Platform_Data;         // 0x14F0(0x0010)()
-	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x1500(0x0020)()
-	struct FKey                                   K2Node_InputKeyEvent_Key_6;                        // 0x1520(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1539[0x7];                                     // 0x1539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_11;        // 0x1540(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputKeyEvent_Key_7;                        // 0x1548(0x0018)(HasGetValueTypeHash)
-	struct FTransform                             Temp_struct_Variable;                              // 0x1560(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMediaSoundComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x15C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x15C8(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x15D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_StringLimit_NewString;                    // 0x15E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x15F8(0x0010)()
-	class FString                                 CallFunc_StringLimit_NewString_1;                  // 0x1608(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x1618(0x0010)()
-	TArray<struct FInstallProgressMod>            K2Node_CustomEvent_ModsToUpdate;                   // 0x1628(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	struct FInstallProgressMod                    CallFunc_Array_Get_Item_1;                         // 0x1638(0x0610)(ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1C48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4C[0x4];                                     // 0x1C4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Calculate_Total_Update_Size_Of_Mods_Size; // 0x1C50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x1C58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_Int64Int64_ReturnValue;           // 0x1C59(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C5A[0x6];                                     // 0x1C5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUI_CFCore_NotificationManager_C*       CallFunc_GetNotifManager_Output_1;                 // 0x1C60(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FModsDirInfo                           K2Node_CustomEvent_ModsDirInfo;                    // 0x1C68(0x0020)(ConstParm)
-	struct FCFCoreError                           K2Node_CustomEvent_error_2;                        // 0x1C88(0x0038)(ConstParm)
-	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x1CC0(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x1CD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x1CD9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CDA[0x6];                                     // 0x1CDA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUI_CFCore_StoreMenu_C*                 CallFunc_Create_ReturnValue_4;                     // 0x1CE0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FInstallProgressMod>            K2Node_CustomEvent_Array;                          // 0x1CE8(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	struct FInstallProgressMod                    CallFunc_Array_Get_Item_2;                         // 0x1CF8(0x0610)(ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x2308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x230C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_230D[0x3];                                     // 0x230D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCFCoreError                           K2Node_CustomEvent_error_1;                        // 0x2310(0x0038)(ConstParm)
-	TDelegate<void(const TArray<int64>& ModsId)>  K2Node_CreateDelegate_OutputDelegate_32;           // 0x2348(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const int64& modId)>           K2Node_CreateDelegate_OutputDelegate_33;           // 0x2358(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FInstalledModProperties>        K2Node_CustomEvent_InInstalledModsProperties;      // 0x2368(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x2378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x237C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_237D[0x3];                                     // 0x237D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x2380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2384[0x4];                                     // 0x2384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_7;   // 0x2388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x2390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCFCoreGetCategoriesFilter             CallFunc_MakeGetCategoriesFilter_ReturnValue;      // 0x2394(0x0008)(NoDestructor)
-	uint8                                         Pad_239C[0x4];                                     // 0x239C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCategory>                      K2Node_CustomEvent_categories;                     // 0x23A0(0x0010)(ConstParm, ReferenceParm)
-	struct FKey                                   K2Node_InputKeyEvent_Key_1;                        // 0x23B0(0x0018)(HasGetValueTypeHash)
-	struct FCategory                              CallFunc_Array_Get_Item_3;                         // 0x23C8(0x0078)()
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x2440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x2444(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2445[0x3];                                     // 0x2445(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputKeyEvent_Key_2;                        // 0x2448(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputKeyEvent_Key_3;                        // 0x2460(0x0018)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x2478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247C[0x4];                                     // 0x247C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCategory                              CallFunc_Array_Get_Item_4;                         // 0x2480(0x0078)()
-	struct FCFCoreError                           K2Node_CustomEvent_error;                          // 0x24F8(0x0038)(ConstParm)
-	struct FKey                                   K2Node_InputKeyEvent_Key_4;                        // 0x2530(0x0018)(HasGetValueTypeHash)
-	struct FKey                                   K2Node_InputKeyEvent_Key_5;                        // 0x2548(0x0018)(HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x2560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x2564(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2565[0x3];                                     // 0x2565(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x2568(0x0010)(ConstParm)
-	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x2578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x2580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2581[0x7];                                     // 0x2581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue_1; // 0x2588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUI_CFCore_Prompt_Uninstall_C*          CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FModsDirInfo& ModsDirInfo)> K2Node_CreateDelegate_OutputDelegate_1;  // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_2;        // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUI_CFCore_Prompt_UninstallAll_C*       CallFunc_Create_ReturnValue_1;                     // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_6;        // 0x00B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const TArray<struct FCategory>& Categories)> K2Node_CreateDelegate_OutputDelegate_7; // 0x00C4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_8;        // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FOwnedPremiumMods& OwnedPremiumMods)> K2Node_CreateDelegate_OutputDelegate_9; // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_10;       // 0x011C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_11;           // 0x012C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 ServerId)>               K2Node_CreateDelegate_OutputDelegate_12;           // 0x013C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x0160(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUI_CFCore_TermsAndConditions_C*        CallFunc_Create_ReturnValue_2;                     // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_14;           // 0x0178(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_2;        // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUI_CFCore_ModPage_C*                   CallFunc_CreateModPageFromID_ReturnValue;          // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int64                                         K2Node_CustomEvent_ServerId_1;                     // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         K2Node_CustomEvent_ServerId;                       // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int64 ServerId)>               K2Node_CreateDelegate_OutputDelegate_15;           // 0x01AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CFCore_ServerModsWidget_C*          CallFunc_Create_ReturnValue_3;                     // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FModsDirInfo& ModsDirInfo)> K2Node_CreateDelegate_OutputDelegate_16; // 0x01C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int64                                         K2Node_CustomEvent_ModId;                          // 0x01D8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int64>                                 K2Node_CustomEvent_ModsId;                         // 0x01E0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int64>                                 K2Node_MakeArray_Array;                            // 0x0200(0x0010)(ReferenceParm)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_17;           // 0x0210(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FCFCoreError                           K2Node_CustomEvent_error_9;                        // 0x0220(0x0038)(ConstParm)
+	struct FCFCoreSettings                        CallFunc_MakeSettingsFromProjectConfig_ReturnValue; // 0x0258(0x0160)()
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x03B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBindButtonSystem*                      CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x03C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RegisterModelClass_ReturnValue;           // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_is_authenticated;               // 0x03E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E5[0x3];                                      // 0x03E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EC[0x4];                                      // 0x03EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCFCoreError                           K2Node_CustomEvent_error_8;                        // 0x03F0(0x0038)(ConstParm)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_18;       // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FMe                                    K2Node_CustomEvent_me;                             // 0x0438(0x0090)(ConstParm)
+	struct FCFCoreError                           K2Node_CustomEvent_error_7;                        // 0x04C8(0x0038)(ConstParm)
+	TDelegate<void(const TArray<int64>& modIds)>  K2Node_CreateDelegate_OutputDelegate_19;           // 0x0500(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_20;           // 0x0510(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0520(0x0008)(NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_21;       // 0x0528(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& URL)>     K2Node_CreateDelegate_OutputDelegate_22;           // 0x0538(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FCFCoreError                           K2Node_CustomEvent_error_6;                        // 0x0548(0x0038)(ConstParm)
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_6;         // 0x0580(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_7;         // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_url;                            // 0x0598(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FCFCoreError                           K2Node_CustomEvent_error_5;                        // 0x05A8(0x0038)(ConstParm)
+	bool                                          CallFunc_CanLaunchURL_ReturnValue;                 // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_8;         // 0x05E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_23;       // 0x05F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_24;           // 0x0600(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_6;   // 0x0610(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<int64>                                 K2Node_CustomEvent_ModIds;                         // 0x0618(0x0010)(ConstParm, ReferenceParm)
+	struct FCFCoreError                           K2Node_CustomEvent_error_4;                        // 0x0628(0x0038)(ConstParm)
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_9;         // 0x0660(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_25;       // 0x0668(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FMe& Me)>         K2Node_CreateDelegate_OutputDelegate_26;           // 0x0678(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_689[0x7];                                      // 0x0689(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int64>                                 K2Node_CustomEvent_PurchasedMods;                  // 0x0690(0x0010)(ConstParm, ReferenceParm)
+	struct FGenPremiumCheckoutUrlRequest          K2Node_MakeStruct_GenPremiumCheckoutUrlRequest;    // 0x06A0(0x0078)()
+	bool                                          CallFunc_DidAllTheModsGetBought_ReturnValue;       // 0x0718(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_719[0x3];                                      // 0x0719(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_27;       // 0x071C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72C[0x4];                                      // 0x072C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_10;        // 0x0730(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_3;        // 0x0738(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_4;        // 0x0740(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_28;           // 0x0748(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool is_authenticated)>        K2Node_CreateDelegate_OutputDelegate_29;           // 0x0758(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_769[0x7];                                      // 0x0769(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModsDirInfo                           K2Node_CustomEvent_ModsDirInfo_1;                  // 0x0770(0x0020)(ConstParm)
+	struct FCFCoreError                           K2Node_CustomEvent_error_3;                        // 0x0790(0x0038)(ConstParm)
+	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_30;       // 0x07C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_31;           // 0x07D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x07E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Is_There_Enough_Space_to_Install_Mod_EnoughSpace; // 0x07E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EA[0x6];                                      // 0x07EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUI_CFCore_NotificationManager_C*       CallFunc_GetNotifManager_Output;                   // 0x07F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x07F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F9[0x7];                                      // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCategory                              CallFunc_Array_Get_Item;                           // 0x0800(0x0078)()
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0878(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x087C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x087D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x087E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_87F[0x1];                                      // 0x087F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0880(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0884(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0888(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_889[0x3];                                      // 0x0889(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x088C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInstallProgressMod                    K2Node_CustomEvent_ModInfo;                        // 0x0890(0x0610)(ConstParm, ContainsInstancedReference)
+	struct FInstallProgressMod                    K2Node_CustomEvent_ModDetails;                     // 0x0EA0(0x0610)(ConstParm, ContainsInstancedReference)
+	bool                                          CallFunc_GetIsModPaidStatus_Premium;               // 0x14B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsModPaidStatus_Is_Freemium;           // 0x14B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsModPaidStatus_Purchased;             // 0x14B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14B3[0x5];                                     // 0x14B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetIsModPaidStatus_Tier_Price;            // 0x14B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetIsModPaidStatus_Currency_Symbol;       // 0x14C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FPremiumDetailsPlatformData            CallFunc_GetIsModPaidStatus_Platform_Data;         // 0x14D0(0x0010)()
+	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x14E0(0x0020)()
+	struct FKey                                   K2Node_InputKeyEvent_Key_6;                        // 0x1500(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1519[0x7];                                     // 0x1519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue_11;        // 0x1520(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputKeyEvent_Key_7;                        // 0x1528(0x0018)(HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable;                              // 0x1540(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMediaSoundComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x15A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x15A8(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x15B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_StringLimit_NewString;                    // 0x15C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x15D8(0x0010)()
+	class FString                                 CallFunc_StringLimit_NewString_1;                  // 0x15E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x15F8(0x0010)()
+	TArray<struct FInstallProgressMod>            K2Node_CustomEvent_ModsToUpdate;                   // 0x1608(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	struct FInstallProgressMod                    CallFunc_Array_Get_Item_1;                         // 0x1618(0x0610)(ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x1C28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C2C[0x4];                                     // 0x1C2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Calculate_Total_Update_Size_Of_Mods_Size; // 0x1C30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x1C38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_Int64Int64_ReturnValue;           // 0x1C39(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C3A[0x6];                                     // 0x1C3A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUI_CFCore_NotificationManager_C*       CallFunc_GetNotifManager_Output_1;                 // 0x1C40(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FModsDirInfo                           K2Node_CustomEvent_ModsDirInfo;                    // 0x1C48(0x0020)(ConstParm)
+	struct FCFCoreError                           K2Node_CustomEvent_error_2;                        // 0x1C68(0x0038)(ConstParm)
+	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x1CA0(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x1CB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x1CB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CBA[0x6];                                     // 0x1CBA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUI_CFCore_StoreMenu_C*                 CallFunc_Create_ReturnValue_4;                     // 0x1CC0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FInstallProgressMod>            K2Node_CustomEvent_Array;                          // 0x1CC8(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	struct FInstallProgressMod                    CallFunc_Array_Get_Item_2;                         // 0x1CD8(0x0610)(ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x22E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x22EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22ED[0x3];                                     // 0x22ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCFCoreError                           K2Node_CustomEvent_error_1;                        // 0x22F0(0x0038)(ConstParm)
+	TDelegate<void(const TArray<int64>& ModsId)>  K2Node_CreateDelegate_OutputDelegate_32;           // 0x2328(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const int64& modId)>           K2Node_CreateDelegate_OutputDelegate_33;           // 0x2338(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FInstalledModProperties>        K2Node_CustomEvent_InInstalledModsProperties;      // 0x2348(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x2358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x235C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_235D[0x3];                                     // 0x235D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x2360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2364[0x4];                                     // 0x2364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_7;   // 0x2368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x2370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCFCoreGetCategoriesFilter             CallFunc_MakeGetCategoriesFilter_ReturnValue;      // 0x2374(0x0008)(NoDestructor)
+	uint8                                         Pad_237C[0x4];                                     // 0x237C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCategory>                      K2Node_CustomEvent_categories;                     // 0x2380(0x0010)(ConstParm, ReferenceParm)
+	struct FKey                                   K2Node_InputKeyEvent_Key_1;                        // 0x2390(0x0018)(HasGetValueTypeHash)
+	struct FCategory                              CallFunc_Array_Get_Item_3;                         // 0x23A8(0x0078)()
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x2420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x2424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2425[0x3];                                     // 0x2425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputKeyEvent_Key_2;                        // 0x2428(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputKeyEvent_Key_3;                        // 0x2440(0x0018)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x2458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_245C[0x4];                                     // 0x245C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCategory                              CallFunc_Array_Get_Item_4;                         // 0x2460(0x0078)()
+	struct FCFCoreError                           K2Node_CustomEvent_error;                          // 0x24D8(0x0038)(ConstParm)
+	struct FKey                                   K2Node_InputKeyEvent_Key_4;                        // 0x2510(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_InputKeyEvent_Key_5;                        // 0x2528(0x0018)(HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x2540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x2544(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2545[0x3];                                     // 0x2545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x2548(0x0010)(ConstParm)
+	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x2558(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x2560(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2561[0x7];                                     // 0x2561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue_1; // 0x2568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOwnedPremiumMods                      K2Node_CustomEvent_OwnedPremiumMods;               // 0x2570(0x0020)(ConstParm)
 	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x2590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_ExecuteUbergraph_BP_CFCorePluginManager;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.FailedPremiumModsChecks
 // 0x0038 (0x0038 - 0x0000)
@@ -378,6 +391,7 @@ struct BP_CFCorePluginManager_C_FailedPremiumModsChecks final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_FailedPremiumModsChecks;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InitSoundMediaComponent
 // 0x0070 (0x0070 - 0x0000)
@@ -389,6 +403,7 @@ public:
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaSoundComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InitSoundMediaComponent;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Eight_K2Node_InputKeyEvent_2
 // 0x0018 (0x0018 - 0x0000)
@@ -397,6 +412,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Eight_K2Node_InputKeyEvent_2 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Eight_K2Node_InputKeyEvent_2;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Five_K2Node_InputKeyEvent_0
 // 0x0018 (0x0018 - 0x0000)
@@ -405,6 +421,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Five_K2Node_InputKeyEvent_0 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Five_K2Node_InputKeyEvent_0;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Four_K2Node_InputKeyEvent_4
 // 0x0018 (0x0018 - 0x0000)
@@ -413,6 +430,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Four_K2Node_InputKeyEvent_4 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Four_K2Node_InputKeyEvent_4;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Nine_K2Node_InputKeyEvent_1
 // 0x0018 (0x0018 - 0x0000)
@@ -421,6 +439,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Nine_K2Node_InputKeyEvent_1 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Nine_K2Node_InputKeyEvent_1;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_One_K2Node_InputKeyEvent_7
 // 0x0018 (0x0018 - 0x0000)
@@ -429,6 +448,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_One_K2Node_InputKeyEvent_7 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_One_K2Node_InputKeyEvent_7;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Seven_K2Node_InputKeyEvent_3
 // 0x0018 (0x0018 - 0x0000)
@@ -437,6 +457,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Seven_K2Node_InputKeyEvent_3 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Seven_K2Node_InputKeyEvent_3;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Three_K2Node_InputKeyEvent_5
 // 0x0018 (0x0018 - 0x0000)
@@ -445,6 +466,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Three_K2Node_InputKeyEvent_5 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Three_K2Node_InputKeyEvent_5;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Two_K2Node_InputKeyEvent_6
 // 0x0018 (0x0018 - 0x0000)
@@ -453,6 +475,7 @@ struct BP_CFCorePluginManager_C_InpActEvt_Two_K2Node_InputKeyEvent_6 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Two_K2Node_InputKeyEvent_6;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.IsModPurchased
 // 0x0678 (0x0678 - 0x0000)
@@ -473,6 +496,7 @@ public:
 	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x0650(0x0020)()
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_IsModPurchased;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnClassCategoriesInfoFound
 // 0x0010 (0x0010 - 0x0000)
@@ -481,6 +505,7 @@ struct BP_CFCorePluginManager_C_OnClassCategoriesInfoFound final
 public:
 	TArray<struct FCategory>                      Categories;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnClassCategoriesInfoFound;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnClassCategoriesInfoFound_Error
 // 0x0038 (0x0038 - 0x0000)
@@ -489,6 +514,7 @@ struct BP_CFCorePluginManager_C_OnClassCategoriesInfoFound_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnClassCategoriesInfoFound_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnDiscSpaceAvailable
 // 0x0020 (0x0020 - 0x0000)
@@ -497,6 +523,7 @@ struct BP_CFCorePluginManager_C_OnDiscSpaceAvailable final
 public:
 	struct FModsDirInfo                           ModsDirInfo;                                       // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnDiscSpaceAvailable;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnDiscSpaceCheckFail
 // 0x0038 (0x0038 - 0x0000)
@@ -505,6 +532,7 @@ struct BP_CFCorePluginManager_C_OnDiscSpaceCheckFail final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnDiscSpaceCheckFail;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorGeneratePremium
 // 0x0038 (0x0038 - 0x0000)
@@ -513,6 +541,7 @@ struct BP_CFCorePluginManager_C_OnErrorGeneratePremium final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorGeneratePremium;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorSpaceCheck
 // 0x0038 (0x0038 - 0x0000)
@@ -521,6 +550,7 @@ struct BP_CFCorePluginManager_C_OnErrorSpaceCheck final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorSpaceCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorUpdateInstalledModProperties
 // 0x0038 (0x0038 - 0x0000)
@@ -529,6 +559,7 @@ struct BP_CFCorePluginManager_C_OnErrorUpdateInstalledModProperties final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorUpdateInstalledModProperties;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnFailGetMyPremiumMods
 // 0x0038 (0x0038 - 0x0000)
@@ -537,22 +568,25 @@ struct BP_CFCorePluginManager_C_OnFailGetMyPremiumMods final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnFailGetMyPremiumMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnJoin
 // 0x0008 (0x0008 - 0x0000)
 struct BP_CFCorePluginManager_C_OnJoin final
 {
 public:
-	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnJoin;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnReportFavorite
 // 0x0008 (0x0008 - 0x0000)
 struct BP_CFCorePluginManager_C_OnReportFavorite final
 {
 public:
-	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         ServerId;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnReportFavorite;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessGeneratePremium
 // 0x0010 (0x0010 - 0x0000)
@@ -561,6 +595,7 @@ struct BP_CFCorePluginManager_C_OnSuccessGeneratePremium final
 public:
 	class FString                                 URL;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessGeneratePremium;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessGetMyPremiumMods
 // 0x0020 (0x0020 - 0x0000)
@@ -569,6 +604,7 @@ struct BP_CFCorePluginManager_C_OnSuccessGetMyPremiumMods final
 public:
 	struct FOwnedPremiumMods                      OwnedPremiumMods;                                  // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessGetMyPremiumMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessPremiumModsCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -577,6 +613,7 @@ struct BP_CFCorePluginManager_C_OnSuccessPremiumModsCheck final
 public:
 	TArray<int64>                                 modIds;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessPremiumModsCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessSpaceCheck
 // 0x0020 (0x0020 - 0x0000)
@@ -585,6 +622,7 @@ struct BP_CFCorePluginManager_C_OnSuccessSpaceCheck final
 public:
 	struct FModsDirInfo                           ModsDirInfo;                                       // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessSpaceCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurchaseModsWithIds
 // 0x0010 (0x0010 - 0x0000)
@@ -593,6 +631,7 @@ struct BP_CFCorePluginManager_C_PurchaseModsWithIds final
 public:
 	TArray<int64>                                 PurchasedMods;                                     // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurchaseModsWithIds;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurcherseMod
 // 0x0008 (0x0008 - 0x0000)
@@ -601,6 +640,7 @@ struct BP_CFCorePluginManager_C_PurcherseMod final
 public:
 	int64                                         modId;                                             // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurcherseMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurcherseMods
 // 0x0010 (0x0010 - 0x0000)
@@ -609,6 +649,7 @@ struct BP_CFCorePluginManager_C_PurcherseMods final
 public:
 	TArray<int64>                                 ModsId;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurcherseMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.RequestInstallMod
 // 0x0610 (0x0610 - 0x0000)
@@ -617,6 +658,7 @@ struct BP_CFCorePluginManager_C_RequestInstallMod final
 public:
 	struct FInstallProgressMod                    ModInfo;                                           // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_RequestInstallMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UninstallMods
 // 0x0010 (0x0010 - 0x0000)
@@ -625,6 +667,7 @@ struct BP_CFCorePluginManager_C_UninstallMods final
 public:
 	TArray<struct FInstallProgressMod>            Array;                                             // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UninstallMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UpdateModEnabledStatuses
 // 0x0010 (0x0010 - 0x0000)
@@ -633,6 +676,7 @@ struct BP_CFCorePluginManager_C_UpdateModEnabledStatuses final
 public:
 	TArray<struct FInstalledModProperties>        InInstalledModsProperties;                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UpdateModEnabledStatuses;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UpdateMods
 // 0x0010 (0x0010 - 0x0000)
@@ -641,6 +685,7 @@ struct BP_CFCorePluginManager_C_UpdateMods final
 public:
 	TArray<struct FInstallProgressMod>            ModsToUpdate;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UpdateMods;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

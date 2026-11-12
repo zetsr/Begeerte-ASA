@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DestroyedMeshBase.DestroyedMeshBase_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x04B8 - 0x04B8)
 class ADestroyedMeshBase_C final : public ADestroyedMeshActor
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<ADestroyedMeshBase_C>();
 	}
 };
+DUMPER7_ASSERTS_ADestroyedMeshBase_C;
 
 SDK_NAMESPACE_END

@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class DataflowEnginePlugin.DataflowActor
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class ADataflowActor final : public AActor
 {
 public:
-	class UDataflowComponent*                     DataflowComponent;                                 // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UDataflowComponent*                     DataflowComponent;                                 // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -36,13 +36,14 @@ public:
 		return GetDefaultObjImpl<ADataflowActor>();
 	}
 };
+DUMPER7_ASSERTS_ADataflowActor;
 
 // Class DataflowEnginePlugin.DataflowComponent
-// 0x0150 (0x0770 - 0x0620)
+// 0x0150 (0x0800 - 0x06B0)
 class UDataflowComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_620[0x150];                                    // 0x0620(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B0[0x148];                                    // 0x06B0(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -58,5 +59,6 @@ public:
 		return GetDefaultObjImpl<UDataflowComponent>();
 	}
 };
+DUMPER7_ASSERTS_UDataflowComponent;
 
 SDK_NAMESPACE_END

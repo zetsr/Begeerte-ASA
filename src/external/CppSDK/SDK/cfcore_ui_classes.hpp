@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "InputCore_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
+#include "UMG_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
+#include "cfcore_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -51,16 +51,17 @@ public:
 		return GetDefaultObjImpl<UBindButtonSystem>();
 	}
 };
+DUMPER7_ASSERTS_UBindButtonSystem;
 
 // Class cfcore_ui.CFCoreButtonImage
-// 0x0160 (0x04A0 - 0x0340)
+// 0x0160 (0x04B0 - 0x0350)
 class UCFCoreButtonImage final : public UImage
 {
 public:
-	bool                                          UseDefaultBrushOnPC;                               // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            PlayStationButtonImage;                            // 0x0340(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            XboxButtonImage;                                   // 0x03F0(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          UseDefaultBrushOnPC;                               // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            PlayStationButtonImage;                            // 0x0350(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            XboxButtonImage;                                   // 0x0400(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -76,6 +77,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreButtonImage>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreButtonImage;
 
 // Class cfcore_ui.CFCoreGamepadCursorSettings
 // 0x00C0 (0x00F8 - 0x0038)
@@ -109,6 +111,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreGamepadCursorSettings>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreGamepadCursorSettings;
 
 // Class cfcore_ui.CFCoreMathHelperFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -134,14 +137,15 @@ public:
 		return GetDefaultObjImpl<UCFCoreMathHelperFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreMathHelperFunctionLibrary;
 
 // Class cfcore_ui.CFCoreRichText
-// 0x0070 (0x08C0 - 0x0850)
+// 0x0070 (0x08D0 - 0x0860)
 class UCFCoreRichText final : public URichTextBlock
 {
 public:
-	TMap<class FString, class UTexture2DDynamic*> ImageMap;                                          // 0x0850(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_8A0[0x20];                                     // 0x08A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class UTexture2DDynamic*> ImageMap;                                          // 0x0860(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_8B0[0x18];                                     // 0x08B0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -157,6 +161,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichText>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreRichText;
 
 // Class cfcore_ui.CFCoreRichTextBlockImageDecorator
 // 0x0028 (0x0058 - 0x0030)
@@ -184,6 +189,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichTextBlockImageDecorator>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreRichTextBlockImageDecorator;
 
 // Class cfcore_ui.CFCoreRichTextBlockICodeBlockDecorator
 // 0x0000 (0x0028 - 0x0028)
@@ -203,6 +209,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichTextBlockICodeBlockDecorator>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreRichTextBlockICodeBlockDecorator;
 
 // Class cfcore_ui.CFCoreThemeSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -225,15 +232,19 @@ public:
 		return GetDefaultObjImpl<UCFCoreThemeSettings>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreThemeSettings;
 
 // Class cfcore_ui.CFCoreUIBaseModel
-// 0x0000 (0x0000 - 0x0000)
-class ICFCoreUIBaseModel final
+// 0x0008 (0x0008 - 0x0000)
+class ICFCoreUIBaseModel
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool OnEventReceived(const EGameModsEvent& evt, const TArray<struct FCFCoreMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList);
 	bool OnEventReceived_Installed(const EGameModsEvent& evt, const TArray<struct FInstalledMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList);
-	bool OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& progress, TArray<struct FInstallProgressMod>* OutModsList);
+	bool OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& Progress, TArray<struct FInstallProgressMod>* OutModsList);
 
 public:
 	static class UClass* StaticClass()
@@ -258,11 +269,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ICFCoreUIBaseModel;
 
 // Class cfcore_ui.CFCoreUIBaseView
-// 0x0000 (0x0000 - 0x0000)
-class ICFCoreUIBaseView final
+// 0x0008 (0x0008 - 0x0000)
+class ICFCoreUIBaseView
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination);
 
@@ -289,6 +304,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ICFCoreUIBaseView;
 
 // Class cfcore_ui.CFCoreUIInstallProgressModHelperFunctionsLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -312,13 +328,14 @@ public:
 		return GetDefaultObjImpl<UCFCoreUIInstallProgressModHelperFunctionsLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreUIInstallProgressModHelperFunctionsLibrary;
 
 // Class cfcore_ui.CFCoreUIModel
 // 0x0058 (0x0080 - 0x0028)
-class UCFCoreUIModel : public UObject
+class UCFCoreUIModel : public UObject, public ICFCoreUIBaseModel
 {
 public:
-	uint8                                         Pad_28[0x58];                                      // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -333,7 +350,13 @@ public:
 	{
 		return GetDefaultObjImpl<UCFCoreUIModel>();
 	}
+
+public:
+	bool OnEventReceived(const EGameModsEvent& evt, const TArray<struct FCFCoreMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList);
+	bool OnEventReceived_Installed(const EGameModsEvent& evt, const TArray<struct FInstalledMod>& InModsList, TArray<struct FInstallProgressMod>* OutModsList);
+	bool OnEventReceived_LibraryProgress(const EGameModsEvent& evt, const struct FLibraryProgress& Progress, TArray<struct FInstallProgressMod>* OutModsList);
 };
+DUMPER7_ASSERTS_UCFCoreUIModel;
 
 // Class cfcore_ui.CFCoreUISubsystem
 // 0x0250 (0x0280 - 0x0030)
@@ -348,7 +371,7 @@ public:
 	TDelegate<void()>                             ModsRatingsInit;                                   // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRatingsInitialized;                               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& productId)> GetPriceOfProductDelegate; // 0x00E8(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& ProductId)> GetPriceOfProductDelegate; // 0x00E8(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F8[0x150];                                     // 0x00F8(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCFCoreSubsystem*                       APISubsystem;                                      // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UObject*>                        Models;                                            // 0x0250(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
@@ -363,7 +386,7 @@ public:
 	void CancelModInstallation(const struct FCFCoreMod& mod);
 	void GetInstalledMods();
 	void GetMyMods();
-	void GetPriceOfProduct(int64 modId, const class FString& productId);
+	void GetPriceOfProduct(int64 modId, const class FString& ProductId);
 	bool InitializeModView(class UObject* View, const struct FCFCoreMod& mod);
 	void InitializeUIController();
 	void InstallMod(const struct FCFCoreMod& mod);
@@ -373,7 +396,7 @@ public:
 	void OnFinishedUpdating(const struct FInstalledMod& UpdatedMod);
 	void OnGetInstalledMods(const TArray<struct FInstalledMod>& installedMods);
 	void OnGetModsByIds(const TArray<struct FCFCoreMod>& mods);
-	void OnInstallProgress(const struct FLibraryProgress& progress);
+	void OnInstallProgress(const struct FLibraryProgress& Progress);
 	void OnModInstallError(const struct FCFCoreError& Error);
 	void OnMyMods(const TArray<struct FCFCoreMod>& mods);
 	void OnRatingsReceived(const struct FMyRatings& ratings);
@@ -417,6 +440,7 @@ public:
 		return GetDefaultObjImpl<UCFCoreUISubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreUISubsystem;
 
 // Class cfcore_ui.CFCoreVirtualCursorFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -441,5 +465,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreVirtualCursorFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UCFCoreVirtualCursorFunctionLibrary;
 
 SDK_NAMESPACE_END

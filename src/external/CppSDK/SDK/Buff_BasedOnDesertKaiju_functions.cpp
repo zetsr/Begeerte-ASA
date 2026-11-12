@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void ABuff_BasedOnDesertKaiju_C::BPDeactivated(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BasedOnDesertKaiju_C", "BPDeactivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BasedOnDesertKaiju_C", "BPDeactivated", FuncInfo);
 
 	Params::Buff_BasedOnDesertKaiju_C_BPDeactivated Parms{};
 
@@ -43,10 +41,8 @@ void ABuff_BasedOnDesertKaiju_C::BPDeactivated(class AActor* ForInstigator)
 
 void ABuff_BasedOnDesertKaiju_C::BPSetupForInstigator(class AActor* ForInstigator)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Buff_BasedOnDesertKaiju_C", "BPSetupForInstigator");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Buff_BasedOnDesertKaiju_C", "BPSetupForInstigator", FuncInfo);
 
 	Params::Buff_BasedOnDesertKaiju_C_BPSetupForInstigator Parms{};
 

@@ -26,10 +26,8 @@ SDK_NAMESPACE_START
 
 class USoundBase* UPrimalItemArmor_BasePants_C::OverrideCrouchingSound(class USoundBase* InSound, bool bIsProne, int32 soundState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_BasePants_C", "OverrideCrouchingSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_BasePants_C", "OverrideCrouchingSound", FuncInfo);
 
 	Params::PrimalItemArmor_BasePants_C_OverrideCrouchingSound Parms{};
 

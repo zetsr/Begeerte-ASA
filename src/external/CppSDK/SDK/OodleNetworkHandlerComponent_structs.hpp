@@ -13,15 +13,6 @@
 
 SDK_NAMESPACE_START
 
-// Enum OodleNetworkHandlerComponent.EOodleNetworkEnableMode
-// NumValues: 0x0003
-enum class EOodleNetworkEnableMode : uint8
-{
-	AlwaysEnabled                            = 0,
-	WhenCompressedPacketReceived             = 1,
-	EOodleNetworkEnableMode_MAX              = 2,
-};
-
 // Enum OodleNetworkHandlerComponent.EOodleNetResult
 // NumValues: 0x0007
 enum class EOodleNetResult : uint8
@@ -33,6 +24,15 @@ enum class EOodleNetResult : uint8
 	OodleBadDecompressedLength               = 4,
 	OodleNoDictionary                        = 5,
 	EOodleNetResult_MAX                      = 6,
+};
+
+// Enum OodleNetworkHandlerComponent.EOodleNetworkEnableMode
+// NumValues: 0x0003
+enum class EOodleNetworkEnableMode : uint8
+{
+	AlwaysEnabled                            = 0,
+	WhenCompressedPacketReceived             = 1,
+	EOodleNetworkEnableMode_MAX              = 2,
 };
 
 SDK_NAMESPACE_END

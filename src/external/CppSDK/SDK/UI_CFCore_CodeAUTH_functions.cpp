@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CodeAUTH_C::BackSpace()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BackSpace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BackSpace", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CFCore_CodeAUTH_C::BackSpace()
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit2_K2Node_ComponentBoundEvent_4_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -57,10 +53,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit2_K2Node_ComponentBound
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit3_K2Node_ComponentBoundEvent_5_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -77,10 +71,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit3_K2Node_ComponentBound
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit4_K2Node_ComponentBoundEvent_6_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -97,10 +89,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit4_K2Node_ComponentBound
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit5_K2Node_ComponentBoundEvent_7_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -117,10 +107,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit5_K2Node_ComponentBound
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_digit6_K2Node_ComponentBoundEvent_8_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -137,10 +125,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_digit6_K2Node_ComponentBound
 
 void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_BndEvt__Verification_UI_EditableText_172_K2Node_ComponentBoundEvent_2_OnEditableTextChangedEvent__DelegateSignature Parms{};
 
@@ -155,10 +141,8 @@ void UUI_CFCore_CodeAUTH_C::BndEvt__Verification_UI_EditableText_172_K2Node_Comp
 
 void UUI_CFCore_CodeAUTH_C::Event_Code_Incorect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "Event Code Incorect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "Event Code Incorect", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +153,8 @@ void UUI_CFCore_CodeAUTH_C::Event_Code_Incorect()
 
 void UUI_CFCore_CodeAUTH_C::Event_Reset_Code_Incorect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "Event Reset Code Incorect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "Event Reset Code Incorect", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -185,10 +167,8 @@ void UUI_CFCore_CodeAUTH_C::Event_Reset_Code_Incorect()
 
 void UUI_CFCore_CodeAUTH_C::ExecuteUbergraph_UI_CFCore_CodeAUTH(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "ExecuteUbergraph_UI_CFCore_CodeAUTH");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "ExecuteUbergraph_UI_CFCore_CodeAUTH", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_ExecuteUbergraph_UI_CFCore_CodeAUTH Parms{};
 
@@ -205,10 +185,8 @@ void UUI_CFCore_CodeAUTH_C::ExecuteUbergraph_UI_CFCore_CodeAUTH(int32 EntryPoint
 
 void UUI_CFCore_CodeAUTH_C::GetDigits(class FString* Digits_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "GetDigits");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "GetDigits", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_GetDigits Parms{};
 
@@ -224,10 +202,8 @@ void UUI_CFCore_CodeAUTH_C::GetDigits(class FString* Digits_0)
 
 void UUI_CFCore_CodeAUTH_C::OnLeftArrow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "OnLeftArrow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "OnLeftArrow", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -242,10 +218,8 @@ void UUI_CFCore_CodeAUTH_C::OnLeftArrow()
 
 struct FEventReply UUI_CFCore_CodeAUTH_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "OnPreviewKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "OnPreviewKeyDown", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_OnPreviewKeyDown Parms{};
 
@@ -263,10 +237,8 @@ struct FEventReply UUI_CFCore_CodeAUTH_C::OnPreviewKeyDown(const struct FGeometr
 
 void UUI_CFCore_CodeAUTH_C::OnRightArrow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "OnRightArrow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "OnRightArrow", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +251,8 @@ void UUI_CFCore_CodeAUTH_C::OnRightArrow()
 
 void UUI_CFCore_CodeAUTH_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_PreConstruct Parms{};
 
@@ -300,10 +270,8 @@ void UUI_CFCore_CodeAUTH_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_CodeAUTH_C::SetDigitToText(int32 Index_0, const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CodeAUTH_C", "SetDigitToText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CodeAUTH_C", "SetDigitToText", FuncInfo);
 
 	Params::UI_CFCore_CodeAUTH_C_SetDigitToText Parms{};
 

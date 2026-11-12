@@ -75,4 +75,14 @@ enum class EEGFSRQualityMode : uint64
 	EEGFSRQualityMode_MAX                    = 5,
 };
 
+// Enum EGFGSRManager.EEGLowLatencySystem
+// NumValues: 0x0004
+enum class EEGLowLatencySystem : uint8
+{
+	None                                     = 0,
+	Reflex                                   = 1,
+	AntiLag2                                 = 2,
+	EEGLowLatencySystem_MAX                  = 3,
+};
+
 SDK_NAMESPACE_END

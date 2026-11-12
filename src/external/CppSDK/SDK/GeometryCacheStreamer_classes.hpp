@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheStreamerSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGeometryCacheStreamerSettings;
 
 SDK_NAMESPACE_END

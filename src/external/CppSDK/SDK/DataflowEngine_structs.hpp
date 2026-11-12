@@ -11,9 +11,40 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "DataflowCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Enum DataflowEngine.EDataflowPathReplaceMethod
+// NumValues: 0x0004
+enum class EDataflowPathReplaceMethod : uint8
+{
+	Anywhere                                 = 0,
+	Beginning                                = 1,
+	End                                      = 2,
+	EDataflowPathReplaceMethod_MAX           = 3,
+};
+
+// Enum DataflowEngine.EDataflowDebugDrawRenderType
+// NumValues: 0x0003
+enum class EDataflowDebugDrawRenderType : uint8
+{
+	Wireframe                                = 0,
+	Shaded                                   = 1,
+	EDataflowDebugDrawRenderType_MAX         = 2,
+};
+
+// Enum DataflowEngine.EDataflowSphereCoveringColorMethod
+// NumValues: 0x0004
+enum class EDataflowSphereCoveringColorMethod : uint8
+{
+	Single                                   = 0,
+	ColorByRadius                            = 1,
+	Random                                   = 2,
+	EDataflowSphereCoveringColorMethod_MAX   = 3,
+};
 
 // Enum DataflowEngine.EDataflowType
 // NumValues: 0x0003
@@ -32,16 +63,313 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStringValuePair;
 
 // ScriptStruct DataflowEngine.DataflowPreviewCacheParams
-// 0x0010 (0x0010 - 0x0000)
+// 0x0024 (0x0024 - 0x0000)
 struct FDataflowPreviewCacheParams final
 {
 public:
 	int32                                         FrameRate;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2f                              TimeRange;                                         // 0x0004(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAsyncCaching;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         SubframeRate;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanEditSubframeRate;                              // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2f                              TimeRange;                                         // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRestartSimulation;                                // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2f                              RestartTimeRange;                                  // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAsyncCaching;                               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAsyncCaching;                                     // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FDataflowPreviewCacheParams;
+
+// ScriptStruct DataflowEngine.DataflowGetAssetPathNode
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowGetAssetPathNode final : public FDataflowNode
+{
+public:
+	struct FDataflowUObjectConvertibleTypes       Asset;                                             // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	class FString                                 Path;                                              // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowGetAssetPathNode;
+
+// ScriptStruct DataflowEngine.DataflowPathReplaceRule
+// 0x0030 (0x0030 - 0x0000)
+struct FDataflowPathReplaceRule final
+{
+public:
+	EDataflowPathReplaceMethod                    Method;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 From;                                              // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 To;                                                // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreCase;                                       // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInsertIfNoFound;                                  // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowPathReplaceRule;
+
+// ScriptStruct DataflowEngine.DataflowPathReplaceNode
+// 0x0030 (0x0218 - 0x01E8)
+struct FDataflowPathReplaceNode final : public FDataflowNode
+{
+public:
+	class FString                                 Path;                                              // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FDataflowPathReplaceRule>       PathRules;                                         // 0x01F8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FDataflowPathReplaceRule>       NameRules;                                         // 0x0208(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowPathReplaceNode;
+
+// ScriptStruct DataflowEngine.DataflowVariable
+// 0x0020 (0x0020 - 0x0000)
+struct FDataflowVariable final
+{
+public:
+	class FName                                   VariableName;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPropertyBagPropertyType                      Type;                                              // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPropertyBagContainerType                     ContainerType;                                     // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowVariable;
+
+// ScriptStruct DataflowEngine.DataflowColorRamp
+// 0x0220 (0x0220 - 0x0000)
+struct alignas(0x08) FDataflowColorRamp final
+{
+public:
+	uint8                                         Pad_0[0x220];                                      // 0x0000(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowColorRamp;
+
+// ScriptStruct DataflowEngine.DataflowLinearColorRamp
+// 0x0220 (0x0220 - 0x0000)
+struct FDataflowLinearColorRamp final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRichCurve                             RichCurves[0x4];                                   // 0x0020(0x0080)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowLinearColorRamp;
+
+// ScriptStruct DataflowEngine.DataflowNodeDebugDrawSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FDataflowNodeDebugDrawSettings final
+{
+public:
+	EDataflowDebugDrawRenderType                  RenderType;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTranslucent;                                      // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Color;                                             // 0x0004(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineWidthMultiplier;                               // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowNodeDebugDrawSettings;
+
+// ScriptStruct DataflowEngine.DataflowNodeSphereCoveringDebugDrawSettings
+// 0x0040 (0x0040 - 0x0000)
+struct FDataflowNodeSphereCoveringDebugDrawSettings final
+{
+public:
+	bool                                          bDisplaySphereCovering;                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataflowDebugDrawRenderType                  RenderType;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTranslucent;                                      // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LineWidthMultiplier;                               // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataflowSphereCoveringColorMethod            ColorMethod;                                       // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Color;                                             // 0x000C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ColorRandomSeed;                                   // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ColorA;                                            // 0x0020(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ColorB;                                            // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowNodeSphereCoveringDebugDrawSettings;
+
+// ScriptStruct DataflowEngine.DataflowProxyElement
+// 0x0008 (0x0068 - 0x0060)
+struct FDataflowProxyElement final : public FDataflowBaseElement
+{
+public:
+	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowProxyElement;
+
+// ScriptStruct DataflowEngine.DataflowDynamicConnections
+// 0x0080 (0x0080 - 0x0000)
+struct FDataflowDynamicConnections final
+{
+public:
+	TArray<struct FDataflowAllTypes>              DynamicProperties;                                 // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_10[0x70];                                      // 0x0010(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowDynamicConnections;
+
+// ScriptStruct DataflowEngine.DataflowVariableOverrides
+// 0x0028 (0x0028 - 0x0000)
+struct FDataflowVariableOverrides final
+{
+public:
+	struct FInstancedPropertyBag                  Variables;                                         // 0x0000(0x0010)(Edit, NativeAccessSpecifierPrivate)
+	TArray<struct FGuid>                          OverriddenVariableGuids;                           // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowVariableOverrides;
+
+// ScriptStruct DataflowEngine.DataflowInstance
+// 0x0040 (0x0040 - 0x0000)
+struct FDataflowInstance
+{
+public:
+	class UDataflow*                              DataflowAsset;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class FName                                   DataflowTerminal;                                  // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FDataflowVariableOverrides             VariableOverrides;                                 // 0x0010(0x0028)(Edit, NativeAccessSpecifierPrivate)
+	class UObject*                                Owner;                                             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowInstance;
+
+// ScriptStruct DataflowEngine.DataflowSkeleton
+// 0x0118 (0x0118 - 0x0000)
+struct alignas(0x08) FDataflowSkeleton final
+{
+public:
+	uint8                                         Pad_0[0x118];                                      // 0x0000(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowSkeleton;
+
+// ScriptStruct DataflowEngine.MergeSkeletonsDataflowNode
+// 0x0148 (0x0330 - 0x01E8)
+struct FMergeSkeletonsDataflowNode final : public FDataflowNode
+{
+public:
+	TArray<struct FDataflowSkeleton>              Skeletons;                                         // 0x01E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FVector                                SharedRootPosition;                                // 0x01F8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bPreserveBoneNames;                                // 0x0210(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowSkeleton                      MergedSkeleton;                                    // 0x0218(0x0118)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FMergeSkeletonsDataflowNode;
+
+// ScriptStruct DataflowEngine.DataflowSubGraphInputNode
+// 0x0098 (0x0280 - 0x01E8)
+struct FDataflowSubGraphInputNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowDynamicConnections            DynamicConnections;                                // 0x01F0(0x0080)(NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  PropertyBag;                                       // 0x0270(0x0010)(Edit, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowSubGraphInputNode;
+
+// ScriptStruct DataflowEngine.DataflowSubGraphOutputNode
+// 0x0098 (0x0280 - 0x01E8)
+struct FDataflowSubGraphOutputNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowDynamicConnections            DynamicConnections;                                // 0x01F0(0x0080)(NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  PropertyBag;                                       // 0x0270(0x0010)(Edit, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowSubGraphOutputNode;
+
+// ScriptStruct DataflowEngine.DataflowSubGraphGetCurrentIndexNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FDataflowSubGraphGetCurrentIndexNode final : public FDataflowNode
+{
+public:
+	int32                                         Index;                                             // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowSubGraphGetCurrentIndexNode;
+
+// ScriptStruct DataflowEngine.DataflowCallSubGraphNode
+// 0x0158 (0x0340 - 0x01E8)
+struct FDataflowCallSubGraphNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x10];                                     // 0x01E8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  SubGraphGuid;                                      // 0x01F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   SubGraphName;                                      // 0x0208(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FDataflowDynamicConnections            DynamicInputs;                                     // 0x0210(0x0080)(NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  InputsPropertyBag;                                 // 0x0290(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowDynamicConnections            DynamicOutputs;                                    // 0x02A0(0x0080)(NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  OutputsPropertyBag;                                // 0x0320(0x0010)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_330[0x10];                                     // 0x0330(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowCallSubGraphNode;
+
+// ScriptStruct DataflowEngine.DataflowTextureTerminalNode
+// 0x0030 (0x0218 - 0x01E8)
+struct FDataflowTextureTerminalNode final : public FDataflowTerminalNode
+{
+public:
+	struct FDataflowImage                         Image;                                             // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	class UTexture2D*                             TextureAsset;                                      // 0x0210(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowTextureTerminalNode;
+
+// ScriptStruct DataflowEngine.DataflowTexture2DTerminalNode
+// 0x0040 (0x0228 - 0x01E8)
+struct FDataflowTexture2DTerminalNode final : public FDataflowTerminalNode
+{
+public:
+	struct FDataflowImage                         Image;                                             // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	class FString                                 AssetPath;                                         // 0x0210(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             TextureAsset;                                      // 0x0220(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowTexture2DTerminalNode;
+
+// ScriptStruct DataflowEngine.DataflowGetTextureAssetNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FDataflowGetTextureAssetNode final : public FDataflowNode
+{
+public:
+	class UTexture2D*                             TextureAsset;                                      // 0x01E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowGetTextureAssetNode;
+
+// ScriptStruct DataflowEngine.DataflowGetTextureAssetFromPathNode
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowGetTextureAssetFromPathNode final : public FDataflowNode
+{
+public:
+	class FString                                 TexturePath;                                       // 0x01E8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             TextureAsset;                                      // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowGetTextureAssetFromPathNode;
+
+// ScriptStruct DataflowEngine.DataflowTextureToImageNode
+// 0x0030 (0x0218 - 0x01E8)
+struct FDataflowTextureToImageNode final : public FDataflowNode
+{
+public:
+	class UTexture2D*                             TextureAsset;                                      // 0x01E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FDataflowImage                         Image;                                             // 0x01F0(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowTextureToImageNode;
+
+// ScriptStruct DataflowEngine.DataflowImageToTextureNode
+// 0x0038 (0x0220 - 0x01E8)
+struct FDataflowImageToTextureNode final : public FDataflowNode
+{
+public:
+	struct FDataflowImage                         Image;                                             // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	class FName                                   TextureName;                                       // 0x0210(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             TransientTexture;                                  // 0x0218(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowImageToTextureNode;
+
+// ScriptStruct DataflowEngine.GetDataflowVariableNode
+// 0x0058 (0x0240 - 0x01E8)
+struct FGetDataflowVariableNode final : public FDataflowNode
+{
+public:
+	struct FDataflowAnyType                       Value;                                             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedPropertyBag                  VariablePropertyBag;                               // 0x01F0(0x0010)(Edit, NativeAccessSpecifierPrivate)
+	class FName                                   VariableName;                                      // 0x0200(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 Category;                                          // 0x0208(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 Description;                                       // 0x0218(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_228[0x18];                                     // 0x0228(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGetDataflowVariableNode;
 
 SDK_NAMESPACE_END

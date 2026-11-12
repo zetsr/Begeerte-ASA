@@ -11,41 +11,16 @@
 #include "Basic.hpp"
 
 #include "MassEntity_classes.hpp"
-#include "Engine_classes.hpp"
 #include "MassSpawner_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class MassGameplayDebug.AssignDebugVisProcessor
-// 0x0328 (0x03F0 - 0x00C8)
-class UAssignDebugVisProcessor final : public UMassObserverProcessor
-{
-public:
-	uint8                                         Pad_C8[0x328];                                     // 0x00C8(0x0328)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AssignDebugVisProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AssignDebugVisProcessor")
-	}
-	static class UAssignDebugVisProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAssignDebugVisProcessor>();
-	}
-};
-
 // Class MassGameplayDebug.DebugVisLocationProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x0000 (0x0100 - 0x0100)
 class UDebugVisLocationProcessor final : public UMassProcessor
 {
-public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -60,14 +35,12 @@ public:
 		return GetDefaultObjImpl<UDebugVisLocationProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UDebugVisLocationProcessor;
 
 // Class MassGameplayDebug.MassProcessor_UpdateDebugVis
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x0000 (0x0100 - 0x0100)
 class UMassProcessor_UpdateDebugVis final : public UMassProcessor
 {
-public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -82,16 +55,15 @@ public:
 		return GetDefaultObjImpl<UMassProcessor_UpdateDebugVis>();
 	}
 };
+DUMPER7_ASSERTS_UMassProcessor_UpdateDebugVis;
 
 // Class MassGameplayDebug.MassDebuggerSubsystem
-// 0x0098 (0x00D0 - 0x0038)
+// 0x0010 (0x0050 - 0x0040)
 class UMassDebuggerSubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         Pad_38[0x80];                                      // 0x0038(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMassDebugVisualizationComponent*       VisualizationComponent;                            // 0x00B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class AMassDebugVisualizer*                   DebugVisualizer;                                   // 0x00C0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UMassDebugVisualizationComponent*       VisualizationComponent;                            // 0x0040(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class AMassDebugVisualizer*                   DebugVisualizer;                                   // 0x0048(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -107,9 +79,10 @@ public:
 		return GetDefaultObjImpl<UMassDebuggerSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UMassDebuggerSubsystem;
 
 // Class MassGameplayDebug.MassDebugVisualizationComponent
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x00F8 - 0x00F8)
 class UMassDebugVisualizationComponent final : public UActorComponent
 {
 public:
@@ -126,9 +99,10 @@ public:
 		return GetDefaultObjImpl<UMassDebugVisualizationComponent>();
 	}
 };
+DUMPER7_ASSERTS_UMassDebugVisualizationComponent;
 
 // Class MassGameplayDebug.MassDebugVisualizationTrait
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UMassDebugVisualizationTrait final : public UMassEntityTraitBase
 {
 public:
@@ -145,9 +119,10 @@ public:
 		return GetDefaultObjImpl<UMassDebugVisualizationTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassDebugVisualizationTrait;
 
 // Class MassGameplayDebug.MassDebugVisualizer
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0498 - 0x0498)
 class AMassDebugVisualizer final : public AActor
 {
 public:
@@ -164,5 +139,6 @@ public:
 		return GetDefaultObjImpl<AMassDebugVisualizer>();
 	}
 };
+DUMPER7_ASSERTS_AMassDebugVisualizer;
 
 SDK_NAMESPACE_END

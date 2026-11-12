@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MassEntity_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MassCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,6 +23,16 @@ struct alignas(0x08) FMassVelocityFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassVelocityFragment;
+
+// ScriptStruct MassMovement.MassDesiredMovementFragment
+// 0x0050 (0x0050 - 0x0000)
+struct alignas(0x10) FMassDesiredMovementFragment final : public FMassFragment
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassDesiredMovementFragment;
 
 // ScriptStruct MassMovement.MassForceFragment
 // 0x0018 (0x0018 - 0x0000)
@@ -31,6 +41,21 @@ struct alignas(0x08) FMassForceFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassForceFragment;
+
+// ScriptStruct MassMovement.MassCodeDrivenMovementTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassCodeDrivenMovementTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassCodeDrivenMovementTag;
+
+// ScriptStruct MassMovement.MassCustomMovementTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassCustomMovementTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassCustomMovementTag;
 
 // ScriptStruct MassMovement.MassMovementStyleRef
 // 0x0018 (0x0018 - 0x0000)
@@ -40,6 +65,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ID;                                                // 0x0008(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassMovementStyleRef;
 
 // ScriptStruct MassMovement.MassMovementStyleSpeedParameters
 // 0x0010 (0x0010 - 0x0000)
@@ -51,6 +77,7 @@ public:
 	float                                         Probability;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassMovementStyleSpeedParameters;
 
 // ScriptStruct MassMovement.MassMovementStyleParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -60,9 +87,10 @@ public:
 	struct FMassMovementStyleRef                  Style;                                             // 0x0000(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FMassMovementStyleSpeedParameters> DesiredSpeeds;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassMovementStyleParameters;
 
 // ScriptStruct MassMovement.MassMovementParameters
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FMassMovementParameters final : public FMassConstSharedFragment
 {
 public:
@@ -73,7 +101,10 @@ public:
 	float                                         HeightSmoothingTime;                               // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMassMovementStyleParameters>   MovementStyles;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIsCodeDrivenMovement;                             // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassMovementParameters;
 
 // ScriptStruct MassMovement.MassMovementStyle
 // 0x0018 (0x0018 - 0x0000)
@@ -83,11 +114,33 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ID;                                                // 0x0008(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassMovementStyle;
 
 // ScriptStruct MassMovement.MassSimpleMovementTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSimpleMovementTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassSimpleMovementTag;
+
+// ScriptStruct MassMovement.SpringMovementSettings
+// 0x000C (0x000C - 0x0000)
+struct FSpringMovementSettings final : public FMassConstSharedFragment
+{
+public:
+	float                                         VelocitySmoothingTime;                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FacingSmoothingTime;                               // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VelocityDeadzoneThreshold;                         // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSpringMovementSettings;
+
+// ScriptStruct MassMovement.SpringMovementRuntime
+// 0x0090 (0x0090 - 0x0000)
+struct alignas(0x10) FSpringMovementRuntime final : public FMassFragment
+{
+public:
+	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSpringMovementRuntime;
 
 SDK_NAMESPACE_END

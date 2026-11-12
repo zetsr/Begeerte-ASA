@@ -14,6 +14,87 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function MeshModelingTools.MeshConstraintProperties.IsPreventNormalFlipsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventNormalFlipsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshConstraintProperties_IsPreventNormalFlipsEnabled;
+
+// Function MeshModelingTools.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventTinyTrianglesEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshConstraintProperties_IsPreventTinyTrianglesEnabled;
+
+// Function MeshModelingTools.MeshVertexPaintToolUtilityActions.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshVertexPaintToolUtilityActions_GetWeightMapsFunc;
+
+// Function MeshModelingTools.MeshVertexPaintToolUtilityActions.GetLODNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct MeshVertexPaintToolUtilityActions_GetLODNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshVertexPaintToolUtilityActions_GetLODNamesFunc;
+
+// Function MeshModelingTools.MeshWeightChannelDensityProperties.GetAttributeNames
+// 0x0010 (0x0010 - 0x0000)
+struct MeshWeightChannelDensityProperties_GetAttributeNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshWeightChannelDensityProperties_GetAttributeNames;
+
+// Function MeshModelingTools.ConvertToPolygonsToolProperties.GetGroupOptionsList
+// 0x0010 (0x0010 - 0x0000)
+struct ConvertToPolygonsToolProperties_GetGroupOptionsList final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ConvertToPolygonsToolProperties_GetGroupOptionsList;
+
+// Function MeshModelingTools.DisplaceMeshCommonProperties.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DisplaceMeshCommonProperties_GetWeightMapsFunc;
+
+// Function MeshModelingTools.SelectiveTessellationProperties.GetMaterialIDsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct SelectiveTessellationProperties_GetMaterialIDsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SelectiveTessellationProperties_GetMaterialIDsFunc;
+
+// Function MeshModelingTools.MeshAttributePaintToolProperties.GetAttributeNames
+// 0x0010 (0x0010 - 0x0000)
+struct MeshAttributePaintToolProperties_GetAttributeNames final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshAttributePaintToolProperties_GetAttributeNames;
+
 // Function MeshModelingTools.ExistingMeshMaterialProperties.GetUVChannelNamesFunc
 // 0x0010 (0x0010 - 0x0000)
 struct ExistingMeshMaterialProperties_GetUVChannelNamesFunc final
@@ -21,6 +102,70 @@ struct ExistingMeshMaterialProperties_GetUVChannelNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ExistingMeshMaterialProperties_GetUVChannelNamesFunc;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.GetLayerName
+// 0x000C (0x000C - 0x0000)
+struct MeshSculptLayerProperties_GetLayerName final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_GetLayerName;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.MoveLayer
+// 0x0008 (0x0008 - 0x0000)
+struct MeshSculptLayerProperties_MoveLayer final
+{
+public:
+	int32                                         InInitIndex;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InTargetIndex;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_MoveLayer;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.RemoveLayerAtIndex
+// 0x0008 (0x0008 - 0x0000)
+struct MeshSculptLayerProperties_RemoveLayerAtIndex final
+{
+public:
+	int32                                         IndexOfLayerToRemove;                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_RemoveLayerAtIndex;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.SetActiveLayer
+// 0x0004 (0x0004 - 0x0000)
+struct MeshSculptLayerProperties_SetActiveLayer final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_SetActiveLayer;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.SetLayerName
+// 0x000C (0x000C - 0x0000)
+struct MeshSculptLayerProperties_SetLayerName final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InLayerName;                                       // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_SetLayerName;
+
+// Function MeshModelingTools.MeshSculptLayerProperties.SetLayerWeight
+// 0x0018 (0x0018 - 0x0000)
+struct MeshSculptLayerProperties_SetLayerWeight final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InWeight;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        ChangeType;                                        // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MeshSculptLayerProperties_SetLayerWeight;
 
 // Function MeshModelingTools.MeshUVChannelProperties.GetUVChannelNamesFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -29,6 +174,7 @@ struct MeshUVChannelProperties_GetUVChannelNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MeshUVChannelProperties_GetUVChannelNamesFunc;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

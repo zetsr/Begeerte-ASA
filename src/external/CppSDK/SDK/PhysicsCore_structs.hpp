@@ -43,6 +43,16 @@ enum class EBodyCollisionResponse : uint8
 	BodyCollision_MAX                        = 2,
 };
 
+// Enum PhysicsCore.EFrictionCombineMode
+// NumValues: 0x0004
+enum class EFrictionCombineMode : uint8
+{
+	Average                                  = 0,
+	Min                                      = 1,
+	Multiply                                 = 2,
+	Max                                      = 3,
+};
+
 // Enum PhysicsCore.EPhysicalSurface
 // NumValues: 0x0041
 enum class EPhysicalSurface : uint8
@@ -172,16 +182,6 @@ enum class ELinearConstraintMotion : uint8
 	LCM_MAX                                  = 3,
 };
 
-// Enum PhysicsCore.EFrictionCombineMode
-// NumValues: 0x0004
-enum class EFrictionCombineMode : uint8
-{
-	Average                                  = 0,
-	Min                                      = 1,
-	Multiply                                 = 2,
-	Max                                      = 3,
-};
-
 // Enum PhysicsCore.ESoilType
 // NumValues: 0x0042
 enum class ESoilType : uint8
@@ -274,12 +274,14 @@ public:
 	uint8                                         bOverrideMass : 1;                                 // 0x0008(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bEnableGravity : 1;                                // 0x0008(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bUpdateKinematicFromSimulation : 1;                // 0x0008(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAutoWeld : 1;                                     // 0x0008(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bStartAwake : 1;                                   // 0x0008(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bGenerateWakeEvents : 1;                           // 0x0008(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0008(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bGyroscopicTorqueEnabled : 1;                      // 0x0008(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAutoWeld : 1;                                     // 0x0008(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bStartAwake : 1;                                   // 0x0008(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bGenerateWakeEvents : 1;                           // 0x0008(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0009(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FBodyInstanceCore;
 
 // ScriptStruct PhysicsCore.PhysicalMaterialStrength
 // 0x000C (0x000C - 0x0000)
@@ -290,6 +292,7 @@ public:
 	float                                         CompressionStrength;                               // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ShearStrength;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPhysicalMaterialStrength;
 
 // ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
 // 0x0004 (0x0004 - 0x0000)
@@ -298,5 +301,6 @@ struct FPhysicalMaterialDamageModifier final
 public:
 	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPhysicalMaterialDamageModifier;
 
 SDK_NAMESPACE_END

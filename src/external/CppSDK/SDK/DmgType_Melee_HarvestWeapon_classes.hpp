@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_HarvestWeapon_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_Melee_HarvestWeapon_C;
 
 SDK_NAMESPACE_END

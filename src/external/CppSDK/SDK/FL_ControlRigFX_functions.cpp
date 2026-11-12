@@ -28,10 +28,8 @@ SDK_NAMESPACE_START
 
 void UFL_ControlRigFX_C::ControlRigNotify(class FName NotifyName, class FName CustomTag, const struct FHitResult& HitResult, class APrimalCharacter* PrimalCharacter, const struct FVector& BoneVelocity, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_ControlRigFX_C", "ControlRigNotify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_ControlRigFX_C", "ControlRigNotify", FuncInfo);
 
 	Params::FL_ControlRigFX_C_ControlRigNotify Parms{};
 
@@ -64,10 +62,8 @@ void UFL_ControlRigFX_C::ControlRigNotify(class FName NotifyName, class FName Cu
 
 void UFL_ControlRigFX_C::Spawn_Phys_Mat_VFX(const class FString& Bone_Name, class APrimalCharacter* Creature, class UPhysicalMaterial* Phys_Material, const struct FVector& Ground_Normal, const struct FVector& Location, class UNiagaraSystem* NS, double Amount_Mult, double Vel_Mult, double Size_Mult, bool Attached, const struct FVector& Bone_Velocity, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_ControlRigFX_C", "Spawn Phys Mat VFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_ControlRigFX_C", "Spawn Phys Mat VFX", FuncInfo);
 
 	Params::FL_ControlRigFX_C_Spawn_Phys_Mat_VFX Parms{};
 

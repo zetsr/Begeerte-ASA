@@ -10,12 +10,67 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class TimeManagement.MockTimecodeProvider
+// 0x0060 (0x0090 - 0x0030)
+class UMockTimecodeProvider final : public UTimecodeProvider
+{
+public:
+	uint8                                         Pad_30[0x60];                                      // 0x0030(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MockTimecodeProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MockTimecodeProvider")
+	}
+	static class UMockTimecodeProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMockTimecodeProvider>();
+	}
+};
+DUMPER7_ASSERTS_UMockTimecodeProvider;
+
+// Class TimeManagement.ClockedTimeStep
+// 0x0008 (0x0008 - 0x0000)
+class IClockedTimeStep
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClockedTimeStep")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClockedTimeStep")
+	}
+	static class IClockedTimeStep* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IClockedTimeStep>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IClockedTimeStep;
 
 // Class TimeManagement.FixedFrameRateCustomTimeStep
 // 0x0000 (0x0028 - 0x0028)
@@ -35,6 +90,87 @@ public:
 		return GetDefaultObjImpl<UFixedFrameRateCustomTimeStep>();
 	}
 };
+DUMPER7_ASSERTS_UFixedFrameRateCustomTimeStep;
+
+// Class TimeManagement.TimecodeCustomTimeStep
+// 0x0040 (0x0068 - 0x0028)
+class UTimecodeCustomTimeStep final : public UFixedFrameRateCustomTimeStep
+{
+public:
+	bool                                          bErrorIfFrameAreNotConsecutive;                    // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bErrorIfTimecodeProviderChanged;                   // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxDeltaTime;                                      // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreSubframes;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x37];                                      // 0x0031(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TimecodeCustomTimeStep")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TimecodeCustomTimeStep")
+	}
+	static class UTimecodeCustomTimeStep* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTimecodeCustomTimeStep>();
+	}
+};
+DUMPER7_ASSERTS_UTimecodeCustomTimeStep;
+
+// Class TimeManagement.CatchupFixedRateCustomTimeStep
+// 0x0020 (0x0048 - 0x0028)
+class UCatchupFixedRateCustomTimeStep final : public UFixedFrameRateCustomTimeStep, public IClockedTimeStep
+{
+public:
+	struct FFrameRate                             FrameRate;                                         // 0x0030(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaxCatchupSeconds;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CatchupFixedRateCustomTimeStep")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CatchupFixedRateCustomTimeStep")
+	}
+	static class UCatchupFixedRateCustomTimeStep* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCatchupFixedRateCustomTimeStep>();
+	}
+};
+DUMPER7_ASSERTS_UCatchupFixedRateCustomTimeStep;
+
+// Class TimeManagement.TimecodeRegressionProvider
+// 0x00E0 (0x0110 - 0x0030)
+class UTimecodeRegressionProvider final : public UTimecodeProvider
+{
+public:
+	int32                                         NumSampledFrames;                                  // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEngine*                                OwningEngine;                                      // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UTimecodeProvider*                      TimecodeImpl;                                      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_48[0xC8];                                      // 0x0048(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TimecodeRegressionProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TimecodeRegressionProvider")
+	}
+	static class UTimecodeRegressionProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTimecodeRegressionProvider>();
+	}
+};
+DUMPER7_ASSERTS_UTimecodeRegressionProvider;
 
 // Class TimeManagement.GenlockedCustomTimeStep
 // 0x0008 (0x0030 - 0x0028)
@@ -42,7 +178,8 @@ class UGenlockedCustomTimeStep : public UFixedFrameRateCustomTimeStep
 {
 public:
 	bool                                          bAutoDetectFormat;                                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bWaitForBothFields;                                // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -58,6 +195,7 @@ public:
 		return GetDefaultObjImpl<UGenlockedCustomTimeStep>();
 	}
 };
+DUMPER7_ASSERTS_UGenlockedCustomTimeStep;
 
 // Class TimeManagement.GenlockedFixedRateCustomTimeStep
 // 0x0020 (0x0050 - 0x0030)
@@ -83,6 +221,7 @@ public:
 		return GetDefaultObjImpl<UGenlockedFixedRateCustomTimeStep>();
 	}
 };
+DUMPER7_ASSERTS_UGenlockedFixedRateCustomTimeStep;
 
 // Class TimeManagement.GenlockedTimecodeProvider
 // 0x0028 (0x0058 - 0x0030)
@@ -106,6 +245,33 @@ public:
 		return GetDefaultObjImpl<UGenlockedTimecodeProvider>();
 	}
 };
+DUMPER7_ASSERTS_UGenlockedTimecodeProvider;
+
+// Class TimeManagement.MusicalTimeFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMusicalTimeFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void BarAndBeat(const struct FMusicalTime& InMusicalTime, int32* Bar, float* Beat);
+	static float FractionalBars(const struct FMusicalTime& InMusicalTime);
+	static float FractionalBeatsInBar(const struct FMusicalTime& InMusicalTime);
+	static bool IsValid(const struct FMusicalTime& InMusicalTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MusicalTimeFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MusicalTimeFunctionLibrary")
+	}
+	static class UMusicalTimeFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMusicalTimeFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UMusicalTimeFunctionLibrary;
 
 // Class TimeManagement.TimeManagementBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -120,6 +286,8 @@ public:
 	static float Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
 	static class FString Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
 	static struct FFrameNumber Divide_FrameNumberInteger(const struct FFrameNumber& A, int32 B);
+	static struct FFrameRate GetCustomTimeStepFrameRate();
+	static class UEngineCustomTimeStep* GetEngineCustomTimeStep();
 	static struct FTimecode GetTimecode();
 	static struct FFrameRate GetTimecodeFrameRate();
 	static bool IsValid_Framerate(const struct FFrameRate& InFrameRate);
@@ -145,6 +313,7 @@ public:
 		return GetDefaultObjImpl<UTimeManagementBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UTimeManagementBlueprintLibrary;
 
 // Class TimeManagement.TimeSynchronizationSource
 // 0x0008 (0x0030 - 0x0028)
@@ -169,5 +338,6 @@ public:
 		return GetDefaultObjImpl<UTimeSynchronizationSource>();
 	}
 };
+DUMPER7_ASSERTS_UTimeSynchronizationSource;
 
 SDK_NAMESPACE_END

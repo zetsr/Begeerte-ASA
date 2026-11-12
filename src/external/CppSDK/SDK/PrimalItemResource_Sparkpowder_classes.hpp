@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Sparkpowder_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Sparkpowder_C;
 
 SDK_NAMESPACE_END

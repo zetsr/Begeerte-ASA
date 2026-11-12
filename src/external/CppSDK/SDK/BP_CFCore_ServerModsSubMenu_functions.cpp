@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UBP_CFCore_ServerModsSubMenu_C::BndEvt__BP_ServerModsSubMenu_BUTTON_FAV_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "BndEvt__BP_ServerModsSubMenu_BUTTON_FAV_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "BndEvt__BP_ServerModsSubMenu_BUTTON_FAV_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UBP_CFCore_ServerModsSubMenu_C::BndEvt__BP_ServerModsSubMenu_BUTTON_FAV_K2N
 
 void UBP_CFCore_ServerModsSubMenu_C::BndEvt__BP_ServerModsSubMenu_BUTTON_REPORT_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "BndEvt__BP_ServerModsSubMenu_BUTTON_REPORT_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "BndEvt__BP_ServerModsSubMenu_BUTTON_REPORT_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UBP_CFCore_ServerModsSubMenu_C::BndEvt__BP_ServerModsSubMenu_BUTTON_REPORT_
 
 void UBP_CFCore_ServerModsSubMenu_C::CustomEvent_3(const class FString& temp_user_token)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "CustomEvent_3");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "CustomEvent_3", FuncInfo);
 
 	Params::BP_CFCore_ServerModsSubMenu_C_CustomEvent_3 Parms{};
 
@@ -71,10 +65,8 @@ void UBP_CFCore_ServerModsSubMenu_C::CustomEvent_3(const class FString& temp_use
 
 void UBP_CFCore_ServerModsSubMenu_C::CustomEvent_4(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "CustomEvent_4");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "CustomEvent_4", FuncInfo);
 
 	Params::BP_CFCore_ServerModsSubMenu_C_CustomEvent_4 Parms{};
 
@@ -91,10 +83,8 @@ void UBP_CFCore_ServerModsSubMenu_C::CustomEvent_4(const struct FCFCoreError& Er
 
 void UBP_CFCore_ServerModsSubMenu_C::ExecuteUbergraph_BP_CFCore_ServerModsSubMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "ExecuteUbergraph_BP_CFCore_ServerModsSubMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "ExecuteUbergraph_BP_CFCore_ServerModsSubMenu", FuncInfo);
 
 	Params::BP_CFCore_ServerModsSubMenu_C_ExecuteUbergraph_BP_CFCore_ServerModsSubMenu Parms{};
 
@@ -111,10 +101,8 @@ void UBP_CFCore_ServerModsSubMenu_C::ExecuteUbergraph_BP_CFCore_ServerModsSubMen
 
 void UBP_CFCore_ServerModsSubMenu_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "GetRootCFWidget", FuncInfo);
 
 	Params::BP_CFCore_ServerModsSubMenu_C_GetRootCFWidget Parms{};
 
@@ -133,10 +121,8 @@ void UBP_CFCore_ServerModsSubMenu_C::GetRootCFWidget(class UPanelWidget** RootPa
 
 class FString UBP_CFCore_ServerModsSubMenu_C::ModListToCombinedString(const TArray<int64>& Array)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "ModListToCombinedString");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "ModListToCombinedString", FuncInfo);
 
 	Params::BP_CFCore_ServerModsSubMenu_C_ModListToCombinedString Parms{};
 
@@ -153,10 +139,8 @@ class FString UBP_CFCore_ServerModsSubMenu_C::ModListToCombinedString(const TArr
 
 void UBP_CFCore_ServerModsSubMenu_C::ReportServer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CFCore_ServerModsSubMenu_C", "ReportServer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CFCore_ServerModsSubMenu_C", "ReportServer", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

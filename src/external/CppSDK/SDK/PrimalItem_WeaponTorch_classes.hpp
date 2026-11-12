@@ -22,8 +22,7 @@ SDK_NAMESPACE_START
 class UPrimalItem_WeaponTorch_C final : public UPrimalItemWeaponGenericAmmoless_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B88(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B88(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	double                                        DurabilityLossPerSecond;                           // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           TorchOnBeltWidgetTextColor;                        // 0x0B98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 TorchOnBeltWidgetText;                             // 0x0BA8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
@@ -67,5 +66,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponTorch_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponTorch_C;
 
 SDK_NAMESPACE_END

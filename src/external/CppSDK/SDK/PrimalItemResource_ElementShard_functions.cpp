@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItemResource_ElementShard_C::BPSupportUseOntoItem(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_ElementShard_C", "BPSupportUseOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_ElementShard_C", "BPSupportUseOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_ElementShard_C_BPSupportUseOntoItem Parms{};
 
@@ -47,10 +45,8 @@ bool UPrimalItemResource_ElementShard_C::BPSupportUseOntoItem(class UPrimalItem*
 
 void UPrimalItemResource_ElementShard_C::BPUsedOntoItem(class UPrimalItem* DestinationItem, int32 AdditionalData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_ElementShard_C", "BPUsedOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_ElementShard_C", "BPUsedOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_ElementShard_C_BPUsedOntoItem Parms{};
 
@@ -69,10 +65,8 @@ void UPrimalItemResource_ElementShard_C::BPUsedOntoItem(class UPrimalItem* Desti
 
 void UPrimalItemResource_ElementShard_C::CheckForElementShardData(class UPrimalItem* DestinationItem, bool* SupportsDragOnto)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_ElementShard_C", "CheckForElementShardData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_ElementShard_C", "CheckForElementShardData", FuncInfo);
 
 	Params::PrimalItemResource_ElementShard_C_CheckForElementShardData Parms{};
 
@@ -92,10 +86,8 @@ void UPrimalItemResource_ElementShard_C::CheckForElementShardData(class UPrimalI
 
 void UPrimalItemResource_ElementShard_C::RefillElementShard(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_ElementShard_C", "RefillElementShard");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_ElementShard_C", "RefillElementShard", FuncInfo);
 
 	Params::PrimalItemResource_ElementShard_C_RefillElementShard Parms{};
 

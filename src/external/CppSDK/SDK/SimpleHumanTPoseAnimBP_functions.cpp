@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void USimpleHumanTPoseAnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SimpleHumanTPoseAnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SimpleHumanTPoseAnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::SimpleHumanTPoseAnimBP_C_AnimGraph Parms{};
 
@@ -42,10 +40,8 @@ void USimpleHumanTPoseAnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void USimpleHumanTPoseAnimBP_C::BlueprintInitializeAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SimpleHumanTPoseAnimBP_C", "BlueprintInitializeAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SimpleHumanTPoseAnimBP_C", "BlueprintInitializeAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +54,8 @@ void USimpleHumanTPoseAnimBP_C::BlueprintInitializeAnimation()
 
 void USimpleHumanTPoseAnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SimpleHumanTPoseAnimBP_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SimpleHumanTPoseAnimBP_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::SimpleHumanTPoseAnimBP_C_BlueprintUpdateAnimation Parms{};
 
@@ -78,10 +72,8 @@ void USimpleHumanTPoseAnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void USimpleHumanTPoseAnimBP_C::ExecuteUbergraph_SimpleHumanTPoseAnimBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SimpleHumanTPoseAnimBP_C", "ExecuteUbergraph_SimpleHumanTPoseAnimBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SimpleHumanTPoseAnimBP_C", "ExecuteUbergraph_SimpleHumanTPoseAnimBP", FuncInfo);
 
 	Params::SimpleHumanTPoseAnimBP_C_ExecuteUbergraph_SimpleHumanTPoseAnimBP Parms{};
 

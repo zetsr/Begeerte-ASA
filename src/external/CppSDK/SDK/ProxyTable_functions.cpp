@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function ProxyTable.ProxyTableFunctionLibrary.EvaluateProxyAsset
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    ContextObject                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UProxyAsset*                Proxy                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -49,7 +49,7 @@ class UObject* UProxyTableFunctionLibrary::EvaluateProxyAsset(const class UObjec
 
 
 // Function ProxyTable.ProxyTableFunctionLibrary.EvaluateProxyTable
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class UObject*                    ContextObject                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UProxyTable*                ProxyTable                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -81,10 +81,10 @@ class UObject* UProxyTableFunctionLibrary::EvaluateProxyTable(const class UObjec
 
 
 // Function ProxyTable.ProxyTableFunctionLibrary.MakeLookupProxy
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UProxyAsset*                      Proxy                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FInstancedStruct UProxyTableFunctionLibrary::MakeLookupProxy(class UProxyAsset* Proxy)
 {
@@ -109,11 +109,11 @@ struct FInstancedStruct UProxyTableFunctionLibrary::MakeLookupProxy(class UProxy
 
 
 // Function ProxyTable.ProxyTableFunctionLibrary.MakeLookupProxyWithOverrideTable
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UProxyAsset*                      Proxy                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UProxyTable*                      ProxyTable                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// struct FInstancedStruct                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FInstancedStruct UProxyTableFunctionLibrary::MakeLookupProxyWithOverrideTable(class UProxyAsset* Proxy, class UProxyTable* ProxyTable)
 {

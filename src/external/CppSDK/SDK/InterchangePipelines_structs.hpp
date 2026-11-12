@@ -43,6 +43,17 @@ enum class EInterchangeAnimationRange : uint8
 	MAX                                      = 3,
 };
 
+// Enum InterchangePipelines.EInterchangeFrameAlignment
+// NumValues: 0x0005
+enum class EInterchangeFrameAlignment : uint8
+{
+	None                                     = 0,
+	SnapToFloor                              = 1,
+	SnapToClosest                            = 2,
+	SnapToCeiling                            = 3,
+	EInterchangeFrameAlignment_MAX           = 4,
+};
+
 // Enum InterchangePipelines.EInterchangeMaterialImportOption
 // NumValues: 0x0003
 enum class EInterchangeMaterialImportOption : uint8
@@ -64,60 +75,83 @@ enum class EInterchangeMaterialSearchLocation : uint8
 	EInterchangeMaterialSearchLocation_MAX   = 5,
 };
 
+// Enum InterchangePipelines.EInterchangeCombineStaticMeshesBehavior
+// NumValues: 0x0004
+enum class EInterchangeCombineStaticMeshesBehavior : uint8
+{
+	All                                      = 0,
+	VisibleOnly                              = 1,
+	DoNotCombine                             = 2,
+	EInterchangeCombineStaticMeshesBehavior_MAX = 3,
+};
+
+// Enum InterchangePipelines.EInterchangeCombineSkeletalMeshesBehavior
+// NumValues: 0x0004
+enum class EInterchangeCombineSkeletalMeshesBehavior : uint8
+{
+	BySkeleton                               = 0,
+	BySkeletonVisibleOnly                    = 1,
+	DoNotCombine                             = 2,
+	EInterchangeCombineSkeletalMeshesBehavior_MAX = 3,
+};
+
 // Enum InterchangePipelines.EInterchangeSceneHierarchyType
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EInterchangeSceneHierarchyType : uint8
 {
 	CreateLevelActors                        = 0,
 	CreateLevelInstanceActor                 = 1,
-	EInterchangeSceneHierarchyType_MAX       = 2,
-};
-
-// ScriptStruct InterchangePipelines.InterchangeLodSceneNodeContainer
-// 0x0010 (0x0010 - 0x0000)
-struct FInterchangeLodSceneNodeContainer final
-{
-public:
-	TArray<class UInterchangeSceneNode*>          SceneNodes;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	CreatePackedActor                        = 2,
+	EInterchangeSceneHierarchyType_MAX       = 3,
 };
 
 // ScriptStruct InterchangePipelines.InterchangeMeshInstance
-// 0x0080 (0x0080 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FInterchangeMeshInstance final
 {
 public:
-	class FString                                 MeshInstanceUid;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeSceneNode*                  LodGroupNode;                                      // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          bReferenceSkinnedMesh;                             // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReferenceMorphTarget;                             // 0x0019(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasMorphTargets;                                  // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FInterchangeLodSceneNodeContainer> SceneNodePerLodIndex;                      // 0x0020(0x0050)(Edit, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReferencingMeshGeometryUids;                       // 0x0070(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bReferenceSkinnedMesh;                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReferenceMorphTarget;                             // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasMorphTargets;                                  // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsGeometryCache;                                  // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasTransformAnimationTrack;                       // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsVisible;                                        // 0x0005(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeBaseNode*                   InstancingNode;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class FString>                         ReferencingMeshGeometryUids;                       // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInterchangeMeshInstance;
 
 // ScriptStruct InterchangePipelines.InterchangeMeshGeometry
-// 0x0038 (0x0038 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FInterchangeMeshGeometry final
 {
 public:
-	class FString                                 MeshUid;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeMeshNode*                   MeshNode;                                          // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class FString>                         ReferencingMeshInstanceUids;                       // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AttachedSocketUids;                                // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNode*                   BaseNode;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class FString>                         UidsOfInstancingNodes;                             // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AttachedSocketUids;                                // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIsReferencedBySkeleton;                           // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasTransformAnimationTrack;                       // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x26];                                      // 0x002A(0x0026)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FInterchangeMeshGeometry;
 
 // ScriptStruct InterchangePipelines.InterchangePipelineMeshesUtilitiesContext
-// 0x0006 (0x0006 - 0x0000)
+// 0x000A (0x000A - 0x0000)
 struct FInterchangePipelineMeshesUtilitiesContext final
 {
 public:
-	bool                                          bConvertStaticMeshToSkeletalMesh;                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConvertSkeletalMeshToStaticMesh;                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterchangeForceMeshType                     ForceMeshType;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConvertStaticsWithAnimatedTransformToSkeletals;   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bConvertStaticsWithMorphTargetsToSkeletals;        // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bImportMeshesInBoneHierarchy;                      // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConvertStaticsInBoneHierarchyToSkeletals;         // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bQueryGeometryOnlyIfNoInstance;                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreStaticMeshes;                               // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreGeometryCaches;                             // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bImportMeshesInBoneHierarchy;                      // 0x0006(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConvertStaticMeshToSkeletalMesh;                  // 0x0007(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConvertSkeletalMeshToStaticMesh;                  // 0x0008(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreStaticMeshes;                               // 0x0009(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInterchangePipelineMeshesUtilitiesContext;
 
 SDK_NAMESPACE_END

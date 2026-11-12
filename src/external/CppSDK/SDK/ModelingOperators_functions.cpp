@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function ModelingOperators.UVEditorTexelDensitySettings.InSamplingMode
-// (Native, Public, Const)
+// (RequiredAPI, Native, Public, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

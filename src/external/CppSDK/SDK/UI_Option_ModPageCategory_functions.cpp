@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_Option_ModPageCategory_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_Option_ModPageCategory_C::Construct()
 
 void UUI_Option_ModPageCategory_C::ExecuteUbergraph_UI_Option_ModPageCategory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "ExecuteUbergraph_UI_Option_ModPageCategory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "ExecuteUbergraph_UI_Option_ModPageCategory", FuncInfo);
 
 	Params::UI_Option_ModPageCategory_C_ExecuteUbergraph_UI_Option_ModPageCategory Parms{};
 
@@ -57,10 +53,8 @@ void UUI_Option_ModPageCategory_C::ExecuteUbergraph_UI_Option_ModPageCategory(in
 
 void UUI_Option_ModPageCategory_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_Option_ModPageCategory_C_GetRootCFWidget Parms{};
 
@@ -78,10 +72,8 @@ void UUI_Option_ModPageCategory_C::GetRootCFWidget(class UPanelWidget** RootPane
 
 void UUI_Option_ModPageCategory_C::OnFail_20B338B847EF646EF76186BFC4DF1AD5(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "OnFail_20B338B847EF646EF76186BFC4DF1AD5");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "OnFail_20B338B847EF646EF76186BFC4DF1AD5", FuncInfo);
 
 	Params::UI_Option_ModPageCategory_C_OnFail_20B338B847EF646EF76186BFC4DF1AD5 Parms{};
 
@@ -98,10 +90,8 @@ void UUI_Option_ModPageCategory_C::OnFail_20B338B847EF646EF76186BFC4DF1AD5(class
 
 void UUI_Option_ModPageCategory_C::OnSuccess_20B338B847EF646EF76186BFC4DF1AD5(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "OnSuccess_20B338B847EF646EF76186BFC4DF1AD5");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "OnSuccess_20B338B847EF646EF76186BFC4DF1AD5", FuncInfo);
 
 	Params::UI_Option_ModPageCategory_C_OnSuccess_20B338B847EF646EF76186BFC4DF1AD5 Parms{};
 
@@ -116,10 +106,8 @@ void UUI_Option_ModPageCategory_C::OnSuccess_20B338B847EF646EF76186BFC4DF1AD5(cl
 
 void UUI_Option_ModPageCategory_C::UpdateThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Option_ModPageCategory_C", "UpdateThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Option_ModPageCategory_C", "UpdateThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

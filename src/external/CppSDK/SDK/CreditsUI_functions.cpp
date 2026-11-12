@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UCreditsUI_C::CloseButtonEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "CloseButtonEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CreditsUI_C", "CloseButtonEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UCreditsUI_C::CloseButtonEvent()
 
 void UCreditsUI_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CreditsUI_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UCreditsUI_C::Construct()
 
 void UCreditsUI_C::ExecuteUbergraph_CreditsUI(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "ExecuteUbergraph_CreditsUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CreditsUI_C", "ExecuteUbergraph_CreditsUI", FuncInfo);
 
 	Params::CreditsUI_C_ExecuteUbergraph_CreditsUI Parms{};
 
@@ -69,10 +63,8 @@ void UCreditsUI_C::ExecuteUbergraph_CreditsUI(int32 EntryPoint)
 
 void UCreditsUI_C::RemovedFromViewport()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "RemovedFromViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CreditsUI_C", "RemovedFromViewport", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +78,8 @@ void UCreditsUI_C::RemovedFromViewport()
 
 void UCreditsUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CreditsUI_C", "Tick", FuncInfo);
 
 	Params::CreditsUI_C_Tick Parms{};
 

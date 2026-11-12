@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MeshFadeOut_Blueprint_Fast_WithDrop.MeshFadeOut_Blueprint_Fast_WithDrop_C
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0528 - 0x0528)
 class AMeshFadeOut_Blueprint_Fast_WithDrop_C final : public AMeshFadeOut_Blueprint_WithDrop_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<AMeshFadeOut_Blueprint_Fast_WithDrop_C>();
 	}
 };
+DUMPER7_ASSERTS_AMeshFadeOut_Blueprint_Fast_WithDrop_C;
 
 SDK_NAMESPACE_END

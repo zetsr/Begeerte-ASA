@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UWaitForWandering_DK_C::ExecuteUbergraph_WaitForWandering_DK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WaitForWandering_DK_C", "ExecuteUbergraph_WaitForWandering_DK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WaitForWandering_DK_C", "ExecuteUbergraph_WaitForWandering_DK", FuncInfo);
 
 	Params::WaitForWandering_DK_C_ExecuteUbergraph_WaitForWandering_DK Parms{};
 
@@ -43,10 +41,8 @@ void UWaitForWandering_DK_C::ExecuteUbergraph_WaitForWandering_DK(int32 EntryPoi
 
 void UWaitForWandering_DK_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WaitForWandering_DK_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WaitForWandering_DK_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::WaitForWandering_DK_C_ReceiveConditionCheck Parms{};
 

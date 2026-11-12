@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function BlendStack.BlendStackAnimNodeLibrary.BlendTo
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FAnimUpdateContext&        Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -60,7 +60,7 @@ void UBlendStackAnimNodeLibrary::BlendTo(const struct FAnimUpdateContext& Contex
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.BlendToWithSettings
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FAnimUpdateContext&        Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -109,7 +109,7 @@ void UBlendStackAnimNodeLibrary::BlendToWithSettings(const struct FAnimUpdateCon
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.ConvertToBlendStackNode
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -174,7 +174,7 @@ void UBlendStackAnimNodeLibrary::ConvertToBlendStackNodePure(const struct FAnimN
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.ForceBlendNextUpdate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -199,7 +199,7 @@ void UBlendStackAnimNodeLibrary::ForceBlendNextUpdate(const struct FBlendStackAn
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAsset
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimationAsset*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -227,7 +227,7 @@ class UAnimationAsset* UBlendStackAnimNodeLibrary::GetCurrentAsset(const struct 
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAssetTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -255,7 +255,7 @@ float UBlendStackAnimNodeLibrary::GetCurrentAssetTime(const struct FBlendStackAn
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentAssetTimeRemaining
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -283,7 +283,7 @@ float UBlendStackAnimNodeLibrary::GetCurrentAssetTimeRemaining(const struct FBle
 
 
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAsset
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimationAsset*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -310,8 +310,64 @@ class UAnimationAsset* UBlendStackAnimNodeLibrary::GetCurrentBlendStackAnimAsset
 }
 
 
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetMirrored
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlendStackAnimNodeLibrary::GetCurrentBlendStackAnimAssetMirrored(const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackAnimNodeLibrary", "GetCurrentBlendStackAnimAssetMirrored");
+
+	Params::BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrored Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetMirrorTable
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UMirrorDataTable*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMirrorDataTable* UBlendStackAnimNodeLibrary::GetCurrentBlendStackAnimAssetMirrorTable(const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackAnimNodeLibrary", "GetCurrentBlendStackAnimAssetMirrorTable");
+
+	Params::BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimAssetMirrorTable Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimAssetTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -338,8 +394,36 @@ float UBlendStackAnimNodeLibrary::GetCurrentBlendStackAnimAssetTime(const struct
 }
 
 
+// Function BlendStack.BlendStackAnimNodeLibrary.GetCurrentBlendStackAnimIsActive
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlendStackAnimNodeLibrary::GetCurrentBlendStackAnimIsActive(const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackAnimNodeLibrary", "GetCurrentBlendStackAnimIsActive");
+
+	Params::BlendStackAnimNodeLibrary_GetCurrentBlendStackAnimIsActive Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BlendStack.BlendStackAnimNodeLibrary.IsCurrentAssetLooping
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FBlendStackAnimNodeReference&BlendStackNode                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -367,7 +451,7 @@ bool UBlendStackAnimNodeLibrary::IsCurrentAssetLooping(const struct FBlendStackA
 
 
 // Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNode
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -432,7 +516,7 @@ void UBlendStackInputAnimNodeLibrary::ConvertToBlendStackInputNodePure(const str
 
 
 // Function BlendStack.BlendStackInputAnimNodeLibrary.GetProperties
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FBlendStackInputAnimNodeReference&BlendStackInputNode                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimationAsset**                 AnimationAsset                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

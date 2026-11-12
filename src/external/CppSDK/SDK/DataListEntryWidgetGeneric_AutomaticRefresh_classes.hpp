@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DataListEntryWidgetGeneric_AutomaticRefresh.DataListEntryWidgetGeneric_AutomaticRefresh_C
-// 0x0008 (0x0448 - 0x0440)
+// 0x0008 (0x04A8 - 0x04A0)
 class UDataListEntryWidgetGeneric_AutomaticRefresh_C final : public UDataListEntryWidget
 {
 public:
-	class UDataListEntryButton_CustomOverlay*     MyDataListButton;                                  // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDataListEntryButton_CustomOverlay*     MyDataListButton;                                  // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetGeneric_AutomaticRefresh_C>();
 	}
 };
+DUMPER7_ASSERTS_UDataListEntryWidgetGeneric_AutomaticRefresh_C;
 
 SDK_NAMESPACE_END

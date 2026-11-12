@@ -21,8 +21,7 @@ SDK_NAMESPACE_START
 class UPrimalItemResource_Element_C : public UPrimalItemResourceGeneric_C
 {
 public:
-	class FName                                   ShapeshifterSmallsCustomTag;                       // 0x0B84(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B8C[0x4];                                      // 0x0B8C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ShapeshifterSmallsCustomTag;                       // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APrimalCharacter*                       PreviousShapeshifterClientValue;                   // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class APrimalCharacter*                       ServerShapeshifterToFeed;                          // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class FName                                   ShapeshifterBiglyCustomTag;                        // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -49,5 +48,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Element_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Element_C;
 
 SDK_NAMESPACE_END

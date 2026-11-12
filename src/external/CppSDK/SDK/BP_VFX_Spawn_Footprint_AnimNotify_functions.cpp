@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void UBP_VFX_Spawn_Footprint_AnimNotify_C::LR_FB_Offset(const struct FVector& Front_Offset, const struct FVector& Back_Offset, struct FVector* Offset) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "LR_FB Offset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "LR_FB Offset", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_LR_FB_Offset Parms{};
 
@@ -50,10 +48,8 @@ void UBP_VFX_Spawn_Footprint_AnimNotify_C::LR_FB_Offset(const struct FVector& Fr
 
 void UBP_VFX_Spawn_Footprint_AnimNotify_C::NewFunction_0(bool Condition, bool Condition2) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "NewFunction_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "NewFunction_0", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_NewFunction_0 Parms{};
 
@@ -79,10 +75,8 @@ void UBP_VFX_Spawn_Footprint_AnimNotify_C::NewFunction_0(bool Condition, bool Co
 
 void UBP_VFX_Spawn_Footprint_AnimNotify_C::Do_Trace(class USkeletalMeshComponent* SK_Mesh_Comp, class AActor* InputPin, double BabyScale, bool IsPlayer, double* FootPrintSize, bool* Hit_Bool, struct FHitResult* OutHit, class UMaterialInterface** FootPrintMaterialBack, class UMaterialInterface** FootPrintMaterialFront) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Do Trace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Do Trace", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_Do_Trace Parms{};
 
@@ -121,10 +115,8 @@ void UBP_VFX_Spawn_Footprint_AnimNotify_C::Do_Trace(class USkeletalMeshComponent
 
 void UBP_VFX_Spawn_Footprint_AnimNotify_C::Spawn_Sound(class USceneComponent* Actor, const struct FVector& Location, double Size, const struct FAudio_Ground_Collection& StepSounds, bool IsPlayer) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Spawn_Sound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Spawn_Sound", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_Spawn_Sound Parms{};
 
@@ -143,10 +135,8 @@ void UBP_VFX_Spawn_Footprint_AnimNotify_C::Spawn_Sound(class USceneComponent* Ac
 
 void UBP_VFX_Spawn_Footprint_AnimNotify_C::Spawn_Anim_Notify() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Spawn_Anim_Notify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Spawn_Anim_Notify", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -163,10 +153,8 @@ void UBP_VFX_Spawn_Footprint_AnimNotify_C::Spawn_Anim_Notify() const
 
 bool UBP_VFX_Spawn_Footprint_AnimNotify_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyBegin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyBegin", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyBegin Parms{};
 
@@ -191,10 +179,8 @@ bool UBP_VFX_Spawn_Footprint_AnimNotify_C::Received_NotifyBegin(class USkeletalM
 
 bool UBP_VFX_Spawn_Footprint_AnimNotify_C::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyEnd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyEnd", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyEnd Parms{};
 
@@ -215,10 +201,8 @@ bool UBP_VFX_Spawn_Footprint_AnimNotify_C::Received_NotifyEnd(class USkeletalMes
 
 class FString UBP_VFX_Spawn_Footprint_AnimNotify_C::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "GetNotifyName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "GetNotifyName", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_GetNotifyName Parms{};
 
@@ -239,10 +223,8 @@ class FString UBP_VFX_Spawn_Footprint_AnimNotify_C::GetNotifyName() const
 
 bool UBP_VFX_Spawn_Footprint_AnimNotify_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_Footprint_AnimNotify_C", "Received_NotifyTick", FuncInfo);
 
 	Params::BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyTick Parms{};
 

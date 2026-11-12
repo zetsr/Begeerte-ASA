@@ -17,26 +17,26 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass SkeletalMeshComponent_CharacterSkin.SkeletalMeshComponent_CharacterSkin_C
-// 0x0090 (0x14B0 - 0x1420)
+// 0x0090 (0x1650 - 0x15C0)
 class USkeletalMeshComponent_CharacterSkin_C final : public USkeletalMeshComponentWithSoftRef
 {
 public:
-	class UClass*                                 BoneModiferContainer;                              // 0x1420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bOverrideBoneModifers;                             // 0x1428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1429[0x7];                                     // 0x1429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ExtraBoneModifierContainer;                        // 0x1430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bOverrideBoneModifers_UsingPlayerProportions;      // 0x1438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LocalShouldIgnorePlayerProportions;                // 0x1439(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseFaceCustomizationOverride;                     // 0x143A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHuman_Male_Faces_Enum                        FaceA;                                             // 0x143B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_143C[0x4];                                     // 0x143C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<double>                                FaceScalp;                                         // 0x1440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceBrows;                                         // 0x1450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceEyes;                                          // 0x1460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceNose;                                          // 0x1470(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceMouth;                                         // 0x1480(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceJaw;                                           // 0x1490(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                FaceEars;                                          // 0x14A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 BoneModiferContainer;                              // 0x15C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideBoneModifers;                             // 0x15C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C9[0x7];                                     // 0x15C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ExtraBoneModifierContainer;                        // 0x15D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideBoneModifers_UsingPlayerProportions;      // 0x15D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LocalShouldIgnorePlayerProportions;                // 0x15D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseFaceCustomizationOverride;                     // 0x15DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHuman_Male_Faces_Enum                        FaceA;                                             // 0x15DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15DC[0x4];                                     // 0x15DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<double>                                FaceScalp;                                         // 0x15E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceBrows;                                         // 0x15F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceEyes;                                          // 0x1600(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceNose;                                          // 0x1610(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceMouth;                                         // 0x1620(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceJaw;                                           // 0x1630(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                FaceEars;                                          // 0x1640(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddedAsPrimalItemAttachment();
@@ -56,5 +56,6 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshComponent_CharacterSkin_C>();
 	}
 };
+DUMPER7_ASSERTS_USkeletalMeshComponent_CharacterSkin_C;
 
 SDK_NAMESPACE_END

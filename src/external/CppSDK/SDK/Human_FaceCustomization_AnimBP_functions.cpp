@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHuman_FaceCustomization_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_AnimGraph Parms{};
 
@@ -48,10 +46,8 @@ void UHuman_FaceCustomization_AnimBP_C::AnimGraph(const struct FPoseLink& InPose
 
 void UHuman_FaceCustomization_AnimBP_C::ArraySum(TArray<double>& Array, double* Sum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "ArraySum");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "ArraySum", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_ArraySum Parms{};
 
@@ -73,10 +69,8 @@ void UHuman_FaceCustomization_AnimBP_C::ArraySum(TArray<double>& Array, double* 
 
 void UHuman_FaceCustomization_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_BlueprintUpdateAnimation Parms{};
 
@@ -91,10 +85,8 @@ void UHuman_FaceCustomization_AnimBP_C::BlueprintUpdateAnimation(float DeltaTime
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_BlendListByBool_E1F14ADC486D863797FBBBA4D37D1D17()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_BlendListByBool_E1F14ADC486D863797FBBBA4D37D1D17");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_BlendListByBool_E1F14ADC486D863797FBBBA4D37D1D17", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +97,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_05FD4505403D07AA7956F79CAA82C367()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_05FD4505403D07AA7956F79CAA82C367");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_05FD4505403D07AA7956F79CAA82C367", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +109,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_3AE5D816430FCA57D5086D9B84DB6250()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_3AE5D816430FCA57D5086D9B84DB6250");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_3AE5D816430FCA57D5086D9B84DB6250", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -133,10 +121,20 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A251B892429D8FC97D075F9C582E9742()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A251B892429D8FC97D075F9C582E9742", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A251B892429D8FC97D075F9C582E9742");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Human_FaceCustomization_AnimBP.Human_FaceCustomization_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A96A2CBC4F672834EA1551BBD4F8F9F3
+// (BlueprintEvent)
+
+void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A96A2CBC4F672834EA1551BBD4F8F9F3()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_LayeredBoneBlend_A96A2CBC4F672834EA1551BBD4F8F9F3", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +145,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_ModifyCurve_1DC706434BAB78D2A86B18BF8C1535C6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_ModifyCurve_1DC706434BAB78D2A86B18BF8C1535C6");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_ModifyCurve_1DC706434BAB78D2A86B18BF8C1535C6", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +157,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_2F0C38994F0DA72CEBEDF1B12AD658B1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_2F0C38994F0DA72CEBEDF1B12AD658B1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_2F0C38994F0DA72CEBEDF1B12AD658B1", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +169,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_6516E8874712CDEA5716FAA7A9EB1CD7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_6516E8874712CDEA5716FAA7A9EB1CD7");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_6516E8874712CDEA5716FAA7A9EB1CD7", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +181,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_99A311A04415B8C3F8F861A1BBD8312A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_99A311A04415B8C3F8F861A1BBD8312A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_99A311A04415B8C3F8F861A1BBD8312A", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,10 +193,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D56706624B1741A4727FE1BE1AFDBA8C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D56706624B1741A4727FE1BE1AFDBA8C");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D56706624B1741A4727FE1BE1AFDBA8C", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -217,10 +205,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D5F2D7264E71BD62A1EE79932B0E3095()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D5F2D7264E71BD62A1EE79932B0E3095");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_D5F2D7264E71BD62A1EE79932B0E3095", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +217,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_FF66D98D4D370DCD8A5BB79020024E11()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_FF66D98D4D370DCD8A5BB79020024E11");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_FaceCustomization_AnimBP_AnimGraphNode_MultiWayBlend_FF66D98D4D370DCD8A5BB79020024E11", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -247,10 +231,8 @@ void UHuman_FaceCustomization_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergr
 
 void UHuman_FaceCustomization_AnimBP_C::ExecuteUbergraph_Human_FaceCustomization_AnimBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "ExecuteUbergraph_Human_FaceCustomization_AnimBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "ExecuteUbergraph_Human_FaceCustomization_AnimBP", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_ExecuteUbergraph_Human_FaceCustomization_AnimBP Parms{};
 
@@ -268,10 +250,8 @@ void UHuman_FaceCustomization_AnimBP_C::ExecuteUbergraph_Human_FaceCustomization
 
 void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceA(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceA", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_OnUpdate_FaceA Parms{};
 
@@ -290,10 +270,8 @@ void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceA(const struct FAnimUpdateC
 
 void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceA_PoseAsset(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceA_PoseAsset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceA_PoseAsset", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_OnUpdate_FaceA_PoseAsset Parms{};
 
@@ -312,10 +290,8 @@ void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceA_PoseAsset(const struct FA
 
 void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceB(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceB");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceB", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_OnUpdate_FaceB Parms{};
 
@@ -334,15 +310,31 @@ void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceB(const struct FAnimUpdateC
 
 void UHuman_FaceCustomization_AnimBP_C::OnUpdate_FaceC(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "OnUpdate_FaceC", FuncInfo);
 
 	Params::Human_FaceCustomization_AnimBP_C_OnUpdate_FaceC Parms{};
 
 	Parms.Context = std::move(Context);
 	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Human_FaceCustomization_AnimBP.Human_FaceCustomization_AnimBP_C.UpdateVarsFromPrimalItem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimalInventoryComponent*        MyInventoryComponent                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UHuman_FaceCustomization_AnimBP_C::UpdateVarsFromPrimalItem(class UPrimalInventoryComponent* MyInventoryComponent)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_FaceCustomization_AnimBP_C", "UpdateVarsFromPrimalItem", FuncInfo);
+
+	Params::Human_FaceCustomization_AnimBP_C_UpdateVarsFromPrimalItem Parms{};
+
+	Parms.MyInventoryComponent = MyInventoryComponent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItemResource_Element_C::BPCanUse(bool bIgnoreCooldown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "BPCanUse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "BPCanUse", FuncInfo);
 
 	Params::PrimalItemResource_Element_C_BPCanUse Parms{};
 
@@ -44,10 +42,8 @@ bool UPrimalItemResource_Element_C::BPCanUse(bool bIgnoreCooldown)
 
 void UPrimalItemResource_Element_C::BPPreUseItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "BPPreUseItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "BPPreUseItem", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -62,10 +58,8 @@ void UPrimalItemResource_Element_C::BPPreUseItem()
 
 void UPrimalItemResource_Element_C::BPServerHandleItemNetExecCommand(class AShooterPlayerController* ForPC, class FName CommandName, const struct FBPNetExecParams& ExecParams)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "BPServerHandleItemNetExecCommand");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "BPServerHandleItemNetExecCommand", FuncInfo);
 
 	Params::PrimalItemResource_Element_C_BPServerHandleItemNetExecCommand Parms{};
 
@@ -85,10 +79,8 @@ void UPrimalItemResource_Element_C::BPServerHandleItemNetExecCommand(class AShoo
 
 bool UPrimalItemResource_Element_C::BPSupportUseOntoItem(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "BPSupportUseOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "BPSupportUseOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_Element_C_BPSupportUseOntoItem Parms{};
 
@@ -108,10 +100,8 @@ bool UPrimalItemResource_Element_C::BPSupportUseOntoItem(class UPrimalItem* Dest
 
 void UPrimalItemResource_Element_C::BPUsedOntoItem(class UPrimalItem* DestinationItem, int32 AdditionalData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "BPUsedOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "BPUsedOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_Element_C_BPUsedOntoItem Parms{};
 
@@ -130,10 +120,8 @@ void UPrimalItemResource_Element_C::BPUsedOntoItem(class UPrimalItem* Destinatio
 
 void UPrimalItemResource_Element_C::FindShapeshifter(class APrimalDinoCharacter** Shapeshifter, bool* RetMounted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Element_C", "FindShapeshifter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Element_C", "FindShapeshifter", FuncInfo);
 
 	Params::PrimalItemResource_Element_C_FindShapeshifter Parms{};
 

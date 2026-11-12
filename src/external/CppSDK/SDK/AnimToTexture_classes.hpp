@@ -11,36 +11,37 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 #include "AnimToTexture_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class AnimToTexture.AnimToTextureDataAsset
-// 0x0230 (0x0260 - 0x0030)
+// 0x0238 (0x0260 - 0x0028)
 class UAnimToTextureDataAsset final : public UPrimaryDataAsset
 {
 public:
-	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh;                                      // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SkeletalLODIndex;                                  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0060(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StaticLODIndex;                                    // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UVChannel;                                         // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumDriverTriangles;                                // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Sigma;                                             // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxHeight;                                         // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxWidth;                                          // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnforcePowerOfTwo;                                // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAnimToTexturePrecision                       Precision;                                         // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAnimToTextureMode                            Mode;                                              // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A3[0x5];                                       // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              VertexPositionTexture;                             // 0x00A8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              VertexNormalTexture;                               // 0x00D0(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              BonePositionTexture;                               // 0x00F8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              BoneRotationTexture;                               // 0x0120(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              BoneWeightTexture;                                 // 0x0148(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh;                                      // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SkeletalLODIndex;                                  // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0058(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StaticLODIndex;                                    // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UVChannel;                                         // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumDriverTriangles;                                // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Sigma;                                             // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxHeight;                                         // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxWidth;                                          // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnforcePowerOfTwo;                                // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimToTexturePrecision                       Precision;                                         // 0x0099(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimToTextureMode                            Mode;                                              // 0x009A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              VertexPositionTexture;                             // 0x00A0(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              VertexNormalTexture;                               // 0x00C8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              BonePositionTexture;                               // 0x00F0(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              BoneRotationTexture;                               // 0x0118(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              BoneWeightTexture;                                 // 0x0140(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RootTransform;                                     // 0x0170(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AttachToSocket;                                    // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SampleRate;                                        // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -48,7 +49,7 @@ public:
 	TArray<struct FAnimToTextureAnimSequenceInfo> AnimSequences;                                     // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bAutoPlay;                                         // 0x01F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         animationIndex;                                    // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AnimationIndex;                                    // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Frame;                                             // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAnimToTextureNumBoneInfluences               NumBoneInfluences;                                 // 0x01FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -63,7 +64,6 @@ public:
 	struct FVector3f                              BoneSizeBBox;                                      // 0x0238(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAnimToTextureAnimInfo>         Animations;                                        // 0x0248(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UTexture2D* BP_GetBonePositionTexture();
@@ -88,17 +88,18 @@ public:
 		return GetDefaultObjImpl<UAnimToTextureDataAsset>();
 	}
 };
+DUMPER7_ASSERTS_UAnimToTextureDataAsset;
 
 // Class AnimToTexture.AnimToTextureInstancePlaybackLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UAnimToTextureInstancePlaybackLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static bool BatchUpdateInstancesAutoPlayData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureAutoPlayData>& AutoPlayData, const TArray<struct FMatrix>& Transforms, bool bMarkRenderStateDirty);
-	static bool BatchUpdateInstancesFrameData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureFrameData>& FrameData, const TArray<struct FMatrix>& Transforms, bool bMarkRenderStateDirty);
-	static bool GetAutoPlayDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 animationIndex, struct FAnimToTextureAutoPlayData* AutoPlayData, float TimeOffset, float PlayRate);
+	static bool BatchUpdateInstancesAutoPlayData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureAutoPlayData>& AutoPlayData, const TArray<struct FTransform>& Transforms, bool bMarkRenderStateDirty);
+	static bool BatchUpdateInstancesFrameData(class UInstancedStaticMeshComponent* InstancedMeshComponent, const TArray<struct FAnimToTextureFrameData>& FrameData, const TArray<struct FTransform>& Transforms, bool bMarkRenderStateDirty);
+	static bool GetAutoPlayDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 AnimationIndex, struct FAnimToTextureAutoPlayData* AutoPlayData, float TimeOffset, float PlayRate);
 	static float GetFrame(float Time, float StartFrame, float EndFrame, float TimeOffset, float PlayRate, float SampleRate);
-	static bool GetFrameDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 animationIndex, float Time, struct FAnimToTextureFrameData* AutoPlayData, float TimeOffset, float PlayRate);
+	static bool GetFrameDataFromDataAsset(const class UAnimToTextureDataAsset* DataAsset, int32 AnimationIndex, float Time, struct FAnimToTextureFrameData* FrameData, float TimeOffset, float PlayRate);
 	static bool SetupInstancedMeshComponent(class UInstancedStaticMeshComponent* InstancedMeshComponent, int32 NumInstances, bool bAutoPlay);
 	static bool UpdateInstanceAutoPlayData(class UInstancedStaticMeshComponent* InstancedMeshComponent, int32 InstanceIndex, const struct FAnimToTextureAutoPlayData& AutoPlayData, bool bMarkRenderStateDirty);
 	static bool UpdateInstanceFrameData(class UInstancedStaticMeshComponent* InstancedMeshComponent, int32 InstanceIndex, const struct FAnimToTextureFrameData& FrameData, bool bMarkRenderStateDirty);
@@ -117,5 +118,6 @@ public:
 		return GetDefaultObjImpl<UAnimToTextureInstancePlaybackLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnimToTextureInstancePlaybackLibrary;
 
 SDK_NAMESPACE_END

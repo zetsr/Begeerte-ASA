@@ -10,50 +10,50 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass Human_WeaponIK_CtrlRig.Human_WeaponIK_CtrlRig_C
-// 0x02F8 (0x0DC8 - 0x0AD0)
+// 0x0300 (0x1020 - 0x0D20)
 class UHuman_WeaponIK_CtrlRig_C final : public UControlRig
 {
 public:
-	struct FVector                                ElbowOffset;                                       // 0x0AD0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RightHandIKAlpha;                                  // 0x0AE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AEC[0x4];                                      // 0x0AEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LeftHandIKAlpha;                                   // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShoulderWidthScale;                                // 0x0AF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PV_OffsetFactor;                                   // 0x0B00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B04[0x4];                                      // 0x0B04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PV_L;                                              // 0x0B08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PV_R;                                              // 0x0B20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TimerTest;                                         // 0x0B38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B39[0x7];                                      // 0x0B39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                WeaponPositionOffset_ShortArms;                    // 0x0B40(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                WeaponPositionOffset_Female;                       // 0x0B58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BoneModifier_ArmLength;                            // 0x0B70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BoneModifier_TorsoSize;                            // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BoneModifier_Shoulders;                            // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                L_WeaponShift;                                     // 0x0B88(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                R_WeaponShift;                                     // 0x0BA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRigPose                               LArmPose;                                          // 0x0BB8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRigPose                               RArmPose;                                          // 0x0C28(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FRigPose                               InitialArmScalePose;                               // 0x0C98(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FVector                                WeaponScale;                                       // 0x0D08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ShiftHandScalePivotToMiddleFinger;                 // 0x0D20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFemale;                                           // 0x0D24(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D25[0x3];                                      // 0x0D25(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LeftHandToHeadIKAlpha;                             // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightHandToHeadIKAlpha;                            // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LeftHandToChestIKAlpha;                            // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightHandToChestIKAlpha;                           // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CharacterCreator_OverallMuscle;                    // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CharacterCreator_OverallFat;                       // 0x0D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRigPose                               ArmTwistPose;                                      // 0x0D58(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                ElbowOffset;                                       // 0x0D20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RightHandIKAlpha;                                  // 0x0D38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D3C[0x4];                                      // 0x0D3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LeftHandIKAlpha;                                   // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShoulderWidthScale;                                // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PV_OffsetFactor;                                   // 0x0D50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D54[0x4];                                      // 0x0D54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PV_L;                                              // 0x0D58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PV_R;                                              // 0x0D70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TimerTest;                                         // 0x0D88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D89[0x7];                                      // 0x0D89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                WeaponPositionOffset_ShortArms;                    // 0x0D90(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WeaponPositionOffset_Female;                       // 0x0DA8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BoneModifier_ArmLength;                            // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BoneModifier_TorsoSize;                            // 0x0DC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BoneModifier_Shoulders;                            // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                L_WeaponShift;                                     // 0x0DD8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                R_WeaponShift;                                     // 0x0DF0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRigPose                               LArmPose;                                          // 0x0E08(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRigPose                               RArmPose;                                          // 0x0E78(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FRigPose                               InitialArmScalePose;                               // 0x0EE8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                WeaponScale;                                       // 0x0F58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ShiftHandScalePivotToMiddleFinger;                 // 0x0F70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFemale;                                           // 0x0F74(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F75[0x3];                                      // 0x0F75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LeftHandToHeadIKAlpha;                             // 0x0F78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightHandToHeadIKAlpha;                            // 0x0F80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftHandToChestIKAlpha;                            // 0x0F88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightHandToChestIKAlpha;                           // 0x0F90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CharacterCreator_OverallMuscle;                    // 0x0F98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CharacterCreator_OverallFat;                       // 0x0FA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRigPose                               ArmTwistPose;                                      // 0x0FA8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
@@ -69,5 +69,6 @@ public:
 		return GetDefaultObjImpl<UHuman_WeaponIK_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_WeaponIK_CtrlRig_C;
 
 SDK_NAMESPACE_END

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "DeveloperSettings_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Soundscape_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Soundscape_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -43,6 +43,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeBPFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeBPFunctionLibrary;
 
 // Class Soundscape.SoundscapeColor
 // 0x00D8 (0x0100 - 0x0028)
@@ -71,6 +72,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeColor>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeColor;
 
 // Class Soundscape.ActiveSoundscapeColorVoice
 // 0x0018 (0x0040 - 0x0028)
@@ -99,9 +101,10 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapeColorVoice>();
 	}
 };
+DUMPER7_ASSERTS_UActiveSoundscapeColorVoice;
 
 // Class Soundscape.ActiveSoundscapeColor
-// 0x0168 (0x0190 - 0x0028)
+// 0x0170 (0x0198 - 0x0028)
 class UActiveSoundscapeColor final : public UObject
 {
 public:
@@ -111,9 +114,9 @@ public:
 	struct FSoundscapeColorPlaybackSettings       PlaybackBehavior;                                  // 0x0068(0x000C)(NoDestructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoundscapeColorSpawnSettings          SpawnBehavior;                                     // 0x0078(0x0088)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_100[0x78];                                     // 0x0100(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UActiveSoundscapeColorVoice*>    SoundscapeColorVoicePool;                          // 0x0178(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x80];                                     // 0x0100(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UActiveSoundscapeColorVoice*>    SoundscapeColorVoicePool;                          // 0x0180(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_190[0x8];                                      // 0x0190(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsPlaying();
@@ -135,13 +138,14 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapeColor>();
 	}
 };
+DUMPER7_ASSERTS_UActiveSoundscapeColor;
 
 // Class Soundscape.SoundscapeColorPointComponent
-// 0x0008 (0x00D8 - 0x00D0)
+// 0x0008 (0x0100 - 0x00F8)
 class USoundscapeColorPointComponent final : public UActorComponent
 {
 public:
-	struct FGameplayTag                           ColorPoint;                                        // 0x00D0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           ColorPoint;                                        // 0x00F8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -157,6 +161,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointComponent>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeColorPointComponent;
 
 // Class Soundscape.SoundscapePalette
 // 0x0058 (0x0080 - 0x0028)
@@ -180,6 +185,7 @@ public:
 		return GetDefaultObjImpl<USoundscapePalette>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapePalette;
 
 // Class Soundscape.ActiveSoundscapePalette
 // 0x0018 (0x0040 - 0x0028)
@@ -207,13 +213,14 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapePalette>();
 	}
 };
+DUMPER7_ASSERTS_UActiveSoundscapePalette;
 
 // Class Soundscape.SoundscapeSettings
 // 0x0070 (0x00A8 - 0x0038)
 class USoundscapeSettings final : public UDeveloperSettings
 {
 public:
-	TSet<struct FSoftObjectPath>                  SoundscapePaletteCollection;                       // 0x0038(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TSet<struct FSoftObjectPath>                  SoundscapePaletteCollection;                       // 0x0038(0x0050)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bDebugDraw;                                        // 0x0088(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LOD1ColorPointHashWidth;                           // 0x008C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -238,6 +245,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeSettings>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeSettings;
 
 // Class Soundscape.SoundscapeColorPointHashCellDensity
 // 0x0050 (0x0078 - 0x0028)
@@ -260,6 +268,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashCellDensity>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeColorPointHashCellDensity;
 
 // Class Soundscape.SoundscapeColorPointHashMap
 // 0x0098 (0x00C0 - 0x0028)
@@ -298,6 +307,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashMap>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeColorPointHashMap;
 
 // Class Soundscape.SoundscapeColorPointHashMapCollection
 // 0x0030 (0x0058 - 0x0028)
@@ -328,6 +338,7 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashMapCollection>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeColorPointHashMapCollection;
 
 // Class Soundscape.SoundscapeSubsystem
 // 0x0238 (0x0268 - 0x0030)
@@ -335,7 +346,7 @@ class USoundscapeSubsystem final : public UGameInstanceSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class USoundscapePalette*>               LoadedPaletteCollectionSet;                        // 0x0038(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TSet<class USoundscapePalette*>               LoadedPaletteCollectionSet;                        // 0x0038(0x0050)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	TMap<class FName, struct FSoundscapePaletteCollection> UnloadedPaletteCollections;               // 0x0088(0x0050)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_D8[0x20];                                      // 0x00D8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class USoundscapePalette*, class UActiveSoundscapePalette*> ActivePalettes;                 // 0x00F8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
@@ -372,5 +383,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_USoundscapeSubsystem;
 
 SDK_NAMESPACE_END

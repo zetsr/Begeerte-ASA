@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "AudioMixer_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -43,6 +43,7 @@ public:
 		return GetDefaultObjImpl<UAudioCapture>();
 	}
 };
+DUMPER7_ASSERTS_UAudioCapture;
 
 // Class AudioCapture.AudioCaptureFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -65,6 +66,7 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAudioCaptureFunctionLibrary;
 
 // Class AudioCapture.AudioCaptureBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -88,14 +90,15 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAudioCaptureBlueprintLibrary;
 
 // Class AudioCapture.AudioCaptureComponent
-// 0x00C0 (0x09A0 - 0x08E0)
+// 0x00C0 (0x09C0 - 0x0900)
 class UAudioCaptureComponent final : public USynthComponent
 {
 public:
-	int32                                         JitterLatencyFrames;                               // 0x08E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8E4[0xBC];                                     // 0x08E4(0x00BC)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         JitterLatencyFrames;                               // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_904[0xBC];                                     // 0x0904(0x00BC)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -111,5 +114,6 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureComponent>();
 	}
 };
+DUMPER7_ASSERTS_UAudioCaptureComponent;
 
 SDK_NAMESPACE_END

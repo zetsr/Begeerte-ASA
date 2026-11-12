@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void IInterface_TekSpear_C::Interface_ProjSpear_Tek_get_damage_multiplier_for_attack(uint8 attack_index, double* damage_multiplier)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_ProjSpear_Tek get damage multiplier for attack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_ProjSpear_Tek get damage multiplier for attack", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_ProjSpear_Tek_get_damage_multiplier_for_attack Parms{};
 
@@ -47,10 +45,8 @@ void IInterface_TekSpear_C::Interface_ProjSpear_Tek_get_damage_multiplier_for_at
 
 void IInterface_TekSpear_C::Interface_ProjSpear_Tek_get_rotation_towards_projectile(struct FRotator* out_rotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_ProjSpear_Tek get rotation towards projectile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_ProjSpear_Tek get rotation towards projectile", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_ProjSpear_Tek_get_rotation_towards_projectile Parms{};
 
@@ -69,10 +65,8 @@ void IInterface_TekSpear_C::Interface_ProjSpear_Tek_get_rotation_towards_project
 
 void IInterface_TekSpear_C::Interface_ProjSpear_Tek_set_projectile_location(const struct FVector& Last_Projectile_Location, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_ProjSpear_Tek set projectile location");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_ProjSpear_Tek set projectile location", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_ProjSpear_Tek_set_projectile_location Parms{};
 
@@ -93,10 +87,8 @@ void IInterface_TekSpear_C::Interface_ProjSpear_Tek_set_projectile_location(cons
 
 void IInterface_TekSpear_C::Interface_ProjSpear_Tek_set_rotation_towards_projectile(const struct FRotator& in_rot, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_ProjSpear_Tek set rotation towards projectile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_ProjSpear_Tek set rotation towards projectile", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_ProjSpear_Tek_set_rotation_towards_projectile Parms{};
 
@@ -116,10 +108,8 @@ void IInterface_TekSpear_C::Interface_ProjSpear_Tek_set_rotation_towards_project
 
 void IInterface_TekSpear_C::Interface_TekSpear__Destroy_Projectile(bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Destroy Projectile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Destroy Projectile", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Destroy_Projectile Parms{};
 
@@ -154,10 +144,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Destroy_Projectile(bool* success
 
 void IInterface_TekSpear_C::Interface_TekSpear__Get_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* Held_Blocking_Loop, struct FStruct_WeapAnimWith3P_V3* Block_Recoil, struct FStruct_WeapAnimWith3P_V3* Perfect_Block, struct FStruct_WeapAnimWith3P_V3* Held_Deflecting_Loop, struct FStruct_WeapAnimWith3P_V3* Deflect_Recoil, struct FStruct_WeapAnimWith3P_V3* Perfect_Deflect, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* Held_Air_Stab_Charge_Loop, struct FStruct_WeapAnimWith3P_V3* Air_Stab_Release, struct FStruct_WeapAnimWith3P_V3* Ground_Slam_Falling_Loop, struct FStruct_WeapAnimWith3P_V3* Ground_Slam_Land, struct FStruct_WeapAnimWith3P_V3* Held_Spear_Toss_Pullback_Loop, struct FStruct_WeapAnimWith3P_V3* Teleport_To_Spear_Midair, struct FStruct_WeapAnimWith3P_V3* Teleport_To_Spear_Grounded, struct FStruct_WeapAnimWith3P_V3* Fallback_Standard_Stab_like_in_water)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Get Animations");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Get Animations", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Get_Animations Parms{};
 
@@ -229,7 +217,7 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Animations(struct FStruct_We
 // struct FStruct_WeapAnimWith3P_V3*       Deflect                                                (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       AirStabCharge                                          (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       AirStabRelease                                         (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
-// struct FStruct_WeapAnimWith3P_V3*       pullback                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// struct FStruct_WeapAnimWith3P_V3*       PullBack                                               (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       Toss                                                   (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       Dodge                                                  (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       GroundSlamDive                                         (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
@@ -237,12 +225,10 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Animations(struct FStruct_We
 // struct FStruct_WeapAnimWith3P_V3*       Fallback_Stab                                          (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_WeapAnimWith3P_V3*       TPToSpear                                              (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 
-void IInterface_TekSpear_C::Interface_TekSpear__Get_Awaiting_Server_Response_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* bLock, struct FStruct_WeapAnimWith3P_V3* Deflect, struct FStruct_WeapAnimWith3P_V3* AirStabCharge, struct FStruct_WeapAnimWith3P_V3* AirStabRelease, struct FStruct_WeapAnimWith3P_V3* pullback, struct FStruct_WeapAnimWith3P_V3* Toss, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* GroundSlamDive, struct FStruct_WeapAnimWith3P_V3* GroundSlamLand, struct FStruct_WeapAnimWith3P_V3* Fallback_Stab, struct FStruct_WeapAnimWith3P_V3* TPToSpear)
+void IInterface_TekSpear_C::Interface_TekSpear__Get_Awaiting_Server_Response_Animations(struct FStruct_WeapAnimWith3P_V3* Attack_1, struct FStruct_WeapAnimWith3P_V3* Attack_2, struct FStruct_WeapAnimWith3P_V3* Attack_3, struct FStruct_WeapAnimWith3P_V3* bLock, struct FStruct_WeapAnimWith3P_V3* Deflect, struct FStruct_WeapAnimWith3P_V3* AirStabCharge, struct FStruct_WeapAnimWith3P_V3* AirStabRelease, struct FStruct_WeapAnimWith3P_V3* PullBack, struct FStruct_WeapAnimWith3P_V3* Toss, struct FStruct_WeapAnimWith3P_V3* Dodge, struct FStruct_WeapAnimWith3P_V3* GroundSlamDive, struct FStruct_WeapAnimWith3P_V3* GroundSlamLand, struct FStruct_WeapAnimWith3P_V3* Fallback_Stab, struct FStruct_WeapAnimWith3P_V3* TPToSpear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Get Awaiting Server Response Animations");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Get Awaiting Server Response Animations", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Get_Awaiting_Server_Response_Animations Parms{};
 
@@ -269,8 +255,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Awaiting_Server_Response_Ani
 	if (AirStabRelease != nullptr)
 		*AirStabRelease = std::move(Parms.AirStabRelease);
 
-	if (pullback != nullptr)
-		*pullback = std::move(Parms.pullback);
+	if (PullBack != nullptr)
+		*PullBack = std::move(Parms.PullBack);
 
 	if (Toss != nullptr)
 		*Toss = std::move(Parms.Toss);
@@ -300,10 +286,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Awaiting_Server_Response_Ani
 
 void IInterface_TekSpear_C::Torp_Mode_0(bool* Is_Damage_Mode, bool* Is_Tranq_Mode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Torp Mode");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Torp Mode", FuncInfo);
 
 	Params::Interface_TekSpear_C_Torp_Mode_0 Parms{};
 
@@ -325,10 +309,8 @@ void IInterface_TekSpear_C::Torp_Mode_0(bool* Is_Damage_Mode, bool* Is_Tranq_Mod
 
 void IInterface_TekSpear_C::Interface_TekSpear__Get_Ground_Slam_Final_Hit_dmg_types(class UClass** Regular_dmg_type, class UClass** torpor_dmg_type)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Get Ground Slam Final Hit dmg types");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Get Ground Slam Final Hit dmg types", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Get_Ground_Slam_Final_Hit_dmg_types Parms{};
 
@@ -349,10 +331,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Ground_Slam_Final_Hit_dmg_ty
 
 void IInterface_TekSpear_C::Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used(bool* Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Get Midair Attack Air Limit Used");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Get Midair Attack Air Limit Used", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used Parms{};
 
@@ -371,10 +351,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used
 
 void IInterface_TekSpear_C::Interface_TekSpear__Is_Spear_Projectile_Valid(bool* Is_Valid, class AShooterProjectile** Projectile_Ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Is Spear Projectile Valid");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Is Spear Projectile Valid", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Is_Spear_Projectile_Valid Parms{};
 
@@ -396,10 +374,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Is_Spear_Projectile_Valid(bool* 
 
 void IInterface_TekSpear_C::Torp_Mode(bool _torpor, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Torp Mode");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Torp Mode", FuncInfo);
 
 	Params::Interface_TekSpear_C_Torp_Mode Parms{};
 
@@ -420,10 +396,8 @@ void IInterface_TekSpear_C::Torp_Mode(bool _torpor, bool* success)
 
 void IInterface_TekSpear_C::Interface_TekSpear__Set_Dynamic_Material_Parameters(class UMaterialInstanceDynamic* Material, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Set Dynamic Material Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Set Dynamic Material Parameters", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Set_Dynamic_Material_Parameters Parms{};
 
@@ -444,10 +418,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Set_Dynamic_Material_Parameters(
 
 void IInterface_TekSpear_C::Interface_TekSpear__Set_Midair_Attack_Air_Limit_Used(bool Value_To_Set, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Set Midair Attack Air Limit Used");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Set Midair Attack Air Limit Used", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Set_Midair_Attack_Air_Limit_Used Parms{};
 
@@ -468,10 +440,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Set_Midair_Attack_Air_Limit_Used
 
 void IInterface_TekSpear_C::Interface_TekSpear__Set_Parameters_On_Cascade_VFX_particles(class UParticleSystemComponent* Cascade_VFX, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Set Parameters On Cascade VFX particles");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Set Parameters On Cascade VFX particles", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Set_Parameters_On_Cascade_VFX_particles Parms{};
 
@@ -492,10 +462,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Set_Parameters_On_Cascade_VFX_pa
 
 void IInterface_TekSpear_C::Interface_TekSpear__Set_Parameters_On_Niagara_VFX_particles(class UNiagaraComponent* Niagara_VFX, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_ Set Parameters On Niagara VFX particles");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_ Set Parameters On Niagara VFX particles", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear__Set_Parameters_On_Niagara_VFX_particles Parms{};
 
@@ -517,10 +485,8 @@ void IInterface_TekSpear_C::Interface_TekSpear__Set_Parameters_On_Niagara_VFX_pa
 
 void IInterface_TekSpear_C::Interface_TekSpear_CanSetWeaponStateTo(uint8 DesiredWeaponState, bool* CanSet, class FName* Fail_Reason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_CanSetWeaponStateTo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_CanSetWeaponStateTo", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_CanSetWeaponStateTo Parms{};
 
@@ -543,10 +509,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_CanSetWeaponStateTo(uint8 Desired
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetAwaitingServerState(uint8* Awaiting_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetAwaitingServerState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetAwaitingServerState", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetAwaitingServerState Parms{};
 
@@ -564,10 +528,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetAwaitingServerState(uint8* Awa
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetFakeExpandedScale(double* FakeExpandedScale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetFakeExpandedScale");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetFakeExpandedScale", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetFakeExpandedScale Parms{};
 
@@ -585,10 +547,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetFakeExpandedScale(double* Fake
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetLastLocationBeforeTP(struct FVector* Last_PreTPLoc)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetLastLocationBeforeTP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetLastLocationBeforeTP", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetLastLocationBeforeTP Parms{};
 
@@ -606,10 +566,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetLastLocationBeforeTP(struct FV
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetLastLocationProjectileWasAt(struct FVector* Location)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetLastLocationProjectileWasAt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetLastLocationProjectileWasAt", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetLastLocationProjectileWasAt Parms{};
 
@@ -628,10 +586,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetLastLocationProjectileWasAt(st
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetLastSelectedTeleportSpot(bool* IsLastTPLocationAvailable, struct FVector* LastTPLocation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetLastSelectedTeleportSpot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetLastSelectedTeleportSpot", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetLastSelectedTeleportSpot Parms{};
 
@@ -658,10 +614,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetLastSelectedTeleportSpot(bool*
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetState(uint8* CurrentState, bool* pullback, bool* is_midair_stab_charging, bool* is_midair_stab_releasing, bool* IsBlocking, bool* IsDoding, bool* IsDeflecting)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetState", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetState Parms{};
 
@@ -698,10 +652,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetState(uint8* CurrentState, boo
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetThrownSpearProjRef(bool* Fround_Valid_Proj, class AShooterProjectile** Spear_Ref)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetThrownSpearProjRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetThrownSpearProjRef", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetThrownSpearProjRef Parms{};
 
@@ -722,10 +674,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetThrownSpearProjRef(bool* Froun
 
 void IInterface_TekSpear_C::Interface_TekSpear_GetWantsToBlock(bool* WantsToBlock)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_GetWantsToBlock");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_GetWantsToBlock", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_GetWantsToBlock Parms{};
 
@@ -744,10 +694,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_GetWantsToBlock(bool* WantsToBloc
 
 void IInterface_TekSpear_C::Interface_TekSpear_SetHideWeapon(bool HiddenState, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_SetHideWeapon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_SetHideWeapon", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_SetHideWeapon Parms{};
 
@@ -768,10 +716,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_SetHideWeapon(bool HiddenState, b
 
 void IInterface_TekSpear_C::Interface_TekSpear_SetLastLocationProjectileWasAt(const struct FVector& Location, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_SetLastLocationProjectileWasAt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_SetLastLocationProjectileWasAt", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_SetLastLocationProjectileWasAt Parms{};
 
@@ -792,10 +738,8 @@ void IInterface_TekSpear_C::Interface_TekSpear_SetLastLocationProjectileWasAt(co
 
 void IInterface_TekSpear_C::Interface_TekSpear_SetLastSelectedTeleportSpot(const struct FVector& TeleportSpot, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_TekSpear_C", "Interface_TekSpear_SetLastSelectedTeleportSpot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_TekSpear_C", "Interface_TekSpear_SetLastSelectedTeleportSpot", FuncInfo);
 
 	Params::Interface_TekSpear_C_Interface_TekSpear_SetLastSelectedTeleportSpot Parms{};
 

@@ -21,6 +21,7 @@ struct MassSpawner_ScaleSpawningCount final
 public:
 	float                                         Scale;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassSpawner_ScaleSpawningCount;
 
 // Function MassSpawner.MassSpawner.GetCount
 // 0x0004 (0x0004 - 0x0000)
@@ -29,6 +30,7 @@ struct MassSpawner_GetCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassSpawner_GetCount;
 
 // Function MassSpawner.MassSpawner.GetSpawningCountScale
 // 0x0004 (0x0004 - 0x0000)
@@ -37,6 +39,7 @@ struct MassSpawner_GetSpawningCountScale final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MassSpawner_GetSpawningCountScale;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

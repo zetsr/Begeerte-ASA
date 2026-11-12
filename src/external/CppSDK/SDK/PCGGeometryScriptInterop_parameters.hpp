@@ -16,25 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function PCGGeometryScriptInterop.PCGDynamicMeshData.K2_Initialize
-// 0x0020 (0x0020 - 0x0000)
-struct PCGDynamicMeshData_K2_Initialize final
-{
-public:
-	class UDynamicMesh*                           InMesh;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             InMaterials;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bCanTakeOwnership;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function PCGGeometryScriptInterop.PCGDynamicMeshData.SetMaterials
-// 0x0010 (0x0010 - 0x0000)
-struct PCGDynamicMeshData_SetMaterials final
-{
-public:
-	TArray<class UMaterialInterface*>             InMaterials;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.ProcessDynamicMesh
 // 0x0018 (0x0018 - 0x0000)
 struct PCGGeometryBlueprintElement_ProcessDynamicMesh final
@@ -43,15 +24,17 @@ public:
 	class UDynamicMesh*                           InDynMesh;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         OutTags;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PCGGeometryBlueprintElement_ProcessDynamicMesh;
 
 // Function PCGGeometryScriptInterop.PCGGeometryBlueprintElement.CopyOrStealInputData
-// 0x0070 (0x0070 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct PCGGeometryBlueprintElement_CopyOrStealInputData final
 {
 public:
-	struct FPCGTaggedData                         InTaggedData;                                      // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UPCGDynamicMeshData*                    ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGTaggedData                         InTaggedData;                                      // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UPCGDynamicMeshData*                    ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PCGGeometryBlueprintElement_CopyOrStealInputData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ReplicationGraph_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ReplicationGraph_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ReplicationGraph.ReplicationGraph
-// 0x0688 (0x06B0 - 0x0028)
+// 0x0658 (0x0680 - 0x0028)
 #pragma pack(push, 0x1)
 class alignas(0x10) UReplicationGraph : public UReplicationDriver
 {
@@ -29,10 +29,10 @@ public:
 	TArray<class UNetReplicationGraphConnection*> PendingConnections;                                // 0x0048(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_58[0x40];                                      // 0x0058(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UReplicationGraphNode*>          GlobalGraphNodes;                                  // 0x0098(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TSet<class UReplicationGraphNode*>            Primal_PrepareForReplicationNodesSet;              // 0x00A8(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_F8[0x188];                                     // 0x00F8(0x0188)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class AActor*>                           ActiveNetworkActors;                               // 0x0280(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_2D0[0x3D8];                                    // 0x02D0(0x03D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSet<class UReplicationGraphNode*>            Primal_PrepareForReplicationNodesSet;              // 0x00A8(0x0050)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_F8[0x178];                                     // 0x00F8(0x0178)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class AActor*>                           ActiveNetworkActors;                               // 0x0270(0x0050)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_2C0[0x3B8];                                    // 0x02C0(0x03B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -49,17 +49,17 @@ public:
 	}
 };
 #pragma pack(pop)
+DUMPER7_ASSERTS_UReplicationGraph;
 
 // Class ReplicationGraph.BasicReplicationGraph
-// 0x0030 (0x06E0 - 0x06B0)
+// 0x0030 (0x06B0 - 0x0680)
 class UBasicReplicationGraph final : public UReplicationGraph
 {
 public:
-	class UReplicationGraphNode_GridSpatialization2D* GridNode;                                      // 0x06A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UReplicationGraphNode_ActorList*        AlwaysRelevantNode;                                // 0x06B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FConnectionAlwaysRelevantNodePair> AlwaysRelevantForConnectionList;                // 0x06B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ActorsWithoutNetConnection;                        // 0x06C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_6D8[0x8];                                      // 0x06D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UReplicationGraphNode_GridSpatialization2D* GridNode;                                      // 0x0678(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UReplicationGraphNode_ActorList*        AlwaysRelevantNode;                                // 0x0680(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FConnectionAlwaysRelevantNodePair> AlwaysRelevantForConnectionList;                // 0x0688(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ActorsWithoutNetConnection;                        // 0x0698(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -75,6 +75,7 @@ public:
 		return GetDefaultObjImpl<UBasicReplicationGraph>();
 	}
 };
+DUMPER7_ASSERTS_UBasicReplicationGraph;
 
 // Class ReplicationGraph.ReplicationGraphNode
 // 0x0028 (0x0050 - 0x0028)
@@ -98,6 +99,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode;
 
 // Class ReplicationGraph.ReplicationGraphNode_ActorList
 // 0x0750 (0x07A0 - 0x0050)
@@ -120,6 +122,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_ActorList>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_ActorList;
 
 // Class ReplicationGraph.ReplicationGraphNode_ActorListFrequencyBuckets
 // 0x0838 (0x0888 - 0x0050)
@@ -142,6 +145,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_ActorListFrequencyBuckets>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_ActorListFrequencyBuckets;
 
 // Class ReplicationGraph.ReplicationGraphNode_DynamicSpatialFrequency
 // 0x0030 (0x07D0 - 0x07A0)
@@ -164,6 +168,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_DynamicSpatialFrequency>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_DynamicSpatialFrequency;
 
 // Class ReplicationGraph.ReplicationGraphNode_ConnectionDormancyNode
 // 0x0850 (0x0FF0 - 0x07A0)
@@ -186,6 +191,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_ConnectionDormancyNode>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_ConnectionDormancyNode;
 
 // Class ReplicationGraph.ReplicationGraphNode_DormancyNode
 // 0x0010 (0x07B0 - 0x07A0)
@@ -208,15 +214,16 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_DormancyNode>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_DormancyNode;
 
 // Class ReplicationGraph.ReplicationGraphNode_GridCell
-// 0x0050 (0x07F0 - 0x07A0)
+// 0x0040 (0x07E0 - 0x07A0)
 class alignas(0x10) UReplicationGraphNode_GridCell : public UReplicationGraphNode_ActorList
 {
 public:
-	uint8                                         Pad_7A0[0x40];                                     // 0x07A0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	class UReplicationGraphNode*                  DynamicNode;                                       // 0x07E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	class UReplicationGraphNode_DormancyNode*     DormancyNode;                                      // 0x07E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_7A0[0x30];                                     // 0x07A0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class UReplicationGraphNode*                  DynamicNode;                                       // 0x07D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class UReplicationGraphNode_DormancyNode*     DormancyNode;                                      // 0x07D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -232,13 +239,14 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_GridCell>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_GridCell;
 
 // Class ReplicationGraph.ReplicationGraphNode_GridSpatialization2D
-// 0x02E0 (0x0330 - 0x0050)
+// 0x02B8 (0x0308 - 0x0050)
 class UReplicationGraphNode_GridSpatialization2D : public UReplicationGraphNode
 {
 public:
-	uint8                                         Pad_50[0x2E0];                                     // 0x0050(0x02E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x2B8];                                     // 0x0050(0x02B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -254,6 +262,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_GridSpatialization2D>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_GridSpatialization2D;
 
 // Class ReplicationGraph.ReplicationGraphNode_AlwaysRelevant
 // 0x0018 (0x0068 - 0x0050)
@@ -277,6 +286,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_AlwaysRelevant>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_AlwaysRelevant;
 
 // Class ReplicationGraph.ReplicationGraphNode_AlwaysRelevant_ForConnection
 // 0x0120 (0x08C0 - 0x07A0)
@@ -301,6 +311,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_AlwaysRelevant_ForConnection>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_AlwaysRelevant_ForConnection;
 
 // Class ReplicationGraph.ReplicationGraphNode_TearOff_ForConnection
 // 0x00D0 (0x0120 - 0x0050)
@@ -324,6 +335,7 @@ public:
 		return GetDefaultObjImpl<UReplicationGraphNode_TearOff_ForConnection>();
 	}
 };
+DUMPER7_ASSERTS_UReplicationGraphNode_TearOff_ForConnection;
 
 // Class ReplicationGraph.NetReplicationGraphConnection
 // 0x0350 (0x0378 - 0x0028)
@@ -354,14 +366,15 @@ public:
 		return GetDefaultObjImpl<UNetReplicationGraphConnection>();
 	}
 };
+DUMPER7_ASSERTS_UNetReplicationGraphConnection;
 
 // Class ReplicationGraph.ReplicationGraphDebugActor
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0010 (0x04A8 - 0x0498)
 class AReplicationGraphDebugActor final : public AActor
 {
 public:
-	class UReplicationGraph*                      ReplicationGraph;                                  // 0x0490(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UNetReplicationGraphConnection*         ConnectionManager;                                 // 0x0498(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UReplicationGraph*                      ReplicationGraph;                                  // 0x0498(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UNetReplicationGraphConnection*         ConnectionManager;                                 // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	void ClientCellInfo(const struct FVector& CellLocation, const struct FVector& CellExtent, const TArray<class AActor*>& Actors);
@@ -388,5 +401,6 @@ public:
 		return GetDefaultObjImpl<AReplicationGraphDebugActor>();
 	}
 };
+DUMPER7_ASSERTS_AReplicationGraphDebugActor;
 
 SDK_NAMESPACE_END

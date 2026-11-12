@@ -32,6 +32,8 @@ public:
 	class UVariantSet* GetVariantSet(int32 VariantSetIndex);
 	class UVariantSet* GetVariantSetByName(const class FString& VariantSetName);
 
+	int32 GetVariantSetIndex(const class FString& VariantSetName) const;
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -46,14 +48,15 @@ public:
 		return GetDefaultObjImpl<ULevelVariantSets>();
 	}
 };
+DUMPER7_ASSERTS_ULevelVariantSets;
 
 // Class VariantManagerContent.LevelVariantSetsActor
-// 0x0070 (0x0500 - 0x0490)
+// 0x0070 (0x0508 - 0x0498)
 class ALevelVariantSetsActor final : public AActor
 {
 public:
-	struct FSoftObjectPath                        LevelVariantSets;                                  // 0x0490(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;    // 0x04B0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FSoftObjectPath                        LevelVariantSets;                                  // 0x0498(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;    // 0x04B8(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
 	class ULevelVariantSets* GetLevelVariantSets(bool bLoad);
@@ -75,6 +78,7 @@ public:
 		return GetDefaultObjImpl<ALevelVariantSetsActor>();
 	}
 };
+DUMPER7_ASSERTS_ALevelVariantSetsActor;
 
 // Class VariantManagerContent.LevelVariantSetsFunctionDirector
 // 0x0018 (0x0040 - 0x0028)
@@ -97,6 +101,7 @@ public:
 		return GetDefaultObjImpl<ULevelVariantSetsFunctionDirector>();
 	}
 };
+DUMPER7_ASSERTS_ULevelVariantSetsFunctionDirector;
 
 // Class VariantManagerContent.PropertyValue
 // 0x0188 (0x01B0 - 0x0028)
@@ -137,6 +142,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValue>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValue;
 
 // Class VariantManagerContent.PropertyValueTransform
 // 0x0000 (0x01B0 - 0x01B0)
@@ -156,6 +162,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValueTransform>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValueTransform;
 
 // Class VariantManagerContent.PropertyValueVisibility
 // 0x0000 (0x01B0 - 0x01B0)
@@ -175,47 +182,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValueVisibility>();
 	}
 };
-
-// Class VariantManagerContent.VariantSet
-// 0x0040 (0x0068 - 0x0028)
-class UVariantSet final : public UObject
-{
-public:
-	class FText                                   DisplayText;                                       // 0x0028(0x0010)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bExpanded;                                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariant*>                       Variants;                                          // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class UTexture2D*                             Thumbnail;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-
-public:
-	class ULevelVariantSets* GetParent();
-	class UTexture2D* GetThumbnail();
-	class UVariant* GetVariant(int32 VariantIndex);
-	class UVariant* GetVariantByName(const class FString& VariantName);
-	void SetDisplayText(const class FText& NewDisplayText);
-	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
-	void SetThumbnailFromEditorViewport();
-	void SetThumbnailFromFile(const class FString& FilePath);
-	void SetThumbnailFromTexture(class UTexture2D* NewThumbnail);
-
-	class FText GetDisplayText() const;
-	int32 GetNumVariants() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("VariantSet")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"VariantSet")
-	}
-	static class UVariantSet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVariantSet>();
-	}
-};
+DUMPER7_ASSERTS_UPropertyValueVisibility;
 
 // Class VariantManagerContent.PropertyValueColor
 // 0x0000 (0x01B0 - 0x01B0)
@@ -235,6 +202,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValueColor>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValueColor;
 
 // Class VariantManagerContent.PropertyValueMaterial
 // 0x0000 (0x01B0 - 0x01B0)
@@ -254,6 +222,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValueMaterial>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValueMaterial;
 
 // Class VariantManagerContent.PropertyValueOption
 // 0x0000 (0x01B0 - 0x01B0)
@@ -273,6 +242,7 @@ public:
 		return GetDefaultObjImpl<UPropertyValueOption>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValueOption;
 
 // Class VariantManagerContent.PropertyValueSoftObject
 // 0x0000 (0x01B0 - 0x01B0)
@@ -292,16 +262,17 @@ public:
 		return GetDefaultObjImpl<UPropertyValueSoftObject>();
 	}
 };
+DUMPER7_ASSERTS_UPropertyValueSoftObject;
 
 // Class VariantManagerContent.SwitchActor
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x04C0 - 0x0498)
 class ASwitchActor final : public AActor
 {
 public:
-	uint8                                         Pad_490[0x18];                                     // 0x0490(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComponent;                                    // 0x04A8(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	int32                                         LastSelectedOption;                                // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_498[0x18];                                     // 0x0498(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        SceneComponent;                                    // 0x04B0(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	int32                                         LastSelectedOption;                                // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4BC[0x4];                                      // 0x04BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SelectOption(int32 OptionIndex);
@@ -323,6 +294,7 @@ public:
 		return GetDefaultObjImpl<ASwitchActor>();
 	}
 };
+DUMPER7_ASSERTS_ASwitchActor;
 
 // Class VariantManagerContent.Variant
 // 0x0048 (0x0070 - 0x0028)
@@ -351,6 +323,7 @@ public:
 	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
 	void SetThumbnailFromEditorViewport();
 	void SetThumbnailFromFile(const class FString& FilePath);
+	void SetThumbnailFromObject(class UObject* ObjectThumbnail);
 	void SetThumbnailFromTexture(class UTexture2D* NewThumbnail);
 	void SwitchOn();
 
@@ -370,6 +343,7 @@ public:
 		return GetDefaultObjImpl<UVariant>();
 	}
 };
+DUMPER7_ASSERTS_UVariant;
 
 // Class VariantManagerContent.VariantObjectBinding
 // 0x0068 (0x0090 - 0x0028)
@@ -378,7 +352,7 @@ class UVariantObjectBinding final : public UObject
 public:
 	class FString                                 CachedActorLabel;                                  // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FSoftObjectPath                        ObjectPtr;                                         // 0x0038(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TLazyObjectPtr<class UObject>                 LazyObjectPtr;                                     // 0x0058(0x0018)(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TLazyObjectPtr<class UObject>                 LazyObjectPtr;                                     // 0x0058(0x0018)(Deprecated, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UPropertyValue*>                 CapturedProperties;                                // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	TArray<struct FFunctionCaller>                FunctionCallers;                                   // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
@@ -396,5 +370,51 @@ public:
 		return GetDefaultObjImpl<UVariantObjectBinding>();
 	}
 };
+DUMPER7_ASSERTS_UVariantObjectBinding;
+
+// Class VariantManagerContent.VariantSet
+// 0x0040 (0x0068 - 0x0028)
+class UVariantSet final : public UObject
+{
+public:
+	class FText                                   DisplayText;                                       // 0x0028(0x0010)(Deprecated, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bExpanded;                                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UVariant*>                       Variants;                                          // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UTexture2D*                             Thumbnail;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	class ULevelVariantSets* GetParent();
+	class UTexture2D* GetThumbnail();
+	class UVariant* GetVariant(int32 VariantIndex);
+	class UVariant* GetVariantByName(const class FString& VariantName);
+	void SetDisplayText(const class FText& NewDisplayText);
+	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
+	void SetThumbnailFromEditorViewport();
+	void SetThumbnailFromFile(const class FString& FilePath);
+	void SetThumbnailFromObject(class UObject* ObjectThumbnail);
+	void SetThumbnailFromTexture(class UTexture2D* NewThumbnail);
+
+	class FText GetDisplayText() const;
+	int32 GetNumVariants() const;
+	int32 GetVariantIndex(class UVariant* Var) const;
+	int32 GetVariantIndexByName(const class FString& VariantName) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("VariantSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VariantSet")
+	}
+	static class UVariantSet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVariantSet>();
+	}
+};
+DUMPER7_ASSERTS_UVariantSet;
 
 SDK_NAMESPACE_END

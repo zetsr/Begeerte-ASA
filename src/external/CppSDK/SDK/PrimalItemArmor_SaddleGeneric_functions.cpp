@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItemArmor_SaddleGeneric_C::BlueprintEquipped(bool bIsFromSaveGame)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "BlueprintEquipped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "BlueprintEquipped", FuncInfo);
 
 	Params::PrimalItemArmor_SaddleGeneric_C_BlueprintEquipped Parms{};
 
@@ -41,10 +39,8 @@ void UPrimalItemArmor_SaddleGeneric_C::BlueprintEquipped(bool bIsFromSaveGame)
 
 void UPrimalItemArmor_SaddleGeneric_C::BlueprintUnequipped()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "BlueprintUnequipped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "BlueprintUnequipped", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UPrimalItemArmor_SaddleGeneric_C::BlueprintUnequipped()
 
 void UPrimalItemArmor_SaddleGeneric_C::BPOverrideEquippedDurabilityPercentage(float* OutDurabilityPercentageValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "BPOverrideEquippedDurabilityPercentage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "BPOverrideEquippedDurabilityPercentage", FuncInfo);
 
 	Params::PrimalItemArmor_SaddleGeneric_C_BPOverrideEquippedDurabilityPercentage Parms{};
 
@@ -79,10 +73,8 @@ void UPrimalItemArmor_SaddleGeneric_C::BPOverrideEquippedDurabilityPercentage(fl
 
 void UPrimalItemArmor_SaddleGeneric_C::BPPostConstructAttachment(int32 AttachmentIndex, class UActorComponent* AttachedComponent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "BPPostConstructAttachment");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "BPPostConstructAttachment", FuncInfo);
 
 	Params::PrimalItemArmor_SaddleGeneric_C_BPPostConstructAttachment Parms{};
 
@@ -100,10 +92,8 @@ void UPrimalItemArmor_SaddleGeneric_C::BPPostConstructAttachment(int32 Attachmen
 
 void UPrimalItemArmor_SaddleGeneric_C::ExecuteUbergraph_PrimalItemArmor_SaddleGeneric(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "ExecuteUbergraph_PrimalItemArmor_SaddleGeneric");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "ExecuteUbergraph_PrimalItemArmor_SaddleGeneric", FuncInfo);
 
 	Params::PrimalItemArmor_SaddleGeneric_C_ExecuteUbergraph_PrimalItemArmor_SaddleGeneric Parms{};
 
@@ -118,10 +108,8 @@ void UPrimalItemArmor_SaddleGeneric_C::ExecuteUbergraph_PrimalItemArmor_SaddleGe
 
 void UPrimalItemArmor_SaddleGeneric_C::ResetSaddleDurabilityToSavedValue()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "ResetSaddleDurabilityToSavedValue");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "ResetSaddleDurabilityToSavedValue", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +120,8 @@ void UPrimalItemArmor_SaddleGeneric_C::ResetSaddleDurabilityToSavedValue()
 
 void UPrimalItemArmor_SaddleGeneric_C::SaveSaddleDurability()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemArmor_SaddleGeneric_C", "SaveSaddleDurability");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemArmor_SaddleGeneric_C", "SaveSaddleDurability", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

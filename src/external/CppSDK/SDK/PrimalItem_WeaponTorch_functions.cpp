@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItem_WeaponTorch_C::ApplyingSkinOntoItem(class UPrimalItem* ToOwnerItem, bool bIsFirstTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "ApplyingSkinOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "ApplyingSkinOntoItem", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_ApplyingSkinOntoItem Parms{};
 
@@ -45,10 +43,8 @@ void UPrimalItem_WeaponTorch_C::ApplyingSkinOntoItem(class UPrimalItem* ToOwnerI
 
 class FString UPrimalItem_WeaponTorch_C::BPGetCustomInventoryWidgetText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPGetCustomInventoryWidgetText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPGetCustomInventoryWidgetText", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPGetCustomInventoryWidgetText Parms{};
 
@@ -65,10 +61,8 @@ class FString UPrimalItem_WeaponTorch_C::BPGetCustomInventoryWidgetText()
 
 struct FColor UPrimalItem_WeaponTorch_C::BPGetCustomInventoryWidgetTextColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPGetCustomInventoryWidgetTextColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPGetCustomInventoryWidgetTextColor", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPGetCustomInventoryWidgetTextColor Parms{};
 
@@ -83,10 +77,8 @@ struct FColor UPrimalItem_WeaponTorch_C::BPGetCustomInventoryWidgetTextColor()
 
 void UPrimalItem_WeaponTorch_C::BPNotifyItemRefreshed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPNotifyItemRefreshed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPNotifyItemRefreshed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +89,8 @@ void UPrimalItem_WeaponTorch_C::BPNotifyItemRefreshed()
 
 void UPrimalItem_WeaponTorch_C::BPPreUseItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPPreUseItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPPreUseItem", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +103,8 @@ void UPrimalItem_WeaponTorch_C::BPPreUseItem()
 
 bool UPrimalItem_WeaponTorch_C::BPPreventNewColorization()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPPreventNewColorization");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPPreventNewColorization", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPPreventNewColorization Parms{};
 
@@ -134,10 +122,8 @@ bool UPrimalItem_WeaponTorch_C::BPPreventNewColorization()
 
 bool UPrimalItem_WeaponTorch_C::BPPreventUseOntoItem(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPPreventUseOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPPreventUseOntoItem", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPPreventUseOntoItem Parms{};
 
@@ -156,10 +142,8 @@ bool UPrimalItem_WeaponTorch_C::BPPreventUseOntoItem(class UPrimalItem* Destinat
 
 bool UPrimalItem_WeaponTorch_C::BPPreventWeaponEquip()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPPreventWeaponEquip");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPPreventWeaponEquip", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPPreventWeaponEquip Parms{};
 
@@ -177,10 +161,8 @@ bool UPrimalItem_WeaponTorch_C::BPPreventWeaponEquip()
 
 void UPrimalItem_WeaponTorch_C::BPUsedOntoItem(class UPrimalItem* DestinationItem, int32 AdditionalData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPUsedOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPUsedOntoItem", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPUsedOntoItem Parms{};
 
@@ -198,10 +180,8 @@ void UPrimalItem_WeaponTorch_C::BPUsedOntoItem(class UPrimalItem* DestinationIte
 
 void UPrimalItem_WeaponTorch_C::ExecuteUbergraph_PrimalItem_WeaponTorch(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "ExecuteUbergraph_PrimalItem_WeaponTorch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "ExecuteUbergraph_PrimalItem_WeaponTorch", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_ExecuteUbergraph_PrimalItem_WeaponTorch Parms{};
 
@@ -218,10 +198,8 @@ void UPrimalItem_WeaponTorch_C::ExecuteUbergraph_PrimalItem_WeaponTorch(int32 En
 
 void UPrimalItem_WeaponTorch_C::GetFlameColorIndex(int32* Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "GetFlameColorIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "GetFlameColorIndex", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_GetFlameColorIndex Parms{};
 
@@ -239,10 +217,8 @@ void UPrimalItem_WeaponTorch_C::GetFlameColorIndex(int32* Index_0)
 
 void UPrimalItem_WeaponTorch_C::PutTorchOnBelt(class AShooterCharacter* ForCharacter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "PutTorchOnBelt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "PutTorchOnBelt", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_PutTorchOnBelt Parms{};
 
@@ -260,10 +236,8 @@ void UPrimalItem_WeaponTorch_C::PutTorchOnBelt(class AShooterCharacter* ForChara
 
 void UPrimalItem_WeaponTorch_C::RemovedSkinFromItem(class UPrimalItem* FromOwnerItem, bool bIsFirstTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "RemovedSkinFromItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "RemovedSkinFromItem", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_RemovedSkinFromItem Parms{};
 
@@ -281,10 +255,8 @@ void UPrimalItem_WeaponTorch_C::RemovedSkinFromItem(class UPrimalItem* FromOwner
 
 void UPrimalItem_WeaponTorch_C::RemoveTorchFromBelt(class AShooterCharacter* ForCharacter)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "RemoveTorchFromBelt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "RemoveTorchFromBelt", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_RemoveTorchFromBelt Parms{};
 
@@ -302,10 +274,8 @@ void UPrimalItem_WeaponTorch_C::RemoveTorchFromBelt(class AShooterCharacter* For
 
 void UPrimalItem_WeaponTorch_C::SelectedCustomContextMenuItem(const class FName& ContextItem, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "SelectedCustomContextMenuItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "SelectedCustomContextMenuItem", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_SelectedCustomContextMenuItem Parms{};
 
@@ -324,10 +294,8 @@ void UPrimalItem_WeaponTorch_C::SelectedCustomContextMenuItem(const class FName&
 
 void UPrimalItem_WeaponTorch_C::SkinEquippedBlueprintTick(class UPrimalItem* OwnerItem, float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "SkinEquippedBlueprintTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "SkinEquippedBlueprintTick", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_SkinEquippedBlueprintTick Parms{};
 
@@ -343,10 +311,8 @@ void UPrimalItem_WeaponTorch_C::SkinEquippedBlueprintTick(class UPrimalItem* Own
 
 void UPrimalItem_WeaponTorch_C::UpdateBeltTorchMeshColors()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "UpdateBeltTorchMeshColors");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "UpdateBeltTorchMeshColors", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,10 +326,8 @@ void UPrimalItem_WeaponTorch_C::UpdateBeltTorchMeshColors()
 
 bool UPrimalItem_WeaponTorch_C::BPShouldHideTopLevelCustomContextMenuOption(const class FName& ContextItem) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "BPShouldHideTopLevelCustomContextMenuOption");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "BPShouldHideTopLevelCustomContextMenuOption", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_BPShouldHideTopLevelCustomContextMenuOption Parms{};
 
@@ -382,10 +346,8 @@ bool UPrimalItem_WeaponTorch_C::BPShouldHideTopLevelCustomContextMenuOption(cons
 
 void UPrimalItem_WeaponTorch_C::CanTorchBeOnBelt(bool* bCanBeOnBelt) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "CanTorchBeOnBelt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "CanTorchBeOnBelt", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_CanTorchBeOnBelt Parms{};
 
@@ -404,10 +366,8 @@ void UPrimalItem_WeaponTorch_C::CanTorchBeOnBelt(bool* bCanBeOnBelt) const
 
 void UPrimalItem_WeaponTorch_C::GetBeltTorchBuffInstanceForCharacter(class AShooterCharacter* ShooterCharacter, class APrimalBuff** BeltTorchBuff) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "GetBeltTorchBuffInstanceForCharacter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "GetBeltTorchBuffInstanceForCharacter", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_GetBeltTorchBuffInstanceForCharacter Parms{};
 
@@ -428,10 +388,8 @@ void UPrimalItem_WeaponTorch_C::GetBeltTorchBuffInstanceForCharacter(class AShoo
 
 bool UPrimalItem_WeaponTorch_C::IsCustomContextMenuItemEnabled(const class FName& ContextItem) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "IsCustomContextMenuItemEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "IsCustomContextMenuItemEnabled", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_IsCustomContextMenuItemEnabled Parms{};
 
@@ -450,10 +408,8 @@ bool UPrimalItem_WeaponTorch_C::IsCustomContextMenuItemEnabled(const class FName
 
 void UPrimalItem_WeaponTorch_C::IsTorchOnBelt(bool* bIsOnBelt) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItem_WeaponTorch_C", "IsTorchOnBelt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItem_WeaponTorch_C", "IsTorchOnBelt", FuncInfo);
 
 	Params::PrimalItem_WeaponTorch_C_IsTorchOnBelt Parms{};
 

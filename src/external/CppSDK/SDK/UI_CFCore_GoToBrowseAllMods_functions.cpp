@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_GoToBrowseAllMods_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GoToBrowseAllMods_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GoToBrowseAllMods_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_GoToBrowseAllMods_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_GoToBrowseAllMods_C::BndEvt__UI_GoToBrowseAllMods_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnReleased__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GoToBrowseAllMods_C", "BndEvt__UI_GoToBrowseAllMods_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnReleased__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GoToBrowseAllMods_C", "BndEvt__UI_GoToBrowseAllMods_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnReleased__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_GoToBrowseAllMods_C::BndEvt__UI_GoToBrowseAllMods_UI_Button_Ark_
 
 void UUI_CFCore_GoToBrowseAllMods_C::ExecuteUbergraph_UI_CFCore_GoToBrowseAllMods(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GoToBrowseAllMods_C", "ExecuteUbergraph_UI_CFCore_GoToBrowseAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GoToBrowseAllMods_C", "ExecuteUbergraph_UI_CFCore_GoToBrowseAllMods", FuncInfo);
 
 	Params::UI_CFCore_GoToBrowseAllMods_C_ExecuteUbergraph_UI_CFCore_GoToBrowseAllMods Parms{};
 
@@ -71,10 +65,8 @@ void UUI_CFCore_GoToBrowseAllMods_C::ExecuteUbergraph_UI_CFCore_GoToBrowseAllMod
 
 void UUI_CFCore_GoToBrowseAllMods_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_GoToBrowseAllMods_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_GoToBrowseAllMods_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_GoToBrowseAllMods_C_GetRootCFWidget Parms{};
 

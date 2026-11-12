@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -47,6 +47,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_ExecuteUbergraph_UpdatingModsToast;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.InitCounter
 // 0x0008 (0x0008 - 0x0000)
@@ -56,6 +57,7 @@ public:
 	int32                                         NewCounterMax;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInWillSetCounter;                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_InitCounter;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.OverrideTextValue
 // 0x0018 (0x0018 - 0x0000)
@@ -66,6 +68,7 @@ public:
 	bool                                          HideProgressBar;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HideCounter_0;                                     // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_OverrideTextValue;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.OverrideTextValueWithString
 // 0x0018 (0x0018 - 0x0000)
@@ -76,6 +79,7 @@ public:
 	bool                                          HideProgressBar;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HideCounter_0;                                     // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_OverrideTextValueWithString;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.SetCounter
 // 0x0004 (0x0004 - 0x0000)
@@ -84,6 +88,7 @@ struct UpdatingModsToast_C_SetCounter final
 public:
 	int32                                         NewCounter;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_SetCounter;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.UpdateMainText
 // 0x0260 (0x0260 - 0x0000)
@@ -114,6 +119,7 @@ public:
 	class FText                                   K2Node_Select_Default;                             // 0x0240(0x0010)()
 	class FText                                   K2Node_Select_Default_1;                           // 0x0250(0x0010)()
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_UpdateMainText;
 
 // Function UpdatingModsToast.UpdatingModsToast_C.UpdateProgressBar
 // 0x0038 (0x0038 - 0x0000)
@@ -129,6 +135,7 @@ public:
 	float                                         CallFunc_Divide_DoubleFloat_B_ImplicitCast;        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UpdatingModsToast_C_UpdateProgressBar;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

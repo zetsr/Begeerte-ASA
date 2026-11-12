@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function DaySequence.DaySequenceActor.ContainsDaySequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class UDaySequence*               InDaySequence                                          (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ bool ADaySequenceActor::ContainsDaySequence(const class UDaySequence* InDaySeque
 
 
 // Function DaySequence.DaySequenceActor.Multicast_SetTimePerCycle
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// (RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
 // float                                   InHours                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -70,7 +70,7 @@ void ADaySequenceActor::Multicast_SetTimePerCycle(float InHours)
 
 
 // Function DaySequence.DaySequenceActor.Pause
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ADaySequenceActor::Pause()
 {
@@ -89,7 +89,7 @@ void ADaySequenceActor::Pause()
 
 
 // Function DaySequence.DaySequenceActor.Play
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ADaySequenceActor::Play()
 {
@@ -107,8 +107,33 @@ void ADaySequenceActor::Play()
 }
 
 
+// Function DaySequence.DaySequenceActor.SetPlayRate
+// (RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewRate                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ADaySequenceActor::SetPlayRate(float NewRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceActor", "SetPlayRate");
+
+	Params::DaySequenceActor_SetPlayRate Parms{};
+
+	Parms.NewRate = NewRate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function DaySequence.DaySequenceActor.SetReplicatePlayback
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReplicatePlayback                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -133,7 +158,7 @@ void ADaySequenceActor::SetReplicatePlayback(bool ReplicatePlayback)
 
 
 // Function DaySequence.DaySequenceActor.SetTimeOfDay
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InHours                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -161,7 +186,7 @@ bool ADaySequenceActor::SetTimeOfDay(float InHours)
 
 
 // Function DaySequence.DaySequenceActor.SetTimeOfDayPreview
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InHours                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -186,7 +211,7 @@ void ADaySequenceActor::SetTimeOfDayPreview(float InHours)
 
 
 // Function DaySequence.DaySequenceActor.StartDaySequenceUpdateTimer
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 
 void ADaySequenceActor::StartDaySequenceUpdateTimer()
 {
@@ -205,7 +230,7 @@ void ADaySequenceActor::StartDaySequenceUpdateTimer()
 
 
 // Function DaySequence.DaySequenceActor.StopDaySequenceUpdateTimer
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 
 void ADaySequenceActor::StopDaySequenceUpdateTimer()
 {
@@ -223,8 +248,33 @@ void ADaySequenceActor::StopDaySequenceUpdateTimer()
 }
 
 
+// Function DaySequence.DaySequenceActor.GetApparentTimeOfDay
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float ADaySequenceActor::GetApparentTimeOfDay() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceActor", "GetApparentTimeOfDay");
+
+	Params::DaySequenceActor_GetApparentTimeOfDay Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DaySequence.DaySequenceActor.GetDayLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -249,7 +299,7 @@ float ADaySequenceActor::GetDayLength() const
 
 
 // Function DaySequence.DaySequenceActor.GetInitialTimeOfDay
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -273,8 +323,33 @@ float ADaySequenceActor::GetInitialTimeOfDay() const
 }
 
 
+// Function DaySequence.DaySequenceActor.GetPlayRate
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float ADaySequenceActor::GetPlayRate() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceActor", "GetPlayRate");
+
+	Params::DaySequenceActor_GetPlayRate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DaySequence.DaySequenceActor.GetStaticTimeOfDay
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -299,7 +374,7 @@ float ADaySequenceActor::GetStaticTimeOfDay() const
 
 
 // Function DaySequence.DaySequenceActor.GetTimeOfDay
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -324,7 +399,7 @@ float ADaySequenceActor::GetTimeOfDay() const
 
 
 // Function DaySequence.DaySequenceActor.GetTimeOfDayPreview
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -349,7 +424,7 @@ float ADaySequenceActor::GetTimeOfDayPreview() const
 
 
 // Function DaySequence.DaySequenceActor.GetTimePerCycle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -374,7 +449,7 @@ float ADaySequenceActor::GetTimePerCycle() const
 
 
 // Function DaySequence.DaySequenceActor.HasStaticTimeOfDay
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -399,7 +474,7 @@ bool ADaySequenceActor::HasStaticTimeOfDay() const
 
 
 // Function DaySequence.DaySequenceActor.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -424,7 +499,7 @@ bool ADaySequenceActor::IsPaused() const
 
 
 // Function DaySequence.DaySequenceActor.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -445,6 +520,149 @@ bool ADaySequenceActor::IsPlaying() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceModifierVolume.OnDaySequenceActorBound
+// (RequiredAPI, Event, Public, BlueprintEvent)
+// Parameters:
+// class ADaySequenceActor*                InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ADaySequenceModifierVolume::OnDaySequenceActorBound(class ADaySequenceActor* InActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceModifierVolume", "OnDaySequenceActorBound");
+
+	Params::DaySequenceModifierVolume_OnDaySequenceActorBound Parms{};
+
+	Parms.InActor = InActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DaySequence.DaySequenceModifierVolume.OnPostEnableModifier
+// (RequiredAPI, Event, Public, BlueprintEvent)
+
+void ADaySequenceModifierVolume::OnPostEnableModifier()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceModifierVolume", "OnPostEnableModifier");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDaySequence::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "AddAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UDaySequence::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "GetAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDaySequence::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "HasAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.RemoveUserDataOfClass
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDaySequence::RemoveUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Interface_AssetUserData", "RemoveUserDataOfClass");
+
+	Params::Interface_AssetUserData_RemoveUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -499,7 +717,7 @@ void UDaySequenceCheatManagerExtension::SetTimeOfDaySpeed(float NewTimeOfDaySpee
 
 
 // Function DaySequence.DaySequenceConditionTag.BroadcastOnConditionValueChanged
-// (Final, Native, Protected, BlueprintCallable, Const)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable, Const)
 
 void UDaySequenceConditionTag::BroadcastOnConditionValueChanged() const
 {
@@ -518,7 +736,7 @@ void UDaySequenceConditionTag::BroadcastOnConditionValueChanged() const
 
 
 // Function DaySequence.DaySequenceConditionTag.Evaluate
-// (Native, Event, Public, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -543,7 +761,7 @@ bool UDaySequenceConditionTag::Evaluate() const
 
 
 // Function DaySequence.DaySequenceConditionTag.SetupOnConditionValueChanged
-// (Native, Event, Protected, BlueprintEvent, Const)
+// (RequiredAPI, Native, Event, Protected, BlueprintEvent, Const)
 
 void UDaySequenceConditionTag::SetupOnConditionValueChanged() const
 {
@@ -558,6 +776,230 @@ void UDaySequenceConditionTag::SetupOnConditionValueChanged() const
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetBoundActor
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AActor* UDaySequenceDirector::GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetBoundActor");
+
+	Params::DaySequenceDirector_GetBoundActor Parms{};
+
+	Parms.ObjectBinding = std::move(ObjectBinding);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetBoundActors
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class AActor*> UDaySequenceDirector::GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetBoundActors");
+
+	Params::DaySequenceDirector_GetBoundActors Parms{};
+
+	Parms.ObjectBinding = std::move(ObjectBinding);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetBoundObject
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UDaySequenceDirector::GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetBoundObject");
+
+	Params::DaySequenceDirector_GetBoundObject Parms{};
+
+	Parms.ObjectBinding = std::move(ObjectBinding);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetBoundObjects
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UObject*> UDaySequenceDirector::GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetBoundObjects");
+
+	Params::DaySequenceDirector_GetBoundObjects Parms{};
+
+	Parms.ObjectBinding = std::move(ObjectBinding);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetSequence
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieSceneSequence*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneSequence* UDaySequenceDirector::GetSequence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetSequence");
+
+	Params::DaySequenceDirector_GetSequence Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.OnCreated
+// (RequiredAPI, Event, Public, BlueprintEvent)
+
+void UDaySequenceDirector::OnCreated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "OnCreated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetCurrentTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FQualifiedFrameTime              ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQualifiedFrameTime UDaySequenceDirector::GetCurrentTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetCurrentTime");
+
+	Params::DaySequenceDirector_GetCurrentTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequenceDirector.GetRootSequenceTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FQualifiedFrameTime              ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQualifiedFrameTime UDaySequenceDirector::GetRootSequenceTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceDirector", "GetRootSequenceTime");
+
+	Params::DaySequenceDirector_GetRootSequenceTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneEasingFunction.OnEvaluate
+// (RequiredAPI, Event, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// float                                   Interp                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDaySequenceModifierEasingFunction::OnEvaluate(float Interp) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneEasingFunction", "OnEvaluate");
+
+	Params::MovieSceneEasingFunction_OnEvaluate Parms{};
+
+	Parms.Interp = Interp;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -614,6 +1056,25 @@ void UDaySequenceModifierComponent::EnableComponent()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("DaySequenceModifierComponent", "EnableComponent");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.DaySequenceModifierComponent.ReinitializeSubSequences
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UDaySequenceModifierComponent::ReinitializeSubSequences()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceModifierComponent", "ReinitializeSubSequences");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -693,797 +1154,8 @@ float UDaySequenceModifierComponent::GetBlendWeight() const
 }
 
 
-// Function DaySequence.DaySequenceModifierVolume.OnDaySequenceActorBound
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class ADaySequenceActor*                InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ADaySequenceModifierVolume::OnDaySequenceActorBound(class ADaySequenceActor* InActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceModifierVolume", "OnDaySequenceActorBound");
-
-	Params::DaySequenceModifierVolume_OnDaySequenceActorBound Parms{};
-
-	Parms.InActor = InActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DaySequence.DaySequenceStaticTimeContributor.BindToDaySequenceActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class ADaySequenceActor*                InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UDaySequenceStaticTimeContributor::BindToDaySequenceActor(class ADaySequenceActor* InTargetActor, int32 Priority)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceStaticTimeContributor", "BindToDaySequenceActor");
-
-	Params::DaySequenceStaticTimeContributor_BindToDaySequenceActor Parms{};
-
-	Parms.InTargetActor = InTargetActor;
-	Parms.Priority = Priority;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.DaySequenceStaticTimeContributor.UnbindFromDaySequenceActor
-// (Final, Native, Public, BlueprintCallable)
-
-void UDaySequenceStaticTimeContributor::UnbindFromDaySequenceActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceStaticTimeContributor", "UnbindFromDaySequenceActor");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddBoolKey
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddBoolKey(class FName PropertyName, float Key, bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddBoolKey");
-
-	Params::ProceduralDaySequenceBuilder_AddBoolKey Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddBoolOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddBoolOverride(class FName PropertyName, bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddBoolOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddBoolOverride Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddColorMaterialParameterOverride
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddColorMaterialParameterOverride(class FName ParameterName, int32 MaterialIndex, const struct FLinearColor& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddColorMaterialParameterOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddColorMaterialParameterOverride Parms{};
-
-	Parms.ParameterName = ParameterName;
-	Parms.MaterialIndex = MaterialIndex;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddColorOverride
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddColorOverride(class FName PropertyName, const struct FLinearColor& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddColorOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddColorOverride Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddMaterialOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInterface*               Value                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddMaterialOverride(int32 MaterialIndex, class UMaterialInterface* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddMaterialOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddMaterialOverride Parms{};
-
-	Parms.MaterialIndex = MaterialIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddRotationKey
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddRotationKey(float Key, const struct FRotator& Value, ERichCurveInterpMode InterpMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddRotationKey");
-
-	Params::ProceduralDaySequenceBuilder_AddRotationKey Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = std::move(Value);
-	Parms.InterpMode = InterpMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarKey
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddScalarKey(class FName PropertyName, float Key, double Value, ERichCurveInterpMode InterpMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarKey");
-
-	Params::ProceduralDaySequenceBuilder_AddScalarKey Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Key = Key;
-	Parms.Value = Value;
-	Parms.InterpMode = InterpMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarMaterialParameterOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddScalarMaterialParameterOverride(class FName ParameterName, int32 MaterialIndex, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarMaterialParameterOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddScalarMaterialParameterOverride Parms{};
-
-	Parms.ParameterName = ParameterName;
-	Parms.MaterialIndex = MaterialIndex;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddScalarOverride(class FName PropertyName, double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddScalarOverride Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddScaleKey
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddScaleKey(float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScaleKey");
-
-	Params::ProceduralDaySequenceBuilder_AddScaleKey Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = std::move(Value);
-	Parms.InterpMode = InterpMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddTransformOverride
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddTransformOverride(const struct FTransform& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddTransformOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddTransformOverride Parms{};
-
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddTranslationKey
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddTranslationKey(float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddTranslationKey");
-
-	Params::ProceduralDaySequenceBuilder_AddTranslationKey Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = std::move(Value);
-	Parms.InterpMode = InterpMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddVectorKey
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddVectorKey(class FName PropertyName, float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVectorKey");
-
-	Params::ProceduralDaySequenceBuilder_AddVectorKey Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Key = Key;
-	Parms.Value = std::move(Value);
-	Parms.InterpMode = InterpMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddVectorOverride
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddVectorOverride(class FName PropertyName, const struct FVector& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVectorOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddVectorOverride Parms{};
-
-	Parms.PropertyName = PropertyName;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.AddVisibilityOverride
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::AddVisibilityOverride(bool bValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVisibilityOverride");
-
-	Params::ProceduralDaySequenceBuilder_AddVisibilityOverride Parms{};
-
-	Parms.bValue = bValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.ClearKeys
-// (Final, Native, Public, BlueprintCallable)
-
-void UProceduralDaySequenceBuilder::ClearKeys()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "ClearKeys");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.Initialize
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class ADaySequenceActor*                InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDaySequence*                     InitialSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bClearInitialSequence                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDaySequence*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UDaySequence* UProceduralDaySequenceBuilder::Initialize(class ADaySequenceActor* InActor, class UDaySequence* InitialSequence, bool bClearInitialSequence)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "Initialize");
-
-	Params::ProceduralDaySequenceBuilder_Initialize Parms{};
-
-	Parms.InActor = InActor;
-	Parms.InitialSequence = InitialSequence;
-	Parms.bClearInitialSequence = bClearInitialSequence;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.SetActiveBoundObject
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          InObject                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProceduralDaySequenceBuilder::SetActiveBoundObject(class UObject* InObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "SetActiveBoundObject");
-
-	Params::ProceduralDaySequenceBuilder_SetActiveBoundObject Parms{};
-
-	Parms.InObject = InObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DaySequence.ProceduralDaySequenceBuilder.IsInitialized
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProceduralDaySequenceBuilder::IsInitialized() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "IsInitialized");
-
-	Params::ProceduralDaySequenceBuilder_IsInitialized Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetBoundActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class AActor* UDaySequenceDirector::GetBoundActor(const struct FMovieSceneObjectBindingID& ObjectBinding)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetBoundActor");
-
-	Params::DaySequenceDirector_GetBoundActor Parms{};
-
-	Parms.ObjectBinding = std::move(ObjectBinding);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetBoundActors
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class AActor*> UDaySequenceDirector::GetBoundActors(const struct FMovieSceneObjectBindingID& ObjectBinding)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetBoundActors");
-
-	Params::DaySequenceDirector_GetBoundActors Parms{};
-
-	Parms.ObjectBinding = std::move(ObjectBinding);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetBoundObject
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UObject* UDaySequenceDirector::GetBoundObject(const struct FMovieSceneObjectBindingID& ObjectBinding)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetBoundObject");
-
-	Params::DaySequenceDirector_GetBoundObject Parms{};
-
-	Parms.ObjectBinding = std::move(ObjectBinding);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetBoundObjects
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UObject*> UDaySequenceDirector::GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetBoundObjects");
-
-	Params::DaySequenceDirector_GetBoundObjects Parms{};
-
-	Parms.ObjectBinding = std::move(ObjectBinding);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetSequence
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieSceneSequence*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieSceneSequence* UDaySequenceDirector::GetSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetSequence");
-
-	Params::DaySequenceDirector_GetSequence Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.OnCreated
-// (Event, Public, BlueprintEvent)
-
-void UDaySequenceDirector::OnCreated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "OnCreated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetCurrentTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FQualifiedFrameTime              ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FQualifiedFrameTime UDaySequenceDirector::GetCurrentTime() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetCurrentTime");
-
-	Params::DaySequenceDirector_GetCurrentTime Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DaySequence.DaySequenceDirector.GetRootSequenceTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FQualifiedFrameTime              ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FQualifiedFrameTime UDaySequenceDirector::GetRootSequenceTime() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DaySequenceDirector", "GetRootSequenceTime");
-
-	Params::DaySequenceDirector_GetRootSequenceTime Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function DaySequence.DaySequencePlayer.GetBoundObjects
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -1536,7 +1208,7 @@ bool UDaySequencePlayer::GetDisableCameraCuts()
 
 
 // Function DaySequence.DaySequencePlayer.GetObjectBindings
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          InObject                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FMovieSceneObjectBindingID>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
@@ -1564,7 +1236,7 @@ TArray<struct FMovieSceneObjectBindingID> UDaySequencePlayer::GetObjectBindings(
 
 
 // Function DaySequence.DaySequencePlayer.GoToEndAndStop
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::GoToEndAndStop()
 {
@@ -1583,7 +1255,7 @@ void UDaySequencePlayer::GoToEndAndStop()
 
 
 // Function DaySequence.DaySequencePlayer.Play
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::Play()
 {
@@ -1602,7 +1274,7 @@ void UDaySequencePlayer::Play()
 
 
 // Function DaySequence.DaySequencePlayer.PlayLooping
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   NumLoops                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1627,7 +1299,7 @@ void UDaySequencePlayer::PlayLooping(int32 NumLoops)
 
 
 // Function DaySequence.DaySequencePlayer.RemoveWeight
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::RemoveWeight()
 {
@@ -1646,7 +1318,7 @@ void UDaySequencePlayer::RemoveWeight()
 
 
 // Function DaySequence.DaySequencePlayer.RequestInvalidateBinding
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FMovieSceneObjectBindingID&ObjectBinding                                          (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1671,7 +1343,7 @@ void UDaySequencePlayer::RequestInvalidateBinding(const struct FMovieSceneObject
 
 
 // Function DaySequence.DaySequencePlayer.RPC_ExplicitServerUpdateEvent
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// (Final, RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
 // EUpdatePositionMethod                   Method                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameTime&                RelevantTime                                           (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
@@ -1700,7 +1372,7 @@ void UDaySequencePlayer::RPC_ExplicitServerUpdateEvent(EUpdatePositionMethod Met
 
 
 // Function DaySequence.DaySequencePlayer.RPC_OnFinishPlaybackEvent
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// (Final, RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
 // const struct FFrameTime&                StoppedTime                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   NewSerialNumber                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1726,8 +1398,27 @@ void UDaySequencePlayer::RPC_OnFinishPlaybackEvent(const struct FFrameTime& Stop
 }
 
 
+// Function DaySequence.DaySequencePlayer.RPC_OnPlayRateChanged
+// (Final, RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Private)
+
+void UDaySequencePlayer::RPC_OnPlayRateChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequencePlayer", "RPC_OnPlayRateChanged");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function DaySequence.DaySequencePlayer.RPC_OnStopEvent
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// (Final, RequiredAPI, Net, NetReliable, Native, Event, NetMulticast, Private)
 // Parameters:
 // const struct FFrameTime&                StoppedTime                                            (Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   NewSerialNumber                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1754,7 +1445,7 @@ void UDaySequencePlayer::RPC_OnStopEvent(const struct FFrameTime& StoppedTime, i
 
 
 // Function DaySequence.DaySequencePlayer.Scrub
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::Scrub()
 {
@@ -1773,7 +1464,7 @@ void UDaySequencePlayer::Scrub()
 
 
 // Function DaySequence.DaySequencePlayer.SetCompletionModeOverride
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EMovieSceneCompletionModeOverride       CompletionModeOverride                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1823,7 +1514,7 @@ void UDaySequencePlayer::SetDisableCameraCuts(bool bInDisableCameraCuts)
 
 
 // Function DaySequence.DaySequencePlayer.SetFrameRange
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   StartFrame                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1852,7 +1543,7 @@ void UDaySequencePlayer::SetFrameRange(int32 StartFrame, int32 Duration, float S
 
 
 // Function DaySequence.DaySequencePlayer.SetFrameRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const struct FFrameRate&                FrameRate                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1877,7 +1568,7 @@ void UDaySequencePlayer::SetFrameRate(const struct FFrameRate& FrameRate)
 
 
 // Function DaySequence.DaySequencePlayer.SetPlayRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1902,7 +1593,7 @@ void UDaySequencePlayer::SetPlayRate(float PlayRate)
 
 
 // Function DaySequence.DaySequencePlayer.SetWeight
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // double                                  InWeight                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1927,7 +1618,7 @@ void UDaySequencePlayer::SetWeight(double InWeight)
 
 
 // Function DaySequence.DaySequencePlayer.Stop
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::Stop()
 {
@@ -1946,7 +1637,7 @@ void UDaySequencePlayer::Stop()
 
 
 // Function DaySequence.DaySequencePlayer.StopAtCurrentTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDaySequencePlayer::StopAtCurrentTime()
 {
@@ -1965,7 +1656,7 @@ void UDaySequencePlayer::StopAtCurrentTime()
 
 
 // Function DaySequence.DaySequencePlayer.GetCompletionModeOverride
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMovieSceneCompletionModeOverride       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1977,6 +1668,31 @@ EMovieSceneCompletionModeOverride UDaySequencePlayer::GetCompletionModeOverride(
 		Func = Class->GetFunction("DaySequencePlayer", "GetCompletionModeOverride");
 
 	Params::DaySequencePlayer_GetCompletionModeOverride Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.DaySequencePlayer.GetCurrentNumLoops
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UDaySequencePlayer::GetCurrentNumLoops() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequencePlayer", "GetCurrentNumLoops");
+
+	Params::DaySequencePlayer_GetCurrentNumLoops Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2015,7 +1731,7 @@ struct FQualifiedFrameTime UDaySequencePlayer::GetEndTime() const
 
 
 // Function DaySequence.DaySequencePlayer.GetFrameDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2065,7 +1781,7 @@ struct FFrameRate UDaySequencePlayer::GetFrameRate() const
 
 
 // Function DaySequence.DaySequencePlayer.GetPlayRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2115,7 +1831,7 @@ class UMovieSceneSequence* UDaySequencePlayer::GetSequence() const
 
 
 // Function DaySequence.DaySequencePlayer.GetSequenceName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    bAddClientInfo                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2168,7 +1884,7 @@ struct FQualifiedFrameTime UDaySequencePlayer::GetStartTime() const
 
 
 // Function DaySequence.DaySequencePlayer.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2193,7 +1909,7 @@ bool UDaySequencePlayer::IsPaused() const
 
 
 // Function DaySequence.DaySequencePlayer.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2217,8 +1933,54 @@ bool UDaySequencePlayer::IsPlaying() const
 }
 
 
-// Function DaySequence.DaySequenceSubsystem.SetDaySequenceActor
+// Function DaySequence.DaySequenceStaticTimeContributor.BindToDaySequenceActor
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class ADaySequenceActor*                InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDaySequenceStaticTimeContributor::BindToDaySequenceActor(class ADaySequenceActor* InTargetActor, int32 Priority)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceStaticTimeContributor", "BindToDaySequenceActor");
+
+	Params::DaySequenceStaticTimeContributor_BindToDaySequenceActor Parms{};
+
+	Parms.InTargetActor = InTargetActor;
+	Parms.Priority = Priority;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.DaySequenceStaticTimeContributor.UnbindFromDaySequenceActor
+// (Final, Native, Public, BlueprintCallable)
+
+void UDaySequenceStaticTimeContributor::UnbindFromDaySequenceActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DaySequenceStaticTimeContributor", "UnbindFromDaySequenceActor");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.DaySequenceSubsystem.SetDaySequenceActor
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class ADaySequenceActor*                InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2243,7 +2005,7 @@ void UDaySequenceSubsystem::SetDaySequenceActor(class ADaySequenceActor* InActor
 
 
 // Function DaySequence.DaySequenceSubsystem.GetDaySequenceActor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    bFindFallbackOnNull                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class ADaySequenceActor*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2258,6 +2020,528 @@ class ADaySequenceActor* UDaySequenceSubsystem::GetDaySequenceActor(bool bFindFa
 	Params::DaySequenceSubsystem_GetDaySequenceActor Parms{};
 
 	Parms.bFindFallbackOnNull = bFindFallbackOnNull;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddBoolKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddBoolKey(class FName PropertyName, float Key, bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddBoolKey");
+
+	Params::ProceduralDaySequenceBuilder_AddBoolKey Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddBoolOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddBoolOverride(class FName PropertyName, bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddBoolOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddBoolOverride Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddColorMaterialParameterOverride
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddColorMaterialParameterOverride(class FName ParameterName, int32 MaterialIndex, const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddColorMaterialParameterOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddColorMaterialParameterOverride Parms{};
+
+	Parms.ParameterName = ParameterName;
+	Parms.MaterialIndex = MaterialIndex;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddColorOverride
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddColorOverride(class FName PropertyName, const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddColorOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddColorOverride Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddMaterialOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInterface*               Value                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddMaterialOverride(int32 MaterialIndex, class UMaterialInterface* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddMaterialOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddMaterialOverride Parms{};
+
+	Parms.MaterialIndex = MaterialIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddRotationKey
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddRotationKey(float Key, const struct FRotator& Value, ERichCurveInterpMode InterpMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddRotationKey");
+
+	Params::ProceduralDaySequenceBuilder_AddRotationKey Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+	Parms.InterpMode = InterpMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarKey
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddScalarKey(class FName PropertyName, float Key, double Value, ERichCurveInterpMode InterpMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarKey");
+
+	Params::ProceduralDaySequenceBuilder_AddScalarKey Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Key = Key;
+	Parms.Value = Value;
+	Parms.InterpMode = InterpMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarMaterialParameterOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddScalarMaterialParameterOverride(class FName ParameterName, int32 MaterialIndex, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarMaterialParameterOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddScalarMaterialParameterOverride Parms{};
+
+	Parms.ParameterName = ParameterName;
+	Parms.MaterialIndex = MaterialIndex;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddScalarOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddScalarOverride(class FName PropertyName, double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScalarOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddScalarOverride Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddScaleKey
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddScaleKey(float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddScaleKey");
+
+	Params::ProceduralDaySequenceBuilder_AddScaleKey Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+	Parms.InterpMode = InterpMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddTransformOverride
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FTransform&                Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddTransformOverride(const struct FTransform& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddTransformOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddTransformOverride Parms{};
+
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddTranslationKey
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddTranslationKey(float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddTranslationKey");
+
+	Params::ProceduralDaySequenceBuilder_AddTranslationKey Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+	Parms.InterpMode = InterpMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddVectorKey
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERichCurveInterpMode                    InterpMode                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddVectorKey(class FName PropertyName, float Key, const struct FVector& Value, ERichCurveInterpMode InterpMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVectorKey");
+
+	Params::ProceduralDaySequenceBuilder_AddVectorKey Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+	Parms.InterpMode = InterpMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddVectorOverride
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddVectorOverride(class FName PropertyName, const struct FVector& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVectorOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddVectorOverride Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.AddVisibilityOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::AddVisibilityOverride(bool bValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "AddVisibilityOverride");
+
+	Params::ProceduralDaySequenceBuilder_AddVisibilityOverride Parms{};
+
+	Parms.bValue = bValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.ClearKeys
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UProceduralDaySequenceBuilder::ClearKeys()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "ClearKeys");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.Initialize
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class ADaySequenceActor*                InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDaySequence*                     InitialSequence                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClearInitialSequence                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDaySequence*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDaySequence* UProceduralDaySequenceBuilder::Initialize(class ADaySequenceActor* InActor, class UDaySequence* InitialSequence, bool bClearInitialSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "Initialize");
+
+	Params::ProceduralDaySequenceBuilder_Initialize Parms{};
+
+	Parms.InActor = InActor;
+	Parms.InitialSequence = InitialSequence;
+	Parms.bClearInitialSequence = bClearInitialSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.SetActiveBoundObject
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          InObject                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UProceduralDaySequenceBuilder::SetActiveBoundObject(class UObject* InObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "SetActiveBoundObject");
+
+	Params::ProceduralDaySequenceBuilder_SetActiveBoundObject Parms{};
+
+	Parms.InObject = InObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DaySequence.ProceduralDaySequenceBuilder.IsInitialized
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UProceduralDaySequenceBuilder::IsInitialized() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ProceduralDaySequenceBuilder", "IsInitialized");
+
+	Params::ProceduralDaySequenceBuilder_IsInitialized Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

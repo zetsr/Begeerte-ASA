@@ -12,8 +12,8 @@
 
 #include "Engine_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
-#include "OnlineSubsystemRedpointEOS_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "OnlineSubsystemRedpointEOS_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -39,9 +39,10 @@ public:
 		return GetDefaultObjImpl<UEOSControlChannel>();
 	}
 };
+DUMPER7_ASSERTS_UEOSControlChannel;
 
 // Class OnlineSubsystemRedpointEOS.EOSIpNetConnection
-// 0x0000 (0x1FE8 - 0x1FE8)
+// 0x0000 (0x20A0 - 0x20A0)
 class UEOSIpNetConnection final : public UIpConnection
 {
 public:
@@ -58,13 +59,14 @@ public:
 		return GetDefaultObjImpl<UEOSIpNetConnection>();
 	}
 };
+DUMPER7_ASSERTS_UEOSIpNetConnection;
 
 // Class OnlineSubsystemRedpointEOS.EOSNetConnection
-// 0x0010 (0x1F28 - 0x1F18)
+// 0x0010 (0x1FF0 - 0x1FE0)
 class UEOSNetConnection final : public UNetConnection
 {
 public:
-	uint8                                         Pad_1F18[0x10];                                    // 0x1F18(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FD8[0x10];                                    // 0x1FD8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -80,14 +82,15 @@ public:
 		return GetDefaultObjImpl<UEOSNetConnection>();
 	}
 };
+DUMPER7_ASSERTS_UEOSNetConnection;
 
 // Class OnlineSubsystemRedpointEOS.EOSNetDriver
-// 0x0088 (0x09E8 - 0x0960)
+// 0x0088 (0x0AB0 - 0x0A28)
 class UEOSNetDriver final : public UIpNetDriver
 {
 public:
-	uint8                                         Pad_960[0x78];                                     // 0x0960(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UEOSNetConnection*>              PendingConnectionClose;                            // 0x09D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A28[0x78];                                     // 0x0A28(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UEOSNetConnection*>              PendingConnectionClose;                            // 0x0AA0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -103,6 +106,7 @@ public:
 		return GetDefaultObjImpl<UEOSNetDriver>();
 	}
 };
+DUMPER7_ASSERTS_UEOSNetDriver;
 
 // Class OnlineSubsystemRedpointEOS.EOSSubsystem
 // 0x0038 (0x0068 - 0x0030)
@@ -127,6 +131,7 @@ public:
 		return GetDefaultObjImpl<UEOSSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UEOSSubsystem;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_EnterDevicePinCode_Context
 // 0x0010 (0x0038 - 0x0028)
@@ -152,11 +157,15 @@ public:
 		return GetDefaultObjImpl<UEOSUserInterface_EnterDevicePinCode_Context>();
 	}
 };
+DUMPER7_ASSERTS_UEOSUserInterface_EnterDevicePinCode_Context;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_EnterDevicePinCode
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_EnterDevicePinCode final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_EnterDevicePinCode
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_EnterDevicePinCode_Context* Context, const class FString& VerificationUrl, const class FString& PinCode);
 
@@ -183,6 +192,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEOSUserInterface_EnterDevicePinCode;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context
 // 0x0010 (0x0038 - 0x0028)
@@ -208,11 +218,15 @@ public:
 		return GetDefaultObjImpl<UEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context>();
 	}
 };
+DUMPER7_ASSERTS_UEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_LinkEOSAccountsAgainstCrossPlatform
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform_Context* Context, const TArray<struct FEOSUserInterface_CandidateEOSAccount>& AvailableCandidates);
 
@@ -239,6 +253,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEOSUserInterface_LinkEOSAccountsAgainstCrossPlatform;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SelectEOSAccount_Context
 // 0x0010 (0x0038 - 0x0028)
@@ -264,11 +279,15 @@ public:
 		return GetDefaultObjImpl<UEOSUserInterface_SelectEOSAccount_Context>();
 	}
 };
+DUMPER7_ASSERTS_UEOSUserInterface_SelectEOSAccount_Context;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SelectEOSAccount
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_SelectEOSAccount final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_SelectEOSAccount
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_SelectEOSAccount_Context* Context, const TArray<struct FEOSUserInterface_CandidateEOSAccount>& AvailableCandidates);
 
@@ -295,6 +314,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEOSUserInterface_SelectEOSAccount;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SignInOrCreateAccount_Context
 // 0x0010 (0x0038 - 0x0028)
@@ -320,11 +340,15 @@ public:
 		return GetDefaultObjImpl<UEOSUserInterface_SignInOrCreateAccount_Context>();
 	}
 };
+DUMPER7_ASSERTS_UEOSUserInterface_SignInOrCreateAccount_Context;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SignInOrCreateAccount
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_SignInOrCreateAccount final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_SignInOrCreateAccount
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context);
 
@@ -351,6 +375,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEOSUserInterface_SignInOrCreateAccount;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SwitchToCrossPlatformAccount_Context
 // 0x0010 (0x0038 - 0x0028)
@@ -376,11 +401,15 @@ public:
 		return GetDefaultObjImpl<UEOSUserInterface_SwitchToCrossPlatformAccount_Context>();
 	}
 };
+DUMPER7_ASSERTS_UEOSUserInterface_SwitchToCrossPlatformAccount_Context;
 
 // Class OnlineSubsystemRedpointEOS.EOSUserInterface_SwitchToCrossPlatformAccount
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_SwitchToCrossPlatformAccount final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_SwitchToCrossPlatformAccount
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_SwitchToCrossPlatformAccount_Context* Context, const class FString& EpicAccountName);
 
@@ -407,13 +436,14 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEOSUserInterface_SwitchToCrossPlatformAccount;
 
 // Class OnlineSubsystemRedpointEOS.RecentPlayersWorldSubsystem
-// 0x0060 (0x0090 - 0x0030)
+// 0x0060 (0x0098 - 0x0038)
 class URecentPlayersWorldSubsystem final : public URecentPlayersWorldSubsystemBase
 {
 public:
-	uint8                                         Pad_30[0x60];                                      // 0x0030(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x60];                                      // 0x0038(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -429,5 +459,6 @@ public:
 		return GetDefaultObjImpl<URecentPlayersWorldSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_URecentPlayersWorldSubsystem;
 
 SDK_NAMESPACE_END

@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Dino_AIController_BP.Dino_AIController_BP_C
-// 0x0038 (0x0AA8 - 0x0A70)
+// 0x0038 (0x0AB8 - 0x0A80)
 class ADino_AIController_BP_C final : public APrimalDinoAIController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UGameplayTasksComponent*                GameplayTasks;                                     // 0x0A78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FBlackboardKeySelector                 NavKey;                                            // 0x0A80(0x0028)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A80(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UGameplayTasksComponent*                GameplayTasks;                                     // 0x0A88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FBlackboardKeySelector                 NavKey;                                            // 0x0A90(0x0028)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_Dino_AIController_BP(int32 EntryPoint);
@@ -44,5 +44,6 @@ public:
 		return GetDefaultObjImpl<ADino_AIController_BP_C>();
 	}
 };
+DUMPER7_ASSERTS_ADino_AIController_BP_C;
 
 SDK_NAMESPACE_END

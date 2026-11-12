@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Clay_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Clay_C;
 
 SDK_NAMESPACE_END

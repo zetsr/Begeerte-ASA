@@ -37,6 +37,7 @@ public:
 		return GetDefaultObjImpl<UAnimCharacterMovementLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnimCharacterMovementLibrary;
 
 // Class AnimationLocomotionLibraryRuntime.AnimDistanceMatchingLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -61,5 +62,6 @@ public:
 		return GetDefaultObjImpl<UAnimDistanceMatchingLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnimDistanceMatchingLibrary;
 
 SDK_NAMESPACE_END

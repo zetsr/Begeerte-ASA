@@ -11,23 +11,117 @@
 #include "Basic.hpp"
 
 #include "AudioWidgets_structs.hpp"
-#include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "SlateCore_classes.hpp"
+#include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class AudioWidgets.AudioMaterialKnobWidgetStyle
+// 0x01C0 (0x01F0 - 0x0030)
+class UAudioMaterialKnobWidgetStyle final : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FAudioMaterialKnobStyle                KnobStyle;                                         // 0x0030(0x01C0)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioMaterialKnobWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialKnobWidgetStyle")
+	}
+	static class UAudioMaterialKnobWidgetStyle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioMaterialKnobWidgetStyle>();
+	}
+};
+DUMPER7_ASSERTS_UAudioMaterialKnobWidgetStyle;
+
+// Class AudioWidgets.AudioMaterialMeterWidgetStyle
+// 0x00F0 (0x0120 - 0x0030)
+class UAudioMaterialMeterWidgetStyle final : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FAudioMaterialMeterStyle               MeterStyle;                                        // 0x0030(0x00F0)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioMaterialMeterWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialMeterWidgetStyle")
+	}
+	static class UAudioMaterialMeterWidgetStyle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioMaterialMeterWidgetStyle>();
+	}
+};
+DUMPER7_ASSERTS_UAudioMaterialMeterWidgetStyle;
+
+// Class AudioWidgets.AudioMaterialButtonWidgetStyle
+// 0x0088 (0x00B8 - 0x0030)
+class UAudioMaterialButtonWidgetStyle final : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FAudioMaterialButtonStyle              ButtonStyle;                                       // 0x0030(0x0088)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioMaterialButtonWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialButtonWidgetStyle")
+	}
+	static class UAudioMaterialButtonWidgetStyle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioMaterialButtonWidgetStyle>();
+	}
+};
+DUMPER7_ASSERTS_UAudioMaterialButtonWidgetStyle;
+
+// Class AudioWidgets.AudioMaterialSliderWidgetStyle
+// 0x0150 (0x0180 - 0x0030)
+class UAudioMaterialSliderWidgetStyle final : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FAudioMaterialSliderStyle              SliderStyle;                                       // 0x0030(0x0150)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AudioMaterialSliderWidgetStyle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialSliderWidgetStyle")
+	}
+	static class UAudioMaterialSliderWidgetStyle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioMaterialSliderWidgetStyle>();
+	}
+};
+DUMPER7_ASSERTS_UAudioMaterialSliderWidgetStyle;
+
 // Class AudioWidgets.AudioMaterialButton
-// 0x00B0 (0x02B0 - 0x0200)
+// 0x00D0 (0x02E0 - 0x0210)
 class UAudioMaterialButton final : public UWidget
 {
 public:
-	struct FAudioMaterialButtonStyle              WidgetStyle;                                       // 0x0200(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bIsPressed)> OnButtonPressedChangedEvent;                     // 0x0288(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          bIsPressed;                                        // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_299[0x17];                                     // 0x0299(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioMaterialButtonStyle              WidgetStyle;                                       // 0x0210(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bIsPressed)> OnButtonPressedChangedEvent;                     // 0x0298(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x02A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x02B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bIsPressed;                                        // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C9[0x17];                                     // 0x02C9(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetIsPressed(bool InPressed);
@@ -48,15 +142,16 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialButton>();
 	}
 };
+DUMPER7_ASSERTS_UAudioMaterialButton;
 
 // Class AudioWidgets.AudioMaterialEnvelope
-// 0x0080 (0x0280 - 0x0200)
+// 0x0080 (0x0290 - 0x0210)
 class UAudioMaterialEnvelope final : public UWidget
 {
 public:
-	struct FAudioMaterialEnvelopeStyle            WidgetStyle;                                       // 0x0200(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAudioMaterialEnvelopeSettings         EnvelopeSettings;                                  // 0x0248(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26C[0x14];                                     // 0x026C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioMaterialEnvelopeStyle            WidgetStyle;                                       // 0x0210(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAudioMaterialEnvelopeSettings         EnvelopeSettings;                                  // 0x0258(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_27C[0x14];                                     // 0x027C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -72,22 +167,25 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialEnvelope>();
 	}
 };
+DUMPER7_ASSERTS_UAudioMaterialEnvelope;
 
 // Class AudioWidgets.AudioMaterialKnob
-// 0x0200 (0x0400 - 0x0200)
+// 0x0220 (0x0430 - 0x0210)
 class UAudioMaterialKnob final : public UWidget
 {
 public:
-	struct FAudioMaterialKnobStyle                WidgetStyle;                                       // 0x0200(0x01C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(float Value)>   OnKnobValueChanged;                                // 0x03C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         TuneSpeed;                                         // 0x03D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         FineTuneSpeed;                                     // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bLocked;                                           // 0x03DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bMouseUsesStep;                                    // 0x03DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3DE[0x2];                                      // 0x03DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StepSize;                                          // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3E4[0x1C];                                     // 0x03E4(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioMaterialKnobStyle                WidgetStyle;                                       // 0x0210(0x01C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float Value)>   OnKnobValueChanged;                                // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x03E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x03F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         TuneSpeed;                                         // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FineTuneSpeed;                                     // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bLocked;                                           // 0x040C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bMouseUsesStep;                                    // 0x040D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40E[0x2];                                      // 0x040E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StepSize;                                          // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_414[0x14];                                     // 0x0414(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetValue();
@@ -118,18 +216,19 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialKnob>();
 	}
 };
+DUMPER7_ASSERTS_UAudioMaterialKnob;
 
 // Class AudioWidgets.AudioMaterialMeter
-// 0x0128 (0x0328 - 0x0200)
+// 0x0128 (0x0338 - 0x0210)
 class UAudioMaterialMeter final : public UWidget
 {
 public:
-	struct FAudioMaterialMeterStyle               WidgetStyle;                                       // 0x0200(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EOrientation                                  Orientation;                                       // 0x02F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             MeterChannelInfoDelegate;                          // 0x02F4(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_304[0x14];                                     // 0x0304(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMeterChannelInfo>              MeterChannelInfo;                                  // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FAudioMaterialMeterStyle               WidgetStyle;                                       // 0x0210(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EOrientation                                  Orientation;                                       // 0x0300(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_301[0x3];                                      // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             MeterChannelInfoDelegate;                          // 0x0304(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_314[0x14];                                     // 0x0314(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMeterChannelInfo>              MeterChannelInfo;                                  // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void SetMeterChannelInfo(const TArray<struct FMeterChannelInfo>& InMeterChannelInfo);
@@ -150,24 +249,27 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialMeter>();
 	}
 };
+DUMPER7_ASSERTS_UAudioMaterialMeter;
 
 // Class AudioWidgets.AudioMaterialSlider
-// 0x0190 (0x0390 - 0x0200)
+// 0x01B0 (0x03C0 - 0x0210)
 class UAudioMaterialSlider final : public UWidget
 {
 public:
-	struct FAudioMaterialSliderStyle              WidgetStyle;                                       // 0x0200(0x0150)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0350(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EOrientation                                  Orientation;                                       // 0x0364(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_365[0x3];                                      // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TuneSpeed;                                         // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         FineTuneSpeed;                                     // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bLocked;                                           // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bMouseUsesStep;                                    // 0x0371(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_372[0x2];                                      // 0x0372(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StepSize;                                          // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_378[0x18];                                     // 0x0378(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioMaterialSliderStyle              WidgetStyle;                                       // 0x0210(0x0150)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0360(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x0370(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x0380(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOrientation                                  Orientation;                                       // 0x0394(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_395[0x3];                                      // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TuneSpeed;                                         // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FineTuneSpeed;                                     // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bLocked;                                           // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bMouseUsesStep;                                    // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3A2[0x2];                                      // 0x03A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StepSize;                                          // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3A8[0x10];                                     // 0x03A8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetFineTuneSpeed(const float InValue);
@@ -198,113 +300,26 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialSlider>();
 	}
 };
-
-// Class AudioWidgets.AudioMaterialKnobWidgetStyle
-// 0x01C0 (0x01F0 - 0x0030)
-class UAudioMaterialKnobWidgetStyle final : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FAudioMaterialKnobStyle                KnobStyle;                                         // 0x0030(0x01C0)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioMaterialKnobWidgetStyle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioMaterialKnobWidgetStyle")
-	}
-	static class UAudioMaterialKnobWidgetStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioMaterialKnobWidgetStyle>();
-	}
-};
-
-// Class AudioWidgets.AudioMaterialMeterWidgetStyle
-// 0x00F0 (0x0120 - 0x0030)
-class UAudioMaterialMeterWidgetStyle final : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FAudioMaterialMeterStyle               MeterStyle;                                        // 0x0030(0x00F0)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioMaterialMeterWidgetStyle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioMaterialMeterWidgetStyle")
-	}
-	static class UAudioMaterialMeterWidgetStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioMaterialMeterWidgetStyle>();
-	}
-};
-
-// Class AudioWidgets.AudioMaterialButtonWidgetStyle
-// 0x0088 (0x00B8 - 0x0030)
-class UAudioMaterialButtonWidgetStyle final : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FAudioMaterialButtonStyle              ButtonStyle;                                       // 0x0030(0x0088)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioMaterialButtonWidgetStyle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioMaterialButtonWidgetStyle")
-	}
-	static class UAudioMaterialButtonWidgetStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioMaterialButtonWidgetStyle>();
-	}
-};
-
-// Class AudioWidgets.AudioMaterialSliderWidgetStyle
-// 0x0150 (0x0180 - 0x0030)
-class UAudioMaterialSliderWidgetStyle final : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FAudioMaterialSliderStyle              SliderStyle;                                       // 0x0030(0x0150)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AudioMaterialSliderWidgetStyle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AudioMaterialSliderWidgetStyle")
-	}
-	static class UAudioMaterialSliderWidgetStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioMaterialSliderWidgetStyle>();
-	}
-};
+DUMPER7_ASSERTS_UAudioMaterialSlider;
 
 // Class AudioWidgets.AudioMeter
-// 0x04E0 (0x06E0 - 0x0200)
+// 0x05A0 (0x07B0 - 0x0210)
 class UAudioMeter final : public UWidget
 {
 public:
-	TArray<struct FMeterChannelInfo>              MeterChannelInfo;                                  // 0x0200(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             MeterChannelInfoDelegate;                          // 0x0210(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAudioMeterStyle                       WidgetStyle;                                       // 0x0220(0x0430)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EOrientation                                  Orientation;                                       // 0x0650(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_651[0x3];                                      // 0x0651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           BackgroundColor;                                   // 0x0654(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterBackgroundColor;                              // 0x0664(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterValueColor;                                   // 0x0674(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterPeakColor;                                    // 0x0684(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterClippingColor;                                // 0x0694(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterScaleColor;                                   // 0x06A4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           MeterScaleLabelColor;                              // 0x06B4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C4[0x1C];                                     // 0x06C4(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FMeterChannelInfo>              MeterChannelInfo;                                  // 0x0210(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             MeterChannelInfoDelegate;                          // 0x0220(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAudioMeterStyle                       WidgetStyle;                                       // 0x0230(0x04F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EOrientation                                  Orientation;                                       // 0x0720(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_721[0x3];                                      // 0x0721(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           BackgroundColor;                                   // 0x0724(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterBackgroundColor;                              // 0x0734(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterValueColor;                                   // 0x0744(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterPeakColor;                                    // 0x0754(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterClippingColor;                                // 0x0764(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterScaleColor;                                   // 0x0774(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           MeterScaleLabelColor;                              // 0x0784(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_794[0x14];                                     // 0x0794(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetBackgroundColor(const struct FLinearColor& InValue);
@@ -332,29 +347,30 @@ public:
 		return GetDefaultObjImpl<UAudioMeter>();
 	}
 };
+DUMPER7_ASSERTS_UAudioMeter;
 
 // Class AudioWidgets.AudioOscilloscope
-// 0x04C0 (0x06C0 - 0x0200)
+// 0x04C0 (0x06D0 - 0x0210)
 class UAudioOscilloscope final : public UWidget
 {
 public:
-	struct FAudioOscilloscopePanelStyle           OscilloscopeStyle;                                 // 0x0200(0x0440)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UAudioBus*                              AudioBus;                                          // 0x0640(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	float                                         MaxTimeWindowMs;                                   // 0x0648(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeWindowMs;                                      // 0x064C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnalysisPeriodMs;                                  // 0x0650(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowTimeGrid;                                     // 0x0654(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EXAxisLabelsUnit                              TimeGridLabelsUnit;                                // 0x0655(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowAmplitudeGrid;                                // 0x0656(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowAmplitudeLabels;                              // 0x0657(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EYAxisLabelsUnit                              AmplitudeGridLabelsUnit;                           // 0x0658(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioOscilloscopeTriggerMode                 TriggerMode;                                       // 0x0659(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_65A[0x2];                                      // 0x065A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TriggerThreshold;                                  // 0x065C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioPanelLayoutType                         PanelLayoutType;                                   // 0x0660(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_661[0x3];                                      // 0x0661(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ChannelToAnalyze;                                  // 0x0664(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_668[0x58];                                     // 0x0668(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioOscilloscopePanelStyle           OscilloscopeStyle;                                 // 0x0210(0x0440)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x0650(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	float                                         MaxTimeWindowMs;                                   // 0x0658(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeWindowMs;                                      // 0x065C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnalysisPeriodMs;                                  // 0x0660(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowTimeGrid;                                     // 0x0664(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EXAxisLabelsUnit                              TimeGridLabelsUnit;                                // 0x0665(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowAmplitudeGrid;                                // 0x0666(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowAmplitudeLabels;                              // 0x0667(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EYAxisLabelsUnit                              AmplitudeGridLabelsUnit;                           // 0x0668(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioOscilloscopeTriggerMode                 TriggerMode;                                       // 0x0669(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_66A[0x2];                                      // 0x066A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TriggerThreshold;                                  // 0x066C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioPanelLayoutType                         PanelLayoutType;                                   // 0x0670(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_671[0x3];                                      // 0x0671(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ChannelToAnalyze;                                  // 0x0674(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_678[0x50];                                     // 0x0678(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanTriggeringBeSet();
@@ -375,30 +391,33 @@ public:
 		return GetDefaultObjImpl<UAudioOscilloscope>();
 	}
 };
+DUMPER7_ASSERTS_UAudioOscilloscope;
 
 // Class AudioWidgets.AudioRadialSlider
-// 0x01F0 (0x03F0 - 0x0200)
+// 0x0210 (0x0420 - 0x0210)
 class alignas(0x10) UAudioRadialSlider : public UWidget
 {
 public:
-	float                                         Value;                                             // 0x0200(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ValueDelegate;                                     // 0x0204(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioRadialSliderLayout                      WidgetLayout;                                      // 0x0214(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CenterBackgroundColor;                             // 0x0218(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderProgressColor;                               // 0x0228(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBarColor;                                    // 0x0238(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              HandStartEndRatio;                                 // 0x0248(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   UnitsText;                                         // 0x0258(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0268(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowLabelOnlyOnHover;                              // 0x0278(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowUnitsText;                                     // 0x0279(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsUnitsTextReadOnly;                               // 0x027A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValueTextReadOnly;                               // 0x027B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SliderThickness;                                   // 0x027C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              OutputRange;                                       // 0x0280(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A0[0x150];                                    // 0x02A0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0210(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ValueDelegate;                                     // 0x0214(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioRadialSliderLayout                      WidgetLayout;                                      // 0x0224(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_225[0x3];                                      // 0x0225(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CenterBackgroundColor;                             // 0x0228(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderProgressColor;                               // 0x0238(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBarColor;                                    // 0x0248(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              HandStartEndRatio;                                 // 0x0258(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   UnitsText;                                         // 0x0268(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0278(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowLabelOnlyOnHover;                              // 0x0288(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowUnitsText;                                     // 0x0289(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUnitsTextReadOnly;                               // 0x028A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValueTextReadOnly;                               // 0x028B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SliderThickness;                                   // 0x028C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              OutputRange;                                       // 0x0290(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x02A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x02B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D0[0x150];                                    // 0x02D0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetOutputValue(const float InSliderValue);
@@ -431,9 +450,10 @@ public:
 		return GetDefaultObjImpl<UAudioRadialSlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioRadialSlider;
 
 // Class AudioWidgets.AudioVolumeRadialSlider
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0420 - 0x0420)
 class UAudioVolumeRadialSlider final : public UAudioRadialSlider
 {
 public:
@@ -450,9 +470,10 @@ public:
 		return GetDefaultObjImpl<UAudioVolumeRadialSlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioVolumeRadialSlider;
 
 // Class AudioWidgets.AudioFrequencyRadialSlider
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0420 - 0x0420)
 class UAudioFrequencyRadialSlider final : public UAudioRadialSlider
 {
 public:
@@ -469,34 +490,37 @@ public:
 		return GetDefaultObjImpl<UAudioFrequencyRadialSlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioFrequencyRadialSlider;
 
 // Class AudioWidgets.AudioSliderBase
-// 0x0740 (0x0940 - 0x0200)
+// 0x0760 (0x0970 - 0x0210)
 class alignas(0x10) UAudioSliderBase : public UWidget
 {
 public:
-	float                                         Value;                                             // 0x0200(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   UnitsText;                                         // 0x0208(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0218(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             TextLabelBackgroundColorDelegate;                  // 0x0228(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowLabelOnlyOnHover;                              // 0x0238(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowUnitsText;                                     // 0x0239(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsUnitsTextReadOnly;                               // 0x023A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValueTextReadOnly;                               // 0x023B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ValueDelegate;                                     // 0x023C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBackgroundColor;                             // 0x024C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderBackgroundColorDelegate;                     // 0x025C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBarColor;                                    // 0x026C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderBarColorDelegate;                            // 0x027C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderThumbColor;                                  // 0x028C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             SliderThumbColorDelegate;                          // 0x029C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           WidgetBackgroundColor;                             // 0x02AC(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             WidgetBackgroundColorDelegate;                     // 0x02BC(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOrientation                                  Orientation;                                       // 0x02CC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD[0x3];                                      // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x02D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E0[0x660];                                    // 0x02E0(0x0660)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0210(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   UnitsText;                                         // 0x0218(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TextLabelBackgroundColor;                          // 0x0228(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             TextLabelBackgroundColorDelegate;                  // 0x0238(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowLabelOnlyOnHover;                              // 0x0248(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowUnitsText;                                     // 0x0249(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUnitsTextReadOnly;                               // 0x024A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValueTextReadOnly;                               // 0x024B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ValueDelegate;                                     // 0x024C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBackgroundColor;                             // 0x025C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderBackgroundColorDelegate;                     // 0x026C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBarColor;                                    // 0x027C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderBarColorDelegate;                            // 0x028C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderThumbColor;                                  // 0x029C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             SliderThumbColorDelegate;                          // 0x02AC(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           WidgetBackgroundColor;                             // 0x02BC(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             WidgetBackgroundColorDelegate;                     // 0x02CC(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOrientation                                  Orientation;                                       // 0x02DC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2DD[0x3];                                      // 0x02DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x02F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x0300(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_310[0x660];                                    // 0x0310(0x0660)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetLinValue(const float OutputValue);
@@ -527,14 +551,15 @@ public:
 		return GetDefaultObjImpl<UAudioSliderBase>();
 	}
 };
+DUMPER7_ASSERTS_UAudioSliderBase;
 
 // Class AudioWidgets.AudioSlider
-// 0x0010 (0x0950 - 0x0940)
+// 0x0010 (0x0980 - 0x0970)
 class UAudioSlider : public UAudioSliderBase
 {
 public:
-	TWeakObjectPtr<class UCurveFloat>             LinToOutputCurve;                                  // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UCurveFloat>             OutputToLinCurve;                                  // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UCurveFloat>             LinToOutputCurve;                                  // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UCurveFloat>             OutputToLinCurve;                                  // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -550,9 +575,10 @@ public:
 		return GetDefaultObjImpl<UAudioSlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioSlider;
 
 // Class AudioWidgets.AudioVolumeSlider
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0980 - 0x0980)
 class UAudioVolumeSlider final : public UAudioSlider
 {
 public:
@@ -569,13 +595,14 @@ public:
 		return GetDefaultObjImpl<UAudioVolumeSlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioVolumeSlider;
 
 // Class AudioWidgets.AudioFrequencySlider
-// 0x0010 (0x0950 - 0x0940)
+// 0x0010 (0x0980 - 0x0970)
 class UAudioFrequencySlider final : public UAudioSliderBase
 {
 public:
-	struct FVector2D                              OutputRange;                                       // 0x0940(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              OutputRange;                                       // 0x0970(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -591,22 +618,23 @@ public:
 		return GetDefaultObjImpl<UAudioFrequencySlider>();
 	}
 };
+DUMPER7_ASSERTS_UAudioFrequencySlider;
 
 // Class AudioWidgets.AudioVectorscope
-// 0x0210 (0x0410 - 0x0200)
+// 0x0210 (0x0420 - 0x0210)
 class UAudioVectorscope final : public UWidget
 {
 public:
-	struct FAudioVectorscopePanelStyle            VectorscopeStyle;                                  // 0x0200(0x01A0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UAudioBus*                              AudioBus;                                          // 0x03A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          bShowGrid;                                         // 0x03A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A9[0x3];                                      // 0x03A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GridDivisions;                                     // 0x03AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDisplayPersistenceMs;                           // 0x03B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisplayPersistenceMs;                              // 0x03B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x03B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioPanelLayoutType                         PanelLayoutType;                                   // 0x03BC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3BD[0x53];                                     // 0x03BD(0x0053)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAudioVectorscopePanelStyle            VectorscopeStyle;                                  // 0x0210(0x01A0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class UAudioBus*                              AudioBus;                                          // 0x03B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bShowGrid;                                         // 0x03B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B9[0x3];                                      // 0x03B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GridDivisions;                                     // 0x03BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDisplayPersistenceMs;                           // 0x03C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisplayPersistenceMs;                              // 0x03C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x03C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioPanelLayoutType                         PanelLayoutType;                                   // 0x03CC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CD[0x4B];                                     // 0x03CD(0x004B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void StartProcessing();
@@ -626,5 +654,6 @@ public:
 		return GetDefaultObjImpl<UAudioVectorscope>();
 	}
 };
+DUMPER7_ASSERTS_UAudioVectorscope;
 
 SDK_NAMESPACE_END

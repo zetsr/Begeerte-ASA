@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_Sub_Categories_Scroll_C::BndEvt__Sub_Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "BndEvt__Sub-Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "BndEvt__Sub-Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_Sub_Categories_Scroll_C::BndEvt__Sub_Categories_Scroll_Btn_Category_K2N
 
 void UUI_Sub_Categories_Scroll_C::BndEvt__Sub_Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "BndEvt__Sub-Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "BndEvt__Sub-Categories_Scroll_Btn_Category_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +48,8 @@ void UUI_Sub_Categories_Scroll_C::BndEvt__Sub_Categories_Scroll_Btn_Category_K2N
 
 void UUI_Sub_Categories_Scroll_C::Event_Check_If_Selected(class UUI_Sub_Category_C* SubCategoryWidget_Ref, const class FString& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "Event Check If Selected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "Event Check If Selected", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_Event_Check_If_Selected Parms{};
 
@@ -71,10 +65,8 @@ void UUI_Sub_Categories_Scroll_C::Event_Check_If_Selected(class UUI_Sub_Category
 
 void UUI_Sub_Categories_Scroll_C::Event_Create_Scroll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "Event Create Scroll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "Event Create Scroll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +77,8 @@ void UUI_Sub_Categories_Scroll_C::Event_Create_Scroll()
 
 void UUI_Sub_Categories_Scroll_C::Event_Is_Still_Hovered()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "Event Is Still Hovered");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "Event Is Still Hovered", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -102,10 +92,8 @@ void UUI_Sub_Categories_Scroll_C::Event_Is_Still_Hovered()
 
 void UUI_Sub_Categories_Scroll_C::Event_On_Subcategory_Select_Event(const class FString& SubCategory, int64 SubCategoryID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "Event On Subcategory Select Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "Event On Subcategory Select Event", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_Event_On_Subcategory_Select_Event Parms{};
 
@@ -123,10 +111,8 @@ void UUI_Sub_Categories_Scroll_C::Event_On_Subcategory_Select_Event(const class 
 
 void UUI_Sub_Categories_Scroll_C::ExecuteUbergraph_UI_Sub_Categories_Scroll(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "ExecuteUbergraph_UI_Sub-Categories_Scroll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "ExecuteUbergraph_UI_Sub-Categories_Scroll", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_ExecuteUbergraph_UI_Sub_Categories_Scroll Parms{};
 
@@ -143,10 +129,8 @@ void UUI_Sub_Categories_Scroll_C::ExecuteUbergraph_UI_Sub_Categories_Scroll(int3
 
 void UUI_Sub_Categories_Scroll_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "OnAddedToFocusPath");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "OnAddedToFocusPath", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_OnAddedToFocusPath Parms{};
 
@@ -161,10 +145,8 @@ void UUI_Sub_Categories_Scroll_C::OnAddedToFocusPath(const struct FFocusEvent& I
 
 void UUI_Sub_Categories_Scroll_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "OnInitialized");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "OnInitialized", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +161,8 @@ void UUI_Sub_Categories_Scroll_C::OnInitialized()
 
 struct FEventReply UUI_Sub_Categories_Scroll_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "OnKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "OnKeyDown", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_OnKeyDown Parms{};
 
@@ -202,10 +182,8 @@ struct FEventReply UUI_Sub_Categories_Scroll_C::OnKeyDown(const struct FGeometry
 
 void UUI_Sub_Categories_Scroll_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Sub-Categories_Scroll_C", "OnRemovedFromFocusPath");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Sub-Categories_Scroll_C", "OnRemovedFromFocusPath", FuncInfo);
 
 	Params::UI_Sub_Categories_Scroll_C_OnRemovedFromFocusPath Parms{};
 

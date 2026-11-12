@@ -34,6 +34,7 @@ public:
 		return GetDefaultObjImpl<UOverlays>();
 	}
 };
+DUMPER7_ASSERTS_UOverlays;
 
 // Class Overlay.BasicOverlays
 // 0x0010 (0x0038 - 0x0028)
@@ -56,6 +57,7 @@ public:
 		return GetDefaultObjImpl<UBasicOverlays>();
 	}
 };
+DUMPER7_ASSERTS_UBasicOverlays;
 
 // Class Overlay.LocalizedOverlays
 // 0x0058 (0x0080 - 0x0028)
@@ -79,5 +81,6 @@ public:
 		return GetDefaultObjImpl<ULocalizedOverlays>();
 	}
 };
+DUMPER7_ASSERTS_ULocalizedOverlays;
 
 SDK_NAMESPACE_END

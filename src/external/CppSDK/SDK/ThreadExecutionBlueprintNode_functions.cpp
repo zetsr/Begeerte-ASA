@@ -116,15 +116,15 @@ bool UMutex::TryLock()
 }
 
 
-// Function ThreadExecutionBlueprintNode.Mutex.UnLock
+// Function ThreadExecutionBlueprintNode.Mutex.Unlock
 // (Final, Native, Public, BlueprintCallable)
 
-void UMutex::UnLock()
+void UMutex::Unlock()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Mutex", "UnLock");
+		Func = Class->GetFunction("Mutex", "Unlock");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1065,7 +1065,7 @@ void UThreadNodeSubsystem::DestoryMutex(class UMutex* Mutex)
 // Function ThreadExecutionBlueprintNode.ThreadNodeSubsystem.GetAllMutexes
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSet<class UMutex*>                     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class UMutex*>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class UMutex*> UThreadNodeSubsystem::GetAllMutexes()
 {
@@ -1090,7 +1090,7 @@ TSet<class UMutex*> UThreadNodeSubsystem::GetAllMutexes()
 // Function ThreadExecutionBlueprintNode.ThreadNodeSubsystem.GetAllThreadExecLoops
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSet<class UThreadAsyncExecLoopUnsafely*>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class UThreadAsyncExecLoopUnsafely*>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class UThreadAsyncExecLoopUnsafely*> UThreadNodeSubsystem::GetAllThreadExecLoops()
 {
@@ -1115,7 +1115,7 @@ TSet<class UThreadAsyncExecLoopUnsafely*> UThreadNodeSubsystem::GetAllThreadExec
 // Function ThreadExecutionBlueprintNode.ThreadNodeSubsystem.GetAllThreadExecNodes
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSet<class UThreadAsyncExecBase*>       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class UThreadAsyncExecBase*>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class UThreadAsyncExecBase*> UThreadNodeSubsystem::GetAllThreadExecNodes()
 {
@@ -1140,7 +1140,7 @@ TSet<class UThreadAsyncExecBase*> UThreadNodeSubsystem::GetAllThreadExecNodes()
 // Function ThreadExecutionBlueprintNode.ThreadNodeSubsystem.GetAllThreadExecOnces
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSet<class UThreadAsyncExecOnce*>       ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class UThreadAsyncExecOnce*>       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class UThreadAsyncExecOnce*> UThreadNodeSubsystem::GetAllThreadExecOnces()
 {
@@ -1165,7 +1165,7 @@ TSet<class UThreadAsyncExecOnce*> UThreadNodeSubsystem::GetAllThreadExecOnces()
 // Function ThreadExecutionBlueprintNode.ThreadNodeSubsystem.GetAllThreadExecTicks
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSet<class UThreadAsyncExecTickBase*>   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// TSet<class UThreadAsyncExecTickBase*>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
 TSet<class UThreadAsyncExecTickBase*> UThreadNodeSubsystem::GetAllThreadExecTicks()
 {

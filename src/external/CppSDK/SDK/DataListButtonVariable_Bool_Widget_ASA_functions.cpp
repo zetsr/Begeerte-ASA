@@ -16,45 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.SetupTextValue
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText*                            ReturnText                                             (Parm, OutParm)
+// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UDataListButtonVariable_Bool_Widget_ASA_C::SetupTextValue(const class FText& Text, class FText* ReturnText)
+void UDataListButtonVariable_Bool_Widget_ASA_C::Construct()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Bool_Widget_ASA_C", "Construct", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Bool_Widget_ASA_C", "SetupTextValue");
-
-	Params::DataListButtonVariable_Bool_Widget_ASA_C_SetupTextValue Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnText != nullptr)
-		*ReturnText = std::move(Parms.ReturnText);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Bool_Widget_ASA_C::PreConstruct(bool IsDesignTime)
+void UDataListButtonVariable_Bool_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Bool_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Bool_Widget_ASA_C", "PreConstruct");
+	Params::DataListButtonVariable_Bool_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA Parms{};
 
-	Params::DataListButtonVariable_Bool_Widget_ASA_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -68,10 +54,8 @@ void UDataListButtonVariable_Bool_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 
 void UDataListButtonVariable_Bool_Widget_ASA_C::ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Bool_Widget_ASA_C", "ExtraSetupToggledButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Bool_Widget_ASA_C", "ExtraSetupToggledButton", FuncInfo);
 
 	Params::DataListButtonVariable_Bool_Widget_ASA_C_ExtraSetupToggledButton Parms{};
 
@@ -82,37 +66,43 @@ void UDataListButtonVariable_Bool_Widget_ASA_C::ExtraSetupToggledButton(bool Tog
 }
 
 
-// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA
-// (Final, UbergraphFunction)
+// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Bool_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint)
+void UDataListButtonVariable_Bool_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Bool_Widget_ASA_C", "PreConstruct", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Bool_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA");
+	Params::DataListButtonVariable_Bool_Widget_ASA_C_PreConstruct Parms{};
 
-	Params::DataListButtonVariable_Bool_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C.SetupTextValue
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText*                            ReturnText                                             (Parm, OutParm)
 
-void UDataListButtonVariable_Bool_Widget_ASA_C::Construct()
+void UDataListButtonVariable_Bool_Widget_ASA_C::SetupTextValue(const class FText& Text, class FText* ReturnText)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Bool_Widget_ASA_C", "SetupTextValue", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Bool_Widget_ASA_C", "Construct");
+	Params::DataListButtonVariable_Bool_Widget_ASA_C_SetupTextValue Parms{};
 
-	UObject::ProcessEvent(Func, nullptr);
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnText != nullptr)
+		*ReturnText = std::move(Parms.ReturnText);
 }
 
 

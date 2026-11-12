@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UForceSuccess_TK_C::ExecuteUbergraph_ForceSuccess_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ForceSuccess_TK_C", "ExecuteUbergraph_ForceSuccess_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ForceSuccess_TK_C", "ExecuteUbergraph_ForceSuccess_TK", FuncInfo);
 
 	Params::ForceSuccess_TK_C_ExecuteUbergraph_ForceSuccess_TK Parms{};
 
@@ -43,10 +41,8 @@ void UForceSuccess_TK_C::ExecuteUbergraph_ForceSuccess_TK(int32 EntryPoint)
 
 void UForceSuccess_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ForceSuccess_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ForceSuccess_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::ForceSuccess_TK_C_ReceiveExecute Parms{};
 

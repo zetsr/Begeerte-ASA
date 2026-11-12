@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UIsBaby_BT_C>();
 	}
 };
+DUMPER7_ASSERTS_UIsBaby_BT_C;
 
 SDK_NAMESPACE_END

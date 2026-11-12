@@ -28,10 +28,8 @@ SDK_NAMESPACE_START
 
 void UASACameraFunctionLibrary_C::ApplyModifiersToInterpParams(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& InterpParams, TArray<struct FPrimalCameraInterpScreenAreaModifier>& InterpParamsModifiers, class FName DebugScreenModifierId, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ApplyModifiersToInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ApplyModifiersToInterpParams", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ApplyModifiersToInterpParams Parms{};
 
@@ -62,10 +60,8 @@ void UASACameraFunctionLibrary_C::ApplyModifiersToInterpParams(class APrimalChar
 
 void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToArmLength(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, TArray<struct FPrimalCameraPitchBasedModifier>& PitchBasedModifiers, double CurrentArmLength, double& DesiredArmLength, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToArmLength");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToArmLength", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ApplyPitchBasedModifierToArmLength Parms{};
 
@@ -95,10 +91,8 @@ void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToArmLength(class APrim
 
 void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToArmLengthInterp(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& ArmLengthInterpParams, TArray<struct FPrimalCameraPitchBasedModifier>& PitchBasedModifiers, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToArmLengthInterp");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToArmLengthInterp", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ApplyPitchBasedModifierToArmLengthInterp Parms{};
 
@@ -129,10 +123,8 @@ void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToArmLengthInterp(class
 
 void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToPivotInterpParams(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& InterpParamsX, struct FPrimalCameraInterpParams& InterpParamsY, struct FPrimalCameraInterpParams& InterpParamsZ, TArray<struct FPrimalCameraPitchBasedModifier>& PitchBasedModifiers, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToPivotInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToPivotInterpParams", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ApplyPitchBasedModifierToPivotInterpParams Parms{};
 
@@ -165,10 +157,8 @@ void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToPivotInterpParams(cla
 
 void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToPivotOffset(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, TArray<struct FPrimalCameraPitchBasedModifier>& PitchBasedModifiers, struct FVector& DesiredPivotOffset, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToPivotOffset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ApplyPitchBasedModifierToPivotOffset", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ApplyPitchBasedModifierToPivotOffset Parms{};
 
@@ -197,10 +187,8 @@ void UASACameraFunctionLibrary_C::ApplyPitchBasedModifierToPivotOffset(class APr
 
 void UASACameraFunctionLibrary_C::DebugPitchBasedModifier(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraPitchBasedModifier& PitchBasedModifier, int32 EntryIndex, double ModifierAlpha, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "DebugPitchBasedModifier");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "DebugPitchBasedModifier", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_DebugPitchBasedModifier Parms{};
 
@@ -233,10 +221,8 @@ void UASACameraFunctionLibrary_C::DebugPitchBasedModifier(class APrimalCharacter
 
 void UASACameraFunctionLibrary_C::Final_Override_Pivot_Interp_Params(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, struct FPrimalCameraPivotZInterpOverrides& PivotZInterpOverrides, const struct FPrimalCameraInterpParams& LastPivotInterpParamsX, const struct FPrimalCameraInterpParams& LastPivotInterpParamsY, const struct FPrimalCameraInterpParams& LastPivotInterpParamsZ, struct FPrimalCameraInterpParams& PivotInterpParamsX, struct FPrimalCameraInterpParams& PivotInterpParamsY, struct FPrimalCameraInterpParams& PivotInterpParamsZ, bool bAllowPitchModifiers, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "Final Override Pivot Interp Params");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "Final Override Pivot Interp Params", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_Final_Override_Pivot_Interp_Params Parms{};
 
@@ -274,10 +260,8 @@ void UASACameraFunctionLibrary_C::Final_Override_Pivot_Interp_Params(class APrim
 
 void UASACameraFunctionLibrary_C::FinalOverrideCameraArmLength(class APrimalCharacter* CharacterToKeepOnScreen, struct FPrimalCameraParams& CameraParams, class APrimalCharacter* CameraOwnerCharacter, double CurrentCameraArmLength, double& DesiredCameraArmLength, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "FinalOverrideCameraArmLength");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "FinalOverrideCameraArmLength", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_FinalOverrideCameraArmLength Parms{};
 
@@ -305,10 +289,8 @@ void UASACameraFunctionLibrary_C::FinalOverrideCameraArmLength(class APrimalChar
 
 void UASACameraFunctionLibrary_C::FinalOverrideCameraArmLengthInterpParams(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& OutInterpParams, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "FinalOverrideCameraArmLengthInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "FinalOverrideCameraArmLengthInterpParams", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_FinalOverrideCameraArmLengthInterpParams Parms{};
 
@@ -334,10 +316,8 @@ void UASACameraFunctionLibrary_C::FinalOverrideCameraArmLengthInterpParams(class
 
 void UASACameraFunctionLibrary_C::FinalOverridePivotLocation(class APrimalCharacter* CameraOwnerCharacter, const struct FVector& CurrentPivotLocation, struct FVector& DesiredPivotLocation, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "FinalOverridePivotLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "FinalOverridePivotLocation", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_FinalOverridePivotLocation Parms{};
 
@@ -364,10 +344,8 @@ void UASACameraFunctionLibrary_C::FinalOverridePivotLocation(class APrimalCharac
 
 void UASACameraFunctionLibrary_C::FinalOverridePivotOffset(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraParams& CameraParams, TArray<struct FPrimalCameraPitchBasedModifier>& PitchBasedModifiers, struct FVector& DesiredPivotOffset, bool bAllowPitchModifiers, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "FinalOverridePivotOffset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "FinalOverridePivotOffset", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_FinalOverridePivotOffset Parms{};
 
@@ -395,10 +373,8 @@ void UASACameraFunctionLibrary_C::FinalOverridePivotOffset(class APrimalCharacte
 
 void UASACameraFunctionLibrary_C::ShouldApplyAnyPitchBasedModifier(class APrimalCharacter* CameraOwnerCharacter, class UObject* __WorldContext, bool* bShouldApplyAnyModifier)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ShouldApplyAnyPitchBasedModifier");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ShouldApplyAnyPitchBasedModifier", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ShouldApplyAnyPitchBasedModifier Parms{};
 
@@ -424,10 +400,8 @@ void UASACameraFunctionLibrary_C::ShouldApplyAnyPitchBasedModifier(class APrimal
 
 void UASACameraFunctionLibrary_C::ShouldApplyPitchBasedModifier(class APrimalCharacter* CameraOwnerCharacter, struct FPrimalCameraPitchBasedModifier& PitchBasedModifier, class UObject* __WorldContext, bool* bShouldApplyModifier, bool* bShouldLerp, double* LerpAlpha)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "ShouldApplyPitchBasedModifier");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "ShouldApplyPitchBasedModifier", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_ShouldApplyPitchBasedModifier Parms{};
 
@@ -465,10 +439,8 @@ void UASACameraFunctionLibrary_C::ShouldApplyPitchBasedModifier(class APrimalCha
 
 void UASACameraFunctionLibrary_C::WorldLocationToScreenArea(class APrimalCharacter* CameraOwnerCharacter, const struct FVector& WorldLocationToProject, class UObject* __WorldContext, double* ScreenAreaX, double* ScreenAreaY, double* ViewportSizeX, double* ViewportSizeY, double* ScreenRawPosX, double* ScreenRawPosY)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ASACameraFunctionLibrary_C", "WorldLocationToScreenArea");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "ASACameraFunctionLibrary_C", "WorldLocationToScreenArea", FuncInfo);
 
 	Params::ASACameraFunctionLibrary_C_WorldLocationToScreenArea Parms{};
 

@@ -16,6 +16,31 @@
 
 SDK_NAMESPACE_START
 
+// Function ChaosCaching.ChaosCacheManager.ClearObservedComponents
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bDestroyComponents                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::ClearObservedComponents(bool bDestroyComponents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "ClearObservedComponents");
+
+	Params::ChaosCacheManager_ClearObservedComponents Parms{};
+
+	Parms.bDestroyComponents = bDestroyComponents;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosCaching.ChaosCacheManager.EnablePlayback
 // (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 // Parameters:
@@ -60,6 +85,60 @@ void AChaosCacheManager::EnablePlaybackByCache(class FName InCacheName, bool bEn
 
 	Parms.InCacheName = InCacheName;
 	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.FindOrAddObservedComponent
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent*              InComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      CacheName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bTransferSimulationFlag                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::FindOrAddObservedComponent(class UPrimitiveComponent* InComponent, const class FName& CacheName, const bool bTransferSimulationFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "FindOrAddObservedComponent");
+
+	Params::ChaosCacheManager_FindOrAddObservedComponent Parms{};
+
+	Parms.InComponent = InComponent;
+	Parms.CacheName = CacheName;
+	Parms.bTransferSimulationFlag = bTransferSimulationFlag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.RemoveObservedComponent
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent*              InComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::RemoveObservedComponent(class UPrimitiveComponent* InComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "RemoveObservedComponent");
+
+	Params::ChaosCacheManager_RemoveObservedComponent Parms{};
+
+	Parms.InComponent = InComponent;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -140,7 +219,7 @@ void AChaosCacheManager::SetCacheCollection(class UChaosCacheCollection* InCache
 
 
 // Function ChaosCaching.ChaosCacheManager.SetCurrentTime
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   CurrentTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -189,8 +268,52 @@ void AChaosCacheManager::SetStartTime(float InStartTime)
 }
 
 
+// Function ChaosCaching.ChaosCacheManager.Start
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InStartTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::Start(float InStartTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "Start");
+
+	Params::ChaosCacheManager_Start Parms{};
+
+	Parms.InStartTime = InStartTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.Stop
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void AChaosCacheManager::Stop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "Stop");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosCaching.ChaosCacheManager.TriggerAll
-// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AChaosCacheManager::TriggerAll()
 {
@@ -209,7 +332,7 @@ void AChaosCacheManager::TriggerAll()
 
 
 // Function ChaosCaching.ChaosCacheManager.TriggerComponent
-// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UPrimitiveComponent*              InComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -234,7 +357,7 @@ void AChaosCacheManager::TriggerComponent(class UPrimitiveComponent* InComponent
 
 
 // Function ChaosCaching.ChaosCacheManager.TriggerComponentByCache
-// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             InCacheName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -255,6 +378,31 @@ void AChaosCacheManager::TriggerComponentByCache(class FName InCacheName)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.IsRecording
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AChaosCacheManager::IsRecording() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "IsRecording");
+
+	Params::ChaosCacheManager_IsRecording Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

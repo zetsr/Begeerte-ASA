@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UAllowWandering_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_AllowWandering(int32 EntryPoint);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UAllowWandering_C>();
 	}
 };
+DUMPER7_ASSERTS_UAllowWandering_C;
 
 SDK_NAMESPACE_END

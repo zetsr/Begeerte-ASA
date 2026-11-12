@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_CFCore_Discovery_BannerSpotlight_UI_Button_CFCore_Global_VIewAll_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_CFCore_Discovery_BannerSpotlight_UI_Button_CFCore_Global_VIewAll_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_CFCore_Discovery_BannerSpotlight_UI_Button_CFCore_Global_VIewAll_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_CFCore_Discovery_BannerS
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_GoToFeaturedCreator_UI_B
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_4_OnUnhovered__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_4_OnUnhovered__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "BndEvt__UI_GoToFeaturedCreator_UI_Button_Ark_Global_VIewAll_K2Node_ComponentBoundEvent_4_OnUnhovered__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::BndEvt__UI_GoToFeaturedCreator_UI_B
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::Create(const struct FShelf& Shelf_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "Create");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "Create", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_Create Parms{};
 
@@ -85,10 +77,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::Create(const struct FShelf& Shelf_0
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight Parms{};
 
@@ -105,10 +95,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::ExecuteUbergraph_UI_CFCore_Discover
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_GetRootCFWidget Parms{};
 
@@ -126,10 +114,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::GetRootCFWidget(class UPanelWidget*
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::OnFail_082B674A42E76991867B6581F03A8A4D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "OnFail_082B674A42E76991867B6581F03A8A4D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "OnFail_082B674A42E76991867B6581F03A8A4D", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_OnFail_082B674A42E76991867B6581F03A8A4D Parms{};
 
@@ -146,10 +132,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::OnFail_082B674A42E76991867B6581F03A
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::OnSuccess_082B674A42E76991867B6581F03A8A4D(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "OnSuccess_082B674A42E76991867B6581F03A8A4D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "OnSuccess_082B674A42E76991867B6581F03A8A4D", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_OnSuccess_082B674A42E76991867B6581F03A8A4D Parms{};
 
@@ -166,10 +150,8 @@ void UUI_CFCore_Discovery_BannerSpotlight_C::OnSuccess_082B674A42E76991867B6581F
 
 void UUI_CFCore_Discovery_BannerSpotlight_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_BannerSpotlight_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_BannerSpotlight_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Discovery_BannerSpotlight_C_PreConstruct Parms{};
 

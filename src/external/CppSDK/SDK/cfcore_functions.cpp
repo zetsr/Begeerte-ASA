@@ -1751,11 +1751,11 @@ void UCFCoreSubsystem::CleanTempDir(TDelegate<void()> OnSuccess, TDelegate<void(
 // const struct FCreateCookedModFileRequest&CreateCookedModFileRequest                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // const class FString&                    LocalFilenameToUpload                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(int64 mod_file_request_id)>&OnCreateModFileRequestId                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FFileTransferProgress& progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FFileTransferProgress& Progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FUploadedModFile& uploaded_file)>&OnSuccess                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FCFCoreError& Error)>&OnError                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreSubsystem::CreateCookedModFile(int64 modId, int64 SourceFileId, const struct FCreateCookedModFileRequest& CreateCookedModFileRequest, const class FString& LocalFilenameToUpload, const TDelegate<void(int64 mod_file_request_id)>& OnCreateModFileRequestId, const TDelegate<void(const struct FFileTransferProgress& progress)>& OnProgress, const TDelegate<void(const struct FUploadedModFile& uploaded_file)>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
+void UCFCoreSubsystem::CreateCookedModFile(int64 modId, int64 SourceFileId, const struct FCreateCookedModFileRequest& CreateCookedModFileRequest, const class FString& LocalFilenameToUpload, const TDelegate<void(int64 mod_file_request_id)>& OnCreateModFileRequestId, const TDelegate<void(const struct FFileTransferProgress& Progress)>& OnProgress, const TDelegate<void(const struct FUploadedModFile& uploaded_file)>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1820,11 +1820,11 @@ void UCFCoreSubsystem::CreateMod(const struct FCreateModRequest& create_mod_requ
 // const struct FCreateModFileRequest&     CreateModFileRequest                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const class FString&                    LocalFilenameToUpload                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(int64 mod_file_request_id)>&OnCreateModFileRequestId                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FFileTransferProgress& progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FFileTransferProgress& Progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FUploadedModFile& uploaded_file)>&OnSuccess                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FCFCoreError& Error)>&OnError                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreSubsystem::CreateModFile(int64 modId, const struct FCreateModFileRequest& CreateModFileRequest, const class FString& LocalFilenameToUpload, const TDelegate<void(int64 mod_file_request_id)>& OnCreateModFileRequestId, const TDelegate<void(const struct FFileTransferProgress& progress)>& OnProgress, const TDelegate<void(const struct FUploadedModFile& uploaded_file)>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
+void UCFCoreSubsystem::CreateModFile(int64 modId, const struct FCreateModFileRequest& CreateModFileRequest, const class FString& LocalFilenameToUpload, const TDelegate<void(int64 mod_file_request_id)>& OnCreateModFileRequestId, const TDelegate<void(const struct FFileTransferProgress& Progress)>& OnProgress, const TDelegate<void(const struct FUploadedModFile& uploaded_file)>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2070,33 +2070,6 @@ void UCFCoreSubsystem::GetModsDirInfo(TDelegate<void(const struct FModsDirInfo& 
 }
 
 
-// Function cfcore.CFCoreSubsystem.GetMyPremiumMods
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TDelegate<void(const TArray<int64>& modIds)>&OnSuccess                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FCFCoreError& Error)>&OnError                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCFCoreSubsystem::GetMyPremiumMods(const TDelegate<void(const TArray<int64>& modIds)>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreSubsystem", "GetMyPremiumMods");
-
-	Params::CFCoreSubsystem_GetMyPremiumMods Parms{};
-
-	Parms.OnSuccess = OnSuccess;
-	Parms.OnError = OnError;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function cfcore.CFCoreSubsystem.GetMyPremiumModsV2
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2240,11 +2213,11 @@ void UCFCoreSubsystem::Initialize(const struct FCFCoreSettings& Settings, const 
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FCFCoreMod&                mod                                                    (Parm, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FLibraryProgress& progress)>&on_progress                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FLibraryProgress& Progress)>&on_progress                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FInstalledMod& installed_mod)>&on_installed                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FCFCoreError& Error)>&on_error                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreSubsystem::InstallMod(const struct FCFCoreMod& mod, const TDelegate<void(const struct FLibraryProgress& progress)>& on_progress, const TDelegate<void(const struct FInstalledMod& installed_mod)>& on_installed, const TDelegate<void(const struct FCFCoreError& Error)>& on_error)
+void UCFCoreSubsystem::InstallMod(const struct FCFCoreMod& mod, const TDelegate<void(const struct FLibraryProgress& Progress)>& on_progress, const TDelegate<void(const struct FInstalledMod& installed_mod)>& on_installed, const TDelegate<void(const struct FCFCoreError& Error)>& on_error)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2273,11 +2246,11 @@ void UCFCoreSubsystem::InstallMod(const struct FCFCoreMod& mod, const TDelegate<
 // const struct FCFCoreMod&                InMod                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const struct FFile&                     InFile                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const struct FInstallModAdditionalParams&InAdditionalParams                                     (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FLibraryProgress& progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FLibraryProgress& Progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FInstalledMod& installed_mod)>&OnInstalled                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(const struct FCFCoreError& Error)>&OnError                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreSubsystem::InstallModExtended(const struct FCFCoreMod& InMod, const struct FFile& InFile, const struct FInstallModAdditionalParams& InAdditionalParams, const TDelegate<void(const struct FLibraryProgress& progress)>& OnProgress, const TDelegate<void(const struct FInstalledMod& installed_mod)>& OnInstalled, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
+void UCFCoreSubsystem::InstallModExtended(const struct FCFCoreMod& InMod, const struct FFile& InFile, const struct FInstallModAdditionalParams& InAdditionalParams, const TDelegate<void(const struct FLibraryProgress& Progress)>& OnProgress, const TDelegate<void(const struct FInstalledMod& installed_mod)>& OnInstalled, const TDelegate<void(const struct FCFCoreError& Error)>& OnError)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2869,11 +2842,11 @@ void UCFCoreSubsystem::UpdateSettings(const struct FCFCoreUpdatableSettings& InS
 // Parameters:
 // const TArray<class FString>&            InPathsToZip                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const class FString&                    InOutputZipFile                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FCompressionProgress& progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FCompressionProgress& Progress)>&OnProgress                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void()>&                OnSuccess                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TDelegate<void(ECompressionError CompressionError)>&OnError                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCFCoreSubsystem::UtilsCompressionZipPaths(const TArray<class FString>& InPathsToZip, const class FString& InOutputZipFile, const TDelegate<void(const struct FCompressionProgress& progress)>& OnProgress, const TDelegate<void()>& OnSuccess, const TDelegate<void(ECompressionError CompressionError)>& OnError)
+void UCFCoreSubsystem::UtilsCompressionZipPaths(const TArray<class FString>& InPathsToZip, const class FString& InOutputZipFile, const TDelegate<void(const struct FCompressionProgress& Progress)>& OnProgress, const TDelegate<void()>& OnSuccess, const TDelegate<void(ECompressionError CompressionError)>& OnError)
 {
 	static class UFunction* Func = nullptr;
 

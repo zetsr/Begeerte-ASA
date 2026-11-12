@@ -24,15 +24,6 @@ enum class EZoneGraphObstacleDisturbanceAreaAction : uint8
 	EZoneGraphObstacleDisturbanceAreaAction_MAX = 2,
 };
 
-// ScriptStruct ZoneGraphAnnotations.RegisteredZoneGraphAnnotation
-// 0x0010 (0x0010 - 0x0000)
-struct FRegisteredZoneGraphAnnotation final
-{
-public:
-	class UZoneGraphAnnotationComponent*          AnnotationComponent;                               // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // ScriptStruct ZoneGraphAnnotations.ZoneGraphAnnotationEventBase
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -40,6 +31,7 @@ struct SDK_ALIGN(0x01) FZoneGraphAnnotationEventBase
 {
 };
 #pragma pack(pop)
+DUMPER7_ASSERTS_FZoneGraphAnnotationEventBase;
 
 // ScriptStruct ZoneGraphAnnotations.ZoneGraphDisturbanceArea
 // 0x0028 (0x0028 - 0x0000)
@@ -52,6 +44,7 @@ public:
 	uint32                                        InstigatorID;                                      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FZoneGraphDisturbanceArea;
 
 // ScriptStruct ZoneGraphAnnotations.ZoneGraphObstacleDisturbanceArea
 // 0x0030 (0x0030 - 0x0000)
@@ -65,5 +58,16 @@ public:
 	EZoneGraphObstacleDisturbanceAreaAction       Action;                                            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FZoneGraphObstacleDisturbanceArea;
+
+// ScriptStruct ZoneGraphAnnotations.RegisteredZoneGraphAnnotation
+// 0x0010 (0x0010 - 0x0000)
+struct FRegisteredZoneGraphAnnotation final
+{
+public:
+	class UZoneGraphAnnotationComponent*          AnnotationComponent;                               // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRegisteredZoneGraphAnnotation;
 
 SDK_NAMESPACE_END

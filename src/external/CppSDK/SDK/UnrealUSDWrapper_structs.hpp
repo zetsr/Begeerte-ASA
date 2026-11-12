@@ -76,6 +76,21 @@ enum class EUsdRootMotionHandling : uint8
 	EUsdRootMotionHandling_MAX               = 3,
 };
 
+// Enum UnrealUSDWrapper.EUsdCollisionType
+// NumValues: 0x0009
+enum class EUsdCollisionType : uint8
+{
+	None                                     = 0,
+	ConvexDecomposition                      = 1,
+	ConvexHull                               = 2,
+	Sphere                                   = 3,
+	Cube                                     = 4,
+	MeshSimplification                       = 5,
+	Capsule                                  = 6,
+	CustomMesh                               = 7,
+	EUsdCollisionType_MAX                    = 8,
+};
+
 // Enum UnrealUSDWrapper.EGeometryCacheImport
 // NumValues: 0x0004
 enum class EGeometryCacheImport : uint8
@@ -105,6 +120,7 @@ public:
 	struct FVector2D                              Row0;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              Row1;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMatrix2D;
 
 // ScriptStruct UnrealUSDWrapper.Matrix3D
 // 0x0048 (0x0048 - 0x0000)
@@ -115,5 +131,6 @@ public:
 	struct FVector                                Row1;                                              // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Row2;                                              // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMatrix3D;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void AClimbing_ImpactEffect_C::DeactivateImpactEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Climbing_ImpactEffect_C", "DeactivateImpactEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Climbing_ImpactEffect_C", "DeactivateImpactEffect", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void AClimbing_ImpactEffect_C::DeactivateImpactEffect()
 
 void AClimbing_ImpactEffect_C::DestroyImpactEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Climbing_ImpactEffect_C", "DestroyImpactEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Climbing_ImpactEffect_C", "DestroyImpactEffect", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void AClimbing_ImpactEffect_C::DestroyImpactEffect()
 
 void AClimbing_ImpactEffect_C::ExecuteUbergraph_Climbing_ImpactEffect(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Climbing_ImpactEffect_C", "ExecuteUbergraph_Climbing_ImpactEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Climbing_ImpactEffect_C", "ExecuteUbergraph_Climbing_ImpactEffect", FuncInfo);
 
 	Params::Climbing_ImpactEffect_C_ExecuteUbergraph_Climbing_ImpactEffect Parms{};
 
@@ -69,10 +63,8 @@ void AClimbing_ImpactEffect_C::ExecuteUbergraph_Climbing_ImpactEffect(int32 Entr
 
 void AClimbing_ImpactEffect_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Climbing_ImpactEffect_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Climbing_ImpactEffect_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

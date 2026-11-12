@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PrimalGlobalsBlueprint.PrimalGlobalsBlueprint_C
-// 0x0000 (0x0478 - 0x0478)
+// 0x0000 (0x0498 - 0x0498)
 class UPrimalGlobalsBlueprint_C final : public UPrimalGlobals
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGlobalsBlueprint_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalGlobalsBlueprint_C;
 
 SDK_NAMESPACE_END

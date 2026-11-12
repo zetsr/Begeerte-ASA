@@ -10,94 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNode
-// 0x0028 (0x0028 - 0x0000)
-struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode final
-{
-public:
-	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNodePure
-// 0x0028 (0x0028 - 0x0000)
-struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure final
-{
-public:
-	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigidBodyAnimNodeReference            RigidBodyAnimNode;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.SetOverridePhysicsAsset
-// 0x0028 (0x0028 - 0x0000)
-struct AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset final
-{
-public:
-	struct FRigidBodyAnimNodeReference            Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpace
-// 0x0028 (0x0028 - 0x0000)
-struct BlendSpaceLibrary_ConvertToBlendSpace final
-{
-public:
-	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlendSpaceReference                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpacePure
-// 0x0028 (0x0028 - 0x0000)
-struct BlendSpaceLibrary_ConvertToBlendSpacePure final
-{
-public:
-	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function AnimGraphRuntime.BlendSpaceLibrary.GetFilteredPosition
-// 0x0028 (0x0028 - 0x0000)
-struct BlendSpaceLibrary_GetFilteredPosition final
-{
-public:
-	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AnimGraphRuntime.BlendSpaceLibrary.GetPosition
-// 0x0028 (0x0028 - 0x0000)
-struct BlendSpaceLibrary_GetPosition final
-{
-public:
-	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function AnimGraphRuntime.BlendSpaceLibrary.SnapToPosition
-// 0x0028 (0x0028 - 0x0000)
-struct BlendSpaceLibrary_SnapToPosition final
-{
-public:
-	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                NewPosition;                                       // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
 
 // Function AnimGraphRuntime.SequencerAnimationOverride.AllowsCinematicOverride
 // 0x0001 (0x0001 - 0x0000)
@@ -106,6 +25,7 @@ struct SequencerAnimationOverride_AllowsCinematicOverride final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencerAnimationOverride_AllowsCinematicOverride;
 
 // Function AnimGraphRuntime.SequencerAnimationOverride.GetSequencerAnimSlotNames
 // 0x0010 (0x0010 - 0x0000)
@@ -114,6 +34,7 @@ struct SequencerAnimationOverride_GetSequencerAnimSlotNames final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencerAnimationOverride_GetSequencerAnimSlotNames;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateMachine
 // 0x0028 (0x0028 - 0x0000)
@@ -125,6 +46,7 @@ public:
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateMachine;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateMachinePure
 // 0x0028 (0x0028 - 0x0000)
@@ -136,6 +58,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateResult
 // 0x0028 (0x0028 - 0x0000)
@@ -147,6 +70,7 @@ public:
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateResult;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateResultPure
 // 0x0028 (0x0028 - 0x0000)
@@ -158,6 +82,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateResultPure;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetRelevantAnimTimeRemaining
 // 0x0028 (0x0028 - 0x0000)
@@ -169,6 +94,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_GetRelevantAnimTimeRemaining;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetRelevantAnimTimeRemainingFraction
 // 0x0028 (0x0028 - 0x0000)
@@ -180,6 +106,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_GetRelevantAnimTimeRemainingFraction;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetState
 // 0x0028 (0x0028 - 0x0000)
@@ -190,6 +117,7 @@ public:
 	struct FAnimationStateMachineReference        Node;                                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_GetState;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.IsStateBlendingIn
 // 0x0028 (0x0028 - 0x0000)
@@ -201,6 +129,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_IsStateBlendingIn;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.IsStateBlendingOut
 // 0x0028 (0x0028 - 0x0000)
@@ -212,6 +141,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_IsStateBlendingOut;
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.SetState
 // 0x0048 (0x0048 - 0x0000)
@@ -229,6 +159,7 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            CustomBlendCurve;                                  // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimationStateMachineLibrary_SetState;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToComponentSpacePoseContext
 // 0x0028 (0x0028 - 0x0000)
@@ -240,6 +171,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimComponentSpacePoseContext         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_ConvertToComponentSpacePoseContext;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToInitializationContext
 // 0x0028 (0x0028 - 0x0000)
@@ -251,6 +183,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimInitializationContext             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_ConvertToInitializationContext;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToPoseContext
 // 0x0028 (0x0028 - 0x0000)
@@ -262,6 +195,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimPoseContext                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_ConvertToPoseContext;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToUpdateContext
 // 0x0028 (0x0028 - 0x0000)
@@ -273,6 +207,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimUpdateContext                     ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_ConvertToUpdateContext;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetAnimInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -282,6 +217,7 @@ public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class UAnimInstance*                          ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_GetAnimInstance;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetAnimNodeReference
 // 0x0020 (0x0020 - 0x0000)
@@ -293,6 +229,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNodeReference                     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_GetAnimNodeReference;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetCurrentWeight
 // 0x0018 (0x0018 - 0x0000)
@@ -303,6 +240,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_GetCurrentWeight;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetDeltaTime
 // 0x0018 (0x0018 - 0x0000)
@@ -313,6 +251,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_GetDeltaTime;
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.IsActive
 // 0x0018 (0x0018 - 0x0000)
@@ -323,6 +262,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_AnimExecutionContextLibrary_IsActive;
 
 // Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
 // 0x0028 (0x0028 - 0x0000)
@@ -334,6 +274,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendListBaseReference                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendListBaseLibrary_ConvertToBlendListBase;
 
 // Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
 // 0x0010 (0x0010 - 0x0000)
@@ -342,6 +283,61 @@ struct BlendListBaseLibrary_ResetNode final
 public:
 	struct FBlendListBaseReference                BlendListBase;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendListBaseLibrary_ResetNode;
+
+// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpace
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpaceLibrary_ConvertToBlendSpace final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlendSpaceReference                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendSpaceLibrary_ConvertToBlendSpace;
+
+// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpacePure
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpaceLibrary_ConvertToBlendSpacePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlendSpaceLibrary_ConvertToBlendSpacePure;
+
+// Function AnimGraphRuntime.BlendSpaceLibrary.GetFilteredPosition
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpaceLibrary_GetFilteredPosition final
+{
+public:
+	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendSpaceLibrary_GetFilteredPosition;
+
+// Function AnimGraphRuntime.BlendSpaceLibrary.GetPosition
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpaceLibrary_GetPosition final
+{
+public:
+	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendSpaceLibrary_GetPosition;
+
+// Function AnimGraphRuntime.BlendSpaceLibrary.SnapToPosition
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpaceLibrary_SnapToPosition final
+{
+public:
+	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                NewPosition;                                       // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendSpaceLibrary_SnapToPosition;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayer
 // 0x0028 (0x0028 - 0x0000)
@@ -353,6 +349,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayerPure
 // 0x0028 (0x0028 - 0x0000)
@@ -364,6 +361,18 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure;
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetAccumulatedTime
+// 0x0018 (0x0018 - 0x0000)
+struct BlendSpacePlayerLibrary_GetAccumulatedTime final
+{
+public:
+	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetAccumulatedTime;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetBlendSpace
 // 0x0018 (0x0018 - 0x0000)
@@ -373,6 +382,7 @@ public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UBlendSpace*                            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetBlendSpace;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetLoop
 // 0x0018 (0x0018 - 0x0000)
@@ -383,6 +393,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetLoop;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPlayRate
 // 0x0018 (0x0018 - 0x0000)
@@ -393,6 +404,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetPlayRate;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPosition
 // 0x0028 (0x0028 - 0x0000)
@@ -402,6 +414,7 @@ public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetPosition;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetStartPosition
 // 0x0018 (0x0018 - 0x0000)
@@ -412,6 +425,19 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_GetStartPosition;
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetAccumulatedTime
+// 0x0028 (0x0028 - 0x0000)
+struct BlendSpacePlayerLibrary_SetAccumulatedTime final
+{
+public:
+	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetAccumulatedTime;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpace
 // 0x0028 (0x0028 - 0x0000)
@@ -422,6 +448,7 @@ public:
 	class UBlendSpace*                            BlendSpace;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetBlendSpace;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpaceWithInertialBlending
 // 0x0040 (0x0040 - 0x0000)
@@ -435,6 +462,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetBlendSpaceWithInertialBlending;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetLoop
 // 0x0028 (0x0028 - 0x0000)
@@ -446,6 +474,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetLoop;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetPlayRate
 // 0x0028 (0x0028 - 0x0000)
@@ -457,6 +486,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetPlayRate;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetResetPlayTimeWhenBlendSpaceChanges
 // 0x0028 (0x0028 - 0x0000)
@@ -468,6 +498,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.ShouldResetPlayTimeWhenBlendSpaceChanges
 // 0x0018 (0x0018 - 0x0000)
@@ -478,6 +509,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges;
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.SnapToPosition
 // 0x0028 (0x0028 - 0x0000)
@@ -487,6 +519,42 @@ public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                NewPosition;                                       // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_BlendSpacePlayerLibrary_SnapToPosition;
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNode
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode;
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNodePure
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigidBodyAnimNodeReference            RigidBodyAnimNode;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure;
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.SetOverridePhysicsAsset
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset final
+{
+public:
+	struct FRigidBodyAnimNodeReference            Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.CalculateDirection
 // 0x0038 (0x0038 - 0x0000)
@@ -498,6 +566,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_CalculateDirection;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromPositionHistory
 // 0x0060 (0x0060 - 0x0000)
@@ -513,6 +582,7 @@ public:
 	float                                         VelocityMax;                                       // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_CalculateVelocityFromPositionHistory;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromSockets
 // 0x0110 (0x0110 - 0x0000)
@@ -537,6 +607,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0108(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_CalculateVelocityFromSockets;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DirectionBetweenSockets
 // 0x0030 (0x0030 - 0x0000)
@@ -548,6 +619,7 @@ public:
 	class FName                                   SocketOrBoneNameTo;                                // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_DirectionBetweenSockets;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DistanceBetweenTwoSocketsAndMapRange
 // 0x0038 (0x0038 - 0x0000)
@@ -569,6 +641,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_DistanceBetweenTwoSocketsAndMapRange;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_EndProfilingTimer
 // 0x0020 (0x0020 - 0x0000)
@@ -581,6 +654,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_EndProfilingTimer;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
 // 0x0120 (0x0120 - 0x0000)
@@ -597,6 +671,7 @@ public:
 	uint8                                         Pad_B4[0xC];                                       // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x00C0(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_LookAt;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseAndRemap
 // 0x0010 (0x0010 - 0x0000)
@@ -608,6 +683,7 @@ public:
 	float                                         RangeOutMax;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_MakePerlinNoiseAndRemap;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseVectorAndRemap
 // 0x0040 (0x0040 - 0x0000)
@@ -626,6 +702,7 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_MakePerlinNoiseVectorAndRemap;
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
 // 0x00B8 (0x00B8 - 0x0000)
@@ -645,6 +722,7 @@ public:
 	float                                         MaxStretchScale;                                   // 0x00B0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_KismetAnimationLibrary_K2_TwoBoneIK;
 
 // Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBlendPerBonePure
 // 0x0028 (0x0028 - 0x0000)
@@ -656,6 +734,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure;
 
 // Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBoneBlend
 // 0x0028 (0x0028 - 0x0000)
@@ -667,6 +746,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLayeredBoneBlendReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend;
 
 // Function AnimGraphRuntime.LayeredBoneBlendLibrary.GetNumPoses
 // 0x0018 (0x0018 - 0x0000)
@@ -677,6 +757,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LayeredBoneBlendLibrary_GetNumPoses;
 
 // Function AnimGraphRuntime.LayeredBoneBlendLibrary.SetBlendMask
 // 0x0040 (0x0040 - 0x0000)
@@ -690,6 +771,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLayeredBoneBlendReference             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LayeredBoneBlendLibrary_SetBlendMask;
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.ConvertToLinkedAnimGraph
 // 0x0028 (0x0028 - 0x0000)
@@ -701,6 +783,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinkedAnimGraphReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LinkedAnimGraphLibrary_ConvertToLinkedAnimGraph;
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.ConvertToLinkedAnimGraphPure
 // 0x0028 (0x0028 - 0x0000)
@@ -712,6 +795,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure;
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.GetLinkedAnimInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -721,6 +805,7 @@ public:
 	struct FLinkedAnimGraphReference              Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimInstance*                          ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LinkedAnimGraphLibrary_GetLinkedAnimInstance;
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.HasLinkedAnimInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -731,6 +816,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_LinkedAnimGraphLibrary_HasLinkedAnimInstance;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNode
 // 0x0028 (0x0028 - 0x0000)
@@ -742,6 +828,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_ConvertToMirrorNode;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNodePure
 // 0x0028 (0x0028 - 0x0000)
@@ -753,6 +840,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_ConvertToMirrorNodePure;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.GetMirror
 // 0x0018 (0x0018 - 0x0000)
@@ -763,6 +851,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_GetMirror;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorDataTable
 // 0x0018 (0x0018 - 0x0000)
@@ -772,6 +861,7 @@ public:
 	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UMirrorDataTable*                       ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_GetMirrorDataTable;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorTransitionBlendTime
 // 0x0018 (0x0018 - 0x0000)
@@ -782,6 +872,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_GetMirrorTransitionBlendTime;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.SetMirror
 // 0x0028 (0x0028 - 0x0000)
@@ -793,6 +884,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_SetMirror;
 
 // Function AnimGraphRuntime.MirrorAnimLibrary.SetMirrorTransitionBlendTime
 // 0x0028 (0x0028 - 0x0000)
@@ -804,6 +896,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MirrorAnimLibrary_SetMirrorTransitionBlendTime;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNode
 // 0x0028 (0x0028 - 0x0000)
@@ -815,6 +908,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_ConvertToModifyCurveNode;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNodePure
 // 0x0028 (0x0028 - 0x0000)
@@ -826,6 +920,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetAlpha
 // 0x0018 (0x0018 - 0x0000)
@@ -836,6 +931,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_GetAlpha;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetApplyMode
 // 0x0018 (0x0018 - 0x0000)
@@ -846,6 +942,7 @@ public:
 	EModifyCurveApplyMode                         ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_GetApplyMode;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetAlpha
 // 0x0028 (0x0028 - 0x0000)
@@ -857,6 +954,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_SetAlpha;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetApplyMode
 // 0x0028 (0x0028 - 0x0000)
@@ -868,6 +966,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_SetApplyMode;
 
 // Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetCurveMap
 // 0x0070 (0x0070 - 0x0000)
@@ -878,6 +977,7 @@ public:
 	TMap<class FName, float>                      InCurveMap;                                        // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ModifyCurveAnimLibrary_SetCurveMap;
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
 // 0x0030 (0x0030 - 0x0000)
@@ -893,6 +993,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPlayMontageCallbackProxy*              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PlayMontageCallbackProxy_CreateProxyObjectForPlayMontage;
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
 // 0x0010 (0x0010 - 0x0000)
@@ -903,6 +1004,7 @@ public:
 	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PlayMontageCallbackProxy_OnMontageBlendingOut;
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
 // 0x0010 (0x0010 - 0x0000)
@@ -913,6 +1015,7 @@ public:
 	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_PlayMontageCallbackProxy_OnMontageEnded;
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
 // 0x0028 (0x0028 - 0x0000)
@@ -922,6 +1025,7 @@ public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBranchingPointNotifyPayload           BranchingPointNotifyPayload;                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PlayMontageCallbackProxy_OnNotifyBeginReceived;
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
 // 0x0028 (0x0028 - 0x0000)
@@ -931,6 +1035,7 @@ public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBranchingPointNotifyPayload           BranchingPointNotifyPayload;                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_PlayMontageCallbackProxy_OnNotifyEndReceived;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.AdvanceTime
 // 0x0038 (0x0038 - 0x0000)
@@ -943,6 +1048,7 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_AdvanceTime;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.ConvertToSequenceEvaluator
 // 0x0028 (0x0028 - 0x0000)
@@ -954,6 +1060,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_ConvertToSequenceEvaluator;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.ConvertToSequenceEvaluatorPure
 // 0x0028 (0x0028 - 0x0000)
@@ -965,6 +1072,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.GetAccumulatedTime
 // 0x0018 (0x0018 - 0x0000)
@@ -975,6 +1083,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_GetAccumulatedTime;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.GetSequence
 // 0x0018 (0x0018 - 0x0000)
@@ -984,6 +1093,7 @@ public:
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimSequenceBase*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_GetSequence;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitFrame
 // 0x0028 (0x0028 - 0x0000)
@@ -995,6 +1105,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_SetExplicitFrame;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitTime
 // 0x0028 (0x0028 - 0x0000)
@@ -1006,6 +1117,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_SetExplicitTime;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetSequence
 // 0x0028 (0x0028 - 0x0000)
@@ -1016,6 +1128,7 @@ public:
 	class UAnimSequenceBase*                      Sequence;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_SetSequence;
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetSequenceWithInertialBlending
 // 0x0040 (0x0040 - 0x0000)
@@ -1029,6 +1142,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequenceEvaluatorLibrary_SetSequenceWithInertialBlending;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.ComputePlayRateFromDuration
 // 0x0018 (0x0018 - 0x0000)
@@ -1039,6 +1153,7 @@ public:
 	float                                         Duration;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_ComputePlayRateFromDuration;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.ConvertToSequencePlayer
 // 0x0028 (0x0028 - 0x0000)
@@ -1050,6 +1165,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_ConvertToSequencePlayer;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.ConvertToSequencePlayerPure
 // 0x0028 (0x0028 - 0x0000)
@@ -1061,6 +1177,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_ConvertToSequencePlayerPure;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetAccumulatedTime
 // 0x0018 (0x0018 - 0x0000)
@@ -1071,6 +1188,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetAccumulatedTime;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetLoopAnimation
 // 0x0018 (0x0018 - 0x0000)
@@ -1081,6 +1199,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetLoopAnimation;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetPlayRate
 // 0x0018 (0x0018 - 0x0000)
@@ -1091,6 +1210,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetPlayRate;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetSequence
 // 0x0028 (0x0028 - 0x0000)
@@ -1101,6 +1221,7 @@ public:
 	class UAnimSequenceBase*                      SequenceBase;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetSequence;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetSequencePure
 // 0x0018 (0x0018 - 0x0000)
@@ -1110,6 +1231,7 @@ public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimSequenceBase*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetSequencePure;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetStartPosition
 // 0x0018 (0x0018 - 0x0000)
@@ -1120,6 +1242,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_GetStartPosition;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetAccumulatedTime
 // 0x0028 (0x0028 - 0x0000)
@@ -1131,6 +1254,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_SetAccumulatedTime;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetPlayRate
 // 0x0028 (0x0028 - 0x0000)
@@ -1142,6 +1266,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_SetPlayRate;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetSequence
 // 0x0028 (0x0028 - 0x0000)
@@ -1152,6 +1277,7 @@ public:
 	class UAnimSequenceBase*                      Sequence;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_SetSequence;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetSequenceWithInertialBlending
 // 0x0040 (0x0040 - 0x0000)
@@ -1165,6 +1291,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_SetSequenceWithInertialBlending;
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetStartPosition
 // 0x0028 (0x0028 - 0x0000)
@@ -1176,6 +1303,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SequencePlayerLibrary_SetStartPosition;
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.ConvertToSkeletalControl
 // 0x0028 (0x0028 - 0x0000)
@@ -1187,6 +1315,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkeletalControlReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SkeletalControlLibrary_ConvertToSkeletalControl;
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.ConvertToSkeletalControlPure
 // 0x0028 (0x0028 - 0x0000)
@@ -1198,6 +1327,7 @@ public:
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SkeletalControlLibrary_ConvertToSkeletalControlPure;
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.GetAlpha
 // 0x0018 (0x0018 - 0x0000)
@@ -1208,6 +1338,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SkeletalControlLibrary_GetAlpha;
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.SetAlpha
 // 0x0028 (0x0028 - 0x0000)
@@ -1219,6 +1350,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkeletalControlReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SkeletalControlLibrary_SetAlpha;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function CineCameraRigs.CineCameraAttachMount.GetConstraint
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UTickableParentConstraint*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,7 +42,7 @@ class UTickableParentConstraint* ACineCameraAttachMount::GetConstraint()
 
 
 // Function CineCameraRigs.CineCameraAttachMount.ResetLocationOffset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ACineCameraAttachMount::ResetLocationOffset()
 {
@@ -61,7 +61,7 @@ void ACineCameraAttachMount::ResetLocationOffset()
 
 
 // Function CineCameraRigs.CineCameraAttachMount.ResetRotationOffset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ACineCameraAttachMount::ResetRotationOffset()
 {
@@ -80,7 +80,7 @@ void ACineCameraAttachMount::ResetRotationOffset()
 
 
 // Function CineCameraRigs.CineCameraAttachMount.SetEnableLocationLag
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -105,7 +105,7 @@ void ACineCameraAttachMount::SetEnableLocationLag(bool bEnabled)
 
 
 // Function CineCameraRigs.CineCameraAttachMount.SetEnableRotationLag
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -130,7 +130,7 @@ void ACineCameraAttachMount::SetEnableRotationLag(bool bEnabled)
 
 
 // Function CineCameraRigs.CineCameraAttachMount.SetLocationLagSpeed
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Speed                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -155,7 +155,7 @@ void ACineCameraAttachMount::SetLocationLagSpeed(float Speed)
 
 
 // Function CineCameraRigs.CineCameraAttachMount.SetRotationLagSpeed
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Speed                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -180,7 +180,7 @@ void ACineCameraAttachMount::SetRotationLagSpeed(float Speed)
 
 
 // Function CineCameraRigs.CineCameraAttachMount.SetTransformFilter
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FTransformFilter&          InFilter                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -205,7 +205,7 @@ void ACineCameraAttachMount::SetTransformFilter(const struct FTransformFilter& I
 
 
 // Function CineCameraRigs.CineCameraAttachMount.ZeroRoll
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ACineCameraAttachMount::ZeroRoll()
 {
@@ -224,7 +224,7 @@ void ACineCameraAttachMount::ZeroRoll()
 
 
 // Function CineCameraRigs.CineCameraAttachMount.ZeroTilt
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ACineCameraAttachMount::ZeroTilt()
 {
@@ -342,6 +342,31 @@ void ACineCameraRigRail::SetDriveMode(ECineCameraRigRailDriveMode InMode)
 }
 
 
+// Function CineCameraRigs.CineCameraRigRail.SetSplineComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCineSplineComponent*             NewSplineComponent                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ACineCameraRigRail::SetSplineComponent(class UCineSplineComponent* NewSplineComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CineCameraRigRail", "SetSplineComponent");
+
+	Params::CineCameraRigRail_SetSplineComponent Parms{};
+
+	Parms.NewSplineComponent = NewSplineComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CineCameraRigs.CineCameraRigRail.SetSplineMeshMaterial
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -448,7 +473,7 @@ struct FVector ACineCameraRigRail::GetVelocityAtPosition(const float InPosition,
 
 
 // Function CineCameraRigs.CineCameraRigRailHelpers.CreateOrUpdateSplineHeatmapTexture
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UTexture2D*&                      Texture                                                (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<float>&                    DataValues                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
@@ -483,7 +508,7 @@ void UCineCameraRigRailHelpers::CreateOrUpdateSplineHeatmapTexture(class UTextur
 
 
 // Function CineCameraRigs.CineSplineComponent.AddSplineDataAtPosition
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const float                             InPosition                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCineSplinePointData&      InPointData                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -510,7 +535,7 @@ void UCineSplineComponent::AddSplineDataAtPosition(const float InPosition, const
 
 
 // Function CineCameraRigs.CineSplineComponent.SetAbsolutePositionAtSplinePoint
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const int32                             PointIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -537,7 +562,7 @@ void UCineSplineComponent::SetAbsolutePositionAtSplinePoint(const int32 PointInd
 
 
 // Function CineCameraRigs.CineSplineComponent.SetApertureAtSplinePoint
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const int32                             PointIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -564,7 +589,7 @@ void UCineSplineComponent::SetApertureAtSplinePoint(const int32 PointIndex, cons
 
 
 // Function CineCameraRigs.CineSplineComponent.SetFocalLengthAtSplinePoint
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const int32                             PointIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -591,7 +616,7 @@ void UCineSplineComponent::SetFocalLengthAtSplinePoint(const int32 PointIndex, c
 
 
 // Function CineCameraRigs.CineSplineComponent.SetFocusDistanceAtSplinePoint
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const int32                             PointIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -618,7 +643,7 @@ void UCineSplineComponent::SetFocusDistanceAtSplinePoint(const int32 PointIndex,
 
 
 // Function CineCameraRigs.CineSplineComponent.SetPointRotationAtSplinePoint
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const int32                             PointIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FQuat&                     Value                                                  (ConstParm, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -645,7 +670,7 @@ void UCineSplineComponent::SetPointRotationAtSplinePoint(const int32 PointIndex,
 
 
 // Function CineCameraRigs.CineSplineComponent.UpdateSplineDataAtIndex
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const int32                             InIndex                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FCineSplinePointData&      InPointData                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -672,7 +697,7 @@ void UCineSplineComponent::UpdateSplineDataAtIndex(const int32 InIndex, const st
 
 
 // Function CineCameraRigs.CineSplineComponent.FindSplineDataAtPosition
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InPosition                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32*                                  OutIndex                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -706,7 +731,7 @@ bool UCineSplineComponent::FindSplineDataAtPosition(const float InPosition, int3
 
 
 // Function CineCameraRigs.CineSplineComponent.GetInputKeyAtPosition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InPosition                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -734,7 +759,7 @@ float UCineSplineComponent::GetInputKeyAtPosition(const float InPosition) const
 
 
 // Function CineCameraRigs.CineSplineComponent.GetPointRotationAtSplineInputKey
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   InKey                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -762,7 +787,7 @@ struct FQuat UCineSplineComponent::GetPointRotationAtSplineInputKey(float InKey)
 
 
 // Function CineCameraRigs.CineSplineComponent.GetPointRotationAtSplinePoint
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -790,7 +815,7 @@ struct FQuat UCineSplineComponent::GetPointRotationAtSplinePoint(int32 Index_0) 
 
 
 // Function CineCameraRigs.CineSplineComponent.GetPositionAtInputKey
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InKey                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -818,7 +843,7 @@ float UCineSplineComponent::GetPositionAtInputKey(const float InKey) const
 
 
 // Function CineCameraRigs.CineSplineComponent.GetSplineDataAtPosition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const float                             InPosition                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FCineSplinePointData             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)

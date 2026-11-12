@@ -67,7 +67,7 @@ void UMovieSceneReplaceableActorBinding_BPBase::BP_InitReplaceableBinding(class 
 // (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
 // const struct FMovieSceneBindingResolveContext&ResolveContext                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FMovieSceneBindingResolveResult  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMovieSceneBindingResolveResult  ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FMovieSceneBindingResolveResult UMovieSceneReplaceableActorBinding_BPBase::BP_ResolveRuntimeBinding(const struct FMovieSceneBindingResolveContext& ResolveContext) const
 {
@@ -164,6 +164,31 @@ const struct FMovieSceneObjectBindingID UMovieScene3DConstraintSection::GetConst
 }
 
 
+// Function MovieSceneTracks.MovieSceneAudioSection.IsRepeatingCVarEnabled
+// (Final, Native, Static, Private)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneAudioSection::IsRepeatingCVarEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MovieSceneAudioSection", "IsRepeatingCVarEnabled");
+
+	Params::MovieSceneAudioSection_IsRepeatingCVarEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieSceneTracks.MovieSceneAudioSection.SetAttenuationSettings
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -190,7 +215,7 @@ void UMovieSceneAudioSection::SetAttenuationSettings(class USoundAttenuation* In
 
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetLooping
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bInLooping                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -229,6 +254,56 @@ void UMovieSceneAudioSection::SetOverrideAttenuation(bool bInOverrideAttenuation
 	Params::MovieSceneAudioSection_SetOverrideAttenuation Parms{};
 
 	Parms.bInOverrideAttenuation = bInOverrideAttenuation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieSceneTracks.MovieSceneAudioSection.SetPlayUntilFinished
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInPlayUntilFinished                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneAudioSection::SetPlayUntilFinished(bool bInPlayUntilFinished)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "SetPlayUntilFinished");
+
+	Params::MovieSceneAudioSection_SetPlayUntilFinished Parms{};
+
+	Parms.bInPlayUntilFinished = bInPlayUntilFinished;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieSceneTracks.MovieSceneAudioSection.SetRepeating
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInRepeating                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneAudioSection::SetRepeating(bool bInRepeating)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "SetRepeating");
+
+	Params::MovieSceneAudioSection_SetRepeating Parms{};
+
+	Parms.bInRepeating = bInRepeating;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -389,6 +464,56 @@ bool UMovieSceneAudioSection::GetOverrideAttenuation() const
 }
 
 
+// Function MovieSceneTracks.MovieSceneAudioSection.GetPlaybackSound
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USoundBase*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USoundBase* UMovieSceneAudioSection::GetPlaybackSound() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "GetPlaybackSound");
+
+	Params::MovieSceneAudioSection_GetPlaybackSound Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneAudioSection.GetPlayUntilFinished
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneAudioSection::GetPlayUntilFinished() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "GetPlayUntilFinished");
+
+	Params::MovieSceneAudioSection_GetPlayUntilFinished Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieSceneTracks.MovieSceneAudioSection.GetSound
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -452,6 +577,31 @@ bool UMovieSceneAudioSection::GetSuppressSubtitles() const
 		Func = Class->GetFunction("MovieSceneAudioSection", "GetSuppressSubtitles");
 
 	Params::MovieSceneAudioSection_GetSuppressSubtitles Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneAudioSection.IsPlayUntilFinishedEditable
+// (Final, Native, Private, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneAudioSection::IsPlayUntilFinishedEditable() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneAudioSection", "IsPlayUntilFinishedEditable");
+
+	Params::MovieSceneAudioSection_IsPlayUntilFinishedEditable Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -573,8 +723,9 @@ class FString UMovieSceneCinematicShotSection::GetShotDisplayName() const
 // const class FString&                    InLayerName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InAssetName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FParameterChannelNames&    InChannelNames                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneComponentMaterialParameterSection::AddColorParameterKey(const struct FMaterialParameterInfo& InParameterInfo, const struct FFrameNumber& InTime, const struct FLinearColor& InValue, const class FString& InLayerName, const class FString& InAssetName, const struct FParameterChannelNames& InChannelNames)
+void UMovieSceneComponentMaterialParameterSection::AddColorParameterKey(const struct FMaterialParameterInfo& InParameterInfo, const struct FFrameNumber& InTime, const struct FLinearColor& InValue, const class FString& InLayerName, const class FString& InAssetName, const struct FParameterChannelNames& InChannelNames, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -589,6 +740,7 @@ void UMovieSceneComponentMaterialParameterSection::AddColorParameterKey(const st
 	Parms.InLayerName = std::move(InLayerName);
 	Parms.InAssetName = std::move(InAssetName);
 	Parms.InChannelNames = std::move(InChannelNames);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -607,8 +759,9 @@ void UMovieSceneComponentMaterialParameterSection::AddColorParameterKey(const st
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InLayerName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InAssetName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneComponentMaterialParameterSection::AddScalarParameterKey(const struct FMaterialParameterInfo& InParameterInfo, const struct FFrameNumber& InTime, float InValue, const class FString& InLayerName, const class FString& InAssetName)
+void UMovieSceneComponentMaterialParameterSection::AddScalarParameterKey(const struct FMaterialParameterInfo& InParameterInfo, const struct FFrameNumber& InTime, float InValue, const class FString& InLayerName, const class FString& InAssetName, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -622,6 +775,7 @@ void UMovieSceneComponentMaterialParameterSection::AddScalarParameterKey(const s
 	Parms.InValue = InValue;
 	Parms.InLayerName = std::move(InLayerName);
 	Parms.InAssetName = std::move(InAssetName);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -723,8 +877,9 @@ void UMovieSceneParameterSection::AddBoolParameterKey(class FName InParameterNam
 // class FName                             InParameterName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameNumber&              InTime                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FLinearColor&              InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneParameterSection::AddColorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FLinearColor& InValue)
+void UMovieSceneParameterSection::AddColorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FLinearColor& InValue, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -736,6 +891,7 @@ void UMovieSceneParameterSection::AddColorParameterKey(class FName InParameterNa
 	Parms.InParameterName = InParameterName;
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = std::move(InValue);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -752,8 +908,9 @@ void UMovieSceneParameterSection::AddColorParameterKey(class FName InParameterNa
 // class FName                             InParameterName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameNumber&              InTime                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneParameterSection::AddScalarParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, float InValue)
+void UMovieSceneParameterSection::AddScalarParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, float InValue, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -765,6 +922,7 @@ void UMovieSceneParameterSection::AddScalarParameterKey(class FName InParameterN
 	Parms.InParameterName = InParameterName;
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = InValue;
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -781,8 +939,9 @@ void UMovieSceneParameterSection::AddScalarParameterKey(class FName InParameterN
 // class FName                             InParameterName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameNumber&              InTime                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FTransform&                InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneParameterSection::AddTransformParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FTransform& InValue)
+void UMovieSceneParameterSection::AddTransformParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FTransform& InValue, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -794,6 +953,7 @@ void UMovieSceneParameterSection::AddTransformParameterKey(class FName InParamet
 	Parms.InParameterName = InParameterName;
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = std::move(InValue);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -810,8 +970,9 @@ void UMovieSceneParameterSection::AddTransformParameterKey(class FName InParamet
 // class FName                             InParameterName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameNumber&              InTime                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector2D&                 InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneParameterSection::AddVector2DParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector2D& InValue)
+void UMovieSceneParameterSection::AddVector2DParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector2D& InValue, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -823,6 +984,7 @@ void UMovieSceneParameterSection::AddVector2DParameterKey(class FName InParamete
 	Parms.InParameterName = InParameterName;
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = std::move(InValue);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -839,8 +1001,9 @@ void UMovieSceneParameterSection::AddVector2DParameterKey(class FName InParamete
 // class FName                             InParameterName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FFrameNumber&              InTime                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVector&                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneKeyInterpolation             DefaultInterpolation                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneParameterSection::AddVectorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue)
+void UMovieSceneParameterSection::AddVectorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue, EMovieSceneKeyInterpolation DefaultInterpolation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -852,6 +1015,7 @@ void UMovieSceneParameterSection::AddVectorParameterKey(class FName InParameterN
 	Parms.InParameterName = InParameterName;
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = std::move(InValue);
+	Parms.DefaultInterpolation = DefaultInterpolation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1033,7 +1197,7 @@ bool UMovieSceneParameterSection::RemoveVectorParameter(class FName InParameterN
 // Function MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TSet<class FName>*                      ParameterNames                                         (Parm, OutParm, NativeAccessSpecifierPublic)
+// TSet<class FName>*                      ParameterNames                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
 void UMovieSceneParameterSection::GetParameterNames(TSet<class FName>* ParameterNames) const
 {
@@ -1647,6 +1811,34 @@ class UMovieSceneAsyncAction_SequencePrediction* UMovieSceneAsyncAction_Sequence
 	Parms.Player = Player;
 	Parms.TargetComponent = TargetComponent;
 	Parms.TimeInSeconds = TimeInSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieSceneTracks.MovieSceneFadeTrackTestLibrary.GetManualFadeAmount
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerCameraManager*             PlayerCameraManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneFadeTrackTestLibrary::GetManualFadeAmount(class APlayerCameraManager* PlayerCameraManager)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MovieSceneFadeTrackTestLibrary", "GetManualFadeAmount");
+
+	Params::MovieSceneFadeTrackTestLibrary_GetManualFadeAmount Parms{};
+
+	Parms.PlayerCameraManager = PlayerCameraManager;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

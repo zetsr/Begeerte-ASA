@@ -11,18 +11,41 @@
 #include "Basic.hpp"
 
 #include "MassEntity_classes.hpp"
-#include "MassSpawner_classes.hpp"
 #include "MassMovement_structs.hpp"
+#include "MassSpawner_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class MassMovement.MassApplyForceProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class UMassApplyForceProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassApplyForceProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassApplyForceProcessor")
+	}
+	static class UMassApplyForceProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassApplyForceProcessor>();
+	}
+};
+DUMPER7_ASSERTS_UMassApplyForceProcessor;
+
 // Class MassMovement.MassApplyMovementProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x05D0 (0x06D0 - 0x0100)
 class UMassApplyMovementProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -38,6 +61,7 @@ public:
 		return GetDefaultObjImpl<UMassApplyMovementProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassApplyMovementProcessor;
 
 // Class MassMovement.MassMovementSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -60,13 +84,14 @@ public:
 		return GetDefaultObjImpl<UMassMovementSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassMovementSettings;
 
 // Class MassMovement.MassMovementTrait
-// 0x0028 (0x0050 - 0x0028)
-class UMassMovementTrait final : public UMassEntityTraitBase
+// 0x0030 (0x0060 - 0x0030)
+class UMassMovementTrait : public UMassEntityTraitBase
 {
 public:
-	struct FMassMovementParameters                Movement;                                          // 0x0028(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FMassMovementParameters                Movement;                                          // 0x0030(0x0030)(Edit, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -82,9 +107,10 @@ public:
 		return GetDefaultObjImpl<UMassMovementTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassMovementTrait;
 
 // Class MassMovement.MassSimpleMovementTrait
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UMassSimpleMovementTrait final : public UMassEntityTraitBase
 {
 public:
@@ -101,13 +127,14 @@ public:
 		return GetDefaultObjImpl<UMassSimpleMovementTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimpleMovementTrait;
 
 // Class MassMovement.MassSimpleMovementProcessor
-// 0x0320 (0x03D0 - 0x00B0)
+// 0x05D0 (0x06D0 - 0x0100)
 class UMassSimpleMovementProcessor final : public UMassProcessor
 {
 public:
-	uint8                                         Pad_B0[0x320];                                     // 0x00B0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -123,16 +150,110 @@ public:
 		return GetDefaultObjImpl<UMassSimpleMovementProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassSimpleMovementProcessor;
+
+// Class MassMovement.SpringUpdateProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class USpringUpdateProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpringUpdateProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpringUpdateProcessor")
+	}
+	static class USpringUpdateProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpringUpdateProcessor>();
+	}
+};
+DUMPER7_ASSERTS_USpringUpdateProcessor;
+
+// Class MassMovement.SpringApplyMovementProcessor
+// 0x05D0 (0x06D0 - 0x0100)
+class USpringApplyMovementProcessor final : public UMassProcessor
+{
+public:
+	uint8                                         Pad_100[0x5D0];                                    // 0x0100(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpringApplyMovementProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpringApplyMovementProcessor")
+	}
+	static class USpringApplyMovementProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpringApplyMovementProcessor>();
+	}
+};
+DUMPER7_ASSERTS_USpringApplyMovementProcessor;
+
+// Class MassMovement.SpringMovementLODResyncObserver
+// 0x05D0 (0x06F0 - 0x0120)
+class USpringMovementLODResyncObserver final : public UMassObserverProcessor
+{
+public:
+	uint8                                         Pad_120[0x5D0];                                    // 0x0120(0x05D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpringMovementLODResyncObserver")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpringMovementLODResyncObserver")
+	}
+	static class USpringMovementLODResyncObserver* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpringMovementLODResyncObserver>();
+	}
+};
+DUMPER7_ASSERTS_USpringMovementLODResyncObserver;
+
+// Class MassMovement.SpringMovementTrait
+// 0x0010 (0x0040 - 0x0030)
+class USpringMovementTrait final : public UMassEntityTraitBase
+{
+public:
+	struct FSpringMovementSettings                SpringSettings;                                    // 0x0030(0x000C)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SpringMovementTrait")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpringMovementTrait")
+	}
+	static class USpringMovementTrait* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USpringMovementTrait>();
+	}
+};
+DUMPER7_ASSERTS_USpringMovementTrait;
 
 // Class MassMovement.MassVelocityRandomizerTrait
-// 0x0010 (0x0038 - 0x0028)
+// 0x0010 (0x0040 - 0x0030)
 class UMassVelocityRandomizerTrait final : public UMassEntityTraitBase
 {
 public:
-	float                                         MinSpeed;                                          // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxSpeed;                                          // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSetZComponent;                                    // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         MinSpeed;                                          // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxSpeed;                                          // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSetZComponent;                                    // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -148,17 +269,18 @@ public:
 		return GetDefaultObjImpl<UMassVelocityRandomizerTrait>();
 	}
 };
+DUMPER7_ASSERTS_UMassVelocityRandomizerTrait;
 
 // Class MassMovement.MassRandomVelocityInitializer
-// 0x0348 (0x0410 - 0x00C8)
+// 0x05E8 (0x0708 - 0x0120)
 class UMassRandomVelocityInitializer final : public UMassObserverProcessor
 {
 public:
-	uint8                                         Pad_C8[0x328];                                     // 0x00C8(0x0328)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinSpeed;                                          // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MaxSpeed;                                          // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSetZComponent;                                    // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3F9[0x17];                                     // 0x03F9(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_120[0x5D0];                                    // 0x0120(0x05D0)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinSpeed;                                          // 0x06F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MaxSpeed;                                          // 0x06F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSetZComponent;                                    // 0x06F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6F9[0xF];                                      // 0x06F9(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -174,5 +296,6 @@ public:
 		return GetDefaultObjImpl<UMassRandomVelocityInitializer>();
 	}
 };
+DUMPER7_ASSERTS_UMassRandomVelocityInitializer;
 
 SDK_NAMESPACE_END

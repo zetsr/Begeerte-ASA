@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Button_GoToHorizontal_C::BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_GoToHorizontal_C", "BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_GoToHorizontal_C", "BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CFCore_Button_GoToHorizontal_C::BndEvt__UI_Button_ScreenshotNavigation_
 
 void UUI_CFCore_Button_GoToHorizontal_C::ExecuteUbergraph_UI_CFCore_Button_GoToHorizontal(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_GoToHorizontal_C", "ExecuteUbergraph_UI_CFCore_Button_GoToHorizontal");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_GoToHorizontal_C", "ExecuteUbergraph_UI_CFCore_Button_GoToHorizontal", FuncInfo);
 
 	Params::UI_CFCore_Button_GoToHorizontal_C_ExecuteUbergraph_UI_CFCore_Button_GoToHorizontal Parms{};
 

@@ -36,6 +36,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PathToComponent;                                   // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FActorSequenceObjectReference;
 
 // ScriptStruct ActorSequence.ActorSequenceObjectReferences
 // 0x0010 (0x0010 - 0x0000)
@@ -44,6 +45,7 @@ struct FActorSequenceObjectReferences final
 public:
 	TArray<struct FActorSequenceObjectReference>  Array;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FActorSequenceObjectReferences;
 
 // ScriptStruct ActorSequence.ActorSequenceObjectReferenceMap
 // 0x0020 (0x0020 - 0x0000)
@@ -53,5 +55,6 @@ public:
 	TArray<struct FGuid>                          BindingIds;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<struct FActorSequenceObjectReferences> References;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FActorSequenceObjectReferenceMap;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_StoreMenu_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_StoreMenu_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_StoreMenu_C::Back_from_Server_Mods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Back from Server Mods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Back from Server Mods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_StoreMenu_C::Back_from_Server_Mods()
 
 void UUI_CFCore_StoreMenu_C::BindControllerAction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BindControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BindControllerAction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_StoreMenu_C::BindControllerAction()
 
 void UUI_CFCore_StoreMenu_C::BndEvt__StoreMenu_SignIn_K2Node_ComponentBoundEvent_3_OnSignInClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__StoreMenu_SignIn_K2Node_ComponentBoundEvent_3_OnSignInClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__StoreMenu_SignIn_K2Node_ComponentBoundEvent_3_OnSignInClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +71,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__StoreMenu_SignIn_K2Node_ComponentBoundEvent
 
 void UUI_CFCore_StoreMenu_C::BndEvt__StoreMenu_TxtBox_Search_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__StoreMenu_TxtBox_Search_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__StoreMenu_TxtBox_Search_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_BndEvt__StoreMenu_TxtBox_Search_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature Parms{};
 
@@ -97,10 +87,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__StoreMenu_TxtBox_Search_K2Node_ComponentBou
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_Button_41_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_Button_41_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_Button_41_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,10 +99,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_Button_41_K2Node_ComponentBoun
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_TEXT_SearchBack_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_TEXT_SearchBack_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_TEXT_SearchBack_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +111,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_TEXT_SearchBack_K2Node_Compone
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_10_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_10_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_10_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +123,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_Ark_Global_Back_K2No
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_BrowseMods_K2Node_ComponentBoundEvent_1_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_BrowseMods_K2Node_ComponentBoundEvent_1_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_BrowseMods_K2Node_ComponentBoundEvent_1_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +135,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_BrowseMods_K2Node_Co
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_Discovery_K2Node_ComponentBoundEvent_8_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_Discovery_K2Node_ComponentBoundEvent_8_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_Discovery_K2Node_ComponentBoundEvent_8_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +147,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_Discovery_K2Node_Com
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_InstalledMods_K2Node_ComponentBoundEvent_2_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_InstalledMods_K2Node_ComponentBoundEvent_2_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_InstalledMods_K2Node_ComponentBoundEvent_2_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +159,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_InstalledMods_K2Node
 
 void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_MyMods_K2Node_ComponentBoundEvent_6_Dispatcher_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_MyMods_K2Node_ComponentBoundEvent_6_Dispatcher_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BndEvt__UI_StoreMenu_UI_Button_MyMods_K2Node_ComponentBoundEvent_6_Dispatcher_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +173,8 @@ void UUI_CFCore_StoreMenu_C::BndEvt__UI_StoreMenu_UI_Button_MyMods_K2Node_Compon
 
 bool UUI_CFCore_StoreMenu_C::BPEscapeClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BPEscapeClosed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BPEscapeClosed", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_BPEscapeClosed Parms{};
 
@@ -218,10 +192,8 @@ bool UUI_CFCore_StoreMenu_C::BPEscapeClosed()
 
 bool UUI_CFCore_StoreMenu_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_BPGamepadReleased Parms{};
 
@@ -241,10 +213,8 @@ bool UUI_CFCore_StoreMenu_C::BPGamepadReleased(const struct FKey& theKey)
 
 void UUI_CFCore_StoreMenu_C::ButtonCall(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ButtonCall");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ButtonCall", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_ButtonCall Parms{};
 
@@ -260,10 +230,8 @@ void UUI_CFCore_StoreMenu_C::ButtonCall(const struct FKey& Key, EViewState State
 
 void UUI_CFCore_StoreMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -272,21 +240,19 @@ void UUI_CFCore_StoreMenu_C::Construct()
 // Function UI_CFCore_StoreMenu.UI_CFCore_StoreMenu_C.CreateModPageMenu
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   Mod_Id                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   Mod_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   DrawUIOnZOrder                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_GameSlot_C*            UI_GameSlotRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_ModPage_C**            ModPageRef                                             (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UUI_CFCore_StoreMenu_C::CreateModPageMenu(int64 Mod_Id, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_ModPage_C** ModPageRef)
+void UUI_CFCore_StoreMenu_C::CreateModPageMenu(int64 Mod_ID, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_ModPage_C** ModPageRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "CreateModPageMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "CreateModPageMenu", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_CreateModPageMenu Parms{};
 
-	Parms.Mod_Id = Mod_Id;
+	Parms.Mod_ID = Mod_ID;
 	Parms.DrawUIOnZOrder = DrawUIOnZOrder;
 	Parms.UI_GameSlotRef = UI_GameSlotRef;
 
@@ -308,10 +274,8 @@ void UUI_CFCore_StoreMenu_C::CreateModPageMenu(int64 Mod_Id, int32 DrawUIOnZOrde
 
 void UUI_CFCore_StoreMenu_C::CreateRightClickMenu(class UUI_CFCore_GameSlot_C* UI_GameSlot, bool ShouldViewBeVisible, bool SepareteReportWithLine, double WidgetWidth, class UUI_CFCore_ContextMenu_C** MenuRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "CreateRightClickMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "CreateRightClickMenu", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_CreateRightClickMenu Parms{};
 
@@ -332,10 +296,8 @@ void UUI_CFCore_StoreMenu_C::CreateRightClickMenu(class UUI_CFCore_GameSlot_C* U
 
 void UUI_CFCore_StoreMenu_C::DecideInstalledModsTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "DecideInstalledModsTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "DecideInstalledModsTab", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +310,8 @@ void UUI_CFCore_StoreMenu_C::DecideInstalledModsTab()
 
 void UUI_CFCore_StoreMenu_C::DELETE_FocusableOnKeyDown_1(const struct FKeyEvent& KeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "DELETE_FocusableOnKeyDown_1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "DELETE_FocusableOnKeyDown_1", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_DELETE_FocusableOnKeyDown_1 Parms{};
 
@@ -366,10 +326,8 @@ void UUI_CFCore_StoreMenu_C::DELETE_FocusableOnKeyDown_1(const struct FKeyEvent&
 
 void UUI_CFCore_StoreMenu_C::DestroyModPageMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "DestroyModPageMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "DestroyModPageMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -380,10 +338,8 @@ void UUI_CFCore_StoreMenu_C::DestroyModPageMenu()
 
 void UUI_CFCore_StoreMenu_C::DestroyRightClickMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "DestroyRightClickMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "DestroyRightClickMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,10 +350,8 @@ void UUI_CFCore_StoreMenu_C::DestroyRightClickMenu()
 
 void UUI_CFCore_StoreMenu_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -410,10 +364,8 @@ void UUI_CFCore_StoreMenu_C::Destruct()
 
 void UUI_CFCore_StoreMenu_C::EnabledTabSwitching(bool bInIsEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "EnabledTabSwitching");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "EnabledTabSwitching", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_EnabledTabSwitching Parms{};
 
@@ -428,10 +380,8 @@ void UUI_CFCore_StoreMenu_C::EnabledTabSwitching(bool bInIsEnabled)
 
 void UUI_CFCore_StoreMenu_C::Event_Click_On_Sign_In()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Click On Sign In");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Click On Sign In", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -442,10 +392,8 @@ void UUI_CFCore_StoreMenu_C::Event_Click_On_Sign_In()
 
 void UUI_CFCore_StoreMenu_C::Event_Close_Menu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Close Menu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Close Menu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -456,10 +404,8 @@ void UUI_CFCore_StoreMenu_C::Event_Close_Menu()
 
 void UUI_CFCore_StoreMenu_C::Event_Open_Browse_Mods_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Open Browse Mods Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Open Browse Mods Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -470,10 +416,8 @@ void UUI_CFCore_StoreMenu_C::Event_Open_Browse_Mods_Page()
 
 void UUI_CFCore_StoreMenu_C::Event_Open_Discovery_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Open Discovery Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Open Discovery Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -484,10 +428,8 @@ void UUI_CFCore_StoreMenu_C::Event_Open_Discovery_Page()
 
 void UUI_CFCore_StoreMenu_C::Event_Open_Installed_Mods_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Open Installed Mods Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Open Installed Mods Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -498,10 +440,8 @@ void UUI_CFCore_StoreMenu_C::Event_Open_Installed_Mods_Page()
 
 void UUI_CFCore_StoreMenu_C::Event_Open_My_Mods_Page()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Event Open My Mods Page");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Event Open My Mods Page", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -514,10 +454,8 @@ void UUI_CFCore_StoreMenu_C::Event_Open_My_Mods_Page()
 
 void UUI_CFCore_StoreMenu_C::ExecuteUbergraph_UI_CFCore_StoreMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ExecuteUbergraph_UI_CFCore_StoreMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ExecuteUbergraph_UI_CFCore_StoreMenu", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_ExecuteUbergraph_UI_CFCore_StoreMenu Parms{};
 
@@ -532,10 +470,8 @@ void UUI_CFCore_StoreMenu_C::ExecuteUbergraph_UI_CFCore_StoreMenu(int32 EntryPoi
 
 void UUI_CFCore_StoreMenu_C::ExitRequested()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ExitRequested");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ExitRequested", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -548,10 +484,8 @@ void UUI_CFCore_StoreMenu_C::ExitRequested()
 
 void UUI_CFCore_StoreMenu_C::GamepadRequestChangeTab(bool Forward)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "GamepadRequestChangeTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "GamepadRequestChangeTab", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_GamepadRequestChangeTab Parms{};
 
@@ -568,10 +502,8 @@ void UUI_CFCore_StoreMenu_C::GamepadRequestChangeTab(bool Forward)
 
 void UUI_CFCore_StoreMenu_C::GetAllModsIDs(TArray<int64>* List)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "GetAllModsIDs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "GetAllModsIDs", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_GetAllModsIDs Parms{};
 
@@ -590,10 +522,8 @@ void UUI_CFCore_StoreMenu_C::GetAllModsIDs(TArray<int64>* List)
 
 void UUI_CFCore_StoreMenu_C::GetCurrentActivePage(class UUI_CFCore_BasePage_C** CurrentPage, ENUM_CFCore_SideTabs* CurrentActiveTab_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "GetCurrentActivePage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "GetCurrentActivePage", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_GetCurrentActivePage Parms{};
 
@@ -614,10 +544,8 @@ void UUI_CFCore_StoreMenu_C::GetCurrentActivePage(class UUI_CFCore_BasePage_C** 
 
 void UUI_CFCore_StoreMenu_C::GetDiscoveryRef(class UUI_CFCore_Discovery_C** DiscoveryRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "GetDiscoveryRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "GetDiscoveryRef", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_GetDiscoveryRef Parms{};
 
@@ -635,10 +563,8 @@ void UUI_CFCore_StoreMenu_C::GetDiscoveryRef(class UUI_CFCore_Discovery_C** Disc
 
 void UUI_CFCore_StoreMenu_C::GetDiscoveryScrollBox(class UScrollBox** NewParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "GetDiscoveryScrollBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "GetDiscoveryScrollBox", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_GetDiscoveryScrollBox Parms{};
 
@@ -654,10 +580,8 @@ void UUI_CFCore_StoreMenu_C::GetDiscoveryScrollBox(class UScrollBox** NewParam)
 
 void UUI_CFCore_StoreMenu_C::InitAllTabs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "InitAllTabs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "InitAllTabs", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -668,10 +592,8 @@ void UUI_CFCore_StoreMenu_C::InitAllTabs()
 
 void UUI_CFCore_StoreMenu_C::InitTheme()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "InitTheme");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "InitTheme", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -685,10 +607,8 @@ void UUI_CFCore_StoreMenu_C::InitTheme()
 
 void UUI_CFCore_StoreMenu_C::NotificationHandle(EGameModsEvent Selection, const struct FInstallProgressMod& mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "NotificationHandle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "NotificationHandle", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_NotificationHandle Parms{};
 
@@ -704,10 +624,8 @@ void UUI_CFCore_StoreMenu_C::NotificationHandle(EGameModsEvent Selection, const 
 
 void UUI_CFCore_StoreMenu_C::OnAllModsReceivedUpdated()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OnAllModsReceivedUpdated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OnAllModsReceivedUpdated", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -723,10 +641,8 @@ void UUI_CFCore_StoreMenu_C::OnAllModsReceivedUpdated()
 
 bool UUI_CFCore_StoreMenu_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_OnEventBroadcasted Parms{};
 
@@ -745,10 +661,8 @@ bool UUI_CFCore_StoreMenu_C::OnEventBroadcasted(EGameModsEvent evt, const TArray
 
 void UUI_CFCore_StoreMenu_C::OnFilterChange()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OnFilterChange");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OnFilterChange", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -759,10 +673,8 @@ void UUI_CFCore_StoreMenu_C::OnFilterChange()
 
 void UUI_CFCore_StoreMenu_C::OnSearchedTextCommitted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OnSearchedTextCommitted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OnSearchedTextCommitted", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -773,10 +685,8 @@ void UUI_CFCore_StoreMenu_C::OnSearchedTextCommitted()
 
 void UUI_CFCore_StoreMenu_C::OpenCurrentActivePage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OpenCurrentActivePage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OpenCurrentActivePage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -787,24 +697,20 @@ void UUI_CFCore_StoreMenu_C::OpenCurrentActivePage()
 
 void UUI_CFCore_StoreMenu_C::OpenPendingModPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "OpenPendingModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "OpenPendingModPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_StoreMenu.UI_CFCore_StoreMenu_C.PlayStartFadeInAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_StoreMenu_C::PlayStartFadeInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "PlayStartFadeInAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "PlayStartFadeInAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -815,10 +721,8 @@ void UUI_CFCore_StoreMenu_C::PlayStartFadeInAnimation()
 
 void UUI_CFCore_StoreMenu_C::RefreshBackground()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "RefreshBackground");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "RefreshBackground", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -829,10 +733,8 @@ void UUI_CFCore_StoreMenu_C::RefreshBackground()
 
 void UUI_CFCore_StoreMenu_C::RemoveExtraWidgets()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "RemoveExtraWidgets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "RemoveExtraWidgets", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -843,10 +745,8 @@ void UUI_CFCore_StoreMenu_C::RemoveExtraWidgets()
 
 void UUI_CFCore_StoreMenu_C::RequestInstalledModsFromAPI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "RequestInstalledModsFromAPI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "RequestInstalledModsFromAPI", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -857,10 +757,8 @@ void UUI_CFCore_StoreMenu_C::RequestInstalledModsFromAPI()
 
 void UUI_CFCore_StoreMenu_C::RequestThemeUpdate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "RequestThemeUpdate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "RequestThemeUpdate", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -871,10 +769,8 @@ void UUI_CFCore_StoreMenu_C::RequestThemeUpdate()
 
 void UUI_CFCore_StoreMenu_C::ReturnToStoreMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ReturnToStoreMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ReturnToStoreMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -887,10 +783,8 @@ void UUI_CFCore_StoreMenu_C::ReturnToStoreMenu()
 
 void UUI_CFCore_StoreMenu_C::SelectPage(class UUI_CFCore_Button_Sidebar_C* Target)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SelectPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SelectPage", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_SelectPage Parms{};
 
@@ -909,10 +803,8 @@ void UUI_CFCore_StoreMenu_C::SelectPage(class UUI_CFCore_Button_Sidebar_C* Targe
 
 void UUI_CFCore_StoreMenu_C::SetCurrentActivePage(ENUM_CFCore_SideTabs NewActiveTab, bool ReloadPage, bool ForceChange)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SetCurrentActivePage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SetCurrentActivePage", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_SetCurrentActivePage Parms{};
 
@@ -929,10 +821,8 @@ void UUI_CFCore_StoreMenu_C::SetCurrentActivePage(ENUM_CFCore_SideTabs NewActive
 
 void UUI_CFCore_StoreMenu_C::SetDiscoveryActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SetDiscoveryActive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SetDiscoveryActive", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -943,10 +833,8 @@ void UUI_CFCore_StoreMenu_C::SetDiscoveryActive()
 
 void UUI_CFCore_StoreMenu_C::SetInitStoreFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SetInitStoreFocus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SetInitStoreFocus", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -959,10 +847,8 @@ void UUI_CFCore_StoreMenu_C::SetInitStoreFocus()
 
 void UUI_CFCore_StoreMenu_C::SetNewTextInSearch(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SetNewTextInSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SetNewTextInSearch", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_SetNewTextInSearch Parms{};
 
@@ -977,10 +863,8 @@ void UUI_CFCore_StoreMenu_C::SetNewTextInSearch(const class FText& InText)
 
 void UUI_CFCore_StoreMenu_C::SetUserIdDisplayText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SetUserIdDisplayText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SetUserIdDisplayText", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -991,10 +875,8 @@ void UUI_CFCore_StoreMenu_C::SetUserIdDisplayText()
 
 void UUI_CFCore_StoreMenu_C::ShouldCustomizeTheme()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "ShouldCustomizeTheme");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "ShouldCustomizeTheme", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1008,10 +890,8 @@ void UUI_CFCore_StoreMenu_C::ShouldCustomizeTheme()
 
 void UUI_CFCore_StoreMenu_C::SwitchControllerAction(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "SwitchControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "SwitchControllerAction", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_SwitchControllerAction Parms{};
 
@@ -1030,10 +910,8 @@ void UUI_CFCore_StoreMenu_C::SwitchControllerAction(const struct FKey& Key, EVie
 
 void UUI_CFCore_StoreMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_Tick Parms{};
 
@@ -1049,10 +927,8 @@ void UUI_CFCore_StoreMenu_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1061,18 +937,16 @@ void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc()
 // Function UI_CFCore_StoreMenu.UI_CFCore_StoreMenu_C.UI_StoreMenu_AutoGenFunc3
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc3(int64 ServerID)
+void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc3(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc3");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc3", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_UI_StoreMenu_AutoGenFunc3 Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1081,18 +955,16 @@ void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc3(int64 ServerID)
 // Function UI_CFCore_StoreMenu.UI_CFCore_StoreMenu_C.UI_StoreMenu_AutoGenFunc4
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc4(int64 ServerID)
+void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc4(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc4");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UI_StoreMenu_AutoGenFunc4", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_UI_StoreMenu_AutoGenFunc4 Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1103,10 +975,8 @@ void UUI_CFCore_StoreMenu_C::UI_StoreMenu_AutoGenFunc4(int64 ServerID)
 
 void UUI_CFCore_StoreMenu_C::UpdateAllStoreMenuWidgets()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UpdateAllStoreMenuWidgets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UpdateAllStoreMenuWidgets", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1119,10 +989,8 @@ void UUI_CFCore_StoreMenu_C::UpdateAllStoreMenuWidgets()
 
 void UUI_CFCore_StoreMenu_C::UpdateCloseButtonSearchVisiblity(const class FText& SearchInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UpdateCloseButtonSearchVisiblity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UpdateCloseButtonSearchVisiblity", FuncInfo);
 
 	Params::UI_CFCore_StoreMenu_C_UpdateCloseButtonSearchVisiblity Parms{};
 
@@ -1137,10 +1005,8 @@ void UUI_CFCore_StoreMenu_C::UpdateCloseButtonSearchVisiblity(const class FText&
 
 void UUI_CFCore_StoreMenu_C::UpdateSearchFilter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_StoreMenu_C", "UpdateSearchFilter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_StoreMenu_C", "UpdateSearchFilter", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

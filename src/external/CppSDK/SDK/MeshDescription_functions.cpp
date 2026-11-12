@@ -575,15 +575,15 @@ void UMeshDescriptionBase::DeleteVertexInstance(const struct FVertexInstanceID& 
 }
 
 
-// Function MeshDescription.MeshDescriptionBase.Empty
+// Function MeshDescription.MeshDescriptionBase.empty
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
-void UMeshDescriptionBase::Empty()
+void UMeshDescriptionBase::empty()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MeshDescriptionBase", "Empty");
+		Func = Class->GetFunction("MeshDescriptionBase", "empty");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ToolTipWidget_C::ExecuteUbergraph_UI_CFCore_ToolTipWidget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ToolTipWidget_C", "ExecuteUbergraph_UI_CFCore_ToolTipWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ToolTipWidget_C", "ExecuteUbergraph_UI_CFCore_ToolTipWidget", FuncInfo);
 
 	Params::UI_CFCore_ToolTipWidget_C_ExecuteUbergraph_UI_CFCore_ToolTipWidget Parms{};
 
@@ -43,10 +41,8 @@ void UUI_CFCore_ToolTipWidget_C::ExecuteUbergraph_UI_CFCore_ToolTipWidget(int32 
 
 void UUI_CFCore_ToolTipWidget_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ToolTipWidget_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ToolTipWidget_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_ToolTipWidget_C_GetRootCFWidget Parms{};
 
@@ -64,10 +60,8 @@ void UUI_CFCore_ToolTipWidget_C::GetRootCFWidget(class UPanelWidget** RootPanelW
 
 void UUI_CFCore_ToolTipWidget_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ToolTipWidget_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ToolTipWidget_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_ToolTipWidget_C_PreConstruct Parms{};
 

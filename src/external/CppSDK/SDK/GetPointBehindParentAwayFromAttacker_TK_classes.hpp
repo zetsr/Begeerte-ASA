@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UGetPointBehindParentAwayFromAttacker_TK_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	double                                        FixedDistance;                                     // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        RandomDistance;                                    // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBlackboardKeySelector                 NavigationTargetKey;                               // 0x00C0(0x0028)(Edit, BlueprintVisible)
@@ -46,5 +46,6 @@ public:
 		return GetDefaultObjImpl<UGetPointBehindParentAwayFromAttacker_TK_C>();
 	}
 };
+DUMPER7_ASSERTS_UGetPointBehindParentAwayFromAttacker_TK_C;
 
 SDK_NAMESPACE_END

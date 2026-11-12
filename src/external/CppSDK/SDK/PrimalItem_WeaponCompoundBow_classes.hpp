@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponCompoundBow_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponCompoundBow_C;
 
 SDK_NAMESPACE_END

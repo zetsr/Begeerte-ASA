@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function DataRegistry.DataRegistrySubsystem.AcquireItemBP
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const struct FDataRegistryId&           ItemID                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)>AcquireCallback                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -47,7 +47,7 @@ bool UDataRegistrySubsystem::AcquireItemBP(const struct FDataRegistryId& ItemID,
 
 
 // Function DataRegistry.DataRegistrySubsystem.Conv_DataRegistryIdToString
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryId&           DataRegistryId                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -75,7 +75,7 @@ class FString UDataRegistrySubsystem::Conv_DataRegistryIdToString(const struct F
 
 
 // Function DataRegistry.DataRegistrySubsystem.Conv_DataRegistryTypeToString
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryType&         DataRegistryType                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -103,7 +103,7 @@ class FString UDataRegistrySubsystem::Conv_DataRegistryTypeToString(const struct
 
 
 // Function DataRegistry.DataRegistrySubsystem.EqualEqual_DataRegistryId
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryId&           A                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FDataRegistryId&           B                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -133,7 +133,7 @@ bool UDataRegistrySubsystem::EqualEqual_DataRegistryId(const struct FDataRegistr
 
 
 // Function DataRegistry.DataRegistrySubsystem.EqualEqual_DataRegistryType
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryType&         A                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FDataRegistryType&         B                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -163,7 +163,7 @@ bool UDataRegistrySubsystem::EqualEqual_DataRegistryType(const struct FDataRegis
 
 
 // Function DataRegistry.DataRegistrySubsystem.EvaluateDataRegistryCurve
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FDataRegistryId&           ItemID                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InputValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -334,7 +334,7 @@ bool UDataRegistrySubsystem::GetCachedItemFromLookupBP(const struct FDataRegistr
 
 
 // Function DataRegistry.DataRegistrySubsystem.GetPossibleDataRegistryIdList
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FDataRegistryType&         RegistryType                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FDataRegistryId>*         OutIdList                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -363,7 +363,7 @@ void UDataRegistrySubsystem::GetPossibleDataRegistryIdList(const struct FDataReg
 
 
 // Function DataRegistry.DataRegistrySubsystem.IsValidDataRegistryId
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryId&           DataRegistryId                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -391,7 +391,7 @@ bool UDataRegistrySubsystem::IsValidDataRegistryId(const struct FDataRegistryId&
 
 
 // Function DataRegistry.DataRegistrySubsystem.IsValidDataRegistryType
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryType&         DataRegistryType                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -419,7 +419,7 @@ bool UDataRegistrySubsystem::IsValidDataRegistryType(const struct FDataRegistryT
 
 
 // Function DataRegistry.DataRegistrySubsystem.NotEqual_DataRegistryId
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryId&           A                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FDataRegistryId&           B                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -449,7 +449,7 @@ bool UDataRegistrySubsystem::NotEqual_DataRegistryId(const struct FDataRegistryI
 
 
 // Function DataRegistry.DataRegistrySubsystem.NotEqual_DataRegistryType
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const struct FDataRegistryType&         A                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FDataRegistryType&         B                                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

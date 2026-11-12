@@ -21,7 +21,6 @@ SDK_NAMESPACE_START
 class UPrimalItemConsumable_Egg_C : public UPrimalItemConsumableEatable_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                IncubatorDisplay3DScale;                           // 0x0B88(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                IncubatorLocationOffset;                           // 0x0BA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsHatching;                                       // 0x0BB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -44,5 +43,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Egg_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_Egg_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UHM_TPV_ClimbPick_AnimBP_C::UpdateLayeringValues()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HM_TPV_ClimbPick_AnimBP_C", "UpdateLayeringValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HM_TPV_ClimbPick_AnimBP_C", "UpdateLayeringValues", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

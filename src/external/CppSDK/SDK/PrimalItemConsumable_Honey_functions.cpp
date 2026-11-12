@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UPrimalItemConsumable_Honey_C::BPNotifyDropped(class APrimalCharacter* FromCharacter, bool bWasThrown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemConsumable_Honey_C", "BPNotifyDropped");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemConsumable_Honey_C", "BPNotifyDropped", FuncInfo);
 
 	Params::PrimalItemConsumable_Honey_C_BPNotifyDropped Parms{};
 

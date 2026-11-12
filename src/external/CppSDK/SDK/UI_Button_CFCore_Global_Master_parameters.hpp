@@ -47,10 +47,11 @@ public:
 	ENUM_CFCore_ButtonStates                      K2Node_Select_Default_2;                           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ENUM_CFCore_ButtonStates                      K2Node_Select_Default_3;                           // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0068(0x0060)(HasGetValueTypeHash)
+	struct FSlateFontInfo                         CallFunc_MakeSlateFontInfo_ReturnValue;            // 0x0068(0x0060)(HasGetValueTypeHash)
 	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetMinDesiredWidth_InMinDesiredWidth_ImplicitCast; // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_ExecuteUbergraph_UI_Button_CFCore_Global_Master;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -60,6 +61,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_GetRootCFWidget;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -68,6 +70,7 @@ struct UI_Button_CFCore_Global_Master_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_PreConstruct;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.Set Selected
 // 0x0001 (0x0001 - 0x0000)
@@ -76,14 +79,16 @@ struct UI_Button_CFCore_Global_Master_C_Set_Selected final
 public:
 	bool                                          Selected_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_Set_Selected;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetBorderToColor
 // 0x0014 (0x0014 - 0x0000)
 struct UI_Button_CFCore_Global_Master_C_SetBorderToColor final
 {
 public:
-	struct FSlateColor                            TintColor;                                         // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateColor                            TintColor;                                         // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_SetBorderToColor;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetButtonColorPreset
 // 0x0044 (0x0044 - 0x0000)
@@ -96,20 +101,22 @@ public:
 	ENUM_CFCore_ButtonStates                      Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ENUM_CFCore_ButtonStates                      Temp_byte_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_Select_Default;                             // 0x0008(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x001C(0x0014)()
-	struct FSlateColor                            K2Node_Select_Default_2;                           // 0x0030(0x0014)()
+	struct FSlateColor                            K2Node_Select_Default;                             // 0x0008(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x001C(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_Select_Default_2;                           // 0x0030(0x0014)(NoDestructor)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_SetButtonColorPreset;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetFillToColor
 // 0x00D0 (0x00D0 - 0x0000)
 struct UI_Button_CFCore_Global_Master_C_SetFillToColor final
 {
 public:
-	struct FSlateColor                            TintColor;                                         // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateColor                            TintColor;                                         // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0020(0x00B0)()
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_SetFillToColor;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.SetWidgetText
 // 0x0010 (0x0010 - 0x0000)
@@ -118,6 +125,7 @@ struct UI_Button_CFCore_Global_Master_C_SetWidgetText final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_SetWidgetText;
 
 // Function UI_Button_CFCore_Global_Master.UI_Button_CFCore_Global_Master_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -127,6 +135,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_Button_CFCore_Global_Master_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

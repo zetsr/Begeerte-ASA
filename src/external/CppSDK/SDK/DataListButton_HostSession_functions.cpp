@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDataListButton_HostSession_C::OnPaint(struct FPaintContext& Context) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButton_HostSession_C", "OnPaint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButton_HostSession_C", "OnPaint", FuncInfo);
 
 	Params::DataListButton_HostSession_C_OnPaint Parms{};
 

@@ -17,13 +17,13 @@
 SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass Human_ModifyPose_CtrlRig.Human_ModifyPose_CtrlRig_C
-// 0x0050 (0x0B20 - 0x0AD0)
+// 0x0050 (0x0D70 - 0x0D20)
 class UHuman_ModifyPose_CtrlRig_C final : public UControlRig
 {
 public:
-	struct FQuat                                  LHand_Rotation;                                    // 0x0AD0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FQuat                                  RHand_Rotation;                                    // 0x0AF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RaiseArmsDegrees;                                  // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FQuat                                  LHand_Rotation;                                    // 0x0D20(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FQuat                                  RHand_Rotation;                                    // 0x0D40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RaiseArmsDegrees;                                  // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UHuman_ModifyPose_CtrlRig_C>();
 	}
 };
+DUMPER7_ASSERTS_UHuman_ModifyPose_CtrlRig_C;
 
 SDK_NAMESPACE_END

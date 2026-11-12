@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DataListEntryWidgetPrimalItem_QuickItemDyeUI.DataListEntryWidgetPrimalItem_QuickItemDyeUI_C
-// 0x0008 (0x0448 - 0x0440)
+// 0x0008 (0x04A8 - 0x04A0)
 class UDataListEntryWidgetPrimalItem_QuickItemDyeUI_C final : public UDataListEntryWidget
 {
 public:
-	class UDataListEntryButton_PrimalItem*        TheDataListButton;                                 // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDataListEntryButton_PrimalItem*        TheDataListButton;                                 // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetPrimalItem_QuickItemDyeUI_C>();
 	}
 };
+DUMPER7_ASSERTS_UDataListEntryWidgetPrimalItem_QuickItemDyeUI_C;
 
 SDK_NAMESPACE_END

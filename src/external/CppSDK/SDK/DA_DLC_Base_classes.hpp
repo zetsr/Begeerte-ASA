@@ -16,15 +16,15 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DA_DLC_Base.DA_DLC_Base_C
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x0058 - 0x0028)
 class UDA_DLC_Base_C final : public UPrimaryDataAsset
 {
 public:
-	class UTexture2D*                             SliceTexture;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 DLCRequirement;                                    // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
-	int32                                         DLCVersion;                                        // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReleaseOrder;                                      // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ToolTip;                                           // 0x0050(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UTexture2D*                             SliceTexture;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 DLCRequirement;                                    // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
+	int32                                         DLCVersion;                                        // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReleaseOrder;                                      // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ToolTip;                                           // 0x0048(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void IsDLCOwned(bool* Owns);
@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<UDA_DLC_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UDA_DLC_Base_C;
 
 SDK_NAMESPACE_END

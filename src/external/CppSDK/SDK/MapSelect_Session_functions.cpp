@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UMapSelect_Session_C::BndEvt__MapSelect_Session_CancelButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "BndEvt__MapSelect_Session_CancelButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "BndEvt__MapSelect_Session_CancelButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UMapSelect_Session_C::BndEvt__MapSelect_Session_CancelButton_K2Node_Compone
 
 void UMapSelect_Session_C::BndEvt__MapSelect_Session_SelectMapButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "BndEvt__MapSelect_Session_SelectMapButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "BndEvt__MapSelect_Session_SelectMapButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UMapSelect_Session_C::BndEvt__MapSelect_Session_SelectMapButton_K2Node_Comp
 
 void UMapSelect_Session_C::ExecuteUbergraph_MapSelect_Session(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "ExecuteUbergraph_MapSelect_Session");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "ExecuteUbergraph_MapSelect_Session", FuncInfo);
 
 	Params::MapSelect_Session_C_ExecuteUbergraph_MapSelect_Session Parms{};
 
@@ -71,10 +65,8 @@ void UMapSelect_Session_C::ExecuteUbergraph_MapSelect_Session(int32 EntryPoint)
 
 void UMapSelect_Session_C::GetMapSelectEntries(TArray<class UMapSelect_Entry_C*>* MapSelectEntries)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "GetMapSelectEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "GetMapSelectEntries", FuncInfo);
 
 	Params::MapSelect_Session_C_GetMapSelectEntries Parms{};
 
@@ -92,10 +84,8 @@ void UMapSelect_Session_C::GetMapSelectEntries(TArray<class UMapSelect_Entry_C*>
 
 void UMapSelect_Session_C::GetSelectedMapIndex(int32* Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "GetSelectedMapIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "GetSelectedMapIndex", FuncInfo);
 
 	Params::MapSelect_Session_C_GetSelectedMapIndex Parms{};
 
@@ -111,10 +101,8 @@ void UMapSelect_Session_C::GetSelectedMapIndex(int32* Index_0)
 
 void UMapSelect_Session_C::MapButtonSelected()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "MapButtonSelected");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "MapButtonSelected", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -129,10 +117,8 @@ void UMapSelect_Session_C::MapButtonSelected()
 
 struct FEventReply UMapSelect_Session_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "OnMouseButtonDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "OnMouseButtonDown", FuncInfo);
 
 	Params::MapSelect_Session_C_OnMouseButtonDown Parms{};
 
@@ -154,10 +140,8 @@ struct FEventReply UMapSelect_Session_C::OnMouseButtonDown(const struct FGeometr
 
 struct FEventReply UMapSelect_Session_C::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "OnMouseMove");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "OnMouseMove", FuncInfo);
 
 	Params::MapSelect_Session_C_OnMouseMove Parms{};
 
@@ -177,10 +161,8 @@ struct FEventReply UMapSelect_Session_C::OnMouseMove(const struct FGeometry& MyG
 
 void UMapSelect_Session_C::ScrollToHoveredItem(class UMapSelect_Entry_C* EntryHovered)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "ScrollToHoveredItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "ScrollToHoveredItem", FuncInfo);
 
 	Params::MapSelect_Session_C_ScrollToHoveredItem Parms{};
 
@@ -195,10 +177,8 @@ void UMapSelect_Session_C::ScrollToHoveredItem(class UMapSelect_Entry_C* EntryHo
 
 void UMapSelect_Session_C::SearchAndCreateModMaps()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "SearchAndCreateModMaps");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "SearchAndCreateModMaps", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -209,10 +189,8 @@ void UMapSelect_Session_C::SearchAndCreateModMaps()
 
 void UMapSelect_Session_C::Select_Map_Button_Clicked()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "Select Map Button Clicked");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "Select Map Button Clicked", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -225,10 +203,8 @@ void UMapSelect_Session_C::Select_Map_Button_Clicked()
 
 void UMapSelect_Session_C::Set_Selected_Map_Entry(class UMapSelect_Entry_C* Entry)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "Set Selected Map Entry");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "Set Selected Map Entry", FuncInfo);
 
 	Params::MapSelect_Session_C_Set_Selected_Map_Entry Parms{};
 
@@ -245,10 +221,8 @@ void UMapSelect_Session_C::Set_Selected_Map_Entry(class UMapSelect_Entry_C* Entr
 
 void UMapSelect_Session_C::SetSelectedMapIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "SetSelectedMapIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "SetSelectedMapIndex", FuncInfo);
 
 	Params::MapSelect_Session_C_SetSelectedMapIndex Parms{};
 
@@ -266,10 +240,8 @@ void UMapSelect_Session_C::SetSelectedMapIndex(int32 Index_0)
 
 void UMapSelect_Session_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Session_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MapSelect_Session_C", "Tick", FuncInfo);
 
 	Params::MapSelect_Session_C_Tick Parms{};
 

@@ -13,6 +13,15 @@
 
 SDK_NAMESPACE_START
 
+// Enum NiagaraCore.ENiagaraParameterAccessLevel
+// NumValues: 0x0003
+enum class ENiagaraParameterAccessLevel : uint8
+{
+	Private                                  = 0,
+	Public                                   = 1,
+	ENiagaraParameterAccessLevel_MAX         = 2,
+};
+
 // Enum NiagaraCore.ENiagaraIterationSource
 // NumValues: 0x0004
 enum class ENiagaraIterationSource : uint8
@@ -31,6 +40,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                UnderlyingType;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FNiagaraVariableCommonReference;
 
 // ScriptStruct NiagaraCore.NiagaraCompileHash
 // 0x0010 (0x0010 - 0x0000)
@@ -39,5 +49,6 @@ struct FNiagaraCompileHash final
 public:
 	TArray<uint8>                                 DataHash;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FNiagaraCompileHash;
 
 SDK_NAMESPACE_END

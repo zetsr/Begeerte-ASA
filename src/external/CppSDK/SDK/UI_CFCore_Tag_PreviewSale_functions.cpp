@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Tag_PreviewSale_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Tag_PreviewSale_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Tag_PreviewSale_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Tag_PreviewSale_C_GetRootCFWidget Parms{};
 
@@ -44,10 +42,8 @@ void UUI_CFCore_Tag_PreviewSale_C::GetRootCFWidget(class UPanelWidget** RootPane
 
 void UUI_CFCore_Tag_PreviewSale_C::UpdateText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Tag_PreviewSale_C", "UpdateText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Tag_PreviewSale_C", "UpdateText", FuncInfo);
 
 	Params::UI_CFCore_Tag_PreviewSale_C_UpdateText Parms{};
 

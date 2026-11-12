@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UGetPointBehindParentAwayFromAttacker_TK_C::ExecuteUbergraph_GetPointBehindParentAwayFromAttacker_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GetPointBehindParentAwayFromAttacker_TK_C", "ExecuteUbergraph_GetPointBehindParentAwayFromAttacker_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GetPointBehindParentAwayFromAttacker_TK_C", "ExecuteUbergraph_GetPointBehindParentAwayFromAttacker_TK", FuncInfo);
 
 	Params::GetPointBehindParentAwayFromAttacker_TK_C_ExecuteUbergraph_GetPointBehindParentAwayFromAttacker_TK Parms{};
 
@@ -43,10 +41,8 @@ void UGetPointBehindParentAwayFromAttacker_TK_C::ExecuteUbergraph_GetPointBehind
 
 void UGetPointBehindParentAwayFromAttacker_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GetPointBehindParentAwayFromAttacker_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GetPointBehindParentAwayFromAttacker_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::GetPointBehindParentAwayFromAttacker_TK_C_ReceiveExecute Parms{};
 

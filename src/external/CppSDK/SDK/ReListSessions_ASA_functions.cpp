@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_AutoFavoriteButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_AutoFavoriteButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_AutoFavoriteButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_AutoFavoriteButton_K2Node
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_DayOrder_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_DayOrder_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_DayOrder_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_DayOrder_K2Node_Component
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_0_OnSelectionChanged_0__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_0_OnSelectionChanged_0__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_0_OnSelectionChanged_0__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2No
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_1_OnSelectionChanged_1__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_1_OnSelectionChanged_1__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_1_OnSelectionChanged_1__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2No
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_2_OnSelectionChanged_2__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_2_OnSelectionChanged_2__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_2_OnSelectionChanged_2__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2No
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_3_OnSelectionChanged_3__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_3_OnSelectionChanged_3__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_Header_HorizSelector_K2Node_ComponentBoundEvent_3_OnSelectionChanged_3__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +93,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_Header_HorizSelector_K2No
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_HideFullButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_HideFullButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_HideFullButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -122,10 +108,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_HideFullButton_K2Node_Com
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ModFilterList_K2Node_ComponentBoundEvent_16_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ModFilterList_K2Node_ComponentBoundEvent_16_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ModFilterList_K2Node_ComponentBoundEvent_16_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::ReListSessions_ASA_C_BndEvt__ReListSessions_ASA_ModFilterList_K2Node_ComponentBoundEvent_16_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -141,10 +125,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ModFilterList_K2Node_Comp
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PingOrder_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PingOrder_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PingOrder_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +137,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PingOrder_K2Node_Componen
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PlayerOrder_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PlayerOrder_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PlayerOrder_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +149,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PlayerOrder_K2Node_Compon
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PlayerServersButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PlayerServersButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_PlayerServersButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +161,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_PlayerServersButton_K2Nod
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_SessionOrderName_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_SessionOrderName_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_SessionOrderName_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +173,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_SessionOrderName_K2Node_C
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_SettingsButton_K2Node_ComponentBoundEvent_11_OnButtonClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_SettingsButton_K2Node_ComponentBoundEvent_11_OnButtonClicked__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_SettingsButton_K2Node_ComponentBoundEvent_11_OnButtonClicked__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +185,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_SettingsButton_K2Node_Com
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersButton_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersButton_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersButton_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -227,10 +199,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPlatformSpecificServe
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::ReListSessions_ASA_C_BndEvt__ReListSessions_ASA_ShowPlatformSpecificServersCheckBox_K2Node_ComponentBoundEvent_13_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -245,10 +215,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPlatformSpecificServe
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPrivateServersButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPrivateServersButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_ShowPrivateServersButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -259,10 +227,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_ShowPrivateServersButton_
 
 void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_WantYourOwnArkServer_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_WantYourOwnArkServer_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ReListSessions_ASA_WantYourOwnArkServer_K2Node_ComponentBoundEvent_14_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -275,10 +241,8 @@ void UReListSessions_ASA_C::BndEvt__ReListSessions_ASA_WantYourOwnArkServer_K2No
 
 void UReListSessions_ASA_C::BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::ReListSessions_ASA_C_BndEvt__ShowProtectedServersCheckBox_K2Node_ComponentBoundEvent_88_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -293,10 +257,8 @@ void UReListSessions_ASA_C::BndEvt__ShowProtectedServersCheckBox_K2Node_Componen
 
 void UReListSessions_ASA_C::BPSetupLayout()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "BPSetupLayout");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "BPSetupLayout", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -307,10 +269,8 @@ void UReListSessions_ASA_C::BPSetupLayout()
 
 void UReListSessions_ASA_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -321,10 +281,8 @@ void UReListSessions_ASA_C::Construct()
 
 void UReListSessions_ASA_C::CreateNotifManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "CreateNotifManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "CreateNotifManager", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -337,10 +295,8 @@ void UReListSessions_ASA_C::CreateNotifManager()
 
 void UReListSessions_ASA_C::ExecuteUbergraph_ReListSessions_ASA(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ExecuteUbergraph_ReListSessions_ASA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ExecuteUbergraph_ReListSessions_ASA", FuncInfo);
 
 	Params::ReListSessions_ASA_C_ExecuteUbergraph_ReListSessions_ASA Parms{};
 
@@ -355,10 +311,8 @@ void UReListSessions_ASA_C::ExecuteUbergraph_ReListSessions_ASA(int32 EntryPoint
 
 void UReListSessions_ASA_C::ForceUpdateServerTypeSelection()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ForceUpdateServerTypeSelection");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ForceUpdateServerTypeSelection", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -371,10 +325,8 @@ void UReListSessions_ASA_C::ForceUpdateServerTypeSelection()
 
 class USizeBox* UReListSessions_ASA_C::GetSizeboxForExtraHandheldScaling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "GetSizeboxForExtraHandheldScaling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "GetSizeboxForExtraHandheldScaling", FuncInfo);
 
 	Params::ReListSessions_ASA_C_GetSizeboxForExtraHandheldScaling Parms{};
 
@@ -391,10 +343,8 @@ class USizeBox* UReListSessions_ASA_C::GetSizeboxForExtraHandheldScaling()
 
 class UWidget* UReListSessions_ASA_C::GetWidgetToScaleForHandheld()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "GetWidgetToScaleForHandheld");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "GetWidgetToScaleForHandheld", FuncInfo);
 
 	Params::ReListSessions_ASA_C_GetWidgetToScaleForHandheld Parms{};
 
@@ -412,10 +362,8 @@ class UWidget* UReListSessions_ASA_C::GetWidgetToScaleForHandheld()
 
 void UReListSessions_ASA_C::HandleAscendDescendSwitch(class UComboBoxString* ComboBox, int32 forIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "HandleAscendDescendSwitch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "HandleAscendDescendSwitch", FuncInfo);
 
 	Params::ReListSessions_ASA_C_HandleAscendDescendSwitch Parms{};
 
@@ -431,10 +379,8 @@ void UReListSessions_ASA_C::HandleAscendDescendSwitch(class UComboBoxString* Com
 
 void UReListSessions_ASA_C::ModUIBackEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ModUIBackEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ModUIBackEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +391,8 @@ void UReListSessions_ASA_C::ModUIBackEvent()
 
 void UReListSessions_ASA_C::ModUIError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ModUIError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ModUIError", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -457,18 +401,16 @@ void UReListSessions_ASA_C::ModUIError()
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIFavoriteEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UReListSessions_ASA_C::ModUIFavoriteEvent(int64 ServerID)
+void UReListSessions_ASA_C::ModUIFavoriteEvent(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ModUIFavoriteEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ModUIFavoriteEvent", FuncInfo);
 
 	Params::ReListSessions_ASA_C_ModUIFavoriteEvent Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -477,18 +419,16 @@ void UReListSessions_ASA_C::ModUIFavoriteEvent(int64 ServerID)
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIJoinEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UReListSessions_ASA_C::ModUIJoinEvent(int64 ServerID)
+void UReListSessions_ASA_C::ModUIJoinEvent(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ModUIJoinEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ModUIJoinEvent", FuncInfo);
 
 	Params::ReListSessions_ASA_C_ModUIJoinEvent Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -497,18 +437,16 @@ void UReListSessions_ASA_C::ModUIJoinEvent(int64 ServerID)
 // Function ReListSessions_ASA.ReListSessions_ASA_C.ModUIReportEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UReListSessions_ASA_C::ModUIReportEvent(int64 ServerID)
+void UReListSessions_ASA_C::ModUIReportEvent(int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "ModUIReportEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "ModUIReportEvent", FuncInfo);
 
 	Params::ReListSessions_ASA_C_ModUIReportEvent Parms{};
 
-	Parms.ServerID = ServerID;
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -523,10 +461,8 @@ void UReListSessions_ASA_C::ModUIReportEvent(int64 ServerID)
 
 struct FEventReply UReListSessions_ASA_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "OnKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "OnKeyDown", FuncInfo);
 
 	Params::ReListSessions_ASA_C_OnKeyDown Parms{};
 
@@ -548,10 +484,8 @@ struct FEventReply UReListSessions_ASA_C::OnKeyDown(const struct FGeometry& MyGe
 
 struct FEventReply UReListSessions_ASA_C::OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "OnKeyDownEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "OnKeyDownEvent", FuncInfo);
 
 	Params::ReListSessions_ASA_C_OnKeyDownEvent Parms{};
 
@@ -569,22 +503,20 @@ struct FEventReply UReListSessions_ASA_C::OnKeyDownEvent(const struct FGeometry&
 // Parameters:
 // bool                                    bNeedInit                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const TArray<int64>&                    modIds                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const class FString&                    serverName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int64                                   ServerID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ServerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int64                                   ServerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UReListSessions_ASA_C::OnServerListingClickedModPopup(bool bNeedInit, const TArray<int64>& modIds, const class FString& serverName, int64 ServerID)
+void UReListSessions_ASA_C::OnServerListingClickedModPopup(bool bNeedInit, const TArray<int64>& modIds, const class FString& ServerName, int64 ServerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "OnServerListingClickedModPopup");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "OnServerListingClickedModPopup", FuncInfo);
 
 	Params::ReListSessions_ASA_C_OnServerListingClickedModPopup Parms{};
 
 	Parms.bNeedInit = bNeedInit;
 	Parms.modIds = std::move(modIds);
-	Parms.serverName = std::move(serverName);
-	Parms.ServerID = ServerID;
+	Parms.ServerName = std::move(ServerName);
+	Parms.ServerId = ServerId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -597,10 +529,8 @@ void UReListSessions_ASA_C::OnServerListingClickedModPopup(bool bNeedInit, const
 
 void UReListSessions_ASA_C::SetCurrentServerSearchType(int32 ServerType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "SetCurrentServerSearchType");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "SetCurrentServerSearchType", FuncInfo);
 
 	Params::ReListSessions_ASA_C_SetCurrentServerSearchType Parms{};
 
@@ -615,10 +545,8 @@ void UReListSessions_ASA_C::SetCurrentServerSearchType(int32 ServerType)
 
 void UReListSessions_ASA_C::SetupPlatformSpecificTextBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "SetupPlatformSpecificTextBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "SetupPlatformSpecificTextBox", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -632,10 +560,8 @@ void UReListSessions_ASA_C::SetupPlatformSpecificTextBox()
 
 void UReListSessions_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "Tick", FuncInfo);
 
 	Params::ReListSessions_ASA_C_Tick Parms{};
 
@@ -651,10 +577,8 @@ void UReListSessions_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 void UReListSessions_ASA_C::Update_Horizontal_Tab_Enabled_States()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "Update Horizontal Tab Enabled States");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "Update Horizontal Tab Enabled States", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -665,10 +589,8 @@ void UReListSessions_ASA_C::Update_Horizontal_Tab_Enabled_States()
 
 void UReListSessions_ASA_C::UpdateFavoritesTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ReListSessions_ASA_C", "UpdateFavoritesTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ReListSessions_ASA_C", "UpdateFavoritesTab", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItemResource_Gasoline_C::BPSupportUseOntoItem(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Gasoline_C", "BPSupportUseOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Gasoline_C", "BPSupportUseOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_Gasoline_C_BPSupportUseOntoItem Parms{};
 
@@ -47,10 +45,8 @@ bool UPrimalItemResource_Gasoline_C::BPSupportUseOntoItem(class UPrimalItem* Des
 
 void UPrimalItemResource_Gasoline_C::BPUsedOntoItem(class UPrimalItem* DestinationItem, int32 AdditionalData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Gasoline_C", "BPUsedOntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Gasoline_C", "BPUsedOntoItem", FuncInfo);
 
 	Params::PrimalItemResource_Gasoline_C_BPUsedOntoItem Parms{};
 
@@ -69,10 +65,8 @@ void UPrimalItemResource_Gasoline_C::BPUsedOntoItem(class UPrimalItem* Destinati
 
 void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* DestinationItem, bool* SupportsDragOn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Gasoline_C", "CheckForGasolineData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Gasoline_C", "CheckForGasolineData", FuncInfo);
 
 	Params::PrimalItemResource_Gasoline_C_CheckForGasolineData Parms{};
 
@@ -92,10 +86,8 @@ void UPrimalItemResource_Gasoline_C::CheckForGasolineData(class UPrimalItem* Des
 
 void UPrimalItemResource_Gasoline_C::RefillGasoline(class UPrimalItem* DestinationItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemResource_Gasoline_C", "RefillGasoline");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemResource_Gasoline_C", "RefillGasoline", FuncInfo);
 
 	Params::PrimalItemResource_Gasoline_C_RefillGasoline Parms{};
 

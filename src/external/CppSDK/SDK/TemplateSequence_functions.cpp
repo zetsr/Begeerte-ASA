@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function TemplateSequence.TemplateSequenceActor.SetBinding
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bOverridesDefault                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -44,7 +44,7 @@ void ATemplateSequenceActor::SetBinding(class AActor* Actor, bool bOverridesDefa
 
 
 // Function TemplateSequence.TemplateSequenceActor.SetSequence
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UTemplateSequence*                InSequence                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -69,7 +69,7 @@ void ATemplateSequenceActor::SetSequence(class UTemplateSequence* InSequence)
 
 
 // Function TemplateSequence.TemplateSequenceActor.GetSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -94,7 +94,7 @@ class UTemplateSequence* ATemplateSequenceActor::GetSequence() const
 
 
 // Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTemplateSequencePlayer*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -119,7 +119,7 @@ class UTemplateSequencePlayer* ATemplateSequenceActor::GetSequencePlayer() const
 
 
 // Function TemplateSequence.TemplateSequenceActor.LoadSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTemplateSequence*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -144,7 +144,7 @@ class UTemplateSequence* ATemplateSequenceActor::LoadSequence() const
 
 
 // Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UTemplateSequence*                TemplateSequence                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

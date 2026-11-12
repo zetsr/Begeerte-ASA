@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void AMainMenu_C::ExecuteUbergraph_MainMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "ExecuteUbergraph_MainMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "ExecuteUbergraph_MainMenu", FuncInfo);
 
 	Params::MainMenu_C_ExecuteUbergraph_MainMenu Parms{};
 
@@ -41,10 +39,8 @@ void AMainMenu_C::ExecuteUbergraph_MainMenu(int32 EntryPoint)
 
 void AMainMenu_C::HideVisualSettingsPP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "HideVisualSettingsPP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "HideVisualSettingsPP", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -55,10 +51,8 @@ void AMainMenu_C::HideVisualSettingsPP()
 
 void AMainMenu_C::K2Node_MatineeController_1_Finished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "K2Node_MatineeController_1_Finished");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "K2Node_MatineeController_1_Finished", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -69,10 +63,8 @@ void AMainMenu_C::K2Node_MatineeController_1_Finished()
 
 void AMainMenu_C::K2Node_MatineeController_1_MatineeEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "K2Node_MatineeController_1_MatineeEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "K2Node_MatineeController_1_MatineeEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -83,10 +75,8 @@ void AMainMenu_C::K2Node_MatineeController_1_MatineeEvent()
 
 void AMainMenu_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +87,8 @@ void AMainMenu_C::ReceiveBeginPlay()
 
 void AMainMenu_C::ShowVisualSettingsPP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainMenu_C", "ShowVisualSettingsPP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MainMenu_C", "ShowVisualSettingsPP", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

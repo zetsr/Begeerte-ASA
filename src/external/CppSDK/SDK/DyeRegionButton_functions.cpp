@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UDyeRegionButton_C::BndEvt__DyeRegionButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeRegionButton_C", "BndEvt__DyeRegionButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeRegionButton_C", "BndEvt__DyeRegionButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UDyeRegionButton_C::BndEvt__DyeRegionButton_Button_25_K2Node_ComponentBound
 
 void UDyeRegionButton_C::ExecuteUbergraph_DyeRegionButton(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeRegionButton_C", "ExecuteUbergraph_DyeRegionButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeRegionButton_C", "ExecuteUbergraph_DyeRegionButton", FuncInfo);
 
 	Params::DyeRegionButton_C_ExecuteUbergraph_DyeRegionButton Parms{};
 
@@ -57,10 +53,8 @@ void UDyeRegionButton_C::ExecuteUbergraph_DyeRegionButton(int32 EntryPoint)
 
 ESlateVisibility UDyeRegionButton_C::GetVisibility_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DyeRegionButton_C", "GetVisibility_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DyeRegionButton_C", "GetVisibility_0", FuncInfo);
 
 	Params::DyeRegionButton_C_GetVisibility_0 Parms{};
 

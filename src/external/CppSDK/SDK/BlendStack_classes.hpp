@@ -30,7 +30,10 @@ public:
 	static float GetCurrentAssetTime(const struct FBlendStackAnimNodeReference& BlendStackNode);
 	static float GetCurrentAssetTimeRemaining(const struct FBlendStackAnimNodeReference& BlendStackNode);
 	static class UAnimationAsset* GetCurrentBlendStackAnimAsset(const struct FAnimNodeReference& Node);
+	static bool GetCurrentBlendStackAnimAssetMirrored(const struct FAnimNodeReference& Node);
+	static class UMirrorDataTable* GetCurrentBlendStackAnimAssetMirrorTable(const struct FAnimNodeReference& Node);
 	static float GetCurrentBlendStackAnimAssetTime(const struct FAnimNodeReference& Node);
+	static bool GetCurrentBlendStackAnimIsActive(const struct FAnimNodeReference& Node);
 	static bool IsCurrentAssetLooping(const struct FBlendStackAnimNodeReference& BlendStackNode);
 
 public:
@@ -47,6 +50,7 @@ public:
 		return GetDefaultObjImpl<UBlendStackAnimNodeLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlendStackAnimNodeLibrary;
 
 // Class BlendStack.BlendStackInputAnimNodeLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -71,5 +75,6 @@ public:
 		return GetDefaultObjImpl<UBlendStackInputAnimNodeLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlendStackInputAnimNodeLibrary;
 
 SDK_NAMESPACE_END

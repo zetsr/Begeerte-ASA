@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UTask_ActualStopMovement_C::ExecuteUbergraph_Task_ActualStopMovement(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Task_ActualStopMovement_C", "ExecuteUbergraph_Task_ActualStopMovement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Task_ActualStopMovement_C", "ExecuteUbergraph_Task_ActualStopMovement", FuncInfo);
 
 	Params::Task_ActualStopMovement_C_ExecuteUbergraph_Task_ActualStopMovement Parms{};
 
@@ -43,10 +41,8 @@ void UTask_ActualStopMovement_C::ExecuteUbergraph_Task_ActualStopMovement(int32 
 
 void UTask_ActualStopMovement_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Task_ActualStopMovement_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Task_ActualStopMovement_C", "ReceiveExecute", FuncInfo);
 
 	Params::Task_ActualStopMovement_C_ReceiveExecute Parms{};
 

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Class ConcertSyncCore.ConcertSyncConfig
-// 0x0070 (0x0098 - 0x0028)
+// 0x0080 (0x00A8 - 0x0028)
 class UConcertSyncConfig final : public UObject
 {
 public:
@@ -34,6 +34,7 @@ public:
 	TArray<TFieldPath<class FProperty>>           ExcludedProperties;                                // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ExcludedPropertyTypes;                             // 0x0078(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FPackageClassFilter>            ExcludePackageClassFilters;                        // 0x0088(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FConcertReplicationActionEntry> PostReplicateActions;                              // 0x0098(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -49,5 +50,6 @@ public:
 		return GetDefaultObjImpl<UConcertSyncConfig>();
 	}
 };
+DUMPER7_ASSERTS_UConcertSyncConfig;
 
 SDK_NAMESPACE_END

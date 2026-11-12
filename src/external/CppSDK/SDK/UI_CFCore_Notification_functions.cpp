@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Notification_C::BndEvt__ModSuccessfullyInsalledWidget_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "BndEvt__ModSuccessfullyInsalledWidget_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "BndEvt__ModSuccessfullyInsalledWidget_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Notification_C::BndEvt__ModSuccessfullyInsalledWidget_Button_K2N
 
 void UUI_CFCore_Notification_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -55,10 +51,8 @@ void UUI_CFCore_Notification_C::Construct()
 
 void UUI_CFCore_Notification_C::CreateAndPlayAnimation(class UTexture2D* ForcedThumbnail, class UTexture2DDynamic* Texture, const class FString& thumbnailUrl, const class FText& MainText, const class FText& SecondaryText_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "CreateAndPlayAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "CreateAndPlayAnimation", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_CreateAndPlayAnimation Parms{};
 
@@ -77,10 +71,8 @@ void UUI_CFCore_Notification_C::CreateAndPlayAnimation(class UTexture2D* ForcedT
 
 void UUI_CFCore_Notification_C::Debug()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "Debug");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "Debug", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +85,8 @@ void UUI_CFCore_Notification_C::Debug()
 
 void UUI_CFCore_Notification_C::Download_Thumbnail(const class FString& thumbnailUrl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "Download Thumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "Download Thumbnail", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_Download_Thumbnail Parms{};
 
@@ -111,10 +101,8 @@ void UUI_CFCore_Notification_C::Download_Thumbnail(const class FString& thumbnai
 
 void UUI_CFCore_Notification_C::EnterAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "EnterAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "EnterAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +113,8 @@ void UUI_CFCore_Notification_C::EnterAnimation()
 
 void UUI_CFCore_Notification_C::Event_Init()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "Event Init");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "Event Init", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +127,8 @@ void UUI_CFCore_Notification_C::Event_Init()
 
 void UUI_CFCore_Notification_C::ExecuteUbergraph_UI_CFCore_Notification(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "ExecuteUbergraph_UI_CFCore_Notification");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "ExecuteUbergraph_UI_CFCore_Notification", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_ExecuteUbergraph_UI_CFCore_Notification Parms{};
 
@@ -159,10 +143,8 @@ void UUI_CFCore_Notification_C::ExecuteUbergraph_UI_CFCore_Notification(int32 En
 
 void UUI_CFCore_Notification_C::ExitAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "ExitAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "ExitAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +157,8 @@ void UUI_CFCore_Notification_C::ExitAnimation()
 
 void UUI_CFCore_Notification_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_GetRootCFWidget Parms{};
 
@@ -194,10 +174,8 @@ void UUI_CFCore_Notification_C::GetRootCFWidget(class UPanelWidget** RootPanelWi
 
 void UUI_CFCore_Notification_C::OnClicked()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "OnClicked");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "OnClicked", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -210,10 +188,8 @@ void UUI_CFCore_Notification_C::OnClicked()
 
 void UUI_CFCore_Notification_C::OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23 Parms{};
 
@@ -230,10 +206,8 @@ void UUI_CFCore_Notification_C::OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23(class UT
 
 void UUI_CFCore_Notification_C::OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23 Parms{};
 
@@ -248,10 +222,8 @@ void UUI_CFCore_Notification_C::OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23(class
 
 void UUI_CFCore_Notification_C::PopInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "PopInAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "PopInAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,10 +236,8 @@ void UUI_CFCore_Notification_C::PopInAnimation()
 
 void UUI_CFCore_Notification_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_PreConstruct Parms{};
 
@@ -282,10 +252,8 @@ void UUI_CFCore_Notification_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_Notification_C::RequestExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "RequestExit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "RequestExit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +264,8 @@ void UUI_CFCore_Notification_C::RequestExit()
 
 void UUI_CFCore_Notification_C::ResetClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "ResetClick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "ResetClick", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -312,10 +278,8 @@ void UUI_CFCore_Notification_C::ResetClick()
 
 void UUI_CFCore_Notification_C::SetMainMessage(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "SetMainMessage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "SetMainMessage", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_SetMainMessage Parms{};
 
@@ -332,10 +296,8 @@ void UUI_CFCore_Notification_C::SetMainMessage(const class FText& InText)
 
 void UUI_CFCore_Notification_C::SetSecondaryMessage(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Notification_C", "SetSecondaryMessage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Notification_C", "SetSecondaryMessage", FuncInfo);
 
 	Params::UI_CFCore_Notification_C_SetSecondaryMessage Parms{};
 

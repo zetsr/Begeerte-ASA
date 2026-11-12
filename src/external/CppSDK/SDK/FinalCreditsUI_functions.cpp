@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UFinalCreditsUI_C::AddedToViewport()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "AddedToViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "AddedToViewport", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UFinalCreditsUI_C::AddedToViewport()
 
 void UFinalCreditsUI_C::BndEvt__FinalCreditsUI_CloseButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "BndEvt__FinalCreditsUI_CloseButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "BndEvt__FinalCreditsUI_CloseButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UFinalCreditsUI_C::BndEvt__FinalCreditsUI_CloseButton_K2Node_ComponentBound
 
 void UFinalCreditsUI_C::CloseButtonEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "CloseButtonEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "CloseButtonEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UFinalCreditsUI_C::CloseButtonEvent()
 
 void UFinalCreditsUI_C::ConditionallySetupSkipButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "ConditionallySetupSkipButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "ConditionallySetupSkipButton", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UFinalCreditsUI_C::ConditionallySetupSkipButton()
 
 void UFinalCreditsUI_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +83,8 @@ void UFinalCreditsUI_C::Construct()
 
 void UFinalCreditsUI_C::ExecuteUbergraph_FinalCreditsUI(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "ExecuteUbergraph_FinalCreditsUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "ExecuteUbergraph_FinalCreditsUI", FuncInfo);
 
 	Params::FinalCreditsUI_C_ExecuteUbergraph_FinalCreditsUI Parms{};
 
@@ -114,10 +102,8 @@ void UFinalCreditsUI_C::ExecuteUbergraph_FinalCreditsUI(int32 EntryPoint)
 
 void UFinalCreditsUI_C::OnMoviePlaybackFinished(const class FString& MoviePath, bool bPlaybackWasCancelled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "OnMoviePlaybackFinished");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "OnMoviePlaybackFinished", FuncInfo);
 
 	Params::FinalCreditsUI_C_OnMoviePlaybackFinished Parms{};
 
@@ -133,10 +119,8 @@ void UFinalCreditsUI_C::OnMoviePlaybackFinished(const class FString& MoviePath, 
 
 void UFinalCreditsUI_C::Play_Credits_Music()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "Play Credits Music");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "Play Credits Music", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +131,8 @@ void UFinalCreditsUI_C::Play_Credits_Music()
 
 void UFinalCreditsUI_C::PlayBBTMovie()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "PlayBBTMovie");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "PlayBBTMovie", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +143,8 @@ void UFinalCreditsUI_C::PlayBBTMovie()
 
 void UFinalCreditsUI_C::RemovedFromViewport()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "RemovedFromViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "RemovedFromViewport", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,10 +158,8 @@ void UFinalCreditsUI_C::RemovedFromViewport()
 
 void UFinalCreditsUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FinalCreditsUI_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "FinalCreditsUI_C", "Tick", FuncInfo);
 
 	Params::FinalCreditsUI_C_Tick Parms{};
 

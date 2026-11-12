@@ -23,7 +23,7 @@ SDK_NAMESPACE_START
 class UNiagaraDataInterfaceChaosDestruction final : public UNiagaraDataInterface
 {
 public:
-	TSet<class AChaosSolverActor*>                ChaosSolverActorSet;                               // 0x0038(0x0050)(Edit, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSet<class AChaosSolverActor*>                ChaosSolverActorSet;                               // 0x0038(0x0050)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	EDataSourceTypeEnum                           DataSourceType;                                    // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DataProcessFrequency;                              // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -62,7 +62,7 @@ public:
 	int32                                         MaxDataPerCell;                                    // 0x01B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyMaterialsFilter;                             // 0x01BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UPhysicalMaterial*>                ChaosBreakingMaterialSet;                          // 0x01C0(0x0050)(Edit, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSet<class UPhysicalMaterial*>                ChaosBreakingMaterialSet;                          // 0x01C0(0x0050)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	bool                                          bGetExternalBreakingData;                          // 0x0210(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bGetExternalTrailingData;                          // 0x0211(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_212[0x6];                                      // 0x0212(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -100,6 +100,7 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceChaosDestruction>();
 	}
 };
+DUMPER7_ASSERTS_UNiagaraDataInterfaceChaosDestruction;
 
 // Class ChaosNiagara.NiagaraDataInterfaceGeometryCollection
 // 0x0068 (0x00A0 - 0x0038)
@@ -129,6 +130,7 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceGeometryCollection>();
 	}
 };
+DUMPER7_ASSERTS_UNiagaraDataInterfaceGeometryCollection;
 
 // Class ChaosNiagara.NiagaraDataInterfacePhysicsField
 // 0x0000 (0x0038 - 0x0038)
@@ -148,5 +150,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfacePhysicsField>();
 	}
 };
+DUMPER7_ASSERTS_UNiagaraDataInterfacePhysicsField;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDinoShouldFly_SRV_C::ExecuteUbergraph_DinoShouldFly_SRV(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DinoShouldFly_SRV_C", "ExecuteUbergraph_DinoShouldFly_SRV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DinoShouldFly_SRV_C", "ExecuteUbergraph_DinoShouldFly_SRV", FuncInfo);
 
 	Params::DinoShouldFly_SRV_C_ExecuteUbergraph_DinoShouldFly_SRV Parms{};
 
@@ -44,10 +42,8 @@ void UDinoShouldFly_SRV_C::ExecuteUbergraph_DinoShouldFly_SRV(int32 EntryPoint)
 
 void UDinoShouldFly_SRV_C::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DinoShouldFly_SRV_C", "ReceiveTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DinoShouldFly_SRV_C", "ReceiveTick", FuncInfo);
 
 	Params::DinoShouldFly_SRV_C_ReceiveTick Parms{};
 

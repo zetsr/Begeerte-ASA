@@ -11,7 +11,7 @@ namespace g_CheatData {
 		}
 
 		namespace AActor {
-			inline int Tick = 470;
+			inline int Tick = 477;
 		}
 
 		namespace UMovementComponent {
@@ -19,7 +19,7 @@ namespace g_CheatData {
 		}
 
 		namespace UGameViewportClient {
-			inline int PostRender = 122;
+			inline int PostRender = 118;
 		}
 
 		namespace UConsole {
@@ -51,8 +51,8 @@ namespace g_CheatData {
 			// 无法在服务器工作，需要找到ASA重写的TakeDamage，或者UI Hit Damage，idk
 			inline std::string TakeDamage = _XOR_("OUTDATED").str();
 
-			// 470
-			inline std::string Tick = _XOR_("40 53 48 83 EC ? 0F B6 81 ? ? ? ? 48 8B D9 A8 ? 75 ? A8 ? 74").str();
+			// 477
+			inline std::string Tick = _XOR_("40 53 48 83 EC ? 0F B6 81 ? ? ? ? 48 8B D9 A8 ? 75 ? 84").str();
 		}
 
 		namespace UNetConnection {

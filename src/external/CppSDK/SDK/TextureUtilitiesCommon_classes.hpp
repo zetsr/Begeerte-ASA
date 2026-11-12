@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "TextureUtilitiesCommon_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,7 +27,8 @@ public:
 	bool                                          bEnableFastMipFilter;                              // 0x0041(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureImportFloatingPointFormat             CompressedFormatForFloatTextures;                  // 0x0042(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureImportPNGInfill                       PNGInfill;                                         // 0x0043(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bDoAutomaticTextureSettingsForNonPow2Textures;     // 0x0044(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -43,6 +44,7 @@ public:
 		return GetDefaultObjImpl<UTextureImportSettings>();
 	}
 };
+DUMPER7_ASSERTS_UTextureImportSettings;
 
 // Class TextureUtilitiesCommon.TextureImportUserSettings
 // 0x0008 (0x0040 - 0x0038)
@@ -66,5 +68,6 @@ public:
 		return GetDefaultObjImpl<UTextureImportUserSettings>();
 	}
 };
+DUMPER7_ASSERTS_UTextureImportUserSettings;
 
 SDK_NAMESPACE_END

@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 bool UPrimalItemDyeGeneric_C::BPShouldAlwaysShowInFolder(const int32 FolderDepth, const bool bShowFolders)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PrimalItemDyeGeneric_C", "BPShouldAlwaysShowInFolder");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PrimalItemDyeGeneric_C", "BPShouldAlwaysShowInFolder", FuncInfo);
 
 	Params::PrimalItemDyeGeneric_C_BPShouldAlwaysShowInFolder Parms{};
 

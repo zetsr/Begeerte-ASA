@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CustomizeSlot_BUTTON_SideMenu_C::GetColor(struct FLinearColor* Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CustomizeSlot_BUTTON_SideMenu_C", "GetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CustomizeSlot_BUTTON_SideMenu_C", "GetColor", FuncInfo);
 
 	Params::UI_CustomizeSlot_BUTTON_SideMenu_C_GetColor Parms{};
 
@@ -44,10 +42,8 @@ void UUI_CustomizeSlot_BUTTON_SideMenu_C::GetColor(struct FLinearColor* Color)
 
 void UUI_CustomizeSlot_BUTTON_SideMenu_C::SetColor(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CustomizeSlot_BUTTON_SideMenu_C", "SetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CustomizeSlot_BUTTON_SideMenu_C", "SetColor", FuncInfo);
 
 	Params::UI_CustomizeSlot_BUTTON_SideMenu_C_SetColor Parms{};
 

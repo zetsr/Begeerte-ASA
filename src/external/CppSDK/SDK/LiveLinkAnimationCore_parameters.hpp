@@ -23,6 +23,7 @@ struct LiveLinkInstance_EnableLiveLinkEvaluation final
 public:
 	bool                                          bDoEnable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkInstance_EnableLiveLinkEvaluation;
 
 // Function LiveLinkAnimationCore.LiveLinkInstance.SetRetargetAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -31,6 +32,7 @@ struct LiveLinkInstance_SetRetargetAsset final
 public:
 	TSubclassOf<class ULiveLinkRetargetAsset>     RetargetAsset;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkInstance_SetRetargetAsset;
 
 // Function LiveLinkAnimationCore.LiveLinkInstance.SetSubject
 // 0x0008 (0x0008 - 0x0000)
@@ -39,6 +41,7 @@ struct LiveLinkInstance_SetSubject final
 public:
 	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkInstance_SetSubject;
 
 // Function LiveLinkAnimationCore.LiveLinkRemapAsset.GetRemappedBoneName
 // 0x0010 (0x0010 - 0x0000)
@@ -48,6 +51,7 @@ public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkRemapAsset_GetRemappedBoneName;
 
 // Function LiveLinkAnimationCore.LiveLinkRemapAsset.GetRemappedCurveName
 // 0x0010 (0x0010 - 0x0000)
@@ -57,6 +61,7 @@ public:
 	class FName                                   CurveName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkRemapAsset_GetRemappedCurveName;
 
 // Function LiveLinkAnimationCore.LiveLinkRemapAsset.RemapCurveElements
 // 0x0050 (0x0050 - 0x0000)
@@ -65,6 +70,7 @@ struct LiveLinkRemapAsset_RemapCurveElements final
 public:
 	TMap<class FName, float>                      CurveItems;                                        // 0x0000(0x0050)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_LiveLinkRemapAsset_RemapCurveElements;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

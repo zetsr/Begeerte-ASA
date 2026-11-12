@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHuman_Male_Face_Retargeting_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Male_Face_Retargeting_AnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Male_Face_Retargeting_AnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::Human_Male_Face_Retargeting_AnimBP_C_AnimGraph Parms{};
 

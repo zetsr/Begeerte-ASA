@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Gem_Fertile_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Gem_Fertile_C;
 
 SDK_NAMESPACE_END

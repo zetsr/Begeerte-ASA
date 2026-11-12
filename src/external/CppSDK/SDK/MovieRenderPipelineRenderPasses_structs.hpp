@@ -23,7 +23,7 @@ enum class EMovieGraphPathTracerDenoiserType : uint8
 };
 
 // Enum MovieRenderPipelineRenderPasses.EEXRCompressionFormat
-// NumValues: 0x000B
+// NumValues: 0x000D
 enum class EEXRCompressionFormat : uint8
 {
 	None                                     = 0,
@@ -36,7 +36,9 @@ enum class EEXRCompressionFormat : uint8
 	B44A                                     = 7,
 	DWAA                                     = 8,
 	DWAB                                     = 9,
-	Max                                      = 10,
+	HTJ2K256                                 = 10,
+	HTJ2K32                                  = 11,
+	Max                                      = 12,
 };
 
 // ScriptStruct MovieRenderPipelineRenderPasses.MoviePipelinePostProcessPass
@@ -49,7 +51,9 @@ public:
 	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterialInterface>      Material;                                          // 0x0018(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHighPrecisionOutput;                              // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseLosslessCompression;                           // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMoviePipelinePostProcessPass;
 
 SDK_NAMESPACE_END

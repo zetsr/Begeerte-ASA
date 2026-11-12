@@ -27,21 +27,12 @@ enum class EHandleEvent : uint8
 	Max                                      = 4,
 };
 
-// ScriptStruct Constraints.ConstraintsInWorld
-// 0x0028 (0x0028 - 0x0000)
-struct FConstraintsInWorld final
-{
-public:
-	TWeakObjectPtr<class UWorld>                  World;                                             // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UTickableConstraint>> Constraints;                                   // 0x0008(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
 // ScriptStruct Constraints.MovieSceneConstraintChannel
 // 0x0000 (0x0108 - 0x0108)
 struct FMovieSceneConstraintChannel final : public FMovieSceneBoolChannel
 {
 };
+DUMPER7_ASSERTS_FMovieSceneConstraintChannel;
 
 // ScriptStruct Constraints.ConstraintAndActiveChannel
 // 0x0110 (0x0110 - 0x0000)
@@ -51,6 +42,18 @@ public:
 	struct FMovieSceneConstraintChannel           ActiveChannel;                                     // 0x0000(0x0108)(NativeAccessSpecifierPublic)
 	class UTickableConstraint*                    ConstraintCopyToSpawn;                             // 0x0108(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FConstraintAndActiveChannel;
+
+// ScriptStruct Constraints.ConstraintsInWorld
+// 0x0028 (0x0028 - 0x0000)
+struct FConstraintsInWorld final
+{
+public:
+	TWeakObjectPtr<class UWorld>                  World;                                             // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UTickableConstraint>> Constraints;                                   // 0x0008(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FConstraintsInWorld;
 
 // ScriptStruct Constraints.ConstraintTickFunction
 // 0x0018 (0x0048 - 0x0030)
@@ -59,5 +62,6 @@ struct FConstraintTickFunction final : public FTickFunction
 public:
 	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FConstraintTickFunction;
 
 SDK_NAMESPACE_END

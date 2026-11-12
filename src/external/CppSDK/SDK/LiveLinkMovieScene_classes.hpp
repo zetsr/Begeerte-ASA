@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
-#include "MovieScene_classes.hpp"
-#include "MovieSceneTracks_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "LiveLinkInterface_structs.hpp"
 #include "LiveLinkMovieScene_structs.hpp"
+#include "MovieScene_structs.hpp"
+#include "MovieScene_classes.hpp"
+#include "CoreUObject_classes.hpp"
+#include "MovieSceneTracks_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSection
-// 0x0140 (0x0238 - 0x00F8)
+// 0x0140 (0x0300 - 0x01C0)
 class UMovieSceneLiveLinkSection final : public UMovieSceneSection
 {
 public:
-	struct FLiveLinkSubjectPreset                 SubjectPreset;                                     // 0x00F8(0x0038)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<bool>                                  ChannelMask;                                       // 0x0130(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UMovieSceneLiveLinkSubSection*>  SubSections;                                       // 0x0140(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_150[0x10];                                     // 0x0150(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   SubjectName;                                       // 0x0160(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLiveLinkFrameData                     TemplateToPush;                                    // 0x0168(0x0090)(Deprecated, NativeAccessSpecifierPublic)
-	struct FLiveLinkRefSkeleton                   RefSkeleton;                                       // 0x01F8(0x0020)(Deprecated, NativeAccessSpecifierPublic)
-	TArray<class FName>                           CurveNames;                                        // 0x0218(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
-	TArray<struct FMovieSceneFloatChannel>        PropertyFloatChannels;                             // 0x0228(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	struct FLiveLinkSubjectPreset                 SubjectPreset;                                     // 0x01C0(0x0038)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<bool>                                  ChannelMask;                                       // 0x01F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneLiveLinkSubSection*>  SubSections;                                       // 0x0208(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_218[0x10];                                     // 0x0218(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   SubjectName;                                       // 0x0228(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLiveLinkFrameData                     TemplateToPush;                                    // 0x0230(0x0090)(Deprecated, NativeAccessSpecifierPublic)
+	struct FLiveLinkRefSkeleton                   RefSkeleton;                                       // 0x02C0(0x0020)(Deprecated, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CurveNames;                                        // 0x02E0(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
+	TArray<struct FMovieSceneFloatChannel>        PropertyFloatChannels;                             // 0x02F0(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -49,6 +49,7 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSection>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkSection;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSection
 // 0x0028 (0x0050 - 0x0028)
@@ -73,6 +74,7 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSection>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSection;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionAnimation
 // 0x0010 (0x0060 - 0x0050)
@@ -95,6 +97,7 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionAnimation>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionAnimation;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionBasicRole
 // 0x0010 (0x0060 - 0x0050)
@@ -117,6 +120,7 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionBasicRole>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionBasicRole;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionProperties
 // 0x0010 (0x0060 - 0x0050)
@@ -139,14 +143,14 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionProperties>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionProperties;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkTrack
-// 0x0010 (0x0138 - 0x0128)
-class UMovieSceneLiveLinkTrack final : public UMovieScenePropertyTrack
+// 0x0010 (0x01F8 - 0x01E8)
+class UMovieSceneLiveLinkTrack final : public UMovieScenePropertyTrack, public IMovieSceneTrackTemplateProducer
 {
 public:
-	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class ULiveLinkRole>              TrackRole;                                         // 0x0130(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class ULiveLinkRole>              TrackRole;                                         // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -162,5 +166,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkTrack>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneLiveLinkTrack;
 
 SDK_NAMESPACE_END

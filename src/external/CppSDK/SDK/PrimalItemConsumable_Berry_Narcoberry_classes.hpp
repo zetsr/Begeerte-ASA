@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Berry_Narcoberry_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_Berry_Narcoberry_C;
 
 SDK_NAMESPACE_END

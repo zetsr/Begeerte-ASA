@@ -16,27 +16,8 @@
 
 SDK_NAMESPACE_START
 
-// Function ZoneGraphAnnotations.ZoneGraphAnnotationTestingActor.Trigger
-// (Final, Native, Public, BlueprintCallable)
-
-void AZoneGraphAnnotationTestingActor::Trigger()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ZoneGraphAnnotationTestingActor", "Trigger");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotationBPLibrary.TriggerDanger
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class AActor*                     Instigator                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -63,6 +44,25 @@ void UZoneGraphDisturbanceAnnotationBPLibrary::TriggerDanger(class UObject* Worl
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ZoneGraphAnnotations.ZoneGraphAnnotationTestingActor.Trigger
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void AZoneGraphAnnotationTestingActor::Trigger()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ZoneGraphAnnotationTestingActor", "Trigger");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

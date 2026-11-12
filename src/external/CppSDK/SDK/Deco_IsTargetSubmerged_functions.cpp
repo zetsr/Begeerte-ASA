@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDeco_IsTargetSubmerged_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Deco_IsTargetSubmerged_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Deco_IsTargetSubmerged_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::Deco_IsTargetSubmerged_C_ReceiveConditionCheck Parms{};
 

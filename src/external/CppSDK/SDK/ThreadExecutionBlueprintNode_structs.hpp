@@ -49,14 +49,7 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PredictedTimeCostFactor;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct ThreadExecutionBlueprintNode.TickFunctionByGroup
-// 0x0008 (0x0038 - 0x0030)
-struct FTickFunctionByGroup final : public FTickFunction
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FThreadTickExecBehavior;
 
 // ScriptStruct ThreadExecutionBlueprintNode.ThreadExecTimingPair
 // 0x0002 (0x0002 - 0x0000)
@@ -66,5 +59,15 @@ public:
 	EThreadTickTiming                             BeginIn;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EThreadTickTiming                             EndBefore;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FThreadExecTimingPair;
+
+// ScriptStruct ThreadExecutionBlueprintNode.TickFunctionByGroup
+// 0x0008 (0x0038 - 0x0030)
+struct FTickFunctionByGroup final : public FTickFunction
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTickFunctionByGroup;
 
 SDK_NAMESPACE_END

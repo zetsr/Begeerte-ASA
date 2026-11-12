@@ -18,12 +18,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_CFCore_BrowseMods.UI_CFCore_BrowseMods_C
-// 0x0018 (0x0A20 - 0x0A08)
+// 0x0018 (0x0A80 - 0x0A68)
 class UUI_CFCore_BrowseMods_C final : public UUI_CFCore_ParentBrowser_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_BrowseMods_C;             // 0x0A08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FString                                 InitialClassCategoryName;                          // 0x0A10(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_BrowseMods_C;             // 0x0A68(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class FString                                 InitialClassCategoryName;                          // 0x0A70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -50,5 +50,6 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_BrowseMods_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_CFCore_BrowseMods_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToMod
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToMod
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "BndEvt__UI_ShowcaseSlot_Button_GoToModPage_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::BndEvt__UI_ShowcaseSlot_Button_GoToMod
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::ConstructModShowcase(const struct FCarouselItem& InfoCarouseItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "ConstructModShowcase");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "ConstructModShowcase", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_ConstructModShowcase Parms{};
 
@@ -83,10 +75,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::ConstructModShowcase(const struct FCar
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::DownloadMainImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "DownloadMainImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "DownloadMainImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,10 +87,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::DownloadMainImage()
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::DownloadThumbnail()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "DownloadThumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "DownloadThumbnail", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +101,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::DownloadThumbnail()
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot Parms{};
 
@@ -131,10 +117,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::ExecuteUbergraph_UI_CFCore_Discovery_S
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::NoLongerCurrent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "NoLongerCurrent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "NoLongerCurrent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +131,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::NoLongerCurrent()
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::OnFail_6B8AC8D045F539E0C4B381BD368F2796(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "OnFail_6B8AC8D045F539E0C4B381BD368F2796");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "OnFail_6B8AC8D045F539E0C4B381BD368F2796", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_6B8AC8D045F539E0C4B381BD368F2796 Parms{};
 
@@ -167,10 +149,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::OnFail_6B8AC8D045F539E0C4B381BD368F279
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC Parms{};
 
@@ -187,10 +167,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::OnFail_B8687F5A48265CFC0EB678AEAD6BCBC
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::OnSuccess_6B8AC8D045F539E0C4B381BD368F2796(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "OnSuccess_6B8AC8D045F539E0C4B381BD368F2796");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "OnSuccess_6B8AC8D045F539E0C4B381BD368F2796", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_6B8AC8D045F539E0C4B381BD368F2796 Parms{};
 
@@ -207,10 +185,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::OnSuccess_6B8AC8D045F539E0C4B381BD368F
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC Parms{};
 
@@ -227,10 +203,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::OnSuccess_B8687F5A48265CFC0EB678AEAD6B
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_PreConstruct Parms{};
 
@@ -245,10 +219,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::Reset_Progress_Bar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "Reset Progress Bar");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "Reset Progress Bar", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -259,10 +231,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::Reset_Progress_Bar()
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::SetCurrent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "SetCurrent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "SetCurrent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,10 +246,8 @@ void UUI_CFCore_Discovery_ShowcaseSlot_C::SetCurrent()
 
 void UUI_CFCore_Discovery_ShowcaseSlot_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Discovery_ShowcaseSlot_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Discovery_ShowcaseSlot_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_Discovery_ShowcaseSlot_C_Tick Parms{};
 

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Button_ScreenshotNavigation_C::BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_ScreenshotNavigation_C", "BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_ScreenshotNavigation_C", "BndEvt__UI_Button_ScreenshotNavigation_IMG_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Button_ScreenshotNavigation_C::BndEvt__UI_Button_ScreenshotNavig
 
 void UUI_CFCore_Button_ScreenshotNavigation_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_ScreenshotNavigation_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_ScreenshotNavigation_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_Button_ScreenshotNavigation_C::Construct()
 
 void UUI_CFCore_Button_ScreenshotNavigation_C::ExecuteUbergraph_UI_CFCore_Button_ScreenshotNavigation(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_ScreenshotNavigation_C", "ExecuteUbergraph_UI_CFCore_Button_ScreenshotNavigation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_ScreenshotNavigation_C", "ExecuteUbergraph_UI_CFCore_Button_ScreenshotNavigation", FuncInfo);
 
 	Params::UI_CFCore_Button_ScreenshotNavigation_C_ExecuteUbergraph_UI_CFCore_Button_ScreenshotNavigation Parms{};
 
@@ -71,10 +65,8 @@ void UUI_CFCore_Button_ScreenshotNavigation_C::ExecuteUbergraph_UI_CFCore_Button
 
 void UUI_CFCore_Button_ScreenshotNavigation_C::SimulateDisabled(bool Disabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_ScreenshotNavigation_C", "SimulateDisabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_ScreenshotNavigation_C", "SimulateDisabled", FuncInfo);
 
 	Params::UI_CFCore_Button_ScreenshotNavigation_C_SimulateDisabled Parms{};
 

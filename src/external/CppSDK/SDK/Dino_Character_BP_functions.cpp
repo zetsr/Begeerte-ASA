@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void ADino_Character_BP_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "ReceiveBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "ReceiveBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void ADino_Character_BP_C::ReceiveBeginPlay()
 
 void ADino_Character_BP_C::ExecuteUbergraph_Dino_Character_BP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "ExecuteUbergraph_Dino_Character_BP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "ExecuteUbergraph_Dino_Character_BP", FuncInfo);
 
 	Params::Dino_Character_BP_C_ExecuteUbergraph_Dino_Character_BP Parms{};
 
@@ -57,10 +53,8 @@ void ADino_Character_BP_C::ExecuteUbergraph_Dino_Character_BP(int32 EntryPoint)
 
 void ADino_Character_BP_C::BPCameraAllowPivotPitchModifiers(bool* bAllow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPCameraAllowPivotPitchModifiers");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPCameraAllowPivotPitchModifiers", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPCameraAllowPivotPitchModifiers Parms{};
 
@@ -78,10 +72,8 @@ void ADino_Character_BP_C::BPCameraAllowPivotPitchModifiers(bool* bAllow)
 
 void ADino_Character_BP_C::SetSubmarineStructure(class APrimalStructure* Structure)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "SetSubmarineStructure");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "SetSubmarineStructure", FuncInfo);
 
 	Params::Dino_Character_BP_C_SetSubmarineStructure Parms{};
 
@@ -100,10 +92,8 @@ void ADino_Character_BP_C::SetSubmarineStructure(class APrimalStructure* Structu
 
 TArray<struct FMultiUseEntry> ADino_Character_BP_C::BPGetRidingMultiUseEntries(class APlayerController* ForPC, const TArray<struct FMultiUseEntry>& MultiUseEntries)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPGetRidingMultiUseEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPGetRidingMultiUseEntries", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPGetRidingMultiUseEntries Parms{};
 
@@ -123,10 +113,8 @@ TArray<struct FMultiUseEntry> ADino_Character_BP_C::BPGetRidingMultiUseEntries(c
 
 void ADino_Character_BP_C::FearTheManticore(bool ShouldFear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "FearTheManticore");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "FearTheManticore", FuncInfo);
 
 	Params::Dino_Character_BP_C_FearTheManticore Parms{};
 
@@ -146,10 +134,8 @@ void ADino_Character_BP_C::FearTheManticore(bool ShouldFear)
 
 bool ADino_Character_BP_C::BPTryMultiUse(class APlayerController* ForPC, int32 UseIndex, class FName UseName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPTryMultiUse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPTryMultiUse", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPTryMultiUse Parms{};
 
@@ -172,10 +158,8 @@ bool ADino_Character_BP_C::BPTryMultiUse(class APlayerController* ForPC, int32 U
 
 TArray<struct FMultiUseEntry> ADino_Character_BP_C::BPGetMultiUseEntries(class APlayerController* ForPC, const TArray<struct FMultiUseEntry>& MultiUseEntries)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPGetMultiUseEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPGetMultiUseEntries", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPGetMultiUseEntries Parms{};
 
@@ -197,10 +181,8 @@ TArray<struct FMultiUseEntry> ADino_Character_BP_C::BPGetMultiUseEntries(class A
 
 bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotLocation(const struct FVector& CurrentCameraPivotLocation, struct FVector& DesiredCameraPivotLocation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraDesiredPivotLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraDesiredPivotLocation", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraDesiredPivotLocation Parms{};
 
@@ -224,10 +206,8 @@ bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotLocation(const struct FVe
 
 bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotRotation(const struct FRotator& CurrentCameraPivotRotation, struct FRotator& DesiredCameraPivotRotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraDesiredPivotRotation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraDesiredPivotRotation", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraDesiredPivotRotation Parms{};
 
@@ -251,10 +231,8 @@ bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotRotation(const struct FRo
 
 bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotOffset(const struct FPrimalCameraParams& CameraParams, struct FVector& DesiredCameraOffset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraDesiredPivotOffset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraDesiredPivotOffset", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraDesiredPivotOffset Parms{};
 
@@ -284,10 +262,8 @@ bool ADino_Character_BP_C::BPOverrideCameraDesiredPivotOffset(const struct FPrim
 
 bool ADino_Character_BP_C::BPOverrideCameraPivotLocationInterpParams(const struct FPrimalCameraParams& CameraParams, const struct FPrimalCameraPivotZInterpOverrides& PivotZInterpOverrides, const struct FPrimalCameraInterpParams& LastInterpParamsX, const struct FPrimalCameraInterpParams& LastInterpParamsY, const struct FPrimalCameraInterpParams& LastInterpParamsZ, struct FPrimalCameraInterpParams& OutInterpParamsX, struct FPrimalCameraInterpParams& OutInterpParamsY, struct FPrimalCameraInterpParams& OutInterpParamsZ)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraPivotLocationInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraPivotLocationInterpParams", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraPivotLocationInterpParams Parms{};
 
@@ -319,10 +295,8 @@ bool ADino_Character_BP_C::BPOverrideCameraPivotLocationInterpParams(const struc
 
 bool ADino_Character_BP_C::BPOverrideCameraArmLengthInterpParams(const struct FPrimalCameraParams& CameraParams, struct FPrimalCameraInterpParams& OutInterpParams)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraArmLengthInterpParams");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraArmLengthInterpParams", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraArmLengthInterpParams Parms{};
 
@@ -347,10 +321,8 @@ bool ADino_Character_BP_C::BPOverrideCameraArmLengthInterpParams(const struct FP
 
 bool ADino_Character_BP_C::BPOverrideCameraArmLength(const struct FPrimalCameraParams& CameraParams, float CurrentCameraArmLength, float& DesiredCameraArmLength)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPOverrideCameraArmLength");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPOverrideCameraArmLength", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPOverrideCameraArmLength Parms{};
 
@@ -373,10 +345,8 @@ bool ADino_Character_BP_C::BPOverrideCameraArmLength(const struct FPrimalCameraP
 
 struct FLinearColor ADino_Character_BP_C::GetFXBloodColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "GetFXBloodColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "GetFXBloodColor", FuncInfo);
 
 	Params::Dino_Character_BP_C_GetFXBloodColor Parms{};
 
@@ -393,10 +363,8 @@ struct FLinearColor ADino_Character_BP_C::GetFXBloodColor()
 
 void ADino_Character_BP_C::GetDinoContentData(struct FDinoContentData* DinoContentData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "GetDinoContentData");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "GetDinoContentData", FuncInfo);
 
 	Params::Dino_Character_BP_C_GetDinoContentData Parms{};
 
@@ -414,10 +382,8 @@ void ADino_Character_BP_C::GetDinoContentData(struct FDinoContentData* DinoConte
 
 bool ADino_Character_BP_C::BPHandleRightShoulderButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPHandleRightShoulderButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPHandleRightShoulderButton", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPHandleRightShoulderButton Parms{};
 
@@ -432,10 +398,8 @@ bool ADino_Character_BP_C::BPHandleRightShoulderButton()
 
 void ADino_Character_BP_C::EditorBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "EditorBeginPlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "EditorBeginPlay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -446,10 +410,8 @@ void ADino_Character_BP_C::EditorBeginPlay()
 
 void ADino_Character_BP_C::BP_OnSetDeath()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BP_OnSetDeath");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BP_OnSetDeath", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -462,10 +424,8 @@ void ADino_Character_BP_C::BP_OnSetDeath()
 
 void ADino_Character_BP_C::BlendSpaceGenerated(class UBlendSpace* BlendSpace)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BlendSpaceGenerated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BlendSpaceGenerated", FuncInfo);
 
 	Params::Dino_Character_BP_C_BlendSpaceGenerated Parms{};
 
@@ -480,10 +440,8 @@ void ADino_Character_BP_C::BlendSpaceGenerated(class UBlendSpace* BlendSpace)
 
 void ADino_Character_BP_C::ReceiveDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "ReceiveDestroyed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "ReceiveDestroyed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -494,10 +452,8 @@ void ADino_Character_BP_C::ReceiveDestroyed()
 
 void ADino_Character_BP_C::BPTriggerStasisEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPTriggerStasisEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPTriggerStasisEvent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -511,10 +467,8 @@ void ADino_Character_BP_C::BPTriggerStasisEvent()
 
 void ADino_Character_BP_C::BPSpawnAttackerDamageImpactFX(class FName SocketName, class APrimalCharacter* VictimChar)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPSpawnAttackerDamageImpactFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPSpawnAttackerDamageImpactFX", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPSpawnAttackerDamageImpactFX Parms{};
 
@@ -535,10 +489,8 @@ void ADino_Character_BP_C::BPSpawnAttackerDamageImpactFX(class FName SocketName,
 
 void ADino_Character_BP_C::BPControlRigNotify(class FName NotifyName, class FName NotifyCustomTag, const struct FHitResult& WorldSpaceHitResult, const struct FVector& Velocity) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dino_Character_BP_C", "BPControlRigNotify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Dino_Character_BP_C", "BPControlRigNotify", FuncInfo);
 
 	Params::Dino_Character_BP_C_BPControlRigNotify Parms{};
 

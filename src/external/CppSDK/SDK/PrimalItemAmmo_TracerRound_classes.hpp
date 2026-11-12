@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_TracerRound_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_TracerRound_C;
 
 SDK_NAMESPACE_END

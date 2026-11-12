@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_SeparatedInstalledMods_C::AssignFirstModFoundToPreview()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "AssignFirstModFoundToPreview");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "AssignFirstModFoundToPreview", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::AssignFirstModFoundToPreview()
 
 void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_B
 
 void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_Button_DisableAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_DisableAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_DisableAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_B
 
 void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_Button_EnableAllMods_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_EnableAllMods_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_EnableAllMods_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_B
 
 void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_Button_UninstallAllMods_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_UninstallAllMods_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_UninstallAllMods_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_B
 
 void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_Button_UpdateAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_UpdateAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "BndEvt__UI_SeparatedInstalledMods_UI_Button_UpdateAllMods_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +93,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::BndEvt__UI_SeparatedInstalledMods_UI_B
 
 void UUI_CFCore_SeparatedInstalledMods_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +105,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::Construct()
 
 void UUI_CFCore_SeparatedInstalledMods_C::CreateModList()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "CreateModList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "CreateModList", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -136,10 +120,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::CreateModList()
 
 void UUI_CFCore_SeparatedInstalledMods_C::CreatePerList(class UWrapBox* Target, TArray<struct FInstallProgressMod>& Array)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "CreatePerList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "CreatePerList", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_CreatePerList Parms{};
 
@@ -157,10 +139,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::CreatePerList(class UWrapBox* Target, 
 
 void UUI_CFCore_SeparatedInstalledMods_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +153,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::Destruct()
 
 void UUI_CFCore_SeparatedInstalledMods_C::ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods Parms{};
 
@@ -194,10 +172,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::ExecuteUbergraph_UI_CFCore_SeparatedIn
 
 void UUI_CFCore_SeparatedInstalledMods_C::FilterOutNonInstalling(const TArray<struct FInstallProgressMod>& Full_list, TArray<struct FInstallProgressMod>* FilteredList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "FilterOutNonInstalling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "FilterOutNonInstalling", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_FilterOutNonInstalling Parms{};
 
@@ -217,10 +193,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::FilterOutNonInstalling(const TArray<st
 
 ESlateVisibility UUI_CFCore_SeparatedInstalledMods_C::Get_UI_Button_UpdateAllMods_Visibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "Get_UI_Button_UpdateAllMods_Visibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "Get_UI_Button_UpdateAllMods_Visibility", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_Get_UI_Button_UpdateAllMods_Visibility Parms{};
 
@@ -237,10 +211,8 @@ ESlateVisibility UUI_CFCore_SeparatedInstalledMods_C::Get_UI_Button_UpdateAllMod
 
 bool UUI_CFCore_SeparatedInstalledMods_C::GetAnyInstalledModsExist()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "GetAnyInstalledModsExist");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "GetAnyInstalledModsExist", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_GetAnyInstalledModsExist Parms{};
 
@@ -259,10 +231,8 @@ bool UUI_CFCore_SeparatedInstalledMods_C::GetAnyInstalledModsExist()
 
 void UUI_CFCore_SeparatedInstalledMods_C::GetCurrentAndOrderIndexes(bool Next, int32* From, int32* To)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "GetCurrentAndOrderIndexes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "GetCurrentAndOrderIndexes", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_GetCurrentAndOrderIndexes Parms{};
 
@@ -286,10 +256,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::GetCurrentAndOrderIndexes(bool Next, i
 
 void UUI_CFCore_SeparatedInstalledMods_C::MakeAListOfModsToDisable(bool ToEnable, TArray<struct FInstalledModProperties>* ModsToGetSwitched)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "MakeAListOfModsToDisable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "MakeAListOfModsToDisable", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_MakeAListOfModsToDisable Parms{};
 
@@ -312,10 +280,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::MakeAListOfModsToDisable(bool ToEnable
 
 bool UUI_CFCore_SeparatedInstalledMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_OnEventBroadcasted Parms{};
 
@@ -336,10 +302,8 @@ bool UUI_CFCore_SeparatedInstalledMods_C::OnEventBroadcasted(EGameModsEvent evt,
 
 void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotClicked(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotClicked");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotClicked", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_OnWideSlotClicked Parms{};
 
@@ -356,10 +320,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotClicked(const struct FInstal
 
 void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotEnableToggled(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotEnableToggled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotEnableToggled", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_OnWideSlotEnableToggled Parms{};
 
@@ -376,10 +338,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotEnableToggled(const struct F
 
 void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotHovered(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotHovered");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "OnWideSlotHovered", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_OnWideSlotHovered Parms{};
 
@@ -394,10 +354,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::OnWideSlotHovered(const struct FInstal
 
 void UUI_CFCore_SeparatedInstalledMods_C::PullModsFromAPI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "PullModsFromAPI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "PullModsFromAPI", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -408,10 +366,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::PullModsFromAPI()
 
 void UUI_CFCore_SeparatedInstalledMods_C::ReloadInstalledMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "ReloadInstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "ReloadInstalledMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -422,10 +378,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::ReloadInstalledMods()
 
 void UUI_CFCore_SeparatedInstalledMods_C::ReloadPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "ReloadPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "ReloadPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -436,10 +390,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::ReloadPage()
 
 void UUI_CFCore_SeparatedInstalledMods_C::ResetWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "ResetWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "ResetWidget", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -450,10 +402,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::ResetWidget()
 
 void UUI_CFCore_SeparatedInstalledMods_C::SplitModsInTwoLists()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "SplitModsInTwoLists");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "SplitModsInTwoLists", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -464,10 +414,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::SplitModsInTwoLists()
 
 void UUI_CFCore_SeparatedInstalledMods_C::SwitchWithNext()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "SwitchWithNext");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "SwitchWithNext", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -478,10 +426,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::SwitchWithNext()
 
 void UUI_CFCore_SeparatedInstalledMods_C::SwitchWithPrevious()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "SwitchWithPrevious");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "SwitchWithPrevious", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -495,10 +441,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::SwitchWithPrevious()
 
 void UUI_CFCore_SeparatedInstalledMods_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_SeparatedInstalledMods_C_Tick Parms{};
 
@@ -514,10 +458,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::Tick(const struct FGeometry& MyGeometr
 
 void UUI_CFCore_SeparatedInstalledMods_C::UninstallAllinstalledMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "UninstallAllinstalledMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "UninstallAllinstalledMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -528,10 +470,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::UninstallAllinstalledMods()
 
 void UUI_CFCore_SeparatedInstalledMods_C::UpdateAllMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "UpdateAllMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "UpdateAllMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -542,10 +482,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::UpdateAllMods()
 
 void UUI_CFCore_SeparatedInstalledMods_C::UpdateModCounts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "UpdateModCounts");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "UpdateModCounts", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -556,10 +494,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::UpdateModCounts()
 
 void UUI_CFCore_SeparatedInstalledMods_C::UpdateSwitchAllButtonsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "UpdateSwitchAllButtonsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "UpdateSwitchAllButtonsEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -570,10 +506,8 @@ void UUI_CFCore_SeparatedInstalledMods_C::UpdateSwitchAllButtonsEnabled()
 
 void UUI_CFCore_SeparatedInstalledMods_C::WipeBothLists()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_SeparatedInstalledMods_C", "WipeBothLists");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_SeparatedInstalledMods_C", "WipeBothLists", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

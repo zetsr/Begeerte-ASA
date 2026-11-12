@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WeapGlowStick_Base.WeapGlowStick_Base_C
-// 0x0000 (0x1290 - 0x1290)
+// 0x0000 (0x12B0 - 0x12B0)
 class AWeapGlowStick_Base_C final : public APrimalWeaponGrenade
 {
 public:
@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<AWeapGlowStick_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_AWeapGlowStick_Base_C;
 
 SDK_NAMESPACE_END

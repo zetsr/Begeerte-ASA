@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -66,15 +66,15 @@ void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject
 
 
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             AchievementID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool*                                   bFoundID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float*                                  progress                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Progress                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementID, bool* bFoundID, float* progress)
+void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementID, bool* bFoundID, float* Progress)
 {
 	static class UFunction* Func = nullptr;
 
@@ -97,8 +97,8 @@ void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* W
 	if (bFoundID != nullptr)
 		*bFoundID = Parms.bFoundID;
 
-	if (progress != nullptr)
-		*progress = Parms.progress;
+	if (Progress != nullptr)
+		*Progress = Parms.Progress;
 }
 
 
@@ -162,53 +162,17 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchie
 }
 
 
-// Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             AchievementName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   progress                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   UserTag                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAchievementWriteCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementName, float progress, int32 UserTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AchievementWriteCallbackProxy", "WriteAchievementProgress");
-
-	Params::AchievementWriteCallbackProxy_WriteAchievementProgress Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-	Parms.AchievementName = AchievementName;
-	Parms.progress = progress;
-	Parms.UserTag = UserTag;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteProgress
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    AchievementName                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   progress                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Progress                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   UserTag                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAchievementWriteCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& AchievementName, float progress, int32 UserTag)
+class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& AchievementName, float Progress, int32 UserTag)
 {
 	static class UFunction* Func = nullptr;
 
@@ -220,7 +184,7 @@ class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteProgr
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.PlayerController = PlayerController;
 	Parms.AchievementName = std::move(AchievementName);
-	Parms.progress = progress;
+	Parms.Progress = Progress;
 	Parms.UserTag = UserTag;
 
 	auto Flgs = Func->FunctionFlags;
@@ -880,6 +844,42 @@ class UInAppPurchaseRestoreCallbackProxy2* UInAppPurchaseRestoreCallbackProxy2::
 }
 
 
+// Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMPMatchOutcome                         Outcome                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TurnTimeoutInSeconds                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UQuitMatchCallbackProxy*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32 TurnTimeoutInSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("QuitMatchCallbackProxy", "QuitMatch");
+
+	Params::QuitMatchCallbackProxy_QuitMatch Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerController = PlayerController;
+	Parms.MatchID = std::move(MatchID);
+	Parms.Outcome = Outcome;
+	Parms.TurnTimeoutInSeconds = TurnTimeoutInSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -913,7 +913,7 @@ class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UO
 
 
 // Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             StatName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1035,7 +1035,7 @@ class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldCon
 
 
 // Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
-// (Final, Net, NetReliable, Native, Event, Private, NetClient)
+// (Final, RequiredAPI, Net, NetReliable, Native, Event, Private, NetClient)
 
 void AOnlineBeaconClient::ClientOnConnected()
 {
@@ -1050,269 +1050,6 @@ void AOnlineBeaconClient::ClientOnConnected()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientCancelReservationResponse");
-
-	Params::PartyBeaconClient_ClientCancelReservationResponse Parms{};
-
-	Parms.ReservationResponse = ReservationResponse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientReservationResponse");
-
-	Params::PartyBeaconClient_ClientReservationResponse Parms{};
-
-	Parms.ReservationResponse = ReservationResponse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-// (Net, NetReliable, Native, Event, Public, NetClient)
-
-void APartyBeaconClient::ClientSendReservationFull()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationFull");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-// (Net, NetReliable, Native, Event, Public, NetClient)
-// Parameters:
-// int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ClientSendReservationUpdates(int32 NumRemainingReservations)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationUpdates");
-
-	Params::PartyBeaconClient_ClientSendReservationUpdates Parms{};
-
-	Parms.NumRemainingReservations = NumRemainingReservations;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerAddOrUpdateReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerAddOrUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerAddOrUpdateReservationRequest");
-
-	Params::PartyBeaconClient_ServerAddOrUpdateReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.Reservation = std::move(Reservation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const struct FUniqueNetIdRepl&          PartyLeader                                            (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerCancelReservationRequest");
-
-	Params::PartyBeaconClient_ServerCancelReservationRequest Parms{};
-
-	Parms.PartyLeader = std::move(PartyLeader);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerRemoveMemberFromReservationRequest");
-
-	Params::PartyBeaconClient_ServerRemoveMemberFromReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.ReservationUpdate = std::move(ReservationUpdate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerReservationRequest");
-
-	Params::PartyBeaconClient_ServerReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.Reservation = std::move(Reservation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
-// Parameters:
-// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyBeaconClient", "ServerUpdateReservationRequest");
-
-	Params::PartyBeaconClient_ServerUpdateReservationRequest Parms{};
-
-	Parms.SessionId = std::move(SessionId);
-	Parms.ReservationUpdate = std::move(ReservationUpdate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMPMatchOutcome                         Outcome                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TurnTimeoutInSeconds                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UQuitMatchCallbackProxy*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32 TurnTimeoutInSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("QuitMatchCallbackProxy", "QuitMatch");
-
-	Params::QuitMatchCallbackProxy_QuitMatch Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-	Parms.MatchID = std::move(MatchID);
-	Parms.Outcome = Outcome;
-	Parms.TurnTimeoutInSeconds = TurnTimeoutInSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -1346,8 +1083,235 @@ class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(
 }
 
 
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ClientCancelReservationResponse(EPartyReservationResult ReservationResponse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientCancelReservationResponse");
+
+	Params::PartyBeaconClient_ClientCancelReservationResponse Parms{};
+
+	Parms.ReservationResponse = ReservationResponse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// EPartyReservationResult                 ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ClientReservationResponse(EPartyReservationResult ReservationResponse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientReservationResponse");
+
+	Params::PartyBeaconClient_ClientReservationResponse Parms{};
+
+	Parms.ReservationResponse = ReservationResponse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
+
+void APartyBeaconClient::ClientSendReservationFull()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationFull");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ClientSendReservationUpdates(int32 NumRemainingReservations)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ClientSendReservationUpdates");
+
+	Params::PartyBeaconClient_ClientSendReservationUpdates Parms{};
+
+	Parms.NumRemainingReservations = NumRemainingReservations;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerAddOrUpdateReservationRequest
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerAddOrUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerAddOrUpdateReservationRequest");
+
+	Params::PartyBeaconClient_ServerAddOrUpdateReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.Reservation = std::move(Reservation);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const struct FUniqueNetIdRepl&          PartyLeader                                            (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerCancelReservationRequest");
+
+	Params::PartyBeaconClient_ServerCancelReservationRequest Parms{};
+
+	Parms.PartyLeader = std::move(PartyLeader);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerRemoveMemberFromReservationRequest
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerRemoveMemberFromReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerRemoveMemberFromReservationRequest");
+
+	Params::PartyBeaconClient_ServerRemoveMemberFromReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.ReservationUpdate = std::move(ReservationUpdate);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerReservationRequest(const class FString& SessionId, const struct FPartyReservation& Reservation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerReservationRequest");
+
+	Params::PartyBeaconClient_ServerReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.Reservation = std::move(Reservation);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPartyReservation&         ReservationUpdate                                      (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void APartyBeaconClient::ServerUpdateReservationRequest(const class FString& SessionId, const struct FPartyReservation& ReservationUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyBeaconClient", "ServerUpdateReservationRequest");
+
+	Params::PartyBeaconClient_ServerUpdateReservationRequest Parms{};
+
+	Parms.SessionId = std::move(SessionId);
+	Parms.ReservationUpdate = std::move(ReservationUpdate);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
 // ESpectatorReservationResult             ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1372,7 +1336,7 @@ void ASpectatorBeaconClient::ClientCancelReservationResponse(ESpectatorReservati
 
 
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientReservationResponse
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
 // ESpectatorReservationResult             ReservationResponse                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1397,7 +1361,7 @@ void ASpectatorBeaconClient::ClientReservationResponse(ESpectatorReservationResu
 
 
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationFull
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
 
 void ASpectatorBeaconClient::ClientSendReservationFull()
 {
@@ -1416,7 +1380,7 @@ void ASpectatorBeaconClient::ClientSendReservationFull()
 
 
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ClientSendReservationUpdates
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
 // int32                                   NumRemainingReservations                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1441,7 +1405,7 @@ void ASpectatorBeaconClient::ClientSendReservationUpdates(int32 NumRemainingRese
 
 
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerCancelReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
 // const struct FUniqueNetIdRepl&          Spectator                                              (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1466,7 +1430,7 @@ void ASpectatorBeaconClient::ServerCancelReservationRequest(const struct FUnique
 
 
 // Function OnlineSubsystemUtils.SpectatorBeaconClient.ServerReservationRequest
-// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
 // const class FString&                    SessionId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FSpectatorReservation&     Reservation                                            (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -1493,7 +1457,7 @@ void ASpectatorBeaconClient::ServerReservationRequest(const class FString& Sessi
 
 
 // Function OnlineSubsystemUtils.TestBeaconClient.ClientPing
-// (Net, NetReliable, Native, Event, Public, NetClient)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetClient)
 
 void ATestBeaconClient::ClientPing()
 {
@@ -1512,7 +1476,7 @@ void ATestBeaconClient::ClientPing()
 
 
 // Function OnlineSubsystemUtils.TestBeaconClient.ServerPong
-// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// (RequiredAPI, Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 
 void ATestBeaconClient::ServerPong()
 {
@@ -1531,7 +1495,7 @@ void ATestBeaconClient::ServerPong()
 
 
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1564,7 +1528,7 @@ void UTurnBasedBlueprintLibrary::GetIsMyTurn(class UObject* WorldContextObject, 
 
 
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1597,7 +1561,7 @@ void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObj
 
 
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1632,7 +1596,7 @@ void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContex
 
 
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1661,7 +1625,7 @@ void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UOb
 
 
 // Function OnlineSubsystemUtils.VoipListenerSynthComponent.IsIdling
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

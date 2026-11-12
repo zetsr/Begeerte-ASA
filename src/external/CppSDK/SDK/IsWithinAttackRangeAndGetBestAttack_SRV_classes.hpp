@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UIsWithinAttackRangeAndGetBestAttack_SRV_C final : public UBTService_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	struct FBlackboardKeySelector                 IsWithinAttackRangeKey;                            // 0x00A0(0x0028)(Edit, BlueprintVisible)
 	struct FBlackboardKeySelector                 Last_Check_Attack_Range_Closest_Point_Key;         // 0x00C8(0x0028)(Edit, BlueprintVisible)
 	struct FBlackboardKeySelector                 Use_Altenate_Move_Point;                           // 0x00F0(0x0028)(Edit, BlueprintVisible)
@@ -48,5 +48,6 @@ public:
 		return GetDefaultObjImpl<UIsWithinAttackRangeAndGetBestAttack_SRV_C>();
 	}
 };
+DUMPER7_ASSERTS_UIsWithinAttackRangeAndGetBestAttack_SRV_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UBP_PrimalWindSourceComponent_Base_C::BPDeactivateBubbleComponent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "BPDeactivateBubbleComponent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "BPDeactivateBubbleComponent", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void UBP_PrimalWindSourceComponent_Base_C::BPDeactivateBubbleComponent()
 
 void UBP_PrimalWindSourceComponent_Base_C::BPExitedFluidSurface(const struct FVector& impactLocation, const float penetrationScalar)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "BPExitedFluidSurface");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "BPExitedFluidSurface", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_BPExitedFluidSurface Parms{};
 
@@ -57,10 +53,8 @@ void UBP_PrimalWindSourceComponent_Base_C::BPExitedFluidSurface(const struct FVe
 
 void UBP_PrimalWindSourceComponent_Base_C::BPHandleCreatingBubbles()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "BPHandleCreatingBubbles");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "BPHandleCreatingBubbles", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,10 +68,8 @@ void UBP_PrimalWindSourceComponent_Base_C::BPHandleCreatingBubbles()
 
 void UBP_PrimalWindSourceComponent_Base_C::BPImpactedFluidSurface(const struct FVector& impactLocation, const float penetrationScalar)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "BPImpactedFluidSurface");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "BPImpactedFluidSurface", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_BPImpactedFluidSurface Parms{};
 
@@ -96,10 +88,8 @@ void UBP_PrimalWindSourceComponent_Base_C::BPImpactedFluidSurface(const struct F
 
 void UBP_PrimalWindSourceComponent_Base_C::BPImpactingFluidSurfaceTick(const struct FVector& impactLocation, const float penetrationScalar)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "BPImpactingFluidSurfaceTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "BPImpactingFluidSurfaceTick", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_BPImpactingFluidSurfaceTick Parms{};
 
@@ -115,10 +105,8 @@ void UBP_PrimalWindSourceComponent_Base_C::BPImpactingFluidSurfaceTick(const str
 
 void UBP_PrimalWindSourceComponent_Base_C::calc_velocity()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "calc_velocity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "calc_velocity", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -129,10 +117,8 @@ void UBP_PrimalWindSourceComponent_Base_C::calc_velocity()
 
 void UBP_PrimalWindSourceComponent_Base_C::Creating_Bubbles_Code()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "Creating Bubbles Code");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "Creating Bubbles Code", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -143,10 +129,8 @@ void UBP_PrimalWindSourceComponent_Base_C::Creating_Bubbles_Code()
 
 void UBP_PrimalWindSourceComponent_Base_C::deactivate_bubble_system()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "deactivate bubble system");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "deactivate bubble system", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,10 +141,8 @@ void UBP_PrimalWindSourceComponent_Base_C::deactivate_bubble_system()
 
 void UBP_PrimalWindSourceComponent_Base_C::event_loop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "event_loop");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "event_loop", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +155,8 @@ void UBP_PrimalWindSourceComponent_Base_C::event_loop()
 
 void UBP_PrimalWindSourceComponent_Base_C::ExecuteUbergraph_BP_PrimalWindSourceComponent_Base(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "ExecuteUbergraph_BP_PrimalWindSourceComponent_Base");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "ExecuteUbergraph_BP_PrimalWindSourceComponent_Base", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_ExecuteUbergraph_BP_PrimalWindSourceComponent_Base Parms{};
 
@@ -193,10 +173,8 @@ void UBP_PrimalWindSourceComponent_Base_C::ExecuteUbergraph_BP_PrimalWindSourceC
 
 class FName UBP_PrimalWindSourceComponent_Base_C::Get_Bubble_System_Tag()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "Get Bubble System Tag");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "Get Bubble System Tag", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_Get_Bubble_System_Tag Parms{};
 
@@ -215,10 +193,8 @@ class FName UBP_PrimalWindSourceComponent_Base_C::Get_Bubble_System_Tag()
 
 void UBP_PrimalWindSourceComponent_Base_C::PlayFluidImpactEffect(const float penetrationScalar, const struct FVector& impactLocation, bool exited)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "PlayFluidImpactEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "PlayFluidImpactEffect", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_PlayFluidImpactEffect Parms{};
 
@@ -239,10 +215,8 @@ void UBP_PrimalWindSourceComponent_Base_C::PlayFluidImpactEffect(const float pen
 
 void UBP_PrimalWindSourceComponent_Base_C::PlayFluidImpactEffectSound(const float penetrationScalar, const struct FVector& impactLocation, bool exited)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PrimalWindSourceComponent_Base_C", "PlayFluidImpactEffectSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_PrimalWindSourceComponent_Base_C", "PlayFluidImpactEffectSound", FuncInfo);
 
 	Params::BP_PrimalWindSourceComponent_Base_C_PlayFluidImpactEffectSound Parms{};
 

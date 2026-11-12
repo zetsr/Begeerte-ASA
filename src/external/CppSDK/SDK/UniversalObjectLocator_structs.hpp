@@ -35,6 +35,7 @@ struct FDirectPathObjectLocator final
 public:
 	struct FSoftObjectPath                        Path;                                              // 0x0000(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDirectPathObjectLocator;
 
 // ScriptStruct UniversalObjectLocator.SubObjectLocator
 // 0x0010 (0x0010 - 0x0000)
@@ -43,6 +44,7 @@ struct FSubObjectLocator final
 public:
 	class FString                                 PathWithinContext;                                 // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSubObjectLocator;
 
 // ScriptStruct UniversalObjectLocator.UniversalObjectLocatorFragment
 // 0x0020 (0x0020 - 0x0000)
@@ -51,6 +53,7 @@ struct alignas(0x08) FUniversalObjectLocatorFragment final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FUniversalObjectLocatorFragment;
 
 // ScriptStruct UniversalObjectLocator.UniversalObjectLocator
 // 0x0010 (0x0010 - 0x0000)
@@ -59,6 +62,7 @@ struct FUniversalObjectLocator final
 public:
 	TArray<struct FUniversalObjectLocatorFragment> Fragments;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FUniversalObjectLocator;
 
 // ScriptStruct UniversalObjectLocator.UniversalObjectLocatorEmptyPayload
 // 0x0001 (0x0001 - 0x0000)
@@ -67,5 +71,6 @@ struct FUniversalObjectLocatorEmptyPayload final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FUniversalObjectLocatorEmptyPayload;
 
 SDK_NAMESPACE_END

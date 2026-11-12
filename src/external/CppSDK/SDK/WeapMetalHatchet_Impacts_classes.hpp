@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WeapMetalHatchet_Impacts.WeapMetalHatchet_Impacts_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08B8 - 0x08B8)
 class AWeapMetalHatchet_Impacts_C final : public AMeleeFist_Impacts_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<AWeapMetalHatchet_Impacts_C>();
 	}
 };
+DUMPER7_ASSERTS_AWeapMetalHatchet_Impacts_C;
 
 SDK_NAMESPACE_END

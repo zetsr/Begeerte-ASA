@@ -10,26 +10,54 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "TakeMovieScene_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "MovieSceneTracks_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
+// Class TakeMovieScene.FrameHitchSceneDecoration
+// 0x0850 (0x0878 - 0x0028)
+class UFrameHitchSceneDecoration final : public UObject
+{
+public:
+	struct FTakeMovieSceneHitchTimecodeCurves     TargetTimecode;                                    // 0x0028(0x0420)(NativeAccessSpecifierPublic)
+	struct FTakeMovieSceneHitchTimecodeCurves     ActualTimecode;                                    // 0x0448(0x0420)(NativeAccessSpecifierPublic)
+	struct FFrameRate                             TimecodeProviderFrameRate;                         // 0x0868(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameRate                             RecordFrameRate;                                   // 0x0870(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FrameHitchSceneDecoration")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FrameHitchSceneDecoration")
+	}
+	static class UFrameHitchSceneDecoration* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFrameHitchSceneDecoration>();
+	}
+};
+DUMPER7_ASSERTS_UFrameHitchSceneDecoration;
+
 // Class TakeMovieScene.MovieSceneTakeSection
-// 0x0750 (0x0848 - 0x00F8)
+// 0x0750 (0x0910 - 0x01C0)
 class UMovieSceneTakeSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x00F8(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x0200(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x0308(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x0410(0x0108)(NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x0518(0x0110)(NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                RateCurve;                                         // 0x0628(0x0110)(NativeAccessSpecifierPublic)
-	struct FMovieSceneStringChannel               Slate;                                             // 0x0738(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x01C0(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x02C8(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x03D0(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x04D8(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x05E0(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneFloatChannel                RateCurve;                                         // 0x06F0(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneStringChannel               Slate;                                             // 0x0800(0x0110)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -45,6 +73,7 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeSection>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneTakeSection;
 
 // Class TakeMovieScene.MovieSceneTakeSettings
 // 0x0070 (0x0098 - 0x0028)
@@ -73,13 +102,14 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneTakeSettings;
 
 // Class TakeMovieScene.MovieSceneTakeTrack
-// 0x0010 (0x0108 - 0x00F8)
+// 0x0010 (0x01C8 - 0x01B8)
 class UMovieSceneTakeTrack final : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00F8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x01B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -95,5 +125,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeTrack>();
 	}
 };
+DUMPER7_ASSERTS_UMovieSceneTakeTrack;
 
 SDK_NAMESPACE_END

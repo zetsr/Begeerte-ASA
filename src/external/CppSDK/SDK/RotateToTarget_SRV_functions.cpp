@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void URotateToTarget_SRV_C::ExecuteUbergraph_RotateToTarget_SRV(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RotateToTarget_SRV_C", "ExecuteUbergraph_RotateToTarget_SRV");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "RotateToTarget_SRV_C", "ExecuteUbergraph_RotateToTarget_SRV", FuncInfo);
 
 	Params::RotateToTarget_SRV_C_ExecuteUbergraph_RotateToTarget_SRV Parms{};
 
@@ -43,10 +41,8 @@ void URotateToTarget_SRV_C::ExecuteUbergraph_RotateToTarget_SRV(int32 EntryPoint
 
 void URotateToTarget_SRV_C::ReceiveActivation(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RotateToTarget_SRV_C", "ReceiveActivation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "RotateToTarget_SRV_C", "ReceiveActivation", FuncInfo);
 
 	Params::RotateToTarget_SRV_C_ReceiveActivation Parms{};
 
@@ -63,10 +59,8 @@ void URotateToTarget_SRV_C::ReceiveActivation(class AActor* OwnerActor)
 
 void URotateToTarget_SRV_C::ReceiveDeactivation(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RotateToTarget_SRV_C", "ReceiveDeactivation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "RotateToTarget_SRV_C", "ReceiveDeactivation", FuncInfo);
 
 	Params::RotateToTarget_SRV_C_ReceiveDeactivation Parms{};
 

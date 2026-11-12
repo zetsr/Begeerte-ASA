@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UStopMovement_C::ExecuteUbergraph_StopMovement(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StopMovement_C", "ExecuteUbergraph_StopMovement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "StopMovement_C", "ExecuteUbergraph_StopMovement", FuncInfo);
 
 	Params::StopMovement_C_ExecuteUbergraph_StopMovement Parms{};
 
@@ -43,10 +41,8 @@ void UStopMovement_C::ExecuteUbergraph_StopMovement(int32 EntryPoint)
 
 void UStopMovement_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StopMovement_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "StopMovement_C", "ReceiveExecute", FuncInfo);
 
 	Params::StopMovement_C_ReceiveExecute Parms{};
 

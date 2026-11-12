@@ -17,41 +17,6 @@
 
 SDK_NAMESPACE_START
 
-// Class EngineSettings.ConsoleSettings
-// 0x0048 (0x0070 - 0x0028)
-class UConsoleSettings final : public UObject
-{
-public:
-	int32                                         MaxScrollbackSize;                                 // 0x0028(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAutoCompleteCommand>           ManualAutoCompleteList;                            // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AutoCompleteMapPaths;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	float                                         BackgroundOpacityPercentage;                       // 0x0050(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOrderTopToBottom;                                 // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisplayHelpInAutoComplete;                        // 0x0055(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 InputColor;                                        // 0x0058(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 HistoryColor;                                      // 0x005C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 AutoCompleteCommandColor;                          // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 AutoCompleteCVarColor;                             // 0x0064(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 AutoCompleteFadedColor;                            // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ConsoleSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ConsoleSettings")
-	}
-	static class UConsoleSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UConsoleSettings>();
-	}
-};
-
 // Class EngineSettings.GameMapsSettings
 // 0x00F8 (0x0120 - 0x0028)
 class UGameMapsSettings final : public UObject
@@ -63,8 +28,9 @@ public:
 	ETwoPlayerSplitScreenType                     TwoPlayerSplitscreenLayout;                        // 0x0059(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EThreePlayerSplitScreenType                   ThreePlayerSplitscreenLayout;                      // 0x005A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFourPlayerSplitScreenType                    FourPlayerSplitscreenLayout;                       // 0x005B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOffsetPlayerGamepadIds;                           // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bShowAllPlayerWidgetsWhenSplitscreenDisabled;      // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetPlayerGamepadIds;                           // 0x005D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         GameInstanceClass;                                 // 0x0060(0x0020)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        GameDefaultMap;                                    // 0x0080(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FSoftObjectPath                        ServerDefaultMap;                                  // 0x00A0(0x0020)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -94,6 +60,7 @@ public:
 		return GetDefaultObjImpl<UGameMapsSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGameMapsSettings;
 
 // Class EngineSettings.GameNetworkManagerSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -128,6 +95,7 @@ public:
 		return GetDefaultObjImpl<UGameNetworkManagerSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGameNetworkManagerSettings;
 
 // Class EngineSettings.GameSessionSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -153,6 +121,7 @@ public:
 		return GetDefaultObjImpl<UGameSessionSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGameSessionSettings;
 
 // Class EngineSettings.GeneralEngineSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -172,9 +141,10 @@ public:
 		return GetDefaultObjImpl<UGeneralEngineSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGeneralEngineSettings;
 
 // Class EngineSettings.GeneralProjectSettings
-// 0x00E0 (0x0108 - 0x0028)
+// 0x00E8 (0x0110 - 0x0028)
 class UGeneralProjectSettings final : public UObject
 {
 public:
@@ -201,6 +171,8 @@ public:
 	uint8                                         Pad_FF[0x1];                                       // 0x00FF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EyeOffsetForFakeStereoRenderingDevice;             // 0x0100(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FOVForFakeStereoRenderingDevice;                   // 0x0104(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TopFOVRatioForFakeStereoRenderingDevice;           // 0x0108(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DifferenceBetweenEyesForFakeStereoRenderingDevice; // 0x010C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -216,6 +188,7 @@ public:
 		return GetDefaultObjImpl<UGeneralProjectSettings>();
 	}
 };
+DUMPER7_ASSERTS_UGeneralProjectSettings;
 
 // Class EngineSettings.HudSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -240,5 +213,42 @@ public:
 		return GetDefaultObjImpl<UHudSettings>();
 	}
 };
+DUMPER7_ASSERTS_UHudSettings;
+
+// Class EngineSettings.ConsoleSettings
+// 0x0048 (0x0070 - 0x0028)
+class UConsoleSettings final : public UObject
+{
+public:
+	int32                                         MaxScrollbackSize;                                 // 0x0028(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAutoCompleteCommand>           ManualAutoCompleteList;                            // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AutoCompleteMapPaths;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	float                                         BackgroundOpacityPercentage;                       // 0x0050(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOrderTopToBottom;                                 // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisplayHelpInAutoComplete;                        // 0x0055(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 InputColor;                                        // 0x0058(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 HistoryColor;                                      // 0x005C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 AutoCompleteCommandColor;                          // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 AutoCompleteCVarColor;                             // 0x0064(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 AutoCompleteFadedColor;                            // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConsoleSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConsoleSettings")
+	}
+	static class UConsoleSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UConsoleSettings>();
+	}
+};
+DUMPER7_ASSERTS_UConsoleSettings;
 
 SDK_NAMESPACE_END

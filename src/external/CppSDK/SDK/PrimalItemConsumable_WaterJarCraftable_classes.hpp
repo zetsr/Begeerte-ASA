@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_WaterJarCraftable_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_WaterJarCraftable_C;
 
 SDK_NAMESPACE_END

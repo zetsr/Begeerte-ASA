@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CustomComboBox_C::BndEvt__CustomComboBox_SelectedOption_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "BndEvt__CustomComboBox_SelectedOption_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "BndEvt__CustomComboBox_SelectedOption_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_CustomComboBox_C::BndEvt__CustomComboBox_SelectedOption_Button_K
 
 void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOptio
 
 void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOptio
 
 void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOptio
 
 void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "BndEvt__UI_CustomComboBox_Button_SelectedOption_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UUI_CFCore_CustomComboBox_C::BndEvt__UI_CustomComboBox_Button_SelectedOptio
 
 void UUI_CFCore_CustomComboBox_C::CloseOtherWay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "CloseOtherWay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "CloseOtherWay", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +93,8 @@ void UUI_CFCore_CustomComboBox_C::CloseOtherWay()
 
 void UUI_CFCore_CustomComboBox_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +107,8 @@ void UUI_CFCore_CustomComboBox_C::Construct()
 
 void UUI_CFCore_CustomComboBox_C::Event_Add_Option(const struct FSTRUCT_CustomComboBoxOption& CategoryInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Add Option");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Add Option", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_Event_Add_Option Parms{};
 
@@ -139,10 +123,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Add_Option(const struct FSTRUCT_CustomCo
 
 void UUI_CFCore_CustomComboBox_C::Event_Clear_Options()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Clear Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Clear Options", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +135,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Clear_Options()
 
 void UUI_CFCore_CustomComboBox_C::Event_Close_Options()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Close Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Close Options", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +147,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Close_Options()
 
 void UUI_CFCore_CustomComboBox_C::Event_Generate_Default_Options()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Generate Default Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Generate Default Options", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +159,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Generate_Default_Options()
 
 void UUI_CFCore_CustomComboBox_C::Event_Open_Options()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Open Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Open Options", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,10 +174,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Open_Options()
 
 void UUI_CFCore_CustomComboBox_C::Event_Set_Selected_Option(const class FString& Option, bool CallOnOptionSelected_)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Event Set Selected Option");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Event Set Selected Option", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_Event_Set_Selected_Option Parms{};
 
@@ -219,10 +193,8 @@ void UUI_CFCore_CustomComboBox_C::Event_Set_Selected_Option(const class FString&
 
 void UUI_CFCore_CustomComboBox_C::ExecuteUbergraph_UI_CFCore_CustomComboBox(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "ExecuteUbergraph_UI_CFCore_CustomComboBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "ExecuteUbergraph_UI_CFCore_CustomComboBox", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_ExecuteUbergraph_UI_CFCore_CustomComboBox Parms{};
 
@@ -237,10 +209,8 @@ void UUI_CFCore_CustomComboBox_C::ExecuteUbergraph_UI_CFCore_CustomComboBox(int3
 
 void UUI_CFCore_CustomComboBox_C::Focus_On()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Focus On");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Focus On", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +221,8 @@ void UUI_CFCore_CustomComboBox_C::Focus_On()
 
 void UUI_CFCore_CustomComboBox_C::FocusOff()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "FocusOff");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "FocusOff", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -270,10 +238,8 @@ void UUI_CFCore_CustomComboBox_C::FocusOff()
 
 void UUI_CFCore_CustomComboBox_C::GetOptionAtIndex(int32 Index_0, class FString* Text, class UUI_CustomComboBoxOption_C** AsCustomComboBoxOption, bool* IsValid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "GetOptionAtIndex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "GetOptionAtIndex", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_GetOptionAtIndex Parms{};
 
@@ -299,10 +265,8 @@ void UUI_CFCore_CustomComboBox_C::GetOptionAtIndex(int32 Index_0, class FString*
 
 void UUI_CFCore_CustomComboBox_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_GetRootCFWidget Parms{};
 
@@ -321,10 +285,8 @@ void UUI_CFCore_CustomComboBox_C::GetRootCFWidget(class UPanelWidget** RootPanel
 
 class UWidget* UUI_CFCore_CustomComboBox_C::Nav_Back_Tomain_Button(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Nav Back Tomain Button");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Nav Back Tomain Button", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_Nav_Back_Tomain_Button Parms{};
 
@@ -344,10 +306,8 @@ class UWidget* UUI_CFCore_CustomComboBox_C::Nav_Back_Tomain_Button(EUINavigation
 
 class UWidget* UUI_CFCore_CustomComboBox_C::Nav_to_Options(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Nav to Options");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Nav to Options", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_Nav_to_Options Parms{};
 
@@ -368,10 +328,8 @@ class UWidget* UUI_CFCore_CustomComboBox_C::Nav_to_Options(EUINavigation Navigat
 
 struct FEventReply UUI_CFCore_CustomComboBox_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "OnKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "OnKeyDown", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_OnKeyDown Parms{};
 
@@ -392,10 +350,8 @@ struct FEventReply UUI_CFCore_CustomComboBox_C::OnKeyDown(const struct FGeometry
 
 void UUI_CFCore_CustomComboBox_C::OnOptionSelectedInterface(const class FString& Option, int64 ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "OnOptionSelectedInterface");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "OnOptionSelectedInterface", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_OnOptionSelectedInterface Parms{};
 
@@ -413,10 +369,8 @@ void UUI_CFCore_CustomComboBox_C::OnOptionSelectedInterface(const class FString&
 
 void UUI_CFCore_CustomComboBox_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_PreConstruct Parms{};
 
@@ -431,10 +385,8 @@ void UUI_CFCore_CustomComboBox_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_CustomComboBox_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Setup");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Setup", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +397,8 @@ void UUI_CFCore_CustomComboBox_C::Setup()
 
 void UUI_CFCore_CustomComboBox_C::SetUpNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "SetUpNavigation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "SetUpNavigation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -461,10 +411,8 @@ void UUI_CFCore_CustomComboBox_C::SetUpNavigation()
 
 void UUI_CFCore_CustomComboBox_C::SetUpNavigationSingle(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "SetUpNavigationSingle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "SetUpNavigationSingle", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_SetUpNavigationSingle Parms{};
 
@@ -482,10 +430,8 @@ void UUI_CFCore_CustomComboBox_C::SetUpNavigationSingle(class UObject* Object)
 
 void UUI_CFCore_CustomComboBox_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomComboBox_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomComboBox_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_CustomComboBox_C_Tick Parms{};
 

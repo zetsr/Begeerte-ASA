@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUseTamedNoTargetBehavior_C::ExecuteUbergraph_UseTamedNoTargetBehavior(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UseTamedNoTargetBehavior_C", "ExecuteUbergraph_UseTamedNoTargetBehavior");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UseTamedNoTargetBehavior_C", "ExecuteUbergraph_UseTamedNoTargetBehavior", FuncInfo);
 
 	Params::UseTamedNoTargetBehavior_C_ExecuteUbergraph_UseTamedNoTargetBehavior Parms{};
 
@@ -43,10 +41,8 @@ void UUseTamedNoTargetBehavior_C::ExecuteUbergraph_UseTamedNoTargetBehavior(int3
 
 void UUseTamedNoTargetBehavior_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UseTamedNoTargetBehavior_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UseTamedNoTargetBehavior_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::UseTamedNoTargetBehavior_C_ReceiveConditionCheck Parms{};
 

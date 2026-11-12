@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Interface_WeapFishingNet.Interface_WeapFishingNet_C
-// 0x0000 (0x0000 - 0x0000)
-class IInterface_WeapFishingNet_C final
+// 0x0008 (0x0008 - 0x0000)
+class IInterface_WeapFishingNet_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void get_has_fully_cooked(bool* has_fully_cooked);
 	void Get_is_currently_tossing_net(bool* ret_is_currently_tossing_net);
@@ -51,5 +54,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IInterface_WeapFishingNet_C;
 
 SDK_NAMESPACE_END

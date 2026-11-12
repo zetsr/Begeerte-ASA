@@ -20,6 +20,9 @@ SDK_NAMESPACE_START
 class UAutomationUtilsBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static void AddAutomationMountPoint(const class FString& RootPath);
+	static void FinishAllAssetCompilation();
+	static void RemoveAutomationMountPoint(const class FString& RootPath);
 	static void TakeGameplayAutomationScreenshot(const class FString& ScreenshotName, float MaxGlobalError, float MaxLocalError, const class FString& MapNameOverride);
 
 public:
@@ -36,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UAutomationUtilsBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAutomationUtilsBlueprintLibrary;
 
 SDK_NAMESPACE_END

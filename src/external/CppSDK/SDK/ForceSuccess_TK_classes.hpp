@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UForceSuccess_TK_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_ForceSuccess_TK(int32 EntryPoint);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UForceSuccess_TK_C>();
 	}
 };
+DUMPER7_ASSERTS_UForceSuccess_TK_C;
 
 SDK_NAMESPACE_END

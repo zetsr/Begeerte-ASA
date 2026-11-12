@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_ProcoptodonSaddle_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_ProcoptodonSaddle_C;
 
 SDK_NAMESPACE_END

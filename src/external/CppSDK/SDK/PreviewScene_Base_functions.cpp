@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 bool APreviewScene_Base_C::BPCanUseFemaleBoneModifiers(class UMeshComponent* Mesh)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "BPCanUseFemaleBoneModifiers");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "BPCanUseFemaleBoneModifiers", FuncInfo);
 
 	Params::PreviewScene_Base_C_BPCanUseFemaleBoneModifiers Parms{};
 
@@ -44,10 +42,8 @@ bool APreviewScene_Base_C::BPCanUseFemaleBoneModifiers(class UMeshComponent* Mes
 
 void APreviewScene_Base_C::DebugLights()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "DebugLights");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "DebugLights", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +56,8 @@ void APreviewScene_Base_C::DebugLights()
 
 void APreviewScene_Base_C::ExecuteUbergraph_PreviewScene_Base(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "ExecuteUbergraph_PreviewScene_Base");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "ExecuteUbergraph_PreviewScene_Base", FuncInfo);
 
 	Params::PreviewScene_Base_C_ExecuteUbergraph_PreviewScene_Base Parms{};
 
@@ -80,10 +74,8 @@ void APreviewScene_Base_C::ExecuteUbergraph_PreviewScene_Base(int32 EntryPoint)
 
 void APreviewScene_Base_C::NotifyPreviewSceneUpdated(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "NotifyPreviewSceneUpdated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "NotifyPreviewSceneUpdated", FuncInfo);
 
 	Params::PreviewScene_Base_C_NotifyPreviewSceneUpdated Parms{};
 
@@ -102,10 +94,8 @@ void APreviewScene_Base_C::NotifyPreviewSceneUpdated(float DeltaTime)
 
 void APreviewScene_Base_C::NotifySetupPreviewScene(class UMeshComponent* ForMeshComp, const TArray<class USceneComponent*>& ForChildComps, class AShooterPlayerController* ForPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "NotifySetupPreviewScene");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "NotifySetupPreviewScene", FuncInfo);
 
 	Params::PreviewScene_Base_C_NotifySetupPreviewScene Parms{};
 
@@ -124,10 +114,8 @@ void APreviewScene_Base_C::NotifySetupPreviewScene(class UMeshComponent* ForMesh
 
 void APreviewScene_Base_C::SetDebugLightIntensity(double NewIntensity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "SetDebugLightIntensity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "SetDebugLightIntensity", FuncInfo);
 
 	Params::PreviewScene_Base_C_SetDebugLightIntensity Parms{};
 
@@ -144,10 +132,8 @@ void APreviewScene_Base_C::SetDebugLightIntensity(double NewIntensity)
 
 void APreviewScene_Base_C::SetDebugLightRotation(const struct FRotator& NewRotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "SetDebugLightRotation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "SetDebugLightRotation", FuncInfo);
 
 	Params::PreviewScene_Base_C_SetDebugLightRotation Parms{};
 
@@ -164,10 +150,8 @@ void APreviewScene_Base_C::SetDebugLightRotation(const struct FRotator& NewRotat
 
 void APreviewScene_Base_C::UpdateFloorLocation(bool IsFemale_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PreviewScene_Base_C", "UpdateFloorLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PreviewScene_Base_C", "UpdateFloorLocation", FuncInfo);
 
 	Params::PreviewScene_Base_C_UpdateFloorLocation Parms{};
 

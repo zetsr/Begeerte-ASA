@@ -29,6 +29,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_AddConstraint;
 
 // Function Constraints.ConstraintsScriptingLibrary.CreateFromType
 // 0x0018 (0x0018 - 0x0000)
@@ -40,6 +41,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTickableTransformConstraint*           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_CreateFromType;
 
 // Function Constraints.ConstraintsScriptingLibrary.CreateTransformableComponentHandle
 // 0x0020 (0x0020 - 0x0000)
@@ -51,6 +53,7 @@ public:
 	class FName                                   InSocketName;                                      // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTransformableComponentHandle*          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_CreateTransformableComponentHandle;
 
 // Function Constraints.ConstraintsScriptingLibrary.CreateTransformableHandle
 // 0x0020 (0x0020 - 0x0000)
@@ -62,6 +65,7 @@ public:
 	class FName                                   InAttachmentName;                                  // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTransformableHandle*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_CreateTransformableHandle;
 
 // Function Constraints.ConstraintsScriptingLibrary.GetConstraintsArray
 // 0x0018 (0x0018 - 0x0000)
@@ -71,6 +75,7 @@ public:
 	class UWorld*                                 InWorld;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UTickableConstraint*>            ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_GetConstraintsArray;
 
 // Function Constraints.ConstraintsScriptingLibrary.RemoveConstraint
 // 0x0010 (0x0010 - 0x0000)
@@ -82,6 +87,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_RemoveConstraint;
 
 // Function Constraints.ConstraintsScriptingLibrary.RemoveThisConstraint
 // 0x0018 (0x0018 - 0x0000)
@@ -93,6 +99,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ConstraintsScriptingLibrary_RemoveThisConstraint;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

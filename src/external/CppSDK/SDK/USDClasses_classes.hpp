@@ -10,14 +10,402 @@
 
 #include "Basic.hpp"
 
+#include "DeveloperSettings_classes.hpp"
+#include "USDClasses_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
-#include "USDClasses_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Class USDClasses.UsdAssetImportData
+// 0x0018 (0x0040 - 0x0028)
+class UUsdAssetImportData : public UAssetImportData
+{
+public:
+	class FString                                 PrimPath;                                          // 0x0028(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ImportOptions;                                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdAssetImportData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdAssetImportData")
+	}
+	static class UUsdAssetImportData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdAssetImportData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdAssetImportData;
+
+// Class USDClasses.UsdAnimSequenceAssetImportData
+// 0x0008 (0x0048 - 0x0040)
+class UUsdAnimSequenceAssetImportData final : public UUsdAssetImportData
+{
+public:
+	float                                         LayerStartOffsetSeconds;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdAnimSequenceAssetImportData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdAnimSequenceAssetImportData")
+	}
+	static class UUsdAnimSequenceAssetImportData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdAnimSequenceAssetImportData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdAnimSequenceAssetImportData;
+
+// Class USDClasses.UsdMeshAssetImportData
+// 0x0050 (0x0090 - 0x0040)
+class UUsdMeshAssetImportData final : public UUsdAssetImportData
+{
+public:
+	TMap<int32, struct FUsdPrimPathList>          MaterialSlotToPrimPaths;                           // 0x0040(0x0050)(NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdMeshAssetImportData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdMeshAssetImportData")
+	}
+	static class UUsdMeshAssetImportData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdMeshAssetImportData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdMeshAssetImportData;
+
+// Class USDClasses.UsdAssetUserData
+// 0x0070 (0x0098 - 0x0028)
+class UUsdAssetUserData : public UAssetUserData
+{
+public:
+	TArray<class FString>                         PrimPaths;                                         // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FUsdCombinedPrimMetadata> StageIdentifierToMetadata;                  // 0x0038(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 OriginalHash;                                      // 0x0088(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdAssetUserData")
+	}
+	static class UUsdAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdAssetUserData;
+
+// Class USDClasses.UsdAnimSequenceAssetUserData
+// 0x0010 (0x00A8 - 0x0098)
+class UUsdAnimSequenceAssetUserData final : public UUsdAssetUserData
+{
+public:
+	float                                         StageStartOffsetSeconds;                           // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StageScaleSeconds;                                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerStartOffsetSeconds;                           // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdAnimSequenceAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdAnimSequenceAssetUserData")
+	}
+	static class UUsdAnimSequenceAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdAnimSequenceAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdAnimSequenceAssetUserData;
+
+// Class USDClasses.UsdMaterialAssetUserData
+// 0x00A0 (0x0138 - 0x0098)
+class UUsdMaterialAssetUserData final : public UUsdAssetUserData
+{
+public:
+	TMap<class FString, class FString>            ParameterToPrimvar;                                // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, int32>                    PrimvarToUVIndex;                                  // 0x00E8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdMaterialAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdMaterialAssetUserData")
+	}
+	static class UUsdMaterialAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdMaterialAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdMaterialAssetUserData;
+
+// Class USDClasses.UsdProjectSettings
+// 0x0298 (0x02D0 - 0x0038)
+class UUsdProjectSettings final : public UDeveloperSettings
+{
+public:
+	TArray<struct FDirectoryPath>                 AdditionalPluginDirectories;                       // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FDirectoryPath>                 DefaultResolverSearchPath;                         // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FName>                           AdditionalMaterialPurposes;                        // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AdditionalCustomSchemaNames;                       // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          bLogUsdSdkErrors;                                  // 0x0078(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOptimizeUsdLog;                                   // 0x0079(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        DefaultAssetCache;                                 // 0x0080(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowCreateDefaultAssetCacheDialog;                // 0x00A0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowConfirmationWhenClearingLayers;               // 0x00A1(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowConfirmationWhenMutingDirtyLayers;            // 0x00A2(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowConfirmationWhenReloadingDirtyLayers;         // 0x00A3(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowOverriddenOpinionsWarning;                    // 0x00A4(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdEditInInstanceBehavior                    EditInInstanceableBehavior;                        // 0x00A5(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EReferencerTypeHandling                       ReferencerTypeHandling;                            // 0x00A6(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowWarningOnIncompleteDuplication;               // 0x00A7(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowTransformOnCameraComponentWarning;            // 0x00A8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowTransformTrackOnCameraComponentWarning;       // 0x00A9(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowSubsectionSnappingWarning;                    // 0x00AA(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowInheritedVisibilityWarning;                   // 0x00AB(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdSaveDialogBehavior                        ShowSaveLayersDialogWhenSaving;                    // 0x00AC(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdSaveDialogBehavior                        ShowSaveLayersDialogWhenClosing;                   // 0x00AD(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        DefaultSoundAttenuation;                           // 0x00B0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceDefaultSVTMaterial;                       // 0x00D0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceModelCardTextureMaterial;                 // 0x00F0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceMaterial;                   // 0x0110(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentMaterial;        // 0x0130(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTwoSidedMaterial;           // 0x0150(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentTwoSidedMaterial; // 0x0170(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceVTMaterial;                 // 0x0190(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentVTMaterial;      // 0x01B0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTwoSidedVTMaterial;         // 0x01D0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentTwoSidedVTMaterial; // 0x01F0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceSubstratePreviewSurfaceMaterial;          // 0x0210(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceSubstratePreviewSurfaceVTMaterial;        // 0x0230(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceDisplayColorMaterial;                     // 0x0250(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceDisplayColorAndOpacityMaterial;           // 0x0270(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceDisplayColorTwoSidedMaterial;             // 0x0290(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReferenceDisplayColorAndOpacityTwoSidedMaterial;   // 0x02B0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdProjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdProjectSettings")
+	}
+	static class UUsdProjectSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdProjectSettings>();
+	}
+};
+DUMPER7_ASSERTS_UUsdProjectSettings;
+
+// Class USDClasses.UsdMeshAssetUserData
+// 0x00A0 (0x0138 - 0x0098)
+class UUsdMeshAssetUserData : public UUsdAssetUserData
+{
+public:
+	TMap<int32, struct FUsdPrimPathList>          MaterialSlotToPrimPaths;                           // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, int32>                    PrimvarToUVIndex;                                  // 0x00E8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdMeshAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdMeshAssetUserData")
+	}
+	static class UUsdMeshAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdMeshAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdMeshAssetUserData;
+
+// Class USDClasses.UsdDrawModeComponent
+// 0x0090 (0x0740 - 0x06B0)
+class UUsdDrawModeComponent final : public UPrimitiveComponent
+{
+public:
+	struct FVector                                BoundsMin;                                         // 0x06B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsMax;                                         // 0x06C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdDrawMode                                  DrawMode;                                          // 0x06E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BoundsColor;                                       // 0x06E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUsdModelCardGeometry                         CardGeometry;                                      // 0x06F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             CardTextureXPos;                                   // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UTexture2D*                             CardTextureYPos;                                   // 0x0700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UTexture2D*                             CardTextureZPos;                                   // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UTexture2D*                             CardTextureXNeg;                                   // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UTexture2D*                             CardTextureYNeg;                                   // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UTexture2D*                             CardTextureZNeg;                                   // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class UMaterialInstance*>              MaterialInstances;                                 // 0x0728(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	int32                                         AuthoredFaces;                                     // 0x0738(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_73C[0x4];                                      // 0x073C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetBoundsColor(const struct FLinearColor& NewColor);
+	void SetBoundsMax(const struct FVector& NewMax);
+	void SetBoundsMin(const struct FVector& NewMin);
+	void SetCardGeometry(EUsdModelCardGeometry NewGeometry);
+	void SetCardTextureXNeg(class UTexture2D* NewTexture);
+	void SetCardTextureXPos(class UTexture2D* NewTexture);
+	void SetCardTextureYNeg(class UTexture2D* NewTexture);
+	void SetCardTextureYPos(class UTexture2D* NewTexture);
+	void SetCardTextureZNeg(class UTexture2D* NewTexture);
+	void SetCardTextureZPos(class UTexture2D* NewTexture);
+	void SetDrawMode(EUsdDrawMode NewDrawMode);
+	void SetTextureForFace(EUsdModelCardFace Face, class UTexture2D* Texture);
+
+	class UTexture2D* GetTextureForFace(EUsdModelCardFace Face) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdDrawModeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdDrawModeComponent")
+	}
+	static class UUsdDrawModeComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdDrawModeComponent>();
+	}
+};
+DUMPER7_ASSERTS_UUsdDrawModeComponent;
+
+// Class USDClasses.UsdGeometryCacheAssetUserData
+// 0x0008 (0x0140 - 0x0138)
+class UUsdGeometryCacheAssetUserData final : public UUsdMeshAssetUserData
+{
+public:
+	float                                         StageStartOffsetSeconds;                           // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerStartOffsetSeconds;                           // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdGeometryCacheAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdGeometryCacheAssetUserData")
+	}
+	static class UUsdGeometryCacheAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdGeometryCacheAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdGeometryCacheAssetUserData;
+
+// Class USDClasses.UsdLevelSequenceAssetUserData
+// 0x0060 (0x0088 - 0x0028)
+class UUsdLevelSequenceAssetUserData final : public UAssetUserData
+{
+public:
+	struct FGuid                                  LastCheckedSignature;                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<struct FGuid>                            HandledBindingGuids;                               // 0x0038(0x0050)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdLevelSequenceAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdLevelSequenceAssetUserData")
+	}
+	static class UUsdLevelSequenceAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdLevelSequenceAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdLevelSequenceAssetUserData;
+
+// Class USDClasses.UsdSparseVolumeTextureAssetUserData
+// 0x0040 (0x00D8 - 0x0098)
+class UUsdSparseVolumeTextureAssetUserData final : public UUsdAssetUserData
+{
+public:
+	TArray<class FString>                         SourceOpenVDBAssetPrimPaths;                       // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<double>                                TimeSamplePathTimeCodes;                           // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TimeSamplePathIndices;                             // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         TimeSamplePaths;                                   // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdSparseVolumeTextureAssetUserData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdSparseVolumeTextureAssetUserData")
+	}
+	static class UUsdSparseVolumeTextureAssetUserData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdSparseVolumeTextureAssetUserData>();
+	}
+};
+DUMPER7_ASSERTS_UUsdSparseVolumeTextureAssetUserData;
+
+// Class USDClasses.UsdReferenceOptions
+// 0x0038 (0x0060 - 0x0028)
+class UUsdReferenceOptions final : public UObject
+{
+public:
+	bool                                          bInternalReference;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFilePath                              TargetFile;                                        // 0x0030(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bUseDefaultPrim;                                   // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TargetPrimPath;                                    // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimecodeOffset;                                    // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeCodeScale;                                     // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdReferenceOptions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdReferenceOptions")
+	}
+	static class UUsdReferenceOptions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdReferenceOptions>();
+	}
+};
+DUMPER7_ASSERTS_UUsdReferenceOptions;
 
 // Class USDClasses.UsdAssetCache
 // 0x01C0 (0x01E8 - 0x0028)
@@ -28,7 +416,7 @@ public:
 	TMap<class FString, class UObject*>           PersistentStorage;                                 // 0x0078(0x0050)(Edit, EditConst, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	bool                                          bAllowPersistentStorage;                           // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<TWeakObjectPtr<class UObject>>           OwnedAssets;                                       // 0x00D0(0x0050)(NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TSet<TWeakObjectPtr<class UObject>>           OwnedAssets;                                       // 0x00D0(0x0050)(ZeroConstructor, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TMap<class FString, TWeakObjectPtr<class UObject>> PrimPathToAssets;                             // 0x0120(0x0050)(NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_170[0x78];                                     // 0x0170(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -46,6 +434,7 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache>();
 	}
 };
+DUMPER7_ASSERTS_UUsdAssetCache;
 
 // Class USDClasses.UsdAssetCache2
 // 0x0178 (0x01A0 - 0x0028)
@@ -90,13 +479,14 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache2>();
 	}
 };
+DUMPER7_ASSERTS_UUsdAssetCache2;
 
 // Class USDClasses.UsdAssetCache3
 // 0x0268 (0x0290 - 0x0028)
 class UUsdAssetCache3 final : public UObject
 {
 public:
-	struct FDirectoryPath                         AssetDirectory;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDirectoryPath                         AssetDirectory;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bOnlyHandleAssetsWithinAssetDirectory;             // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, struct FSoftObjectPath>   HashToAssetPaths;                                  // 0x0040(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
@@ -143,372 +533,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache3>();
 	}
 };
-
-// Class USDClasses.UsdAssetImportData
-// 0x0018 (0x0040 - 0x0028)
-class UUsdAssetImportData : public UAssetImportData
-{
-public:
-	class FString                                 PrimPath;                                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ImportOptions;                                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdAssetImportData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdAssetImportData")
-	}
-	static class UUsdAssetImportData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdAssetImportData>();
-	}
-};
-
-// Class USDClasses.UsdAnimSequenceAssetImportData
-// 0x0008 (0x0048 - 0x0040)
-class UUsdAnimSequenceAssetImportData final : public UUsdAssetImportData
-{
-public:
-	float                                         LayerStartOffsetSeconds;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdAnimSequenceAssetImportData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdAnimSequenceAssetImportData")
-	}
-	static class UUsdAnimSequenceAssetImportData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdAnimSequenceAssetImportData>();
-	}
-};
-
-// Class USDClasses.UsdMeshAssetImportData
-// 0x0050 (0x0090 - 0x0040)
-class UUsdMeshAssetImportData final : public UUsdAssetImportData
-{
-public:
-	TMap<int32, struct FUsdPrimPathList>          MaterialSlotToPrimPaths;                           // 0x0040(0x0050)(NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdMeshAssetImportData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdMeshAssetImportData")
-	}
-	static class UUsdMeshAssetImportData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdMeshAssetImportData>();
-	}
-};
-
-// Class USDClasses.UsdAssetUserData
-// 0x0070 (0x0098 - 0x0028)
-class UUsdAssetUserData : public UAssetUserData
-{
-public:
-	TArray<class FString>                         PrimPaths;                                         // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FUsdCombinedPrimMetadata> StageIdentifierToMetadata;                  // 0x0038(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FString                                 OriginalHash;                                      // 0x0088(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdAssetUserData")
-	}
-	static class UUsdAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdAnimSequenceAssetUserData
-// 0x0008 (0x00A0 - 0x0098)
-class UUsdAnimSequenceAssetUserData final : public UUsdAssetUserData
-{
-public:
-	float                                         LayerStartOffsetSeconds;                           // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdAnimSequenceAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdAnimSequenceAssetUserData")
-	}
-	static class UUsdAnimSequenceAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdAnimSequenceAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdMaterialAssetUserData
-// 0x00A0 (0x0138 - 0x0098)
-class UUsdMaterialAssetUserData final : public UUsdAssetUserData
-{
-public:
-	TMap<class FString, class FString>            ParameterToPrimvar;                                // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, int32>                    PrimvarToUVIndex;                                  // 0x00E8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdMaterialAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdMaterialAssetUserData")
-	}
-	static class UUsdMaterialAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdMaterialAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdMeshAssetUserData
-// 0x00A0 (0x0138 - 0x0098)
-class UUsdMeshAssetUserData : public UUsdAssetUserData
-{
-public:
-	TMap<int32, struct FUsdPrimPathList>          MaterialSlotToPrimPaths;                           // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, int32>                    PrimvarToUVIndex;                                  // 0x00E8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdMeshAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdMeshAssetUserData")
-	}
-	static class UUsdMeshAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdMeshAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdGeometryCacheAssetUserData
-// 0x0008 (0x0140 - 0x0138)
-class UUsdGeometryCacheAssetUserData final : public UUsdMeshAssetUserData
-{
-public:
-	float                                         LayerStartOffsetSeconds;                           // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdGeometryCacheAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdGeometryCacheAssetUserData")
-	}
-	static class UUsdGeometryCacheAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdGeometryCacheAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdLevelSequenceAssetUserData
-// 0x0060 (0x0088 - 0x0028)
-class UUsdLevelSequenceAssetUserData final : public UAssetUserData
-{
-public:
-	struct FGuid                                  LastCheckedSignature;                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<struct FGuid>                            HandledBindingGuids;                               // 0x0038(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdLevelSequenceAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdLevelSequenceAssetUserData")
-	}
-	static class UUsdLevelSequenceAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdLevelSequenceAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdSparseVolumeTextureAssetUserData
-// 0x0040 (0x00D8 - 0x0098)
-class UUsdSparseVolumeTextureAssetUserData final : public UUsdAssetUserData
-{
-public:
-	TArray<class FString>                         SourceOpenVDBAssetPrimPaths;                       // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<double>                                TimeSamplePathTimeCodes;                           // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 TimeSamplePathIndices;                             // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         TimeSamplePaths;                                   // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdSparseVolumeTextureAssetUserData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdSparseVolumeTextureAssetUserData")
-	}
-	static class UUsdSparseVolumeTextureAssetUserData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdSparseVolumeTextureAssetUserData>();
-	}
-};
-
-// Class USDClasses.UsdDrawModeComponent
-// 0x0090 (0x06B0 - 0x0620)
-class UUsdDrawModeComponent final : public UPrimitiveComponent
-{
-public:
-	struct FVector                                BoundsMin;                                         // 0x0620(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsMax;                                         // 0x0638(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdDrawMode                                  DrawMode;                                          // 0x0650(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BoundsColor;                                       // 0x0654(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdModelCardGeometry                         CardGeometry;                                      // 0x0664(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             CardTextureXPos;                                   // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UTexture2D*                             CardTextureYPos;                                   // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UTexture2D*                             CardTextureZPos;                                   // 0x0678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UTexture2D*                             CardTextureXNeg;                                   // 0x0680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UTexture2D*                             CardTextureYNeg;                                   // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UTexture2D*                             CardTextureZNeg;                                   // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class UMaterialInstance*>              MaterialInstances;                                 // 0x0698(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	int32                                         AuthoredFaces;                                     // 0x06A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetBoundsColor(const struct FLinearColor& NewColor);
-	void SetBoundsMax(const struct FVector& NewMax);
-	void SetBoundsMin(const struct FVector& NewMin);
-	void SetCardGeometry(EUsdModelCardGeometry NewGeometry);
-	void SetCardTextureXNeg(class UTexture2D* NewTexture);
-	void SetCardTextureXPos(class UTexture2D* NewTexture);
-	void SetCardTextureYNeg(class UTexture2D* NewTexture);
-	void SetCardTextureYPos(class UTexture2D* NewTexture);
-	void SetCardTextureZNeg(class UTexture2D* NewTexture);
-	void SetCardTextureZPos(class UTexture2D* NewTexture);
-	void SetDrawMode(EUsdDrawMode NewDrawMode);
-	void SetTextureForFace(EUsdModelCardFace Face, class UTexture2D* Texture);
-
-	class UTexture2D* GetTextureForFace(EUsdModelCardFace Face) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdDrawModeComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdDrawModeComponent")
-	}
-	static class UUsdDrawModeComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdDrawModeComponent>();
-	}
-};
-
-// Class USDClasses.UsdProjectSettings
-// 0x0248 (0x0280 - 0x0038)
-class UUsdProjectSettings final : public UDeveloperSettings
-{
-public:
-	TArray<struct FDirectoryPath>                 AdditionalPluginDirectories;                       // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FDirectoryPath>                 DefaultResolverSearchPath;                         // 0x0048(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<class FName>                           AdditionalMaterialPurposes;                        // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	bool                                          bLogUsdSdkErrors;                                  // 0x0068(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        DefaultAssetCache;                                 // 0x0070(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowCreateDefaultAssetCacheDialog;                // 0x0090(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowConfirmationWhenClearingLayers;               // 0x0091(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowConfirmationWhenMutingDirtyLayers;            // 0x0092(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowConfirmationWhenReloadingDirtyLayers;         // 0x0093(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowOverriddenOpinionsWarning;                    // 0x0094(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdEditInInstanceBehavior                    EditInInstanceableBehavior;                        // 0x0095(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowWarningOnIncompleteDuplication;               // 0x0096(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowTransformOnCameraComponentWarning;            // 0x0097(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowTransformTrackOnCameraComponentWarning;       // 0x0098(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowInheritedVisibilityWarning;                   // 0x0099(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdSaveDialogBehavior                        ShowSaveLayersDialogWhenSaving;                    // 0x009A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUsdSaveDialogBehavior                        ShowSaveLayersDialogWhenClosing;                   // 0x009B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        DefaultSoundAttenuation;                           // 0x00A0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceDefaultSVTMaterial;                       // 0x00C0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceModelCardTextureMaterial;                 // 0x00E0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceMaterial;                   // 0x0100(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentMaterial;        // 0x0120(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTwoSidedMaterial;           // 0x0140(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentTwoSidedMaterial; // 0x0160(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceVTMaterial;                 // 0x0180(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentVTMaterial;      // 0x01A0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTwoSidedVTMaterial;         // 0x01C0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferencePreviewSurfaceTranslucentTwoSidedVTMaterial; // 0x01E0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceDisplayColorMaterial;                     // 0x0200(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceDisplayColorAndOpacityMaterial;           // 0x0220(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceDisplayColorTwoSidedMaterial;             // 0x0240(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReferenceDisplayColorAndOpacityTwoSidedMaterial;   // 0x0260(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdProjectSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdProjectSettings")
-	}
-	static class UUsdProjectSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdProjectSettings>();
-	}
-};
-
-// Class USDClasses.UsdReferenceOptions
-// 0x0038 (0x0060 - 0x0028)
-class UUsdReferenceOptions final : public UObject
-{
-public:
-	bool                                          bInternalReference;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFilePath                              TargetFile;                                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseDefaultPrim;                                   // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TargetPrimPath;                                    // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeCodeOffset;                                    // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeCodeScale;                                     // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdReferenceOptions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdReferenceOptions")
-	}
-	static class UUsdReferenceOptions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdReferenceOptions>();
-	}
-};
+DUMPER7_ASSERTS_UUsdAssetCache3;
 
 SDK_NAMESPACE_END

@@ -16,6 +16,36 @@
 
 SDK_NAMESPACE_START
 
+// Function DataflowEngine.DataflowBlueprintLibrary.EvaluateDataflow
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDataflow*                        Dataflow                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          AssetToUpdate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::EvaluateDataflow(class UDataflow* Dataflow, class UObject* AssetToUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "EvaluateDataflow");
+
+	Params::DataflowBlueprintLibrary_EvaluateDataflow Parms{};
+
+	Parms.Dataflow = Dataflow;
+	Parms.AssetToUpdate = AssetToUpdate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DataflowEngine.DataflowBlueprintLibrary.EvaluateTerminalNodeByName
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -42,6 +72,320 @@ void UDataflowBlueprintLibrary::EvaluateTerminalNodeByName(class UDataflow* Data
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.GetDataflowVariableList
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FDataflowVariable>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FDataflowVariable> UDataflowBlueprintLibrary::GetDataflowVariableList(class UObject* Asset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "GetDataflowVariableList");
+
+	Params::DataflowBlueprintLibrary_GetDataflowVariableList Parms{};
+
+	Parms.Asset = Asset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableBool
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    VariableValue                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableBool(class UObject* Asset, class FName VariableName, bool VariableValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableBool");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableBool Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableValue = VariableValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableBoolArray
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<bool>&                     VariableArrayValue                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableBoolArray(class UObject* Asset, class FName VariableName, const TArray<bool>& VariableArrayValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableBoolArray");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableBoolArray Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableArrayValue = std::move(VariableArrayValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableFloat
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   VariableValue                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableFloat(class UObject* Asset, class FName VariableName, float VariableValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableFloat");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableFloat Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableValue = VariableValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableFloatArray
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<float>&                    VariableArrayValue                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableFloatArray(class UObject* Asset, class FName VariableName, const TArray<float>& VariableArrayValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableFloatArray");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableFloatArray Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableArrayValue = std::move(VariableArrayValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableInt
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   VariableValue                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableInt(class UObject* Asset, class FName VariableName, int64 VariableValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableInt");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableInt Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableValue = VariableValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableIntArray
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    VariableArrayValue                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableIntArray(class UObject* Asset, class FName VariableName, const TArray<int32>& VariableArrayValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableIntArray");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableIntArray Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableArrayValue = std::move(VariableArrayValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableObject
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          VariableValue                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableObject(class UObject* Asset, class FName VariableName, class UObject* VariableValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableObject");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableObject Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableValue = VariableValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.OverrideDataflowVariableObjectArray
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             VariableName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UObject*>&           VariableArrayValue                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::OverrideDataflowVariableObjectArray(class UObject* Asset, class FName VariableName, const TArray<class UObject*>& VariableArrayValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "OverrideDataflowVariableObjectArray");
+
+	Params::DataflowBlueprintLibrary_OverrideDataflowVariableObjectArray Parms{};
+
+	Parms.Asset = Asset;
+	Parms.VariableName = VariableName;
+	Parms.VariableArrayValue = std::move(VariableArrayValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataflowEngine.DataflowBlueprintLibrary.RegenerateAssetFromDataflow
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          AssetToRegenerate                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRegenerateDependentAssets                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDataflowBlueprintLibrary::RegenerateAssetFromDataflow(class UObject* AssetToRegenerate, bool bRegenerateDependentAssets)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataflowBlueprintLibrary", "RegenerateAssetFromDataflow");
+
+	Params::DataflowBlueprintLibrary_RegenerateAssetFromDataflow Parms{};
+
+	Parms.AssetToRegenerate = AssetToRegenerate;
+	Parms.bRegenerateDependentAssets = bRegenerateDependentAssets;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 bool UConfirmationDialogGeneric_C::BPEscapeClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationDialogGeneric_C", "BPEscapeClosed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ConfirmationDialogGeneric_C", "BPEscapeClosed", FuncInfo);
 
 	Params::ConfirmationDialogGeneric_C_BPEscapeClosed Parms{};
 
@@ -41,10 +39,8 @@ bool UConfirmationDialogGeneric_C::BPEscapeClosed()
 
 void UConfirmationDialogGeneric_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationDialogGeneric_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ConfirmationDialogGeneric_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +53,8 @@ void UConfirmationDialogGeneric_C::Construct()
 
 void UConfirmationDialogGeneric_C::ExecuteUbergraph_ConfirmationDialogGeneric(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationDialogGeneric_C", "ExecuteUbergraph_ConfirmationDialogGeneric");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ConfirmationDialogGeneric_C", "ExecuteUbergraph_ConfirmationDialogGeneric", FuncInfo);
 
 	Params::ConfirmationDialogGeneric_C_ExecuteUbergraph_ConfirmationDialogGeneric Parms{};
 
@@ -77,10 +71,8 @@ void UConfirmationDialogGeneric_C::ExecuteUbergraph_ConfirmationDialogGeneric(in
 
 void UConfirmationDialogGeneric_C::OverrideAcceptButtonText(const class FText& AcceptText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationDialogGeneric_C", "OverrideAcceptButtonText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ConfirmationDialogGeneric_C", "OverrideAcceptButtonText", FuncInfo);
 
 	Params::ConfirmationDialogGeneric_C_OverrideAcceptButtonText Parms{};
 
@@ -97,10 +89,8 @@ void UConfirmationDialogGeneric_C::OverrideAcceptButtonText(const class FText& A
 
 void UConfirmationDialogGeneric_C::OverrideCancelButtonText(const class FText& CancelText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationDialogGeneric_C", "OverrideCancelButtonText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ConfirmationDialogGeneric_C", "OverrideCancelButtonText", FuncInfo);
 
 	Params::ConfirmationDialogGeneric_C_OverrideCancelButtonText Parms{};
 

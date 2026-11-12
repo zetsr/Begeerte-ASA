@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureWriter>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTextureWriter;
 
 SDK_NAMESPACE_END

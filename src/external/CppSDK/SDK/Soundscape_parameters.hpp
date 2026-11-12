@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Soundscape_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Soundscape_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
 
@@ -29,6 +29,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeBPFunctionLibrary_SpawnSoundscapeColor;
 
 // Function Soundscape.SoundscapeBPFunctionLibrary.SpawnSoundscapePalette
 // 0x0020 (0x0020 - 0x0000)
@@ -41,6 +42,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeBPFunctionLibrary_SpawnSoundscapePalette;
 
 // Function Soundscape.ActiveSoundscapeColorVoice.StopLimitedDurationVoice
 // 0x0004 (0x0004 - 0x0000)
@@ -49,6 +51,7 @@ struct ActiveSoundscapeColorVoice_StopLimitedDurationVoice final
 public:
 	float                                         FadeOutTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ActiveSoundscapeColorVoice_StopLimitedDurationVoice;
 
 // Function Soundscape.ActiveSoundscapeColor.IsPlaying
 // 0x0001 (0x0001 - 0x0000)
@@ -57,6 +60,7 @@ struct ActiveSoundscapeColor_IsPlaying final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ActiveSoundscapeColor_IsPlaying;
 
 // Function Soundscape.ActiveSoundscapeColor.Play
 // 0x000C (0x000C - 0x0000)
@@ -67,6 +71,7 @@ public:
 	float                                         ColorPitch;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ColorFadeInTime;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ActiveSoundscapeColor_Play;
 
 // Function Soundscape.ActiveSoundscapeColor.Stop
 // 0x0004 (0x0004 - 0x0000)
@@ -75,6 +80,7 @@ struct ActiveSoundscapeColor_Stop final
 public:
 	float                                         ColorFadeOutTime;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ActiveSoundscapeColor_Stop;
 
 // Function Soundscape.SoundscapeColorPointHashMap.AddColorPointArrayToHash
 // 0x0018 (0x0018 - 0x0000)
@@ -84,6 +90,7 @@ public:
 	TArray<struct FVector>                        Locations;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGameplayTag                           ColorPoint;                                        // 0x0010(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_AddColorPointArrayToHash;
 
 // Function Soundscape.SoundscapeColorPointHashMap.AddColorPointToHash
 // 0x0028 (0x0028 - 0x0000)
@@ -95,6 +102,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_AddColorPointToHash;
 
 // Function Soundscape.SoundscapeColorPointHashMap.CalculateHashIndex
 // 0x0020 (0x0020 - 0x0000)
@@ -104,6 +112,7 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint64                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_CalculateHashIndex;
 
 // Function Soundscape.SoundscapeColorPointHashMap.InitializeHash
 // 0x0020 (0x0020 - 0x0000)
@@ -114,6 +123,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                GridCenterIn;                                      // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_InitializeHash;
 
 // Function Soundscape.SoundscapeColorPointHashMap.NumColorPointsInCell
 // 0x0028 (0x0028 - 0x0000)
@@ -125,6 +135,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_NumColorPointsInCell;
 
 // Function Soundscape.SoundscapeColorPointHashMap.SetGridCenterpoint
 // 0x0018 (0x0018 - 0x0000)
@@ -133,6 +144,7 @@ struct SoundscapeColorPointHashMap_SetGridCenterpoint final
 public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeColorPointHashMap_SetGridCenterpoint;
 
 // Function Soundscape.SoundscapeSubsystem.AddColorPointCollection
 // 0x0018 (0x0018 - 0x0000)
@@ -142,6 +154,7 @@ public:
 	class FName                                   ColorPointCollectionName;                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoundscapeColorPointCollection        ColorPointCollection;                              // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_AddColorPointCollection;
 
 // Function Soundscape.SoundscapeSubsystem.AddPaletteCollection
 // 0x0060 (0x0060 - 0x0000)
@@ -153,6 +166,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_AddPaletteCollection;
 
 // Function Soundscape.SoundscapeSubsystem.CheckColorPointDensity
 // 0x0028 (0x0028 - 0x0000)
@@ -164,6 +178,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_CheckColorPointDensity;
 
 // Function Soundscape.SoundscapeSubsystem.ClearState
 // 0x0008 (0x0008 - 0x0000)
@@ -172,6 +187,7 @@ struct SoundscapeSubsystem_ClearState final
 public:
 	struct FGameplayTag                           SoundscapeState;                                   // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_ClearState;
 
 // Function Soundscape.SoundscapeSubsystem.RemoveColorPointCollection
 // 0x000C (0x000C - 0x0000)
@@ -182,6 +198,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_RemoveColorPointCollection;
 
 // Function Soundscape.SoundscapeSubsystem.RemovePaletteCollection
 // 0x000C (0x000C - 0x0000)
@@ -192,6 +209,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_RemovePaletteCollection;
 
 // Function Soundscape.SoundscapeSubsystem.SetState
 // 0x0008 (0x0008 - 0x0000)
@@ -200,6 +218,7 @@ struct SoundscapeSubsystem_SetState final
 public:
 	struct FGameplayTag                           SoundscapeState;                                   // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SoundscapeSubsystem_SetState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

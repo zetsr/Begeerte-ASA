@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::BlueprintInit(const class FString& RawExtraData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "BlueprintInit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "BlueprintInit", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Default_C_BlueprintInit Parms{};
 
@@ -43,10 +41,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::BlueprintInit(const class
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusEnd(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusEnd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusEnd", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Default_C_EntryFocusEnd Parms{};
 
@@ -63,10 +59,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusEnd(bool bInsti
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusStart(bool bInstigatedByAutoRollover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusStart", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Default_C_EntryFocusStart Parms{};
 
@@ -84,10 +78,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusStart(bool bIns
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusTick(float DeltaTime, bool bIsHighlighted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "EntryFocusTick", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Default_C_EntryFocusTick Parms{};
 
@@ -105,10 +97,8 @@ void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::EntryFocusTick(float Delt
 
 void UASAUI_NewsCarouselTemplate_Entry_News_Default_C::ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Default(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Default");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ASAUI_NewsCarouselTemplate_Entry_News_Default_C", "ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Default", FuncInfo);
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_News_Default_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Default Parms{};
 

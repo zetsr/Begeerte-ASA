@@ -14,6 +14,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function AutomationUtils.AutomationUtilsBlueprintLibrary.AddAutomationMountPoint
+// 0x0010 (0x0010 - 0x0000)
+struct AutomationUtilsBlueprintLibrary_AddAutomationMountPoint final
+{
+public:
+	class FString                                 RootPath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AutomationUtilsBlueprintLibrary_AddAutomationMountPoint;
+
+// Function AutomationUtils.AutomationUtilsBlueprintLibrary.RemoveAutomationMountPoint
+// 0x0010 (0x0010 - 0x0000)
+struct AutomationUtilsBlueprintLibrary_RemoveAutomationMountPoint final
+{
+public:
+	class FString                                 RootPath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AutomationUtilsBlueprintLibrary_RemoveAutomationMountPoint;
+
 // Function AutomationUtils.AutomationUtilsBlueprintLibrary.TakeGameplayAutomationScreenshot
 // 0x0028 (0x0028 - 0x0000)
 struct AutomationUtilsBlueprintLibrary_TakeGameplayAutomationScreenshot final
@@ -24,6 +42,7 @@ public:
 	float                                         MaxLocalError;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MapNameOverride;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AutomationUtilsBlueprintLibrary_TakeGameplayAutomationScreenshot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

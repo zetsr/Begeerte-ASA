@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass WeaponFistsAnimBlueprint.WeaponFistsAnimBlueprint_C
-// 0x0000 (0x2190 - 0x2190)
+// 0x0000 (0x2270 - 0x2270)
 class UWeaponFistsAnimBlueprint_C final : public UFPVWeaponAnimBP_Base_Carrying_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWeaponFistsAnimBlueprint_C>();
 	}
 };
+DUMPER7_ASSERTS_UWeaponFistsAnimBlueprint_C;
 
 SDK_NAMESPACE_END

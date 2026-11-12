@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function ImgMedia.ImgMediaSource.AddTargetObject
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,7 +42,7 @@ void UImgMediaSource::AddTargetObject(class AActor* InActor)
 
 
 // Function ImgMedia.ImgMediaSource.RemoveTargetObject
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -67,7 +67,7 @@ void UImgMediaSource::RemoveTargetObject(class AActor* InActor)
 
 
 // Function ImgMedia.ImgMediaSource.SetSequencePath
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -92,7 +92,7 @@ void UImgMediaSource::SetSequencePath(const class FString& Path)
 
 
 // Function ImgMedia.ImgMediaSource.SetTokenizedSequencePath
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -117,7 +117,7 @@ void UImgMediaSource::SetTokenizedSequencePath(const class FString& Path)
 
 
 // Function ImgMedia.ImgMediaSource.GetProxies
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FString>*                  OutProxies                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -143,7 +143,7 @@ void UImgMediaSource::GetProxies(TArray<class FString>* OutProxies) const
 
 
 // Function ImgMedia.ImgMediaSource.GetSequencePath
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const class FString                     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

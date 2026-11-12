@@ -13,6 +13,16 @@
 
 SDK_NAMESPACE_START
 
+// Enum InterchangeImport.EInterchangeCoordinateSystemPolicy
+// NumValues: 0x0004
+enum class EInterchangeCoordinateSystemPolicy : uint8
+{
+	MatchUpForwardAxes                       = 0,
+	MatchUpAxis                              = 1,
+	KeepXYZAxes                              = 2,
+	EInterchangeCoordinateSystemPolicy_MAX   = 3,
+};
+
 // Enum InterchangeImport.EMaterialXLuminanceMode
 // NumValues: 0x0006
 enum class EMaterialXLuminanceMode : uint8

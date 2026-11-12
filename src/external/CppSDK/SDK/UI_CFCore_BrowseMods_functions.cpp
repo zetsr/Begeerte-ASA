@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_BrowseMods_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_BrowseMods_C::Construct()
 
 void UUI_CFCore_BrowseMods_C::ConstructPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "ConstructPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "ConstructPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_BrowseMods_C::ConstructPage()
 
 void UUI_CFCore_BrowseMods_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,10 +59,8 @@ void UUI_CFCore_BrowseMods_C::Destruct()
 
 void UUI_CFCore_BrowseMods_C::ExecuteUbergraph_UI_CFCore_BrowseMods(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "ExecuteUbergraph_UI_CFCore_BrowseMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "ExecuteUbergraph_UI_CFCore_BrowseMods", FuncInfo);
 
 	Params::UI_CFCore_BrowseMods_C_ExecuteUbergraph_UI_CFCore_BrowseMods Parms{};
 
@@ -85,10 +77,8 @@ void UUI_CFCore_BrowseMods_C::ExecuteUbergraph_UI_CFCore_BrowseMods(int32 EntryP
 
 void UUI_CFCore_BrowseMods_C::GetCurrentSearchInput(class FText* CurrentSearchInput_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "GetCurrentSearchInput");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "GetCurrentSearchInput", FuncInfo);
 
 	Params::UI_CFCore_BrowseMods_C_GetCurrentSearchInput Parms{};
 
@@ -104,10 +94,8 @@ void UUI_CFCore_BrowseMods_C::GetCurrentSearchInput(class FText* CurrentSearchIn
 
 void UUI_CFCore_BrowseMods_C::GetMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "GetMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "GetMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,10 +111,8 @@ void UUI_CFCore_BrowseMods_C::GetMods()
 
 bool UUI_CFCore_BrowseMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_BrowseMods_C_OnEventBroadcasted Parms{};
 
@@ -145,10 +131,8 @@ bool UUI_CFCore_BrowseMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArra
 
 void UUI_CFCore_BrowseMods_C::ResetPageNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "ResetPageNum");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "ResetPageNum", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +145,8 @@ void UUI_CFCore_BrowseMods_C::ResetPageNum()
 
 void UUI_CFCore_BrowseMods_C::UpdatePageCount(const struct FCFCoreApiResponsePagination& CFCoreApiResponsePagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_BrowseMods_C", "UpdatePageCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_BrowseMods_C", "UpdatePageCount", FuncInfo);
 
 	Params::UI_CFCore_BrowseMods_C_UpdatePageCount Parms{};
 

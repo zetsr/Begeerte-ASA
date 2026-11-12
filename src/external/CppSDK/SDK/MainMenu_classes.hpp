@@ -17,14 +17,14 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MainMenu.MainMenu_C
-// 0x0020 (0x04B8 - 0x0498)
+// 0x0020 (0x04C0 - 0x04A0)
 class AMainMenu_C final : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        Counter;                                           // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USphereReflectionCaptureComponent*      CaptureComp;                                       // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AShooterMatineeActor*                   MatineeActor_0_ExecuteUbergraph_MainMenu_RefProperty; // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	double                                        Counter;                                           // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USphereReflectionCaptureComponent*      CaptureComp;                                       // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AShooterMatineeActor*                   MatineeActor_0_ExecuteUbergraph_MainMenu_RefProperty; // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MainMenu(int32 EntryPoint);
@@ -48,5 +48,6 @@ public:
 		return GetDefaultObjImpl<AMainMenu_C>();
 	}
 };
+DUMPER7_ASSERTS_AMainMenu_C;
 
 SDK_NAMESPACE_END

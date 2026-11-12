@@ -16,8 +16,77 @@
 
 SDK_NAMESPACE_START
 
+// Function AutomationUtils.AutomationUtilsBlueprintLibrary.AddAutomationMountPoint
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    RootPath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAutomationUtilsBlueprintLibrary::AddAutomationMountPoint(const class FString& RootPath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AutomationUtilsBlueprintLibrary", "AddAutomationMountPoint");
+
+	Params::AutomationUtilsBlueprintLibrary_AddAutomationMountPoint Parms{};
+
+	Parms.RootPath = std::move(RootPath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AutomationUtils.AutomationUtilsBlueprintLibrary.FinishAllAssetCompilation
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+
+void UAutomationUtilsBlueprintLibrary::FinishAllAssetCompilation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AutomationUtilsBlueprintLibrary", "FinishAllAssetCompilation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AutomationUtils.AutomationUtilsBlueprintLibrary.RemoveAutomationMountPoint
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    RootPath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAutomationUtilsBlueprintLibrary::RemoveAutomationMountPoint(const class FString& RootPath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AutomationUtilsBlueprintLibrary", "RemoveAutomationMountPoint");
+
+	Params::AutomationUtilsBlueprintLibrary_RemoveAutomationMountPoint Parms{};
+
+	Parms.RootPath = std::move(RootPath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function AutomationUtils.AutomationUtilsBlueprintLibrary.TakeGameplayAutomationScreenshot
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    ScreenshotName                                         (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   MaxGlobalError                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

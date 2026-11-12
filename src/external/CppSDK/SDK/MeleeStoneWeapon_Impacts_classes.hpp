@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MeleeStoneWeapon_Impacts.MeleeStoneWeapon_Impacts_C
-// 0x0008 (0x08B0 - 0x08A8)
+// 0x0008 (0x08B8 - 0x08B0)
 class AMeleeStoneWeapon_Impacts_C final : public AShooterImpactEffect
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<AMeleeStoneWeapon_Impacts_C>();
 	}
 };
+DUMPER7_ASSERTS_AMeleeStoneWeapon_Impacts_C;
 
 SDK_NAMESPACE_END

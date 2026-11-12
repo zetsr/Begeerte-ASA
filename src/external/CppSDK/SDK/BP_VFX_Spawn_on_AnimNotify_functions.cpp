@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UBP_VFX_Spawn_on_AnimNotify_C::BPOverrideNiagaraSystem(class USkeletalMeshComponent* Mesh, class UNiagaraSystem** NS_Override) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "BPOverrideNiagaraSystem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "BPOverrideNiagaraSystem", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_BPOverrideNiagaraSystem Parms{};
 
@@ -52,10 +50,8 @@ void UBP_VFX_Spawn_on_AnimNotify_C::BPOverrideNiagaraSystem(class USkeletalMeshC
 
 void UBP_VFX_Spawn_on_AnimNotify_C::Spawn_Sound(class USceneComponent* Actor, const struct FVector& Location, double Speed, double Size, const struct FAudio_Ground_Collection& StepSounds, bool IsPlayer) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "Spawn_Sound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "Spawn_Sound", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_Spawn_Sound Parms{};
 
@@ -75,10 +71,8 @@ void UBP_VFX_Spawn_on_AnimNotify_C::Spawn_Sound(class USceneComponent* Actor, co
 
 void UBP_VFX_Spawn_on_AnimNotify_C::Spawn_Anim_Notify() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "Spawn_Anim_Notify");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "Spawn_Anim_Notify", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -95,10 +89,8 @@ void UBP_VFX_Spawn_on_AnimNotify_C::Spawn_Anim_Notify() const
 
 bool UBP_VFX_Spawn_on_AnimNotify_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyBegin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyBegin", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyBegin Parms{};
 
@@ -123,10 +115,8 @@ bool UBP_VFX_Spawn_on_AnimNotify_C::Received_NotifyBegin(class USkeletalMeshComp
 
 bool UBP_VFX_Spawn_on_AnimNotify_C::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyEnd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyEnd", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyEnd Parms{};
 
@@ -147,10 +137,8 @@ bool UBP_VFX_Spawn_on_AnimNotify_C::Received_NotifyEnd(class USkeletalMeshCompon
 
 class FString UBP_VFX_Spawn_on_AnimNotify_C::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "GetNotifyName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "GetNotifyName", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_GetNotifyName Parms{};
 
@@ -171,10 +159,8 @@ class FString UBP_VFX_Spawn_on_AnimNotify_C::GetNotifyName() const
 
 bool UBP_VFX_Spawn_on_AnimNotify_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VFX_Spawn_on_AnimNotify_C", "Received_NotifyTick", FuncInfo);
 
 	Params::BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyTick Parms{};
 

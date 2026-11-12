@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CustomizeSlot_SecondaryFont_C::GetColor(struct FLinearColor* Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CustomizeSlot_SecondaryFont_C", "GetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CustomizeSlot_SecondaryFont_C", "GetColor", FuncInfo);
 
 	Params::UI_CustomizeSlot_SecondaryFont_C_GetColor Parms{};
 
@@ -44,10 +42,8 @@ void UUI_CustomizeSlot_SecondaryFont_C::GetColor(struct FLinearColor* Color)
 
 void UUI_CustomizeSlot_SecondaryFont_C::SetColor(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CustomizeSlot_SecondaryFont_C", "SetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CustomizeSlot_SecondaryFont_C", "SetColor", FuncInfo);
 
 	Params::UI_CustomizeSlot_SecondaryFont_C_SetColor Parms{};
 

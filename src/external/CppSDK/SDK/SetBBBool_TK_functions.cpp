@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void USetBBBool_TK_C::ExecuteUbergraph_SetBBBool_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SetBBBool_TK_C", "ExecuteUbergraph_SetBBBool_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SetBBBool_TK_C", "ExecuteUbergraph_SetBBBool_TK", FuncInfo);
 
 	Params::SetBBBool_TK_C_ExecuteUbergraph_SetBBBool_TK Parms{};
 
@@ -43,10 +41,8 @@ void USetBBBool_TK_C::ExecuteUbergraph_SetBBBool_TK(int32 EntryPoint)
 
 void USetBBBool_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SetBBBool_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SetBBBool_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::SetBBBool_TK_C_ReceiveExecute Parms{};
 

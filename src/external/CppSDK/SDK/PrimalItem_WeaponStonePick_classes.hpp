@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponStonePick_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponStonePick_C;
 
 SDK_NAMESPACE_END

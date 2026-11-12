@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UGPSHumanAnimBP_C::UpdateLayeringValues()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GPSHumanAnimBP_C", "UpdateLayeringValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "GPSHumanAnimBP_C", "UpdateLayeringValues", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

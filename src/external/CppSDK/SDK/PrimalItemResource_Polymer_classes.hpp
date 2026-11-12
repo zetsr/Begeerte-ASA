@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Polymer_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Polymer_C;
 
 SDK_NAMESPACE_END

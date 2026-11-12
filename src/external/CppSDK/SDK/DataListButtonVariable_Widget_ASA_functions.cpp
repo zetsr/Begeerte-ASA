@@ -16,313 +16,169 @@
 
 SDK_NAMESPACE_START
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.UpdateColorPicker
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 ColorPickerSliderValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Set                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Widget_ASA_C::UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue)
+void UDataListButtonVariable_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature(bool Set, bool FromSelectOtherOption)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "UpdateColorPicker");
+	Params::DataListButtonVariable_Widget_ASA_C_BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_UpdateColorPicker Parms{};
-
-	Parms.ColorPickerSliderValue = std::move(ColorPickerSliderValue);
+	Parms.Set = Set;
+	Parms.FromSelectOtherOption = FromSelectOtherOption;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UDataListButtonVariable_Widget_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UDataListButtonVariable_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "Tick");
-
-	Params::DataListButtonVariable_Widget_ASA_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupTextValueOverride
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText*                            ReturnText                                             (Parm, OutParm)
-
-void UDataListButtonVariable_Widget_ASA_C::SetupTextValueOverride(const class FText& Text, class FText* ReturnText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetupTextValueOverride");
-
-	Params::DataListButtonVariable_Widget_ASA_C_SetupTextValueOverride Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnText != nullptr)
-		*ReturnText = std::move(Parms.ReturnText);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupTextValue
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText*                            ReturnText                                             (Parm, OutParm)
-
-void UDataListButtonVariable_Widget_ASA_C::SetupTextValue(const class FText& Text, class FText* ReturnText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetupTextValue");
-
-	Params::DataListButtonVariable_Widget_ASA_C_SetupTextValue Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnText != nullptr)
-		*ReturnText = std::move(Parms.ReturnText);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupOptionWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UDataListButtonVariable_Widget_ASA_C::SetupOptionWidgets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetupOptionWidgets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupNewValueWidget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BPExecutedCommandForPrimalUI
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const class FString&                    InString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   InputPin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    PreventParentCall                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             CommandName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FBPNetExecParams&          ExecParams                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UDataListButtonVariable_Widget_ASA_C::SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall)
+void UDataListButtonVariable_Widget_ASA_C::BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "BPExecutedCommandForPrimalUI", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetupNewValueWidget");
+	Params::DataListButtonVariable_Widget_ASA_C_BPExecutedCommandForPrimalUI Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_SetupNewValueWidget Parms{};
-
-	Parms.InString = std::move(InString);
-	Parms.InputPin = InputPin;
-	Parms.PreventParentCall = PreventParentCall;
+	Parms.CommandName = CommandName;
+	Parms.ExecParams = std::move(ExecParams);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Setup Values Index
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const int32&                            Index_0                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    PreventCallParent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.CloseSlider
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UDataListButtonVariable_Widget_ASA_C::Setup_Values_Index(const int32& Index_0, bool PreventCallParent)
+void UDataListButtonVariable_Widget_ASA_C::CloseSlider()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "CloseSlider", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "Setup Values Index");
-
-	Params::DataListButtonVariable_Widget_ASA_C_Setup_Values_Index Parms{};
-
-	Parms.Index_0 = Index_0;
-	Parms.PreventCallParent = PreventCallParent;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetParameterValue
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    bPreventCallParent                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::SetParameterValue(const class FString& Value, bool bPreventCallParent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetParameterValue");
-
-	Params::DataListButtonVariable_Widget_ASA_C_SetParameterValue Parms{};
-
-	Parms.Value = std::move(Value);
-	Parms.bPreventCallParent = bPreventCallParent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetIsSelectedBP
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    Selected                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::SetIsSelectedBP(bool Selected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "SetIsSelectedBP");
-
-	Params::DataListButtonVariable_Widget_ASA_C_SetIsSelectedBP Parms{};
-
-	Parms.Selected = Selected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.PreConstruct
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Widget_ASA_C::PreConstruct(bool IsDesignTime)
+void UDataListButtonVariable_Widget_ASA_C::Construct()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "Construct", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "PreConstruct");
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Params::DataListButtonVariable_Widget_ASA_C_PreConstruct Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_Widget_ASA
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_Widget_ASA", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_Widget_ASA Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.OnOverridedParameterValue
-// (Event, Public, BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExtraSetupToggledButton
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    bPreventCallParent                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Toggle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Widget_ASA_C::OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent)
+void UDataListButtonVariable_Widget_ASA_C::ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "ExtraSetupToggledButton", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "OnOverridedParameterValue");
+	Params::DataListButtonVariable_Widget_ASA_C_ExtraSetupToggledButton Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_OnOverridedParameterValue Parms{};
-
-	Parms.Value = std::move(Value);
-	Parms.bPreventCallParent = bPreventCallParent;
+	Parms.Toggle = Toggle;
+	Parms.FromSelectOtherOption = FromSelectOtherOption;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.IsExpanded
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExtraSetupWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimalUserWidget*                UserWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "ExtraSetupWidget", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_ExtraSetupWidget Parms{};
+
+	Parms.UserWidget = UserWidget;
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.GetAllValueWidgets
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UWidget*>                  ReturnValue_0                                          (Parm, OutParm, ReturnParm, ContainsInstancedReference)
+
+TArray<class UWidget*> UDataListButtonVariable_Widget_ASA_C::GetAllValueWidgets()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "GetAllValueWidgets", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_GetAllValueWidgets Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.GetIsSelectedBP
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UDataListButtonVariable_Widget_ASA_C::IsExpanded()
+bool UDataListButtonVariable_Widget_ASA_C::GetIsSelectedBP()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "GetIsSelectedBP", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "IsExpanded");
-
-	Params::DataListButtonVariable_Widget_ASA_C_IsExpanded Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HideValueLabel
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    HideValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::HideValueLabel(bool HideValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "HideValueLabel");
-
-	Params::DataListButtonVariable_Widget_ASA_C_HideValueLabel Parms{};
-
-	Parms.HideValue = HideValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HasSlider
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USlider*                          ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class USlider* UDataListButtonVariable_Widget_ASA_C::HasSlider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "HasSlider");
-
-	Params::DataListButtonVariable_Widget_ASA_C_HasSlider Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HasExpandedSlider
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USlider*                          ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class USlider* UDataListButtonVariable_Widget_ASA_C::HasExpandedSlider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "HasExpandedSlider");
-
-	Params::DataListButtonVariable_Widget_ASA_C_HasExpandedSlider Parms{};
+	Params::DataListButtonVariable_Widget_ASA_C_GetIsSelectedBP Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -337,10 +193,8 @@ class USlider* UDataListButtonVariable_Widget_ASA_C::HasExpandedSlider()
 
 void UDataListButtonVariable_Widget_ASA_C::GetWidgetsToAdd(TArray<class UPrimalUserWidget*>* UserWidgets)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "GetWidgetsToAdd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "GetWidgetsToAdd", FuncInfo);
 
 	Params::DataListButtonVariable_Widget_ASA_C_GetWidgetsToAdd Parms{};
 
@@ -351,19 +205,71 @@ void UDataListButtonVariable_Widget_ASA_C::GetWidgetsToAdd(TArray<class UPrimalU
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.GetIsSelectedBP
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HasExpandedSlider
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USlider*                          ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USlider* UDataListButtonVariable_Widget_ASA_C::HasExpandedSlider()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "HasExpandedSlider", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_HasExpandedSlider Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HasSlider
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USlider*                          ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class USlider* UDataListButtonVariable_Widget_ASA_C::HasSlider()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "HasSlider", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_HasSlider Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.HideValueLabel
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HideValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::HideValueLabel(bool HideValue)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "HideValueLabel", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_HideValueLabel Parms{};
+
+	Parms.HideValue = HideValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.IsExpanded
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue_0                                          (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UDataListButtonVariable_Widget_ASA_C::GetIsSelectedBP()
+bool UDataListButtonVariable_Widget_ASA_C::IsExpanded()
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "IsExpanded", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "GetIsSelectedBP");
-
-	Params::DataListButtonVariable_Widget_ASA_C_GetIsSelectedBP Parms{};
+	Params::DataListButtonVariable_Widget_ASA_C_IsExpanded Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -371,171 +277,213 @@ bool UDataListButtonVariable_Widget_ASA_C::GetIsSelectedBP()
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.GetAllValueWidgets
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.OnOverridedParameterValue
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// TArray<class UWidget*>                  ReturnValue_0                                          (Parm, OutParm, ReturnParm, ContainsInstancedReference)
+// const class FString&                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bPreventCallParent                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-TArray<class UWidget*> UDataListButtonVariable_Widget_ASA_C::GetAllValueWidgets()
+void UDataListButtonVariable_Widget_ASA_C::OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "OnOverridedParameterValue", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "GetAllValueWidgets");
+	Params::DataListButtonVariable_Widget_ASA_C_OnOverridedParameterValue Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_GetAllValueWidgets Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExtraSetupWidget
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimalUserWidget*                UserWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "ExtraSetupWidget");
-
-	Params::DataListButtonVariable_Widget_ASA_C_ExtraSetupWidget Parms{};
-
-	Parms.UserWidget = UserWidget;
-	Parms.Index_0 = Index_0;
+	Parms.Value = std::move(Value);
+	Parms.bPreventCallParent = bPreventCallParent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExtraSetupToggledButton
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Toggle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "ExtraSetupToggledButton");
-
-	Params::DataListButtonVariable_Widget_ASA_C_ExtraSetupToggledButton Parms{};
-
-	Parms.Toggle = Toggle;
-	Parms.FromSelectOtherOption = FromSelectOtherOption;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_Widget_ASA
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_Widget_ASA");
-
-	Params::DataListButtonVariable_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_Widget_ASA Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Construct
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UDataListButtonVariable_Widget_ASA_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.CloseSlider
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UDataListButtonVariable_Widget_ASA_C::CloseSlider()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "CloseSlider");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BPExecutedCommandForPrimalUI
-// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FName                             CommandName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FBPNetExecParams&          ExecParams                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Widget_ASA_C::BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams)
+void UDataListButtonVariable_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "PreConstruct", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "BPExecutedCommandForPrimalUI");
+	Params::DataListButtonVariable_Widget_ASA_C_PreConstruct Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_BPExecutedCommandForPrimalUI Parms{};
-
-	Parms.CommandName = CommandName;
-	Parms.ExecParams = std::move(ExecParams);
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetIsSelectedBP
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    Selected                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UDataListButtonVariable_Widget_ASA_C::SetIsSelectedBP(bool Selected)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetIsSelectedBP", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	Params::DataListButtonVariable_Widget_ASA_C_SetIsSelectedBP Parms{};
+
+	Parms.Selected = Selected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetParameterValue
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FString&                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bPreventCallParent                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::SetParameterValue(const class FString& Value, bool bPreventCallParent)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetParameterValue", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_SetParameterValue Parms{};
+
+	Parms.Value = std::move(Value);
+	Parms.bPreventCallParent = bPreventCallParent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Setup Values Index
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32&                            Index_0                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    PreventCallParent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::Setup_Values_Index(const int32& Index_0, bool PreventCallParent)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "Setup Values Index", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_Setup_Values_Index Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.PreventCallParent = PreventCallParent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupNewValueWidget
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   InputPin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    PreventParentCall                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetupNewValueWidget", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_SetupNewValueWidget Parms{};
+
+	Parms.InString = std::move(InString);
+	Parms.InputPin = InputPin;
+	Parms.PreventParentCall = PreventParentCall;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupOptionWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UDataListButtonVariable_Widget_ASA_C::SetupOptionWidgets()
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetupOptionWidgets", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature
-// (BlueprintEvent)
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupTextValue
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Set                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText*                            ReturnText                                             (Parm, OutParm)
 
-void UDataListButtonVariable_Widget_ASA_C::BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature(bool Set, bool FromSelectOtherOption)
+void UDataListButtonVariable_Widget_ASA_C::SetupTextValue(const class FText& Text, class FText* ReturnText)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetupTextValue", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_Widget_ASA_C", "BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature");
+	Params::DataListButtonVariable_Widget_ASA_C_SetupTextValue Parms{};
 
-	Params::DataListButtonVariable_Widget_ASA_C_BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature Parms{};
+	Parms.Text = std::move(Text);
 
-	Parms.Set = Set;
-	Parms.FromSelectOtherOption = FromSelectOtherOption;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnText != nullptr)
+		*ReturnText = std::move(Parms.ReturnText);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.SetupTextValueOverride
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText*                            ReturnText                                             (Parm, OutParm)
+
+void UDataListButtonVariable_Widget_ASA_C::SetupTextValueOverride(const class FText& Text, class FText* ReturnText)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "SetupTextValueOverride", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_SetupTextValueOverride Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnText != nullptr)
+		*ReturnText = std::move(Parms.ReturnText);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "Tick", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_Widget_ASA.DataListButtonVariable_Widget_ASA_C.UpdateColorPicker
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 ColorPickerSliderValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_Widget_ASA_C::UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListButtonVariable_Widget_ASA_C", "UpdateColorPicker", FuncInfo);
+
+	Params::DataListButtonVariable_Widget_ASA_C_UpdateColorPicker Parms{};
+
+	Parms.ColorPickerSliderValue = std::move(ColorPickerSliderValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

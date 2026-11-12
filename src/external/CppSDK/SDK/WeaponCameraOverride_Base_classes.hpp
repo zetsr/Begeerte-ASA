@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWeaponCameraOverride_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UWeaponCameraOverride_Base_C;
 
 SDK_NAMESPACE_END

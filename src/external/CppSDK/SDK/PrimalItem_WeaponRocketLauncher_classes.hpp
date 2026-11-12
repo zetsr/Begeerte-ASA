@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponRocketLauncher_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_WeaponRocketLauncher_C;
 
 SDK_NAMESPACE_END

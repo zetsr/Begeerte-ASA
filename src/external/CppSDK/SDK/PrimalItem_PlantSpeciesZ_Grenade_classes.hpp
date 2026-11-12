@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_PlantSpeciesZ_Grenade_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItem_PlantSpeciesZ_Grenade_C;
 
 SDK_NAMESPACE_END

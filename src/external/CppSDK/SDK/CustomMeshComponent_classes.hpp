@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // Class CustomMeshComponent.CustomMeshComponent
-// 0x0010 (0x0670 - 0x0660)
+// 0x0010 (0x0720 - 0x0710)
 class UCustomMeshComponent final : public UMeshComponent
 {
 public:
-	uint8                                         Pad_658[0x18];                                     // 0x0658(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_710[0x10];                                     // 0x0710(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCustomMeshTriangles(const TArray<struct FCustomMeshTriangle>& Triangles);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UCustomMeshComponent>();
 	}
 };
+DUMPER7_ASSERTS_UCustomMeshComponent;
 
 SDK_NAMESPACE_END

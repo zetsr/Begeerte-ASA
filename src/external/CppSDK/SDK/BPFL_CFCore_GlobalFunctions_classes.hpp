@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "cfcore_ui_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "ENUM_CFCore_InputDevices_structs.hpp"
+#include "cfcore_structs.hpp"
+#include "cfcore_ui_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -38,14 +38,14 @@ public:
 	static void GetIsModPremium(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, struct FPremiumDetails* Premium_Details);
 	static void GetNotifManager(class UObject* __WorldContext, class UUI_CFCore_NotificationManager_C** Output);
 	static void GetIsModPaidStatus(const struct FInstallProgressMod& ModInfo, TArray<int64>& PurchasedModsIDs, class UObject* __WorldContext, bool* premium, bool* Is_Freemium, bool* purchased, double* Tier_Price, class FString* Currency_Symbol, struct FPremiumDetailsPlatformData* Platform_Data, struct FPremiumDetailsDiscount* Discount_Data);
-	static class UUI_CFCore_ModPage_C* CreateModPageFromStandalone(int64 Mod_Id, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UObject* __WorldContext);
+	static class UUI_CFCore_ModPage_C* CreateModPageFromStandalone(int64 Mod_ID, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UObject* __WorldContext);
 	static void GetIsModValid(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, bool* IsValid);
 	static void DebugMod(const struct FInstallProgressMod& InstallProgressMod, const class UObject* WorldContextObject, bool Debug_BroadcastEvent, EGameModsEvent Event, bool DebugInstallingUpdating, class UObject* __WorldContext);
 	static void Is_There_Enough_Space_to_Install_Mod(int64 DiskSpace, const struct FInstallProgressMod& ModToInstall, class UObject* __WorldContext, bool* EnoughSpace);
 	static double GetProcessedBarProgress(int32 Amount, ELibraryProgressState InstallProgressState, class UObject* __WorldContext, bool* MaintainPreviousValue);
 	static void GetIsModAvailable(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, bool* Is_Available);
-	static class UUI_CFCore_ModPage_C* CreateModPageFromID(int64 Mod_Id, int32 DrawUIOnZOrder, class UObject* __WorldContext);
-	static class UUI_CFCore_ModPage_C* CreateModPageFromStoreMenu(int64 Mod_Id, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_StoreMenu_C* UI_StoreMenu, class UObject* __WorldContext);
+	static class UUI_CFCore_ModPage_C* CreateModPageFromID(int64 Mod_ID, int32 DrawUIOnZOrder, class UObject* __WorldContext);
+	static class UUI_CFCore_ModPage_C* CreateModPageFromStoreMenu(int64 Mod_ID, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_StoreMenu_C* UI_StoreMenu, class UObject* __WorldContext);
 	static void FormatDownloadNumber(int64 Value, class UObject* __WorldContext, class FText* FinalAmount);
 	static void GetModVersion(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FText* FinalAmount);
 	static void GetDownloadCount(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FText* FinalAmount);
@@ -78,5 +78,6 @@ public:
 		return GetDefaultObjImpl<UBPFL_CFCore_GlobalFunctions_C>();
 	}
 };
+DUMPER7_ASSERTS_UBPFL_CFCore_GlobalFunctions_C;
 
 SDK_NAMESPACE_END

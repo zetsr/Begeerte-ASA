@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Button_SignIn_C::BndEvt__SignIn_Button_20_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_SignIn_C", "BndEvt__SignIn_Button_20_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_SignIn_C", "BndEvt__SignIn_Button_20_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UUI_CFCore_Button_SignIn_C::BndEvt__SignIn_Button_20_K2Node_ComponentBoundE
 
 void UUI_CFCore_Button_SignIn_C::ExecuteUbergraph_UI_CFCore_Button_SignIn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_SignIn_C", "ExecuteUbergraph_UI_CFCore_Button_SignIn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_SignIn_C", "ExecuteUbergraph_UI_CFCore_Button_SignIn", FuncInfo);
 
 	Params::UI_CFCore_Button_SignIn_C_ExecuteUbergraph_UI_CFCore_Button_SignIn Parms{};
 
@@ -57,10 +53,8 @@ void UUI_CFCore_Button_SignIn_C::ExecuteUbergraph_UI_CFCore_Button_SignIn(int32 
 
 void UUI_CFCore_Button_SignIn_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_SignIn_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_SignIn_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Button_SignIn_C_PreConstruct Parms{};
 
@@ -75,10 +69,8 @@ void UUI_CFCore_Button_SignIn_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_Button_SignIn_C::removeMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Button_SignIn_C", "removeMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Button_SignIn_C", "removeMenu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

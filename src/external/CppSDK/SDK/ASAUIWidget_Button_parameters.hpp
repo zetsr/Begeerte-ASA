@@ -17,86 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.UpdateInputIcon
-// 0x00D0 (0x00D0 - 0x0000)
-struct ASAUIWidget_Button_C_UpdateInputIcon final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Vector2DVector2D_ReturnValue;    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00B0)()
-	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.UpdateBracketAndTextColors
-// 0x0090 (0x0090 - 0x0000)
-struct ASAUIWidget_Button_C_UpdateBracketAndTextColors final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0004(0x0014)()
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0028(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x003C(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0050(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0064(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0078(0x0014)()
-	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPressed_ReturnValue;                    // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.SetButtonText
-// 0x0010 (0x0010 - 0x0000)
-struct ASAUIWidget_Button_C_SetButtonText final
-{
-public:
-	class FText                                   TheText;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.SetActive
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUIWidget_Button_C_SetActive final
-{
-public:
-	bool                                          newActive;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUIWidget_Button_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.OnWidgetGamepadActiveChangedBP
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUIWidget_Button_C_OnWidgetGamepadActiveChangedBP final
-{
-public:
-	bool                                          bIsGamepadActive;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUIWidget_Button.ASAUIWidget_Button_C.Fix PS Icons
-// 0x00D0 (0x00D0 - 0x0000)
-struct ASAUIWidget_Button_C_Fix_PS_Icons final
-{
-public:
-	TMap<class FString, class FString>            XSX_ui_names;                                      // 0x0000(0x0050)(Edit, BlueprintVisible)
-	bool                                          CallFunc_BPGetGlobalUIData_bIsPsOrXbUi;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimalGlobalUIData*                    CallFunc_BPGetGlobalUIData_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TMap<class FString, class FString>            K2Node_MakeVariable_MakeVariableOutput;            // 0x0070(0x0050)()
-	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
 // Function ASAUIWidget_Button.ASAUIWidget_Button_C.ExecuteUbergraph_ASAUIWidget_Button
 // 0x0080 (0x0080 - 0x0000)
 struct ASAUIWidget_Button_C_ExecuteUbergraph_ASAUIWidget_Button final
@@ -117,13 +37,101 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0050(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0050(0x0014)(NoDestructor)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue_1;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_ExecuteUbergraph_ASAUIWidget_Button;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.Fix PS Icons
+// 0x00D0 (0x00D0 - 0x0000)
+struct ASAUIWidget_Button_C_Fix_PS_Icons final
+{
+public:
+	TMap<class FString, class FString>            XSX_ui_names;                                      // 0x0000(0x0050)(Edit, BlueprintVisible)
+	bool                                          CallFunc_BPGetGlobalUIData_bIsPsOrXbUi;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimalGlobalUIData*                    CallFunc_BPGetGlobalUIData_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            K2Node_MakeVariable_MakeVariableOutput;            // 0x0070(0x0050)()
+	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_Fix_PS_Icons;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.OnWidgetGamepadActiveChangedBP
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUIWidget_Button_C_OnWidgetGamepadActiveChangedBP final
+{
+public:
+	bool                                          bIsGamepadActive;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_OnWidgetGamepadActiveChangedBP;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUIWidget_Button_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_PreConstruct;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.SetActive
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUIWidget_Button_C_SetActive final
+{
+public:
+	bool                                          newActive;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_SetActive;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.SetButtonText
+// 0x0010 (0x0010 - 0x0000)
+struct ASAUIWidget_Button_C_SetButtonText final
+{
+public:
+	class FText                                   TheText;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_SetButtonText;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.UpdateBracketAndTextColors
+// 0x0090 (0x0090 - 0x0000)
+struct ASAUIWidget_Button_C_UpdateBracketAndTextColors final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0004(0x0014)(NoDestructor)
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0028(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x003C(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0050(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0064(0x0014)(NoDestructor)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0078(0x0014)(NoDestructor)
+	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPressed_ReturnValue;                    // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_UpdateBracketAndTextColors;
+
+// Function ASAUIWidget_Button.ASAUIWidget_Button_C.UpdateInputIcon
+// 0x00D0 (0x00D0 - 0x0000)
+struct ASAUIWidget_Button_C_UpdateInputIcon final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Vector2DVector2D_ReturnValue;    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00B0)()
+	struct FDeprecateSlateVector2D                K2Node_MakeStruct_ImageSize_ImplicitCast;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUIWidget_Button_C_UpdateInputIcon;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

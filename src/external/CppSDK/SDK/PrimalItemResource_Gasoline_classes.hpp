@@ -39,5 +39,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Gasoline_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Gasoline_C;
 
 SDK_NAMESPACE_END

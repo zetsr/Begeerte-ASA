@@ -12,9 +12,10 @@
 
 #include "GameplayTags_structs.hpp"
 #include "SmartObjectsModule_structs.hpp"
-#include "MassEntity_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MassCore_structs.hpp"
 #include "ZoneGraph_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -32,16 +33,17 @@ enum class EMassSmartObjectInteractionStatus : uint8
 };
 
 // ScriptStruct MassSmartObjects.MassSmartObjectUserFragment
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct FMassSmartObjectUserFragment final : public FMassFragment
 {
 public:
 	struct FGameplayTagContainer                  UserTags;                                          // 0x0000(0x0020)(Transient, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                InteractionHandle;                                 // 0x0020(0x0020)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	EMassSmartObjectInteractionStatus             InteractionStatus;                                 // 0x0040(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InteractionCooldownEndTime;                        // 0x0048(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                InteractionHandle;                                 // 0x0020(0x0028)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	EMassSmartObjectInteractionStatus             InteractionStatus;                                 // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InteractionCooldownEndTime;                        // 0x0050(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassSmartObjectUserFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectTimedBehaviorFragment
 // 0x0004 (0x0004 - 0x0000)
@@ -50,31 +52,47 @@ struct FMassSmartObjectTimedBehaviorFragment final : public FMassFragment
 public:
 	float                                         UseTime;                                           // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassSmartObjectTimedBehaviorFragment;
 
-// ScriptStruct MassSmartObjects.MassInActiveSmartObjectsRangeTag
-// 0x0000 (0x0001 - 0x0001)
-struct FMassInActiveSmartObjectsRangeTag final : public FMassTag
-{
-};
-
-// ScriptStruct MassSmartObjects.SmartObjectRegistrationFragment
-// 0x0010 (0x0010 - 0x0000)
-struct FSmartObjectRegistrationFragment final : public FMassFragment
+// ScriptStruct MassSmartObjects.MRUSlot
+// 0x0018 (0x0018 - 0x0000)
+struct FMRUSlot final
 {
 public:
-	TWeakObjectPtr<class USmartObjectDefinition>  Asset;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectHandle                     Handle;                                            // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotHandle                 Slot;                                              // 0x0000(0x0014)(Edit, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RemainingTime;                                     // 0x0014(0x0004)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMRUSlot;
+
+// ScriptStruct MassSmartObjects.MRUSlots
+// 0x0064 (0x0064 - 0x0000)
+struct FMRUSlots final
+{
+public:
+	struct FMRUSlot                               Slots[0x4];                                        // 0x0000(0x0018)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         NumSlots;                                          // 0x0060(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMRUSlots;
+
+// ScriptStruct MassSmartObjects.MRUSlotsFragment
+// 0x0064 (0x0064 - 0x0000)
+struct FMRUSlotsFragment final : public FMassFragment
+{
+public:
+	struct FMRUSlots                              Slots;                                             // 0x0000(0x0064)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMRUSlotsFragment;
 
 // ScriptStruct MassSmartObjects.SmartObjectCandidateSlot
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FSmartObjectCandidateSlot final
 {
 public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0018)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Cost;                                              // 0x0018(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(Edit, Transient, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Cost;                                              // 0x0024(0x0004)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSmartObjectCandidateSlot;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectRequestID
 // 0x0008 (0x0008 - 0x0000)
@@ -83,26 +101,29 @@ struct FMassSmartObjectRequestID final
 public:
 	struct FMassEntityHandle                      Entity;                                            // 0x0000(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FMassSmartObjectRequestID;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectCandidateSlots
-// 0x0088 (0x0088 - 0x0000)
-struct alignas(0x08) FMassSmartObjectCandidateSlots final
+// 0x00A4 (0x00A4 - 0x0000)
+struct alignas(0x04) FMassSmartObjectCandidateSlots final
 {
 public:
-	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         NumSlots;                                          // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xA0];                                       // 0x0000(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         NumSlots;                                          // 0x00A0(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassSmartObjectCandidateSlots;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectRequestResultFragment
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct FMassSmartObjectRequestResultFragment final : public FMassFragment
 {
 public:
-	struct FMassSmartObjectCandidateSlots         Candidates;                                        // 0x0000(0x0088)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bProcessed;                                        // 0x0088(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMassSmartObjectCandidateSlots         Candidates;                                        // 0x0000(0x00A4)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bProcessed;                                        // 0x00A4(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassSmartObjectRequestResultFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectWorldLocationRequestFragment
 // 0x0088 (0x0088 - 0x0000)
@@ -114,6 +135,7 @@ public:
 	struct FGameplayTagContainer                  UserTags;                                          // 0x0020(0x0020)(Transient, NativeAccessSpecifierPublic)
 	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0040(0x0048)(Transient, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassSmartObjectWorldLocationRequestFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectLaneLocationRequestFragment
 // 0x0080 (0x0080 - 0x0000)
@@ -125,12 +147,46 @@ public:
 	struct FGameplayTagContainer                  UserTags;                                          // 0x0018(0x0020)(Transient, NativeAccessSpecifierPublic)
 	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0038(0x0048)(Transient, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassSmartObjectLaneLocationRequestFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectCompletedRequestTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSmartObjectCompletedRequestTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassSmartObjectCompletedRequestTag;
+
+// ScriptStruct MassSmartObjects.FindCandidatesParameters
+// 0x00F8 (0x00F8 - 0x0000)
+struct FFindCandidatesParameters final
+{
+public:
+	struct FGameplayTagContainer                  UserTags;                                          // 0x0000(0x0020)(Transient, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0020(0x0048)(Transient, NativeAccessSpecifierPublic)
+	struct FZoneGraphCompactLaneLocation          LaneLocation;                                      // 0x0068(0x000C)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Location;                                          // 0x0078(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMRUSlots                              MRUSlots;                                          // 0x0090(0x0064)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFindCandidatesParameters;
+
+// ScriptStruct MassSmartObjects.MassInActiveSmartObjectsRangeTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassInActiveSmartObjectsRangeTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassInActiveSmartObjectsRangeTag;
+
+// ScriptStruct MassSmartObjects.SmartObjectRegistrationFragment
+// 0x0018 (0x0018 - 0x0000)
+struct FSmartObjectRegistrationFragment final : public FMassFragment
+{
+public:
+	TWeakObjectPtr<class USmartObjectDefinition>  Asset;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectHandle                     Handle;                                            // 0x0008(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSmartObjectRegistrationFragment;
 
 // ScriptStruct MassSmartObjects.SmartObjectMassEntityUserData
 // 0x0008 (0x0008 - 0x0000)
@@ -139,16 +195,18 @@ struct FSmartObjectMassEntityUserData final
 public:
 	struct FMassEntityHandle                      UserEntity;                                        // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSmartObjectMassEntityUserData;
 
 // ScriptStruct MassSmartObjects.SmartObjectLaneLocation
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct FSmartObjectLaneLocation final
 {
 public:
-	struct FSmartObjectHandle                     ObjectHandle;                                      // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LaneIndex;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceAlongLane;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectHandle                     ObjectHandle;                                      // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LaneIndex;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceAlongLane;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSmartObjectLaneLocation;
 
 // ScriptStruct MassSmartObjects.SmartObjectLaneLocationIndices
 // 0x0010 (0x0010 - 0x0000)
@@ -157,6 +215,7 @@ struct FSmartObjectLaneLocationIndices final
 public:
 	TArray<int32>                                 SmartObjectLaneLocationIndices;                    // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSmartObjectLaneLocationIndices;
 
 // ScriptStruct MassSmartObjects.SmartObjectAnnotationData
 // 0x00D0 (0x00D0 - 0x0000)
@@ -171,5 +230,15 @@ public:
 	TMap<int32, struct FSmartObjectLaneLocationIndices> LaneToLaneLocationIndicesLookup;             // 0x0078(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FSmartObjectAnnotationData;
+
+// ScriptStruct MassSmartObjects.SmartObjectZoneAnnotationsInstanceData
+// 0x0010 (0x0078 - 0x0068)
+struct FSmartObjectZoneAnnotationsInstanceData final : public FActorComponentInstanceData
+{
+public:
+	TArray<struct FSmartObjectAnnotationData>     SmartObjectAnnotations;                            // 0x0068(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSmartObjectZoneAnnotationsInstanceData;
 
 SDK_NAMESPACE_END

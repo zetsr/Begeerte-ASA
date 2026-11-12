@@ -40,11 +40,15 @@ public:
 		return GetDefaultObjImpl<UDefaultModularVehicleInputModifier>();
 	}
 };
+DUMPER7_ASSERTS_UDefaultModularVehicleInputModifier;
 
 // Class ChaosVehiclesCore.VehicleInputProducerBase
-// 0x0000 (0x0028 - 0x0028)
+// 0x0008 (0x0030 - 0x0028)
 class UVehicleInputProducerBase final : public UObject
 {
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -59,5 +63,6 @@ public:
 		return GetDefaultObjImpl<UVehicleInputProducerBase>();
 	}
 };
+DUMPER7_ASSERTS_UVehicleInputProducerBase;
 
 SDK_NAMESPACE_END

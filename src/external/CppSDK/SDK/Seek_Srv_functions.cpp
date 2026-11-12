@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void USeek_Srv_C::ExecuteUbergraph_Seek_Srv(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Seek_Srv_C", "ExecuteUbergraph_Seek_Srv");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Seek_Srv_C", "ExecuteUbergraph_Seek_Srv", FuncInfo);
 
 	Params::Seek_Srv_C_ExecuteUbergraph_Seek_Srv Parms{};
 
@@ -43,10 +41,8 @@ void USeek_Srv_C::ExecuteUbergraph_Seek_Srv(int32 EntryPoint)
 
 void USeek_Srv_C::ReceiveActivation(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Seek_Srv_C", "ReceiveActivation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Seek_Srv_C", "ReceiveActivation", FuncInfo);
 
 	Params::Seek_Srv_C_ReceiveActivation Parms{};
 

@@ -17,14 +17,14 @@
 SDK_NAMESPACE_START
 
 // Function USDStage.UsdDynamicBindingResolverLibrary.ResolveWithStageActor
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FMovieSceneDynamicBindingResolveParams&Params_0                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // const class FString&                    StageActorIDNameFilter                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    RootLayerFilter                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    PrimPath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
 struct FMovieSceneDynamicBindingResolveResult UUsdDynamicBindingResolverLibrary::ResolveWithStageActor(class UObject* WorldContextObject, const struct FMovieSceneDynamicBindingResolveParams& Params_0, const class FString& StageActorIDNameFilter, const class FString& RootLayerFilter, const class FString& PrimPath)
 {
@@ -52,31 +52,6 @@ struct FMovieSceneDynamicBindingResolveResult UUsdDynamicBindingResolverLibrary:
 }
 
 
-// Function USDStage.UsdStageActor.GetLevelSequence
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// class ULevelSequence*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULevelSequence* AUsdStageActor::GetLevelSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UsdStageActor", "GetLevelSequence");
-
-	Params::UsdStageActor_GetLevelSequence Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function USDStage.UsdStageActor.NewStage
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
@@ -97,7 +72,7 @@ void AUsdStageActor::NewStage()
 
 
 // Function USDStage.UsdStageActor.SetAssetCache
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public)
 // Parameters:
 // class UUsdAssetCache2*                  NewCache                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -147,7 +122,7 @@ void AUsdStageActor::SetBlockedPrefixFilters(const TArray<class FString>& NewFil
 
 
 // Function USDStage.UsdStageActor.SetCollapseTopLevelPointInstancers
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public)
 // Parameters:
 // bool                                    bCollapse                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -236,6 +211,31 @@ void AUsdStageActor::SetCollectOnComponents(bool bNewCollectValue)
 	Params::UsdStageActor_SetCollectOnComponents Parms{};
 
 	Parms.bNewCollectValue = bNewCollectValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function USDStage.UsdStageActor.SetFallbackCollisionType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EUsdCollisionType                       NewCollisionType                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AUsdStageActor::SetFallbackCollisionType(EUsdCollisionType NewCollisionType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdStageActor", "SetFallbackCollisionType");
+
+	Params::UsdStageActor_SetFallbackCollisionType Parms{};
+
+	Parms.NewCollisionType = NewCollisionType;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -522,7 +522,7 @@ void AUsdStageActor::SetRenderContext(const class FName& NewRenderContext)
 
 
 // Function USDStage.UsdStageActor.SetReuseIdenticalAssets
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public)
 // Parameters:
 // bool                                    bReuse                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -815,6 +815,31 @@ class FString AUsdStageActor::GetIsolatedRootLayer() const
 		Func = Class->GetFunction("UsdStageActor", "GetIsolatedRootLayer");
 
 	Params::UsdStageActor_GetIsolatedRootLayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function USDStage.UsdStageActor.GetLevelSequence
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class ULevelSequence*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevelSequence* AUsdStageActor::GetLevelSequence() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UsdStageActor", "GetLevelSequence");
+
+	Params::UsdStageActor_GetLevelSequence Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function DataflowSimulation.DataflowSimulationActor.OnDataflowSimulationEnabledChanged
+// 0x0001 (0x0001 - 0x0000)
+struct DataflowSimulationActor_OnDataflowSimulationEnabledChanged final
+{
+public:
+	bool                                          bSimulationEnabled;                                // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DataflowSimulationActor_OnDataflowSimulationEnabledChanged;
+
 // Function DataflowSimulation.DataflowSimulationActor.PostDataflowSimulationTick
 // 0x0008 (0x0008 - 0x0000)
 struct DataflowSimulationActor_PostDataflowSimulationTick final
@@ -22,6 +31,7 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DataflowSimulationActor_PostDataflowSimulationTick;
 
 // Function DataflowSimulation.DataflowSimulationActor.PreDataflowSimulationTick
 // 0x0008 (0x0008 - 0x0000)
@@ -31,6 +41,7 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DataflowSimulationActor_PreDataflowSimulationTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

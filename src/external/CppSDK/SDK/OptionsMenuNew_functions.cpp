@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UOptionsMenuNew_C::ExecuteUbergraph_OptionsMenuNew(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "ExecuteUbergraph_OptionsMenuNew");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "ExecuteUbergraph_OptionsMenuNew", FuncInfo);
 
 	Params::OptionsMenuNew_C_ExecuteUbergraph_OptionsMenuNew Parms{};
 
@@ -43,10 +41,8 @@ void UOptionsMenuNew_C::ExecuteUbergraph_OptionsMenuNew(int32 EntryPoint)
 
 class USizeBox* UOptionsMenuNew_C::GetSizeboxForExtraHandheldScaling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "GetSizeboxForExtraHandheldScaling");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "GetSizeboxForExtraHandheldScaling", FuncInfo);
 
 	Params::OptionsMenuNew_C_GetSizeboxForExtraHandheldScaling Parms{};
 
@@ -63,10 +59,8 @@ class USizeBox* UOptionsMenuNew_C::GetSizeboxForExtraHandheldScaling()
 
 class UWidget* UOptionsMenuNew_C::GetWidgetToScaleForHandheld()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "GetWidgetToScaleForHandheld");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "GetWidgetToScaleForHandheld", FuncInfo);
 
 	Params::OptionsMenuNew_C_GetWidgetToScaleForHandheld Parms{};
 
@@ -83,10 +77,8 @@ class UWidget* UOptionsMenuNew_C::GetWidgetToScaleForHandheld()
 
 void UOptionsMenuNew_C::ShowJoyconText(ESlateVisibility show)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "ShowJoyconText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "ShowJoyconText", FuncInfo);
 
 	Params::OptionsMenuNew_C_ShowJoyconText Parms{};
 
@@ -103,10 +95,8 @@ void UOptionsMenuNew_C::ShowJoyconText(ESlateVisibility show)
 
 void UOptionsMenuNew_C::ShowProText(ESlateVisibility Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "ShowProText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "ShowProText", FuncInfo);
 
 	Params::OptionsMenuNew_C_ShowProText Parms{};
 
@@ -124,10 +114,8 @@ void UOptionsMenuNew_C::ShowProText(ESlateVisibility Visibility_0)
 
 void UOptionsMenuNew_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuNew_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenuNew_C", "Tick", FuncInfo);
 
 	Params::OptionsMenuNew_C_Tick Parms{};
 

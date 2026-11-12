@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass EggIncubatorInterface.EggIncubatorInterface_C
-// 0x0000 (0x0000 - 0x0000)
-class IEggIncubatorInterface_C final
+// 0x0008 (0x0008 - 0x0000)
+class IEggIncubatorInterface_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetItemDisplaySlot(class UPrimalItem* ForItem, int32* InSlot, bool* SlotFound);
 	void I_CanEggBeHatched(class UPrimalItem* EggItem, bool* bIsHatchable);
@@ -48,5 +51,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IEggIncubatorInterface_C;
 
 SDK_NAMESPACE_END

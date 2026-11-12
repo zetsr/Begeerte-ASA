@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "HeadMountedDisplay_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -27,6 +27,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_HandKeypointConversion_Conv_HandKeypointToInt32;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetHandJointPosition
 // 0x0020 (0x0020 - 0x0000)
@@ -38,6 +39,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetHandJointPosition;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetParameterValue
 // 0x0010 (0x0010 - 0x0000)
@@ -49,6 +51,7 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetParameterValue;
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetAssociatedPlayerIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -57,6 +60,7 @@ struct MotionControllerComponent_SetAssociatedPlayerIndex final
 public:
 	int32                                         NewPlayer;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_SetAssociatedPlayerIndex;
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetTrackingMotionSource
 // 0x0008 (0x0008 - 0x0000)
@@ -65,6 +69,7 @@ struct MotionControllerComponent_SetTrackingMotionSource final
 public:
 	class FName                                   NewSource;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_SetTrackingMotionSource;
 
 // Function HeadMountedDisplay.MotionControllerComponent.SetTrackingSource
 // 0x0001 (0x0001 - 0x0000)
@@ -73,6 +78,7 @@ struct MotionControllerComponent_SetTrackingSource final
 public:
 	EControllerHand                               NewSource;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_SetTrackingSource;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetAngularVelocity
 // 0x0020 (0x0020 - 0x0000)
@@ -83,6 +89,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetAngularVelocity;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetLinearAcceleration
 // 0x0020 (0x0020 - 0x0000)
@@ -93,6 +100,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetLinearAcceleration;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetLinearVelocity
 // 0x0020 (0x0020 - 0x0000)
@@ -103,6 +111,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetLinearVelocity;
 
 // Function HeadMountedDisplay.MotionControllerComponent.GetTrackingSource
 // 0x0001 (0x0001 - 0x0000)
@@ -111,6 +120,7 @@ struct MotionControllerComponent_GetTrackingSource final
 public:
 	EControllerHand                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_GetTrackingSource;
 
 // Function HeadMountedDisplay.MotionControllerComponent.IsTracked
 // 0x0001 (0x0001 - 0x0000)
@@ -119,6 +129,7 @@ struct MotionControllerComponent_IsTracked final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_MotionControllerComponent_IsTracked;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

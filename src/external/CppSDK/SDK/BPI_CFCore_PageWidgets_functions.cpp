@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.UpdateSearch
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      SearchInput                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void IBPI_CFCore_PageWidgets_C::UpdateSearch(const class FText& SearchInput)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_CFCore_PageWidgets_C", "UpdateSearch");
-
-	Params::BPI_CFCore_PageWidgets_C_UpdateSearch Parms{};
-
-	Parms.SearchInput = std::move(SearchInput);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.OnSearch
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -43,14 +23,30 @@ void IBPI_CFCore_PageWidgets_C::UpdateSearch(const class FText& SearchInput)
 
 void IBPI_CFCore_PageWidgets_C::OnSearch(const class FText& Search_Input)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_CFCore_PageWidgets_C", "OnSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "BPI_CFCore_PageWidgets_C", "OnSearch", FuncInfo);
 
 	Params::BPI_CFCore_PageWidgets_C_OnSearch Parms{};
 
 	Parms.Search_Input = std::move(Search_Input);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.UpdateSearch
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      SearchInput                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void IBPI_CFCore_PageWidgets_C::UpdateSearch(const class FText& SearchInput)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "BPI_CFCore_PageWidgets_C", "UpdateSearch", FuncInfo);
+
+	Params::BPI_CFCore_PageWidgets_C_UpdateSearch Parms{};
+
+	Parms.SearchInput = std::move(SearchInput);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

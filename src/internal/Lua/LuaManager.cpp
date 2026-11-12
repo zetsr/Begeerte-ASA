@@ -353,11 +353,11 @@ void LuaManager::BindSDK() {
         );
 
     // --- 注册 UNetConnection 类 ---
-    m_lua->new_usertype<SDK::UNetConnection>("UNetConnection",
+    // m_lua->new_usertype<SDK::UNetConnection>("UNetConnection",
         // 绑定我们封装的成员函数
-        "GetFirstIP", &SDK::UNetConnection::GetFirstIP,
-        "GetPort", &SDK::UNetConnection::GetPort
-        );
+        // "GetFirstIP", &SDK::UNetConnection::GetFirstIP,
+        // "GetPort", &SDK::UNetConnection::GetPort
+        // );
 
     // --- 注册 UNetDriver 类 ---
     m_lua->new_usertype<SDK::UNetDriver>("UNetDriver",

@@ -13,6 +13,17 @@
 
 SDK_NAMESPACE_START
 
+// Enum InterchangeFactoryNodes.EInterchangeGroomCacheImportType
+// NumValues: 0x0005
+enum class EInterchangeGroomCacheImportType : uint8
+{
+	None                                     = 0,
+	Strands                                  = 1,
+	Guides                                   = 2,
+	All                                      = 3,
+	EInterchangeGroomCacheImportType_MAX     = 4,
+};
+
 // Enum InterchangeFactoryNodes.EInterchangeSkeletalMeshContentType
 // NumValues: 0x0004
 enum class EInterchangeSkeletalMeshContentType : uint8
@@ -21,6 +32,35 @@ enum class EInterchangeSkeletalMeshContentType : uint8
 	Geometry                                 = 1,
 	SkinningWeights                          = 2,
 	MAX                                      = 3,
+};
+
+// Enum InterchangeFactoryNodes.EInterchangeNaniteShapePreservation
+// NumValues: 0x0004
+enum class EInterchangeNaniteShapePreservation : uint8
+{
+	None                                     = 0,
+	PreserveArea                             = 1,
+	Voxelize                                 = 2,
+	EInterchangeNaniteShapePreservation_MAX  = 3,
+};
+
+// Enum InterchangeFactoryNodes.EInterchangeNaniteGenerateFallback
+// NumValues: 0x0003
+enum class EInterchangeNaniteGenerateFallback : uint8
+{
+	PlatformDefault                          = 0,
+	Enabled                                  = 1,
+	EInterchangeNaniteGenerateFallback_MAX   = 2,
+};
+
+// Enum InterchangeFactoryNodes.EInterchangeNaniteFallbackTarget
+// NumValues: 0x0004
+enum class EInterchangeNaniteFallbackTarget : uint8
+{
+	Auto                                     = 0,
+	PercentTriangles                         = 1,
+	RelativeError                            = 2,
+	EInterchangeNaniteFallbackTarget_MAX     = 3,
 };
 
 SDK_NAMESPACE_END

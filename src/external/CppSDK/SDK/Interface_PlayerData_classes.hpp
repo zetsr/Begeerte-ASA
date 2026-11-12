@@ -16,9 +16,12 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Interface_PlayerData.Interface_PlayerData_C
-// 0x0000 (0x0000 - 0x0000)
-class IInterface_PlayerData_C final
+// 0x0008 (0x0008 - 0x0000)
+class IInterface_PlayerData_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void Interface_PlayerData_Progress_Abb_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success);
 	void Interface_PlayerData_Progress_Crimson_Sigil_Count(uint8 Newly_Added_Sigil_Count, class AShooterPlayerController* Player_Controller, bool* success);
@@ -46,5 +49,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IInterface_PlayerData_C;
 
 SDK_NAMESPACE_END

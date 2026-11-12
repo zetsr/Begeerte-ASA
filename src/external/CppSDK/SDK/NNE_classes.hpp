@@ -15,32 +15,13 @@
 
 SDK_NAMESPACE_START
 
-// Class NNE.NNEModelData
-// 0x00E8 (0x0110 - 0x0028)
-class UNNEModelData final : public UObject
-{
-public:
-	uint8                                         Pad_28[0xE8];                                      // 0x0028(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("NNEModelData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"NNEModelData")
-	}
-	static class UNNEModelData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNNEModelData>();
-	}
-};
-
 // Class NNE.NNERuntime
-// 0x0000 (0x0000 - 0x0000)
-class INNERuntime final
+// 0x0008 (0x0008 - 0x0000)
+class INNERuntime
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -64,11 +45,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_INNERuntime;
 
 // Class NNE.NNERuntimeCPU
-// 0x0000 (0x0000 - 0x0000)
-class INNERuntimeCPU final
+// 0x0008 (0x0008 - 0x0000)
+class INNERuntimeCPU
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -92,11 +77,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_INNERuntimeCPU;
 
 // Class NNE.NNERuntimeGPU
-// 0x0000 (0x0000 - 0x0000)
-class INNERuntimeGPU final
+// 0x0008 (0x0008 - 0x0000)
+class INNERuntimeGPU
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -120,11 +109,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_INNERuntimeGPU;
 
 // Class NNE.NNERuntimeNPU
-// 0x0000 (0x0000 - 0x0000)
-class INNERuntimeNPU final
+// 0x0008 (0x0008 - 0x0000)
+class INNERuntimeNPU
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -148,11 +141,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_INNERuntimeNPU;
 
 // Class NNE.NNERuntimeRDG
-// 0x0000 (0x0000 - 0x0000)
-class INNERuntimeRDG final
+// 0x0008 (0x0008 - 0x0000)
+class INNERuntimeRDG
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -176,5 +173,29 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_INNERuntimeRDG;
+
+// Class NNE.NNEModelData
+// 0x0138 (0x0160 - 0x0028)
+class UNNEModelData final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x138];                                     // 0x0028(0x0138)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("NNEModelData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NNEModelData")
+	}
+	static class UNNEModelData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNNEModelData>();
+	}
+};
+DUMPER7_ASSERTS_UNNEModelData;
 
 SDK_NAMESPACE_END

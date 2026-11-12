@@ -106,6 +106,33 @@ void AGameplayDebuggerCategoryReplicator::ServerSendCategoryInputEvent(int32 cat
 }
 
 
+// Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendCategoryNameInputEvent
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// class FName                             CategoryName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   HandlerId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AGameplayDebuggerCategoryReplicator::ServerSendCategoryNameInputEvent(class FName CategoryName, int32 HandlerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayDebuggerCategoryReplicator", "ServerSendCategoryNameInputEvent");
+
+	Params::GameplayDebuggerCategoryReplicator_ServerSendCategoryNameInputEvent Parms{};
+
+	Parms.CategoryName = CategoryName;
+	Parms.HandlerId = HandlerId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSendExtensionInputEvent
 // (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
@@ -149,6 +176,33 @@ void AGameplayDebuggerCategoryReplicator::ServerSetCategoryEnabled(int32 categor
 	Params::GameplayDebuggerCategoryReplicator_ServerSetCategoryEnabled Parms{};
 
 	Parms.categoryId = categoryId;
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayDebugger.GameplayDebuggerCategoryReplicator.ServerSetCategoryNameEnabled
+// (RequiredAPI, Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// class FName                             CategoryName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AGameplayDebuggerCategoryReplicator::ServerSetCategoryNameEnabled(class FName CategoryName, bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayDebuggerCategoryReplicator", "ServerSetCategoryNameEnabled");
+
+	Params::GameplayDebuggerCategoryReplicator_ServerSetCategoryNameEnabled Parms{};
+
+	Parms.CategoryName = CategoryName;
 	Parms.bEnable = bEnable;
 
 	auto Flgs = Func->FunctionFlags;

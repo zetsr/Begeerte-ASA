@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "MassCommon_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "MassCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "MassCommon_structs.hpp"
 #include "Engine_structs.hpp"
-#include "MassEntity_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -51,6 +52,7 @@ enum class EAgentComponentState : uint8
 struct FMassActorSpawnRequestHandle final : public FIndexedHandleBase
 {
 };
+DUMPER7_ASSERTS_FMassActorSpawnRequestHandle;
 
 // ScriptStruct MassActors.MassActorSpawnRequest
 // 0x00D0 (0x00D0 - 0x0000)
@@ -63,14 +65,16 @@ public:
 	class AActor*                                 SpawnedActor;                                      // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_A8[0x28];                                      // 0x00A8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassActorSpawnRequest;
 
 // ScriptStruct MassActors.MassGuidFragment
-// 0x000F (0x0010 - 0x0001)
-struct alignas(0x04) FMassGuidFragment final : public FObjectWrapperFragment
+// 0x0010 (0x0010 - 0x0000)
+struct FMassGuidFragment final : public FObjectWrapperFragment
 {
 public:
-	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  Guid;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassGuidFragment;
 
 // ScriptStruct MassActors.MassActorInstanceFragment
 // 0x0020 (0x0020 - 0x0000)
@@ -79,15 +83,17 @@ struct FMassActorInstanceFragment final : public FMassFragment
 public:
 	struct FActorInstanceHandle                   Handle;                                            // 0x0000(0x0020)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMassActorInstanceFragment;
 
 // ScriptStruct MassActors.MassActorFragment
-// 0x000B (0x000C - 0x0001)
+// 0x000C (0x000C - 0x0000)
 struct FMassActorFragment final : public FObjectWrapperFragment
 {
 public:
 	TWeakObjectPtr<class AActor>                  Actor;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_8[0x4];                                        // 0x0008(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassActorFragment;
 
 // ScriptStruct MassActors.MassAgentInitializationQueue
 // 0x0010 (0x0010 - 0x0000)
@@ -96,85 +102,105 @@ struct FMassAgentInitializationQueue final
 public:
 	TArray<class UMassAgentComponent*>            AgentComponents;                                   // 0x0000(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FMassAgentInitializationQueue;
 
 // ScriptStruct MassActors.CapsuleComponentWrapperFragment
-// 0x0007 (0x0008 - 0x0001)
+// 0x0008 (0x0008 - 0x0000)
 struct alignas(0x04) FCapsuleComponentWrapperFragment final : public FObjectWrapperFragment
 {
 public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCapsuleComponentWrapperFragment;
 
 // ScriptStruct MassActors.MassCapsuleTransformCopyToMassTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCapsuleTransformCopyToMassTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCapsuleTransformCopyToMassTag;
 
 // ScriptStruct MassActors.MassCapsuleTransformCopyToActorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCapsuleTransformCopyToActorTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCapsuleTransformCopyToActorTag;
 
 // ScriptStruct MassActors.CharacterMovementComponentWrapperFragment
-// 0x0007 (0x0008 - 0x0001)
+// 0x0008 (0x0008 - 0x0000)
 struct alignas(0x04) FCharacterMovementComponentWrapperFragment final : public FObjectWrapperFragment
 {
 public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCharacterMovementComponentWrapperFragment;
 
 // ScriptStruct MassActors.MassCharacterMovementCopyToMassTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCharacterMovementCopyToMassTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCharacterMovementCopyToMassTag;
 
 // ScriptStruct MassActors.MassCharacterMovementCopyToActorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCharacterMovementCopyToActorTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCharacterMovementCopyToActorTag;
 
 // ScriptStruct MassActors.MassCharacterOrientationCopyToMassTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCharacterOrientationCopyToMassTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCharacterOrientationCopyToMassTag;
 
 // ScriptStruct MassActors.MassCharacterOrientationCopyToActorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCharacterOrientationCopyToActorTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassCharacterOrientationCopyToActorTag;
 
 // ScriptStruct MassActors.MassSceneComponentWrapperFragment
-// 0x0007 (0x0008 - 0x0001)
+// 0x0008 (0x0008 - 0x0000)
 struct alignas(0x04) FMassSceneComponentWrapperFragment final : public FObjectWrapperFragment
 {
 public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMassSceneComponentWrapperFragment;
 
 // ScriptStruct MassActors.MassSceneComponentLocationCopyToMassTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSceneComponentLocationCopyToMassTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassSceneComponentLocationCopyToMassTag;
 
 // ScriptStruct MassActors.MassSceneComponentLocationCopyToActorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSceneComponentLocationCopyToActorTag final : public FMassTag
 {
 };
+DUMPER7_ASSERTS_FMassSceneComponentLocationCopyToActorTag;
+
+// ScriptStruct MassActors.MassSceneComponentVelocityCopyToMassTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassSceneComponentVelocityCopyToMassTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassSceneComponentVelocityCopyToMassTag;
 
 // ScriptStruct MassActors.DataFragment_BehaviorTreeComponentWrapper
-// 0x0007 (0x0008 - 0x0001)
+// 0x0008 (0x0008 - 0x0000)
 struct alignas(0x04) FDataFragment_BehaviorTreeComponentWrapper final : public FObjectWrapperFragment
 {
 public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FDataFragment_BehaviorTreeComponentWrapper;
 
 SDK_NAMESPACE_END

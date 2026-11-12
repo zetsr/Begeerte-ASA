@@ -18,10 +18,10 @@ SDK_NAMESPACE_START
 
 // Class CsvMetrics.CsvActorCountMetric
 // 0x0060 (0x0088 - 0x0028)
-class UCsvActorCountMetric final : public UWorldMetricInterface
+class UCsvActorCountMetric final : public UWorldMetricInterface, public IWorldMetricsActorTrackerSubscriber
 {
 public:
-	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x58];                                      // 0x0030(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -37,14 +37,15 @@ public:
 		return GetDefaultObjImpl<UCsvActorCountMetric>();
 	}
 };
+DUMPER7_ASSERTS_UCsvActorCountMetric;
 
 // Class CsvMetrics.CsvMetricsSubsystem
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x0068 - 0x0038)
 class UCsvMetricsSubsystem final : public UWorldSubsystem
 {
 public:
-	TArray<TSubclassOf<class UWorldMetricInterface>> MetricClasses;                                  // 0x0030(0x0010)(ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<TSubclassOf<class UWorldMetricInterface>> MetricClasses;                                  // 0x0038(0x0010)(ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -60,5 +61,6 @@ public:
 		return GetDefaultObjImpl<UCsvMetricsSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UCsvMetricsSubsystem;
 
 SDK_NAMESPACE_END

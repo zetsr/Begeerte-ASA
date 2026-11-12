@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ModPage_C::ActionSwitch(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ActionSwitch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ActionSwitch", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_ActionSwitch Parms{};
 
@@ -45,10 +43,8 @@ void UUI_CFCore_ModPage_C::ActionSwitch(const struct FKey& Key, EViewState State
 
 void UUI_CFCore_ModPage_C::AddScreenshotToList(const class UTexture2DDynamic*& ImageToAdd)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "AddScreenshotToList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "AddScreenshotToList", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_AddScreenshotToList Parms{};
 
@@ -65,10 +61,8 @@ void UUI_CFCore_ModPage_C::AddScreenshotToList(const class UTexture2DDynamic*& I
 
 void UUI_CFCore_ModPage_C::Animation_ScreenshotLoaded(class UImage* IMG_Screenshot_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Animation_ScreenshotLoaded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Animation_ScreenshotLoaded", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Animation_ScreenshotLoaded Parms{};
 
@@ -85,10 +79,8 @@ void UUI_CFCore_ModPage_C::Animation_ScreenshotLoaded(class UImage* IMG_Screensh
 
 void UUI_CFCore_ModPage_C::Animation_SwapImage(class UImage* IMG_Screenshot_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Animation_SwapImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Animation_SwapImage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Animation_SwapImage Parms{};
 
@@ -105,10 +97,8 @@ void UUI_CFCore_ModPage_C::Animation_SwapImage(class UImage* IMG_Screenshot_0)
 
 void UUI_CFCore_ModPage_C::Animation_UpdateThumbnail(class UImage* IMG_Mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Animation_UpdateThumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Animation_UpdateThumbnail", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Animation_UpdateThumbnail Parms{};
 
@@ -123,10 +113,8 @@ void UUI_CFCore_ModPage_C::Animation_UpdateThumbnail(class UImage* IMG_Mod)
 
 void UUI_CFCore_ModPage_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +125,8 @@ void UUI_CFCore_ModPage_C::ApplyThemeSettingsToAll()
 
 void UUI_CFCore_ModPage_C::AttemptDownloadNextScreenshot()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "AttemptDownloadNextScreenshot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "AttemptDownloadNextScreenshot", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +137,8 @@ void UUI_CFCore_ModPage_C::AttemptDownloadNextScreenshot()
 
 void UUI_CFCore_ModPage_C::BindControllerAction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BindControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BindControllerAction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,10 +149,8 @@ void UUI_CFCore_ModPage_C::BindControllerAction()
 
 void UUI_CFCore_ModPage_C::BndEvt__GameSlot_InstallButton_K2Node_ComponentBoundEvent_2_OnClickUpdate_B__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__GameSlot_InstallButton_K2Node_ComponentBoundEvent_2_OnClickUpdate_B__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__GameSlot_InstallButton_K2Node_ComponentBoundEvent_2_OnClickUpdate_B__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +161,8 @@ void UUI_CFCore_ModPage_C::BndEvt__GameSlot_InstallButton_K2Node_ComponentBoundE
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +173,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +185,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_Button_208_K2Node_ComponentBoundEvent
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_GameImages_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_GameImages_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_GameImages_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +197,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_GameImages_K2Node_ComponentBoundEvent
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_ImageZoom_B_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_ImageZoom_B_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_ImageZoom_B_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +209,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_ImageZoom_B_K2Node_ComponentBoundEven
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_InstallButton_K2Node_ComponentBoundEvent_3_OnClickInstall_B__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_InstallButton_K2Node_ComponentBoundEvent_3_OnClickInstall_B__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_InstallButton_K2Node_ComponentBoundEvent_3_OnClickInstall_B__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +221,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_InstallButton_K2Node_ComponentBoundEv
 
 void UUI_CFCore_ModPage_C::BndEvt__ModPage_Report_B_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__ModPage_Report_B_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__ModPage_Report_B_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -263,10 +233,8 @@ void UUI_CFCore_ModPage_C::BndEvt__ModPage_Report_B_K2Node_ComponentBoundEvent_5
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -277,10 +245,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2No
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_17_OnClickedTryAgain__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_17_OnClickedTryAgain__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2Node_ComponentBoundEvent_17_OnClickedTryAgain__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -291,10 +257,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_CFCore_FailedToLoad_K2No
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_Loading_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_Loading_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_CFCore_ModPage_UI_Loading_K2Node_ComponentBoundEvent_16_OnClickedReturn__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,10 +269,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_CFCore_ModPage_UI_Loading_K2Node_Component
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_Button_Comments_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_Button_Comments_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_Button_Comments_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -319,10 +281,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_Button_Comments_K2Node_ComponentBo
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Blue_C_0_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Blue_C_0_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Blue_C_0_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -333,10 +293,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Blue_C_0_K2Node_Comp
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Blue_K2Node_ComponentBoundEvent_6_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Blue_K2Node_ComponentBoundEvent_6_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Blue_K2Node_ComponentBoundEvent_6_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -347,10 +305,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Blue_K2Node_Componen
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Global_Purchase_K2Node_ComponentBoundEvent_14_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Global_Purchase_K2Node_ComponentBoundEvent_14_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Global_Purchase_K2Node_ComponentBoundEvent_14_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -361,10 +317,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Global_Purchase_K2No
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -375,10 +329,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Ark_Global_Update_K2Node
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Cancel_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -389,10 +341,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Cancel_K2Node_ComponentB
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Player_PlayPause_K2Node_ComponentBoundEvent_21_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Player_PlayPause_K2Node_ComponentBoundEvent_21_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_Player_PlayPause_K2Node_ComponentBoundEvent_21_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -403,10 +353,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_Player_PlayPause_K2Node_
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_K2Node_ComponentBoundEvent_12_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_K2Node_ComponentBoundEvent_12_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_K2Node_ComponentBoundEvent_12_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -417,10 +365,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_K2N
 
 void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_Next_K2Node_ComponentBoundEvent_13_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_Next_K2Node_ComponentBoundEvent_13_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_Next_K2Node_ComponentBoundEvent_13_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -433,10 +379,8 @@ void UUI_CFCore_ModPage_C::BndEvt__UI_ModPage_UI_Button_ScreenshotNavigation_Nex
 
 bool UUI_CFCore_ModPage_C::BPCycleHighlighted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BPCycleHighlighted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BPCycleHighlighted", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_BPCycleHighlighted Parms{};
 
@@ -453,10 +397,8 @@ bool UUI_CFCore_ModPage_C::BPCycleHighlighted()
 
 bool UUI_CFCore_ModPage_C::BPEscapeClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BPEscapeClosed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BPEscapeClosed", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_BPEscapeClosed Parms{};
 
@@ -474,10 +416,8 @@ bool UUI_CFCore_ModPage_C::BPEscapeClosed()
 
 bool UUI_CFCore_ModPage_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_BPGamepadReleased Parms{};
 
@@ -496,10 +436,8 @@ bool UUI_CFCore_ModPage_C::BPGamepadReleased(const struct FKey& theKey)
 
 bool UUI_CFCore_ModPage_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_BPHighlightWidgetOnStart Parms{};
 
@@ -517,10 +455,8 @@ bool UUI_CFCore_ModPage_C::BPHighlightWidgetOnStart()
 
 void UUI_CFCore_ModPage_C::ButtonCall(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ButtonCall");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ButtonCall", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_ButtonCall Parms{};
 
@@ -539,10 +475,8 @@ void UUI_CFCore_ModPage_C::ButtonCall(const struct FKey& Key, EViewState State)
 
 bool UUI_CFCore_ModPage_C::CanGoToNextImage(int32 FromPage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CanGoToNextImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CanGoToNextImage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CanGoToNextImage Parms{};
 
@@ -562,10 +496,8 @@ bool UUI_CFCore_ModPage_C::CanGoToNextImage(int32 FromPage)
 
 bool UUI_CFCore_ModPage_C::CanGoToPreviousImage(int32 FromPage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CanGoToPreviousImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CanGoToPreviousImage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CanGoToPreviousImage Parms{};
 
@@ -585,10 +517,8 @@ bool UUI_CFCore_ModPage_C::CanGoToPreviousImage(int32 FromPage)
 
 class UWidget* UUI_CFCore_ModPage_C::CloseBNavigation(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CloseBNavigation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CloseBNavigation", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CloseBNavigation Parms{};
 
@@ -605,10 +535,8 @@ class UWidget* UUI_CFCore_ModPage_C::CloseBNavigation(EUINavigation Navigation_0
 
 void UUI_CFCore_ModPage_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -621,10 +549,8 @@ void UUI_CFCore_ModPage_C::Construct()
 
 void UUI_CFCore_ModPage_C::CustomEvent_0(const class FString& Description)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CustomEvent_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CustomEvent_0", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CustomEvent_0 Parms{};
 
@@ -641,10 +567,8 @@ void UUI_CFCore_ModPage_C::CustomEvent_0(const class FString& Description)
 
 void UUI_CFCore_ModPage_C::CustomEvent_3(const class FString& temp_user_token)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CustomEvent_3");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CustomEvent_3", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CustomEvent_3 Parms{};
 
@@ -661,10 +585,8 @@ void UUI_CFCore_ModPage_C::CustomEvent_3(const class FString& temp_user_token)
 
 void UUI_CFCore_ModPage_C::CustomEvent_4(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "CustomEvent_4");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "CustomEvent_4", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_CustomEvent_4 Parms{};
 
@@ -681,10 +603,8 @@ void UUI_CFCore_ModPage_C::CustomEvent_4(const struct FCFCoreError& Error)
 
 void UUI_CFCore_ModPage_C::DebugScreenshotImageIndexing(bool Increase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DebugScreenshotImageIndexing");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DebugScreenshotImageIndexing", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_DebugScreenshotImageIndexing Parms{};
 
@@ -699,10 +619,8 @@ void UUI_CFCore_ModPage_C::DebugScreenshotImageIndexing(bool Increase)
 
 void UUI_CFCore_ModPage_C::DestroyPurchaseResponseHandle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DestroyPurchaseResponseHandle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DestroyPurchaseResponseHandle", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -713,10 +631,8 @@ void UUI_CFCore_ModPage_C::DestroyPurchaseResponseHandle()
 
 void UUI_CFCore_ModPage_C::DestroyUICommentsPrompt()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DestroyUICommentsPrompt");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DestroyUICommentsPrompt", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -727,10 +643,8 @@ void UUI_CFCore_ModPage_C::DestroyUICommentsPrompt()
 
 void UUI_CFCore_ModPage_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -741,10 +655,8 @@ void UUI_CFCore_ModPage_C::Destruct()
 
 void UUI_CFCore_ModPage_C::DisableAllButtonsForDestruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DisableAllButtonsForDestruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DisableAllButtonsForDestruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -755,10 +667,8 @@ void UUI_CFCore_ModPage_C::DisableAllButtonsForDestruct()
 
 void UUI_CFCore_ModPage_C::DisablePurchaseButtonTemporarily()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DisablePurchaseButtonTemporarily");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DisablePurchaseButtonTemporarily", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -769,10 +679,8 @@ void UUI_CFCore_ModPage_C::DisablePurchaseButtonTemporarily()
 
 void UUI_CFCore_ModPage_C::DownloadAllScreenshots()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DownloadAllScreenshots");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DownloadAllScreenshots", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -783,10 +691,8 @@ void UUI_CFCore_ModPage_C::DownloadAllScreenshots()
 
 void UUI_CFCore_ModPage_C::DownloadThumbnailManually()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "DownloadThumbnailManually");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "DownloadThumbnailManually", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -797,10 +703,8 @@ void UUI_CFCore_ModPage_C::DownloadThumbnailManually()
 
 void UUI_CFCore_ModPage_C::EndLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "EndLoading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "EndLoading", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -811,10 +715,8 @@ void UUI_CFCore_ModPage_C::EndLoading()
 
 void UUI_CFCore_ModPage_C::Event_Go_Back()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Event Go Back");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Event Go Back", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -825,10 +727,8 @@ void UUI_CFCore_ModPage_C::Event_Go_Back()
 
 void UUI_CFCore_ModPage_C::Event_Next_Image()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Event Next Image");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Event Next Image", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -839,10 +739,8 @@ void UUI_CFCore_ModPage_C::Event_Next_Image()
 
 void UUI_CFCore_ModPage_C::Event_Previous_Image()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Event Previous Image");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Event Previous Image", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -855,10 +753,8 @@ void UUI_CFCore_ModPage_C::Event_Previous_Image()
 
 void UUI_CFCore_ModPage_C::ExecuteUbergraph_UI_CFCore_ModPage(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ExecuteUbergraph_UI_CFCore_ModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ExecuteUbergraph_UI_CFCore_ModPage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_ExecuteUbergraph_UI_CFCore_ModPage Parms{};
 
@@ -875,10 +771,8 @@ void UUI_CFCore_ModPage_C::ExecuteUbergraph_UI_CFCore_ModPage(int32 EntryPoint)
 
 void UUI_CFCore_ModPage_C::FadeOutAnim(const class FString& OpenedUrl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "FadeOutAnim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "FadeOutAnim", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_FadeOutAnim Parms{};
 
@@ -895,10 +789,8 @@ void UUI_CFCore_ModPage_C::FadeOutAnim(const class FString& OpenedUrl)
 
 void UUI_CFCore_ModPage_C::FailedPremiumModsChecks(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "FailedPremiumModsChecks");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "FailedPremiumModsChecks", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_FailedPremiumModsChecks Parms{};
 
@@ -913,10 +805,8 @@ void UUI_CFCore_ModPage_C::FailedPremiumModsChecks(const struct FCFCoreError& Er
 
 void UUI_CFCore_ModPage_C::FindThumbnail()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "FindThumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "FindThumbnail", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -929,10 +819,8 @@ void UUI_CFCore_ModPage_C::FindThumbnail()
 
 class UWidget* UUI_CFCore_ModPage_C::Get_Horizontal_ThumbUpDownButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Get_Horizontal_ThumbUpDownButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Get_Horizontal_ThumbUpDownButtons", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Get_Horizontal_ThumbUpDownButtons Parms{};
 
@@ -945,42 +833,38 @@ class UWidget* UUI_CFCore_ModPage_C::Get_Horizontal_ThumbUpDownButtons()
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetBaseProductIdOfModInCurrentPage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString*                          productId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          ProductId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_ModPage_C::GetBaseProductIdOfModInCurrentPage(class FString* productId)
+void UUI_CFCore_ModPage_C::GetBaseProductIdOfModInCurrentPage(class FString* ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetBaseProductIdOfModInCurrentPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetBaseProductIdOfModInCurrentPage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetBaseProductIdOfModInCurrentPage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (productId != nullptr)
-		*productId = std::move(Parms.productId);
+	if (ProductId != nullptr)
+		*ProductId = std::move(Parms.ProductId);
 }
 
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetDiscountProductIdOfModInCurrentPage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FString*                          productId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          ProductId                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_ModPage_C::GetDiscountProductIdOfModInCurrentPage(class FString* productId)
+void UUI_CFCore_ModPage_C::GetDiscountProductIdOfModInCurrentPage(class FString* ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetDiscountProductIdOfModInCurrentPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetDiscountProductIdOfModInCurrentPage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetDiscountProductIdOfModInCurrentPage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (productId != nullptr)
-		*productId = std::move(Parms.productId);
+	if (ProductId != nullptr)
+		*ProductId = std::move(Parms.ProductId);
 }
 
 
@@ -992,10 +876,8 @@ void UUI_CFCore_ModPage_C::GetDiscountProductIdOfModInCurrentPage(class FString*
 
 void UUI_CFCore_ModPage_C::GetIdOfModInCurrentPage(int64* As_ID, TArray<int64>* As_Array)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetIdOfModInCurrentPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetIdOfModInCurrentPage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetIdOfModInCurrentPage Parms{};
 
@@ -1016,10 +898,8 @@ void UUI_CFCore_ModPage_C::GetIdOfModInCurrentPage(int64* As_ID, TArray<int64>* 
 
 bool UUI_CFCore_ModPage_C::GetModInCurrentPagePurchased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetModInCurrentPagePurchased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetModInCurrentPagePurchased", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetModInCurrentPagePurchased Parms{};
 
@@ -1037,10 +917,8 @@ bool UUI_CFCore_ModPage_C::GetModInCurrentPagePurchased()
 
 void UUI_CFCore_ModPage_C::GetNumOfCarouselItems(int32* Images, int32* videos)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetNumOfCarouselItems");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetNumOfCarouselItems", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetNumOfCarouselItems Parms{};
 
@@ -1059,10 +937,8 @@ void UUI_CFCore_ModPage_C::GetNumOfCarouselItems(int32* Images, int32* videos)
 
 void UUI_CFCore_ModPage_C::GetPlatformProductPriceInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetPlatformProductPriceInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetPlatformProductPriceInfo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1075,10 +951,8 @@ void UUI_CFCore_ModPage_C::GetPlatformProductPriceInfo()
 
 void UUI_CFCore_ModPage_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetRootCFWidget Parms{};
 
@@ -1096,10 +970,8 @@ void UUI_CFCore_ModPage_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 
 class FText UUI_CFCore_ModPage_C::GetScreenshotPaginationText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "GetScreenshotPaginationText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "GetScreenshotPaginationText", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_GetScreenshotPaginationText Parms{};
 
@@ -1114,10 +986,8 @@ class FText UUI_CFCore_ModPage_C::GetScreenshotPaginationText()
 
 void UUI_CFCore_ModPage_C::HideCarouselButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "HideCarouselButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "HideCarouselButtons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1130,10 +1000,8 @@ void UUI_CFCore_ModPage_C::HideCarouselButtons()
 
 void UUI_CFCore_ModPage_C::How_could_we_possibly_ever_fail(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "How could we possibly ever fail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "How could we possibly ever fail", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_How_could_we_possibly_ever_fail Parms{};
 
@@ -1148,10 +1016,8 @@ void UUI_CFCore_ModPage_C::How_could_we_possibly_ever_fail(const struct FCFCoreE
 
 void UUI_CFCore_ModPage_C::Init_All_Widget_Refs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Init All Widget Refs");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Init All Widget Refs", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1162,10 +1028,8 @@ void UUI_CFCore_ModPage_C::Init_All_Widget_Refs()
 
 void UUI_CFCore_ModPage_C::InitAllVars()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitAllVars");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitAllVars", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1176,10 +1040,8 @@ void UUI_CFCore_ModPage_C::InitAllVars()
 
 void UUI_CFCore_ModPage_C::InitializeForServerMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitializeForServerMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitializeForServerMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1192,10 +1054,8 @@ void UUI_CFCore_ModPage_C::InitializeForServerMods()
 
 void UUI_CFCore_ModPage_C::InitModByID(int64 modId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitModByID");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitModByID", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_InitModByID Parms{};
 
@@ -1210,10 +1070,8 @@ void UUI_CFCore_ModPage_C::InitModByID(int64 modId)
 
 void UUI_CFCore_ModPage_C::InitModPageDefault()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitModPageDefault");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitModPageDefault", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1224,10 +1082,8 @@ void UUI_CFCore_ModPage_C::InitModPageDefault()
 
 void UUI_CFCore_ModPage_C::InitRatings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitRatings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitRatings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1238,10 +1094,8 @@ void UUI_CFCore_ModPage_C::InitRatings()
 
 void UUI_CFCore_ModPage_C::InitRestOfPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InitRestOfPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InitRestOfPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1252,10 +1106,8 @@ void UUI_CFCore_ModPage_C::InitRestOfPage()
 
 void UUI_CFCore_ModPage_C::Install_Button()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Install Button");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Install Button", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1269,10 +1121,8 @@ void UUI_CFCore_ModPage_C::Install_Button()
 
 class UWidget* UUI_CFCore_ModPage_C::InstallBCustomNavigation(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "InstallBCustomNavigation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "InstallBCustomNavigation", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_InstallBCustomNavigation Parms{};
 
@@ -1291,10 +1141,8 @@ class UWidget* UUI_CFCore_ModPage_C::InstallBCustomNavigation(EUINavigation Navi
 
 void UUI_CFCore_ModPage_C::IsDiscountedProduct(bool* IsDiscounted)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "IsDiscountedProduct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "IsDiscountedProduct", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_IsDiscountedProduct Parms{};
 
@@ -1313,10 +1161,8 @@ void UUI_CFCore_ModPage_C::IsDiscountedProduct(bool* IsDiscounted)
 
 void UUI_CFCore_ModPage_C::IsIndexVideo(int32 AtIndex, bool* IsVideo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "IsIndexVideo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "IsIndexVideo", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_IsIndexVideo Parms{};
 
@@ -1334,10 +1180,8 @@ void UUI_CFCore_ModPage_C::IsIndexVideo(int32 AtIndex, bool* IsVideo)
 
 void UUI_CFCore_ModPage_C::KeepDownloadingImages()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "KeepDownloadingImages");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "KeepDownloadingImages", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1348,24 +1192,20 @@ void UUI_CFCore_ModPage_C::KeepDownloadingImages()
 
 void UUI_CFCore_ModPage_C::LaunchCommentsURL()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "LaunchCommentsURL");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "LaunchCommentsURL", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Load Image If Current Displayed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ModPage_C::Load_Image_If_Current_Displayed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Load Image If Current Displayed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Load Image If Current Displayed", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1376,10 +1216,8 @@ void UUI_CFCore_ModPage_C::Load_Image_If_Current_Displayed()
 
 void UUI_CFCore_ModPage_C::LoadAllScreenshots()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "LoadAllScreenshots");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "LoadAllScreenshots", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1390,10 +1228,8 @@ void UUI_CFCore_ModPage_C::LoadAllScreenshots()
 
 void UUI_CFCore_ModPage_C::LoadPageBySkippingInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "LoadPageBySkippingInit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "LoadPageBySkippingInit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1404,10 +1240,8 @@ void UUI_CFCore_ModPage_C::LoadPageBySkippingInit()
 
 void UUI_CFCore_ModPage_C::OnAllModsReceivedUpdated()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnAllModsReceivedUpdated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnAllModsReceivedUpdated", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1420,10 +1254,8 @@ void UUI_CFCore_ModPage_C::OnAllModsReceivedUpdated()
 
 void UUI_CFCore_ModPage_C::OnCategoryError(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnCategoryError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnCategoryError", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnCategoryError Parms{};
 
@@ -1440,10 +1272,8 @@ void UUI_CFCore_ModPage_C::OnCategoryError(const struct FCFCoreError& Error)
 
 void UUI_CFCore_ModPage_C::OnCategoryResults(const TArray<struct FCategory>& Categories)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnCategoryResults");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnCategoryResults", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnCategoryResults Parms{};
 
@@ -1460,10 +1290,8 @@ void UUI_CFCore_ModPage_C::OnCategoryResults(const TArray<struct FCategory>& Cat
 
 void UUI_CFCore_ModPage_C::OnDescriptionError(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnDescriptionError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnDescriptionError", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnDescriptionError Parms{};
 
@@ -1480,10 +1308,8 @@ void UUI_CFCore_ModPage_C::OnDescriptionError(const struct FCFCoreError& Error)
 
 void UUI_CFCore_ModPage_C::OnError(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnError", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnError Parms{};
 
@@ -1500,10 +1326,8 @@ void UUI_CFCore_ModPage_C::OnError(const struct FCFCoreError& Error)
 
 void UUI_CFCore_ModPage_C::OnErrorGetMyRatings(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnErrorGetMyRatings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnErrorGetMyRatings", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnErrorGetMyRatings Parms{};
 
@@ -1523,10 +1347,8 @@ void UUI_CFCore_ModPage_C::OnErrorGetMyRatings(const struct FCFCoreError& Error)
 
 bool UUI_CFCore_ModPage_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnEventBroadcasted Parms{};
 
@@ -1547,10 +1369,8 @@ bool UUI_CFCore_ModPage_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<s
 
 void UUI_CFCore_ModPage_C::OnFail_13897D64427114E2F64F66A69ECC1173(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnFail_13897D64427114E2F64F66A69ECC1173");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnFail_13897D64427114E2F64F66A69ECC1173", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnFail_13897D64427114E2F64F66A69ECC1173 Parms{};
 
@@ -1567,10 +1387,8 @@ void UUI_CFCore_ModPage_C::OnFail_13897D64427114E2F64F66A69ECC1173(class UTextur
 
 void UUI_CFCore_ModPage_C::OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA Parms{};
 
@@ -1587,10 +1405,8 @@ void UUI_CFCore_ModPage_C::OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA(class UTextur
 
 void UUI_CFCore_ModPage_C::OnFail_FC28BA524F43B59D65346B94C5AD9301(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnFail_FC28BA524F43B59D65346B94C5AD9301");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnFail_FC28BA524F43B59D65346B94C5AD9301", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnFail_FC28BA524F43B59D65346B94C5AD9301 Parms{};
 
@@ -1609,10 +1425,8 @@ void UUI_CFCore_ModPage_C::OnFail_FC28BA524F43B59D65346B94C5AD9301(class UTextur
 
 struct FEventReply UUI_CFCore_ModPage_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnMouseButtonDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnMouseButtonDown", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnMouseButtonDown Parms{};
 
@@ -1630,10 +1444,8 @@ struct FEventReply UUI_CFCore_ModPage_C::OnMouseButtonDown(const struct FGeometr
 
 void UUI_CFCore_ModPage_C::OnPlaybackResumed_Event_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnPlaybackResumed_Event_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnPlaybackResumed_Event_0", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1646,10 +1458,8 @@ void UUI_CFCore_ModPage_C::OnPlaybackResumed_Event_0()
 
 void UUI_CFCore_ModPage_C::OnSearch(const class FText& Search_Input)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnSearch", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnSearch Parms{};
 
@@ -1666,10 +1476,8 @@ void UUI_CFCore_ModPage_C::OnSearch(const class FText& Search_Input)
 
 void UUI_CFCore_ModPage_C::OnSuccess_13897D64427114E2F64F66A69ECC1173(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnSuccess_13897D64427114E2F64F66A69ECC1173");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnSuccess_13897D64427114E2F64F66A69ECC1173", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnSuccess_13897D64427114E2F64F66A69ECC1173 Parms{};
 
@@ -1686,10 +1494,8 @@ void UUI_CFCore_ModPage_C::OnSuccess_13897D64427114E2F64F66A69ECC1173(class UTex
 
 void UUI_CFCore_ModPage_C::OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA Parms{};
 
@@ -1706,10 +1512,8 @@ void UUI_CFCore_ModPage_C::OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA(class UTex
 
 void UUI_CFCore_ModPage_C::OnSuccess_FC28BA524F43B59D65346B94C5AD9301(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnSuccess_FC28BA524F43B59D65346B94C5AD9301");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnSuccess_FC28BA524F43B59D65346B94C5AD9301", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnSuccess_FC28BA524F43B59D65346B94C5AD9301 Parms{};
 
@@ -1726,10 +1530,8 @@ void UUI_CFCore_ModPage_C::OnSuccess_FC28BA524F43B59D65346B94C5AD9301(class UTex
 
 void UUI_CFCore_ModPage_C::OnSuccessPremiumModsCheck(const TArray<int64>& modIds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnSuccessPremiumModsCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnSuccessPremiumModsCheck", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnSuccessPremiumModsCheck Parms{};
 
@@ -1747,10 +1549,8 @@ void UUI_CFCore_ModPage_C::OnSuccessPremiumModsCheck(const TArray<int64>& modIds
 
 void UUI_CFCore_ModPage_C::OnWidgetSwitched(class UObject* Object, const struct FFieldNotificationId& Field)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OnWidgetSwitched");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OnWidgetSwitched", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_OnWidgetSwitched Parms{};
 
@@ -1766,10 +1566,8 @@ void UUI_CFCore_ModPage_C::OnWidgetSwitched(class UObject* Object, const struct 
 
 void UUI_CFCore_ModPage_C::OpenComments()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "OpenComments");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "OpenComments", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1782,14 +1580,12 @@ void UUI_CFCore_ModPage_C::OpenComments()
 // const class FText&                      PriceText                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const class FText&                      DescriptionText                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // int64                                   NumericPrice                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    productId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    ProductId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UUI_CFCore_ModPage_C::Platform_GetPriceOfProduct_Response(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& productId)
+void UUI_CFCore_ModPage_C::Platform_GetPriceOfProduct_Response(int64 modId, const class FText& PriceText, const class FText& DescriptionText, int64 NumericPrice, const class FString& ProductId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Platform_GetPriceOfProduct_Response");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Platform_GetPriceOfProduct_Response", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Platform_GetPriceOfProduct_Response Parms{};
 
@@ -1797,23 +1593,21 @@ void UUI_CFCore_ModPage_C::Platform_GetPriceOfProduct_Response(int64 modId, cons
 	Parms.PriceText = std::move(PriceText);
 	Parms.DescriptionText = std::move(DescriptionText);
 	Parms.NumericPrice = NumericPrice;
-	Parms.productId = std::move(productId);
+	Parms.ProductId = std::move(ProductId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.PlayAnimationThumbnail
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    AlreadyLoaded                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUI_CFCore_ModPage_C::PlayAnimationThumbnail(bool AlreadyLoaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "PlayAnimationThumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "PlayAnimationThumbnail", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_PlayAnimationThumbnail Parms{};
 
@@ -1824,14 +1618,12 @@ void UUI_CFCore_ModPage_C::PlayAnimationThumbnail(bool AlreadyLoaded)
 
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.PlayStartinAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ModPage_C::PlayStartinAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "PlayStartinAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "PlayStartinAnimation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1844,10 +1636,8 @@ void UUI_CFCore_ModPage_C::PlayStartinAnimation()
 
 void UUI_CFCore_ModPage_C::PlayVideo(int32 AtIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "PlayVideo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "PlayVideo", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_PlayVideo Parms{};
 
@@ -1862,10 +1652,8 @@ void UUI_CFCore_ModPage_C::PlayVideo(int32 AtIndex)
 
 void UUI_CFCore_ModPage_C::PremiumModChecking()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "PremiumModChecking");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "PremiumModChecking", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1876,10 +1664,8 @@ void UUI_CFCore_ModPage_C::PremiumModChecking()
 
 void UUI_CFCore_ModPage_C::Pull_Categories()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Pull Categories");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Pull Categories", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1890,10 +1676,8 @@ void UUI_CFCore_ModPage_C::Pull_Categories()
 
 void UUI_CFCore_ModPage_C::PullDescription()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "PullDescription");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "PullDescription", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1904,10 +1688,8 @@ void UUI_CFCore_ModPage_C::PullDescription()
 
 void UUI_CFCore_ModPage_C::RequestUninstall()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "RequestUninstall");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "RequestUninstall", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1918,10 +1700,8 @@ void UUI_CFCore_ModPage_C::RequestUninstall()
 
 void UUI_CFCore_ModPage_C::ReturnFromZoomWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ReturnFromZoomWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ReturnFromZoomWidget", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1934,10 +1714,8 @@ void UUI_CFCore_ModPage_C::ReturnFromZoomWidget()
 
 void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage(class UImage* IMG_Mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage Parms{};
 
@@ -1954,10 +1732,8 @@ void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage(class UIma
 
 void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0(class UImage* IMG_Mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0 Parms{};
 
@@ -1974,10 +1750,8 @@ void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0(class UI
 
 void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1(class UImage* IMG_Screenshot_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1 Parms{};
 
@@ -1994,10 +1768,8 @@ void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1(class UI
 
 void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2(class UImage* IMG_Screenshot_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2 Parms{};
 
@@ -2014,10 +1786,8 @@ void UUI_CFCore_ModPage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2(class UI
 
 void UUI_CFCore_ModPage_C::SetScreenshotImageTo(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SetScreenshotImageTo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SetScreenshotImageTo", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SetScreenshotImageTo Parms{};
 
@@ -2034,10 +1804,8 @@ void UUI_CFCore_ModPage_C::SetScreenshotImageTo(class UTexture2DDynamic* Texture
 
 void UUI_CFCore_ModPage_C::SetThumbnailImage(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SetThumbnailImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SetThumbnailImage", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SetThumbnailImage Parms{};
 
@@ -2054,10 +1822,8 @@ void UUI_CFCore_ModPage_C::SetThumbnailImage(class UTexture2DDynamic* Texture)
 
 void UUI_CFCore_ModPage_C::ShowCarouselButtons(bool show)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ShowCarouselButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ShowCarouselButtons", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_ShowCarouselButtons Parms{};
 
@@ -2074,10 +1840,8 @@ void UUI_CFCore_ModPage_C::ShowCarouselButtons(bool show)
 
 void UUI_CFCore_ModPage_C::ShowPhoto(int32 AtIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "ShowPhoto");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "ShowPhoto", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_ShowPhoto Parms{};
 
@@ -2094,10 +1858,8 @@ void UUI_CFCore_ModPage_C::ShowPhoto(int32 AtIndex)
 
 void UUI_CFCore_ModPage_C::SuccessIGuess(const struct FCFCoreMod& mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "SuccessIGuess");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "SuccessIGuess", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_SuccessIGuess Parms{};
 
@@ -2115,10 +1877,8 @@ void UUI_CFCore_ModPage_C::SuccessIGuess(const struct FCFCoreMod& mod)
 
 void UUI_CFCore_ModPage_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_Tick Parms{};
 
@@ -2134,10 +1894,8 @@ void UUI_CFCore_ModPage_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 void UUI_CFCore_ModPage_C::Update_Button()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Update Button");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Update Button", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2148,10 +1906,8 @@ void UUI_CFCore_ModPage_C::Update_Button()
 
 void UUI_CFCore_ModPage_C::Update_Purchase_Button_Enabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "Update Purchase Button Enabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "Update Purchase Button Enabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2162,10 +1918,8 @@ void UUI_CFCore_ModPage_C::Update_Purchase_Button_Enabled()
 
 void UUI_CFCore_ModPage_C::UpdateAllThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateAllThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateAllThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2176,10 +1930,8 @@ void UUI_CFCore_ModPage_C::UpdateAllThemeSettings()
 
 void UUI_CFCore_ModPage_C::UpdateBothButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateBothButtons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateBothButtons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2190,10 +1942,8 @@ void UUI_CFCore_ModPage_C::UpdateBothButtons()
 
 void UUI_CFCore_ModPage_C::UpdateCancelButtonState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateCancelButtonState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateCancelButtonState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2204,10 +1954,8 @@ void UUI_CFCore_ModPage_C::UpdateCancelButtonState()
 
 void UUI_CFCore_ModPage_C::UpdateModCardListVisibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateModCardListVisibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateModCardListVisibility", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2218,10 +1966,8 @@ void UUI_CFCore_ModPage_C::UpdateModCardListVisibility()
 
 void UUI_CFCore_ModPage_C::UpdateModCards()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateModCards");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateModCards", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2232,10 +1978,8 @@ void UUI_CFCore_ModPage_C::UpdateModCards()
 
 void UUI_CFCore_ModPage_C::UpdateModPaidState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateModPaidState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateModPaidState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2246,10 +1990,8 @@ void UUI_CFCore_ModPage_C::UpdateModPaidState()
 
 void UUI_CFCore_ModPage_C::UpdateModRating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateModRating");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateModRating", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2260,10 +2002,8 @@ void UUI_CFCore_ModPage_C::UpdateModRating()
 
 void UUI_CFCore_ModPage_C::UpdateModUnavailableState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateModUnavailableState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateModUnavailableState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2276,10 +2016,8 @@ void UUI_CFCore_ModPage_C::UpdateModUnavailableState()
 
 void UUI_CFCore_ModPage_C::UpdatePlayPauseIcon(bool IsPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdatePlayPauseIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdatePlayPauseIcon", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_UpdatePlayPauseIcon Parms{};
 
@@ -2294,10 +2032,8 @@ void UUI_CFCore_ModPage_C::UpdatePlayPauseIcon(bool IsPlay)
 
 void UUI_CFCore_ModPage_C::UpdateRatingVisibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateRatingVisibility");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateRatingVisibility", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2308,24 +2044,20 @@ void UUI_CFCore_ModPage_C::UpdateRatingVisibility()
 
 void UUI_CFCore_ModPage_C::UpdateScreenshotButtonsEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateScreenshotButtonsEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateScreenshotButtonsEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateScreenshotImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ModPage_C::UpdateScreenshotImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateScreenshotImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateScreenshotImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2338,10 +2070,8 @@ void UUI_CFCore_ModPage_C::UpdateScreenshotImage()
 
 void UUI_CFCore_ModPage_C::UpdateSearch(const class FText& SearchInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateSearch");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateSearch", FuncInfo);
 
 	Params::UI_CFCore_ModPage_C_UpdateSearch Parms{};
 
@@ -2356,10 +2086,8 @@ void UUI_CFCore_ModPage_C::UpdateSearch(const class FText& SearchInput)
 
 void UUI_CFCore_ModPage_C::UpdateSubCategories()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateSubCategories");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateSubCategories", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2370,10 +2098,8 @@ void UUI_CFCore_ModPage_C::UpdateSubCategories()
 
 void UUI_CFCore_ModPage_C::UpdateUninstallButtonState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "UpdateUninstallButtonState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "UpdateUninstallButtonState", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2384,10 +2110,8 @@ void UUI_CFCore_ModPage_C::UpdateUninstallButtonState()
 
 void UUI_CFCore_ModPage_C::VideoPlayback()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ModPage_C", "VideoPlayback");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ModPage_C", "VideoPlayback", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

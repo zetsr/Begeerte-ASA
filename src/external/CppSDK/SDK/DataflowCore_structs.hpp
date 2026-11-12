@@ -11,9 +11,75 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Chaos_structs.hpp"
 
 
 SDK_NAMESPACE_START
+
+// Enum DataflowCore.EDataflowNumericType
+// NumValues: 0x000B
+enum class EDataflowNumericType : uint8
+{
+	Double                                   = 0,
+	Float                                    = 1,
+	Int64                                    = 2,
+	UInt64                                   = 3,
+	Int32                                    = 4,
+	UInt32                                   = 5,
+	Int16                                    = 6,
+	UInt16                                   = 7,
+	Int8                                     = 8,
+	UInt8                                    = 9,
+	EDataflowNumericType_MAX                 = 10,
+};
+
+// Enum DataflowCore.EDataflowImageResolution
+// NumValues: 0x000B
+enum class EDataflowImageResolution : uint32
+{
+	Resolution16                             = 16,
+	Resolution32                             = 32,
+	Resolution64                             = 64,
+	Resolution128                            = 128,
+	Resolution256                            = 256,
+	Resolution512                            = 512,
+	Resolution1024                           = 1024,
+	Resolution2048                           = 2048,
+	Resolution4096                           = 4096,
+	Resolution8192                           = 8192,
+	EDataflowImageResolution_MAX             = 8193,
+};
+
+// Enum DataflowCore.EDataflowImageChannel
+// NumValues: 0x0005
+enum class EDataflowImageChannel : uint32
+{
+	Red                                      = 0,
+	Green                                    = 1,
+	Blue                                     = 2,
+	Alpha                                    = 3,
+	EDataflowImageChannel_MAX                = 4,
+};
+
+// Enum DataflowCore.EDataflowConvertToResolutionMethod
+// NumValues: 0x0004
+enum class EDataflowConvertToResolutionMethod : uint32
+{
+	UseClosest                               = 0,
+	UsePrevious                              = 1,
+	UseNext                                  = 2,
+	EDataflowConvertToResolutionMethod_MAX   = 3,
+};
+
+// Enum DataflowCore.EDataflowImageCombineResolutionOption
+// NumValues: 0x0004
+enum class EDataflowImageCombineResolutionOption : uint32
+{
+	Lowest                                   = 0,
+	Highest                                  = 1,
+	UserDefined                              = 2,
+	EDataflowImageCombineResolutionOption_MAX = 3,
+};
 
 // Enum DataflowCore.EDataflowMathConstantsEnum
 // NumValues: 0x000E
@@ -35,6 +101,20 @@ enum class EDataflowMathConstantsEnum : uint8
 	Dataflow_Math_Constants_Max              = 13,
 };
 
+// Enum DataflowCore.EDataflowSelectionType
+// NumValues: 0x0008
+enum class EDataflowSelectionType : uint8
+{
+	Transform                                = 0,
+	Vertices                                 = 1,
+	Faces                                    = 2,
+	Geometry                                 = 3,
+	Curves                                   = 4,
+	Points                                   = 5,
+	Material                                 = 6,
+	EDataflowSelectionType_MAX               = 7,
+};
+
 // ScriptStruct DataflowCore.DataflowAnyType
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -42,14 +122,7 @@ struct SDK_ALIGN(0x01) FDataflowAnyType
 {
 };
 #pragma pack(pop)
-
-// ScriptStruct DataflowCore.DataflowAllTypes
-// 0x0001 (0x0001 - 0x0000)
-struct FDataflowAllTypes final : public FDataflowAnyType
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FDataflowAnyType;
 
 // ScriptStruct DataflowCore.DataflowNumericTypes
 // 0x0008 (0x0008 - 0x0000)
@@ -58,6 +131,7 @@ struct FDataflowNumericTypes final : public FDataflowAnyType
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDataflowNumericTypes;
 
 // ScriptStruct DataflowCore.DataflowVectorTypes
 // 0x0020 (0x0020 - 0x0000)
@@ -66,6 +140,221 @@ struct FDataflowVectorTypes final : public FDataflowAnyType
 public:
 	struct FVector4                               Value;                                             // 0x0000(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDataflowVectorTypes;
+
+// ScriptStruct DataflowCore.DataflowNode
+// 0x01E8 (0x01E8 - 0x0000)
+struct FDataflowNode
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bOverrideColor;                                    // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           OverrideColor;                                     // 0x0014(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x16C];                                     // 0x0024(0x016C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bActive;                                           // 0x0190(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedPropertyBag                  FrozenProperties;                                  // 0x0198(0x0010)(NativeAccessSpecifierPrivate)
+	bool                                          bIsFrozen;                                         // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1A9[0x3F];                                     // 0x01A9(0x003F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowNode;
+
+// ScriptStruct DataflowCore.DataflowVectorMakeVec4Node
+// 0x0048 (0x0230 - 0x01E8)
+struct FDataflowVectorMakeVec4Node final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  X;                                                 // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Y;                                                 // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Z;                                                 // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  W;                                                 // 0x0200(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   Vector4d;                                          // 0x0210(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorMakeVec4Node;
+
+// ScriptStruct DataflowCore.DataflowBaseElement
+// 0x0060 (0x0060 - 0x0000)
+struct alignas(0x08) FDataflowBaseElement
+{
+public:
+	uint8                                         Pad_0[0x60];                                       // 0x0000(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowBaseElement;
+
+// ScriptStruct DataflowCore.DataflowFunctionProperty
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FDataflowFunctionProperty final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowFunctionProperty;
+
+// ScriptStruct DataflowCore.DataflowVectorCrossProductNode
+// 0x0068 (0x0250 - 0x01E8)
+struct FDataflowVectorCrossProductNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   CrossProduct;                                      // 0x0230(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorCrossProductNode;
+
+// ScriptStruct DataflowCore.DataflowValueGenerator
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FDataflowValueGenerator final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowValueGenerator;
+
+// ScriptStruct DataflowCore.DataflowVectorMultiplyNode
+// 0x0068 (0x0250 - 0x01E8)
+struct FDataflowVectorMultiplyNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   V;                                                 // 0x0230(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorMultiplyNode;
+
+// ScriptStruct DataflowCore.DataflowRandomGeneratorNode
+// 0x0030 (0x0218 - 0x01E8)
+struct FDataflowRandomGeneratorNode final : public FDataflowNode
+{
+public:
+	int32                                         Seed;                                              // 0x01E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowNumericTypes                  RandomMin;                                         // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  RandomMax;                                         // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bReverseOrder;                                     // 0x0200(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowValueGenerator                Generator;                                         // 0x0208(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowRandomGeneratorNode;
+
+// ScriptStruct DataflowCore.DataflowVectorMakeVec2Node
+// 0x0038 (0x0220 - 0x01E8)
+struct FDataflowVectorMakeVec2Node final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  X;                                                 // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Y;                                                 // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   Vector2D;                                          // 0x0200(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorMakeVec2Node;
+
+// ScriptStruct DataflowCore.DataflowLinearSequenceGeneratorNode
+// 0x0028 (0x0210 - 0x01E8)
+struct FDataflowLinearSequenceGeneratorNode final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  Start;                                             // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  Increment;                                         // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bReverseOrder;                                     // 0x01F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowValueGenerator                Generator;                                         // 0x0200(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowLinearSequenceGeneratorNode;
+
+// ScriptStruct DataflowCore.DataflowPerlinNoiseGeneratorNode
+// 0x0028 (0x0210 - 0x01E8)
+struct FDataflowPerlinNoiseGeneratorNode final : public FDataflowNode
+{
+public:
+	float                                         Frequency;                                         // 0x01E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Offset;                                            // 0x01EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseMin;                                          // 0x01F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseMax;                                          // 0x01F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x01F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReverseOrder;                                     // 0x01F9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1FA[0x6];                                      // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowValueGenerator                Generator;                                         // 0x0200(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowPerlinNoiseGeneratorNode;
+
+// ScriptStruct DataflowCore.DataflowSimpleRegexGeneratorNode
+// 0x0028 (0x0210 - 0x01E8)
+struct FDataflowSimpleRegexGeneratorNode final : public FDataflowNode
+{
+public:
+	class FString                                 List;                                              // 0x01E8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReverseOrder;                                     // 0x01F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowValueGenerator                Generator;                                         // 0x0200(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowSimpleRegexGeneratorNode;
+
+// ScriptStruct DataflowCore.DataflowPrimitiveTypesStorage
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FDataflowPrimitiveTypesStorage final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowPrimitiveTypesStorage;
+
+// ScriptStruct DataflowCore.DataflowPrimitiveTypes
+// 0x0040 (0x0040 - 0x0000)
+struct FDataflowPrimitiveTypes final : public FDataflowAnyType
+{
+public:
+	struct FDataflowPrimitiveTypesStorage         Value;                                             // 0x0000(0x0040)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowPrimitiveTypes;
+
+// ScriptStruct DataflowCore.DataflowPrimitiveArrayStorage
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FDataflowPrimitiveArrayStorage final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowPrimitiveArrayStorage;
+
+// ScriptStruct DataflowCore.DataflowPrimitiveArrayTypes
+// 0x0018 (0x0018 - 0x0000)
+struct FDataflowPrimitiveArrayTypes final : public FDataflowAnyType
+{
+public:
+	struct FDataflowPrimitiveArrayStorage         Value;                                             // 0x0000(0x0018)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowPrimitiveArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowAllTypes
+// 0x0001 (0x0001 - 0x0000)
+struct FDataflowAllTypes final : public FDataflowAnyType
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowAllTypes;
+
+// ScriptStruct DataflowCore.DataflowArrayTypes
+// 0x0001 (0x0001 - 0x0000)
+struct FDataflowArrayTypes final : public FDataflowAnyType
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowUStructTypes
+// 0x0001 (0x0001 - 0x0000)
+struct FDataflowUStructTypes final : public FDataflowAnyType
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowUStructTypes;
 
 // ScriptStruct DataflowCore.DataflowStringTypes
 // 0x0010 (0x0010 - 0x0000)
@@ -74,6 +363,25 @@ struct FDataflowStringTypes final : public FDataflowAnyType
 public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDataflowStringTypes;
+
+// ScriptStruct DataflowCore.DataflowBoolTypes
+// 0x0001 (0x0001 - 0x0000)
+struct FDataflowBoolTypes final : public FDataflowAnyType
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowBoolTypes;
+
+// ScriptStruct DataflowCore.DataflowTransformTypes
+// 0x0060 (0x0060 - 0x0000)
+struct FDataflowTransformTypes final : public FDataflowAnyType
+{
+public:
+	struct FTransform                             Value;                                             // 0x0000(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowTransformTypes;
 
 // ScriptStruct DataflowCore.DataflowStringConvertibleTypes
 // 0x0010 (0x0010 - 0x0000)
@@ -82,6 +390,7 @@ struct FDataflowStringConvertibleTypes final : public FDataflowAnyType
 public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FDataflowStringConvertibleTypes;
 
 // ScriptStruct DataflowCore.DataflowUObjectConvertibleTypes
 // 0x0008 (0x0008 - 0x0000)
@@ -90,525 +399,862 @@ struct FDataflowUObjectConvertibleTypes final : public FDataflowAnyType
 public:
 	class UObject*                                Value;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-
-// ScriptStruct DataflowCore.DataflowNode
-// 0x0198 (0x0198 - 0x0000)
-struct alignas(0x08) FDataflowNode
-{
-public:
-	uint8                                         Pad_0[0xC8];                                       // 0x0000(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bActive;                                           // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C9[0xCF];                                      // 0x00C9(0x00CF)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowReRouteNode
-// 0x0008 (0x01A0 - 0x0198)
-struct FDataflowReRouteNode final : public FDataflowNode
-{
-public:
-	struct FDataflowAnyType                       Value;                                             // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowBranchNode
-// 0x0008 (0x01A0 - 0x0198)
-struct FDataflowBranchNode final : public FDataflowNode
-{
-public:
-	struct FDataflowAnyType                       TrueValue;                                         // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowAnyType                       FalseValue;                                        // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bCondition;                                        // 0x019A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataflowAnyType                       Result;                                            // 0x019B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowSelectNode
-// 0x0018 (0x01B0 - 0x0198)
-struct FDataflowSelectNode final : public FDataflowNode
-{
-public:
-	TArray<struct FDataflowAnyType>               Inputs;                                            // 0x0198(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         SelectedIndex;                                     // 0x01A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataflowAnyType                       Result;                                            // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowPrintNode
-// 0x0010 (0x01A8 - 0x0198)
-struct FDataflowPrintNode final : public FDataflowNode
-{
-public:
-	struct FDataflowStringConvertibleTypes        Value;                                             // 0x0198(0x0010)(NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathOneInputOperatorNode
-// 0x0010 (0x01A8 - 0x0198)
-struct FDataflowMathOneInputOperatorNode : public FDataflowNode
-{
-public:
-	struct FDataflowNumericTypes                  A;                                                 // 0x0198(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowNumericTypes                  Result;                                            // 0x01A0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathTwoInputsOperatorNode
-// 0x0018 (0x01B0 - 0x0198)
-struct FDataflowMathTwoInputsOperatorNode : public FDataflowNode
-{
-public:
-	struct FDataflowNumericTypes                  A;                                                 // 0x0198(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowNumericTypes                  B;                                                 // 0x01A0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowNumericTypes                  Result;                                            // 0x01A8(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathAddNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathAddNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathSubtractNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathSubtractNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathMultiplyNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathMultiplyNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathDivideNode
-// 0x0008 (0x01B8 - 0x01B0)
-struct FDataflowMathDivideNode final : public FDataflowMathTwoInputsOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  Fallback;                                          // 0x01B0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathMinimumNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathMinimumNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathMaximumNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathMaximumNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathReciprocalNode
-// 0x0008 (0x01B0 - 0x01A8)
-struct FDataflowMathReciprocalNode final : public FDataflowMathOneInputOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  Fallback;                                          // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathSquareNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathSquareNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathCubeNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathCubeNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathSquareRootNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathSquareRootNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathInverseSquareRootNode
-// 0x0008 (0x01B0 - 0x01A8)
-struct FDataflowMathInverseSquareRootNode final : public FDataflowMathOneInputOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  Fallback;                                          // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathNegateNode
-// 0x0008 (0x01B0 - 0x01A8)
-struct FDataflowMathNegateNode final : public FDataflowMathOneInputOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  Fallback;                                          // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathAbsNode
-// 0x0008 (0x01B0 - 0x01A8)
-struct FDataflowMathAbsNode final : public FDataflowMathOneInputOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  Fallback;                                          // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathFloorNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathFloorNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathCeilNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathCeilNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathRoundNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathRoundNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathTruncNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathTruncNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathFracNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathFracNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathPowNode
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathPowNode final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathLogXNode
-// 0x0008 (0x01B0 - 0x01A8)
-struct FDataflowMathLogXNode final : public FDataflowMathOneInputOperatorNode
-{
-public:
-	struct FDataflowNumericTypes                  base;                                              // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathLogNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathLogNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathExpNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathExpNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathSignNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathSignNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathOneMinusNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathOneMinusNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathConstantNode
-// 0x0010 (0x01A8 - 0x0198)
-struct FDataflowMathConstantNode final : public FDataflowNode
-{
-public:
-	EDataflowMathConstantsEnum                    Constant;                                          // 0x0198(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowNumericTypes                  Result;                                            // 0x01A0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// ScriptStruct DataflowCore.DataflowMathSinNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathSinNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathCosNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathCosNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathTanNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathTanNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathArcSinNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathArcSinNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathArcCosNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathArcCosNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathArcTanNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathArcTanNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathArcTan2Node
-// 0x0000 (0x01B0 - 0x01B0)
-struct FDataflowMathArcTan2Node final : public FDataflowMathTwoInputsOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathDegToRadNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathDegToRadNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowMathRadToDegNode
-// 0x0000 (0x01A8 - 0x01A8)
-struct FDataflowMathRadToDegNode final : public FDataflowMathOneInputOperatorNode
-{
-};
-
-// ScriptStruct DataflowCore.DataflowVectorMakeVec2Node
-// 0x0038 (0x01D0 - 0x0198)
-struct FDataflowVectorMakeVec2Node final : public FDataflowNode
-{
-public:
-	struct FDataflowNumericTypes                  X;                                                 // 0x0198(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Y;                                                 // 0x01A0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A8[0x8];                                      // 0x01A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   Vector2D;                                          // 0x01B0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorMakeVec3Node
-// 0x0038 (0x01D0 - 0x0198)
-struct FDataflowVectorMakeVec3Node final : public FDataflowNode
-{
-public:
-	struct FDataflowNumericTypes                  X;                                                 // 0x0198(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Y;                                                 // 0x01A0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Z;                                                 // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   Vector3d;                                          // 0x01B0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorMakeVec4Node
-// 0x0048 (0x01E0 - 0x0198)
-struct FDataflowVectorMakeVec4Node final : public FDataflowNode
-{
-public:
-	struct FDataflowNumericTypes                  X;                                                 // 0x0198(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Y;                                                 // 0x01A0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Z;                                                 // 0x01A8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  W;                                                 // 0x01B0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1B8[0x8];                                      // 0x01B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   Vector4d;                                          // 0x01C0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorBreakNode
-// 0x0048 (0x01E0 - 0x0198)
-struct FDataflowVectorBreakNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   V;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  X;                                                 // 0x01C0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Y;                                                 // 0x01C8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Z;                                                 // 0x01D0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  W;                                                 // 0x01D8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorAddNode
-// 0x0068 (0x0200 - 0x0198)
-struct FDataflowVectorAddNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   A;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   B;                                                 // 0x01C0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   V;                                                 // 0x01E0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorSubtractNode
-// 0x0068 (0x0200 - 0x0198)
-struct FDataflowVectorSubtractNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   A;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   B;                                                 // 0x01C0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   V;                                                 // 0x01E0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorDotProductNode
-// 0x0058 (0x01F0 - 0x0198)
-struct FDataflowVectorDotProductNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   A;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   B;                                                 // 0x01C0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  DotProduct;                                        // 0x01E0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowVectorLengthNode
-// 0x0038 (0x01D0 - 0x0198)
-struct FDataflowVectorLengthNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   V;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Length;                                            // 0x01C0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowVectorSquaredLengthNode
-// 0x0038 (0x01D0 - 0x0198)
-struct FDataflowVectorSquaredLengthNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   V;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  SquaredLength;                                     // 0x01C0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowVectorDistanceNode
-// 0x0058 (0x01F0 - 0x0198)
-struct FDataflowVectorDistanceNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   A;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   B;                                                 // 0x01C0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Distance;                                          // 0x01E0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowVectorCrossProductNode
-// 0x0068 (0x0200 - 0x0198)
-struct FDataflowVectorCrossProductNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   A;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   B;                                                 // 0x01C0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   CrossProduct;                                      // 0x01E0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorScaleNode
-// 0x0058 (0x01F0 - 0x0198)
-struct FDataflowVectorScaleNode final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   V;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Scale;                                             // 0x01C0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   Scaled;                                            // 0x01D0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowVectorNormalize
-// 0x0048 (0x01E0 - 0x0198)
-struct FDataflowVectorNormalize final : public FDataflowNode
-{
-public:
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowVectorTypes                   V;                                                 // 0x01A0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	struct FDataflowVectorTypes                   Normalized;                                        // 0x01C0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-};
-
-// ScriptStruct DataflowCore.DataflowConnection
-// 0x0048 (0x0048 - 0x0000)
-struct alignas(0x08) FDataflowConnection
-{
-public:
-	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowInput
-// 0x0008 (0x0050 - 0x0048)
-struct FDataflowInput : public FDataflowConnection
-{
-public:
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowArrayInput
-// 0x0010 (0x0060 - 0x0050)
-struct FDataflowArrayInput final : public FDataflowInput
-{
-public:
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowOutput
-// 0x0030 (0x0078 - 0x0048)
-struct FDataflowOutput final : public FDataflowConnection
-{
-public:
-	uint8                                         Pad_48[0x30];                                      // 0x0048(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// ScriptStruct DataflowCore.DataflowOverrideNode
-// 0x0020 (0x01B8 - 0x0198)
-struct FDataflowOverrideNode : public FDataflowNode
-{
-public:
-	class FName                                   Key;                                               // 0x0198(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Default;                                           // 0x01A0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsOverriden;                                       // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_FDataflowUObjectConvertibleTypes;
 
 // ScriptStruct DataflowCore.DataflowSelection
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct alignas(0x08) FDataflowSelection
 {
 public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FDataflowSelection;
+
+// ScriptStruct DataflowCore.DataflowSelectionTypes
+// 0x0028 (0x0028 - 0x0000)
+struct FDataflowSelectionTypes final : public FDataflowAnyType
+{
+public:
+	struct FDataflowSelection                     Value;                                             // 0x0000(0x0028)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowSelectionTypes;
+
+// ScriptStruct DataflowCore.DataflowVectorArrayTypes
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowVectorArrayTypes final : public FDataflowAnyType
+{
+public:
+	TArray<struct FVector4>                       Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowVectorArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowNumericArrayTypes
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowNumericArrayTypes final : public FDataflowAnyType
+{
+public:
+	TArray<double>                                Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowNumericArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowStringArrayTypes
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowStringArrayTypes final : public FDataflowAnyType
+{
+public:
+	TArray<class FString>                         Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowStringArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowBoolArrayTypes
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowBoolArrayTypes final : public FDataflowAnyType
+{
+public:
+	TArray<bool>                                  Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowBoolArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowTransformArrayTypes
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowTransformArrayTypes final : public FDataflowAnyType
+{
+public:
+	TArray<struct FTransform>                     Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowTransformArrayTypes;
+
+// ScriptStruct DataflowCore.DataflowRotationTypes
+// 0x0018 (0x0018 - 0x0000)
+struct FDataflowRotationTypes final : public FDataflowAnyType
+{
+public:
+	struct FRotator                               Value;                                             // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowRotationTypes;
+
+// ScriptStruct DataflowCore.DataflowMeshSelectionTypes
+// 0x0028 (0x0028 - 0x0000)
+struct FDataflowMeshSelectionTypes final : public FDataflowAnyType
+{
+public:
+	struct FDataflowSelection                     Value;                                             // 0x0000(0x0028)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMeshSelectionTypes;
+
+// ScriptStruct DataflowCore.DataflowConnection
+// 0x0060 (0x0060 - 0x0000)
+struct alignas(0x08) FDataflowConnection
+{
+public:
+	uint8                                         Pad_0[0x60];                                       // 0x0000(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowConnection;
+
+// ScriptStruct DataflowCore.ConvertNumericTypesDataflowNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FConvertNumericTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  In;                                                // 0x01E8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Out;                                               // 0x01F0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertNumericTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertVectorTypesDataflowNode
+// 0x0048 (0x0230 - 0x01E8)
+struct FConvertVectorTypesDataflowNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   In;                                                // 0x01F0(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   Out;                                               // 0x0210(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertVectorTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertStringTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertStringTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowStringTypes                   In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowStringTypes                   Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertStringTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertBoolTypesDataflowNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FConvertBoolTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowBoolTypes                     In;                                                // 0x01E8(0x0001)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowBoolTypes                     Out;                                               // 0x01E9(0x0001)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FConvertBoolTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertTransformTypesDataflowNode
+// 0x00C8 (0x02B0 - 0x01E8)
+struct FConvertTransformTypesDataflowNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowTransformTypes                In;                                                // 0x01F0(0x0060)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowTransformTypes                Out;                                               // 0x0250(0x0060)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertTransformTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertStringConvertibleTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertStringConvertibleTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowStringConvertibleTypes        In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowStringConvertibleTypes        Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertStringConvertibleTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertUObjectConvertibleTypesDataflowNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FConvertUObjectConvertibleTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowUObjectConvertibleTypes       In;                                                // 0x01E8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowUObjectConvertibleTypes       Out;                                               // 0x01F0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertUObjectConvertibleTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertSelectionTypesDataflowNode
+// 0x0108 (0x02F0 - 0x01E8)
+struct FConvertSelectionTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FManagedArrayCollection                Collection;                                        // 0x01E8(0x00B0)(NativeAccessSpecifierPrivate)
+	struct FDataflowSelectionTypes                In;                                                // 0x0298(0x0028)(NativeAccessSpecifierPrivate)
+	bool                                          bAllElementsMustBeSelected;                        // 0x02C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowSelectionTypes                Out;                                               // 0x02C8(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertSelectionTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertSelectionTypesToIndexArrayDataflowNode
+// 0x0038 (0x0220 - 0x01E8)
+struct FConvertSelectionTypesToIndexArrayDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowSelectionTypes                In;                                                // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	TArray<int32>                                 Out;                                               // 0x0210(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertSelectionTypesToIndexArrayDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertIndexToSelectionTypesDataflowNode
+// 0x00E0 (0x02C8 - 0x01E8)
+struct FConvertIndexToSelectionTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FManagedArrayCollection                Collection;                                        // 0x01E8(0x00B0)(NativeAccessSpecifierPrivate)
+	int32                                         In;                                                // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowSelectionTypes                Out;                                               // 0x02A0(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertIndexToSelectionTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertIndexArrayToSelectionTypesDataflowNode
+// 0x00E8 (0x02D0 - 0x01E8)
+struct FConvertIndexArrayToSelectionTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FManagedArrayCollection                Collection;                                        // 0x01E8(0x00B0)(NativeAccessSpecifierPrivate)
+	TArray<int32>                                 In;                                                // 0x0298(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FDataflowSelectionTypes                Out;                                               // 0x02A8(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertIndexArrayToSelectionTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertVectorArrayTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertVectorArrayTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowVectorArrayTypes              In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowVectorArrayTypes              Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertVectorArrayTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertNumericArrayTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertNumericArrayTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericArrayTypes             In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowNumericArrayTypes             Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertNumericArrayTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertStringArrayTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertStringArrayTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowStringArrayTypes              In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowStringArrayTypes              Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertStringArrayTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertBoolArrayTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertBoolArrayTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowBoolArrayTypes                In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowBoolArrayTypes                Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertBoolArrayTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertTransformArrayTypesDataflowNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FConvertTransformArrayTypesDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowTransformArrayTypes           In;                                                // 0x01E8(0x0010)(NativeAccessSpecifierPrivate)
+	struct FDataflowTransformArrayTypes           Out;                                               // 0x01F8(0x0010)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertTransformArrayTypesDataflowNode;
+
+// ScriptStruct DataflowCore.ConvertRotationDataflowNode
+// 0x0030 (0x0218 - 0x01E8)
+struct FConvertRotationDataflowNode final : public FDataflowNode
+{
+public:
+	struct FDataflowRotationTypes                 In;                                                // 0x01E8(0x0018)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowRotationTypes                 Out;                                               // 0x0200(0x0018)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FConvertRotationDataflowNode;
+
+// ScriptStruct DataflowCore.DataflowReRouteNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FDataflowReRouteNode final : public FDataflowNode
+{
+public:
+	struct FDataflowAnyType                       Value;                                             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowReRouteNode;
+
+// ScriptStruct DataflowCore.DataflowBranchNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FDataflowBranchNode final : public FDataflowNode
+{
+public:
+	struct FDataflowAnyType                       TrueValue;                                         // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       FalseValue;                                        // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bCondition;                                        // 0x01EA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       Result;                                            // 0x01EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowBranchNode;
+
+// ScriptStruct DataflowCore.DataflowSelectNode
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowSelectNode final : public FDataflowNode
+{
+public:
+	TArray<struct FDataflowAnyType>               Inputs;                                            // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         SelectedIndex;                                     // 0x01F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       Result;                                            // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1FD[0x3];                                      // 0x01FD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowSelectNode;
+
+// ScriptStruct DataflowCore.DataflowPrintNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FDataflowPrintNode final : public FDataflowNode
+{
+public:
+	struct FDataflowStringConvertibleTypes        Value;                                             // 0x01E8(0x0010)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowPrintNode;
+
+// ScriptStruct DataflowCore.DataflowForceDependencyNode
+// 0x0008 (0x01F0 - 0x01E8)
+struct FDataflowForceDependencyNode final : public FDataflowNode
+{
+public:
+	struct FDataflowAnyType                       Value;                                             // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       DependentValue;                                    // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowForceDependencyNode;
+
+// ScriptStruct DataflowCore.DataflowImage
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FDataflowImage final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowImage;
+
+// ScriptStruct DataflowCore.DataflowConvertToResolutionNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FDataflowConvertToResolutionNode final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  Value;                                             // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	EDataflowConvertToResolutionMethod            Method;                                            // 0x01F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EDataflowImageResolution                      Resolution;                                        // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowConvertToResolutionNode;
+
+// ScriptStruct DataflowCore.DataflowImageFromColorNode
+// 0x0040 (0x0228 - 0x01E8)
+struct FDataflowImageFromColorNode final : public FDataflowNode
+{
+public:
+	struct FLinearColor                           FillColor;                                         // 0x01E8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EDataflowImageResolution                      Resolution;                                        // 0x01F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowImage                         Image;                                             // 0x0200(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowImageFromColorNode;
+
+// ScriptStruct DataflowCore.DataflowImageSplitChannelsNode
+// 0x00C8 (0x02B0 - 0x01E8)
+struct FDataflowImageSplitChannelsNode final : public FDataflowNode
+{
+public:
+	struct FDataflowImage                         Image;                                             // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Red;                                               // 0x0210(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Green;                                             // 0x0238(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Blue;                                              // 0x0260(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Alpha;                                             // 0x0288(0x0028)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowImageSplitChannelsNode;
+
+// ScriptStruct DataflowCore.DataflowImageCombineChannelsNode
+// 0x00D0 (0x02B8 - 0x01E8)
+struct FDataflowImageCombineChannelsNode final : public FDataflowNode
+{
+public:
+	struct FDataflowImage                         Red;                                               // 0x01E8(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Green;                                             // 0x0210(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Blue;                                              // 0x0238(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Alpha;                                             // 0x0260(0x0028)(NativeAccessSpecifierPrivate)
+	struct FDataflowImage                         Image;                                             // 0x0288(0x0028)(NativeAccessSpecifierPrivate)
+	EDataflowImageCombineResolutionOption         ResolutionOptions;                                 // 0x02B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EDataflowImageResolution                      Resolution;                                        // 0x02B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowImageCombineChannelsNode;
+
+// ScriptStruct DataflowCore.DataflowInput
+// 0x0010 (0x0070 - 0x0060)
+struct FDataflowInput : public FDataflowConnection
+{
+public:
+	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowInput;
+
+// ScriptStruct DataflowCore.DataflowArrayInput
+// 0x0010 (0x0080 - 0x0070)
+struct FDataflowArrayInput final : public FDataflowInput
+{
+public:
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowArrayInput;
+
+// ScriptStruct DataflowCore.DataflowOutput
+// 0x0030 (0x0090 - 0x0060)
+struct FDataflowOutput : public FDataflowConnection
+{
+public:
+	uint8                                         Pad_60[0x30];                                      // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowOutput;
+
+// ScriptStruct DataflowCore.DataflowArrayOutput
+// 0x0010 (0x00A0 - 0x0090)
+struct FDataflowArrayOutput final : public FDataflowOutput
+{
+public:
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowArrayOutput;
+
+// ScriptStruct DataflowCore.DataflowMathOneInputOperatorNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FDataflowMathOneInputOperatorNode : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  A;                                                 // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  Result;                                            // 0x01F0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathOneInputOperatorNode;
+
+// ScriptStruct DataflowCore.DataflowMathTwoInputsOperatorNode
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowMathTwoInputsOperatorNode : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  A;                                                 // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  B;                                                 // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  Result;                                            // 0x01F8(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathTwoInputsOperatorNode;
+
+// ScriptStruct DataflowCore.DataflowMathAddNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathAddNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathAddNode;
+
+// ScriptStruct DataflowCore.DataflowMathSubtractNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathSubtractNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathSubtractNode;
+
+// ScriptStruct DataflowCore.DataflowMathMultiplyNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathMultiplyNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathMultiplyNode;
+
+// ScriptStruct DataflowCore.DataflowMathDivideNode
+// 0x0008 (0x0208 - 0x0200)
+struct FDataflowMathDivideNode final : public FDataflowMathTwoInputsOperatorNode
+{
+public:
+	struct FDataflowNumericTypes                  Fallback;                                          // 0x0200(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathDivideNode;
+
+// ScriptStruct DataflowCore.DataflowMathMinimumNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathMinimumNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathMinimumNode;
+
+// ScriptStruct DataflowCore.DataflowMathMinimumNode_v2
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowMathMinimumNode_v2 final : public FDataflowNode
+{
+public:
+	TArray<struct FDataflowNumericTypes>          Inputs;                                            // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Result;                                            // 0x01F8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowMathMinimumNode_v2;
+
+// ScriptStruct DataflowCore.DataflowVectorSquaredLengthNode
+// 0x0038 (0x0220 - 0x01E8)
+struct FDataflowVectorSquaredLengthNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   V;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  SquaredLength;                                     // 0x0210(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowVectorSquaredLengthNode;
+
+// ScriptStruct DataflowCore.DataflowMathMaximumNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathMaximumNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathMaximumNode;
+
+// ScriptStruct DataflowCore.DataflowMathMaximumNode_v2
+// 0x0018 (0x0200 - 0x01E8)
+struct FDataflowMathMaximumNode_v2 final : public FDataflowNode
+{
+public:
+	TArray<struct FDataflowNumericTypes>          Inputs;                                            // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Result;                                            // 0x01F8(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowMathMaximumNode_v2;
+
+// ScriptStruct DataflowCore.DataflowMathReciprocalNode
+// 0x0008 (0x0200 - 0x01F8)
+struct FDataflowMathReciprocalNode final : public FDataflowMathOneInputOperatorNode
+{
+public:
+	struct FDataflowNumericTypes                  Fallback;                                          // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathReciprocalNode;
+
+// ScriptStruct DataflowCore.DataflowMathSquareNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathSquareNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathSquareNode;
+
+// ScriptStruct DataflowCore.DataflowVectorNormalize
+// 0x0048 (0x0230 - 0x01E8)
+struct FDataflowVectorNormalize final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   V;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   Normalized;                                        // 0x0210(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorNormalize;
+
+// ScriptStruct DataflowCore.DataflowMathCubeNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathCubeNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathCubeNode;
+
+// ScriptStruct DataflowCore.DataflowMathSquareRootNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathSquareRootNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathSquareRootNode;
+
+// ScriptStruct DataflowCore.DataflowVectorDotProductNode
+// 0x0058 (0x0240 - 0x01E8)
+struct FDataflowVectorDotProductNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  DotProduct;                                        // 0x0230(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowVectorDotProductNode;
+
+// ScriptStruct DataflowCore.DataflowMathInverseSquareRootNode
+// 0x0008 (0x0200 - 0x01F8)
+struct FDataflowMathInverseSquareRootNode final : public FDataflowMathOneInputOperatorNode
+{
+public:
+	struct FDataflowNumericTypes                  Fallback;                                          // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathInverseSquareRootNode;
+
+// ScriptStruct DataflowCore.DataflowMathNegateNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathNegateNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathNegateNode;
+
+// ScriptStruct DataflowCore.DataflowMathAbsNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathAbsNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathAbsNode;
+
+// ScriptStruct DataflowCore.DataflowMathFloorNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathFloorNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathFloorNode;
+
+// ScriptStruct DataflowCore.DataflowMathCeilNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathCeilNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathCeilNode;
+
+// ScriptStruct DataflowCore.DataflowMathRoundNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathRoundNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathRoundNode;
+
+// ScriptStruct DataflowCore.DataflowMathTruncNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathTruncNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathTruncNode;
+
+// ScriptStruct DataflowCore.DataflowMathFracNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathFracNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathFracNode;
+
+// ScriptStruct DataflowCore.DataflowMathPowNode
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathPowNode final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathPowNode;
+
+// ScriptStruct DataflowCore.DataflowMathLogXNode
+// 0x0008 (0x0200 - 0x01F8)
+struct FDataflowMathLogXNode final : public FDataflowMathOneInputOperatorNode
+{
+public:
+	struct FDataflowNumericTypes                  base;                                              // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathLogXNode;
+
+// ScriptStruct DataflowCore.DataflowMathLogNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathLogNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathLogNode;
+
+// ScriptStruct DataflowCore.DataflowMathExpNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathExpNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathExpNode;
+
+// ScriptStruct DataflowCore.DataflowMathSignNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathSignNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathSignNode;
+
+// ScriptStruct DataflowCore.DataflowMathOneMinusNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathOneMinusNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathOneMinusNode;
+
+// ScriptStruct DataflowCore.DataflowMathConstantNode
+// 0x0010 (0x01F8 - 0x01E8)
+struct FDataflowMathConstantNode final : public FDataflowNode
+{
+public:
+	EDataflowMathConstantsEnum                    Constant;                                          // 0x01E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowNumericTypes                  Result;                                            // 0x01F0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathConstantNode;
+
+// ScriptStruct DataflowCore.DataflowMathClampNode
+// 0x0010 (0x0208 - 0x01F8)
+struct FDataflowMathClampNode final : public FDataflowMathOneInputOperatorNode
+{
+public:
+	struct FDataflowNumericTypes                  min_0;                                             // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  max_0;                                             // 0x0200(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowMathClampNode;
+
+// ScriptStruct DataflowCore.DataflowMathSinNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathSinNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathSinNode;
+
+// ScriptStruct DataflowCore.DataflowMathCosNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathCosNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathCosNode;
+
+// ScriptStruct DataflowCore.DataflowMathTanNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathTanNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathTanNode;
+
+// ScriptStruct DataflowCore.DataflowMathArcSinNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathArcSinNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathArcSinNode;
+
+// ScriptStruct DataflowCore.DataflowMathArcCosNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathArcCosNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathArcCosNode;
+
+// ScriptStruct DataflowCore.DataflowMathArcTanNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathArcTanNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathArcTanNode;
+
+// ScriptStruct DataflowCore.DataflowMathArcTan2Node
+// 0x0000 (0x0200 - 0x0200)
+struct FDataflowMathArcTan2Node final : public FDataflowMathTwoInputsOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathArcTan2Node;
+
+// ScriptStruct DataflowCore.DataflowMathDegToRadNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathDegToRadNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathDegToRadNode;
+
+// ScriptStruct DataflowCore.DataflowMathRadToDegNode
+// 0x0000 (0x01F8 - 0x01F8)
+struct FDataflowMathRadToDegNode final : public FDataflowMathOneInputOperatorNode
+{
+};
+DUMPER7_ASSERTS_FDataflowMathRadToDegNode;
+
+// ScriptStruct DataflowCore.DataflowFreezeActions
+// 0x0001 (0x0001 - 0x0000)
+struct FDataflowFreezeActions final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowFreezeActions;
+
+// ScriptStruct DataflowCore.DataflowOverrideNode
+// 0x0020 (0x0208 - 0x01E8)
+struct FDataflowOverrideNode : public FDataflowNode
+{
+public:
+	class FName                                   Key;                                               // 0x01E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Default;                                           // 0x01F0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsOverriden;                                       // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowOverrideNode;
+
+// ScriptStruct DataflowCore.DataflowPath
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FDataflowPath final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowPath;
+
+// ScriptStruct DataflowCore.DataflowPlane
+// 0x0030 (0x0030 - 0x0000)
+struct FDataflowPlane final
+{
+public:
+	struct FVector                                Point;                                             // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                Normal;                                            // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowPlane;
+
+// ScriptStruct DataflowCore.DataflowPoints
+// 0x00B0 (0x00B0 - 0x0000)
+struct FDataflowPoints final
+{
+public:
+	struct FManagedArrayCollection                Collection;                                        // 0x0000(0x00B0)(NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowPoints;
 
 // ScriptStruct DataflowCore.DataflowTransformSelection
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0028 - 0x0028)
 struct FDataflowTransformSelection final : public FDataflowSelection
 {
 };
+DUMPER7_ASSERTS_FDataflowTransformSelection;
 
 // ScriptStruct DataflowCore.DataflowVertexSelection
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0028 - 0x0028)
 struct FDataflowVertexSelection final : public FDataflowSelection
 {
 };
+DUMPER7_ASSERTS_FDataflowVertexSelection;
 
 // ScriptStruct DataflowCore.DataflowFaceSelection
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0028 - 0x0028)
 struct FDataflowFaceSelection final : public FDataflowSelection
 {
 };
+DUMPER7_ASSERTS_FDataflowFaceSelection;
 
 // ScriptStruct DataflowCore.DataflowGeometrySelection
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0028 - 0x0028)
 struct FDataflowGeometrySelection final : public FDataflowSelection
 {
 };
+DUMPER7_ASSERTS_FDataflowGeometrySelection;
 
 // ScriptStruct DataflowCore.DataflowMaterialSelection
-// 0x0000 (0x0020 - 0x0020)
+// 0x0000 (0x0028 - 0x0028)
 struct FDataflowMaterialSelection final : public FDataflowSelection
 {
 };
+DUMPER7_ASSERTS_FDataflowMaterialSelection;
+
+// ScriptStruct DataflowCore.DataflowCurveSelection
+// 0x0000 (0x0028 - 0x0028)
+struct FDataflowCurveSelection final : public FDataflowSelection
+{
+};
+DUMPER7_ASSERTS_FDataflowCurveSelection;
+
+// ScriptStruct DataflowCore.DataflowPointsSelection
+// 0x0000 (0x0028 - 0x0028)
+struct FDataflowPointsSelection final : public FDataflowSelection
+{
+};
+DUMPER7_ASSERTS_FDataflowPointsSelection;
 
 // ScriptStruct DataflowCore.NodeColors
 // 0x0020 (0x0020 - 0x0000)
@@ -618,11 +1264,134 @@ public:
 	struct FLinearColor                           NodeTitleColor;                                    // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           NodeBodyTintColor;                                 // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FNodeColors;
+
+// ScriptStruct DataflowCore.PinSettings
+// 0x0014 (0x0014 - 0x0000)
+struct FPinSettings final
+{
+public:
+	struct FLinearColor                           PinColor;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WireThickness;                                     // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPinSettings;
+
+// ScriptStruct DataflowCore.TransformLevelColors
+// 0x0020 (0x0020 - 0x0000)
+struct FTransformLevelColors final
+{
+public:
+	TArray<struct FLinearColor>                   LevelColors;                                       // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BlankColor;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTransformLevelColors;
 
 // ScriptStruct DataflowCore.DataflowTerminalNode
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01E8 - 0x01E8)
 struct FDataflowTerminalNode : public FDataflowNode
 {
 };
+DUMPER7_ASSERTS_FDataflowTerminalNode;
+
+// ScriptStruct DataflowCore.DataflowVectorMakeVec3Node
+// 0x0038 (0x0220 - 0x01E8)
+struct FDataflowVectorMakeVec3Node final : public FDataflowNode
+{
+public:
+	struct FDataflowNumericTypes                  X;                                                 // 0x01E8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Y;                                                 // 0x01F0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Z;                                                 // 0x01F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   Vector3d;                                          // 0x0200(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorMakeVec3Node;
+
+// ScriptStruct DataflowCore.DataflowVectorBreakNode
+// 0x0048 (0x0230 - 0x01E8)
+struct FDataflowVectorBreakNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   V;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  X;                                                 // 0x0210(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Y;                                                 // 0x0218(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Z;                                                 // 0x0220(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  W;                                                 // 0x0228(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorBreakNode;
+
+// ScriptStruct DataflowCore.DataflowVectorAddNode
+// 0x0068 (0x0250 - 0x01E8)
+struct FDataflowVectorAddNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   V;                                                 // 0x0230(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorAddNode;
+
+// ScriptStruct DataflowCore.DataflowVectorSubtractNode
+// 0x0068 (0x0250 - 0x01E8)
+struct FDataflowVectorSubtractNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   V;                                                 // 0x0230(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorSubtractNode;
+
+// ScriptStruct DataflowCore.DataflowVectorDivideNode
+// 0x0088 (0x0270 - 0x01E8)
+struct FDataflowVectorDivideNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   Fallback;                                          // 0x0230(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   V;                                                 // 0x0250(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorDivideNode;
+
+// ScriptStruct DataflowCore.DataflowVectorLengthNode
+// 0x0038 (0x0220 - 0x01E8)
+struct FDataflowVectorLengthNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   V;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Length;                                            // 0x0210(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowVectorLengthNode;
+
+// ScriptStruct DataflowCore.DataflowVectorDistanceNode
+// 0x0058 (0x0240 - 0x01E8)
+struct FDataflowVectorDistanceNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   A;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowVectorTypes                   B;                                                 // 0x0210(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Distance;                                          // 0x0230(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowVectorDistanceNode;
+
+// ScriptStruct DataflowCore.DataflowVectorScaleNode
+// 0x0058 (0x0240 - 0x01E8)
+struct FDataflowVectorScaleNode final : public FDataflowNode
+{
+public:
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   V;                                                 // 0x01F0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  Scale;                                             // 0x0210(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataflowVectorTypes                   Scaled;                                            // 0x0220(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FDataflowVectorScaleNode;
 
 SDK_NAMESPACE_END

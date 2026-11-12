@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void IInterface_Vehicle_C::Interface_Vehicle_Get_Should_Be_Forced_TPV__prevent_fpv_(bool* Should_Driver_Be_Forced_TPV, bool* Should_Non_Turret_Passenger_Be_Forced_TPV, bool* Should_Turret_Passenger_Be_Forced_TPV)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle Get Should Be Forced TPV (prevent fpv)");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle Get Should Be Forced TPV (prevent fpv)", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_Get_Should_Be_Forced_TPV__prevent_fpv_ Parms{};
 
@@ -54,10 +52,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_Get_Should_Be_Forced_TPV__prevent_f
 
 void IInterface_Vehicle_C::Interface_Vehicle_Add_Attachment(TArray<class UStaticMesh*>& Meshes, EPrimalEquipmentType EquipmentSlot, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_Add_Attachment");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_Add_Attachment", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_Add_Attachment Parms{};
 
@@ -81,10 +77,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_Add_Attachment(TArray<class UStatic
 
 void IInterface_Vehicle_C::Interface_Vehicle_ConsumeFuel(double FuelPercentToConsume, double* Ret_Fuel_Percent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_ConsumeFuel");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_ConsumeFuel", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_ConsumeFuel Parms{};
 
@@ -106,10 +100,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_ConsumeFuel(double FuelPercentToCon
 
 void IInterface_Vehicle_C::Interface_Vehicle_ConvertCarIntoItem(class AShooterPlayerController* SPC, class UPrimalInventoryComponent* Inv, class UPrimalItem** Item)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_ConvertCarIntoItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_ConvertCarIntoItem", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_ConvertCarIntoItem Parms{};
 
@@ -131,10 +123,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_ConvertCarIntoItem(class AShooterPl
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedMesh_Skin(class FName BoneName, TArray<class UMeshComponent*>* MeshRefs)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetAttachedMesh_Skin");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetAttachedMesh_Skin", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetAttachedMesh_Skin Parms{};
 
@@ -154,10 +144,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedMesh_Skin(class FName Bo
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedTireMeshes(TMap<class FName, class UStaticMeshComponent*>* Attached_Meshes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetAttachedTireMeshes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetAttachedTireMeshes", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes Parms{};
 
@@ -175,10 +163,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedTireMeshes(TMap<class FN
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedTireMeshes_V2(TMap<class FName, struct FArrayOfStaticMeshComponents>* Attached_Meshes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetAttachedTireMeshes_V2");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetAttachedTireMeshes_V2", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes_V2 Parms{};
 
@@ -196,10 +182,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetAttachedTireMeshes_V2(TMap<class
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetAvailableTurretAmmo(int32* AvailableAmmo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetAvailableTurretAmmo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetAvailableTurretAmmo", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo Parms{};
 
@@ -217,10 +201,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetAvailableTurretAmmo(int32* Avail
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent(double* LoadedAmmoPercent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent Parms{};
 
@@ -238,10 +220,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercen
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetCalculatedVehicleVelocity(struct FVector* Velocity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetCalculatedVehicleVelocity");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetCalculatedVehicleVelocity", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetCalculatedVehicleVelocity Parms{};
 
@@ -259,10 +239,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetCalculatedVehicleVelocity(struct
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetChaosVehicleMovement(class UChaosVehicleMovementComponent** ChaosVehicleMovement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetChaosVehicleMovement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetChaosVehicleMovement", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetChaosVehicleMovement Parms{};
 
@@ -280,10 +258,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetChaosVehicleMovement(class UChao
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetCurrentGear(int32* CurrentGear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetCurrentGear");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetCurrentGear", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetCurrentGear Parms{};
 
@@ -303,10 +279,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetCurrentGear(int32* CurrentGear)
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetCurrentRadioSong(class FString* AlbumName, class FString* TrackName, int32* TrackIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetCurrentRadioSong");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetCurrentRadioSong", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetCurrentRadioSong Parms{};
 
@@ -330,10 +304,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetCurrentRadioSong(class FString* 
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetFuelConsumptionPerSecond(double* ConsumptionPerSec)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetFuelConsumptionPerSecond");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetFuelConsumptionPerSecond", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetFuelConsumptionPerSecond Parms{};
 
@@ -353,10 +325,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetFuelConsumptionPerSecond(double*
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetFuelPercent(double* Ret_Fuel_Percent, double* Current_Fuel_Percent, class UClass** ItemFuel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetFuelPercent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetFuelPercent", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetFuelPercent Parms{};
 
@@ -380,10 +350,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetFuelPercent(double* Ret_Fuel_Per
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetIsUsingRearModule(bool* IsUsingRearModule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetIsUsingRearModule");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetIsUsingRearModule", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetIsUsingRearModule Parms{};
 
@@ -401,10 +369,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetIsUsingRearModule(bool* IsUsingR
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetMPHStat(double* MPHStat)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetMPHStat");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetMPHStat", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetMPHStat Parms{};
 
@@ -422,10 +388,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetMPHStat(double* MPHStat)
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetSkinClassCDO(class UPrimalItem** Skin_CDO)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetSkinClassCDO");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetSkinClassCDO", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetSkinClassCDO Parms{};
 
@@ -444,10 +408,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetSkinClassCDO(class UPrimalItem**
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetSpeedMPH(double* CurrentMPH, double* MaxMPH)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetSpeedMPH");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetSpeedMPH", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetSpeedMPH Parms{};
 
@@ -468,10 +430,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetSpeedMPH(double* CurrentMPH, dou
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetSteeringInput(double* SteeringInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetSteeringInput");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetSteeringInput", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetSteeringInput Parms{};
 
@@ -491,10 +451,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetSteeringInput(double* SteeringIn
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetSuspensionMaxDrop(int32 WheelIndex, bool* FoundSuspension, double* SuspensionMaxDrop)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetSuspensionMaxDrop");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetSuspensionMaxDrop", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetSuspensionMaxDrop Parms{};
 
@@ -517,10 +475,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetSuspensionMaxDrop(int32 WheelInd
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetTargetGear(int32* TargetGear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetTargetGear");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetTargetGear", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetTargetGear Parms{};
 
@@ -541,10 +497,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetTargetGear(int32* TargetGear)
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetTireSpinValues(class FName TireName, bool* Found, double* AnimationStateCurrent, double* AnimationStateNext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetTireSpinValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetTireSpinValues", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetTireSpinValues Parms{};
 
@@ -572,10 +526,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetTireSpinValues(class FName TireN
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetWheelRadius(int32 WheelIndex, bool* FoundWheel, double* WheelRadius)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetWheelRadius");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetWheelRadius", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetWheelRadius Parms{};
 
@@ -599,10 +551,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetWheelRadius(int32 WheelIndex, bo
 
 void IInterface_Vehicle_C::Interface_Vehicle_GetWheelRotation(int32 WheelIndex, double* Rotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_GetWheelRotation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_GetWheelRotation", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_GetWheelRotation Parms{};
 
@@ -622,10 +572,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_GetWheelRotation(int32 WheelIndex, 
 
 void IInterface_Vehicle_C::Interface_Vehicle_Has_Cab(bool* Has_Cab)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_Has_Cab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_Has_Cab", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_Has_Cab Parms{};
 
@@ -643,10 +591,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_Has_Cab(bool* Has_Cab)
 
 void IInterface_Vehicle_C::Interface_Vehicle_Is_InAttachmentMode(bool* IsInAttachmentMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_Is_InAttachmentMode");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_Is_InAttachmentMode", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_Is_InAttachmentMode Parms{};
 
@@ -664,10 +610,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_Is_InAttachmentMode(bool* IsInAttac
 
 void IInterface_Vehicle_C::Interface_Vehicle_IsCheatVehicle(bool* IsCheatVehicle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_IsCheatVehicle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_IsCheatVehicle", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_IsCheatVehicle Parms{};
 
@@ -685,10 +629,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_IsCheatVehicle(bool* IsCheatVehicle
 
 void IInterface_Vehicle_C::Interface_Vehicle_NotifyCosmeticDownloaded(bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_NotifyCosmeticDownloaded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_NotifyCosmeticDownloaded", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_NotifyCosmeticDownloaded Parms{};
 
@@ -706,10 +648,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_NotifyCosmeticDownloaded(bool* succ
 
 void IInterface_Vehicle_C::Interface_Vehicle_RearModuleFuelPercent(double* Percent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_RearModuleFuelPercent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_RearModuleFuelPercent", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_RearModuleFuelPercent Parms{};
 
@@ -728,10 +668,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_RearModuleFuelPercent(double* Perce
 
 void IInterface_Vehicle_C::Interface_Vehicle_SetFuelAmount(double NewFuelPercent, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_SetFuelAmount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_SetFuelAmount", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_SetFuelAmount Parms{};
 
@@ -751,10 +689,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_SetFuelAmount(double NewFuelPercent
 
 void IInterface_Vehicle_C::Interface_Vehicle_SetSkinHeadlightsState(bool bTurnOn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_SetSkinHeadlightsState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_SetSkinHeadlightsState", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_SetSkinHeadlightsState Parms{};
 
@@ -771,10 +707,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_SetSkinHeadlightsState(bool bTurnOn
 
 void IInterface_Vehicle_C::Interface_Vehicle_SkinCanUseHeadlights(bool* bCanUse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_SkinCanUseHeadlights");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_SkinCanUseHeadlights", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_SkinCanUseHeadlights Parms{};
 
@@ -795,10 +729,8 @@ void IInterface_Vehicle_C::Interface_Vehicle_SkinCanUseHeadlights(bool* bCanUse)
 
 void IInterface_Vehicle_C::Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode(bool Toggle, bool Force_Attachment_Mode, bool Force_Turret_Mode, bool* success)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_Vehicle_C", "Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_Vehicle_C", "Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode", FuncInfo);
 
 	Params::Interface_Vehicle_C_Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode Parms{};
 

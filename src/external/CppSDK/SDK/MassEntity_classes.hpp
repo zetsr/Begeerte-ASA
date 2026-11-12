@@ -10,57 +10,71 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 #include "MassEntity_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class MassEntity.MassSubsystemBase
-// 0x0008 (0x0038 - 0x0030)
-class UMassSubsystemBase : public UWorldSubsystem
+// Class MassEntity.MassProcessor
+// 0x00D8 (0x0100 - 0x0028)
+class UMassProcessor : public UObject
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMassProcessorExecutionOrder           ExecutionOrder;                                    // 0x0028(0x0028)(Edit, Config, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	EMassProcessingPhase                          ProcessingPhase;                                   // 0x0050(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         ExecutionFlags;                                    // 0x0051(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bAutoRegisterWithProcessingPhases : 1;             // 0x0052(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         BitPad_52_1 : 1;                                   // 0x0052(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bRequiresGameThreadExecution : 1;                  // 0x0052(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bAggregateRequirements : 1;                        // 0x0052(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	EActivationState                              ActivationState;                                   // 0x0053(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int16                                         ExecutionPriority;                                 // 0x0054(0x0002)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_56[0xAA];                                      // 0x0056(0x00AA)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MassSubsystemBase")
+		STATIC_CLASS_IMPL("MassProcessor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MassSubsystemBase")
+		STATIC_NAME_IMPL(L"MassProcessor")
 	}
-	static class UMassSubsystemBase* GetDefaultObj()
+	static class UMassProcessor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMassSubsystemBase>();
+		return GetDefaultObjImpl<UMassProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassProcessor;
 
-// Class MassEntity.MassTickableSubsystemBase
-// 0x0008 (0x0048 - 0x0040)
-class UMassTickableSubsystemBase : public UTickableWorldSubsystem
+// Class MassEntity.MassObserverProcessor
+// 0x0020 (0x0120 - 0x0100)
+class UMassObserverProcessor : public UMassProcessor
 {
 public:
-	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UScriptStruct*                          ObservedType;                                      // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class UScriptStruct*>                  ObservedTypes;                                     // 0x0108(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	bool                                          bAutoRegisterWithObserverRegistry;                 // 0x0118(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MassTickableSubsystemBase")
+		STATIC_CLASS_IMPL("MassObserverProcessor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MassTickableSubsystemBase")
+		STATIC_NAME_IMPL(L"MassObserverProcessor")
 	}
-	static class UMassTickableSubsystemBase* GetDefaultObj()
+	static class UMassObserverProcessor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMassTickableSubsystemBase>();
+		return GetDefaultObjImpl<UMassObserverProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassObserverProcessor;
 
 // Class MassEntity.MassModuleSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -80,13 +94,14 @@ public:
 		return GetDefaultObjImpl<UMassModuleSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassModuleSettings;
 
 // Class MassEntity.MassEntitySettings
 // 0x0108 (0x0130 - 0x0028)
 class UMassEntitySettings final : public UMassModuleSettings
 {
 public:
-	int32                                         ChunkMemorySize;                                   // 0x0028(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        ChunkMemorySize;                                   // 0x0028(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DumpDependencyGraphFileName;                       // 0x0030(0x0010)(Edit, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMassProcessingPhaseConfig             ProcessingPhasesConfig[0x6];                       // 0x0040(0x0020)(Edit, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -107,13 +122,37 @@ public:
 		return GetDefaultObjImpl<UMassEntitySettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassEntitySettings;
+
+// Class MassEntity.MassSubsystemBase
+// 0x0008 (0x0040 - 0x0038)
+class UMassSubsystemBase : public UWorldSubsystem
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassSubsystemBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassSubsystemBase")
+	}
+	static class UMassSubsystemBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassSubsystemBase>();
+	}
+};
+DUMPER7_ASSERTS_UMassSubsystemBase;
 
 // Class MassEntity.MassEntitySubsystem
-// 0x0010 (0x0048 - 0x0038)
+// 0x0010 (0x0050 - 0x0040)
 class UMassEntitySubsystem final : public UMassSubsystemBase
 {
 public:
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -129,67 +168,16 @@ public:
 		return GetDefaultObjImpl<UMassEntitySubsystem>();
 	}
 };
-
-// Class MassEntity.MassProcessor
-// 0x0088 (0x00B0 - 0x0028)
-class UMassProcessor : public UObject
-{
-public:
-	struct FMassProcessorExecutionOrder           ExecutionOrder;                                    // 0x0028(0x0028)(Edit, Config, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	EMassProcessingPhase                          ProcessingPhase;                                   // 0x0050(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         ExecutionFlags;                                    // 0x0051(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bAutoRegisterWithProcessingPhases : 1;             // 0x0052(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         BitPad_52_1 : 3;                                   // 0x0052(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bRequiresGameThreadExecution : 1;                  // 0x0052(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_53[0x5D];                                      // 0x0053(0x005D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassProcessor")
-	}
-	static class UMassProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassProcessor>();
-	}
-};
-
-// Class MassEntity.MassObserverProcessor
-// 0x0018 (0x00C8 - 0x00B0)
-class UMassObserverProcessor : public UMassProcessor
-{
-public:
-	bool                                          bAutoRegisterWithObserverRegistry;                 // 0x00B0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScriptStruct*                          ObservedType;                                      // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassObserverProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassObserverProcessor")
-	}
-	static class UMassObserverProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassObserverProcessor>();
-	}
-};
+DUMPER7_ASSERTS_UMassEntitySubsystem;
 
 // Class MassEntity.MassObserverRegistry
-// 0x0140 (0x0168 - 0x0028)
+// 0x03C8 (0x03F0 - 0x0028)
 class UMassObserverRegistry final : public UObject
 {
 public:
-	struct FMassEntityObserverClassesMap          FragmentObservers[0x2];                            // 0x0028(0x0050)(Protected, NativeAccessSpecifierProtected)
-	struct FMassEntityObserverClassesMap          TagObservers[0x2];                                 // 0x00C8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_28[0x148];                                     // 0x0028(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMassEntityObserverClassesMap          FragmentObservers[0x4];                            // 0x0170(0x0050)(Protected, NativeAccessSpecifierProtected)
+	struct FMassEntityObserverClassesMap          TagObservers[0x4];                                 // 0x02B0(0x0050)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -205,15 +193,16 @@ public:
 		return GetDefaultObjImpl<UMassObserverRegistry>();
 	}
 };
+DUMPER7_ASSERTS_UMassObserverRegistry;
 
 // Class MassEntity.MassCompositeProcessor
-// 0x0040 (0x00F0 - 0x00B0)
+// 0x0040 (0x0140 - 0x0100)
 class UMassCompositeProcessor final : public UMassProcessor
 {
 public:
-	struct FMassRuntimePipeline                   ChildPipeline;                                     // 0x00B0(0x0018)(Edit, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   GroupName;                                         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D0[0x20];                                      // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMassRuntimePipeline                   ChildPipeline;                                     // 0x0100(0x0018)(Edit, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   GroupName;                                         // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_120[0x20];                                     // 0x0120(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -229,6 +218,113 @@ public:
 		return GetDefaultObjImpl<UMassCompositeProcessor>();
 	}
 };
+DUMPER7_ASSERTS_UMassCompositeProcessor;
+
+// Class MassEntity.MassRelationObserver
+// 0x05F0 (0x0710 - 0x0120)
+class UMassRelationObserver : public UMassObserverProcessor
+{
+public:
+	uint8                                         Pad_120[0x5F0];                                    // 0x0120(0x05F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassRelationObserver")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassRelationObserver")
+	}
+	static class UMassRelationObserver* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassRelationObserver>();
+	}
+};
+DUMPER7_ASSERTS_UMassRelationObserver;
+
+// Class MassEntity.MassRelationEntityCreation
+// 0x0000 (0x0710 - 0x0710)
+class UMassRelationEntityCreation : public UMassRelationObserver
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassRelationEntityCreation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassRelationEntityCreation")
+	}
+	static class UMassRelationEntityCreation* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassRelationEntityCreation>();
+	}
+};
+DUMPER7_ASSERTS_UMassRelationEntityCreation;
+
+// Class MassEntity.MassRelationEntityGuardDog
+// 0x0000 (0x0710 - 0x0710)
+class UMassRelationEntityGuardDog final : public UMassRelationObserver
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassRelationEntityGuardDog")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassRelationEntityGuardDog")
+	}
+	static class UMassRelationEntityGuardDog* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassRelationEntityGuardDog>();
+	}
+};
+DUMPER7_ASSERTS_UMassRelationEntityGuardDog;
+
+// Class MassEntity.MassRelationEntityDestruction
+// 0x0000 (0x0710 - 0x0710)
+class UMassRelationEntityDestruction final : public UMassRelationObserver
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassRelationEntityDestruction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassRelationEntityDestruction")
+	}
+	static class UMassRelationEntityDestruction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassRelationEntityDestruction>();
+	}
+};
+DUMPER7_ASSERTS_UMassRelationEntityDestruction;
+
+// Class MassEntity.MassRelationRoleDestruction
+// 0x0040 (0x0750 - 0x0710)
+class UMassRelationRoleDestruction final : public UMassRelationObserver
+{
+public:
+	uint8                                         Pad_710[0x40];                                     // 0x0710(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassRelationRoleDestruction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassRelationRoleDestruction")
+	}
+	static class UMassRelationRoleDestruction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassRelationRoleDestruction>();
+	}
+};
+DUMPER7_ASSERTS_UMassRelationRoleDestruction;
 
 // Class MassEntity.MassSettings
 // 0x0050 (0x0088 - 0x0038)
@@ -251,5 +347,49 @@ public:
 		return GetDefaultObjImpl<UMassSettings>();
 	}
 };
+DUMPER7_ASSERTS_UMassSettings;
+
+// Class MassEntity.MassTickableSubsystemBase
+// 0x0008 (0x0050 - 0x0048)
+class UMassTickableSubsystemBase : public UTickableWorldSubsystem
+{
+public:
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassTickableSubsystemBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassTickableSubsystemBase")
+	}
+	static class UMassTickableSubsystemBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassTickableSubsystemBase>();
+	}
+};
+DUMPER7_ASSERTS_UMassTickableSubsystemBase;
+
+// Class MassEntity.MassChildOfRelationEntityCreation
+// 0x0000 (0x0710 - 0x0710)
+class UMassChildOfRelationEntityCreation final : public UMassRelationEntityCreation
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassChildOfRelationEntityCreation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassChildOfRelationEntityCreation")
+	}
+	static class UMassChildOfRelationEntityCreation* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassChildOfRelationEntityCreation>();
+	}
+};
+DUMPER7_ASSERTS_UMassChildOfRelationEntityCreation;
 
 SDK_NAMESPACE_END

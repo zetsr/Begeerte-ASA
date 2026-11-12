@@ -13,17 +13,28 @@
 
 SDK_NAMESPACE_START
 
+// Enum SlateRHIRenderer.ESlatePostResolution
+// NumValues: 0x0003
+enum class ESlatePostResolution : uint8
+{
+	Full                                     = 0,
+	Half                                     = 1,
+	ESlatePostResolution_MAX                 = 2,
+};
+
 // ScriptStruct SlateRHIRenderer.SlatePostSettings
 // 0x0030 (0x0030 - 0x0000)
 struct FSlatePostSettings final
 {
 public:
 	uint8                                         bEnabled : 1;                                      // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class USlateRHIPostBufferProcessor> PostProcessorClass;                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlatePostResolution                          Resolution;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class USlatePostBufferProcessor>  PostProcessorClass;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PathToSlatePostRT;                                 // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UTextureRenderTarget2D*                 CachedSlatePostRT;                                 // 0x0020(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FSlatePostSettings;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void URandomWait_TK_C::ExecuteUbergraph_RandomWait_TK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RandomWait_TK_C", "ExecuteUbergraph_RandomWait_TK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "RandomWait_TK_C", "ExecuteUbergraph_RandomWait_TK", FuncInfo);
 
 	Params::RandomWait_TK_C_ExecuteUbergraph_RandomWait_TK Parms{};
 
@@ -43,10 +41,8 @@ void URandomWait_TK_C::ExecuteUbergraph_RandomWait_TK(int32 EntryPoint)
 
 void URandomWait_TK_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RandomWait_TK_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "RandomWait_TK_C", "ReceiveExecute", FuncInfo);
 
 	Params::RandomWait_TK_C_ReceiveExecute Parms{};
 

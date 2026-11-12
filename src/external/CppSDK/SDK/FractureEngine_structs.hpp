@@ -44,6 +44,16 @@ enum class EMeshCutterCutDistribution : uint8
 	EMeshCutterCutDistribution_MAX           = 3,
 };
 
+// Enum FractureEngine.EMeshCutterPerCutMeshSelection
+// NumValues: 0x0004
+enum class EMeshCutterPerCutMeshSelection : uint8
+{
+	All                                      = 0,
+	Random                                   = 1,
+	Sequential                               = 2,
+	EMeshCutterPerCutMeshSelection_MAX       = 3,
+};
+
 // Enum FractureEngine.ENonUniformSamplingDistributionMode
 // NumValues: 0x0004
 enum class ENonUniformSamplingDistributionMode : uint8
@@ -74,12 +84,13 @@ enum class EFixTinyGeoMergeType : uint8
 };
 
 // Enum FractureEngine.EFixTinyGeoNeighborSelectionMethod
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EFixTinyGeoNeighborSelectionMethod : uint8
 {
 	LargestNeighbor                          = 0,
 	NearestCenter                            = 1,
-	EFixTinyGeoNeighborSelectionMethod_MAX   = 2,
+	LargestContactArea                       = 2,
+	EFixTinyGeoNeighborSelectionMethod_MAX   = 3,
 };
 
 // Enum FractureEngine.EFixTinyGeoUseBoneSelection

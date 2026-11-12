@@ -20,7 +20,6 @@ SDK_NAMESPACE_START
 class UPrimalItemSkinGeneric_C final : public UPrimalItem_Base_C
 {
 public:
-	uint8                                         Pad_B84[0x4];                                      // 0x0B84(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPDA_VoiceCollection_C*                 VoiceCollection_Overdrive;                         // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPDA_FoleyCollection_C*                 FoleySounds_Override;                              // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
@@ -38,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemSkinGeneric_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemSkinGeneric_C;
 
 SDK_NAMESPACE_END

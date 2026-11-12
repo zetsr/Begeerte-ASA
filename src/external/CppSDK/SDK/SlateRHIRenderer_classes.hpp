@@ -10,25 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Engine_classes.hpp"
-#include "SlateRHIRenderer_structs.hpp"
+#include "SlateBaseRenderer_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "SlateRHIRenderer_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class SlateRHIRenderer.SlateFXSubsystem
-// 0x00A0 (0x00D0 - 0x0030)
-class USlateFXSubsystem final : public UEngineSubsystem
+// 0x0050 (0x00D0 - 0x0080)
+class USlateFXSubsystem final : public USlateFXBaseSubsystem
 {
 public:
-	TMap<ESlatePostRT, class USlateRHIPostBufferProcessor*> SlatePostBufferProcessors;               // 0x0030(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_80[0x50];                                      // 0x0080(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class USlateRHIPostBufferProcessor* GetSlatePostProcessor(ESlatePostRT InPostBufferBit);
 
 public:
 	static class UClass* StaticClass()
@@ -44,48 +40,30 @@ public:
 		return GetDefaultObjImpl<USlateFXSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_USlateFXSubsystem;
 
-// Class SlateRHIRenderer.SlateRHIPostBufferProcessor
+// Class SlateRHIRenderer.SlateFontBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
-class USlateRHIPostBufferProcessor : public UObject
+class USlateFontBlueprintLibrary final : public UObject
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SlateRHIPostBufferProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SlateRHIPostBufferProcessor")
-	}
-	static class USlateRHIPostBufferProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USlateRHIPostBufferProcessor>();
-	}
-};
-
-// Class SlateRHIRenderer.SlatePostBufferBlur
-// 0x0018 (0x0040 - 0x0028)
-class USlatePostBufferBlur final : public USlateRHIPostBufferProcessor
-{
-public:
-	float                                         GaussianBlurStrength;                              // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x14];                                      // 0x002C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static struct FSlateFontInfo MakeSlateFontInfo(const class UObject* FontObject, class UObject* FontMaterial, const struct FFontOutlineSettings& OutlineSettings, class FName TypefaceFontName, float Size, int32 LetterSpacing, float SkewAmount, bool bForceMonospaced, bool bMaterialIsStencil, float MonospacedWidth);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SlatePostBufferBlur")
+		STATIC_CLASS_IMPL("SlateFontBlueprintLibrary")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SlatePostBufferBlur")
+		STATIC_NAME_IMPL(L"SlateFontBlueprintLibrary")
 	}
-	static class USlatePostBufferBlur* GetDefaultObj()
+	static class USlateFontBlueprintLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USlatePostBufferBlur>();
+		return GetDefaultObjImpl<USlateFontBlueprintLibrary>();
 	}
 };
+DUMPER7_ASSERTS_USlateFontBlueprintLibrary;
 
 // Class SlateRHIRenderer.SlateRHIRendererSettings
 // 0x0050 (0x0088 - 0x0038)
@@ -113,5 +91,6 @@ public:
 		return GetDefaultObjImpl<USlateRHIRendererSettings>();
 	}
 };
+DUMPER7_ASSERTS_USlateRHIRendererSettings;
 
 SDK_NAMESPACE_END

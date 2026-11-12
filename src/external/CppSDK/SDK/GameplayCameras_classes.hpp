@@ -10,23 +10,53 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
-#include "GameplayCameras_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "StateTreeModule_structs.hpp"
 #include "StateTreeModule_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "GameplayCameras_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "GameplayTags_classes.hpp"
+#include "MovieSceneTracks_classes.hpp"
+#include "MovieScene_structs.hpp"
+#include "MovieScene_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
-// Class GameplayCameras.HasCameraBuildStatus
-// 0x0000 (0x0000 - 0x0000)
-class IHasCameraBuildStatus final
+// Class GameplayCameras.CameraActionInstanceFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UCameraActionInstanceFunctions final : public UBlueprintFunctionLibrary
 {
+public:
+	static bool IsValid(const struct FCameraActionInstanceID& InstanceId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraActionInstanceFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraActionInstanceFunctions")
+	}
+	static class UCameraActionInstanceFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraActionInstanceFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UCameraActionInstanceFunctions;
+
+// Class GameplayCameras.HasCameraBuildStatus
+// 0x0008 (0x0008 - 0x0000)
+class IHasCameraBuildStatus
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -50,248 +80,116 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IHasCameraBuildStatus;
 
-// Class GameplayCameras.CameraNode
+// Class GameplayCameras.CameraVariableCollection
 // 0x0010 (0x0038 - 0x0028)
-class UCameraNode : public UObject
+class UCameraVariableCollection final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsEnabled;                                        // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UCameraVariableAsset*>           Variables;                                         // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CameraNode")
+		STATIC_CLASS_IMPL("CameraVariableCollection")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CameraNode")
+		STATIC_NAME_IMPL(L"CameraVariableCollection")
 	}
-	static class UCameraNode* GetDefaultObj()
+	static class UCameraVariableCollection* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCameraNode>();
+		return GetDefaultObjImpl<UCameraVariableCollection>();
 	}
 };
+DUMPER7_ASSERTS_UCameraVariableCollection;
 
-// Class GameplayCameras.CombinedCameraRigsCameraNode
-// 0x0010 (0x0048 - 0x0038)
-class UCombinedCameraRigsCameraNode final : public UCameraNode
+// Class GameplayCameras.CameraRigInstanceFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UCameraRigInstanceFunctions final : public UBlueprintFunctionLibrary
 {
 public:
-	TArray<struct FCameraRigAssetReference>       CameraRigReferences;                               // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	static bool IsValid(const struct FCameraRigInstanceID& InstanceId);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CombinedCameraRigsCameraNode")
+		STATIC_CLASS_IMPL("CameraRigInstanceFunctions")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CombinedCameraRigsCameraNode")
+		STATIC_NAME_IMPL(L"CameraRigInstanceFunctions")
 	}
-	static class UCombinedCameraRigsCameraNode* GetDefaultObj()
+	static class UCameraRigInstanceFunctions* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCombinedCameraRigsCameraNode>();
+		return GetDefaultObjImpl<UCameraRigInstanceFunctions>();
 	}
 };
+DUMPER7_ASSERTS_UCameraRigInstanceFunctions;
 
-// Class GameplayCameras.Input1DCameraNode
-// 0x0000 (0x0038 - 0x0038)
-class UInput1DCameraNode : public UCameraNode
+// Class GameplayCameras.CameraShakeInstanceFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCameraShakeInstanceFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Input1DCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Input1DCameraNode")
-	}
-	static class UInput1DCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInput1DCameraNode>();
-	}
-};
-
-// Class GameplayCameras.CameraRigInput1DSlot
-// 0x0048 (0x0080 - 0x0038)
-class UCameraRigInput1DSlot final : public UInput1DCameraNode
-{
-public:
-	struct FCameraRigInputSlotParameters          InputSlotParameters;                               // 0x0038(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraParameterClamping               clamp;                                             // 0x0040(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraParameterNormalization          Normalize;                                         // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	EBuiltInDoubleCameraVariable                  BuiltInVariable;                                   // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDoubleCameraVariableReference         CustomVariable;                                    // 0x0070(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCameraVariableID                      TransientVariableID;                               // 0x0078(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FCameraVariableID                      VariableID;                                        // 0x007C(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	static bool IsValid(const struct FCameraShakeInstanceID& CameraShakeInstanceID);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CameraRigInput1DSlot")
+		STATIC_CLASS_IMPL("CameraShakeInstanceFunctionLibrary")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CameraRigInput1DSlot")
+		STATIC_NAME_IMPL(L"CameraShakeInstanceFunctionLibrary")
 	}
-	static class UCameraRigInput1DSlot* GetDefaultObj()
+	static class UCameraShakeInstanceFunctionLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCameraRigInput1DSlot>();
+		return GetDefaultObjImpl<UCameraShakeInstanceFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UCameraShakeInstanceFunctionLibrary;
 
-// Class GameplayCameras.Input2DCameraNode
-// 0x0000 (0x0038 - 0x0038)
-class UInput2DCameraNode : public UCameraNode
+// Class GameplayCameras.AssetReferenceCameraNode
+// 0x0008 (0x0008 - 0x0000)
+class IAssetReferenceCameraNode
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Input2DCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Input2DCameraNode")
-	}
-	static class UInput2DCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInput2DCameraNode>();
-	}
-};
-
-// Class GameplayCameras.CameraRigInput2DSlot
-// 0x0070 (0x00A8 - 0x0038)
-class UCameraRigInput2DSlot : public UInput2DCameraNode
-{
-public:
-	struct FCameraRigInputSlotParameters          InputSlotParameters;                               // 0x0038(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraParameterClamping               ClampX;                                            // 0x0040(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraParameterClamping               ClampY;                                            // 0x0058(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraParameterNormalization          NormalizeX;                                        // 0x0070(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraParameterNormalization          NormalizeY;                                        // 0x0080(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	EBuiltInVector2dCameraVariable                BuiltInVariable;                                   // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2dCameraVariableReference       CustomVariable;                                    // 0x0098(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCameraVariableID                      TransientVariableID;                               // 0x00A0(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FCameraVariableID                      VariableID;                                        // 0x00A4(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CameraRigInput2DSlot")
+		STATIC_CLASS_IMPL("AssetReferenceCameraNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CameraRigInput2DSlot")
+		STATIC_NAME_IMPL(L"AssetReferenceCameraNode")
 	}
-	static class UCameraRigInput2DSlot* GetDefaultObj()
+	static class IAssetReferenceCameraNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCameraRigInput2DSlot>();
+		return GetDefaultObjImpl<IAssetReferenceCameraNode>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-
-// Class GameplayCameras.CameraRigProxyAsset
-// 0x0010 (0x0038 - 0x0028)
-class UCameraRigProxyAsset final : public UObject
-{
-public:
-	struct FGuid                                  Guid;                                              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigProxyAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigProxyAsset")
-	}
-	static class UCameraRigProxyAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigProxyAsset>();
-	}
-};
-
-// Class GameplayCameras.CameraRigProxyTable
-// 0x0010 (0x0038 - 0x0028)
-class UCameraRigProxyTable final : public UObject
-{
-public:
-	TArray<struct FCameraRigProxyTableEntry>      Entries;                                           // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigProxyTable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigProxyTable")
-	}
-	static class UCameraRigProxyTable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigProxyTable>();
-	}
-};
-
-// Class GameplayCameras.GameplayCameraSystemHost
-// 0x0010 (0x0038 - 0x0028)
-class UGameplayCameraSystemHost final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayCameraSystemHost")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayCameraSystemHost")
-	}
-	static class UGameplayCameraSystemHost* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameplayCameraSystemHost>();
-	}
-};
-
-// Class GameplayCameras.InputAxisBinding2DCameraNode
-// 0x0048 (0x00F0 - 0x00A8)
-class UInputAxisBinding2DCameraNode final : public UCameraRigInput2DSlot
-{
-public:
-	TArray<class UInputAction*>                   AxisActions;                                       // 0x00A8(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FBooleanCameraParameter                RevertAxisX;                                       // 0x00B8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                RevertAxisY;                                       // 0x00C8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2dCameraParameter               Multiplier;                                        // 0x00D8(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InputAxisBinding2DCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InputAxisBinding2DCameraNode")
-	}
-	static class UInputAxisBinding2DCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputAxisBinding2DCameraNode>();
-	}
-};
+DUMPER7_ASSERTS_IAssetReferenceCameraNode;
 
 // Class GameplayCameras.ObjectTreeGraphObject
-// 0x0000 (0x0000 - 0x0000)
-class IObjectTreeGraphObject final
+// 0x0008 (0x0008 - 0x0000)
+class IObjectTreeGraphObject
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -315,11 +213,177 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IObjectTreeGraphObject;
+
+// Class GameplayCameras.CameraNode
+// 0x0010 (0x0038 - 0x0028)
+class UCameraNode : public UObject, public IObjectTreeGraphObject
+{
+public:
+	bool                                          bIsEnabled;                                        // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraNode")
+	}
+	static class UCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCameraNode;
+
+// Class GameplayCameras.ShakeCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UShakeCameraNode : public UCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ShakeCameraNode")
+	}
+	static class UShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UShakeCameraNode;
+
+// Class GameplayCameras.ActivateCameraRigFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UActivateCameraRigFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static void ActivatePersistentBaseCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
+	static void ActivatePersistentGlobalCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
+	static void ActivatePersistentVisualCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActivateCameraRigFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActivateCameraRigFunctions")
+	}
+	static class UActivateCameraRigFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActivateCameraRigFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UActivateCameraRigFunctions;
+
+// Class GameplayCameras.CustomCameraNodeParameterProvider
+// 0x0008 (0x0008 - 0x0000)
+class ICustomCameraNodeParameterProvider
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CustomCameraNodeParameterProvider")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CustomCameraNodeParameterProvider")
+	}
+	static class ICustomCameraNodeParameterProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ICustomCameraNodeParameterProvider>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_ICustomCameraNodeParameterProvider;
+
+// Class GameplayCameras.BaseFramingCameraNode
+// 0x0158 (0x0190 - 0x0038)
+class UBaseFramingCameraNode : public UCameraNode, public ICustomCameraNodeParameterProvider
+{
+public:
+	struct FVector3dCameraVariableReference       TargetLocation;                                    // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FCameraActorTargetInfo>         TargetInfos;                                       // 0x0050(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   TargetInfosDataID;                                 // 0x0060(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBooleanCameraParameter                SetTargetDistance;                                 // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                InitializeWithIdealFraming;                        // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2dCameraParameter               IdealFramingLocation;                              // 0x0088(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  ReframeDampingFactor;                              // 0x00A8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  LowReframeDampingFactor;                           // 0x00B8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  ReengageTime;                                      // 0x00C8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  DisengageTime;                                     // 0x00D8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  TargetMovementAnticipationTime;                    // 0x00E8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFramingZoneParameter            DeadZone;                                          // 0x00F8(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFramingZoneParameter            SoftZone;                                          // 0x0120(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraActorTargetInfo                 TargetInfo;                                        // 0x0148(0x0048)(Deprecated, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BaseFramingCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseFramingCameraNode")
+	}
+	static class UBaseFramingCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBaseFramingCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBaseFramingCameraNode;
+
+// Class GameplayCameras.PanningFramingCameraNode
+// 0x0020 (0x01B0 - 0x0190)
+class UPanningFramingCameraNode final : public UBaseFramingCameraNode
+{
+public:
+	struct FBooleanCameraParameter                CanPanLaterally;                                   // 0x0190(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                CanPanVertically;                                  // 0x01A0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PanningFramingCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PanningFramingCameraNode")
+	}
+	static class UPanningFramingCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPanningFramingCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UPanningFramingCameraNode;
 
 // Class GameplayCameras.ObjectTreeGraphRootObject
-// 0x0000 (0x0000 - 0x0000)
-class IObjectTreeGraphRootObject final
+// 0x0008 (0x0008 - 0x0000)
+class IObjectTreeGraphRootObject
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -343,629 +407,32 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IObjectTreeGraphRootObject;
 
-// Class GameplayCameras.BlendCameraNode
-// 0x0000 (0x0038 - 0x0038)
-class UBlendCameraNode : public UCameraNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlendCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlendCameraNode")
-	}
-	static class UBlendCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlendCameraNode>();
-	}
-};
-
-// Class GameplayCameras.BlendStackCameraNode
-// 0x0008 (0x0040 - 0x0038)
-class UBlendStackCameraNode final : public UCameraNode
-{
-public:
-	ECameraBlendStackType                         BlendStackType;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlendStackCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlendStackCameraNode")
-	}
-	static class UBlendStackCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlendStackCameraNode>();
-	}
-};
-
-// Class GameplayCameras.BlendStackRootCameraNode
-// 0x0010 (0x0048 - 0x0038)
-class UBlendStackRootCameraNode final : public UCameraNode
-{
-public:
-	class UBlendCameraNode*                       Blend;                                             // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UCameraNode*                            RootNode;                                          // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlendStackRootCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlendStackRootCameraNode")
-	}
-	static class UBlendStackRootCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlendStackRootCameraNode>();
-	}
-};
-
-// Class GameplayCameras.CameraAsset
-// 0x0060 (0x0088 - 0x0028)
-class UCameraAsset final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraDirector*                        CameraDirector;                                    // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TArray<class UCameraRigAsset*>                CameraRigs;                                        // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TArray<class UCameraRigTransition*>           EnterTransitions;                                  // 0x0060(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TArray<class UCameraRigTransition*>           ExitTransitions;                                   // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	ECameraBuildStatus                            BuildStatus;                                       // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraAsset")
-	}
-	static class UCameraAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraAsset>();
-	}
-};
-
-// Class GameplayCameras.CameraDirector
-// 0x0000 (0x0028 - 0x0028)
-class UCameraDirector : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraDirector")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraDirector")
-	}
-	static class UCameraDirector* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraDirector>();
-	}
-};
-
-// Class GameplayCameras.CameraRigInterfaceParameter
-// 0x0040 (0x0068 - 0x0028)
-class UCameraRigInterfaceParameter final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraNode*                            Target;                                            // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class FName                                   TargetPropertyName;                                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InterfaceParameterName;                            // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  Guid;                                              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraVariableAsset*                   PrivateVariable;                                   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigInterfaceParameter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigInterfaceParameter")
-	}
-	static class UCameraRigInterfaceParameter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigInterfaceParameter>();
-	}
-};
-
-// Class GameplayCameras.CameraRigAsset
-// 0x00D0 (0x00F8 - 0x0028)
-class UCameraRigAsset final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraNode*                            RootNode;                                          // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FGameplayTagContainer                  GameplayTags;                                      // 0x0050(0x0020)(Edit, NativeAccessSpecifierPublic)
-	struct FCameraRigInterface                    Interface;                                         // 0x0070(0x0020)(ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UCameraRigTransition*>           EnterTransitions;                                  // 0x0090(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class UCameraRigTransition*>           ExitTransitions;                                   // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	ECameraRigInitialOrientation                  InitialOrientation;                                // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraRigAllocationInfo               AllocationInfo;                                    // 0x00B8(0x0028)(NativeAccessSpecifierPublic)
-	ECameraBuildStatus                            BuildStatus;                                       // 0x00E0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  Guid;                                              // 0x00E4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigAsset")
-	}
-	static class UCameraRigAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigAsset>();
-	}
-};
-
-// Class GameplayCameras.CameraRigTransitionCondition
+// Class GameplayCameras.CameraAction
 // 0x0008 (0x0030 - 0x0028)
-class UCameraRigTransitionCondition : public UObject
+class UCameraAction : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bPropagateToNewCameraRigs;                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Timeout;                                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("CameraRigTransitionCondition")
+		STATIC_CLASS_IMPL("CameraAction")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"CameraRigTransitionCondition")
+		STATIC_NAME_IMPL(L"CameraAction")
 	}
-	static class UCameraRigTransitionCondition* GetDefaultObj()
+	static class UCameraAction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UCameraRigTransitionCondition>();
+		return GetDefaultObjImpl<UCameraAction>();
 	}
 };
-
-// Class GameplayCameras.CameraRigTransition
-// 0x0028 (0x0050 - 0x0028)
-class UCameraRigTransition final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UCameraRigTransitionCondition*>  Conditions;                                        // 0x0030(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UBlendCameraNode*                       Blend;                                             // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	ECameraRigInitialOrientation                  InitialOrientation;                                // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideInitialOrientation;                       // 0x004C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowCameraRigMerging;                            // 0x004D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigTransition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigTransition")
-	}
-	static class UCameraRigTransition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigTransition>();
-	}
-};
-
-// Class GameplayCameras.CameraValueInterpolator
-// 0x0000 (0x0028 - 0x0028)
-class UCameraValueInterpolator : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraValueInterpolator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraValueInterpolator")
-	}
-	static class UCameraValueInterpolator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraValueInterpolator>();
-	}
-};
-
-// Class GameplayCameras.PopValueInterpolator
-// 0x0000 (0x0028 - 0x0028)
-class UPopValueInterpolator final : public UCameraValueInterpolator
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PopValueInterpolator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PopValueInterpolator")
-	}
-	static class UPopValueInterpolator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPopValueInterpolator>();
-	}
-};
-
-// Class GameplayCameras.CameraVariableAsset
-// 0x0018 (0x0040 - 0x0028)
-class UCameraVariableAsset : public UObject
-{
-public:
-	bool                                          bAutoReset;                                        // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPrivate;                                        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInput;                                          // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  Guid;                                              // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraVariableAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraVariableAsset")
-	}
-	static class UCameraVariableAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraVariableAsset>();
-	}
-};
-
-// Class GameplayCameras.BooleanCameraVariable
-// 0x0008 (0x0048 - 0x0040)
-class UBooleanCameraVariable final : public UCameraVariableAsset
-{
-public:
-	bool                                          bDefaultValue;                                     // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BooleanCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BooleanCameraVariable")
-	}
-	static class UBooleanCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBooleanCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Integer32CameraVariable
-// 0x0008 (0x0048 - 0x0040)
-class UInteger32CameraVariable final : public UCameraVariableAsset
-{
-public:
-	int32                                         DefaultValue;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Integer32CameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Integer32CameraVariable")
-	}
-	static class UInteger32CameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteger32CameraVariable>();
-	}
-};
-
-// Class GameplayCameras.FloatCameraVariable
-// 0x0008 (0x0048 - 0x0040)
-class UFloatCameraVariable final : public UCameraVariableAsset
-{
-public:
-	float                                         DefaultValue;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FloatCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FloatCameraVariable")
-	}
-	static class UFloatCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFloatCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.DoubleCameraVariable
-// 0x0008 (0x0048 - 0x0040)
-class UDoubleCameraVariable final : public UCameraVariableAsset
-{
-public:
-	double                                        DefaultValue;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DoubleCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DoubleCameraVariable")
-	}
-	static class UDoubleCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDoubleCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector2fCameraVariable
-// 0x0008 (0x0048 - 0x0040)
-class UVector2fCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector2f                              DefaultValue;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector2fCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector2fCameraVariable")
-	}
-	static class UVector2fCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector2fCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector2dCameraVariable
-// 0x0010 (0x0050 - 0x0040)
-class UVector2dCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector2D                              DefaultValue;                                      // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector2dCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector2dCameraVariable")
-	}
-	static class UVector2dCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector2dCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector3fCameraVariable
-// 0x0010 (0x0050 - 0x0040)
-class UVector3fCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector3f                              DefaultValue;                                      // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector3fCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector3fCameraVariable")
-	}
-	static class UVector3fCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector3fCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector3dCameraVariable
-// 0x0018 (0x0058 - 0x0040)
-class UVector3dCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector3d                              DefaultValue;                                      // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector3dCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector3dCameraVariable")
-	}
-	static class UVector3dCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector3dCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector4fCameraVariable
-// 0x0010 (0x0050 - 0x0040)
-class UVector4fCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector4f                              DefaultValue;                                      // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector4fCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector4fCameraVariable")
-	}
-	static class UVector4fCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector4fCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Vector4dCameraVariable
-// 0x0020 (0x0060 - 0x0040)
-class UVector4dCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FVector4d                              DefaultValue;                                      // 0x0040(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Vector4dCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Vector4dCameraVariable")
-	}
-	static class UVector4dCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVector4dCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Rotator3fCameraVariable
-// 0x0010 (0x0050 - 0x0040)
-class URotator3fCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FRotator3f                             DefaultValue;                                      // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Rotator3fCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Rotator3fCameraVariable")
-	}
-	static class URotator3fCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URotator3fCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Rotator3dCameraVariable
-// 0x0018 (0x0058 - 0x0040)
-class URotator3dCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FRotator3d                             DefaultValue;                                      // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Rotator3dCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Rotator3dCameraVariable")
-	}
-	static class URotator3dCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URotator3dCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Transform3fCameraVariable
-// 0x0030 (0x0070 - 0x0040)
-class UTransform3fCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FTransform3f                           DefaultValue;                                      // 0x0040(0x0030)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Transform3fCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Transform3fCameraVariable")
-	}
-	static class UTransform3fCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTransform3fCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.Transform3dCameraVariable
-// 0x0060 (0x00A0 - 0x0040)
-class UTransform3dCameraVariable final : public UCameraVariableAsset
-{
-public:
-	struct FTransform3d                           DefaultValue;                                      // 0x0040(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Transform3dCameraVariable")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Transform3dCameraVariable")
-	}
-	static class UTransform3dCameraVariable* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTransform3dCameraVariable>();
-	}
-};
-
-// Class GameplayCameras.CameraVariableCollection
-// 0x0010 (0x0038 - 0x0028)
-class UCameraVariableCollection final : public UObject
-{
-public:
-	TArray<class UCameraVariableAsset*>           Variables;                                         // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraVariableCollection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraVariableCollection")
-	}
-	static class UCameraVariableCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraVariableCollection>();
-	}
-};
+DUMPER7_ASSERTS_UCameraAction;
 
 // Class GameplayCameras.RootCameraNode
 // 0x0000 (0x0038 - 0x0038)
@@ -985,6 +452,7 @@ public:
 		return GetDefaultObjImpl<URootCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_URootCameraNode;
 
 // Class GameplayCameras.DefaultRootCameraNode
 // 0x0020 (0x0058 - 0x0038)
@@ -1010,71 +478,83 @@ public:
 		return GetDefaultObjImpl<UDefaultRootCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UDefaultRootCameraNode;
 
-// Class GameplayCameras.BlueprintCameraDirectorEvaluator
-// 0x0060 (0x0088 - 0x0028)
-class UBlueprintCameraDirectorEvaluator final : public UObject
+// Class GameplayCameras.OrthographicCameraNode
+// 0x0020 (0x0058 - 0x0038)
+class UOrthographicCameraNode final : public UCameraNode
 {
 public:
-	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ActivateCameraDirector(const struct FBlueprintCameraDirectorActivateParams& Params_0);
-	void ActivateCameraRig(class UCameraRigAsset* CameraRig);
-	void ActivateCameraRigPrefab(class UCameraRigAsset* CameraRig);
-	void ActivateCameraRigViaProxy(class UCameraRigProxyAsset* CameraRigProxy);
-	void ActivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void ActivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void ActivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void DeactivateCameraDirector(const struct FBlueprintCameraDirectorDeactivateParams& Params_0);
-	void DeactivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void DeactivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void DeactivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRigPrefab);
-	void RunCameraDirector(const struct FBlueprintCameraDirectorEvaluationParams& Params_0);
-	void SetInitialContextCameraPose(const struct FBlueprintCameraPose& InCameraPose);
-
-	class AActor* FindEvaluationContextOwnerActor(TSubclassOf<class AActor> ActorClass) const;
-	class UCameraRigAsset* GetCameraRig(class UCameraRigAsset* CameraRig) const;
-	struct FBlueprintCameraPose GetInitialContextCameraPose() const;
-	struct FBlueprintCameraVariableTable GetInitialContextVariableTable() const;
+	struct FBooleanCameraParameter                EnableOrthographicMode;                            // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  OrthographicWidth;                                 // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BlueprintCameraDirectorEvaluator")
+		STATIC_CLASS_IMPL("OrthographicCameraNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BlueprintCameraDirectorEvaluator")
+		STATIC_NAME_IMPL(L"OrthographicCameraNode")
 	}
-	static class UBlueprintCameraDirectorEvaluator* GetDefaultObj()
+	static class UOrthographicCameraNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlueprintCameraDirectorEvaluator>();
+		return GetDefaultObjImpl<UOrthographicCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UOrthographicCameraNode;
 
-// Class GameplayCameras.BlueprintCameraDirector
-// 0x0010 (0x0038 - 0x0028)
-class UBlueprintCameraDirector final : public UCameraDirector
+// Class GameplayCameras.BaseAimAtCameraAction
+// 0x0020 (0x0050 - 0x0030)
+class UBaseAimAtCameraAction : public UCameraAction
 {
 public:
-	TSubclassOf<class UBlueprintCameraDirectorEvaluator> CameraDirectorEvaluatorClass;               // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraRigProxyTable*                   CameraRigProxyTable;                               // 0x0030(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UCameraValueInterpolator*               Interpolator;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	float                                         LockOnAngleTolerance;                              // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAimAtCameraActionLockOnPolicy                LockOnPolicy;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              TargetFraming;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BlueprintCameraDirector")
+		STATIC_CLASS_IMPL("BaseAimAtCameraAction")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BlueprintCameraDirector")
+		STATIC_NAME_IMPL(L"BaseAimAtCameraAction")
 	}
-	static class UBlueprintCameraDirector* GetDefaultObj()
+	static class UBaseAimAtCameraAction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlueprintCameraDirector>();
+		return GetDefaultObjImpl<UBaseAimAtCameraAction>();
 	}
 };
+DUMPER7_ASSERTS_UBaseAimAtCameraAction;
+
+// Class GameplayCameras.AimAtActorCameraAction
+// 0x0018 (0x0068 - 0x0050)
+class UAimAtActorCameraAction final : public UBaseAimAtCameraAction
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class FName                                   TargetSocketName;                                  // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetBoneName;                                    // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AimAtActorCameraAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AimAtActorCameraAction")
+	}
+	static class UAimAtActorCameraAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAimAtActorCameraAction>();
+	}
+};
+DUMPER7_ASSERTS_UAimAtActorCameraAction;
 
 // Class GameplayCameras.CameraDirectorStateTreeSchema
 // 0x0010 (0x0038 - 0x0028)
@@ -1097,9 +577,1063 @@ public:
 		return GetDefaultObjImpl<UCameraDirectorStateTreeSchema>();
 	}
 };
+DUMPER7_ASSERTS_UCameraDirectorStateTreeSchema;
+
+// Class GameplayCameras.SplineOrbitCameraNode
+// 0x04A0 (0x04D8 - 0x0038)
+class USplineOrbitCameraNode final : public UCameraNode
+{
+public:
+	struct FCameraVectorCurve                     LocationOffsetSpline;                              // 0x0038(0x0180)(Edit, NativeAccessSpecifierPublic)
+	struct FCameraVectorCurve                     TargetOffsetSpline;                                // 0x01B8(0x0180)(Edit, NativeAccessSpecifierPublic)
+	struct FCameraRotatorCurve                    RotationOffsetSpline;                              // 0x0338(0x0180)(Edit, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  LocationOffsetMultiplier;                          // 0x04B8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECameraNodeSpace                              TargetOffsetSpace;                                 // 0x04C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInput2DCameraNode*                     InputSlot;                                         // 0x04D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SplineOrbitCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SplineOrbitCameraNode")
+	}
+	static class USplineOrbitCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USplineOrbitCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_USplineOrbitCameraNode;
+
+// Class GameplayCameras.AimAtCameraAction
+// 0x0018 (0x0068 - 0x0050)
+class UAimAtCameraAction final : public UBaseAimAtCameraAction
+{
+public:
+	struct FVector                                TargetLocation;                                    // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AimAtCameraAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AimAtCameraAction")
+	}
+	static class UAimAtCameraAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAimAtCameraAction>();
+	}
+};
+DUMPER7_ASSERTS_UAimAtCameraAction;
+
+// Class GameplayCameras.BaseCameraObject
+// 0x00A8 (0x00D0 - 0x0028)
+class UBaseCameraObject : public UObject
+{
+public:
+	struct FCameraObjectInterface                 Interface;                                         // 0x0028(0x0030)(ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FCameraObjectConnections               Connections;                                       // 0x0058(0x0010)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraObjectAllocationInfo            AllocationInfo;                                    // 0x0070(0x0028)(NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FInstancedPropertyBag                  DefaultParameters;                                 // 0x00A8(0x0010)(NativeAccessSpecifierPrivate)
+	TArray<struct FCameraObjectInterfaceParameterDefinition> ParameterDefinitions;                   // 0x00B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BaseCameraObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseCameraObject")
+	}
+	static class UBaseCameraObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBaseCameraObject>();
+	}
+};
+DUMPER7_ASSERTS_UBaseCameraObject;
+
+// Class GameplayCameras.CameraComponentCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UCameraComponentCameraNode final : public UCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraComponentCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraComponentCameraNode")
+	}
+	static class UCameraComponentCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraComponentCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCameraComponentCameraNode;
+
+// Class GameplayCameras.BlendCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UBlendCameraNode : public UCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlendCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlendCameraNode")
+	}
+	static class UBlendCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBlendCameraNode;
+
+// Class GameplayCameras.CameraRigParameterInterop
+// 0x0000 (0x0028 - 0x0028)
+class UCameraRigParameterInterop final : public UBlueprintFunctionLibrary
+{
+public:
+	static void GetCameraParameter(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UCameraRigAsset* CameraRig, class FName ParameterName, int32* ReturnValue);
+	static void SetCameraParameter(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UCameraRigAsset* CameraRig, class FName ParameterName, const int32& NewValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigParameterInterop")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigParameterInterop")
+	}
+	static class UCameraRigParameterInterop* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigParameterInterop>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigParameterInterop;
+
+// Class GameplayCameras.BlendStackCameraNode
+// 0x0008 (0x0040 - 0x0038)
+class UBlendStackCameraNode final : public UCameraNode
+{
+public:
+	ECameraBlendStackType                         BlendStackType;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraRigLayer                               Layer;                                             // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlendStackCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlendStackCameraNode")
+	}
+	static class UBlendStackCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendStackCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBlendStackCameraNode;
+
+// Class GameplayCameras.BlendStackRootCameraNode
+// 0x0010 (0x0048 - 0x0038)
+class UBlendStackRootCameraNode final : public UCameraNode
+{
+public:
+	class UBlendCameraNode*                       Blend;                                             // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UCameraNode*                            RootNode;                                          // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlendStackRootCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlendStackRootCameraNode")
+	}
+	static class UBlendStackRootCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendStackRootCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBlendStackRootCameraNode;
+
+// Class GameplayCameras.CameraAssetInterfaceParameter
+// 0x0050 (0x0078 - 0x0028)
+class UCameraAssetInterfaceParameter final : public UObject
+{
+public:
+	class FString                                 InterfaceParameterName;                            // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UCameraRigAsset>         SourceCameraRig;                                   // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SourceParameterName;                               // 0x0060(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraAssetInterfaceParameter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAssetInterfaceParameter")
+	}
+	static class UCameraAssetInterfaceParameter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraAssetInterfaceParameter>();
+	}
+};
+DUMPER7_ASSERTS_UCameraAssetInterfaceParameter;
+
+// Class GameplayCameras.CameraDirector
+// 0x0020 (0x0048 - 0x0028)
+class UCameraDirector : public UObject
+{
+public:
+	struct FCameraRigProxyRedirectTable           CameraRigProxyRedirectTable;                       // 0x0028(0x0010)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bRunInEditor;                                      // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraRigProxyTable*                   CameraRigProxyTable;                               // 0x0040(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraDirector")
+	}
+	static class UCameraDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraDirector>();
+	}
+};
+DUMPER7_ASSERTS_UCameraDirector;
+
+// Class GameplayCameras.SingleCameraDirector
+// 0x0008 (0x0050 - 0x0048)
+class USingleCameraDirector final : public UCameraDirector
+{
+public:
+	class UCameraRigAsset*                        CameraRig;                                         // 0x0048(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SingleCameraDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SingleCameraDirector")
+	}
+	static class USingleCameraDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USingleCameraDirector>();
+	}
+};
+DUMPER7_ASSERTS_USingleCameraDirector;
+
+// Class GameplayCameras.CameraAsset
+// 0x00A8 (0x00D0 - 0x0028)
+class UCameraAsset final : public UObject, public IHasCameraBuildStatus, public IObjectTreeGraphObject, public IObjectTreeGraphRootObject
+{
+public:
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraAssetInterface                  Interface;                                         // 0x0048(0x0010)(ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UCameraDirector*                        CameraDirector;                                    // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TArray<class UCameraRigTransition*>           EnterTransitions;                                  // 0x0060(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TArray<class UCameraRigTransition*>           ExitTransitions;                                   // 0x0070(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	ECameraBuildStatus                            BuildStatus;                                       // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedPropertyBag                  DefaultParameters;                                 // 0x0088(0x0010)(NativeAccessSpecifierPrivate)
+	TArray<struct FCameraObjectInterfaceParameterDefinition> ParameterDefinitions;                   // 0x0098(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FCameraAssetAllocationInfo             AllocationInfo;                                    // 0x00A8(0x0020)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAsset")
+	}
+	static class UCameraAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraAsset>();
+	}
+};
+DUMPER7_ASSERTS_UCameraAsset;
+
+// Class GameplayCameras.BlueprintCameraVariableTableFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlueprintCameraVariableTableFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool GetBooleanCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UBooleanCameraVariable* Variable);
+	static double GetDoubleCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UDoubleCameraVariable* Variable);
+	static float GetFloatCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UFloatCameraVariable* Variable);
+	static int32 GetInteger32CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UInteger32CameraVariable* Variable);
+	static struct FRotator GetRotatorCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class URotator3dCameraVariable* Variable);
+	static struct FTransform GetTransformCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UTransform3dCameraVariable* Variable);
+	static struct FVector2D GetVector2CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector2dCameraVariable* Variable);
+	static struct FVector GetVector3CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector3dCameraVariable* Variable);
+	static struct FVector4 GetVector4CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector4dCameraVariable* Variable);
+	static void SetBooleanCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UBooleanCameraVariable* Variable, bool Value);
+	static void SetDoubleCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UDoubleCameraVariable* Variable, double Value);
+	static void SetFloatCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UFloatCameraVariable* Variable, float Value);
+	static void SetInteger32CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UInteger32CameraVariable* Variable, int32 Value);
+	static void SetRotatorCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class URotator3dCameraVariable* Variable, const struct FRotator& Value);
+	static void SetTransformCameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UTransform3dCameraVariable* Variable, const struct FTransform& Value);
+	static void SetVector2CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector2dCameraVariable* Variable, const struct FVector2D& Value);
+	static void SetVector3CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector3dCameraVariable* Variable, const struct FVector& Value);
+	static void SetVector4CameraVariable(const struct FBlueprintCameraEvaluationDataRef& CameraData, class UVector4dCameraVariable* Variable, const struct FVector4& Value);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraVariableTableFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraVariableTableFunctionLibrary")
+	}
+	static class UBlueprintCameraVariableTableFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraVariableTableFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraVariableTableFunctionLibrary;
+
+// Class GameplayCameras.Input1DCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UInput1DCameraNode : public UCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Input1DCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Input1DCameraNode")
+	}
+	static class UInput1DCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInput1DCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UInput1DCameraNode;
+
+// Class GameplayCameras.CameraRigInput1DSlot
+// 0x0078 (0x00B0 - 0x0038)
+class UCameraRigInput1DSlot final : public UInput1DCameraNode
+{
+public:
+	struct FCameraParameterClamping               clamp;                                             // 0x0038(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraParameterNormalization          Normalize;                                         // 0x0050(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                RevertAxis;                                        // 0x0060(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDoubleCameraParameter                 Speed;                                             // 0x0070(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EBuiltInDoubleCameraVariable                  BuiltInVariable;                                   // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDoubleCameraVariableReference         CustomVariable;                                    // 0x0090(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsPreBlended;                                     // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInputSlotParameters          InputSlotParameters;                               // 0x00A1(0x0002)(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A3[0x1];                                       // 0x00A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraVariableID                      SpeedVariableID;                                   // 0x00A4(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FCameraVariableID                      VariableID;                                        // 0x00A8(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigInput1DSlot")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigInput1DSlot")
+	}
+	static class UCameraRigInput1DSlot* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigInput1DSlot>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigInput1DSlot;
+
+// Class GameplayCameras.CameraObjectInterfaceParameterBase
+// 0x0038 (0x0060 - 0x0028)
+class UCameraObjectInterfaceParameterBase : public UObject
+{
+public:
+	class FString                                 InterfaceParameterName;                            // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsVisible;                                        // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  Guid;                                              // 0x003C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraNode*                            Target;                                            // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class FName                                   TargetPropertyName;                                // 0x0058(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraObjectInterfaceParameterBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraObjectInterfaceParameterBase")
+	}
+	static class UCameraObjectInterfaceParameterBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraObjectInterfaceParameterBase>();
+	}
+};
+DUMPER7_ASSERTS_UCameraObjectInterfaceParameterBase;
+
+// Class GameplayCameras.CameraObjectInterfaceBlendableParameter
+// 0x0020 (0x0080 - 0x0060)
+class UCameraObjectInterfaceBlendableParameter final : public UCameraObjectInterfaceParameterBase
+{
+public:
+	ECameraVariableType                           VariableType;                                      // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptStruct*                          BlendableStructType;                               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bIsPreBlended;                                     // 0x0070(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraVariableID                      PrivateVariableID;                                 // 0x0074(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraVariableAsset*                   PrivateVariable;                                   // 0x0078(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraObjectInterfaceBlendableParameter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraObjectInterfaceBlendableParameter")
+	}
+	static class UCameraObjectInterfaceBlendableParameter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraObjectInterfaceBlendableParameter>();
+	}
+};
+DUMPER7_ASSERTS_UCameraObjectInterfaceBlendableParameter;
+
+// Class GameplayCameras.CameraObjectInterfaceDataParameter
+// 0x0018 (0x0078 - 0x0060)
+class UCameraObjectInterfaceDataParameter final : public UCameraObjectInterfaceParameterBase
+{
+public:
+	ECameraContextDataType                        DataType;                                          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraContextDataContainerType               DataContainerType;                                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                DataTypeObject;                                    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FCameraContextDataID                   PrivateDataID;                                     // 0x0070(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraObjectInterfaceDataParameter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraObjectInterfaceDataParameter")
+	}
+	static class UCameraObjectInterfaceDataParameter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraObjectInterfaceDataParameter>();
+	}
+};
+DUMPER7_ASSERTS_UCameraObjectInterfaceDataParameter;
+
+// Class GameplayCameras.BlueprintCameraNode
+// 0x0040 (0x0078 - 0x0038)
+class UBlueprintCameraNode final : public UCameraNode, public ICustomCameraNodeParameterProvider
+{
+public:
+	class UBlueprintCameraNodeEvaluator*          CameraNodeEvaluatorTemplate;                       // 0x0040(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FCustomCameraNodeParameters            CameraNodeEvaluatorOverrides;                      // 0x0048(0x0020)(NativeAccessSpecifierPrivate)
+	bool                                          bRunInEditor;                                      // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UBlueprintCameraNodeEvaluator> CameraNodeEvaluatorClass;                       // 0x0070(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraNode")
+	}
+	static class UBlueprintCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraNode;
+
+// Class GameplayCameras.CameraObjectInterfaceParameterGetter
+// 0x0020 (0x0048 - 0x0028)
+class UCameraObjectInterfaceParameterGetter final : public UObject, public IObjectTreeGraphObject
+{
+public:
+	struct FGuid                                  ParameterGuid;                                     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntVector2                            GraphNodePos;                                      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraObjectInterfaceParameterGetter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraObjectInterfaceParameterGetter")
+	}
+	static class UCameraObjectInterfaceParameterGetter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraObjectInterfaceParameterGetter>();
+	}
+};
+DUMPER7_ASSERTS_UCameraObjectInterfaceParameterGetter;
+
+// Class GameplayCameras.CameraVariableAsset
+// 0x0018 (0x0040 - 0x0028)
+class UCameraVariableAsset : public UObject
+{
+public:
+	bool                                          bAutoReset;                                        // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPreBlended;                                     // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPrivate;                                        // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  Guid;                                              // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraVariableAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraVariableAsset")
+	}
+	static class UCameraVariableAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraVariableAsset>();
+	}
+};
+DUMPER7_ASSERTS_UCameraVariableAsset;
+
+// Class GameplayCameras.Vector4dCameraVariable
+// 0x0020 (0x0060 - 0x0040)
+class UVector4dCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FVector4d                              DefaultValue;                                      // 0x0040(0x0020)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Vector4dCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Vector4dCameraVariable")
+	}
+	static class UVector4dCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVector4dCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UVector4dCameraVariable;
+
+// Class GameplayCameras.CameraRigAsset
+// 0x0070 (0x0140 - 0x00D0)
+class UCameraRigAsset final : public UBaseCameraObject, public IGameplayTagAssetInterface, public IHasCameraBuildStatus, public IObjectTreeGraphObject, public IObjectTreeGraphRootObject
+{
+public:
+	class UCameraNode*                            RootNode;                                          // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FGameplayTagContainer                  GameplayTags;                                      // 0x00F8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	TArray<class UCameraRigTransition*>           EnterTransitions;                                  // 0x0118(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class UCameraRigTransition*>           ExitTransitions;                                   // 0x0128(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	ECameraRigInitialOrientation                  InitialOrientation;                                // 0x0138(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraBuildStatus                            BuildStatus;                                       // 0x013C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigAsset")
+	}
+	static class UCameraRigAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigAsset>();
+	}
+
+public:
+	struct FGameplayTagContainer BP_GetOwnedGameplayTags() const;
+	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer) const;
+	bool HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer) const;
+	bool HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck) const;
+};
+DUMPER7_ASSERTS_UCameraRigAsset;
+
+// Class GameplayCameras.BlueprintPostProcessSettingsCollectionFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlueprintPostProcessSettingsCollectionFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void GetPostProcessSettings(const struct FBlueprintCameraEvaluationDataRef& CameraData, struct FPostProcessSettings* OutPostProcessSettings);
+	static void LerpPostProcessSettings(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FPostProcessSettings& PostProcessSettings, float BlendFactor);
+	static void OverrideChangedPostProcessSettings(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FPostProcessSettings& PostProcessSettings);
+	static void SetPostProcessSettings(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FPostProcessSettings& PostProcessSettings);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintPostProcessSettingsCollectionFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintPostProcessSettingsCollectionFunctionLibrary")
+	}
+	static class UBlueprintPostProcessSettingsCollectionFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintPostProcessSettingsCollectionFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintPostProcessSettingsCollectionFunctionLibrary;
+
+// Class GameplayCameras.CombinedCameraRigsCameraNode
+// 0x0010 (0x0048 - 0x0038)
+class UCombinedCameraRigsCameraNode final : public UCameraNode
+{
+public:
+	TArray<struct FCameraRigAssetReference>       CameraRigReferences;                               // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CombinedCameraRigsCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CombinedCameraRigsCameraNode")
+	}
+	static class UCombinedCameraRigsCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCombinedCameraRigsCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCombinedCameraRigsCameraNode;
+
+// Class GameplayCameras.CameraRigProxyAsset
+// 0x0010 (0x0038 - 0x0028)
+class UCameraRigProxyAsset final : public UObject
+{
+public:
+	struct FGuid                                  Guid;                                              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigProxyAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigProxyAsset")
+	}
+	static class UCameraRigProxyAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigProxyAsset>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigProxyAsset;
+
+// Class GameplayCameras.EnvelopeShakeCameraNode
+// 0x0038 (0x0070 - 0x0038)
+class UEnvelopeShakeCameraNode final : public UShakeCameraNode
+{
+public:
+	struct FFloatCameraParameter                  EaseInTime;                                        // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  EaseOutTime;                                       // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  TotalTime;                                         // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UShakeCameraNode*                       Shake;                                             // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EnvelopeShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EnvelopeShakeCameraNode")
+	}
+	static class UEnvelopeShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEnvelopeShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UEnvelopeShakeCameraNode;
+
+// Class GameplayCameras.CameraRigProxyTable
+// 0x0010 (0x0038 - 0x0028)
+class UCameraRigProxyTable final : public UObject
+{
+public:
+	TArray<struct FCameraRigProxyRedirectTableEntry> Entries;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigProxyTable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigProxyTable")
+	}
+	static class UCameraRigProxyTable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigProxyTable>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigProxyTable;
+
+// Class GameplayCameras.CameraRigTransitionCondition
+// 0x0008 (0x0030 - 0x0028)
+class UCameraRigTransitionCondition : public UObject, public IObjectTreeGraphObject
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigTransitionCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigTransitionCondition")
+	}
+	static class UCameraRigTransitionCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigTransitionCondition>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigTransitionCondition;
+
+// Class GameplayCameras.Transform3fCameraVariable
+// 0x0030 (0x0070 - 0x0040)
+class UTransform3fCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FTransform3f                           DefaultValue;                                      // 0x0040(0x0030)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Transform3fCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Transform3fCameraVariable")
+	}
+	static class UTransform3fCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTransform3fCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UTransform3fCameraVariable;
+
+// Class GameplayCameras.FilmbackCameraNode
+// 0x0078 (0x00B0 - 0x0038)
+class UFilmbackCameraNode final : public UCameraNode
+{
+public:
+	struct FFloatCameraParameter                  SensorWidth;                                       // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  SensorHeight;                                      // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  SensorHorizontalOffset;                            // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  SensorVerticalOffset;                              // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  Overscan;                                          // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                ConstrainAspectRatio;                              // 0x0088(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                OverrideAspectRatioAxisConstraint;                 // 0x0098(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EAspectRatioAxisConstraint                    AspectRatioAxisConstraint;                         // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FilmbackCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FilmbackCameraNode")
+	}
+	static class UFilmbackCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFilmbackCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UFilmbackCameraNode;
+
+// Class GameplayCameras.CameraRigTransition
+// 0x0028 (0x0050 - 0x0028)
+class UCameraRigTransition final : public UObject, public IObjectTreeGraphObject
+{
+public:
+	TArray<class UCameraRigTransitionCondition*>  Conditions;                                        // 0x0030(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UBlendCameraNode*                       Blend;                                             // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	ECameraRigInitialOrientation                  InitialOrientation;                                // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideInitialOrientation;                       // 0x004C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFreezePreviousCameraRigs;                         // 0x004D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowCameraRigMerging;                            // 0x004E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigTransition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigTransition")
+	}
+	static class UCameraRigTransition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigTransition>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigTransition;
+
+// Class GameplayCameras.CameraShakeAsset
+// 0x0038 (0x0108 - 0x00D0)
+class UCameraShakeAsset final : public UBaseCameraObject, public IHasCameraBuildStatus, public IObjectTreeGraphObject, public IObjectTreeGraphRootObject
+{
+public:
+	class UShakeCameraNode*                       RootNode;                                          // 0x00E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class USimpleFixedTimeBlendCameraNode*        BlendIn;                                           // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class USimpleFixedTimeBlendCameraNode*        BlendOut;                                          // 0x00F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bIsSingleInstance;                                 // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraBuildStatus                            BuildStatus;                                       // 0x0101(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraShakeAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraShakeAsset")
+	}
+	static class UCameraShakeAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraShakeAsset>();
+	}
+};
+DUMPER7_ASSERTS_UCameraShakeAsset;
+
+// Class GameplayCameras.CameraValueInterpolator
+// 0x0000 (0x0028 - 0x0028)
+class UCameraValueInterpolator : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraValueInterpolator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraValueInterpolator")
+	}
+	static class UCameraValueInterpolator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraValueInterpolator>();
+	}
+};
+DUMPER7_ASSERTS_UCameraValueInterpolator;
+
+// Class GameplayCameras.CriticalDamperValueInterpolator
+// 0x0008 (0x0030 - 0x0028)
+class UCriticalDamperValueInterpolator final : public UCameraValueInterpolator
+{
+public:
+	float                                         DampingFactor;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CriticalDamperValueInterpolator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CriticalDamperValueInterpolator")
+	}
+	static class UCriticalDamperValueInterpolator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCriticalDamperValueInterpolator>();
+	}
+};
+DUMPER7_ASSERTS_UCriticalDamperValueInterpolator;
+
+// Class GameplayCameras.PopValueInterpolator
+// 0x0000 (0x0028 - 0x0028)
+class UPopValueInterpolator final : public UCameraValueInterpolator
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PopValueInterpolator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PopValueInterpolator")
+	}
+	static class UPopValueInterpolator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPopValueInterpolator>();
+	}
+};
+DUMPER7_ASSERTS_UPopValueInterpolator;
+
+// Class GameplayCameras.GameplayCameraSystemHost
+// 0x0008 (0x0008 - 0x0000)
+class IGameplayCameraSystemHost
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraSystemHost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraSystemHost")
+	}
+	static class IGameplayCameraSystemHost* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IGameplayCameraSystemHost>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IGameplayCameraSystemHost;
+
+// Class GameplayCameras.GameplayCameraComponentBase
+// 0x0040 (0x02E0 - 0x02A0)
+class UGameplayCameraComponentBase : public USceneComponent, public IGameplayCameraSystemHost
+{
+public:
+	uint8                                         Pad_2A0[0x10];                                     // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EAutoReceiveInput                             DefaultPlayer;                                     // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRunStandaloneCameraSystem;                        // 0x02B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetControlRotationWhenViewTarget;                 // 0x02B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPlaybackMode;                                     // 0x02B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCineCameraComponent*                   OutputCameraComponent;                             // 0x02B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	bool                                          bIsOwnedOutputCameraComponent;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C1[0x1F];                                     // 0x02C1(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ActivateCameraForPlayerController(class APlayerController* PlayerController, bool bSetAsViewTarget);
+	void ActivateCameraForPlayerIndex(int32 PlayerIndex, bool bSetAsViewTarget);
+	struct FCameraRigInstanceID ActivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRig);
+	struct FCameraRigInstanceID ActivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRig);
+	struct FCameraRigInstanceID ActivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRig);
+	void DeactivateCamera(bool bImmediately);
+	void DeactivateCameraRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately);
+	bool IsActionRunning(const struct FCameraActionInstanceID& InInstanceID);
+	struct FCameraActionInstanceID StartAction(const class UCameraAction* CameraAction);
+	struct FCameraShakeInstanceID StartCameraShakeAsset(const class UCameraShakeAsset* CameraShake, float ShakeScale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRotation);
+	struct FCameraRigInstanceID StartGlobalCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	struct FCameraRigInstanceID StartVisualCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	bool StopAction(const struct FCameraActionInstanceID& InInstanceID);
+	bool StopAllActionsOfClass(TSubclassOf<class UCameraAction> InActionClass);
+	void StopCameraModifierRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately);
+	bool StopCameraShakeAsset(const struct FCameraShakeInstanceID& InInstanceID, bool bImmediately);
+
+	struct FBlueprintCameraEvaluationDataRef GetConditionalResult(ECameraEvaluationDataCondition Condition) const;
+	struct FRotator GetEvaluatedCameraRotation() const;
+	struct FBlueprintCameraEvaluationDataRef GetInitialResult() const;
+	class UCineCameraComponent* GetOutputCameraComponent() const;
+	bool IsCameraShakeAssetPlaying(const struct FCameraShakeInstanceID& InInstanceID) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraComponentBase")
+	}
+	static class UGameplayCameraComponentBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayCameraComponentBase>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayCameraComponentBase;
+
+// Class GameplayCameras.GameplayCameraComponent
+// 0x0050 (0x0330 - 0x02E0)
+class UGameplayCameraComponent final : public UGameplayCameraComponentBase
+{
+public:
+	struct FCameraAssetReference                  CameraReference;                                   // 0x02E0(0x0038)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FInstancedPropertyBag                  CachedParameterOverrides;                          // 0x0318(0x0010)(Transient, NativeAccessSpecifierPrivate)
+	class UCameraAsset*                           Camera;                                            // 0x0328(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	void NotifyChangeCameraReference();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraComponent")
+	}
+	static class UGameplayCameraComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayCameraComponent>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayCameraComponent;
 
 // Class GameplayCameras.PriorityQueueCameraDirector
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0048 - 0x0048)
 class UPriorityQueueCameraDirector final : public UCameraDirector
 {
 public:
@@ -1116,36 +1650,246 @@ public:
 		return GetDefaultObjImpl<UPriorityQueueCameraDirector>();
 	}
 };
+DUMPER7_ASSERTS_UPriorityQueueCameraDirector;
 
-// Class GameplayCameras.SingleCameraDirector
-// 0x0008 (0x0030 - 0x0028)
-class USingleCameraDirector final : public UCameraDirector
+// Class GameplayCameras.BooleanCameraVariable
+// 0x0008 (0x0048 - 0x0040)
+class UBooleanCameraVariable final : public UCameraVariableAsset
 {
 public:
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bDefaultValue;                                     // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SingleCameraDirector")
+		STATIC_CLASS_IMPL("BooleanCameraVariable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SingleCameraDirector")
+		STATIC_NAME_IMPL(L"BooleanCameraVariable")
 	}
-	static class USingleCameraDirector* GetDefaultObj()
+	static class UBooleanCameraVariable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USingleCameraDirector>();
+		return GetDefaultObjImpl<UBooleanCameraVariable>();
 	}
 };
+DUMPER7_ASSERTS_UBooleanCameraVariable;
+
+// Class GameplayCameras.Integer32CameraVariable
+// 0x0008 (0x0048 - 0x0040)
+class UInteger32CameraVariable final : public UCameraVariableAsset
+{
+public:
+	int32                                         DefaultValue;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Integer32CameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Integer32CameraVariable")
+	}
+	static class UInteger32CameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteger32CameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UInteger32CameraVariable;
+
+// Class GameplayCameras.Transform3dCameraVariable
+// 0x0060 (0x00A0 - 0x0040)
+class UTransform3dCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FTransform3d                           DefaultValue;                                      // 0x0040(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Transform3dCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Transform3dCameraVariable")
+	}
+	static class UTransform3dCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTransform3dCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UTransform3dCameraVariable;
+
+// Class GameplayCameras.FloatCameraVariable
+// 0x0008 (0x0048 - 0x0040)
+class UFloatCameraVariable final : public UCameraVariableAsset
+{
+public:
+	float                                         DefaultValue;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FloatCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FloatCameraVariable")
+	}
+	static class UFloatCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFloatCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UFloatCameraVariable;
+
+// Class GameplayCameras.BlueprintCameraDirectorEvaluator
+// 0x0120 (0x0148 - 0x0028)
+class UBlueprintCameraDirectorEvaluator final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x120];                                     // 0x0028(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ActivateCameraDirector(class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorActivateParams& Params_0);
+	void ActivateCameraRig(class UCameraRigAsset* CameraRig, bool bForceNewInstance);
+	void ActivateCameraRigViaProxy(class UCameraRigProxyAsset* CameraRigProxy, bool bForceNewInstance);
+	void ActivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	void ActivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	void ActivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	class FName AddChildEvaluationContext(class UObject* ChildEvaluationContextOwner);
+	void DeactivateCameraDirector(class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorDeactivateParams& Params_0);
+	void DeactivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	void DeactivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	void DeactivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRigPrefab);
+	bool RemoveChildEvaluationContext(class UObject* ChildEvaluationContextOwner, class FName ChildSlotName);
+	void RunCameraDirector(float DeltaTime, class UObject* EvaluationContextOwner, const struct FBlueprintCameraDirectorEvaluationParams& Params_0);
+	bool RunChildCameraDirector(float DeltaTime, class FName ChildSlotName);
+
+	class AActor* FindEvaluationContextOwnerActor(TSubclassOf<class AActor> ActorClass) const;
+	struct FBlueprintCameraEvaluationDataRef GetConditionalContextResult(ECameraEvaluationDataCondition Condition) const;
+	struct FBlueprintCameraEvaluationDataRef GetInitialContextResult() const;
+	class UCameraRigAsset* ResolveCameraRigProxy(const class UCameraRigProxyAsset* CameraRigProxy) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraDirectorEvaluator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraDirectorEvaluator")
+	}
+	static class UBlueprintCameraDirectorEvaluator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraDirectorEvaluator>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraDirectorEvaluator;
+
+// Class GameplayCameras.SplineFieldOfViewCameraNode
+// 0x0090 (0x00C8 - 0x0038)
+class USplineFieldOfViewCameraNode final : public UCameraNode
+{
+public:
+	struct FFloatCameraParameter                  SplineInput;                                       // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraSingleCurve                     FieldOfViewSpline;                                 // 0x0048(0x0080)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SplineFieldOfViewCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SplineFieldOfViewCameraNode")
+	}
+	static class USplineFieldOfViewCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USplineFieldOfViewCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_USplineFieldOfViewCameraNode;
+
+// Class GameplayCameras.DoubleCameraVariable
+// 0x0008 (0x0048 - 0x0040)
+class UDoubleCameraVariable final : public UCameraVariableAsset
+{
+public:
+	double                                        DefaultValue;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DoubleCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DoubleCameraVariable")
+	}
+	static class UDoubleCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDoubleCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UDoubleCameraVariable;
+
+// Class GameplayCameras.Vector2fCameraVariable
+// 0x0008 (0x0048 - 0x0040)
+class UVector2fCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FVector2f                              DefaultValue;                                      // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Vector2fCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Vector2fCameraVariable")
+	}
+	static class UVector2fCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVector2fCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UVector2fCameraVariable;
+
+// Class GameplayCameras.Vector2dCameraVariable
+// 0x0010 (0x0050 - 0x0040)
+class UVector2dCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FVector2D                              DefaultValue;                                      // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Vector2dCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Vector2dCameraVariable")
+	}
+	static class UVector2dCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVector2dCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UVector2dCameraVariable;
 
 // Class GameplayCameras.StateTreeCameraDirector
-// 0x0030 (0x0058 - 0x0028)
+// 0x0028 (0x0070 - 0x0048)
 class UStateTreeCameraDirector final : public UCameraDirector
 {
 public:
-	struct FStateTreeReference                    StateTreeReference;                                // 0x0028(0x0028)(Edit, NativeAccessSpecifierPublic)
-	class UCameraRigProxyTable*                   CameraRigProxyTable;                               // 0x0050(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FStateTreeReference                    StateTreeReference;                                // 0x0048(0x0028)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1161,30 +1905,274 @@ public:
 		return GetDefaultObjImpl<UStateTreeCameraDirector>();
 	}
 };
+DUMPER7_ASSERTS_UStateTreeCameraDirector;
 
-// Class GameplayCameras.ActivateCameraRigFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UActivateCameraRigFunctions final : public UBlueprintFunctionLibrary
+// Class GameplayCameras.Vector3fCameraVariable
+// 0x0010 (0x0050 - 0x0040)
+class UVector3fCameraVariable final : public UCameraVariableAsset
 {
 public:
-	static void ActivatePersistentBaseCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
-	static void ActivatePersistentGlobalCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
-	static void ActivatePersistentVisualCameraRig(class UObject* WorldContextObject, class APlayerController* PlayerController, class UCameraRigAsset* CameraRig);
+	struct FVector3f                              DefaultValue;                                      // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActivateCameraRigFunctions")
+		STATIC_CLASS_IMPL("Vector3fCameraVariable")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActivateCameraRigFunctions")
+		STATIC_NAME_IMPL(L"Vector3fCameraVariable")
 	}
-	static class UActivateCameraRigFunctions* GetDefaultObj()
+	static class UVector3fCameraVariable* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActivateCameraRigFunctions>();
+		return GetDefaultObjImpl<UVector3fCameraVariable>();
 	}
 };
+DUMPER7_ASSERTS_UVector3fCameraVariable;
+
+// Class GameplayCameras.GameplayTagTransitionCondition
+// 0x0090 (0x00C0 - 0x0030)
+class UGameplayTagTransitionCondition final : public UCameraRigTransitionCondition
+{
+public:
+	struct FGameplayTagQuery                      PreviousGameplayTagQuery;                          // 0x0030(0x0048)(Edit, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      NextGameplayTagQuery;                              // 0x0078(0x0048)(Edit, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayTagTransitionCondition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagTransitionCondition")
+	}
+	static class UGameplayTagTransitionCondition* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayTagTransitionCondition>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayTagTransitionCondition;
+
+// Class GameplayCameras.Vector3dCameraVariable
+// 0x0018 (0x0058 - 0x0040)
+class UVector3dCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FVector3d                              DefaultValue;                                      // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Vector3dCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Vector3dCameraVariable")
+	}
+	static class UVector3dCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVector3dCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UVector3dCameraVariable;
+
+// Class GameplayCameras.Vector4fCameraVariable
+// 0x0010 (0x0050 - 0x0040)
+class UVector4fCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FVector4f                              DefaultValue;                                      // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Vector4fCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Vector4fCameraVariable")
+	}
+	static class UVector4fCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVector4fCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_UVector4fCameraVariable;
+
+// Class GameplayCameras.Rotator3fCameraVariable
+// 0x0010 (0x0050 - 0x0040)
+class URotator3fCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FRotator3f                             DefaultValue;                                      // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Rotator3fCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Rotator3fCameraVariable")
+	}
+	static class URotator3fCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URotator3fCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_URotator3fCameraVariable;
+
+// Class GameplayCameras.Rotator3dCameraVariable
+// 0x0018 (0x0058 - 0x0040)
+class URotator3dCameraVariable final : public UCameraVariableAsset
+{
+public:
+	struct FRotator3d                             DefaultValue;                                      // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Rotator3dCameraVariable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Rotator3dCameraVariable")
+	}
+	static class URotator3dCameraVariable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URotator3dCameraVariable>();
+	}
+};
+DUMPER7_ASSERTS_URotator3dCameraVariable;
+
+// Class GameplayCameras.ObjectTreeGraphComment
+// 0x0008 (0x0030 - 0x0028)
+class UObjectTreeGraphComment final : public UObject, public IObjectTreeGraphObject
+{
+public:
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ObjectTreeGraphComment")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ObjectTreeGraphComment")
+	}
+	static class UObjectTreeGraphComment* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectTreeGraphComment>();
+	}
+};
+DUMPER7_ASSERTS_UObjectTreeGraphComment;
+
+// Class GameplayCameras.BlueprintCameraDirector
+// 0x0008 (0x0050 - 0x0048)
+class UBlueprintCameraDirector final : public UCameraDirector
+{
+public:
+	TSubclassOf<class UBlueprintCameraDirectorEvaluator> CameraDirectorEvaluatorClass;               // 0x0048(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraDirector")
+	}
+	static class UBlueprintCameraDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraDirector>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraDirector;
+
+// Class GameplayCameras.CalcCameraActorCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UCalcCameraActorCameraNode final : public UCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CalcCameraActorCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CalcCameraActorCameraNode")
+	}
+	static class UCalcCameraActorCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCalcCameraActorCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCalcCameraActorCameraNode;
+
+// Class GameplayCameras.BlueprintCameraEvaluationDataFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlueprintCameraEvaluationDataFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void BlendCameraEvaluationData(const struct FBlueprintCameraEvaluationDataRef& FromCameraData, const struct FBlueprintCameraEvaluationDataRef& ToCameraData, float Factor);
+	static struct FBlueprintCameraPose GetCameraPose(const struct FBlueprintCameraEvaluationDataRef& CameraData);
+	static struct FBlueprintCameraEvaluationDataRef MakeCameraEvaluationData();
+	static void SetCameraPose(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FBlueprintCameraPose& CameraPose);
+	static void SetDefaultCameraRigParameters(const struct FBlueprintCameraEvaluationDataRef& CameraData, const class UCameraRigAsset* CameraRig);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraEvaluationDataFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraEvaluationDataFunctionLibrary")
+	}
+	static class UBlueprintCameraEvaluationDataFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraEvaluationDataFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraEvaluationDataFunctionLibrary;
+
+// Class GameplayCameras.BlueprintCameraContextDataTableFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlueprintCameraContextDataTableFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* GetClassData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID);
+	static uint8 GetEnumData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UEnum* EnumType);
+	static class FName GetNameData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID);
+	static class UObject* GetObjectData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID);
+	static class FString GetStringData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID);
+	static struct FInstancedStruct GetStructData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UScriptStruct* DataStructType);
+	static bool SetClassData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, class UClass* Data);
+	static bool SetEnumData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class UEnum* EnumType, uint8 Data);
+	static bool SetNameData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class FName& Data);
+	static bool SetObjectData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, class UObject* Data);
+	static bool SetStringData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const class FString& Data);
+	static bool SetStructData(const struct FBlueprintCameraEvaluationDataRef& CameraData, const struct FCameraContextDataID& DataID, const struct FInstancedStruct& Data);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlueprintCameraContextDataTableFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintCameraContextDataTableFunctionLibrary")
+	}
+	static class UBlueprintCameraContextDataTableFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlueprintCameraContextDataTableFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlueprintCameraContextDataTableFunctionLibrary;
 
 // Class GameplayCameras.BlueprintCameraPoseFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1226,83 +2214,42 @@ public:
 		return GetDefaultObjImpl<UBlueprintCameraPoseFunctionLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UBlueprintCameraPoseFunctionLibrary;
 
-// Class GameplayCameras.BlueprintCameraVariableTableFunctionLibrary
+// Class GameplayCameras.CameraRigParameterInteropLibrary
 // 0x0000 (0x0028 - 0x0028)
-class UBlueprintCameraVariableTableFunctionLibrary final : public UBlueprintFunctionLibrary
+class UCameraRigParameterInteropLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static bool GetBooleanCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UBooleanCameraVariable* Variable);
-	static double GetDoubleCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UDoubleCameraVariable* Variable);
-	static float GetFloatCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UFloatCameraVariable* Variable);
-	static int32 GetInteger32CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UInteger32CameraVariable* Variable);
-	static struct FRotator GetRotatorCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class URotator3dCameraVariable* Variable);
-	static struct FTransform GetTransformCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UTransform3dCameraVariable* Variable);
-	static struct FVector2D GetVector2CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector2dCameraVariable* Variable);
-	static struct FVector GetVector3CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector3dCameraVariable* Variable);
-	static struct FVector4 GetVector4CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector4dCameraVariable* Variable);
-	static void SetBooleanCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UBooleanCameraVariable* Variable, bool Value);
-	static void SetDoubleCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UDoubleCameraVariable* Variable, double Value);
-	static void SetFloatCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UFloatCameraVariable* Variable, float Value);
-	static void SetInteger32CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UInteger32CameraVariable* Variable, int32 Value);
-	static void SetRotatorCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class URotator3dCameraVariable* Variable, const struct FRotator& Value);
-	static void SetTransformCameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UTransform3dCameraVariable* Variable, const struct FTransform& Value);
-	static void SetVector2CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector2dCameraVariable* Variable, const struct FVector2D& Value);
-	static void SetVector3CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector3dCameraVariable* Variable, const struct FVector& Value);
-	static void SetVector4CameraVariable(const struct FBlueprintCameraVariableTable& VariableTable, class UVector4dCameraVariable* Variable, const struct FVector4& Value);
+	static struct FLinearColor MakeLiteralLinearColor(const struct FLinearColor& Value);
+	static struct FRotator MakeLiteralRotator(const struct FRotator& Value);
+	static struct FVector MakeLiteralVector(const struct FVector& Value);
+	static struct FVector2D MakeLiteralVector2D(const struct FVector2D& Value);
+	static struct FVector3f MakeLiteralVector3f(const struct FVector3f& Value);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BlueprintCameraVariableTableFunctionLibrary")
+		STATIC_CLASS_IMPL("CameraRigParameterInteropLibrary")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BlueprintCameraVariableTableFunctionLibrary")
+		STATIC_NAME_IMPL(L"CameraRigParameterInteropLibrary")
 	}
-	static class UBlueprintCameraVariableTableFunctionLibrary* GetDefaultObj()
+	static class UCameraRigParameterInteropLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlueprintCameraVariableTableFunctionLibrary>();
+		return GetDefaultObjImpl<UCameraRigParameterInteropLibrary>();
 	}
 };
-
-// Class GameplayCameras.CameraRigParameterInterop
-// 0x0000 (0x0028 - 0x0028)
-class UCameraRigParameterInterop final : public UBlueprintFunctionLibrary
-{
-public:
-	static void SetBooleanParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, bool bParameterValue);
-	static void SetDoubleParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, double ParameterValue);
-	static void SetFloatParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, double ParameterValue);
-	static void SetIntegerParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, int32 ParameterValue);
-	static void SetRotatorParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FRotator& ParameterValue);
-	static void SetTransformParameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FTransform& ParameterValue);
-	static void SetVector2Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector2D& ParameterValue);
-	static void SetVector3Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector& ParameterValue);
-	static void SetVector4Parameter(struct FBlueprintCameraVariableTable& VariableTable, class UCameraRigAsset* CameraRig, const class FString& ParameterName, const struct FVector4& ParameterValue);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraRigParameterInterop")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraRigParameterInterop")
-	}
-	static class UCameraRigParameterInterop* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraRigParameterInterop>();
-	}
-};
+DUMPER7_ASSERTS_UCameraRigParameterInteropLibrary;
 
 // Class GameplayCameras.ControllerGameplayCameraEvaluationComponent
-// 0x0028 (0x00F8 - 0x00D0)
+// 0x0030 (0x0128 - 0x00F8)
 class UControllerGameplayCameraEvaluationComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_D0[0x20];                                      // 0x00D0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayCameraSystemHost*              CameraSystemHost;                                  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_F8[0x20];                                      // 0x00F8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayCameraSystemHost> CameraSystemHost;                              // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -1318,16 +2265,39 @@ public:
 		return GetDefaultObjImpl<UControllerGameplayCameraEvaluationComponent>();
 	}
 };
+DUMPER7_ASSERTS_UControllerGameplayCameraEvaluationComponent;
 
-// Class GameplayCameras.GameplayCameraActor
-// 0x0008 (0x0498 - 0x0490)
-class AGameplayCameraActor final : public AActor
+// Class GameplayCameras.GameplayCameraActorBase
+// 0x0000 (0x0498 - 0x0498)
+class AGameplayCameraActorBase : public AActor
 {
 public:
-	class UGameplayCameraComponent*               CameraComponent;                                   // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraActorBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraActorBase")
+	}
+	static class AGameplayCameraActorBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayCameraActorBase>();
+	}
+};
+DUMPER7_ASSERTS_AGameplayCameraActorBase;
+
+// Class GameplayCameras.GameplayCameraActor
+// 0x0010 (0x04A8 - 0x0498)
+class AGameplayCameraActor final : public AGameplayCameraActorBase
+{
+public:
+	class UGameplayCameraComponent*               CameraComponent;                                   // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UCineCameraComponent*                   OutputCameraComponent;                             // 0x04A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
 	class UGameplayCameraComponent* GetCameraComponent() const;
+	class UCineCameraComponent* GetOutputCameraComponent() const;
 
 public:
 	static class UClass* StaticClass()
@@ -1343,53 +2313,151 @@ public:
 		return GetDefaultObjImpl<AGameplayCameraActor>();
 	}
 };
+DUMPER7_ASSERTS_AGameplayCameraActor;
 
-// Class GameplayCameras.GameplayCameraComponent
-// 0x0030 (0x02B0 - 0x0280)
-class UGameplayCameraComponent final : public USceneComponent
+// Class GameplayCameras.GameplayCameraParameterSetterComponent
+// 0x0150 (0x0248 - 0x00F8)
+class UGameplayCameraParameterSetterComponent final : public UActorComponent
 {
 public:
-	class UCameraAsset*                           Camera;                                            // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	EAutoReceiveInput                             AutoActivateForPlayer;                             // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_281[0x1F];                                     // 0x0281(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayCameraSystemHost*              CameraSystemHost;                                  // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCameraRigAssetReference               CameraRigReference;                                // 0x00F8(0x0130)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         BlendInTime;                                       // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendOutTime;                                      // 0x022C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraVariableSetterBlendType                BlendType;                                         // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_231[0x17];                                     // 0x0231(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ActivateCameraForPlayerController(class APlayerController* PlayerController);
-	void ActivateCameraForPlayerIndex(int32 PlayerIndex);
-	void DeactivateCamera();
-	void SetInitialPose(const struct FBlueprintCameraPose& CameraPose);
-
-	struct FBlueprintCameraPose GetInitialPose() const;
-	struct FBlueprintCameraVariableTable GetInitialVariableTable() const;
+	void OnActorBeginOverlap(class AActor* OverlappedActor, class AActor* OtherActor);
+	void OnActorEndOverlap(class AActor* OverlappedActor, class AActor* OtherActor);
+	void StartParameterSetters();
+	void StopParameterSetters(bool bImmediately);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameplayCameraComponent")
+		STATIC_CLASS_IMPL("GameplayCameraParameterSetterComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameplayCameraComponent")
+		STATIC_NAME_IMPL(L"GameplayCameraParameterSetterComponent")
 	}
-	static class UGameplayCameraComponent* GetDefaultObj()
+	static class UGameplayCameraParameterSetterComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGameplayCameraComponent>();
+		return GetDefaultObjImpl<UGameplayCameraParameterSetterComponent>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayCameraParameterSetterComponent;
+
+// Class GameplayCameras.GameplayCameraRigActor
+// 0x0010 (0x04A8 - 0x0498)
+class AGameplayCameraRigActor final : public AGameplayCameraActorBase
+{
+public:
+	class UGameplayCameraRigComponent*            CameraRigComponent;                                // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UCineCameraComponent*                   OutputCameraComponent;                             // 0x04A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	class UGameplayCameraRigComponent* GetCameraRigComponent() const;
+	class UCineCameraComponent* GetOutputCameraComponent() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraRigActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraRigActor")
+	}
+	static class AGameplayCameraRigActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayCameraRigActor>();
+	}
+};
+DUMPER7_ASSERTS_AGameplayCameraRigActor;
+
+// Class GameplayCameras.GameplayCameraRigComponent
+// 0x0150 (0x0430 - 0x02E0)
+class UGameplayCameraRigComponent final : public UGameplayCameraComponentBase
+{
+public:
+	struct FCameraRigAssetReference               CameraRigReference;                                // 0x02E0(0x0130)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UCameraAsset*                           GeneratedCameraAsset;                              // 0x0410(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	struct FInstancedPropertyBag                  CachedParameterOverrides;                          // 0x0418(0x0010)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void NotifyChangeCameraRigReference();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCameraRigComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCameraRigComponent")
+	}
+	static class UGameplayCameraRigComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayCameraRigComponent>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayCameraRigComponent;
+
+// Class GameplayCameras.GameplayCamerasPlayerCameraManager
+// 0x0050 (0x30A0 - 0x3050)
+class AGameplayCamerasPlayerCameraManager final : public APlayerCameraManager, public IGameplayCameraSystemHost
+{
+public:
+	uint8                                         Pad_3050[0x10];                                    // 0x3050(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EGameplayCamerasViewRotationMode              ViewRotationMode;                                  // 0x3060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideViewRotationMode;                         // 0x3064(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3065[0x3];                                     // 0x3065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerCameraManager*                   OriginalCameraManager;                             // 0x3068(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_3070[0x28];                                    // 0x3070(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ActivateGameplayCamera(class UGameplayCameraComponentBase* GameplayCamera, EGameplayCameraComponentActivationMode ActivationMode);
+	struct FCameraRigInstanceID ActivatePersistentBaseCameraRig(class UCameraRigAsset* CameraRig);
+	struct FCameraRigInstanceID ActivatePersistentGlobalCameraRig(class UCameraRigAsset* CameraRig);
+	struct FCameraRigInstanceID ActivatePersistentVisualCameraRig(class UCameraRigAsset* CameraRig);
+	void DeactivateCameraRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately);
+	void DeactivateGameplayCamera(class UGameplayCameraComponentBase* GameplayCamera, bool bDeactivateAllCameraRigs);
+	void ReleasePlayerController();
+	struct FCameraShakeInstanceID StartCameraShakeAsset(const class UCameraShakeAsset* CameraShake, float ShakeScale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRotation);
+	struct FCameraRigInstanceID StartGlobalCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	struct FCameraRigInstanceID StartVisualCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	void StealPlayerController(class APlayerController* PlayerController);
+	void StopCameraModifierRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately);
+	bool StopCameraShakeAsset(const struct FCameraShakeInstanceID& InInstanceID, bool bImmediately);
+
+	bool IsCameraShakeAssetPlaying(const struct FCameraShakeInstanceID& InInstanceID) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCamerasPlayerCameraManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCamerasPlayerCameraManager")
+	}
+	static class AGameplayCamerasPlayerCameraManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayCamerasPlayerCameraManager>();
+	}
+};
+DUMPER7_ASSERTS_AGameplayCamerasPlayerCameraManager;
 
 // Class GameplayCameras.GameplayCameraSystemActor
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x04A0 - 0x0498)
 class AGameplayCameraSystemActor final : public AActor
 {
 public:
-	class UGameplayCameraSystemComponent*         CameraSystemComponent;                             // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UGameplayCameraSystemComponent*         CameraSystemComponent;                             // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 
 public:
-	static void AutoManageActiveViewTarget(class APlayerController* PlayerController);
-	static class AGameplayCameraSystemActor* GetAutoSpawnedCameraSystemActor(class APlayerController* PlayerController, bool bForceSpawn);
-
 	class UGameplayCameraSystemComponent* GetCameraSystemComponent() const;
 
 public:
@@ -1406,22 +2474,27 @@ public:
 		return GetDefaultObjImpl<AGameplayCameraSystemActor>();
 	}
 };
+DUMPER7_ASSERTS_AGameplayCameraSystemActor;
 
 // Class GameplayCameras.GameplayCameraSystemComponent
-// 0x0010 (0x0290 - 0x0280)
-class UGameplayCameraSystemComponent final : public USceneComponent
+// 0x0020 (0x02C0 - 0x02A0)
+class UGameplayCameraSystemComponent final : public USceneComponent, public IGameplayCameraSystemHost
 {
 public:
-	EAutoReceiveInput                             AutoActivateForPlayer;                             // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetPlayerControllerRotation;                      // 0x0279(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_27A[0x6];                                      // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayCameraSystemHost*              CameraSystemHost;                                  // 0x0280(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TWeakObjectPtr<class APlayerController>       WeakPlayerController;                              // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2A0[0x10];                                     // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EAutoReceiveInput                             AutoActivateForPlayer;                             // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetPlayerControllerRotation;                      // 0x02B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B2[0x2];                                      // 0x02B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class APlayerController>       WeakPlayerController;                              // 0x02B4(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ActivateCameraSystemForPlayerController(class APlayerController* PlayerController);
 	void ActivateCameraSystemForPlayerIndex(int32 PlayerIndex);
 	void DeactivateCameraSystem(class AActor* NextViewTarget);
+	struct FCameraRigInstanceID StartGlobalCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	struct FCameraRigInstanceID StartVisualCameraModifierRig(const class UCameraRigAsset* CameraRig, int32 OrderKey);
+	void StopCameraModifierRig(const struct FCameraRigInstanceID& InstanceId, bool bImmediately);
 
 	bool IsCameraSystemActiveForPlayController(class APlayerController* PlayerController) const;
 
@@ -1439,20 +2512,21 @@ public:
 		return GetDefaultObjImpl<UGameplayCameraSystemComponent>();
 	}
 };
+DUMPER7_ASSERTS_UGameplayCameraSystemComponent;
 
 // Class GameplayCameras.GameplayControlRotationComponent
-// 0x0040 (0x0110 - 0x00D0)
+// 0x0048 (0x0140 - 0x00F8)
 class UGameplayControlRotationComponent final : public UActorComponent
 {
 public:
-	TArray<class UInputAction*>                   AxisActions;                                       // 0x00D0(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	float                                         AxisActionAngularSpeedThreshold;                   // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AxisActionMagnitudeThreshold;                      // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAutoReceiveInput                             AutoActivateForPlayer;                             // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PlayerController;                                  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class UGameplayCameraSystemHost*              CameraSystemHost;                                  // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	uint8                                         Pad_100[0x10];                                     // 0x0100(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UInputAction*>                   AxisActions;                                       // 0x00F8(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	float                                         AxisActionAngularSpeedThreshold;                   // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AxisActionMagnitudeThreshold;                      // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAutoReceiveInput                             AutoActivateForPlayer;                             // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PlayerController;                                  // 0x0118(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TScriptInterface<class IGameplayCameraSystemHost> CameraSystemHost;                              // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_130[0x10];                                     // 0x0130(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ActivateControlRotationManagementForPlayerController(class APlayerController* PlayerController_0);
@@ -1473,59 +2547,7 @@ public:
 		return GetDefaultObjImpl<UGameplayControlRotationComponent>();
 	}
 };
-
-// Class GameplayCameras.GameplayCamerasSettings
-// 0x0028 (0x0060 - 0x0038)
-class UGameplayCamerasSettings final : public UDeveloperSettings
-{
-public:
-	bool                                          bAutoSpawnCameraSystemActor;                       // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoSpawnCameraSystemActorSetsControlRotation;    // 0x0039(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CombinedCameraRigNumThreshold;                     // 0x003C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        DefaultIKAimingAngleTolerance;                     // 0x0040(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        DefaultIKAimingDistanceTolerance;                  // 0x0048(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         DefaultIKAimingMaxIterations;                      // 0x0050(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DefaultIKAimingMinDistance;                        // 0x0058(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayCamerasSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayCamerasSettings")
-	}
-	static class UGameplayCamerasSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameplayCamerasSettings>();
-	}
-};
-
-// Class GameplayCameras.AttachToPlayerPawnCameraNode
-// 0x0020 (0x0058 - 0x0038)
-class UAttachToPlayerPawnCameraNode final : public UCameraNode
-{
-public:
-	struct FBooleanCameraParameter                AttachToLocation;                                  // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                AttachToRotation;                                  // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AttachToPlayerPawnCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AttachToPlayerPawnCameraNode")
-	}
-	static class UAttachToPlayerPawnCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAttachToPlayerPawnCameraNode>();
-	}
-};
+DUMPER7_ASSERTS_UGameplayControlRotationComponent;
 
 // Class GameplayCameras.SimpleBlendCameraNode
 // 0x0000 (0x0038 - 0x0038)
@@ -1545,14 +2567,213 @@ public:
 		return GetDefaultObjImpl<USimpleBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_USimpleBlendCameraNode;
+
+// Class GameplayCameras.ViewTargetTransitionParamsBlendCameraNode
+// 0x0010 (0x0048 - 0x0038)
+class UViewTargetTransitionParamsBlendCameraNode final : public USimpleBlendCameraNode
+{
+public:
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0038(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ViewTargetTransitionParamsBlendCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ViewTargetTransitionParamsBlendCameraNode")
+	}
+	static class UViewTargetTransitionParamsBlendCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UViewTargetTransitionParamsBlendCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UViewTargetTransitionParamsBlendCameraNode;
+
+// Class GameplayCameras.GameplayCamerasSettings
+// 0x0030 (0x0068 - 0x0038)
+class UGameplayCamerasSettings final : public UDeveloperSettings
+{
+public:
+	bool                                          bAutoBuildInPIE;                                   // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EGameplayCamerasViewRotationMode              DefaultViewRotationMode;                           // 0x003C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CombinedCameraRigNumThreshold;                     // 0x0040(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxUsageSearchDistance;                            // 0x0044(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        DefaultIKAimingAngleTolerance;                     // 0x0048(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        DefaultIKAimingDistanceTolerance;                  // 0x0050(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         DefaultIKAimingMaxIterations;                      // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DefaultIKAimingMinDistance;                        // 0x0060(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayCamerasSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCamerasSettings")
+	}
+	static class UGameplayCamerasSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayCamerasSettings>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayCamerasSettings;
+
+// Class GameplayCameras.MovieSceneCameraFramingZonePropertySystem
+// 0x0000 (0x0058 - 0x0058)
+class UMovieSceneCameraFramingZonePropertySystem final : public UMovieScenePropertySystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneCameraFramingZonePropertySystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneCameraFramingZonePropertySystem")
+	}
+	static class UMovieSceneCameraFramingZonePropertySystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneCameraFramingZonePropertySystem>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneCameraFramingZonePropertySystem;
+
+// Class GameplayCameras.MovieSceneCameraFramingZoneSection
+// 0x0468 (0x0628 - 0x01C0)
+class UMovieSceneCameraFramingZoneSection final : public UMovieSceneSection, public IMovieSceneEntityProvider
+{
+public:
+	struct FMovieSceneDoubleChannel               LeftMarginCurve;                                   // 0x01C8(0x0118)(NativeAccessSpecifierPublic)
+	struct FMovieSceneDoubleChannel               TopMarginCurve;                                    // 0x02E0(0x0118)(NativeAccessSpecifierPublic)
+	struct FMovieSceneDoubleChannel               RightMarginCurve;                                  // 0x03F8(0x0118)(NativeAccessSpecifierPublic)
+	struct FMovieSceneDoubleChannel               BottomMarginCurve;                                 // 0x0510(0x0118)(NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneCameraFramingZoneSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneCameraFramingZoneSection")
+	}
+	static class UMovieSceneCameraFramingZoneSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneCameraFramingZoneSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneCameraFramingZoneSection;
+
+// Class GameplayCameras.MovieSceneCameraFramingZoneTrack
+// 0x0000 (0x01E8 - 0x01E8)
+class UMovieSceneCameraFramingZoneTrack final : public UMovieScenePropertyTrack
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneCameraFramingZoneTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneCameraFramingZoneTrack")
+	}
+	static class UMovieSceneCameraFramingZoneTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneCameraFramingZoneTrack>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneCameraFramingZoneTrack;
+
+// Class GameplayCameras.AttachToActorCameraNode
+// 0x0048 (0x0080 - 0x0038)
+class UAttachToActorCameraNode final : public UCameraNode
+{
+public:
+	struct FCameraActorAttachmentInfo             Attachment;                                        // 0x0038(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   AttachmentDataID;                                  // 0x0058(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBooleanCameraParameter                AttachToLocation;                                  // 0x0060(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                AttachToRotation;                                  // 0x0070(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AttachToActorCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttachToActorCameraNode")
+	}
+	static class UAttachToActorCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAttachToActorCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UAttachToActorCameraNode;
+
+// Class GameplayCameras.AttachToActorGroupCameraNode
+// 0x0018 (0x0050 - 0x0038)
+class UAttachToActorGroupCameraNode final : public UCameraNode
+{
+public:
+	TArray<struct FCameraActorAttachmentInfo>     Attachments;                                       // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   AttachmentsDataID;                                 // 0x0048(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AttachToActorGroupCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttachToActorGroupCameraNode")
+	}
+	static class UAttachToActorGroupCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAttachToActorGroupCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UAttachToActorGroupCameraNode;
+
+// Class GameplayCameras.AttachToPlayerPawnCameraNode
+// 0x0030 (0x0068 - 0x0038)
+class UAttachToPlayerPawnCameraNode final : public UCameraNode
+{
+public:
+	struct FBooleanCameraParameter                AttachToLocation;                                  // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                AttachToRotation;                                  // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AttachToPlayerPawnCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttachToPlayerPawnCameraNode")
+	}
+	static class UAttachToPlayerPawnCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAttachToPlayerPawnCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UAttachToPlayerPawnCameraNode;
 
 // Class GameplayCameras.SimpleFixedTimeBlendCameraNode
-// 0x0008 (0x0040 - 0x0038)
+// 0x0010 (0x0048 - 0x0038)
 class USimpleFixedTimeBlendCameraNode : public USimpleBlendCameraNode
 {
 public:
-	float                                         BlendTime;                                         // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FFloatCameraParameter                  BlendTime;                                         // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1568,9 +2789,35 @@ public:
 		return GetDefaultObjImpl<USimpleFixedTimeBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_USimpleFixedTimeBlendCameraNode;
+
+// Class GameplayCameras.EasingBlendCameraNode
+// 0x0008 (0x0050 - 0x0048)
+class UEasingBlendCameraNode final : public USimpleFixedTimeBlendCameraNode
+{
+public:
+	EEasingCameraBlendType                        BlendType;                                         // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraContextDataID                   BlendTypeDataID;                                   // 0x004C(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EasingBlendCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EasingBlendCameraNode")
+	}
+	static class UEasingBlendCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEasingBlendCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UEasingBlendCameraNode;
 
 // Class GameplayCameras.LinearBlendCameraNode
-// 0x0000 (0x0040 - 0x0040)
+// 0x0000 (0x0048 - 0x0048)
 class ULinearBlendCameraNode final : public USimpleFixedTimeBlendCameraNode
 {
 public:
@@ -1587,6 +2834,32 @@ public:
 		return GetDefaultObjImpl<ULinearBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_ULinearBlendCameraNode;
+
+// Class GameplayCameras.LocationRotationBlendCameraNode
+// 0x0018 (0x0050 - 0x0038)
+class ULocationRotationBlendCameraNode final : public UBlendCameraNode
+{
+public:
+	class USimpleBlendCameraNode*                 LocationBlend;                                     // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class USimpleBlendCameraNode*                 RotationBlend;                                     // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class USimpleBlendCameraNode*                 OtherBlend;                                        // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LocationRotationBlendCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LocationRotationBlendCameraNode")
+	}
+	static class ULocationRotationBlendCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULocationRotationBlendCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_ULocationRotationBlendCameraNode;
 
 // Class GameplayCameras.OrbitBlendCameraNode
 // 0x0008 (0x0040 - 0x0038)
@@ -1609,6 +2882,7 @@ public:
 		return GetDefaultObjImpl<UOrbitBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UOrbitBlendCameraNode;
 
 // Class GameplayCameras.PopBlendCameraNode
 // 0x0000 (0x0038 - 0x0038)
@@ -1628,14 +2902,15 @@ public:
 		return GetDefaultObjImpl<UPopBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UPopBlendCameraNode;
 
 // Class GameplayCameras.SmoothBlendCameraNode
-// 0x0008 (0x0048 - 0x0040)
+// 0x0008 (0x0050 - 0x0048)
 class USmoothBlendCameraNode final : public USimpleFixedTimeBlendCameraNode
 {
 public:
-	ESmoothCameraBlendType                        BlendType;                                         // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ESmoothCameraBlendType                        BlendType;                                         // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1651,26 +2926,27 @@ public:
 		return GetDefaultObjImpl<USmoothBlendCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_USmoothBlendCameraNode;
 
 // Class GameplayCameras.CollisionPushCameraNode
-// 0x0070 (0x00A8 - 0x0038)
+// 0x0088 (0x00C0 - 0x0038)
 class UCollisionPushCameraNode final : public UCameraNode
 {
 public:
 	ECollisionSafePosition                        SafePosition;                                      // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector3dCameraVariableReference       CustomSafePosition;                                // 0x0040(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector3dCameraParameter               SafePositionOffset;                                // 0x0048(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	ECollisionSafePositionOffsetSpace             SafePositionOffsetSpace;                           // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBooleanCameraVariableReference        EnableCollision;                                   // 0x0070(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  CollisionSphereRadius;                             // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	ECollisionChannel                             CollisionChannel;                                  // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraValueInterpolator*               PushInterpolator;                                  // 0x0090(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UCameraValueInterpolator*               PullInterpolator;                                  // 0x0098(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          bRunAsyncCollision;                                // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector3dCameraVariableReference       CustomSafePosition;                                // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector3dCameraParameter               SafePositionOffset;                                // 0x0050(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECollisionSafePositionOffsetSpace             SafePositionOffsetSpace;                           // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBooleanCameraVariableReference        EnableCollision;                                   // 0x0080(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  CollisionSphereRadius;                             // 0x0090(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECollisionChannel                             CollisionChannel;                                  // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraValueInterpolator*               PushInterpolator;                                  // 0x00A8(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UCameraValueInterpolator*               PullInterpolator;                                  // 0x00B0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bRunAsyncCollision;                                // 0x00B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1686,9 +2962,10 @@ public:
 		return GetDefaultObjImpl<UCollisionPushCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UCollisionPushCameraNode;
 
 // Class GameplayCameras.OcclusionMaterialCameraNode
-// 0x0040 (0x0078 - 0x0038)
+// 0x0048 (0x0080 - 0x0038)
 class UOcclusionMaterialCameraNode final : public UCameraNode
 {
 public:
@@ -1698,7 +2975,7 @@ public:
 	ECameraNodeOriginPosition                     OcclusionTargetPosition;                           // 0x0051(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraNodeSpace                              OcclusionTargetOffsetSpace;                        // 0x0052(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector3dCameraParameter               OcclusionTargetOffset;                             // 0x0058(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector3dCameraParameter               OcclusionTargetOffset;                             // 0x0058(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1714,6 +2991,7 @@ public:
 		return GetDefaultObjImpl<UOcclusionMaterialCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UOcclusionMaterialCameraNode;
 
 // Class GameplayCameras.ArrayCameraNode
 // 0x0010 (0x0048 - 0x0038)
@@ -1736,17 +3014,68 @@ public:
 		return GetDefaultObjImpl<UArrayCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UArrayCameraNode;
+
+// Class GameplayCameras.AutoFocusCameraNode
+// 0x0020 (0x0058 - 0x0038)
+class UAutoFocusCameraNode final : public UCameraNode
+{
+public:
+	struct FBooleanCameraVariableReference        EnableAutoFocus;                                   // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  AutoFocusDampingFactor;                            // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AutoFocusCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AutoFocusCameraNode")
+	}
+	static class UAutoFocusCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAutoFocusCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UAutoFocusCameraNode;
+
+// Class GameplayCameras.BodyParametersCameraNode
+// 0x0020 (0x0058 - 0x0038)
+class UBodyParametersCameraNode final : public UCameraNode
+{
+public:
+	struct FFloatCameraParameter                  ShutterSpeed;                                      // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  ISO;                                               // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BodyParametersCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BodyParametersCameraNode")
+	}
+	static class UBodyParametersCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBodyParametersCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UBodyParametersCameraNode;
 
 // Class GameplayCameras.BoomArmCameraNode
-// 0x0050 (0x0088 - 0x0038)
+// 0x0070 (0x00A8 - 0x0038)
 class UBoomArmCameraNode final : public UCameraNode
 {
 public:
-	struct FVector3dCameraParameter               BoomOffset;                                        // 0x0038(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UCameraValueInterpolator*               BoomLengthInterpolator;                            // 0x0058(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FDoubleCameraParameter                 MaxForwardInterpolationFactor;                     // 0x0060(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDoubleCameraParameter                 MaxBackwardInterpolationFactor;                    // 0x0070(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UInput2DCameraNode*                     InputSlot;                                         // 0x0080(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FVector3dCameraParameter               BoomOffset;                                        // 0x0038(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UCameraValueInterpolator*               BoomLengthInterpolator;                            // 0x0060(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FDoubleCameraParameter                 MaxForwardInterpolationFactor;                     // 0x0068(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDoubleCameraParameter                 MaxBackwardInterpolationFactor;                    // 0x0080(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UInput2DCameraNode*                     InputSlot;                                         // 0x0098(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bAdditiveRotation;                                 // 0x00A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1762,28 +3091,14 @@ public:
 		return GetDefaultObjImpl<UBoomArmCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UBoomArmCameraNode;
 
 // Class GameplayCameras.CameraRigCameraNode
-// 0x01D0 (0x0208 - 0x0038)
-class UCameraRigCameraNode final : public UCameraNode
+// 0x0140 (0x0178 - 0x0038)
+class UCameraRigCameraNode final : public UCameraNode, public IAssetReferenceCameraNode, public ICustomCameraNodeParameterProvider
 {
 public:
-	struct FCameraRigAssetReference               CameraRigReference;                                // 0x0038(0x00E8)(Edit, NativeAccessSpecifierPublic)
-	class UCameraRigAsset*                        CameraRig;                                         // 0x0120(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TArray<struct FBooleanCameraRigParameterOverride> BooleanOverrides;                              // 0x0128(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FInteger32CameraRigParameterOverride> Integer32Overrides;                          // 0x0138(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FFloatCameraRigParameterOverride> FloatOverrides;                                  // 0x0148(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FDoubleCameraRigParameterOverride> DoubleOverrides;                                // 0x0158(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector2fCameraRigParameterOverride> Vector2fOverrides;                            // 0x0168(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector2dCameraRigParameterOverride> Vector2dOverrides;                            // 0x0178(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector3fCameraRigParameterOverride> Vector3fOverrides;                            // 0x0188(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector3dCameraRigParameterOverride> Vector3dOverrides;                            // 0x0198(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4fCameraRigParameterOverride> Vector4fOverrides;                            // 0x01A8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4dCameraRigParameterOverride> Vector4dOverrides;                            // 0x01B8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FRotator3fCameraRigParameterOverride> Rotator3fOverrides;                          // 0x01C8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FRotator3dCameraRigParameterOverride> Rotator3dOverrides;                          // 0x01D8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FTransform3fCameraRigParameterOverride> Transform3fOverrides;                      // 0x01E8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<struct FTransform3dCameraRigParameterOverride> Transform3dOverrides;                      // 0x01F8(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+	struct FCameraRigAssetReference               CameraRigReference;                                // 0x0048(0x0130)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1799,14 +3114,15 @@ public:
 		return GetDefaultObjImpl<UCameraRigCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UCameraRigCameraNode;
 
 // Class GameplayCameras.ClippingPlanesCameraNode
-// 0x0020 (0x0058 - 0x0038)
+// 0x0030 (0x0068 - 0x0038)
 class UClippingPlanesCameraNode final : public UCameraNode
 {
 public:
-	struct FDoubleCameraParameter                 NearPlane;                                         // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDoubleCameraParameter                 FarPlane;                                          // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDoubleCameraParameter                 NearPlane;                                         // 0x0038(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDoubleCameraParameter                 FarPlane;                                          // 0x0050(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1822,6 +3138,7 @@ public:
 		return GetDefaultObjImpl<UClippingPlanesCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UClippingPlanesCameraNode;
 
 // Class GameplayCameras.DampenPositionCameraNode
 // 0x0038 (0x0070 - 0x0038)
@@ -1848,6 +3165,32 @@ public:
 		return GetDefaultObjImpl<UDampenPositionCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UDampenPositionCameraNode;
+
+// Class GameplayCameras.DampenRotationCameraNode
+// 0x0030 (0x0068 - 0x0038)
+class UDampenRotationCameraNode final : public UCameraNode
+{
+public:
+	struct FFloatCameraParameter                  YawDampingFactor;                                  // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  PitchDampingFactor;                                // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  RollDampingFactor;                                 // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DampenRotationCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DampenRotationCameraNode")
+	}
+	static class UDampenRotationCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDampenRotationCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UDampenRotationCameraNode;
 
 // Class GameplayCameras.FieldOfViewCameraNode
 // 0x0010 (0x0048 - 0x0038)
@@ -1870,45 +3213,49 @@ public:
 		return GetDefaultObjImpl<UFieldOfViewCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UFieldOfViewCameraNode;
 
-// Class GameplayCameras.FilmbackCameraNode
-// 0x0058 (0x0090 - 0x0038)
-class UFilmbackCameraNode final : public UCameraNode
+// Class GameplayCameras.FirstPersonCameraNode
+// 0x0038 (0x0070 - 0x0038)
+class UFirstPersonCameraNode final : public UCameraNode
 {
 public:
-	struct FFloatCameraParameter                  SensorWidth;                                       // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  SensorHeight;                                      // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  ISO;                                               // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                ConstrainAspectRatio;                              // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                OverrideAspectRatioAxisConstraint;                 // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	EAspectRatioAxisConstraint                    AspectRatioAxisConstraint;                         // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBooleanCameraParameter                EnableFirstPerson;                                 // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  FirstPersonFieldOfView;                            // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  FirstPersonScale;                                  // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableFirstPersonFieldOfView;                     // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFirstPersonScale;                           // 0x0069(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("FilmbackCameraNode")
+		STATIC_CLASS_IMPL("FirstPersonCameraNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"FilmbackCameraNode")
+		STATIC_NAME_IMPL(L"FirstPersonCameraNode")
 	}
-	static class UFilmbackCameraNode* GetDefaultObj()
+	static class UFirstPersonCameraNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFilmbackCameraNode>();
+		return GetDefaultObjImpl<UFirstPersonCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UFirstPersonCameraNode;
 
 // Class GameplayCameras.LensParametersCameraNode
-// 0x0050 (0x0088 - 0x0038)
+// 0x0048 (0x0080 - 0x0038)
 class ULensParametersCameraNode final : public UCameraNode
 {
 public:
 	struct FFloatCameraParameter                  FocalLength;                                       // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  FocusDistance;                                     // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  Aperture;                                          // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  ShutterSpeed;                                      // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                EnablePhysicalCamera;                              // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  Aperture;                                          // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  FocusDistance;                                     // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                EnablePhysicalCamera;                              // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableFocalLength;                                // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAperture;                                   // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFocusDistance;                              // 0x007A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1924,16 +3271,17 @@ public:
 		return GetDefaultObjImpl<ULensParametersCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_ULensParametersCameraNode;
 
 // Class GameplayCameras.OffsetCameraNode
-// 0x0048 (0x0080 - 0x0038)
+// 0x0058 (0x0090 - 0x0038)
 class UOffsetCameraNode final : public UCameraNode
 {
 public:
-	struct FVector3dCameraParameter               TranslationOffset;                                 // 0x0038(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator3dCameraParameter              RotationOffset;                                    // 0x0058(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	ECameraNodeSpace                              OffsetSpace;                                       // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector3dCameraParameter               TranslationOffset;                                 // 0x0038(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator3dCameraParameter              RotationOffset;                                    // 0x0060(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECameraNodeSpace                              OffsetSpace;                                       // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1949,14 +3297,17 @@ public:
 		return GetDefaultObjImpl<UOffsetCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UOffsetCameraNode;
 
 // Class GameplayCameras.PostProcessCameraNode
-// 0x0828 (0x0860 - 0x0038)
+// 0x08E8 (0x0920 - 0x0038)
 class UPostProcessCameraNode final : public UCameraNode
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0040(0x0820)(Edit, NativeAccessSpecifierPublic)
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0040(0x08D0)(Edit, NativeAccessSpecifierPublic)
+	struct FCameraContextDataID                   PostProcessSettingsDataID;                         // 0x0910(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_914[0x4];                                      // 0x0914(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1972,6 +3323,84 @@ public:
 		return GetDefaultObjImpl<UPostProcessCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UPostProcessCameraNode;
+
+// Class GameplayCameras.SetLocationCameraNode
+// 0x0030 (0x0068 - 0x0038)
+class USetLocationCameraNode final : public UCameraNode
+{
+public:
+	struct FVector3dCameraParameter               Location;                                          // 0x0038(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECameraNodeSpace                              OffsetSpace;                                       // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SetLocationCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SetLocationCameraNode")
+	}
+	static class USetLocationCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USetLocationCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_USetLocationCameraNode;
+
+// Class GameplayCameras.SetRotationCameraNode
+// 0x0030 (0x0068 - 0x0038)
+class USetRotationCameraNode final : public UCameraNode
+{
+public:
+	struct FRotator3dCameraParameter              Rotation;                                          // 0x0038(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ECameraNodeSpace                              OffsetSpace;                                       // 0x0060(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SetRotationCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SetRotationCameraNode")
+	}
+	static class USetRotationCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USetRotationCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_USetRotationCameraNode;
+
+// Class GameplayCameras.SplineOffsetCameraNode
+// 0x0318 (0x0350 - 0x0038)
+class USplineOffsetCameraNode final : public UCameraNode
+{
+public:
+	struct FFloatCameraParameter                  SplineInput;                                       // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraVectorCurve                     TranslationOffsetSpline;                           // 0x0048(0x0180)(Edit, NativeAccessSpecifierPublic)
+	struct FCameraRotatorCurve                    RotationOffsetSpline;                              // 0x01C8(0x0180)(Edit, NativeAccessSpecifierPublic)
+	ECameraNodeSpace                              OffsetSpace;                                       // 0x0348(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SplineOffsetCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SplineOffsetCameraNode")
+	}
+	static class USplineOffsetCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USplineOffsetCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_USplineOffsetCameraNode;
 
 // Class GameplayCameras.TargetRayCastCameraNode
 // 0x0018 (0x0050 - 0x0038)
@@ -1996,43 +3425,15 @@ public:
 		return GetDefaultObjImpl<UTargetRayCastCameraNode>();
 	}
 };
-
-// Class GameplayCameras.BaseFramingCameraNode
-// 0x00D8 (0x0110 - 0x0038)
-class UBaseFramingCameraNode : public UCameraNode
-{
-public:
-	struct FVector3dCameraVariableReference       TargetLocation;                                    // 0x0038(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDoubleCameraParameter                 HorizontalFraming;                                 // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDoubleCameraParameter                 VerticalFraming;                                   // 0x0050(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  ReframeDampingFactor;                              // 0x0060(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  LowReframeDampingFactor;                           // 0x0070(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  ReframeUnlockRadius;                               // 0x0080(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFramingZone                     DeadZone;                                          // 0x0090(0x0040)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFramingZone                     SoftZone;                                          // 0x00D0(0x0040)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BaseFramingCameraNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BaseFramingCameraNode")
-	}
-	static class UBaseFramingCameraNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBaseFramingCameraNode>();
-	}
-};
+DUMPER7_ASSERTS_UTargetRayCastCameraNode;
 
 // Class GameplayCameras.DollyFramingCameraNode
-// 0x0020 (0x0130 - 0x0110)
+// 0x0020 (0x01B0 - 0x0190)
 class UDollyFramingCameraNode final : public UBaseFramingCameraNode
 {
 public:
-	struct FBooleanCameraParameter                CanMoveLaterally;                                  // 0x0110(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                CanMoveVertically;                                 // 0x0120(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                CanMoveLaterally;                                  // 0x0190(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                CanMoveVertically;                                 // 0x01A0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -2048,45 +3449,44 @@ public:
 		return GetDefaultObjImpl<UDollyFramingCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UDollyFramingCameraNode;
 
-// Class GameplayCameras.PanningFramingCameraNode
-// 0x0020 (0x0130 - 0x0110)
-class UPanningFramingCameraNode final : public UBaseFramingCameraNode
+// Class GameplayCameras.Input2DCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UInput2DCameraNode : public UCameraNode
 {
-public:
-	struct FBooleanCameraParameter                CanPanLaterally;                                   // 0x0110(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                CanPanVertically;                                  // 0x0120(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("PanningFramingCameraNode")
+		STATIC_CLASS_IMPL("Input2DCameraNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"PanningFramingCameraNode")
+		STATIC_NAME_IMPL(L"Input2DCameraNode")
 	}
-	static class UPanningFramingCameraNode* GetDefaultObj()
+	static class UInput2DCameraNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPanningFramingCameraNode>();
+		return GetDefaultObjImpl<UInput2DCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UInput2DCameraNode;
 
 // Class GameplayCameras.AutoRotateInput2DCameraNode
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0088 (0x00C0 - 0x0038)
 class UAutoRotateInput2DCameraNode final : public UInput2DCameraNode
 {
 public:
 	ECameraAutoRotateDirection                    Direction;                                         // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatCameraParameter                  WaitTime;                                          // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFloatCameraParameter                  DeactivationThreshold;                             // 0x0050(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UCameraValueInterpolator*               Interpolator;                                      // 0x0060(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FBooleanCameraParameter                FreezeControlRotation;                             // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                EnableAutoRotate;                                  // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                AutoRotateYaw;                                     // 0x0088(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBooleanCameraParameter                AutoRotatePitch;                                   // 0x0098(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UInput2DCameraNode*                     InputNode;                                         // 0x00A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FVector3dCameraVariableReference       DirectionVector;                                   // 0x0040(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  WaitTime;                                          // 0x0050(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  DeactivationThreshold;                             // 0x0060(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UCameraValueInterpolator*               Interpolator;                                      // 0x0070(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FBooleanCameraParameter                FreezeControlRotation;                             // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                EnableAutoRotate;                                  // 0x0088(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                AutoRotateYaw;                                     // 0x0098(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                AutoRotatePitch;                                   // 0x00A8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UInput2DCameraNode*                     InputNode;                                         // 0x00B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()
@@ -2102,23 +3502,269 @@ public:
 		return GetDefaultObjImpl<UAutoRotateInput2DCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UAutoRotateInput2DCameraNode;
+
+// Class GameplayCameras.CameraRigInput2DSlot
+// 0x00B8 (0x00F0 - 0x0038)
+class UCameraRigInput2DSlot : public UInput2DCameraNode
+{
+public:
+	struct FCameraParameterClamping               ClampX;                                            // 0x0038(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraParameterClamping               ClampY;                                            // 0x0050(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraParameterNormalization          NormalizeX;                                        // 0x0068(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraParameterNormalization          NormalizeY;                                        // 0x0078(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                RevertAxisX;                                       // 0x0088(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBooleanCameraParameter                RevertAxisY;                                       // 0x0098(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2dCameraParameter               Speed;                                             // 0x00A8(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EBuiltInVector2dCameraVariable                BuiltInVariable;                                   // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2dCameraVariableReference       CustomVariable;                                    // 0x00D0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsPreBlended;                                     // 0x00E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCameraRigInputSlotParameters          InputSlotParameters;                               // 0x00E1(0x0002)(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E3[0x1];                                       // 0x00E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraVariableID                      SpeedVariableID;                                   // 0x00E4(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FCameraVariableID                      VariableID;                                        // 0x00E8(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraRigInput2DSlot")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRigInput2DSlot")
+	}
+	static class UCameraRigInput2DSlot* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraRigInput2DSlot>();
+	}
+};
+DUMPER7_ASSERTS_UCameraRigInput2DSlot;
+
+// Class GameplayCameras.DrivenControlRotationCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UDrivenControlRotationCameraNode final : public UInput2DCameraNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DrivenControlRotationCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DrivenControlRotationCameraNode")
+	}
+	static class UDrivenControlRotationCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDrivenControlRotationCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UDrivenControlRotationCameraNode;
+
+// Class GameplayCameras.InputAccumulator2DCameraNode
+// 0x0008 (0x00F8 - 0x00F0)
+class UInputAccumulator2DCameraNode final : public UCameraRigInput2DSlot
+{
+public:
+	class UInput2DCameraNode*                     InputSlot;                                         // 0x00F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InputAccumulator2DCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InputAccumulator2DCameraNode")
+	}
+	static class UInputAccumulator2DCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputAccumulator2DCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UInputAccumulator2DCameraNode;
+
+// Class GameplayCameras.InputAxisBinding2DCameraNode
+// 0x0038 (0x0128 - 0x00F0)
+class UInputAxisBinding2DCameraNode final : public UCameraRigInput2DSlot
+{
+public:
+	TArray<class UInputAction*>                   AxisActions;                                       // 0x00F0(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FVector2dCameraParameter               Multiplier;                                        // 0x0100(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsAccumulated;                                    // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InputAxisBinding2DCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InputAxisBinding2DCameraNode")
+	}
+	static class UInputAxisBinding2DCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputAxisBinding2DCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UInputAxisBinding2DCameraNode;
+
+// Class GameplayCameras.RawInputAxisBinding2DCameraNode
+// 0x0030 (0x0068 - 0x0038)
+class URawInputAxisBinding2DCameraNode final : public UInput2DCameraNode
+{
+public:
+	TArray<class UInputAction*>                   AxisActions;                                       // 0x0038(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FVector2dCameraParameter               Multiplier;                                        // 0x0048(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RawInputAxisBinding2DCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RawInputAxisBinding2DCameraNode")
+	}
+	static class URawInputAxisBinding2DCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URawInputAxisBinding2DCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_URawInputAxisBinding2DCameraNode;
+
+// Class GameplayCameras.CameraShakeCameraNode
+// 0x0050 (0x0088 - 0x0038)
+class UCameraShakeCameraNode final : public UCameraNode, public ICustomCameraNodeParameterProvider
+{
+public:
+	struct FCameraShakeAssetReference             CameraShakeReference;                              // 0x0040(0x0040)(Edit, NativeAccessSpecifierPublic)
+	ECameraShakeEvaluationMode                    EvaluationMode;                                    // 0x0080(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraShakeCameraNode")
+	}
+	static class UCameraShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCameraShakeCameraNode;
+
+// Class GameplayCameras.CompositeShakeCameraNode
+// 0x0010 (0x0048 - 0x0038)
+class UCompositeShakeCameraNode final : public UShakeCameraNode
+{
+public:
+	TArray<class UShakeCameraNode*>               Shakes;                                            // 0x0038(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CompositeShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CompositeShakeCameraNode")
+	}
+	static class UCompositeShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCompositeShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCompositeShakeCameraNode;
+
+// Class GameplayCameras.PerlinNoiseLocationShakeCameraNode
+// 0x0048 (0x0080 - 0x0038)
+class UPerlinNoiseLocationShakeCameraNode final : public UShakeCameraNode
+{
+public:
+	struct FFloatCameraParameter                  AmplitudeMultiplier;                               // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  FrequencyMultiplier;                               // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInteger32CameraParameter              Octaves;                                           // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       X;                                                 // 0x0068(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       Y;                                                 // 0x0070(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       Z;                                                 // 0x0078(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PerlinNoiseLocationShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PerlinNoiseLocationShakeCameraNode")
+	}
+	static class UPerlinNoiseLocationShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPerlinNoiseLocationShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UPerlinNoiseLocationShakeCameraNode;
+
+// Class GameplayCameras.PerlinNoiseRotationShakeCameraNode
+// 0x0048 (0x0080 - 0x0038)
+class UPerlinNoiseRotationShakeCameraNode final : public UShakeCameraNode
+{
+public:
+	struct FFloatCameraParameter                  AmplitudeMultiplier;                               // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFloatCameraParameter                  FrequencyMultiplier;                               // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInteger32CameraParameter              Octaves;                                           // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       Yaw;                                               // 0x0068(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       Pitch;                                             // 0x0070(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerlinNoiseData                       Roll;                                              // 0x0078(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PerlinNoiseRotationShakeCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PerlinNoiseRotationShakeCameraNode")
+	}
+	static class UPerlinNoiseRotationShakeCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPerlinNoiseRotationShakeCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UPerlinNoiseRotationShakeCameraNode;
 
 // Class GameplayCameras.BlueprintCameraNodeEvaluator
-// 0x00B0 (0x00D8 - 0x0028)
+// 0x00F0 (0x0118 - 0x0028)
 class UBlueprintCameraNodeEvaluator final : public UObject
 {
 public:
 	bool                                          bIsFirstFrame;                                     // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsActiveCameraRig;                                // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                EvaluationContextOwner;                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0038(0x0070)(BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FBlueprintCameraVariableTable          VariableTable;                                     // 0x00A8(0x0018)(BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C0[0x18];                                      // 0x00C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBlueprintCameraEvaluationDataRef      CameraData;                                        // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	struct FBlueprintCameraPose                   CameraPose;                                        // 0x0050(0x0090)(BlueprintVisible, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FBlueprintCameraEvaluationDataRef      VariableTable;                                     // 0x00E0(0x0018)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F8[0x20];                                      // 0x00F8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void InitializeCameraNode();
+	void SetCameraPose(const struct FBlueprintCameraPose& InCameraPose);
+	void SetCurrentCameraPose(const struct FBlueprintCameraPose& CameraPose_0);
 	void TickCameraNode(float DeltaTime);
 
 	class AActor* FindEvaluationContextOwnerActor(TSubclassOf<class AActor> ActorClass) const;
+	struct FBlueprintCameraPose GetCameraPose() const;
+	class UCameraRigAsset* GetCameraRig() const;
+	struct FBlueprintCameraPose GetCurrentCameraPose() const;
+	class APlayerController* GetPlayerController() const;
+	void SetDefaultOwningCameraRigParameters(const struct FBlueprintCameraEvaluationDataRef& TargetCameraData) const;
 
 public:
 	static class UClass* StaticClass()
@@ -2134,28 +3780,99 @@ public:
 		return GetDefaultObjImpl<UBlueprintCameraNodeEvaluator>();
 	}
 };
+DUMPER7_ASSERTS_UBlueprintCameraNodeEvaluator;
 
-// Class GameplayCameras.BlueprintCameraNode
-// 0x0008 (0x0040 - 0x0038)
-class UBlueprintCameraNode final : public UCameraNode
+// Class GameplayCameras.CameraShakeServiceCameraNode
+// 0x0000 (0x0038 - 0x0038)
+class UCameraShakeServiceCameraNode final : public UCameraNode
 {
 public:
-	TSubclassOf<class UBlueprintCameraNodeEvaluator> CameraNodeEvaluatorClass;                       // 0x0038(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraShakeServiceCameraNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraShakeServiceCameraNode")
+	}
+	static class UCameraShakeServiceCameraNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraShakeServiceCameraNode>();
+	}
+};
+DUMPER7_ASSERTS_UCameraShakeServiceCameraNode;
+
+// Class GameplayCameras.UpdateTrackerCameraNode
+// 0x0040 (0x0078 - 0x0038)
+class UUpdateTrackerCameraNode final : public UCameraNode
+{
+public:
+	struct FDoubleCameraParameter                 DoubleParameter;                                   // 0x0038(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector3dCameraParameter               VectorParameter;                                   // 0x0050(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BlueprintCameraNode")
+		STATIC_CLASS_IMPL("UpdateTrackerCameraNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BlueprintCameraNode")
+		STATIC_NAME_IMPL(L"UpdateTrackerCameraNode")
 	}
-	static class UBlueprintCameraNode* GetDefaultObj()
+	static class UUpdateTrackerCameraNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlueprintCameraNode>();
+		return GetDefaultObjImpl<UUpdateTrackerCameraNode>();
 	}
 };
+DUMPER7_ASSERTS_UUpdateTrackerCameraNode;
+
+// Class GameplayCameras.FixedTestCameraDirector
+// 0x0020 (0x0068 - 0x0048)
+class UFixedTestCameraDirector final : public UCameraDirector
+{
+public:
+	TArray<class UCameraRigAsset*>                CameraRigs;                                        // 0x0048(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TArray<class FName>                           CameraRigNames;                                    // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FixedTestCameraDirector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FixedTestCameraDirector")
+	}
+	static class UFixedTestCameraDirector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFixedTestCameraDirector>();
+	}
+};
+DUMPER7_ASSERTS_UFixedTestCameraDirector;
+
+// Class GameplayCameras.UpdateTrackerCameraAction
+// 0x0008 (0x0038 - 0x0030)
+class UUpdateTrackerCameraAction final : public UCameraAction
+{
+public:
+	int32                                         NumUpdates;                                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UpdateTrackerCameraAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UpdateTrackerCameraAction")
+	}
+	static class UUpdateTrackerCameraAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUpdateTrackerCameraAction>();
+	}
+};
+DUMPER7_ASSERTS_UUpdateTrackerCameraAction;
 
 // Class GameplayCameras.IsCameraRigTransitionCondition
 // 0x0010 (0x0040 - 0x0030)
@@ -2179,38 +3896,16 @@ public:
 		return GetDefaultObjImpl<UIsCameraRigTransitionCondition>();
 	}
 };
-
-// Class GameplayCameras.GameplayTagTransitionCondition
-// 0x0090 (0x00C0 - 0x0030)
-class UGameplayTagTransitionCondition final : public UCameraRigTransitionCondition
-{
-public:
-	struct FGameplayTagQuery                      PreviousGameplayTagQuery;                          // 0x0030(0x0048)(Edit, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      NextGameplayTagQuery;                              // 0x0078(0x0048)(Edit, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayTagTransitionCondition")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayTagTransitionCondition")
-	}
-	static class UGameplayTagTransitionCondition* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameplayTagTransitionCondition>();
-	}
-};
+DUMPER7_ASSERTS_UIsCameraRigTransitionCondition;
 
 // Class GameplayCameras.AccelerationDecelerationValueInterpolator
 // 0x0010 (0x0038 - 0x0028)
 class UAccelerationDecelerationValueInterpolator final : public UCameraValueInterpolator
 {
 public:
-	float                                         Acceleration;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSpeed;                                          // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Deceleration;                                      // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Acceleration;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSpeed;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Deceleration;                                      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2227,38 +3922,16 @@ public:
 		return GetDefaultObjImpl<UAccelerationDecelerationValueInterpolator>();
 	}
 };
-
-// Class GameplayCameras.CriticalDamperValueInterpolator
-// 0x0008 (0x0030 - 0x0028)
-class UCriticalDamperValueInterpolator final : public UCameraValueInterpolator
-{
-public:
-	float                                         DampingFactor;                                     // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CriticalDamperValueInterpolator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CriticalDamperValueInterpolator")
-	}
-	static class UCriticalDamperValueInterpolator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCriticalDamperValueInterpolator>();
-	}
-};
+DUMPER7_ASSERTS_UAccelerationDecelerationValueInterpolator;
 
 // Class GameplayCameras.DoubleIIRValueInterpolator
 // 0x0010 (0x0038 - 0x0028)
 class UDoubleIIRValueInterpolator final : public UCameraValueInterpolator
 {
 public:
-	float                                         PrimarySpeed;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IntermediateSpeed;                                 // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFixedStep;                                     // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PrimarySpeed;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IntermediateSpeed;                                 // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFixedStep;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2275,14 +3948,15 @@ public:
 		return GetDefaultObjImpl<UDoubleIIRValueInterpolator>();
 	}
 };
+DUMPER7_ASSERTS_UDoubleIIRValueInterpolator;
 
 // Class GameplayCameras.IIRValueInterpolator
 // 0x0008 (0x0030 - 0x0028)
 class UIIRValueInterpolator final : public UCameraValueInterpolator
 {
 public:
-	float                                         Speed;                                             // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFixedStep;                                     // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFixedStep;                                     // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2299,5 +3973,6 @@ public:
 		return GetDefaultObjImpl<UIIRValueInterpolator>();
 	}
 };
+DUMPER7_ASSERTS_UIIRValueInterpolator;
 
 SDK_NAMESPACE_END

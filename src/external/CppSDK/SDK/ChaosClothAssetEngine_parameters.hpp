@@ -10,95 +10,77 @@
 
 #include "Basic.hpp"
 
+#include "ChaosClothAssetEngine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.AddCollisionSource
-// 0x0018 (0x0018 - 0x0000)
-struct ChaosClothComponent_AddCollisionSource final
-{
-public:
-	class USkinnedMeshComponent*                  SourceComponent;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UPhysicsAsset*                    SourcePhysicsAsset;                                // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSphylsOnly;                                    // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function ChaosClothAssetEngine.ChaosClothComponent.GetClothOutfitInteractor
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.SetOverlayMaterial
 // 0x0008 (0x0008 - 0x0000)
-struct ChaosClothComponent_GetClothOutfitInteractor final
+struct ChaosClothAssetBase_SetOverlayMaterial final
 {
 public:
-	class UChaosClothAssetInteractor*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     NewOverlayMaterial;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetBase_SetOverlayMaterial;
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSource
-// 0x0010 (0x0010 - 0x0000)
-struct ChaosClothComponent_RemoveCollisionSource final
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.SetOverlayMaterialMaxDrawDistance
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothAssetBase_SetOverlayMaterialMaxDrawDistance final
 {
 public:
-	const class USkinnedMeshComponent*            SourceComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UPhysicsAsset*                    SourcePhysicsAsset;                                // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InMaxDrawDistance;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetBase_SetOverlayMaterialMaxDrawDistance;
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSources
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetOverlayMaterial
 // 0x0008 (0x0008 - 0x0000)
-struct ChaosClothComponent_RemoveCollisionSources final
+struct ChaosClothAssetBase_GetOverlayMaterial final
 {
 public:
-	const class USkinnedMeshComponent*            SourceComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetBase_GetOverlayMaterial;
 
-// Function ChaosClothAssetEngine.ChaosClothComponent.SetClothAsset
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetOverlayMaterialMaxDrawDistance
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothAssetBase_GetOverlayMaterialMaxDrawDistance final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetBase_GetOverlayMaterialMaxDrawDistance;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.GetShadowPhysicsAsset
 // 0x0008 (0x0008 - 0x0000)
-struct ChaosClothComponent_SetClothAsset final
-{
-public:
-	class UChaosClothAsset*                       InClothAsset;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ChaosClothAssetEngine.ChaosClothComponent.SetEnableSimulation
-// 0x0001 (0x0001 - 0x0000)
-struct ChaosClothComponent_SetEnableSimulation final
-{
-public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ChaosClothAssetEngine.ChaosClothComponent.GetClothAsset
-// 0x0008 (0x0008 - 0x0000)
-struct ChaosClothComponent_GetClothAsset final
-{
-public:
-	class UChaosClothAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct ChaosClothComponent_IsSimulationEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationSuspended
-// 0x0001 (0x0001 - 0x0000)
-struct ChaosClothComponent_IsSimulationSuspended final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function ChaosClothAssetEngine.ChaosClothAsset.GetShadowPhysicsAsset
-// 0x0008 (0x0008 - 0x0000)
-struct ChaosClothAsset_GetShadowPhysicsAsset final
+struct ChaosClothAssetBase_GetShadowPhysicsAsset final
 {
 public:
 	class UPhysicsAsset*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetBase_GetShadowPhysicsAsset;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetBase.HasDataflow
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothAssetBase_HasDataflow final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetBase_HasDataflow;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetFloatPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothAssetInteractor_SetFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetFloatValue
 // 0x0018 (0x0018 - 0x0000)
@@ -109,6 +91,18 @@ public:
 	int32                                         LODIndex;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetHighFloatPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothAssetInteractor_SetHighFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetHighFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetHighFloatValue
 // 0x0018 (0x0018 - 0x0000)
@@ -119,6 +113,18 @@ public:
 	int32                                         LODIndex;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetHighFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetIntPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothAssetInteractor_SetIntPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetIntPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetIntValue
 // 0x0018 (0x0018 - 0x0000)
@@ -129,6 +135,18 @@ public:
 	int32                                         LODIndex;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetIntValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetLowFloatPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothAssetInteractor_SetLowFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetLowFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetLowFloatValue
 // 0x0018 (0x0018 - 0x0000)
@@ -139,6 +157,30 @@ public:
 	int32                                         LODIndex;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetLowFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetPropertySet
+// 0x0018 (0x0018 - 0x0000)
+struct ChaosClothAssetInteractor_SetPropertySet final
+{
+public:
+	struct FClothAssetInteractorPropertyBag       PropertySet;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetPropertySet;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetStringPropertyValue
+// 0x0020 (0x0020 - 0x0000)
+struct ChaosClothAssetInteractor_SetStringPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetStringPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetStringValue
 // 0x0028 (0x0028 - 0x0000)
@@ -150,6 +192,19 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Value;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetStringValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetVectorPropertyValue
+// 0x0028 (0x0028 - 0x0000)
+struct ChaosClothAssetInteractor_SetVectorPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetVectorPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetVectorValue
 // 0x0030 (0x0030 - 0x0000)
@@ -161,6 +216,19 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Value;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetVectorValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetWeightedFloatPropertyValue
+// 0x0020 (0x0020 - 0x0000)
+struct ChaosClothAssetInteractor_SetWeightedFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetWeightedFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.SetWeightedFloatValue
 // 0x0028 (0x0028 - 0x0000)
@@ -172,6 +240,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Value;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_SetWeightedFloatValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetAllProperties
 // 0x0018 (0x0018 - 0x0000)
@@ -182,6 +251,30 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetAllProperties;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetAllPropertyNames
+// 0x0018 (0x0018 - 0x0000)
+struct ChaosClothAssetInteractor_GetAllPropertyNames final
+{
+public:
+	int32                                         LODIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetAllPropertyNames;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetFloatPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct ChaosClothAssetInteractor_GetFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultValue;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetFloatValue
 // 0x0020 (0x0020 - 0x0000)
@@ -194,6 +287,19 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetHighFloatPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct ChaosClothAssetInteractor_GetHighFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultValue;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetHighFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetHighFloatValue
 // 0x0020 (0x0020 - 0x0000)
@@ -206,6 +312,19 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetHighFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetIntPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct ChaosClothAssetInteractor_GetIntPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DefaultValue;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetIntPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetIntValue
 // 0x0020 (0x0020 - 0x0000)
@@ -218,6 +337,19 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetIntValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetLowFloatPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct ChaosClothAssetInteractor_GetLowFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultValue;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetLowFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetLowFloatValue
 // 0x0020 (0x0020 - 0x0000)
@@ -230,6 +362,20 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetLowFloatValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetStringPropertyValue
+// 0x0030 (0x0030 - 0x0000)
+struct ChaosClothAssetInteractor_GetStringPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DefaultValue;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetStringPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetStringValue
 // 0x0038 (0x0038 - 0x0000)
@@ -242,6 +388,20 @@ public:
 	class FString                                 DefaultValue;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetStringValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetVectorPropertyValue
+// 0x0040 (0x0040 - 0x0000)
+struct ChaosClothAssetInteractor_GetVectorPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                DefaultValue;                                      // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetVectorPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetVectorValue
 // 0x0048 (0x0048 - 0x0000)
@@ -254,6 +414,20 @@ public:
 	struct FVector                                DefaultValue;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetVectorValue;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetWeightedFloatPropertyValue
+// 0x0030 (0x0030 - 0x0000)
+struct ChaosClothAssetInteractor_GetWeightedFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              DefaultValue;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetWeightedFloatPropertyValue;
 
 // Function ChaosClothAssetEngine.ChaosClothAssetInteractor.GetWeightedFloatValue
 // 0x0038 (0x0038 - 0x0000)
@@ -266,6 +440,204 @@ public:
 	struct FVector2D                              DefaultValue;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ChaosClothAssetInteractor_GetWeightedFloatValue;
+
+// Function ChaosClothAssetEngine.ClothAssetInteractorDataAsset.GetPropertySet
+// 0x0018 (0x0018 - 0x0000)
+struct ClothAssetInteractorDataAsset_GetPropertySet final
+{
+public:
+	class FName                                   SetName;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FClothAssetInteractorPropertyBag       ReturnValue;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ClothAssetInteractorDataAsset_GetPropertySet;
+
+// Function ChaosClothAssetEngine.ChaosClothAssetSKMClothingAsset.GetClothSimulationModelIds
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothAssetSKMClothingAsset_GetClothSimulationModelIds final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothAssetSKMClothingAsset_GetClothSimulationModelIds;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.AddCollisionSource
+// 0x0018 (0x0018 - 0x0000)
+struct ChaosClothComponent_AddCollisionSource final
+{
+public:
+	class USkinnedMeshComponent*                  SourceComponent;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UPhysicsAsset*                    SourcePhysicsAsset;                                // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSphylsOnly;                                    // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ChaosClothComponent_AddCollisionSource;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetClothOutfitInteractor
+// 0x0018 (0x0018 - 0x0000)
+struct ChaosClothComponent_GetClothOutfitInteractor final
+{
+public:
+	int32                                         ModelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ClothSimulationModelName;                          // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UChaosClothAssetInteractor*             ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetClothOutfitInteractor;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSource
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothComponent_RemoveCollisionSource final
+{
+public:
+	const class USkinnedMeshComponent*            SourceComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UPhysicsAsset*                    SourcePhysicsAsset;                                // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_RemoveCollisionSource;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.RemoveCollisionSources
+// 0x0008 (0x0008 - 0x0000)
+struct ChaosClothComponent_RemoveCollisionSources final
+{
+public:
+	const class USkinnedMeshComponent*            SourceComponent;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_RemoveCollisionSources;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.ResetRestLengthsWithMorphTarget
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosClothComponent_ResetRestLengthsWithMorphTarget final
+{
+public:
+	class FString                                 MorphTargetName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_ResetRestLengthsWithMorphTarget;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetAsset
+// 0x0008 (0x0008 - 0x0000)
+struct ChaosClothComponent_SetAsset final
+{
+public:
+	class UChaosClothAssetBase*                   InAsset;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetAsset;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetClothAsset
+// 0x0008 (0x0008 - 0x0000)
+struct ChaosClothComponent_SetClothAsset final
+{
+public:
+	class UChaosClothAsset*                       InClothAsset;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetClothAsset;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetCollideWithEnvironment
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_SetCollideWithEnvironment final
+{
+public:
+	bool                                          bCollide;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetCollideWithEnvironment;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetEnableSimulation
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_SetEnableSimulation final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetEnableSimulation;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetSimulateInEditor
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_SetSimulateInEditor final
+{
+public:
+	bool                                          bInSimulateInEditor;                               // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetSimulateInEditor;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetTeleportDistanceThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothComponent_SetTeleportDistanceThreshold final
+{
+public:
+	float                                         Threshold;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetTeleportDistanceThreshold;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.SetTeleportRotationThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothComponent_SetTeleportRotationThreshold final
+{
+public:
+	float                                         Threshold;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_SetTeleportRotationThreshold;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetAsset
+// 0x0008 (0x0008 - 0x0000)
+struct ChaosClothComponent_GetAsset final
+{
+public:
+	class UChaosClothAssetBase*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetAsset;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetClothAsset
+// 0x0008 (0x0008 - 0x0000)
+struct ChaosClothComponent_GetClothAsset final
+{
+public:
+	class UChaosClothAsset*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetClothAsset;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetCollideWithEnvironment
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_GetCollideWithEnvironment final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetCollideWithEnvironment;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetTeleportDistanceThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothComponent_GetTeleportDistanceThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetTeleportDistanceThreshold;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.GetTeleportRotationThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct ChaosClothComponent_GetTeleportRotationThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_GetTeleportRotationThreshold;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_IsSimulationEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_IsSimulationEnabled;
+
+// Function ChaosClothAssetEngine.ChaosClothComponent.IsSimulationSuspended
+// 0x0001 (0x0001 - 0x0000)
+struct ChaosClothComponent_IsSimulationSuspended final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ChaosClothComponent_IsSimulationSuspended;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

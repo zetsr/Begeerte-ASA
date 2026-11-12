@@ -35,14 +35,17 @@ public:
 	float                                         Radius;                                            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LocalPosition;                                     // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FClothCollisionPrim_Sphere;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_SphereConnection
-// 0x0008 (0x0008 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FClothCollisionPrim_SphereConnection final
 {
 public:
 	int32                                         SphereIndices[0x2];                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OneSidedPlaneNormal;                               // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FClothCollisionPrim_SphereConnection;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_ConvexFace
 // 0x0030 (0x0030 - 0x0000)
@@ -52,17 +55,22 @@ public:
 	struct FPlane                                 Plane;                                             // 0x0000(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 Indices;                                           // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FClothCollisionPrim_ConvexFace;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_Convex
-// 0x0028 (0x0028 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct FClothCollisionPrim_Convex final
 {
 public:
 	TArray<struct FClothCollisionPrim_ConvexFace> Faces;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        SurfacePoints;                                     // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         BoneIndex;                                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocalPosition;                                     // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  LocalRotation;                                     // 0x0040(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BoneIndex;                                         // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FClothCollisionPrim_Convex;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_Box
 // 0x0060 (0x0060 - 0x0000)
@@ -76,6 +84,24 @@ public:
 	int32                                         BoneIndex;                                         // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FClothCollisionPrim_Box;
+
+// ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_ExtrudedTaperedCapsule
+// 0x0060 (0x0060 - 0x0000)
+struct FClothCollisionPrim_ExtrudedTaperedCapsule final
+{
+public:
+	struct FVector                                LocalPosition;                                     // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  LocalRotation;                                     // 0x0020(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Width;                                             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius1;                                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius2;                                           // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BoneIndex;                                         // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0xC];                                       // 0x0054(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FClothCollisionPrim_ExtrudedTaperedCapsule;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothVertBoneData
 // 0x004C (0x004C - 0x0000)
@@ -86,9 +112,10 @@ public:
 	uint16                                        BoneIndices[0xC];                                  // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoneWeights[0xC];                                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FClothVertBoneData;
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionData
-// 0x0040 (0x0040 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FClothCollisionData final
 {
 public:
@@ -96,6 +123,20 @@ public:
 	TArray<struct FClothCollisionPrim_SphereConnection> SphereConnections;                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FClothCollisionPrim_Convex>     Convexes;                                          // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FClothCollisionPrim_Box>        Boxes;                                             // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FClothCollisionPrim_ExtrudedTaperedCapsule> ExtrudedTaperedCapsules;               // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FClothCollisionData;
+
+// ScriptStruct ClothingSystemRuntimeInterface.ClothingSimulationInstance
+// 0x0028 (0x0028 - 0x0000)
+struct FClothingSimulationInstance final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClothingSimulationInteractor*          ClothingSimulationInteractor;                      // 0x0010(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UClothingSimulationFactory*             ClothingSimulationFactory;                         // 0x0018(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FClothingSimulationInstance;
 
 SDK_NAMESPACE_END

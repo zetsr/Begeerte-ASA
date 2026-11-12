@@ -19,7 +19,7 @@ namespace g_Hack {
 
         SDK::UNetConnection* ServerConnection = World->NetDriver->ServerConnection;
 
-        g_LogManager::AddLog(255, 200, 255, 255, std::format("[{}] [{}]", ServerConnection->GetFirstIP(), ServerConnection->GetPort()));
+        // g_LogManager::AddLog(255, 200, 255, 255, std::format("[{}] [{}]", ServerConnection->GetFirstIP(), ServerConnection->GetPort()));
     }
 
     void Suicide(SDK::UWorld* World) {

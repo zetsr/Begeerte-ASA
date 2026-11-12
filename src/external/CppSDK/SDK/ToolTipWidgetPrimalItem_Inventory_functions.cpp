@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UToolTipWidgetPrimalItem_Inventory_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToolTipWidgetPrimalItem_Inventory_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ToolTipWidgetPrimalItem_Inventory_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UToolTipWidgetPrimalItem_Inventory_C::Construct()
 
 void UToolTipWidgetPrimalItem_Inventory_C::ExecuteUbergraph_ToolTipWidgetPrimalItem_Inventory(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToolTipWidgetPrimalItem_Inventory_C", "ExecuteUbergraph_ToolTipWidgetPrimalItem_Inventory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ToolTipWidgetPrimalItem_Inventory_C", "ExecuteUbergraph_ToolTipWidgetPrimalItem_Inventory", FuncInfo);
 
 	Params::ToolTipWidgetPrimalItem_Inventory_C_ExecuteUbergraph_ToolTipWidgetPrimalItem_Inventory Parms{};
 

@@ -27,6 +27,7 @@ public:
 	bool                                          Should_Non_Turret_Passenger_Be_Forced_TPV;         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Should_Turret_Passenger_Be_Forced_TPV;             // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_Get_Should_Be_Forced_TPV__prevent_fpv_;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_Add_Attachment
 // 0x0018 (0x0018 - 0x0000)
@@ -37,6 +38,7 @@ public:
 	EPrimalEquipmentType                          EquipmentSlot;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_Add_Attachment;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_ConsumeFuel
 // 0x0010 (0x0010 - 0x0000)
@@ -46,6 +48,7 @@ public:
 	double                                        FuelPercentToConsume;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Ret_Fuel_Percent;                                  // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_ConsumeFuel;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_ConvertCarIntoItem
 // 0x0018 (0x0018 - 0x0000)
@@ -56,6 +59,7 @@ public:
 	class UPrimalInventoryComponent*              Inv;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPrimalItem*                            Item;                                              // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_ConvertCarIntoItem;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetAttachedMesh_Skin
 // 0x0018 (0x0018 - 0x0000)
@@ -65,6 +69,7 @@ public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMeshComponent*>                 MeshRefs;                                          // 0x0008(0x0010)(Parm, OutParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetAttachedMesh_Skin;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetAttachedTireMeshes
 // 0x0050 (0x0050 - 0x0000)
@@ -73,6 +78,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes final
 public:
 	TMap<class FName, class UStaticMeshComponent*> Attached_Meshes;                                  // 0x0000(0x0050)(Parm, OutParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetAttachedTireMeshes_V2
 // 0x0050 (0x0050 - 0x0000)
@@ -81,6 +87,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes_V2 final
 public:
 	TMap<class FName, struct FArrayOfStaticMeshComponents> Attached_Meshes;                          // 0x0000(0x0050)(Parm, OutParm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetAttachedTireMeshes_V2;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetAvailableTurretAmmo
 // 0x0004 (0x0004 - 0x0000)
@@ -89,6 +96,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo final
 public:
 	int32                                         AvailableAmmo;                                     // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent
 // 0x0008 (0x0008 - 0x0000)
@@ -97,6 +105,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercen
 public:
 	double                                        LoadedAmmoPercent;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetAvailableTurretAmmo_LoadedPercent;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetCalculatedVehicleVelocity
 // 0x0018 (0x0018 - 0x0000)
@@ -105,6 +114,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetCalculatedVehicleVelocity final
 public:
 	struct FVector                                Velocity;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetCalculatedVehicleVelocity;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetChaosVehicleMovement
 // 0x0008 (0x0008 - 0x0000)
@@ -113,6 +123,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetChaosVehicleMovement final
 public:
 	class UChaosVehicleMovementComponent*         ChaosVehicleMovement;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetChaosVehicleMovement;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetCurrentGear
 // 0x0004 (0x0004 - 0x0000)
@@ -121,6 +132,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetCurrentGear final
 public:
 	int32                                         CurrentGear;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetCurrentGear;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetCurrentRadioSong
 // 0x0028 (0x0028 - 0x0000)
@@ -131,6 +143,7 @@ public:
 	class FString                                 TrackName;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         TrackIndex;                                        // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetCurrentRadioSong;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetFuelConsumptionPerSecond
 // 0x0008 (0x0008 - 0x0000)
@@ -139,6 +152,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetFuelConsumptionPerSecond final
 public:
 	double                                        ConsumptionPerSec;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetFuelConsumptionPerSecond;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetFuelPercent
 // 0x0018 (0x0018 - 0x0000)
@@ -149,6 +163,7 @@ public:
 	double                                        Current_Fuel_Percent;                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 ItemFuel;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetFuelPercent;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetIsUsingRearModule
 // 0x0001 (0x0001 - 0x0000)
@@ -157,6 +172,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetIsUsingRearModule final
 public:
 	bool                                          IsUsingRearModule;                                 // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetIsUsingRearModule;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetMPHStat
 // 0x0008 (0x0008 - 0x0000)
@@ -165,6 +181,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetMPHStat final
 public:
 	double                                        MPHStat;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetMPHStat;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetSkinClassCDO
 // 0x0008 (0x0008 - 0x0000)
@@ -173,6 +190,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetSkinClassCDO final
 public:
 	class UPrimalItem*                            Skin_CDO;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetSkinClassCDO;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetSpeedMPH
 // 0x0010 (0x0010 - 0x0000)
@@ -182,6 +200,7 @@ public:
 	double                                        CurrentMPH;                                        // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxMPH;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetSpeedMPH;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetSteeringInput
 // 0x0008 (0x0008 - 0x0000)
@@ -190,6 +209,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetSteeringInput final
 public:
 	double                                        SteeringInput;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetSteeringInput;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetSuspensionMaxDrop
 // 0x0010 (0x0010 - 0x0000)
@@ -201,6 +221,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SuspensionMaxDrop;                                 // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetSuspensionMaxDrop;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetTargetGear
 // 0x0004 (0x0004 - 0x0000)
@@ -209,6 +230,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_GetTargetGear final
 public:
 	int32                                         TargetGear;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetTargetGear;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetTireSpinValues
 // 0x0020 (0x0020 - 0x0000)
@@ -221,6 +243,7 @@ public:
 	double                                        AnimationStateCurrent;                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        AnimationStateNext;                                // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetTireSpinValues;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetWheelRadius
 // 0x0010 (0x0010 - 0x0000)
@@ -232,6 +255,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WheelRadius;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetWheelRadius;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_GetWheelRotation
 // 0x0010 (0x0010 - 0x0000)
@@ -242,6 +266,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Rotation;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_GetWheelRotation;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_Has_Cab
 // 0x0001 (0x0001 - 0x0000)
@@ -250,6 +275,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_Has_Cab final
 public:
 	bool                                          Has_Cab;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_Has_Cab;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_Is_InAttachmentMode
 // 0x0001 (0x0001 - 0x0000)
@@ -258,6 +284,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_Is_InAttachmentMode final
 public:
 	bool                                          IsInAttachmentMode;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_Is_InAttachmentMode;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_IsCheatVehicle
 // 0x0001 (0x0001 - 0x0000)
@@ -266,6 +293,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_IsCheatVehicle final
 public:
 	bool                                          IsCheatVehicle;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_IsCheatVehicle;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_NotifyCosmeticDownloaded
 // 0x0001 (0x0001 - 0x0000)
@@ -274,6 +302,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_NotifyCosmeticDownloaded final
 public:
 	bool                                          success;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_NotifyCosmeticDownloaded;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_RearModuleFuelPercent
 // 0x0008 (0x0008 - 0x0000)
@@ -282,6 +311,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_RearModuleFuelPercent final
 public:
 	double                                        Percent;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_RearModuleFuelPercent;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_SetFuelAmount
 // 0x0010 (0x0010 - 0x0000)
@@ -291,6 +321,7 @@ public:
 	double                                        NewFuelPercent;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_SetFuelAmount;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_SetSkinHeadlightsState
 // 0x0001 (0x0001 - 0x0000)
@@ -299,6 +330,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_SetSkinHeadlightsState final
 public:
 	bool                                          bTurnOn;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_SetSkinHeadlightsState;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_SkinCanUseHeadlights
 // 0x0001 (0x0001 - 0x0000)
@@ -307,6 +339,7 @@ struct Interface_Vehicle_C_Interface_Vehicle_SkinCanUseHeadlights final
 public:
 	bool                                          bCanUse;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_SkinCanUseHeadlights;
 
 // Function Interface_Vehicle.Interface_Vehicle_C.Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode
 // 0x0004 (0x0004 - 0x0000)
@@ -318,6 +351,7 @@ public:
 	bool                                          Force_Turret_Mode;                                 // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0003(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_Interface_Vehicle_C_Interface_Vehicle_SwitchBetweenAttachmentModeAndTurretMode;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

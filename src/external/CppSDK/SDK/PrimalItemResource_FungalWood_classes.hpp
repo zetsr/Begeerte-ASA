@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_FungalWood_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_FungalWood_C;
 
 SDK_NAMESPACE_END

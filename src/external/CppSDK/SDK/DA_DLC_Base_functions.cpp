@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDA_DLC_Base_C::IsDLCOwned(bool* Owns)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_DLC_Base_C", "IsDLCOwned");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DA_DLC_Base_C", "IsDLCOwned", FuncInfo);
 
 	Params::DA_DLC_Base_C_IsDLCOwned Parms{};
 
@@ -45,10 +43,8 @@ void UDA_DLC_Base_C::IsDLCOwned(bool* Owns)
 
 void UDA_DLC_Base_C::IsLatestDLC(int32 LatestDLCVersion, bool* Yes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_DLC_Base_C", "IsLatestDLC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DA_DLC_Base_C", "IsLatestDLC", FuncInfo);
 
 	Params::DA_DLC_Base_C_IsLatestDLC Parms{};
 
@@ -68,10 +64,8 @@ void UDA_DLC_Base_C::IsLatestDLC(int32 LatestDLCVersion, bool* Yes)
 
 void UDA_DLC_Base_C::WasntDLCBrowsedBefore(bool* Wasnt)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_DLC_Base_C", "WasntDLCBrowsedBefore");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DA_DLC_Base_C", "WasntDLCBrowsedBefore", FuncInfo);
 
 	Params::DA_DLC_Base_C_WasntDLCBrowsedBefore Parms{};
 

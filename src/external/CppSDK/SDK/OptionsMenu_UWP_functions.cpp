@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UOptionsMenu_UWP_C::BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent_13_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -45,10 +43,8 @@ void UOptionsMenu_UWP_C::BndEvt__AntiAliasingComboBox_K2Node_ComponentBoundEvent
 
 void UOptionsMenu_UWP_C::BndEvt__FilmGrainCheckbox_K2Node_ComponentBoundEvent_193_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__FilmGrainCheckbox_K2Node_ComponentBoundEvent_193_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__FilmGrainCheckbox_K2Node_ComponentBoundEvent_193_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__FilmGrainCheckbox_K2Node_ComponentBoundEvent_193_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -66,10 +62,8 @@ void UOptionsMenu_UWP_C::BndEvt__FilmGrainCheckbox_K2Node_ComponentBoundEvent_19
 
 void UOptionsMenu_UWP_C::BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEvent_11_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -87,10 +81,8 @@ void UOptionsMenu_UWP_C::BndEvt__GraphicsQualityComboBox_K2Node_ComponentBoundEv
 
 void UOptionsMenu_UWP_C::BndEvt__GroundClutterDensitySlider_K2Node_ComponentBoundEvent_81_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__GroundClutterDensitySlider_K2Node_ComponentBoundEvent_81_OnFloatValueChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__GroundClutterDensitySlider_K2Node_ComponentBoundEvent_81_OnFloatValueChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__GroundClutterDensitySlider_K2Node_ComponentBoundEvent_81_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
@@ -107,10 +99,8 @@ void UOptionsMenu_UWP_C::BndEvt__GroundClutterDensitySlider_K2Node_ComponentBoun
 
 void UOptionsMenu_UWP_C::BndEvt__MotionBlurCheckbox_K2Node_ComponentBoundEvent_181_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__MotionBlurCheckbox_K2Node_ComponentBoundEvent_181_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__MotionBlurCheckbox_K2Node_ComponentBoundEvent_181_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__MotionBlurCheckbox_K2Node_ComponentBoundEvent_181_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -128,10 +118,8 @@ void UOptionsMenu_UWP_C::BndEvt__MotionBlurCheckbox_K2Node_ComponentBoundEvent_1
 
 void UOptionsMenu_UWP_C::BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEvent_20_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -150,10 +138,8 @@ void UOptionsMenu_UWP_C::BndEvt__PostProcessingComboBox_K2Node_ComponentBoundEve
 
 void UOptionsMenu_UWP_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -171,10 +157,8 @@ void UOptionsMenu_UWP_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_28_O
 
 void UOptionsMenu_UWP_C::BndEvt__SSAOCheckbox_K2Node_ComponentBoundEvent_220_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__SSAOCheckbox_K2Node_ComponentBoundEvent_220_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__SSAOCheckbox_K2Node_ComponentBoundEvent_220_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__SSAOCheckbox_K2Node_ComponentBoundEvent_220_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -192,10 +176,8 @@ void UOptionsMenu_UWP_C::BndEvt__SSAOCheckbox_K2Node_ComponentBoundEvent_220_OnC
 
 void UOptionsMenu_UWP_C::BndEvt__TerrainShadowComboBox_K2Node_ComponentBoundEvent_37_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__TerrainShadowComboBox_K2Node_ComponentBoundEvent_37_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__TerrainShadowComboBox_K2Node_ComponentBoundEvent_37_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__TerrainShadowComboBox_K2Node_ComponentBoundEvent_37_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -214,10 +196,8 @@ void UOptionsMenu_UWP_C::BndEvt__TerrainShadowComboBox_K2Node_ComponentBoundEven
 
 void UOptionsMenu_UWP_C::BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -235,10 +215,8 @@ void UOptionsMenu_UWP_C::BndEvt__TexturesComboBox_K2Node_ComponentBoundEvent_47_
 
 void UOptionsMenu_UWP_C::BndEvt__TrueSkyQualitySlider_K2Node_ComponentBoundEvent_67_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__TrueSkyQualitySlider_K2Node_ComponentBoundEvent_67_OnFloatValueChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__TrueSkyQualitySlider_K2Node_ComponentBoundEvent_67_OnFloatValueChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__TrueSkyQualitySlider_K2Node_ComponentBoundEvent_67_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
@@ -255,10 +233,8 @@ void UOptionsMenu_UWP_C::BndEvt__TrueSkyQualitySlider_K2Node_ComponentBoundEvent
 
 void UOptionsMenu_UWP_C::BndEvt__UseDFAOCheckbox_K2Node_ComponentBoundEvent_206_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__UseDFAOCheckbox_K2Node_ComponentBoundEvent_206_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__UseDFAOCheckbox_K2Node_ComponentBoundEvent_206_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__UseDFAOCheckbox_K2Node_ComponentBoundEvent_206_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -276,10 +252,8 @@ void UOptionsMenu_UWP_C::BndEvt__UseDFAOCheckbox_K2Node_ComponentBoundEvent_206_
 
 void UOptionsMenu_UWP_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_7_OnSelectionChangedEvent__DelegateSignature Parms{};
 
@@ -297,10 +271,8 @@ void UOptionsMenu_UWP_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent
 
 void UOptionsMenu_UWP_C::ExecuteUbergraph_OptionsMenu_UWP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "ExecuteUbergraph_OptionsMenu_UWP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "ExecuteUbergraph_OptionsMenu_UWP", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_ExecuteUbergraph_OptionsMenu_UWP Parms{};
 
@@ -318,10 +290,8 @@ void UOptionsMenu_UWP_C::ExecuteUbergraph_OptionsMenu_UWP(int32 EntryPoint)
 
 void UOptionsMenu_UWP_C::OptionsGraphTick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenu_UWP_C", "OptionsGraphTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "OptionsMenu_UWP_C", "OptionsGraphTick", FuncInfo);
 
 	Params::OptionsMenu_UWP_C_OptionsGraphTick Parms{};
 

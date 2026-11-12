@@ -26,10 +26,8 @@ SDK_NAMESPACE_START
 
 void UBPFL_CFCore_GlobalFunctions_C::GetIsModEnabled(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, bool* Enabled, int32* Load_Order)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetIsModEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetIsModEnabled", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetIsModEnabled Parms{};
 
@@ -56,10 +54,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetIsModEnabled(const struct FInstallProgre
 
 void UBPFL_CFCore_GlobalFunctions_C::GetModSummary(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* OutAsString, class FText* OutAsText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetModSummary");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetModSummary", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetModSummary Parms{};
 
@@ -84,10 +80,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetModSummary(const struct FInstallProgress
 
 void UBPFL_CFCore_GlobalFunctions_C::GetPluginManager(class UObject* __WorldContext, class ABP_CFCorePluginManager_C** Output)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetPluginManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetPluginManager", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetPluginManager Parms{};
 
@@ -110,10 +104,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetPluginManager(class UObject* __WorldCont
 
 void UBPFL_CFCore_GlobalFunctions_C::GetLastUpdated(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* OutAsString, class FText* OutAsText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetLastUpdated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetLastUpdated", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetLastUpdated Parms{};
 
@@ -140,10 +132,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetLastUpdated(const struct FInstallProgres
 
 void UBPFL_CFCore_GlobalFunctions_C::GetDateReleased(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* OutAsString, class FText* OutAsText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetDateReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetDateReleased", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetDateReleased Parms{};
 
@@ -169,10 +159,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetDateReleased(const struct FInstallProgre
 
 bool UBPFL_CFCore_GlobalFunctions_C::IsModIDPurchased(const int64& ModToCheck, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "IsModIDPurchased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "IsModIDPurchased", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_IsModIDPurchased Parms{};
 
@@ -194,10 +182,8 @@ bool UBPFL_CFCore_GlobalFunctions_C::IsModIDPurchased(const int64& ModToCheck, c
 
 bool UBPFL_CFCore_GlobalFunctions_C::AreModIDsPurchased(TArray<int64>& Mods_To_Check, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "AreModIDsPurchased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "AreModIDsPurchased", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_AreModIDsPurchased Parms{};
 
@@ -222,10 +208,8 @@ bool UBPFL_CFCore_GlobalFunctions_C::AreModIDsPurchased(TArray<int64>& Mods_To_C
 
 void UBPFL_CFCore_GlobalFunctions_C::GetUserRatingActionForMod(const struct FMyRatings& ratings, int64 ModIDToFind, class UObject* __WorldContext, ECFCoreRatingVoteDirection* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetUserRatingActionForMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetUserRatingActionForMod", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetUserRatingActionForMod Parms{};
 
@@ -250,10 +234,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetUserRatingActionForMod(const struct FMyR
 
 void UBPFL_CFCore_GlobalFunctions_C::GetDateAdded(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* OutAsString, class FText* OutAsText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetDateAdded");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetDateAdded", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetDateAdded Parms{};
 
@@ -281,10 +263,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetDateAdded(const struct FInstallProgressM
 
 bool UBPFL_CFCore_GlobalFunctions_C::DidAllTheModsGetBought(TArray<int64>& ModsBought, const TArray<int64>& ModsRequested, const class UObject* WorldContextObject, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "DidAllTheModsGetBought");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "DidAllTheModsGetBought", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_DidAllTheModsGetBought Parms{};
 
@@ -310,10 +290,8 @@ bool UBPFL_CFCore_GlobalFunctions_C::DidAllTheModsGetBought(TArray<int64>& ModsB
 
 void UBPFL_CFCore_GlobalFunctions_C::DEBUG_Premium_PurchasedMods(TArray<int64>& Array, const class UObject* WorldContextObject, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "DEBUG_Premium_PurchasedMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "DEBUG_Premium_PurchasedMods", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_DEBUG_Premium_PurchasedMods Parms{};
 
@@ -336,10 +314,8 @@ void UBPFL_CFCore_GlobalFunctions_C::DEBUG_Premium_PurchasedMods(TArray<int64>& 
 
 void UBPFL_CFCore_GlobalFunctions_C::DEBUG_Premium_WaitingBuyResponse(TArray<int64>& Array, const class UObject* WorldContextObject, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "DEBUG_Premium_WaitingBuyResponse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "DEBUG_Premium_WaitingBuyResponse", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_DEBUG_Premium_WaitingBuyResponse Parms{};
 
@@ -362,10 +338,8 @@ void UBPFL_CFCore_GlobalFunctions_C::DEBUG_Premium_WaitingBuyResponse(TArray<int
 
 void UBPFL_CFCore_GlobalFunctions_C::GetIsModPremium(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, struct FPremiumDetails* Premium_Details)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetIsModPremium");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetIsModPremium", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetIsModPremium Parms{};
 
@@ -387,10 +361,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetIsModPremium(const struct FInstallProgre
 
 void UBPFL_CFCore_GlobalFunctions_C::GetNotifManager(class UObject* __WorldContext, class UUI_CFCore_NotificationManager_C** Output)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetNotifManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetNotifManager", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetNotifManager Parms{};
 
@@ -419,10 +391,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetNotifManager(class UObject* __WorldConte
 
 void UBPFL_CFCore_GlobalFunctions_C::GetIsModPaidStatus(const struct FInstallProgressMod& ModInfo, TArray<int64>& PurchasedModsIDs, class UObject* __WorldContext, bool* premium, bool* Is_Freemium, bool* purchased, double* Tier_Price, class FString* Currency_Symbol, struct FPremiumDetailsPlatformData* Platform_Data, struct FPremiumDetailsDiscount* Discount_Data)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetIsModPaidStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetIsModPaidStatus", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetIsModPaidStatus Parms{};
 
@@ -460,22 +430,20 @@ void UBPFL_CFCore_GlobalFunctions_C::GetIsModPaidStatus(const struct FInstallPro
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromStandalone
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   Mod_Id                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   Mod_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   DrawUIOnZOrder                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_GameSlot_C*            UI_GameSlotRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_ModPage_C*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromStandalone(int64 Mod_Id, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UObject* __WorldContext)
+class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromStandalone(int64 Mod_ID, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromStandalone");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromStandalone", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_CreateModPageFromStandalone Parms{};
 
-	Parms.Mod_Id = Mod_Id;
+	Parms.Mod_ID = Mod_ID;
 	Parms.DrawUIOnZOrder = DrawUIOnZOrder;
 	Parms.UI_GameSlotRef = UI_GameSlotRef;
 	Parms.__WorldContext = __WorldContext;
@@ -495,10 +463,8 @@ class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromSta
 
 void UBPFL_CFCore_GlobalFunctions_C::GetIsModValid(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, bool* IsValid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetIsModValid");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetIsModValid", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetIsModValid Parms{};
 
@@ -524,10 +490,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetIsModValid(const struct FInstallProgress
 
 void UBPFL_CFCore_GlobalFunctions_C::DebugMod(const struct FInstallProgressMod& InstallProgressMod, const class UObject* WorldContextObject, bool Debug_BroadcastEvent, EGameModsEvent Event, bool DebugInstallingUpdating, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "DebugMod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "DebugMod", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_DebugMod Parms{};
 
@@ -552,10 +516,8 @@ void UBPFL_CFCore_GlobalFunctions_C::DebugMod(const struct FInstallProgressMod& 
 
 void UBPFL_CFCore_GlobalFunctions_C::Is_There_Enough_Space_to_Install_Mod(int64 DiskSpace, const struct FInstallProgressMod& ModToInstall, class UObject* __WorldContext, bool* EnoughSpace)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "Is There Enough Space to Install Mod");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "Is There Enough Space to Install Mod", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_Is_There_Enough_Space_to_Install_Mod Parms{};
 
@@ -581,10 +543,8 @@ void UBPFL_CFCore_GlobalFunctions_C::Is_There_Enough_Space_to_Install_Mod(int64 
 
 double UBPFL_CFCore_GlobalFunctions_C::GetProcessedBarProgress(int32 Amount, ELibraryProgressState InstallProgressState, class UObject* __WorldContext, bool* MaintainPreviousValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetProcessedBarProgress");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetProcessedBarProgress", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetProcessedBarProgress Parms{};
 
@@ -610,10 +570,8 @@ double UBPFL_CFCore_GlobalFunctions_C::GetProcessedBarProgress(int32 Amount, ELi
 
 void UBPFL_CFCore_GlobalFunctions_C::GetIsModAvailable(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, bool* Is_Available)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetIsModAvailable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetIsModAvailable", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetIsModAvailable Parms{};
 
@@ -630,21 +588,19 @@ void UBPFL_CFCore_GlobalFunctions_C::GetIsModAvailable(const struct FInstallProg
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromID
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   Mod_Id                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   Mod_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   DrawUIOnZOrder                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_ModPage_C*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromID(int64 Mod_Id, int32 DrawUIOnZOrder, class UObject* __WorldContext)
+class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromID(int64 Mod_ID, int32 DrawUIOnZOrder, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromID");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromID", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_CreateModPageFromID Parms{};
 
-	Parms.Mod_Id = Mod_Id;
+	Parms.Mod_ID = Mod_ID;
 	Parms.DrawUIOnZOrder = DrawUIOnZOrder;
 	Parms.__WorldContext = __WorldContext;
 
@@ -657,23 +613,21 @@ class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromID(
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromStoreMenu
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   Mod_Id                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   Mod_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   DrawUIOnZOrder                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_GameSlot_C*            UI_GameSlotRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_StoreMenu_C*           UI_StoreMenu                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUI_CFCore_ModPage_C*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromStoreMenu(int64 Mod_Id, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_StoreMenu_C* UI_StoreMenu, class UObject* __WorldContext)
+class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromStoreMenu(int64 Mod_ID, int32 DrawUIOnZOrder, class UUI_CFCore_GameSlot_C* UI_GameSlotRef, class UUI_CFCore_StoreMenu_C* UI_StoreMenu, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromStoreMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "CreateModPageFromStoreMenu", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_CreateModPageFromStoreMenu Parms{};
 
-	Parms.Mod_Id = Mod_Id;
+	Parms.Mod_ID = Mod_ID;
 	Parms.DrawUIOnZOrder = DrawUIOnZOrder;
 	Parms.UI_GameSlotRef = UI_GameSlotRef;
 	Parms.UI_StoreMenu = UI_StoreMenu;
@@ -694,10 +648,8 @@ class UUI_CFCore_ModPage_C* UBPFL_CFCore_GlobalFunctions_C::CreateModPageFromSto
 
 void UBPFL_CFCore_GlobalFunctions_C::FormatDownloadNumber(int64 Value, class UObject* __WorldContext, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "FormatDownloadNumber");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "FormatDownloadNumber", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_FormatDownloadNumber Parms{};
 
@@ -720,10 +672,8 @@ void UBPFL_CFCore_GlobalFunctions_C::FormatDownloadNumber(int64 Value, class UOb
 
 void UBPFL_CFCore_GlobalFunctions_C::GetModVersion(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetModVersion");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetModVersion", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetModVersion Parms{};
 
@@ -746,10 +696,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetModVersion(const struct FInstallProgress
 
 void UBPFL_CFCore_GlobalFunctions_C::GetDownloadCount(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FText* FinalAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetDownloadCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetDownloadCount", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetDownloadCount Parms{};
 
@@ -776,10 +724,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetDownloadCount(const struct FInstallProgr
 
 void UBPFL_CFCore_GlobalFunctions_C::Get_Mod_Rating(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FText* RatingInText, double* rating, int64* Total_Ratings, int64* Positive_Ratings, int64* NegativeRatings)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "Get Mod Rating");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "Get Mod Rating", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_Get_Mod_Rating Parms{};
 
@@ -814,10 +760,8 @@ void UBPFL_CFCore_GlobalFunctions_C::Get_Mod_Rating(const struct FInstallProgres
 
 void UBPFL_CFCore_GlobalFunctions_C::GetModName(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* Name_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetModName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetModName", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetModName Parms{};
 
@@ -842,10 +786,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetModName(const struct FInstallProgressMod
 
 void UBPFL_CFCore_GlobalFunctions_C::Get_Mod_Size(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, struct FCFCoreFileSize* SizeStruct, class FText* SizeInText, int64* Bytes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "Get Mod Size");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "Get Mod Size", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_Get_Mod_Size Parms{};
 
@@ -874,10 +816,8 @@ void UBPFL_CFCore_GlobalFunctions_C::Get_Mod_Size(const struct FInstallProgressM
 
 void UBPFL_CFCore_GlobalFunctions_C::GetAuthorName(const struct FInstallProgressMod& ModInfo, class UObject* __WorldContext, class FString* CombinedAuthorsNames)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "GetAuthorName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "GetAuthorName", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_GetAuthorName Parms{};
 
@@ -900,10 +840,8 @@ void UBPFL_CFCore_GlobalFunctions_C::GetAuthorName(const struct FInstallProgress
 
 void UBPFL_CFCore_GlobalFunctions_C::CreateButtonStyleFromSingleColor(const struct FLinearColor& Color, class UObject* __WorldContext, struct FButtonStyle* ButtonStyle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "CreateButtonStyleFromSingleColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "CreateButtonStyleFromSingleColor", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_CreateButtonStyleFromSingleColor Parms{};
 
@@ -927,10 +865,8 @@ void UBPFL_CFCore_GlobalFunctions_C::CreateButtonStyleFromSingleColor(const stru
 
 void UBPFL_CFCore_GlobalFunctions_C::HEXtoByte(const class FString& first_value, const class FString& second_value, class UObject* __WorldContext, uint8* InputPin1)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "HEXtoByte");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "HEXtoByte", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_HEXtoByte Parms{};
 
@@ -954,10 +890,8 @@ void UBPFL_CFCore_GlobalFunctions_C::HEXtoByte(const class FString& first_value,
 
 void UBPFL_CFCore_GlobalFunctions_C::HEXtoSRGB(const class FString& String, class UObject* __WorldContext, struct FColor* Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "HEXtoSRGB");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "HEXtoSRGB", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_HEXtoSRGB Parms{};
 
@@ -980,10 +914,8 @@ void UBPFL_CFCore_GlobalFunctions_C::HEXtoSRGB(const class FString& String, clas
 
 class FString UBPFL_CFCore_GlobalFunctions_C::SRGBtoHEX(const struct FColor& Color, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "SRGBtoHEX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "SRGBtoHEX", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_SRGBtoHEX Parms{};
 
@@ -1005,10 +937,8 @@ class FString UBPFL_CFCore_GlobalFunctions_C::SRGBtoHEX(const struct FColor& Col
 
 class FString UBPFL_CFCore_GlobalFunctions_C::ByteToHex(uint8 InputPin, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "ByteToHex");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "ByteToHex", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_ByteToHex Parms{};
 
@@ -1029,10 +959,8 @@ class FString UBPFL_CFCore_GlobalFunctions_C::ByteToHex(uint8 InputPin, class UO
 
 void UBPFL_CFCore_GlobalFunctions_C::SetFocusedWidget(class UWidget* Widget, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "SetFocusedWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "SetFocusedWidget", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_SetFocusedWidget Parms{};
 
@@ -1053,10 +981,8 @@ void UBPFL_CFCore_GlobalFunctions_C::SetFocusedWidget(class UWidget* Widget, cla
 
 void UBPFL_CFCore_GlobalFunctions_C::TextLimit(class UTextBlock* Text, int32 Limit, const class FString& String, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "TextLimit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "TextLimit", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_TextLimit Parms{};
 
@@ -1077,10 +1003,8 @@ void UBPFL_CFCore_GlobalFunctions_C::TextLimit(class UTextBlock* Text, int32 Lim
 
 void UBPFL_CFCore_GlobalFunctions_C::CheckPlayerInputDevices(class UObject* __WorldContext, ENUM_CFCore_InputDevices* UsingGamepad_)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "CheckPlayerInputDevices");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "CheckPlayerInputDevices", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_CheckPlayerInputDevices Parms{};
 
@@ -1103,10 +1027,8 @@ void UBPFL_CFCore_GlobalFunctions_C::CheckPlayerInputDevices(class UObject* __Wo
 
 void UBPFL_CFCore_GlobalFunctions_C::StringLimit(const class FString& String, int32 Limit, class UObject* __WorldContext, class FString* NewString)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "StringLimit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "StringLimit", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_StringLimit Parms{};
 
@@ -1130,10 +1052,8 @@ void UBPFL_CFCore_GlobalFunctions_C::StringLimit(const class FString& String, in
 
 void UBPFL_CFCore_GlobalFunctions_C::ErrorMessage(class UObject* Object, const class FString& ErrorMessage_0, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CFCore_GlobalFunctions_C", "ErrorMessage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CFCore_GlobalFunctions_C", "ErrorMessage", FuncInfo);
 
 	Params::BPFL_CFCore_GlobalFunctions_C_ErrorMessage Parms{};
 

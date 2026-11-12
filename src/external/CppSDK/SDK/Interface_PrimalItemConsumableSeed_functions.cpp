@@ -26,10 +26,8 @@ SDK_NAMESPACE_START
 
 void IInterface_PrimalItemConsumableSeed_C::Interface_PrimalItemConsumableSeed_Get_Crop_Plot_Emitter_VFX_To_Be_Active(uint8 Current_Crop_Stage, bool Is_Growing, class UFXSystemAsset** Emitter_To_Be_Active, struct FVector* Location_Offset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_PrimalItemConsumableSeed_C", "Interface_PrimalItemConsumableSeed Get Crop Plot Emitter VFX To Be Active");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "Interface_PrimalItemConsumableSeed_C", "Interface_PrimalItemConsumableSeed Get Crop Plot Emitter VFX To Be Active", FuncInfo);
 
 	Params::Interface_PrimalItemConsumableSeed_C_Interface_PrimalItemConsumableSeed_Get_Crop_Plot_Emitter_VFX_To_Be_Active Parms{};
 

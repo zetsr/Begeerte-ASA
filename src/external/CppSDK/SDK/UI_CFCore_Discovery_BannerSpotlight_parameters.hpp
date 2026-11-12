@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "cfcore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,9 +24,10 @@ struct UI_CFCore_Discovery_BannerSpotlight_C_Create final
 public:
 	struct FShelf                                 Shelf_0;                                           // 0x0000(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_Create;
 
 // Function UI_CFCore_Discovery_BannerSpotlight.UI_CFCore_Discovery_BannerSpotlight_C.ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight
-// 0x0190 (0x0190 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct UI_CFCore_Discovery_BannerSpotlight_C_ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight final
 {
 public:
@@ -53,12 +55,13 @@ public:
 	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0158(0x0010)()
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0168(0x0010)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0178(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimationForward_ReturnValue;         // 0x0190(0x0010)(HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_ExecuteUbergraph_UI_CFCore_Discovery_BannerSpotlight;
 
 // Function UI_CFCore_Discovery_BannerSpotlight.UI_CFCore_Discovery_BannerSpotlight_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -68,6 +71,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_GetRootCFWidget;
 
 // Function UI_CFCore_Discovery_BannerSpotlight.UI_CFCore_Discovery_BannerSpotlight_C.OnFail_082B674A42E76991867B6581F03A8A4D
 // 0x0008 (0x0008 - 0x0000)
@@ -76,6 +80,7 @@ struct UI_CFCore_Discovery_BannerSpotlight_C_OnFail_082B674A42E76991867B6581F03A
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_OnFail_082B674A42E76991867B6581F03A8A4D;
 
 // Function UI_CFCore_Discovery_BannerSpotlight.UI_CFCore_Discovery_BannerSpotlight_C.OnSuccess_082B674A42E76991867B6581F03A8A4D
 // 0x0008 (0x0008 - 0x0000)
@@ -84,6 +89,7 @@ struct UI_CFCore_Discovery_BannerSpotlight_C_OnSuccess_082B674A42E76991867B6581F
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_OnSuccess_082B674A42E76991867B6581F03A8A4D;
 
 // Function UI_CFCore_Discovery_BannerSpotlight.UI_CFCore_Discovery_BannerSpotlight_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -92,6 +98,7 @@ struct UI_CFCore_Discovery_BannerSpotlight_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Discovery_BannerSpotlight_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

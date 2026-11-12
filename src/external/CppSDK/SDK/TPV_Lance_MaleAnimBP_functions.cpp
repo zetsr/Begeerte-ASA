@@ -20,10 +20,8 @@ SDK_NAMESPACE_START
 
 void UTPV_Lance_MaleAnimBP_C::UpdateLayeringValues()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TPV_Lance_MaleAnimBP_C", "UpdateLayeringValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "TPV_Lance_MaleAnimBP_C", "UpdateLayeringValues", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

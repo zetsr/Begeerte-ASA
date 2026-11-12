@@ -17,14 +17,14 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_CFCore_ToolTipWidget.UI_CFCore_ToolTipWidget_C
-// 0x0028 (0x0898 - 0x0870)
+// 0x0028 (0x08F8 - 0x08D0)
 class UUI_CFCore_ToolTipWidget_C final : public UCFCoreWidget_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_ToolTipWidget_C;          // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               BaseOverlay;                                       // 0x0878(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_Tooltip;                                      // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Text;                                              // 0x0888(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_ToolTipWidget_C;          // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	class UTextBlock*                             TEXT_Tooltip;                                      // 0x08D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               BaseOverlay;                                       // 0x08E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x08E8(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
 	void ExecuteUbergraph_UI_CFCore_ToolTipWidget(int32 EntryPoint);
@@ -45,5 +45,6 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_ToolTipWidget_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_CFCore_ToolTipWidget_C;
 
 SDK_NAMESPACE_END

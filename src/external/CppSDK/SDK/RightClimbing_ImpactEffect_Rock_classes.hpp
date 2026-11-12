@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RightClimbing_ImpactEffect_Rock.RightClimbing_ImpactEffect_Rock_C
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04E8 - 0x04E8)
 class ARightClimbing_ImpactEffect_Rock_C final : public AClimbing_ImpactEffect_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<ARightClimbing_ImpactEffect_Rock_C>();
 	}
 };
+DUMPER7_ASSERTS_ARightClimbing_ImpactEffect_Rock_C;
 
 SDK_NAMESPACE_END

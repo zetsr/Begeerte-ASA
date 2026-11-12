@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UClearRunning_C::ExecuteUbergraph_ClearRunning(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ClearRunning_C", "ExecuteUbergraph_ClearRunning");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ClearRunning_C", "ExecuteUbergraph_ClearRunning", FuncInfo);
 
 	Params::ClearRunning_C_ExecuteUbergraph_ClearRunning Parms{};
 
@@ -43,10 +41,8 @@ void UClearRunning_C::ExecuteUbergraph_ClearRunning(int32 EntryPoint)
 
 void UClearRunning_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ClearRunning_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ClearRunning_C", "ReceiveExecute", FuncInfo);
 
 	Params::ClearRunning_C_ReceiveExecute Parms{};
 

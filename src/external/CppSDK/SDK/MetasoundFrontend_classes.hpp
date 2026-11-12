@@ -10,16 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "MetasoundFrontend_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class MetasoundFrontend.MetaSoundDocumentInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMetaSoundDocumentInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IMetaSoundDocumentInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -43,6 +46,52 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_IMetaSoundDocumentInterface;
+
+// Class MetasoundFrontend.MetaSoundFrontendMemberMetadata
+// 0x0000 (0x0028 - 0x0028)
+class UMetaSoundFrontendMemberMetadata final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MetaSoundFrontendMemberMetadata")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetaSoundFrontendMemberMetadata")
+	}
+	static class UMetaSoundFrontendMemberMetadata* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundFrontendMemberMetadata>();
+	}
+};
+DUMPER7_ASSERTS_UMetaSoundFrontendMemberMetadata;
+
+// Class MetasoundFrontend.MetaSoundBuilderDocument
+// 0x0160 (0x0188 - 0x0028)
+class UMetaSoundBuilderDocument final : public UObject, public IMetaSoundDocumentInterface
+{
+public:
+	struct FMetasoundFrontendDocument             Document;                                          // 0x0030(0x0148)(Transient, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x0178(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TSubclassOf<class UObject>                    BuilderUClass;                                     // 0x0180(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MetaSoundBuilderDocument")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MetaSoundBuilderDocument")
+	}
+	static class UMetaSoundBuilderDocument* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundBuilderDocument>();
+	}
+};
+DUMPER7_ASSERTS_UMetaSoundBuilderDocument;
 
 // Class MetasoundFrontend.MetasoundParameterPack
 // 0x0018 (0x0040 - 0x0028)
@@ -85,49 +134,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundParameterPack>();
 	}
 };
-
-// Class MetasoundFrontend.MetaSoundFrontendMemberMetadata
-// 0x0000 (0x0028 - 0x0028)
-class UMetaSoundFrontendMemberMetadata final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MetaSoundFrontendMemberMetadata")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MetaSoundFrontendMemberMetadata")
-	}
-	static class UMetaSoundFrontendMemberMetadata* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMetaSoundFrontendMemberMetadata>();
-	}
-};
-
-// Class MetasoundFrontend.MetaSoundBuilderDocument
-// 0x01A8 (0x01D0 - 0x0028)
-class UMetaSoundBuilderDocument final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendDocument             Document;                                          // 0x0030(0x0190)(Transient, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x01C0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TSubclassOf<class UObject>                    BuilderUClass;                                     // 0x01C8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MetaSoundBuilderDocument")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MetaSoundBuilderDocument")
-	}
-	static class UMetaSoundBuilderDocument* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMetaSoundBuilderDocument>();
-	}
-};
+DUMPER7_ASSERTS_UMetasoundParameterPack;
 
 SDK_NAMESPACE_END

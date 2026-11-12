@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_AdvancedBullet_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_AdvancedBullet_C;
 
 SDK_NAMESPACE_END

@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // Function MobilePatchingUtils.MobileInstalledContent.GetDiskFreeSpace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,7 +42,7 @@ float UMobileInstalledContent::GetDiskFreeSpace()
 
 
 // Function MobilePatchingUtils.MobileInstalledContent.GetInstalledContentSize
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -67,7 +67,7 @@ float UMobileInstalledContent::GetInstalledContentSize()
 
 
 // Function MobilePatchingUtils.MobileInstalledContent.Mount
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   PakOrder                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    MountPoint                                             (Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -97,7 +97,7 @@ bool UMobileInstalledContent::Mount(int32 PakOrder, const class FString& MountPo
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadSize
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -122,7 +122,7 @@ float UMobilePendingContent::GetDownloadSize()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadSpeed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -147,7 +147,7 @@ float UMobilePendingContent::GetDownloadSpeed()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadStatusText
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -172,7 +172,7 @@ class FText UMobilePendingContent::GetDownloadStatusText()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetInstallProgress
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -197,7 +197,7 @@ float UMobilePendingContent::GetInstallProgress()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetRequiredDiskSpace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -222,7 +222,7 @@ float UMobilePendingContent::GetRequiredDiskSpace()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.GetTotalDownloadedSize
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -247,7 +247,7 @@ float UMobilePendingContent::GetTotalDownloadedSize()
 
 
 // Function MobilePatchingUtils.MobilePendingContent.StartInstall
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TDelegate<void()>                       OnSucceeded                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void(class FText ErrorText, int32 ErrorCode)>OnFailed                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -274,7 +274,7 @@ void UMobilePendingContent::StartInstall(TDelegate<void()> OnSucceeded, TDelegat
 
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetActiveDeviceProfileName
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -299,7 +299,7 @@ class FString UMobilePatchingLibrary::GetActiveDeviceProfileName()
 
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetInstalledContent
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // const class FString&                    InstallDirectory                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMobileInstalledContent*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -327,7 +327,7 @@ class UMobileInstalledContent* UMobilePatchingLibrary::GetInstalledContent(const
 
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetSupportedPlatformNames
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<class FString>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -352,7 +352,7 @@ TArray<class FString> UMobilePatchingLibrary::GetSupportedPlatformNames()
 
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.HasActiveWiFiConnection
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -377,7 +377,7 @@ bool UMobilePatchingLibrary::HasActiveWiFiConnection()
 
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.RequestContent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    RemoteManifestURL                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    CloudURL                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

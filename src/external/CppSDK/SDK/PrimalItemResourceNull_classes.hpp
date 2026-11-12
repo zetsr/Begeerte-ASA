@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResourceNull_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResourceNull_C;
 
 SDK_NAMESPACE_END

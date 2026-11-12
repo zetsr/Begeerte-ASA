@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass HM_TPV_ClimbPick_AnimBP.HM_TPV_ClimbPick_AnimBP_C
-// 0x0000 (0x20020 - 0x20020)
+// 0x0000 (0x21340 - 0x21340)
 class UHM_TPV_ClimbPick_AnimBP_C final : public UBaseHumanAnimBP_Fists_C
 {
 public:
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UHM_TPV_ClimbPick_AnimBP_C>();
 	}
 };
+DUMPER7_ASSERTS_UHM_TPV_ClimbPick_AnimBP_C;
 
 SDK_NAMESPACE_END

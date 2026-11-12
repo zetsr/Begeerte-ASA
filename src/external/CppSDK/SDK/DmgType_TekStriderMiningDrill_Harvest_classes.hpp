@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_TekStriderMiningDrill_Harvest_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_TekStriderMiningDrill_Harvest_C;
 
 SDK_NAMESPACE_END

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UAttackTargetMove_DR_C::ExecuteUbergraph_AttackTargetMove_DR(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackTargetMove_DR_C", "ExecuteUbergraph_AttackTargetMove_DR");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackTargetMove_DR_C", "ExecuteUbergraph_AttackTargetMove_DR", FuncInfo);
 
 	Params::AttackTargetMove_DR_C_ExecuteUbergraph_AttackTargetMove_DR Parms{};
 
@@ -43,10 +41,8 @@ void UAttackTargetMove_DR_C::ExecuteUbergraph_AttackTargetMove_DR(int32 EntryPoi
 
 void UAttackTargetMove_DR_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackTargetMove_DR_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackTargetMove_DR_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::AttackTargetMove_DR_C_ReceiveConditionCheck Parms{};
 

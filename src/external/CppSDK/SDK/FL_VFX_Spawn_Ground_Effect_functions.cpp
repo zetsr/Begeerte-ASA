@@ -36,10 +36,8 @@ SDK_NAMESPACE_START
 
 void UFL_VFX_Spawn_Ground_Effect_C::Find_Ground_Attributes(class UObject* InObj, class UObject* __WorldContext, struct FColor* Color, double* SandAmount, double* DustAmount, double* LeavesDebrisAmount, double* GrassDebrisAmount, double* ThatchDebrisAmount, double* PebblesDebrisAmount, double* Friction, double* Bounce, int32* Render_Index, bool* Show_Footprints, struct FAudio_Ground_Collection* Step_Sounds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Find Ground Attributes");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Find Ground Attributes", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Find_Ground_Attributes Parms{};
 
@@ -97,10 +95,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Find_Ground_Attributes(class UObject* InObj,
 
 void UFL_VFX_Spawn_Ground_Effect_C::Set_Car_Track_VFX_Parameters(class UPhysicalMaterial* Wheel_Phys_Material, class UNiagaraComponent* Niagara_System, bool On, const struct FVector& Ground_Offset, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Set Car Track VFX Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Set Car Track VFX Parameters", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Set_Car_Track_VFX_Parameters Parms{};
 
@@ -125,10 +121,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Set_Car_Track_VFX_Parameters(class UPhysical
 
 void UFL_VFX_Spawn_Ground_Effect_C::Set_Cart_Track_VFX_Parameters(class UPhysicalMaterial* Wheel_Phys_Material, const struct FVector& Wheel_Hit_Position, const struct FVector& Wheel_Ground_Normal, class UNiagaraComponent* Niagara_System, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Set Cart Track VFX Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Set Cart Track VFX Parameters", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Set_Cart_Track_VFX_Parameters Parms{};
 
@@ -156,10 +150,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Set_Cart_Track_VFX_Parameters(class UPhysica
 
 void UFL_VFX_Spawn_Ground_Effect_C::Set_Ground_VFX_Parameters(class UNiagaraComponent* Niagara_Component, double Size_Mult, double Amount_Mult, double Velocity_Mult, class UPhysicalMaterial* Phys_Material, class UObject* __WorldContext, int32* Render_Index, bool* Show_Footprints)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Set Ground VFX Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Set Ground VFX Parameters", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Set_Ground_VFX_Parameters Parms{};
 
@@ -202,10 +194,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Set_Ground_VFX_Parameters(class UNiagaraComp
 
 void UFL_VFX_Spawn_Ground_Effect_C::Set_Niagara_Parameters(class UNiagaraComponent* NS, double Amount_Mult, double Emitter_Size_Mult, const struct FVector& Init_Velocity, double Velocity_Mult, const struct FLinearColor& Colors, double Leaves, double Grass, double Thatch, double Pebbles, double Sand, double Dust_, double Friction, double Bounce, bool Prevent_Decals, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Set Niagara Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Set Niagara Parameters", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Set_Niagara_Parameters Parms{};
 
@@ -245,10 +235,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Set_Niagara_Parameters(class UNiagaraCompone
 
 void UFL_VFX_Spawn_Ground_Effect_C::Spawn_Ground_VFX(class UNiagaraSystem* NS, const struct FVector& Location, const struct FVector& Trace_Offset, double Size_Mult, double Amount_Mult, double Velocity_Mult, const struct FRotator& NS_Rotate, class UObject* __WorldContext, class UNiagaraComponent** Niagara_)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Spawn Ground VFX");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Spawn Ground VFX", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Spawn_Ground_VFX Parms{};
 
@@ -284,10 +272,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Spawn_Ground_VFX(class UNiagaraSystem* NS, c
 
 void UFL_VFX_Spawn_Ground_Effect_C::Spawn_Ground_VFX_Attached(class UNiagaraSystem* NS, const struct FVector& Location, const struct FVector& Trace_Offset, double Size_Mult, double Amount_Mult, double Velocity_Mult, const struct FRotator& NS_Rotate, const class FString& Attached_Bone_Name, class USkeletalMeshComponent* Attached_Skeletal_Mesh, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Spawn Ground VFX Attached");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Spawn Ground VFX Attached", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Spawn_Ground_VFX_Attached Parms{};
 
@@ -322,10 +308,8 @@ void UFL_VFX_Spawn_Ground_Effect_C::Spawn_Ground_VFX_Attached(class UNiagaraSyst
 
 void UFL_VFX_Spawn_Ground_Effect_C::Trace_Ground_VFX_Parameters(class UNiagaraComponent* Niagara_Component, const struct FVector& Location, const struct FVector& Trace_Start_Offset, const struct FVector& Trace_End_Offset, double Size_Mult, double Amount_Mult, double Velocity_Mult, class UObject* __WorldContext, int32* Render_Index, bool* Show_Footprints)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("FL_VFX_Spawn_Ground_Effect_C", "Trace Ground VFX Parameters");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "FL_VFX_Spawn_Ground_Effect_C", "Trace Ground VFX Parameters", FuncInfo);
 
 	Params::FL_VFX_Spawn_Ground_Effect_C_Trace_Ground_VFX_Parameters Parms{};
 

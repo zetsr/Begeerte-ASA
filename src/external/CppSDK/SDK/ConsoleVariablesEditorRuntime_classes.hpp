@@ -13,16 +13,16 @@
 #include "ConsoleVariablesEditorRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MovieSceneTracks_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class ConsoleVariablesEditorRuntime.ConsoleVariablesAsset
 // 0x0028 (0x0050 - 0x0028)
-class UConsoleVariablesAsset final : public UObject
+class UConsoleVariablesAsset final : public UObject, public IMovieSceneConsoleVariableTrackInterface
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 VariableCollectionDescription;                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FConsoleVariablesEditorAssetSaveData> SavedCommands;                               // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
@@ -56,5 +56,6 @@ public:
 		return GetDefaultObjImpl<UConsoleVariablesAsset>();
 	}
 };
+DUMPER7_ASSERTS_UConsoleVariablesAsset;
 
 SDK_NAMESPACE_END

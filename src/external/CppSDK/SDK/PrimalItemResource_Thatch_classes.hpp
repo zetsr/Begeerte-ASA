@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Thatch_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Thatch_C;
 
 SDK_NAMESPACE_END

@@ -49,5 +49,6 @@ public:
 		return GetDefaultObjImpl<UTraceUtilLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UTraceUtilLibrary;
 
 SDK_NAMESPACE_END

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_CustomizeSlot_MainFont.UI_CustomizeSlot_MainFont_C
-// 0x0000 (0x03B8 - 0x03B8)
+// 0x0000 (0x0418 - 0x0418)
 class UUI_CustomizeSlot_MainFont_C final : public UUI_CFCore_CustomizeColorSlot_C
 {
 public:
@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UUI_CustomizeSlot_MainFont_C>();
 	}
 };
+DUMPER7_ASSERTS_UUI_CustomizeSlot_MainFont_C;
 
 SDK_NAMESPACE_END

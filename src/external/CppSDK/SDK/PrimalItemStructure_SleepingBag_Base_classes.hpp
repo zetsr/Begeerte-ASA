@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemStructure_SleepingBag_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemStructure_SleepingBag_Base_C;
 
 SDK_NAMESPACE_END

@@ -13,14 +13,43 @@
 
 SDK_NAMESPACE_START
 
+// Enum HairStrandsDeformer.EOptimusGroomAttributeTypes
+// NumValues: 0x0011
+enum class EOptimusGroomAttributeTypes : uint8
+{
+	None                                     = 0,
+	Bool                                     = 1,
+	Int                                      = 2,
+	IntVector2                               = 3,
+	IntVector3                               = 4,
+	IntVector4                               = 5,
+	Uint                                     = 6,
+	Float                                    = 7,
+	Vector2                                  = 8,
+	Vector3                                  = 9,
+	Vector4                                  = 10,
+	LinearColor                              = 11,
+	Quat                                     = 12,
+	Rotator                                  = 13,
+	Transform                                = 14,
+	Matrix3x4                                = 15,
+	EOptimusGroomAttributeTypes_MAX          = 16,
+};
+
 // Enum HairStrandsDeformer.EOptimusGroomExecDomain
-// NumValues: 0x0004
+// NumValues: 0x000A
 enum class EOptimusGroomExecDomain : uint8
 {
 	None                                     = 0,
 	ControlPoint                             = 1,
 	Curve                                    = 2,
-	EOptimusGroomExecDomain_MAX              = 3,
+	StrandsEdges                             = 3,
+	StrandsObjects                           = 4,
+	GuidesPoints                             = 5,
+	GuidesCurves                             = 6,
+	GuidesEdges                              = 7,
+	GuidesObjects                            = 8,
+	EOptimusGroomExecDomain_MAX              = 9,
 };
 
 SDK_NAMESPACE_END

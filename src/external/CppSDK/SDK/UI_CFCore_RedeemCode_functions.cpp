@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_RedeemCode_C::AttemptClaim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "AttemptClaim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "AttemptClaim", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +36,8 @@ void UUI_CFCore_RedeemCode_C::AttemptClaim()
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
@@ -59,10 +55,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_Compon
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature Parms{};
 
@@ -77,10 +71,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_Compon
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_4_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +83,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFai
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_1_K2Node_ComponentBoundEvent_6_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +95,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFai
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFailed_K2Node_ComponentBoundEvent_3_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +107,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_BackFai
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_1_K2Node_ComponentBoundEvent_7_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_1_K2Node_ComponentBoundEvent_7_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_1_K2Node_ComponentBoundEvent_7_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -133,10 +119,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_8_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_8_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_8_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +131,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_Install
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_2_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_2_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_2_K2Node_ComponentBoundEvent_5_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +143,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgai
 
 void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgain_K2Node_ComponentBoundEvent_1_OnPressed__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +155,8 @@ void UUI_CFCore_RedeemCode_C::BndEvt__UI_RedeemCode_UI_Button_Ark_Global_TryAgai
 
 void UUI_CFCore_RedeemCode_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +167,8 @@ void UUI_CFCore_RedeemCode_C::Construct()
 
 void UUI_CFCore_RedeemCode_C::DonwloadThumbnail()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "DonwloadThumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "DonwloadThumbnail", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -205,10 +181,8 @@ void UUI_CFCore_RedeemCode_C::DonwloadThumbnail()
 
 void UUI_CFCore_RedeemCode_C::ExecuteUbergraph_UI_CFCore_RedeemCode(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "ExecuteUbergraph_UI_CFCore_RedeemCode");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "ExecuteUbergraph_UI_CFCore_RedeemCode", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_ExecuteUbergraph_UI_CFCore_RedeemCode Parms{};
 
@@ -225,10 +199,8 @@ void UUI_CFCore_RedeemCode_C::ExecuteUbergraph_UI_CFCore_RedeemCode(int32 EntryP
 
 void UUI_CFCore_RedeemCode_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_GetRootCFWidget Parms{};
 
@@ -246,10 +218,8 @@ void UUI_CFCore_RedeemCode_C::GetRootCFWidget(class UPanelWidget** RootPanelWidg
 
 void UUI_CFCore_RedeemCode_C::How_could_we_possibly_ever_fail(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "How could we possibly ever fail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "How could we possibly ever fail", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_How_could_we_possibly_ever_fail Parms{};
 
@@ -264,10 +234,8 @@ void UUI_CFCore_RedeemCode_C::How_could_we_possibly_ever_fail(const struct FCFCo
 
 void UUI_CFCore_RedeemCode_C::ModReady()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "ModReady");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "ModReady", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,10 +248,8 @@ void UUI_CFCore_RedeemCode_C::ModReady()
 
 void UUI_CFCore_RedeemCode_C::OnClaimError(const struct FCFCoreError& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "OnClaimError");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "OnClaimError", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_OnClaimError Parms{};
 
@@ -300,10 +266,8 @@ void UUI_CFCore_RedeemCode_C::OnClaimError(const struct FCFCoreError& Error)
 
 void UUI_CFCore_RedeemCode_C::OnClaimSuccess(const struct FEntitlementCampaign& EntitlementCampaign)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "OnClaimSuccess");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "OnClaimSuccess", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_OnClaimSuccess Parms{};
 
@@ -320,10 +284,8 @@ void UUI_CFCore_RedeemCode_C::OnClaimSuccess(const struct FEntitlementCampaign& 
 
 void UUI_CFCore_RedeemCode_C::OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A Parms{};
 
@@ -340,10 +302,8 @@ void UUI_CFCore_RedeemCode_C::OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A(class UTex
 
 void UUI_CFCore_RedeemCode_C::OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A(class UTexture2DDynamic* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A Parms{};
 
@@ -361,10 +321,8 @@ void UUI_CFCore_RedeemCode_C::OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A(class U
 
 void UUI_CFCore_RedeemCode_C::SetAlreadyClaimedState(bool Index_0, const class FText& TRUE_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "SetAlreadyClaimedState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "SetAlreadyClaimedState", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_SetAlreadyClaimedState Parms{};
 
@@ -382,10 +340,8 @@ void UUI_CFCore_RedeemCode_C::SetAlreadyClaimedState(bool Index_0, const class F
 
 void UUI_CFCore_RedeemCode_C::SuccessIGuess(const struct FCFCoreMod& mod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "SuccessIGuess");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "SuccessIGuess", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_SuccessIGuess Parms{};
 
@@ -403,10 +359,8 @@ void UUI_CFCore_RedeemCode_C::SuccessIGuess(const struct FCFCoreMod& mod)
 
 void UUI_CFCore_RedeemCode_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_RedeemCode_C_Tick Parms{};
 
@@ -422,10 +376,8 @@ void UUI_CFCore_RedeemCode_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 void UUI_CFCore_RedeemCode_C::UpdateSlotInformation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_RedeemCode_C", "UpdateSlotInformation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_RedeemCode_C", "UpdateSlotInformation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

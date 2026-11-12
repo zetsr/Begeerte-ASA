@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class USeek_Srv_C final : public UBTService_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0098(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Seek_Srv(int32 EntryPoint);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<USeek_Srv_C>();
 	}
 };
+DUMPER7_ASSERTS_USeek_Srv_C;
 
 SDK_NAMESPACE_END

@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MetalHarvestComponent.MetalHarvestComponent_C
-// 0x0000 (0x0238 - 0x0238)
+// 0x0000 (0x0260 - 0x0260)
 class UMetalHarvestComponent_C final : public UStoneHarvestComponent_RequiresMetal_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UMetalHarvestComponent_C>();
 	}
 };
+DUMPER7_ASSERTS_UMetalHarvestComponent_C;
 
 SDK_NAMESPACE_END

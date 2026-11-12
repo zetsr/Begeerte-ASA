@@ -20,7 +20,7 @@ SDK_NAMESPACE_START
 class UWildcardHelpers final : public UObject
 {
 public:
-	static void CreateJIRABug(const class FString& Args, const class FString& UploadDir, const class FString& UploadExtension);
+	static void CreateJIRABug(const class FString& args, const class FString& UploadDir, const class FString& UploadExtension);
 
 public:
 	static class UClass* StaticClass()
@@ -36,5 +36,6 @@ public:
 		return GetDefaultObjImpl<UWildcardHelpers>();
 	}
 };
+DUMPER7_ASSERTS_UWildcardHelpers;
 
 SDK_NAMESPACE_END

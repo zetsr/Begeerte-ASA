@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_TranqSpearBolt_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_TranqSpearBolt_C;
 
 SDK_NAMESPACE_END

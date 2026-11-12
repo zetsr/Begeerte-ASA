@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "InterchangeCore_structs.hpp"
 
@@ -25,7 +24,11 @@ public:
 	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
+	EInterchangeFactoryAssetType GetFactoryAssetType();
+
 	class UClass* GetFactoryClass() const;
+	bool GetSourceFilenames(const class UObject* Object, TArray<class FString>* OutSourceFilenames) const;
+	bool SetSourceFilename(const class UObject* Object, const class FString& SourceFilename, int32 SourceIndex) const;
 
 public:
 	static class UClass* StaticClass()
@@ -41,34 +44,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeFactoryBase>();
 	}
 };
-
-// Class InterchangeCore.InterchangeSourceData
-// 0x0028 (0x0050 - 0x0028)
-class UInterchangeSourceData final : public UObject
-{
-public:
-	class FString                                 Filename;                                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetFilename(const class FString& InFilename);
-
-	class FString GetFilename() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeSourceData")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeSourceData")
-	}
-	static class UInterchangeSourceData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeSourceData>();
-	}
-};
+DUMPER7_ASSERTS_UInterchangeFactoryBase;
 
 // Class InterchangeCore.InterchangeWriterBase
 // 0x0000 (0x0028 - 0x0028)
@@ -88,24 +64,29 @@ public:
 		return GetDefaultObjImpl<UInterchangeWriterBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeWriterBase;
 
 // Class InterchangeCore.InterchangePipelineBase
-// 0x0120 (0x0148 - 0x0028)
+// 0x0100 (0x0128 - 0x0028)
 class UInterchangePipelineBase : public UObject
 {
 public:
 	class FString                                 DestinationName;                                   // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ContentImportPath;                                 // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        ReimportLevel;                                     // 0x0048(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x3];                                       // 0x0068(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bFromReimportOrOverride;                           // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeResultsContainer*           Results;                                           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TMap<class FName, struct FInterchangePipelinePropertyStates> PropertiesStates;                   // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C8[0x80];                                      // 0x00C8(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowPropertyStatesEdition;                       // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsReimportContext;                                // 0x0049(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsShowEssentials;                                 // 0x004A(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFromReimportOrOverride;                           // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeResultsContainer*           Results;                                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TMap<class FName, struct FInterchangePipelinePropertyStates> PropertiesStates;                   // 0x0058(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FInterchangePipelinePropertyStates> CachePropertiesStates;              // 0x00A8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	struct FInterchangePipelineContextParams      CacheContextParam;                                 // 0x00F8(0x0020)(Transient, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_118[0x10];                                     // 0x0118(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FInterchangePipelinePropertyStates FindOrAddPropertyStates(const class FName PropertyPath);
+	bool IsReimportContext();
 	void ScriptedExecuteExportPipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer);
 	void ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas, const class FString& ContentBasePath);
 	void ScriptedExecutePostBroadcastPipeline(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const class FString& FactoryNodeKey, class UObject* CreatedAsset, bool bIsAReimport);
@@ -115,6 +96,7 @@ public:
 
 	bool DoesPropertyStatesExist(const class FName PropertyPath) const;
 	class FString ScriptedGetPipelineDisplayName() const;
+	bool SupportReimport() const;
 
 public:
 	static class UClass* StaticClass()
@@ -130,6 +112,7 @@ public:
 		return GetDefaultObjImpl<UInterchangePipelineBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangePipelineBase;
 
 // Class InterchangeCore.InterchangeResult
 // 0x0048 (0x0070 - 0x0028)
@@ -156,6 +139,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResult>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResult;
 
 // Class InterchangeCore.InterchangeResultSuccess
 // 0x0000 (0x0070 - 0x0070)
@@ -175,6 +159,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultSuccess>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultSuccess;
 
 // Class InterchangeCore.InterchangeResultWarning
 // 0x0000 (0x0070 - 0x0070)
@@ -194,6 +179,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultWarning>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultWarning;
 
 // Class InterchangeCore.InterchangeResultError
 // 0x0000 (0x0070 - 0x0070)
@@ -213,6 +199,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultError;
 
 // Class InterchangeCore.InterchangeResultWarning_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -235,6 +222,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultWarning_Generic>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultWarning_Generic;
 
 // Class InterchangeCore.InterchangeResultError_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -257,6 +245,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError_Generic>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultError_Generic;
 
 // Class InterchangeCore.InterchangeResultError_ReimportFail
 // 0x0000 (0x0070 - 0x0070)
@@ -276,6 +265,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError_ReimportFail>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultError_ReimportFail;
 
 // Class InterchangeCore.InterchangeResultDisplay_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -298,6 +288,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultDisplay_Generic>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultDisplay_Generic;
 
 // Class InterchangeCore.InterchangeResultsContainer
 // 0x0038 (0x0060 - 0x0028)
@@ -321,6 +312,41 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultsContainer>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeResultsContainer;
+
+// Class InterchangeCore.InterchangeSourceData
+// 0x0078 (0x00A0 - 0x0028)
+class UInterchangeSourceData final : public UObject
+{
+public:
+	class FString                                 Filename;                                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class UObject*>           ContextObjectsByTag;                               // 0x0050(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	bool SetFilename(const class FString& InFilename);
+
+	TArray<class FString> GetAllContextObjectTags() const;
+	class UObject* GetContextObjectByTag(const class FString& Tag) const;
+	class FString GetFilename() const;
+	void RemoveAllContextObjects() const;
+	void SetContextObjectByTag(const class FString& Tag, class UObject* Object) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSourceData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSourceData")
+	}
+	static class UInterchangeSourceData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSourceData>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSourceData;
 
 // Class InterchangeCore.InterchangeTranslatorSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -344,14 +370,26 @@ public:
 		return GetDefaultObjImpl<UInterchangeTranslatorSettings>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTranslatorSettings;
 
 // Class InterchangeCore.InterchangeTranslatorBase
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UInterchangeTranslatorBase : public UObject
 {
 public:
 	class UInterchangeResultsContainer*           Results;                                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UInterchangeSourceData*                 SourceData;                                        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSettings(const class UInterchangeTranslatorSettings* InterchangeTranslatorSettings);
+
+	bool CanImportSourceData(const class UInterchangeSourceData* InSourceData) const;
+	class UInterchangeTranslatorSettings* GetSettings() const;
+	const class UInterchangeSourceData* GetSourceData() const;
+	EInterchangeTranslatorAssetType GetSupportedAssetTypes() const;
+	TArray<class FString> GetSupportedFormats() const;
+	EInterchangeTranslatorType GetTranslatorType() const;
 
 public:
 	static class UClass* StaticClass()
@@ -367,6 +405,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeTranslatorBase>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeTranslatorBase;
 
 // Class InterchangeCore.InterchangeBaseNode
 // 0x0038 (0x0060 - 0x0028)
@@ -387,24 +426,27 @@ public:
 	void InitializeNode(const class FString& UniqueID, const class FString& DisplayLabel, const EInterchangeNodeContainerType NodeContainerType);
 	bool RemoveAttribute(const class FString& NodeAttributeKey);
 	bool SetAssetName(const class FString& AssetName);
-	bool SetDisplayLabel(const class FString& DisplayName);
+	bool SetDisplayLabel(const class FString& InDisplayLabel);
 	bool SetEnabled(const bool bIsEnabled);
-	bool SetParentUid(const class FString& ParentUid);
 
 	bool AddTargetNodeUid(const class FString& AssetUid) const;
 	class FString GetAssetName() const;
 	bool GetBooleanAttribute(const class FString& NodeAttributeKey, bool* OutValue) const;
+	int32 GetDesiredChildIndex() const;
 	class FString GetDisplayLabel() const;
 	bool GetDoubleAttribute(const class FString& NodeAttributeKey, double* OutValue) const;
 	bool GetFloatAttribute(const class FString& NodeAttributeKey, float* OutValue) const;
 	bool GetGuidAttribute(const class FString& NodeAttributeKey, struct FGuid* OutValue) const;
+	class FName GetIconName() const;
 	bool GetInt32Attribute(const class FString& NodeAttributeKey, int32* OutValue) const;
 	bool GetLinearColorAttribute(const class FString& NodeAttributeKey, struct FLinearColor* OutValue) const;
+	bool GetNameSpace(class FString* Namespace) const;
 	EInterchangeNodeContainerType GetNodeContainerType() const;
 	class FString GetParentUid() const;
 	bool GetStringAttribute(const class FString& NodeAttributeKey, class FString* OutValue) const;
 	int32 GetTargetNodeCount() const;
 	void GetTargetNodeUids(TArray<class FString>* OutTargetAssets) const;
+	class FString GetTypeName() const;
 	class FString GetUniqueID() const;
 	bool GetVector2Attribute(const class FString& NodeAttributeKey, struct FVector2f* OutValue) const;
 	bool IsEnabled() const;
@@ -424,6 +466,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeBaseNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeBaseNode;
 
 // Class InterchangeCore.InterchangeBaseNodeContainer
 // 0x00A0 (0x00C8 - 0x0028)
@@ -435,13 +478,18 @@ public:
 
 public:
 	class FString AddNode(class UInterchangeBaseNode* Node);
+	bool ClearNodeParentUid(const class FString& NodeUniqueID);
 	void ComputeChildrenCache();
 	class UInterchangeBaseNode* GetNodeChildren(const class FString& NodeUniqueID, int32 ChildIndex);
 	void LoadFromFile(const class FString& Filename);
-	void ReplaceNode(const class FString& NodeUniqueID, class UInterchangeFactoryBaseNode* NewNode);
+	bool RemoveFactoryNode(const class FString& NodeUniqueID);
+	void RemoveNode(const class FString& NodeUniqueID);
+	bool ReplaceFactoryNode(const class FString& NodeUniqueID, class UInterchangeFactoryBaseNode* NewNode);
 	void Reset();
 	void ResetChildrenCache();
 	void SaveToFile(const class FString& Filename);
+	void SetNamespace(const class FString& Namespace, class UClass* TargetClass);
+	bool SetNodeDesiredChildIndex(const class FString& NodeUniqueID, const int32& NewNodeDesiredChildIndex);
 	bool SetNodeParentUid(const class FString& NodeUniqueID, const class FString& NewParentNodeUid);
 
 	class UInterchangeFactoryBaseNode* GetFactoryNode(const class FString& NodeUniqueID) const;
@@ -467,13 +515,16 @@ public:
 		return GetDefaultObjImpl<UInterchangeBaseNodeContainer>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeBaseNodeContainer;
 
 // Class InterchangeCore.InterchangeFactoryBaseNode
-// 0x00F0 (0x0150 - 0x0060)
+// 0x01C8 (0x0228 - 0x0060)
 class UInterchangeFactoryBaseNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_60[0xF0];                                      // 0x0060(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x148];                                     // 0x0060(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class FString>                           AttributesAppliedThroughDelegatesKeySet;           // 0x01A8(0x0050)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1F8[0x30];                                     // 0x01F8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddFactoryDependencyUid(const class FString& DependencyUid);
@@ -490,10 +541,12 @@ public:
 	bool GetCustomLevelUid(class FString* AttributeValue) const;
 	bool GetCustomReferenceObject(struct FSoftObjectPath* AttributeValue) const;
 	bool GetCustomSubPath(class FString* AttributeValue) const;
-	void GetFactoryDependencies(TArray<class FString>* OutDependencies) const;
+	TSet<class FString> GetFactoryDependencies() const;
 	int32 GetFactoryDependenciesCount() const;
 	void GetFactoryDependency(const int32 Index_0, class FString* OutDependency) const;
+	class UClass* GetObjectClass() const;
 	EReimportStrategyFlags GetReimportStrategyFlags() const;
+	bool HasFactoryDependency(const class FString& DependencyUid) const;
 	bool IsRuntimeImportAllowed() const;
 	bool ShouldForceNodeReimport() const;
 	bool ShouldSkipNodeImport() const;
@@ -512,35 +565,52 @@ public:
 		return GetDefaultObjImpl<UInterchangeFactoryBaseNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeFactoryBaseNode;
 
 // Class InterchangeCore.InterchangeSourceNode
-// 0x00F8 (0x0158 - 0x0060)
+// 0x0168 (0x01C8 - 0x0060)
 class UInterchangeSourceNode final : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_60[0xF8];                                      // 0x0060(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x168];                                     // 0x0060(0x0168)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void InitializeSourceNode(const class FString& UniqueID, const class FString& DisplayLabel);
+	static const class UInterchangeSourceNode* GetUniqueInstance(const class UInterchangeBaseNodeContainer* NodeContainer);
+
+	void InitializeSourceNode(const class FString& UniqueID, const class FString& DisplayLabel, class UInterchangeBaseNodeContainer* NodeContainer);
 	bool RemoveExtraInformation(const class FString& Name_0);
+	bool SetCustomAlignSkeletalMeshInScene(const bool& AlignSkeletalMeshInScene);
+	bool SetCustomAllowSceneRootAsJoint(const bool& bAllowSceneRootAsJoint);
 	bool SetCustomAnimatedTimeEnd(const double& AttributeValue);
 	bool SetCustomAnimatedTimeStart(const double& AttributeValue);
 	bool SetCustomAxisConversionInverseTransform(const struct FTransform& AxisConversionInverseTransform);
 	bool SetCustomImportUnusedMaterial(const bool& AttributeValue);
+	bool SetCustomNaniteTriangleThreshold(const int64& MinNumTriangles);
+	bool SetCustomReimportStrategyFlags(uint8 StrategyFlag);
+	bool SetCustomSkeletalMeshFrontAxis(uint8 AttributeValue);
 	bool SetCustomSourceFrameRateDenominator(const int32& AttributeValue);
 	bool SetCustomSourceFrameRateNumerator(const int32& AttributeValue);
 	bool SetCustomSourceTimelineEnd(const double& AttributeValue);
 	bool SetCustomSourceTimelineStart(const double& AttributeValue);
+	bool SetCustomSubPathPrefix(const class FString& Prefix);
+	bool SetCustomUseAssetTypeSubPathSuffix(const bool& Suffix);
 	bool SetExtraInformation(const class FString& Name_0, const class FString& Value);
 
+	bool GetCustomAlignSkeletalMeshInScene(bool* AlignSkeletalMeshInScene) const;
+	bool GetCustomAllowSceneRootAsJoint(bool* bAllowSceneRootAsJoint) const;
 	bool GetCustomAnimatedTimeEnd(double* AttributeValue) const;
 	bool GetCustomAnimatedTimeStart(double* AttributeValue) const;
 	bool GetCustomAxisConversionInverseTransform(struct FTransform* AxisConversionInverseTransform) const;
 	bool GetCustomImportUnusedMaterial(bool* AttributeValue) const;
+	bool GetCustomNaniteTriangleThreshold(int64* MinNumTriangles) const;
+	bool GetCustomReimportStrategyFlags(uint8* StrategyFlag) const;
+	bool GetCustomSkeletalMeshFrontAxis(uint8* AttributeValue) const;
 	bool GetCustomSourceFrameRateDenominator(int32* AttributeValue) const;
 	bool GetCustomSourceFrameRateNumerator(int32* AttributeValue) const;
 	bool GetCustomSourceTimelineEnd(double* AttributeValue) const;
 	bool GetCustomSourceTimelineStart(double* AttributeValue) const;
+	bool GetCustomSubPathPrefix(class FString* Prefix) const;
+	bool GetCustomUseAssetTypeSubPathSuffix(bool* Suffix) const;
 	void GetExtraInformation(TMap<class FString, class FString>* OutExtraInformation) const;
 
 public:
@@ -557,6 +627,7 @@ public:
 		return GetDefaultObjImpl<UInterchangeSourceNode>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeSourceNode;
 
 // Class InterchangeCore.InterchangeUserDefinedAttributesAPI
 // 0x0000 (0x0028 - 0x0028)
@@ -591,5 +662,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeUserDefinedAttributesAPI>();
 	}
 };
+DUMPER7_ASSERTS_UInterchangeUserDefinedAttributesAPI;
 
 SDK_NAMESPACE_END

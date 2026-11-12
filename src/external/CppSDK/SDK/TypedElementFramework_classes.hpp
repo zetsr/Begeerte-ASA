@@ -33,25 +33,7 @@ public:
 		return GetDefaultObjImpl<UEditorDataStorageFactory>();
 	}
 };
-
-// Class TypedElementFramework.Test_PingPongBetweenPhaseFactory
-// 0x0000 (0x0028 - 0x0028)
-class UTest_PingPongBetweenPhaseFactory final : public UEditorDataStorageFactory
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("Test_PingPongBetweenPhaseFactory")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"Test_PingPongBetweenPhaseFactory")
-	}
-	static class UTest_PingPongBetweenPhaseFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTest_PingPongBetweenPhaseFactory>();
-	}
-};
+DUMPER7_ASSERTS_UEditorDataStorageFactory;
 
 // Class TypedElementFramework.TypedElementHandleLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -77,6 +59,7 @@ public:
 		return GetDefaultObjImpl<UTypedElementHandleLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UTypedElementHandleLibrary;
 
 // Class TypedElementFramework.TypedElementListLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -91,7 +74,7 @@ public:
 	static int32 CountElements(const struct FScriptTypedElementListProxy& ElementList, const TSubclassOf<class IInterface> BaseInterfaceType);
 	static int32 CountElementsOfType(const struct FScriptTypedElementListProxy& ElementList, const class FName ElementTypeName);
 	static struct FScriptTypedElementListProxy CreateScriptElementList(class UTypedElementRegistry* Registry);
-	static void Empty(const struct FScriptTypedElementListProxy& ElementList, const int32 Slack);
+	static void empty(const struct FScriptTypedElementListProxy& ElementList, const int32 Slack);
 	static struct FScriptTypedElementHandle GetElementHandleAt(const struct FScriptTypedElementListProxy& ElementList, const int32 Index_0);
 	static TArray<struct FScriptTypedElementHandle> GetElementHandles(const struct FScriptTypedElementListProxy& ElementList, const TSubclassOf<class IInterface> BaseInterfaceType);
 	static class UObject* GetElementInterface(const struct FScriptTypedElementListProxy& ElementList, const struct FScriptTypedElementHandle& ElementHandle, const TSubclassOf<class IInterface> BaseInterfaceType);
@@ -118,11 +101,15 @@ public:
 		return GetDefaultObjImpl<UTypedElementListLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UTypedElementListLibrary;
 
 // Class TypedElementFramework.TypedElementCounterInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementCounterInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementCounterInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -146,6 +133,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementCounterInterface;
 
 // Class TypedElementFramework.TypedElementRegistry
 // 0x0920 (0x0948 - 0x0028)
@@ -173,11 +161,15 @@ public:
 		return GetDefaultObjImpl<UTypedElementRegistry>();
 	}
 };
+DUMPER7_ASSERTS_UTypedElementRegistry;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceA final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceA
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
 	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
@@ -205,11 +197,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITestTypedElementInterfaceA;
 
 // Class TypedElementFramework.TestTypedElementInterfaceB
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceB final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceB
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool MarkAsTested(const struct FScriptTypedElementHandle& InElementHandle);
 
@@ -236,11 +232,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITestTypedElementInterfaceB;
 
 // Class TypedElementFramework.TestTypedElementInterfaceC
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceC final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceC
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool GetIsTested(const struct FScriptTypedElementHandle& InElementHandle) const;
 
@@ -267,13 +267,13 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITestTypedElementInterfaceC;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplTyped
 // 0x0008 (0x0030 - 0x0028)
-class UTestTypedElementInterfaceA_ImplTyped final : public UObject
+class UTestTypedElementInterfaceA_ImplTyped final : public UObject, public ITestTypedElementInterfaceA
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -288,14 +288,18 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplTyped>();
 	}
+
+public:
+	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
+	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
 };
+DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplTyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplUntyped
 // 0x0008 (0x0030 - 0x0028)
-class UTestTypedElementInterfaceA_ImplUntyped final : public UObject
+class UTestTypedElementInterfaceA_ImplUntyped final : public UObject, public ITestTypedElementInterfaceA
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -310,14 +314,18 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplUntyped>();
 	}
+
+public:
+	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
+	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
 };
+DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplUntyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceBAndC_Typed
 // 0x0010 (0x0038 - 0x0028)
-class UTestTypedElementInterfaceBAndC_Typed final : public UObject
+class UTestTypedElementInterfaceBAndC_Typed final : public UObject, public ITestTypedElementInterfaceB, public ITestTypedElementInterfaceC
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -332,6 +340,31 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceBAndC_Typed>();
 	}
+
+public:
+	bool MarkAsTested(const struct FScriptTypedElementHandle& InElementHandle);
+	bool GetIsTested(const struct FScriptTypedElementHandle& InElementHandle) const;
 };
+DUMPER7_ASSERTS_UTestTypedElementInterfaceBAndC_Typed;
+
+// Class TypedElementFramework.Test_PingPongBetweenPhaseFactory
+// 0x0000 (0x0028 - 0x0028)
+class UTest_PingPongBetweenPhaseFactory final : public UEditorDataStorageFactory
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Test_PingPongBetweenPhaseFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Test_PingPongBetweenPhaseFactory")
+	}
+	static class UTest_PingPongBetweenPhaseFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTest_PingPongBetweenPhaseFactory>();
+	}
+};
+DUMPER7_ASSERTS_UTest_PingPongBetweenPhaseFactory;
 
 SDK_NAMESPACE_END

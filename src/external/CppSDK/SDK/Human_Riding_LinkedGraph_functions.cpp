@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHuman_Riding_LinkedGraph_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "AnimGraph", FuncInfo);
 
 	Params::Human_Riding_LinkedGraph_C_AnimGraph Parms{};
 
@@ -47,10 +45,8 @@ void UHuman_Riding_LinkedGraph_C::AnimGraph(const struct FPoseLink& InPose, stru
 
 void UHuman_Riding_LinkedGraph_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::Human_Riding_LinkedGraph_C_BlueprintUpdateAnimation Parms{};
 
@@ -65,10 +61,8 @@ void UHuman_Riding_LinkedGraph_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_2C78FEE14075AB625F75F094E27DE712()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_2C78FEE14075AB625F75F094E27DE712");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_2C78FEE14075AB625F75F094E27DE712", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +73,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_473FDBA1457952D6F1C483BD2A59F7FA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_473FDBA1457952D6F1C483BD2A59F7FA");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_473FDBA1457952D6F1C483BD2A59F7FA", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +85,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_94D7CAD14FBBFE671EB193B08354AE68()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_94D7CAD14FBBFE671EB193B08354AE68");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_94D7CAD14FBBFE671EB193B08354AE68", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +97,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_C17E8A844ECBBF9EED98BB9E0AAB67CB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_C17E8A844ECBBF9EED98BB9E0AAB67CB");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendListByBool_C17E8A844ECBBF9EED98BB9E0AAB67CB", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +109,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_88FD548B45B52E4A52E32E85E6D5FC07()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_88FD548B45B52E4A52E32E85E6D5FC07");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_88FD548B45B52E4A52E32E85E6D5FC07", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -135,10 +121,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_900301544872EC9562E6CAA0E4B0DE8F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_900301544872EC9562E6CAA0E4B0DE8F");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_900301544872EC9562E6CAA0E4B0DE8F", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -149,10 +133,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_DC7A195B4258D1747DF747A266D4C60A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_DC7A195B4258D1747DF747A266D4C60A");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_DC7A195B4258D1747DF747A266D4C60A", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -163,10 +145,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_F6C38761495CA3B7DEEF69B2C0FC5617()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_F6C38761495CA3B7DEEF69B2C0FC5617");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_Human_Riding_LinkedGraph_AnimGraphNode_BlendSpaceGraph_F6C38761495CA3B7DEEF69B2C0FC5617", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +159,8 @@ void UHuman_Riding_LinkedGraph_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Hu
 
 void UHuman_Riding_LinkedGraph_C::ExecuteUbergraph_Human_Riding_LinkedGraph(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "ExecuteUbergraph_Human_Riding_LinkedGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "ExecuteUbergraph_Human_Riding_LinkedGraph", FuncInfo);
 
 	Params::Human_Riding_LinkedGraph_C_ExecuteUbergraph_Human_Riding_LinkedGraph Parms{};
 
@@ -200,10 +178,8 @@ void UHuman_Riding_LinkedGraph_C::ExecuteUbergraph_Human_Riding_LinkedGraph(int3
 
 void UHuman_Riding_LinkedGraph_C::GetRidingLeanAmount(float DeltaTime, struct FVector2D* Output)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Human_Riding_LinkedGraph_C", "GetRidingLeanAmount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "Human_Riding_LinkedGraph_C", "GetRidingLeanAmount", FuncInfo);
 
 	Params::Human_Riding_LinkedGraph_C_GetRidingLeanAmount Parms{};
 

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UCFCoreUIWidget_MainModShop_C::ApplyThemeSettingsToAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "ApplyThemeSettingsToAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "ApplyThemeSettingsToAll", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UCFCoreUIWidget_MainModShop_C::ApplyThemeSettingsToAll()
 
 void UCFCoreUIWidget_MainModShop_C::DoExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "DoExit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "DoExit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UCFCoreUIWidget_MainModShop_C::DoExit()
 
 void UCFCoreUIWidget_MainModShop_C::EscapeClosedOverride()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "EscapeClosedOverride");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "EscapeClosedOverride", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UCFCoreUIWidget_MainModShop_C::EscapeClosedOverride()
 
 void UCFCoreUIWidget_MainModShop_C::Event_Close_Menu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "Event Close Menu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "Event Close Menu", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +71,8 @@ void UCFCoreUIWidget_MainModShop_C::Event_Close_Menu()
 
 void UCFCoreUIWidget_MainModShop_C::ExecuteUbergraph_CFCoreUIWidget_MainModShop(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "ExecuteUbergraph_CFCoreUIWidget_MainModShop");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "ExecuteUbergraph_CFCoreUIWidget_MainModShop", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_ExecuteUbergraph_CFCoreUIWidget_MainModShop Parms{};
 
@@ -99,10 +89,8 @@ void UCFCoreUIWidget_MainModShop_C::ExecuteUbergraph_CFCoreUIWidget_MainModShop(
 
 void UCFCoreUIWidget_MainModShop_C::GamepadChangeTab(bool Forward)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "GamepadChangeTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "GamepadChangeTab", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_GamepadChangeTab Parms{};
 
@@ -119,10 +107,8 @@ void UCFCoreUIWidget_MainModShop_C::GamepadChangeTab(bool Forward)
 
 void UCFCoreUIWidget_MainModShop_C::GamepadRequestChangeTab(bool Forward)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "GamepadRequestChangeTab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "GamepadRequestChangeTab", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_GamepadRequestChangeTab Parms{};
 
@@ -139,10 +125,8 @@ void UCFCoreUIWidget_MainModShop_C::GamepadRequestChangeTab(bool Forward)
 
 void UCFCoreUIWidget_MainModShop_C::GetDiscoveryRef(class UUI_CFCore_Discovery_C** DiscoveryRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "GetDiscoveryRef");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "GetDiscoveryRef", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_GetDiscoveryRef Parms{};
 
@@ -160,10 +144,8 @@ void UCFCoreUIWidget_MainModShop_C::GetDiscoveryRef(class UUI_CFCore_Discovery_C
 
 void UCFCoreUIWidget_MainModShop_C::GetDiscoveryScrollBox(class UScrollBox** NewParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "GetDiscoveryScrollBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "GetDiscoveryScrollBox", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_GetDiscoveryScrollBox Parms{};
 
@@ -181,10 +163,8 @@ void UCFCoreUIWidget_MainModShop_C::GetDiscoveryScrollBox(class UScrollBox** New
 
 class UScrollBox* UCFCoreUIWidget_MainModShop_C::GetScrollBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "GetScrollBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "GetScrollBox", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_GetScrollBox Parms{};
 
@@ -201,10 +181,8 @@ class UScrollBox* UCFCoreUIWidget_MainModShop_C::GetScrollBox()
 
 void UCFCoreUIWidget_MainModShop_C::OnBackInstallingCheck(const TArray<struct FInstalledMod>& installed_mods)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "OnBackInstallingCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "OnBackInstallingCheck", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_OnBackInstallingCheck Parms{};
 
@@ -215,16 +193,14 @@ void UCFCoreUIWidget_MainModShop_C::OnBackInstallingCheck(const TArray<struct FI
 
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.OnRequestedModPage
-// (Event, Public, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int64                                   ForModID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UCFCoreUIWidget_MainModShop_C::OnRequestedModPage(int64 ForModID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "OnRequestedModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "OnRequestedModPage", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_OnRequestedModPage Parms{};
 
@@ -239,10 +215,8 @@ void UCFCoreUIWidget_MainModShop_C::OnRequestedModPage(int64 ForModID)
 
 void UCFCoreUIWidget_MainModShop_C::OpenPendingModPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "OpenPendingModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "OpenPendingModPage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -255,10 +229,8 @@ void UCFCoreUIWidget_MainModShop_C::OpenPendingModPage()
 
 void UCFCoreUIWidget_MainModShop_C::RequestModPage(int64 modId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "RequestModPage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "RequestModPage", FuncInfo);
 
 	Params::CFCoreUIWidget_MainModShop_C_RequestModPage Parms{};
 
@@ -273,10 +245,8 @@ void UCFCoreUIWidget_MainModShop_C::RequestModPage(int64 modId)
 
 void UCFCoreUIWidget_MainModShop_C::WaitDeeplinkToSpotlight()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CFCoreUIWidget_MainModShop_C", "WaitDeeplinkToSpotlight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CFCoreUIWidget_MainModShop_C", "WaitDeeplinkToSpotlight", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

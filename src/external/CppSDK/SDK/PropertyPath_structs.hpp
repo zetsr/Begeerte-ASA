@@ -35,6 +35,7 @@ public:
 	class UStruct*                                Struct;                                            // 0x0010(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPropertyPathSegment;
 
 // ScriptStruct PropertyPath.CachedPropertyPath
 // 0x0038 (0x0038 - 0x0000)
@@ -46,6 +47,7 @@ public:
 	class UFunction*                              CachedFunction;                                    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_20[0x18];                                      // 0x0020(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCachedPropertyPath;
 
 // ScriptStruct PropertyPath.PropertyPathTestBaseStruct
 // 0x0008 (0x0008 - 0x0000)
@@ -54,6 +56,7 @@ struct alignas(0x08) FPropertyPathTestBaseStruct
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FPropertyPathTestBaseStruct;
 
 // ScriptStruct PropertyPath.PropertyPathTestInnerStruct
 // 0x0020 (0x0028 - 0x0008)
@@ -70,6 +73,7 @@ public:
 	int32                                         Integer;                                           // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 String;                                            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPropertyPathTestInnerStruct;
 
 // ScriptStruct PropertyPath.PropertyPathTestStruct
 // 0x0058 (0x0060 - 0x0008)
@@ -90,6 +94,7 @@ public:
 	struct FPropertyPathTestInnerStruct           InnerStruct;                                       // 0x0030(0x0028)(NativeAccessSpecifierPublic)
 	class UPropertyPathTestObject*                InnerObject;                                       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
+DUMPER7_ASSERTS_FPropertyPathTestStruct;
 
 // ScriptStruct PropertyPath.PropertyPathTestBed
 // 0x00D0 (0x00D0 - 0x0000)
@@ -101,5 +106,6 @@ public:
 	struct FPropertyPathTestStruct                ModifiedStruct;                                    // 0x0010(0x0060)(NativeAccessSpecifierPublic)
 	struct FPropertyPathTestStruct                DefaultStruct;                                     // 0x0070(0x0060)(NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPropertyPathTestBed;
 
 SDK_NAMESPACE_END

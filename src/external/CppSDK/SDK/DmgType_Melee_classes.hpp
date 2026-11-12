@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_Melee_C;
 
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ThemeCustomizer_C::AddToHistory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "AddToHistory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "AddToHistory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_ThemeCustomizer_C::AddToHistory()
 
 void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Reset_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Reset_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Reset_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Reset_K2Nod
 
 void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Revert_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Revert_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Revert_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Revert_K2No
 
 void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Save_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Save_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "BndEvt__UI_ThemeCustomizer_Button_Save_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +69,8 @@ void UUI_CFCore_ThemeCustomizer_C::BndEvt__UI_ThemeCustomizer_Button_Save_K2Node
 
 void UUI_CFCore_ThemeCustomizer_C::CheckIfHistoryDirty()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "CheckIfHistoryDirty");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "CheckIfHistoryDirty", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +81,8 @@ void UUI_CFCore_ThemeCustomizer_C::CheckIfHistoryDirty()
 
 void UUI_CFCore_ThemeCustomizer_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +95,8 @@ void UUI_CFCore_ThemeCustomizer_C::Construct()
 
 void UUI_CFCore_ThemeCustomizer_C::ExecuteUbergraph_UI_CFCore_ThemeCustomizer(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "ExecuteUbergraph_UI_CFCore_ThemeCustomizer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "ExecuteUbergraph_UI_CFCore_ThemeCustomizer", FuncInfo);
 
 	Params::UI_CFCore_ThemeCustomizer_C_ExecuteUbergraph_UI_CFCore_ThemeCustomizer Parms{};
 
@@ -125,10 +111,8 @@ void UUI_CFCore_ThemeCustomizer_C::ExecuteUbergraph_UI_CFCore_ThemeCustomizer(in
 
 void UUI_CFCore_ThemeCustomizer_C::ForwardHistoryAStep()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "ForwardHistoryAStep");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "ForwardHistoryAStep", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +125,8 @@ void UUI_CFCore_ThemeCustomizer_C::ForwardHistoryAStep()
 
 class FString UUI_CFCore_ThemeCustomizer_C::GetThemeSaveDirectory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "GetThemeSaveDirectory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "GetThemeSaveDirectory", FuncInfo);
 
 	Params::UI_CFCore_ThemeCustomizer_C_GetThemeSaveDirectory Parms{};
 
@@ -161,10 +143,8 @@ class FString UUI_CFCore_ThemeCustomizer_C::GetThemeSaveDirectory()
 
 void UUI_CFCore_ThemeCustomizer_C::OnColorChangedByColorPicker(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "OnColorChangedByColorPicker");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "OnColorChangedByColorPicker", FuncInfo);
 
 	Params::UI_CFCore_ThemeCustomizer_C_OnColorChangedByColorPicker Parms{};
 
@@ -179,10 +159,8 @@ void UUI_CFCore_ThemeCustomizer_C::OnColorChangedByColorPicker(const struct FLin
 
 void UUI_CFCore_ThemeCustomizer_C::OnCurrentOptionChanged()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "OnCurrentOptionChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "OnCurrentOptionChanged", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +171,8 @@ void UUI_CFCore_ThemeCustomizer_C::OnCurrentOptionChanged()
 
 void UUI_CFCore_ThemeCustomizer_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "OnInitialized");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "OnInitialized", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +187,8 @@ void UUI_CFCore_ThemeCustomizer_C::OnInitialized()
 
 struct FEventReply UUI_CFCore_ThemeCustomizer_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "OnKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "OnKeyDown", FuncInfo);
 
 	Params::UI_CFCore_ThemeCustomizer_C_OnKeyDown Parms{};
 
@@ -232,10 +206,8 @@ struct FEventReply UUI_CFCore_ThemeCustomizer_C::OnKeyDown(const struct FGeometr
 
 void UUI_CFCore_ThemeCustomizer_C::ResetHistory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "ResetHistory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "ResetHistory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -246,10 +218,8 @@ void UUI_CFCore_ThemeCustomizer_C::ResetHistory()
 
 void UUI_CFCore_ThemeCustomizer_C::RestoreToDefaults()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "RestoreToDefaults");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "RestoreToDefaults", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -260,10 +230,8 @@ void UUI_CFCore_ThemeCustomizer_C::RestoreToDefaults()
 
 void UUI_CFCore_ThemeCustomizer_C::RevertBackAStepInHistory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "RevertBackAStepInHistory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "RevertBackAStepInHistory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +242,8 @@ void UUI_CFCore_ThemeCustomizer_C::RevertBackAStepInHistory()
 
 void UUI_CFCore_ThemeCustomizer_C::SaveStep()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "SaveStep");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "SaveStep", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -288,10 +254,8 @@ void UUI_CFCore_ThemeCustomizer_C::SaveStep()
 
 void UUI_CFCore_ThemeCustomizer_C::SaveToHistory()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "SaveToHistory");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "SaveToHistory", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,10 +269,8 @@ void UUI_CFCore_ThemeCustomizer_C::SaveToHistory()
 
 void UUI_CFCore_ThemeCustomizer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_ThemeCustomizer_C_Tick Parms{};
 
@@ -324,10 +286,8 @@ void UUI_CFCore_ThemeCustomizer_C::Tick(const struct FGeometry& MyGeometry, floa
 
 void UUI_CFCore_ThemeCustomizer_C::UpdateColorPickerEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "UpdateColorPickerEnabled");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "UpdateColorPickerEnabled", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +298,8 @@ void UUI_CFCore_ThemeCustomizer_C::UpdateColorPickerEnabled()
 
 void UUI_CFCore_ThemeCustomizer_C::UpdateSliderActivated()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ThemeCustomizer_C", "UpdateSliderActivated");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ThemeCustomizer_C", "UpdateSliderActivated", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

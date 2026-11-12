@@ -21,26 +21,22 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Overlay_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Overlay_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Overlay_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_Overlay.UI_CFCore_Overlay_C.ExecuteUbergraph_UI_CFCore_Overlay
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UUI_CFCore_Overlay_C::ExecuteUbergraph_UI_CFCore_Overlay(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Overlay_C", "ExecuteUbergraph_UI_CFCore_Overlay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Overlay_C", "ExecuteUbergraph_UI_CFCore_Overlay", FuncInfo);
 
 	Params::UI_CFCore_Overlay_C_ExecuteUbergraph_UI_CFCore_Overlay Parms{};
 
@@ -58,10 +54,8 @@ void UUI_CFCore_Overlay_C::ExecuteUbergraph_UI_CFCore_Overlay(int32 EntryPoint)
 
 void UUI_CFCore_Overlay_C::PlayHover(EUMGSequencePlayMode PlayMode, double PlaybackSpeed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Overlay_C", "PlayHover");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Overlay_C", "PlayHover", FuncInfo);
 
 	Params::UI_CFCore_Overlay_C_PlayHover Parms{};
 
@@ -79,10 +73,8 @@ void UUI_CFCore_Overlay_C::PlayHover(EUMGSequencePlayMode PlayMode, double Playb
 
 void UUI_CFCore_Overlay_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Overlay_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Overlay_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_Overlay_C_PreConstruct Parms{};
 

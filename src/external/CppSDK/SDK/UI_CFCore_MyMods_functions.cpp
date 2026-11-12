@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_MyMods_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_MyMods_C::Construct()
 
 void UUI_CFCore_MyMods_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "Destruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "Destruct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_MyMods_C::Destruct()
 
 void UUI_CFCore_MyMods_C::ExecuteUbergraph_UI_CFCore_MyMods(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "ExecuteUbergraph_UI_CFCore_MyMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "ExecuteUbergraph_UI_CFCore_MyMods", FuncInfo);
 
 	Params::UI_CFCore_MyMods_C_ExecuteUbergraph_UI_CFCore_MyMods Parms{};
 
@@ -69,10 +63,8 @@ void UUI_CFCore_MyMods_C::ExecuteUbergraph_UI_CFCore_MyMods(int32 EntryPoint)
 
 void UUI_CFCore_MyMods_C::GetMods()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "GetMods");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "GetMods", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,10 +80,8 @@ void UUI_CFCore_MyMods_C::GetMods()
 
 bool UUI_CFCore_MyMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<struct FInstallProgressMod>& ModsList, const struct FCFCoreApiResponsePagination& pagination)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "OnEventBroadcasted");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "OnEventBroadcasted", FuncInfo);
 
 	Params::UI_CFCore_MyMods_C_OnEventBroadcasted Parms{};
 
@@ -110,10 +100,8 @@ bool UUI_CFCore_MyMods_C::OnEventBroadcasted(EGameModsEvent evt, const TArray<st
 
 void UUI_CFCore_MyMods_C::UpdatePagination()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_MyMods_C", "UpdatePagination");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_MyMods_C", "UpdatePagination", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

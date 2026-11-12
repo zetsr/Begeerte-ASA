@@ -26,6 +26,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementHandleLibrary_Equal;
 
 // Function TypedElementFramework.TypedElementHandleLibrary.IsSet
 // 0x0010 (0x0010 - 0x0000)
@@ -36,6 +37,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementHandleLibrary_IsSet;
 
 // Function TypedElementFramework.TypedElementHandleLibrary.NotEqual
 // 0x0018 (0x0018 - 0x0000)
@@ -47,6 +49,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementHandleLibrary_NotEqual;
 
 // Function TypedElementFramework.TypedElementHandleLibrary.Release
 // 0x0008 (0x0008 - 0x0000)
@@ -55,6 +58,7 @@ struct TypedElementHandleLibrary_Release final
 public:
 	struct FScriptTypedElementHandle              ElementHandle;                                     // 0x0000(0x0008)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementHandleLibrary_Release;
 
 // Function TypedElementFramework.TypedElementListLibrary.Add
 // 0x0020 (0x0020 - 0x0000)
@@ -66,6 +70,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Add;
 
 // Function TypedElementFramework.TypedElementListLibrary.Append
 // 0x0020 (0x0020 - 0x0000)
@@ -75,6 +80,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	TArray<struct FScriptTypedElementHandle>      ElementHandles;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Append;
 
 // Function TypedElementFramework.TypedElementListLibrary.AppendList
 // 0x0020 (0x0020 - 0x0000)
@@ -84,6 +90,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           OtherElementList;                                  // 0x0010(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_AppendList;
 
 // Function TypedElementFramework.TypedElementListLibrary.Clone
 // 0x0020 (0x0020 - 0x0000)
@@ -93,6 +100,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Clone;
 
 // Function TypedElementFramework.TypedElementListLibrary.Contains
 // 0x0020 (0x0020 - 0x0000)
@@ -104,6 +112,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Contains;
 
 // Function TypedElementFramework.TypedElementListLibrary.CountElements
 // 0x0020 (0x0020 - 0x0000)
@@ -115,6 +124,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_CountElements;
 
 // Function TypedElementFramework.TypedElementListLibrary.CountElementsOfType
 // 0x0020 (0x0020 - 0x0000)
@@ -126,6 +136,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_CountElementsOfType;
 
 // Function TypedElementFramework.TypedElementListLibrary.CreateScriptElementList
 // 0x0018 (0x0018 - 0x0000)
@@ -135,16 +146,18 @@ public:
 	class UTypedElementRegistry*                  Registry;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_CreateScriptElementList;
 
-// Function TypedElementFramework.TypedElementListLibrary.Empty
+// Function TypedElementFramework.TypedElementListLibrary.empty
 // 0x0018 (0x0018 - 0x0000)
-struct TypedElementListLibrary_Empty final
+struct TypedElementListLibrary_empty final
 {
 public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Slack;                                             // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_empty;
 
 // Function TypedElementFramework.TypedElementListLibrary.GetElementHandleAt
 // 0x0020 (0x0020 - 0x0000)
@@ -156,6 +169,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_GetElementHandleAt;
 
 // Function TypedElementFramework.TypedElementListLibrary.GetElementHandles
 // 0x0028 (0x0028 - 0x0000)
@@ -166,6 +180,7 @@ public:
 	TSubclassOf<class IInterface>                 BaseInterfaceType;                                 // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FScriptTypedElementHandle>      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_GetElementHandles;
 
 // Function TypedElementFramework.TypedElementListLibrary.GetElementInterface
 // 0x0028 (0x0028 - 0x0000)
@@ -177,6 +192,7 @@ public:
 	TSubclassOf<class IInterface>                 BaseInterfaceType;                                 // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_GetElementInterface;
 
 // Function TypedElementFramework.TypedElementListLibrary.HasElements
 // 0x0020 (0x0020 - 0x0000)
@@ -188,6 +204,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_HasElements;
 
 // Function TypedElementFramework.TypedElementListLibrary.HasElementsOfType
 // 0x0020 (0x0020 - 0x0000)
@@ -199,6 +216,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_HasElementsOfType;
 
 // Function TypedElementFramework.TypedElementListLibrary.IsValidIndex
 // 0x0018 (0x0018 - 0x0000)
@@ -210,6 +228,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_IsValidIndex;
 
 // Function TypedElementFramework.TypedElementListLibrary.Num
 // 0x0018 (0x0018 - 0x0000)
@@ -220,6 +239,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Num;
 
 // Function TypedElementFramework.TypedElementListLibrary.Remove
 // 0x0020 (0x0020 - 0x0000)
@@ -231,6 +251,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Remove;
 
 // Function TypedElementFramework.TypedElementListLibrary.Reserve
 // 0x0018 (0x0018 - 0x0000)
@@ -241,6 +262,7 @@ public:
 	int32                                         Size;                                              // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Reserve;
 
 // Function TypedElementFramework.TypedElementListLibrary.Reset
 // 0x0010 (0x0010 - 0x0000)
@@ -249,6 +271,7 @@ struct TypedElementListLibrary_Reset final
 public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Reset;
 
 // Function TypedElementFramework.TypedElementListLibrary.Shrink
 // 0x0010 (0x0010 - 0x0000)
@@ -257,6 +280,7 @@ struct TypedElementListLibrary_Shrink final
 public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementListLibrary_Shrink;
 
 // Function TypedElementFramework.TypedElementRegistry.GetInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -265,6 +289,7 @@ struct TypedElementRegistry_GetInstance final
 public:
 	class UTypedElementRegistry*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementRegistry_GetInstance;
 
 // Function TypedElementFramework.TypedElementRegistry.GetElementInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -275,6 +300,7 @@ public:
 	TSubclassOf<class IInterface>                 InBaseInterfaceType;                               // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TypedElementRegistry_GetElementInterface;
 
 // Function TypedElementFramework.TestTypedElementInterfaceA.GetDisplayName
 // 0x0018 (0x0018 - 0x0000)
@@ -284,6 +310,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TestTypedElementInterfaceA_GetDisplayName;
 
 // Function TypedElementFramework.TestTypedElementInterfaceA.SetDisplayName
 // 0x0020 (0x0020 - 0x0000)
@@ -296,6 +323,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TestTypedElementInterfaceA_SetDisplayName;
 
 // Function TypedElementFramework.TestTypedElementInterfaceB.MarkAsTested
 // 0x0010 (0x0010 - 0x0000)
@@ -306,6 +334,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TestTypedElementInterfaceB_MarkAsTested;
 
 // Function TypedElementFramework.TestTypedElementInterfaceC.GetIsTested
 // 0x0010 (0x0010 - 0x0000)
@@ -316,6 +345,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TestTypedElementInterfaceC_GetIsTested;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

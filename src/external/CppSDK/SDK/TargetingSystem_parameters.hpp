@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "TargetingSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "TargetingSystem_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -30,6 +30,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAbilityTask_PerformTargeting*          ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AbilityTask_PerformTargeting_PerformFilteringRequest;
 
 // Function TargetingSystem.AbilityTask_PerformTargeting.PerformTargetingRequest
 // 0x0020 (0x0020 - 0x0000)
@@ -42,6 +43,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAbilityTask_PerformTargeting*          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AbilityTask_PerformTargeting_PerformTargetingRequest;
 
 // Function TargetingSystem.AsyncAction_PerformTargeting.PerformFilteringRequest
 // 0x0030 (0x0030 - 0x0000)
@@ -55,6 +57,7 @@ public:
 	TArray<class AActor*>                         InTargets;                                         // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UAsyncAction_PerformTargeting*          ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AsyncAction_PerformTargeting_PerformFilteringRequest;
 
 // Function TargetingSystem.AsyncAction_PerformTargeting.PerformTargetingRequest
 // 0x0020 (0x0020 - 0x0000)
@@ -67,6 +70,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAsyncAction_PerformTargeting*          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_AsyncAction_PerformTargeting_PerformTargetingRequest;
 
 // Function TargetingSystem.AsyncAction_PerformTargeting.GetTargetingHandle
 // 0x0004 (0x0004 - 0x0000)
@@ -75,191 +79,7 @@ struct AsyncAction_PerformTargeting_GetTargetingHandle final
 public:
 	struct FTargetingRequestHandle                ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-
-// Function TargetingSystem.TargetingTask.GetTargetingSubsystem
-// 0x0010 (0x0010 - 0x0000)
-struct TargetingTask_GetTargetingSubsystem final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTargetingSubsystem*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.SimpleTargetingFilterTask.BP_ShouldFilterTarget
-// 0x0120 (0x0120 - 0x0000)
-struct SimpleTargetingFilterTask_BP_ShouldFilterTarget final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTargetingDefaultResultData            TargetData;                                        // 0x0008(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function TargetingSystem.SimpleTargetingSelectionTask.AddHitResult
-// 0x0118 (0x0118 - 0x0000)
-struct SimpleTargetingSelectionTask_AddHitResult final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             HitResult;                                         // 0x0008(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0110(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function TargetingSystem.SimpleTargetingSelectionTask.AddTargetActor
-// 0x0018 (0x0018 - 0x0000)
-struct SimpleTargetingSelectionTask_AddTargetActor final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function TargetingSystem.SimpleTargetingSelectionTask.SelectTargets
-// 0x0040 (0x0040 - 0x0000)
-struct SimpleTargetingSelectionTask_SelectTargets final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTargetingSourceContext                SourceContext;                                     // 0x0008(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.SimpleTargetingSortTask.BP_GetScoreForTarget
-// 0x0120 (0x0120 - 0x0000)
-struct SimpleTargetingSortTask_BP_GetScoreForTarget final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTargetingDefaultResultData            TargetData;                                        // 0x0008(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0118(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_AOE_GetSourceLocation final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceOffset
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_AOE_GetSourceOffset final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceRotation
-// 0x0030 (0x0030 - 0x0000)
-struct TargetingSelectionTask_AOE_GetSourceRotation final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetAdditionalActorsToIgnore
-// 0x0018 (0x0018 - 0x0000)
-struct TargetingSelectionTask_Trace_GetAdditionalActorsToIgnore final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         OutAdditionalActorsToIgnore;                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSourceLocation
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSourceLocation final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSourceOffset
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSourceOffset final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceBoxHalfExtents
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSweptTraceBoxHalfExtents final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceCapsuleHalfHeight
-// 0x0008 (0x0008 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSweptTraceCapsuleHalfHeight final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceRadius
-// 0x0008 (0x0008 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSweptTraceRadius final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceRotation
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_Trace_GetSweptTraceRotation final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetTraceDirection
-// 0x0020 (0x0020 - 0x0000)
-struct TargetingSelectionTask_Trace_GetTraceDirection final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function TargetingSystem.TargetingSelectionTask_Trace.GetTraceLength
-// 0x0008 (0x0008 - 0x0000)
-struct TargetingSelectionTask_Trace_GetTraceLength final
-{
-public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_AsyncAction_PerformTargeting_GetTargetingHandle;
 
 // Function TargetingSystem.TargetingSubsystem.OverrideCollisionQueryTaskData
 // 0x0018 (0x0018 - 0x0000)
@@ -270,6 +90,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCollisionQueryTaskData                CollisionQueryDataOverride;                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_OverrideCollisionQueryTaskData;
 
 // Function TargetingSystem.TargetingSubsystem.ExecuteTargetingRequest
 // 0x0050 (0x0050 - 0x0000)
@@ -280,6 +101,7 @@ public:
 	struct FTargetingSourceContext                InSourceContext;                                   // 0x0008(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	TDelegate<void(const struct FTargetingRequestHandle& TargetingRequestHandle)> CompletionDynamicDelegate; // 0x0040(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_ExecuteTargetingRequest;
 
 // Function TargetingSystem.TargetingSubsystem.RemoveAsyncTargetingRequestWithHandle
 // 0x0004 (0x0004 - 0x0000)
@@ -288,6 +110,7 @@ struct TargetingSubsystem_RemoveAsyncTargetingRequestWithHandle final
 public:
 	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_RemoveAsyncTargetingRequestWithHandle;
 
 // Function TargetingSystem.TargetingSubsystem.StartAsyncTargetingRequest
 // 0x0058 (0x0058 - 0x0000)
@@ -300,6 +123,7 @@ public:
 	struct FTargetingRequestHandle                ReturnValue;                                       // 0x0050(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_TargetingSubsystem_StartAsyncTargetingRequest;
 
 // Function TargetingSystem.TargetingSubsystem.GetTargetingResults
 // 0x0018 (0x0018 - 0x0000)
@@ -310,6 +134,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FHitResult>                     OutTargets;                                        // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_GetTargetingResults;
 
 // Function TargetingSystem.TargetingSubsystem.GetTargetingResultsActors
 // 0x0018 (0x0018 - 0x0000)
@@ -320,6 +145,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Targets;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_GetTargetingResultsActors;
 
 // Function TargetingSystem.TargetingSubsystem.GetTargetingSourceContext
 // 0x0040 (0x0040 - 0x0000)
@@ -330,6 +156,221 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTargetingSourceContext                ReturnValue;                                       // 0x0008(0x0038)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_TargetingSubsystem_GetTargetingSourceContext;
+
+// Function TargetingSystem.TargetingTask.GetTargetingSubsystem
+// 0x0010 (0x0010 - 0x0000)
+struct TargetingTask_GetTargetingSubsystem final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTargetingSubsystem*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingTask_GetTargetingSubsystem;
+
+// Function TargetingSystem.SimpleTargetingFilterTask.BP_ShouldFilterTarget
+// 0x0120 (0x0120 - 0x0000)
+struct SimpleTargetingFilterTask_BP_ShouldFilterTarget final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTargetingDefaultResultData            TargetData;                                        // 0x0008(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SimpleTargetingFilterTask_BP_ShouldFilterTarget;
+
+// Function TargetingSystem.SimpleTargetingSelectionTask.AddHitResult
+// 0x0118 (0x0118 - 0x0000)
+struct SimpleTargetingSelectionTask_AddHitResult final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitResult;                                         // 0x0008(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0110(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SimpleTargetingSelectionTask_AddHitResult;
+
+// Function TargetingSystem.SimpleTargetingSelectionTask.AddTargetActor
+// 0x0018 (0x0018 - 0x0000)
+struct SimpleTargetingSelectionTask_AddTargetActor final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SimpleTargetingSelectionTask_AddTargetActor;
+
+// Function TargetingSystem.SimpleTargetingSelectionTask.SelectTargets
+// 0x0040 (0x0040 - 0x0000)
+struct SimpleTargetingSelectionTask_SelectTargets final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTargetingSourceContext                SourceContext;                                     // 0x0008(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SimpleTargetingSelectionTask_SelectTargets;
+
+// Function TargetingSystem.SimpleTargetingSortTask.BP_GetScoreForTarget
+// 0x0120 (0x0120 - 0x0000)
+struct SimpleTargetingSortTask_BP_GetScoreForTarget final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTargetingDefaultResultData            TargetData;                                        // 0x0008(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0118(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SimpleTargetingSortTask_BP_GetScoreForTarget;
+
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_AOE_GetSourceLocation final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_AOE_GetSourceLocation;
+
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceOffset
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_AOE_GetSourceOffset final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_AOE_GetSourceOffset;
+
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceRotation
+// 0x0030 (0x0030 - 0x0000)
+struct TargetingSelectionTask_AOE_GetSourceRotation final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_AOE_GetSourceRotation;
+
+// Function TargetingSystem.TargetingSelectionTask_AOE.GetSourceRotationOffset
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_AOE_GetSourceRotationOffset final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_AOE_GetSourceRotationOffset;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetAdditionalActorsToIgnore
+// 0x0018 (0x0018 - 0x0000)
+struct TargetingSelectionTask_Trace_GetAdditionalActorsToIgnore final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         OutAdditionalActorsToIgnore;                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetAdditionalActorsToIgnore;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSourceLocation
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSourceLocation final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSourceLocation;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSourceOffset
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSourceOffset final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSourceOffset;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceBoxHalfExtents
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSweptTraceBoxHalfExtents final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSweptTraceBoxHalfExtents;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceCapsuleHalfHeight
+// 0x0008 (0x0008 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSweptTraceCapsuleHalfHeight final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSweptTraceCapsuleHalfHeight;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceRadius
+// 0x0008 (0x0008 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSweptTraceRadius final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSweptTraceRadius;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetSweptTraceRotation
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_Trace_GetSweptTraceRotation final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetSweptTraceRotation;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetTraceDirection
+// 0x0020 (0x0020 - 0x0000)
+struct TargetingSelectionTask_Trace_GetTraceDirection final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetTraceDirection;
+
+// Function TargetingSystem.TargetingSelectionTask_Trace.GetTraceLength
+// 0x0008 (0x0008 - 0x0000)
+struct TargetingSelectionTask_Trace_GetTraceLength final
+{
+public:
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TargetingSelectionTask_Trace_GetTraceLength;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

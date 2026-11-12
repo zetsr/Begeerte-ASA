@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_CactusSap_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_CactusSap_C;
 
 SDK_NAMESPACE_END

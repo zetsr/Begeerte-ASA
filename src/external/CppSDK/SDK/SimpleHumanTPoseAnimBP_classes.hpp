@@ -10,42 +10,41 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "ShooterGame_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ShooterGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass SimpleHumanTPoseAnimBP.SimpleHumanTPoseAnimBP_C
-// 0x0370 (0x0740 - 0x03D0)
+// 0x0360 (0x0710 - 0x03B0)
 class USimpleHumanTPoseAnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03D8(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E0(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03E8(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x0408(0x0048)()
-	struct FAnimNode_ApplyBoneMods                AnimGraphNode_ApplyBoneMods;                       // 0x0450(0x00D0)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0520(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x0540(0x0048)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0588(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x05A8(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x05F0(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0638(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0680(0x0048)()
-	struct FRotator                               RootRotOffset;                                     // 0x06C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                RootLocOffset;                                     // 0x06E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AimOffsetAlpha;                                    // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              NewEventDispatcher;                                // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FRotator                               RootRotOffset_Interpolated;                        // 0x0710(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UAnimSequenceBase*                      Sequence;                                          // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	float                                         Start_Position;                                    // 0x0730(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ResetAnimSwitch;                                   // 0x0734(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x03B0(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03B8(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03C0(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x03E0(0x0048)()
+	struct FAnimNode_ApplyBoneMods                AnimGraphNode_ApplyBoneMods;                       // 0x0428(0x00D0)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x04F8(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x0518(0x0048)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0560(0x0020)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x0580(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x05C8(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0610(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0658(0x0048)()
+	struct FRotator                               RootRotOffset;                                     // 0x06A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                RootLocOffset;                                     // 0x06B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AimOffsetAlpha;                                    // 0x06D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              NewEventDispatcher;                                // 0x06D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FRotator                               RootRotOffset_Interpolated;                        // 0x06E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UAnimSequenceBase*                      Sequence;                                          // 0x0700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                         Start_Position;                                    // 0x0708(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ResetAnimSwitch;                                   // 0x070C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -67,5 +66,6 @@ public:
 		return GetDefaultObjImpl<USimpleHumanTPoseAnimBP_C>();
 	}
 };
+DUMPER7_ASSERTS_USimpleHumanTPoseAnimBP_C;
 
 SDK_NAMESPACE_END

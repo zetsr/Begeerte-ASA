@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Niagara_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
 #include "MovieScene_structs.hpp"
 
@@ -50,6 +50,7 @@ public:
 	ENiagaraSimCacheSectionStretchMode            SectionStretchMode;                                // 0x0084(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMovieSceneNiagaraCacheParams;
 
 // ScriptStruct NiagaraSimCaching.MovieSceneNiagaraSectionTemplateParameter
 // 0x0098 (0x0098 - 0x0000)
@@ -59,6 +60,7 @@ public:
 	struct FMovieSceneFrameRange                  SectionRange;                                      // 0x0000(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FMovieSceneNiagaraCacheParams          Params;                                            // 0x0010(0x0088)(NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMovieSceneNiagaraSectionTemplateParameter;
 
 // ScriptStruct NiagaraSimCaching.MovieSceneNiagaraCacheSectionTemplate
 // 0x0010 (0x0020 - 0x0010)
@@ -67,5 +69,6 @@ struct FMovieSceneNiagaraCacheSectionTemplate final : public FMovieSceneTrackImp
 public:
 	TArray<struct FMovieSceneNiagaraSectionTemplateParameter> CacheSections;                         // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
+DUMPER7_ASSERTS_FMovieSceneNiagaraCacheSectionTemplate;
 
 SDK_NAMESPACE_END

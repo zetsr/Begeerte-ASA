@@ -35,12 +35,13 @@ enum class EMediaPlayerOptionSeekTimeType : uint8
 };
 
 // Enum MediaUtils.EMediaPlayerOptionTrackSelectMode
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EMediaPlayerOptionTrackSelectMode : uint8
 {
 	UseMediaPlayerDefaults                   = 0,
 	UseTrackOptionIndices                    = 1,
-	EMediaPlayerOptionTrackSelectMode_MAX    = 2,
+	UseLanguageCodes                         = 2,
+	EMediaPlayerOptionTrackSelectMode_MAX    = 3,
 };
 
 // ScriptStruct MediaUtils.MediaPlayerTrackOptions
@@ -56,20 +57,36 @@ public:
 	int32                                         Text;                                              // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Video;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMediaPlayerTrackOptions;
+
+// ScriptStruct MediaUtils.MediaPlayerInitialTrackLanguageSelection
+// 0x0040 (0x0040 - 0x0000)
+struct FMediaPlayerInitialTrackLanguageSelection final
+{
+public:
+	class FString                                 Video;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Audio;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 subTitle;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 caption;                                           // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMediaPlayerInitialTrackLanguageSelection;
 
 // ScriptStruct MediaUtils.MediaPlayerOptions
-// 0x0080 (0x0080 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct FMediaPlayerOptions final
 {
 public:
 	struct FMediaPlayerTrackOptions               Tracks;                                            // 0x0000(0x001C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	EMediaPlayerOptionTrackSelectMode             TrackSelection;                                    // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              SeekTime;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaPlayerOptionSeekTimeType                SeekTimeType;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaPlayerOptionBooleanOverride             PlayOnOpen;                                        // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaPlayerOptionBooleanOverride             Loop;                                              // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B[0x55];                                      // 0x002B(0x0055)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMediaPlayerInitialTrackLanguageSelection TracksByLanguage;                               // 0x0020(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EMediaPlayerOptionTrackSelectMode             TrackSelection;                                    // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              SeekTime;                                          // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaPlayerOptionSeekTimeType                SeekTimeType;                                      // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaPlayerOptionBooleanOverride             PlayOnOpen;                                        // 0x0071(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaPlayerOptionBooleanOverride             Loop;                                              // 0x0072(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_73[0x55];                                      // 0x0073(0x0055)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FMediaPlayerOptions;
 
 SDK_NAMESPACE_END

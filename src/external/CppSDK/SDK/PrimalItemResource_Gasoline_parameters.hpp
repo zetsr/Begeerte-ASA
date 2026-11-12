@@ -25,6 +25,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckForGasolineData_SupportsDragOn;      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemResource_Gasoline_C_BPSupportUseOntoItem;
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.BPUsedOntoItem
 // 0x0010 (0x0010 - 0x0000)
@@ -34,6 +35,7 @@ public:
 	class UPrimalItem*                            DestinationItem;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         AdditionalData;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemResource_Gasoline_C_BPUsedOntoItem;
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.CheckForGasolineData
 // 0x00D0 (0x00D0 - 0x0000)
@@ -56,6 +58,7 @@ public:
 	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_PrimalItemResource_Gasoline_C_CheckForGasolineData;
 
 // Function PrimalItemResource_Gasoline.PrimalItemResource_Gasoline_C.RefillGasoline
 // 0x01D8 (0x01D8 - 0x0000)
@@ -80,6 +83,7 @@ public:
 	TArray<double>                                K2Node_VariableSet_CustomFloats_Loc_ImplicitCast;  // 0x01B8(0x0010)(ReferenceParm)
 	TArray<float>                                 K2Node_MakeStruct_CustomDataFloats_ImplicitCast;   // 0x01C8(0x0010)(ReferenceParm)
 };
+DUMPER7_ASSERTS_PrimalItemResource_Gasoline_C_RefillGasoline;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

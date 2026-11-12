@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_RocketHomingMissile_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemAmmo_RocketHomingMissile_C;
 
 SDK_NAMESPACE_END

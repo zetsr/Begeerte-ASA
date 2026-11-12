@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemWeaponGenericNoStats_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemWeaponGenericNoStats_C;
 
 SDK_NAMESPACE_END

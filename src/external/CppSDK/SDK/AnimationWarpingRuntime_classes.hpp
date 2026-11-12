@@ -20,8 +20,12 @@ SDK_NAMESPACE_START
 class UAnimationWarpingLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ApplyDeltaToOffsetRootBone(const struct FOffsetRootBoneAnimNodeReference& OffsetRootBoneNode, const struct FVector& TranslationWorld, const struct FQuat& RotationWorld);
+	static void ConvertToOffsetRootBoneNodePure(const struct FAnimNodeReference& Node, struct FOffsetRootBoneAnimNodeReference* OffsetRootBoneNode, bool* Result);
 	static bool GetCurveValueFromAnimation(const class UAnimSequenceBase* Animation, class FName CurveName, float Time, float* OutValue);
+	static bool GetFloatValueFromCurve(const class UCurveFloat* InCurve, float Time, float* OutValue);
 	static struct FTransform GetOffsetRootTransform(const struct FAnimNodeReference& Node);
+	static bool GetVectorValueFromCurve(const class UCurveVector* InCurve, float Time, struct FVector* OutValue);
 
 public:
 	static class UClass* StaticClass()
@@ -37,5 +41,6 @@ public:
 		return GetDefaultObjImpl<UAnimationWarpingLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UAnimationWarpingLibrary;
 
 SDK_NAMESPACE_END

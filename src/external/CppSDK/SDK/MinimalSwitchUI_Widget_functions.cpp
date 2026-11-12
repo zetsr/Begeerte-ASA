@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UMinimalSwitchUI_Widget_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSwitchUI_Widget_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MinimalSwitchUI_Widget_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UMinimalSwitchUI_Widget_C::Construct()
 
 void UMinimalSwitchUI_Widget_C::ExecuteUbergraph_MinimalSwitchUI_Widget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSwitchUI_Widget_C", "ExecuteUbergraph_MinimalSwitchUI_Widget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MinimalSwitchUI_Widget_C", "ExecuteUbergraph_MinimalSwitchUI_Widget", FuncInfo);
 
 	Params::MinimalSwitchUI_Widget_C_ExecuteUbergraph_MinimalSwitchUI_Widget Parms{};
 
@@ -55,10 +51,8 @@ void UMinimalSwitchUI_Widget_C::ExecuteUbergraph_MinimalSwitchUI_Widget(int32 En
 
 void UMinimalSwitchUI_Widget_C::FixConsoleIcons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSwitchUI_Widget_C", "FixConsoleIcons");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MinimalSwitchUI_Widget_C", "FixConsoleIcons", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +66,8 @@ void UMinimalSwitchUI_Widget_C::FixConsoleIcons()
 
 void UMinimalSwitchUI_Widget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSwitchUI_Widget_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MinimalSwitchUI_Widget_C", "Tick", FuncInfo);
 
 	Params::MinimalSwitchUI_Widget_C_Tick Parms{};
 
@@ -91,10 +83,8 @@ void UMinimalSwitchUI_Widget_C::Tick(const struct FGeometry& MyGeometry, float I
 
 void UMinimalSwitchUI_Widget_C::UpdateTooltipMoreInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSwitchUI_Widget_C", "UpdateTooltipMoreInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MinimalSwitchUI_Widget_C", "UpdateTooltipMoreInfo", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

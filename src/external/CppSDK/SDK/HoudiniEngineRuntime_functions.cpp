@@ -674,7 +674,7 @@ void UHoudiniStaticMesh::SetVertexPosition(uint32 InVertexIndex, const struct FV
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.CalcBounds
 // (Final, Native, Public, HasDefaults, Const)
 // Parameters:
-// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 struct FBox UHoudiniStaticMesh::CalcBounds() const
 {

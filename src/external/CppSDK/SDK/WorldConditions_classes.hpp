@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "WorldConditions_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,5 +37,6 @@ public:
 		return GetDefaultObjImpl<UWorldConditionSchema>();
 	}
 };
+DUMPER7_ASSERTS_UWorldConditionSchema;
 
 SDK_NAMESPACE_END

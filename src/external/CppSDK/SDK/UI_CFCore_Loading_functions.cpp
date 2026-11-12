@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Loading_C::BndEvt__UI_CFCore_Loading_UI_Button_CFCore_Global_BackLoading_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "BndEvt__UI_CFCore_Loading_UI_Button_CFCore_Global_BackLoading_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "BndEvt__UI_CFCore_Loading_UI_Button_CFCore_Global_BackLoading_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Loading_C::BndEvt__UI_CFCore_Loading_UI_Button_CFCore_Global_Bac
 
 void UUI_CFCore_Loading_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,10 +47,8 @@ void UUI_CFCore_Loading_C::Construct()
 
 void UUI_CFCore_Loading_C::ExecuteUbergraph_UI_CFCore_Loading(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "ExecuteUbergraph_UI_CFCore_Loading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "ExecuteUbergraph_UI_CFCore_Loading", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_ExecuteUbergraph_UI_CFCore_Loading Parms{};
 
@@ -69,10 +63,8 @@ void UUI_CFCore_Loading_C::ExecuteUbergraph_UI_CFCore_Loading(int32 EntryPoint)
 
 void UUI_CFCore_Loading_C::FadeOutLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "FadeOutLoading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "FadeOutLoading", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +77,8 @@ void UUI_CFCore_Loading_C::FadeOutLoading()
 
 ENUM_CFCore_LoadingProgress UUI_CFCore_Loading_C::GetNextSafePhase()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "GetNextSafePhase");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "GetNextSafePhase", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_GetNextSafePhase Parms{};
 
@@ -106,10 +96,8 @@ ENUM_CFCore_LoadingProgress UUI_CFCore_Loading_C::GetNextSafePhase()
 
 double UUI_CFCore_Loading_C::GetPhaseValues(ENUM_CFCore_LoadingProgress Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "GetPhaseValues");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "GetPhaseValues", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_GetPhaseValues Parms{};
 
@@ -128,10 +116,8 @@ double UUI_CFCore_Loading_C::GetPhaseValues(ENUM_CFCore_LoadingProgress Index_0)
 
 void UUI_CFCore_Loading_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_GetRootCFWidget Parms{};
 
@@ -147,10 +133,8 @@ void UUI_CFCore_Loading_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 
 void UUI_CFCore_Loading_C::ResetLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "ResetLoading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "ResetLoading", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +145,8 @@ void UUI_CFCore_Loading_C::ResetLoading()
 
 void UUI_CFCore_Loading_C::RestartLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "RestartLoading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "RestartLoading", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +159,8 @@ void UUI_CFCore_Loading_C::RestartLoading()
 
 void UUI_CFCore_Loading_C::SetLoadingStage(ENUM_CFCore_LoadingProgress Loading_Stage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "SetLoadingStage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "SetLoadingStage", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_SetLoadingStage Parms{};
 
@@ -198,10 +178,8 @@ void UUI_CFCore_Loading_C::SetLoadingStage(ENUM_CFCore_LoadingProgress Loading_S
 
 void UUI_CFCore_Loading_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Loading_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Loading_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_Loading_C_Tick Parms{};
 

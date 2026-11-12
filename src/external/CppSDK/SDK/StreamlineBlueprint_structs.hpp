@@ -14,15 +14,14 @@
 SDK_NAMESPACE_START
 
 // Enum StreamlineBlueprint.EStreamlineFeature
-// NumValues: 0x0006
+// NumValues: 0x0005
 enum class EStreamlineFeature : uint8
 {
 	DLSSG                                    = 0,
-	Latewarp                                 = 1,
-	Reflex                                   = 2,
-	DeepDVC                                  = 3,
-	Count                                    = 4,
-	EStreamlineFeature_MAX                   = 5,
+	Reflex                                   = 1,
+	DeepDVC                                  = 2,
+	Count                                    = 3,
+	EStreamlineFeature_MAX                   = 4,
 };
 
 // Enum StreamlineBlueprint.EStreamlineFeatureSupport
@@ -63,6 +62,7 @@ public:
 	int32                                         Minor;                                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Build;                                             // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStreamlineVersion;
 
 // ScriptStruct StreamlineBlueprint.StreamlineFeatureRequirements
 // 0x0034 (0x0034 - 0x0000)
@@ -77,5 +77,6 @@ public:
 	struct FStreamlineVersion                     RequiredDriverVersion;                             // 0x001C(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FStreamlineVersion                     DetectedDriverVersion;                             // 0x0028(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStreamlineFeatureRequirements;
 
 SDK_NAMESPACE_END

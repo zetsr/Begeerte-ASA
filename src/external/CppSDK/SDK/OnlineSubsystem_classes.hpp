@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "OnlineSubsystem_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -39,11 +39,15 @@ public:
 		return GetDefaultObjImpl<UNamedInterfaces>();
 	}
 };
+DUMPER7_ASSERTS_UNamedInterfaces;
 
 // Class OnlineSubsystem.TurnBasedMatchInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITurnBasedMatchInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITurnBasedMatchInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void OnMatchEnded(const class FString& Match);
 	void OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive);
@@ -71,5 +75,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITurnBasedMatchInterface;
 
 SDK_NAMESPACE_END

@@ -10,83 +10,73 @@
 
 #include "Basic.hpp"
 
-#include "GameAnalytics_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GameAnalytics_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // Class GameAnalytics.GameAnalytics
-// 0x0000 (0x0028 - 0x0028)
+// 0x0010 (0x0038 - 0x0028)
 class UGameAnalytics final : public UObject
 {
 public:
-	static void AddAdEvent(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement);
-	static void AddAdEventWithDuration(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration);
-	static void AddAdEventWithDurationAndFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddAdEventWithDurationAndMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddAdEventWithFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddAdEventWithMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddAdEventWithNoAdReason(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason);
-	static void AddAdEventWithNoAdReasonAndFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddAdEventWithNoAdReasonAndMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEvent(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType);
-	static void AddBusinessEventAndAutoFetchReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType);
-	static void AddBusinessEventAndAutoFetchReceiptWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventAndAutoFetchReceiptWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventAndroid(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature);
-	static void AddBusinessEventAndroidWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventAndroidWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventIOS(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt);
-	static void AddBusinessEventIOSWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventIOSWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddBusinessEventWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddDesignEvent(const class FString& EventId);
-	static void AddDesignEventWithFields(const class FString& EventId, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddDesignEventWithMergeFields(const class FString& EventId, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddDesignEventWithValue(const class FString& EventId, float Value);
-	static void AddDesignEventWithValueAndFields(const class FString& EventId, float Value, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddDesignEventWithValueAndMergeFields(const class FString& EventId, float Value, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddErrorEvent(EGAErrorSeverity Severity, const class FString& Message);
-	static void AddErrorEventWithFields(EGAErrorSeverity Severity, const class FString& Message, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddErrorEventWithMergeFields(EGAErrorSeverity Severity, const class FString& Message, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOne(EGAProgressionStatus ProgressionStatus, const class FString& Progression01);
-	static void AddProgressionEventWithOneAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score);
-	static void AddProgressionEventWithOneAndTwo(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02);
-	static void AddProgressionEventWithOneScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score);
-	static void AddProgressionEventWithOneTwoAndThree(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03);
-	static void AddProgressionEventWithOneTwoScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoThreeAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoThreeAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoThreeAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score);
-	static void AddProgressionEventWithOneTwoThreeScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddProgressionEventWithOneTwoThreeScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddResourceEvent(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID);
-	static void AddResourceEventWithFields(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void AddResourceEventWithMergeFields(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields);
-	static void DisableAdvertisingId(bool Value);
-	static void EnableFpsHistogram(bool Value);
-	static void EnableHealthHardwareInfo(bool Value);
-	static void EnableMemoryHistogram(bool Value);
-	static void EnableSDKInitEvent(bool Value);
-	static class FString GetABTestingId();
-	static class FString GetABTestingVariantId();
-	static class FString GetRemoteConfigsContentAsString();
-	static class FString GetRemoteConfigsValueAsString(const class FString& Key);
-	static class FString GetRemoteConfigsValueAsStringWithDefaultValue(const class FString& Key, const class FString& DefaultValue);
-	static bool IsRemoteConfigsReady();
-	static void OnQuit();
-	static void SetCustomDimension01(const class FString& CustomDimension);
-	static void SetCustomDimension02(const class FString& CustomDimension);
-	static void SetCustomDimension03(const class FString& CustomDimension);
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UGameAnalytics* GetInstance();
+
+	void AddAdEvent(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddAdEventWithDuration(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, int64 Duration, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddAdEventWithReason(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, EGAAdError Reason, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddBusinessEvent(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddBusinessEventAndAutoFetchReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddBusinessEventWithReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Store, const class FString& Signature, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddDesignEvent(const class FString& EventId, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddDesignEventWithValue(const class FString& EventId, float Value, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddErrorEvent(EGAErrorSeverity Severity, const class FString& Message, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddProgressionEvent(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddProgressionEventWithScore(EGAProgressionStatus ProgressionStatus, int32 score, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void AddResourceEvent(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const struct FGACustomFields& CustomFields, bool MergeFields);
+	void ConfigureAutoDetectAppVersion(bool Flag);
+	void ConfigureAvailableCustomDimensions01(const TArray<class FString>& List);
+	void ConfigureAvailableCustomDimensions02(const TArray<class FString>& List);
+	void ConfigureAvailableCustomDimensions03(const TArray<class FString>& List);
+	void ConfigureAvailableResourceCurrencies(const TArray<class FString>& List);
+	void ConfigureAvailableResourceItemTypes(const TArray<class FString>& List);
+	void ConfigureBuild(const class FString& Build);
+	void ConfigureExternalUserId(const class FString& UserId);
+	void ConfigureGameEngineVersion(const class FString& GameEngineVersion);
+	void ConfigureSdkGameEngineVersion(const class FString& GameEngineSdkVersion);
+	void ConfigureUserId(const class FString& UserId);
+	void DisableDeviceInfo();
+	void EnableAdvertisingId(bool Value);
+	void EnableFpsHistogram(bool Value);
+	void EnableHealthHardwareInfo(bool Value);
+	void EnableMemoryHistogram(bool Value);
+	void EnableSDKInitEvent(bool Value);
+	void EndSession();
+	class FString GetABTestingId();
+	class FString GetABTestingVariantId();
+	int64 GetElapsedSessionTime();
+	int64 GetElapsedTimeFromAllSessions();
+	class FString GetExternalUserId();
+	class FString GetRemoteConfigsContentAsString();
+	class FString GetRemoteConfigsValueAsString(const class FString& Key, const class FString& DefaultValue);
+	class FString GetUserId();
+	void Initialize(const class FString& GameKey, const class FString& GameSecret);
+	bool IsRemoteConfigsReady();
+	void OnQuit();
+	void SetCustomDimension01(const class FString& CustomDimension);
+	void SetCustomDimension02(const class FString& CustomDimension);
+	void SetCustomDimension03(const class FString& CustomDimension);
+	void SetEnabledErrorReporting(bool Flag);
+	void SetEnabledEventSubmission(bool Flag);
+	void SetEnabledInfoLog(bool Flag);
+	void SetEnabledManualSessionHandling(bool Flag);
+	void SetEnabledVerboseLog(bool Flag);
+	void SetWritablePath(const class FString& Path);
+	void StartSession();
 
 public:
 	static class UClass* StaticClass()
@@ -102,5 +92,29 @@ public:
 		return GetDefaultObjImpl<UGameAnalytics>();
 	}
 };
+DUMPER7_ASSERTS_UGameAnalytics;
+
+// Class GameAnalytics.GameAnalyticsPerformance
+// 0x0020 (0x0048 - 0x0028)
+class UGameAnalyticsPerformance final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameAnalyticsPerformance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameAnalyticsPerformance")
+	}
+	static class UGameAnalyticsPerformance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameAnalyticsPerformance>();
+	}
+};
+DUMPER7_ASSERTS_UGameAnalyticsPerformance;
 
 SDK_NAMESPACE_END

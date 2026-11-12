@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "cfcore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "cfcore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -86,6 +86,7 @@ public:
 	struct FLinearColor                           NotificationBackground;                            // 0x00EC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FCFCoreThemeRowData;
 
 // ScriptStruct cfcore_ui.ModIdentification
 // 0x0010 (0x0010 - 0x0000)
@@ -95,6 +96,7 @@ public:
 	int64                                         ID;                                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int64                                         mainFileId;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FModIdentification;
 
 // ScriptStruct cfcore_ui.ScreenshotInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -104,6 +106,7 @@ public:
 	TArray<class UTexture2DDynamic*>              screenshots;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         Descriptions;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FScreenshotInfo;
 
 // ScriptStruct cfcore_ui.InstallProgressMod
 // 0x0610 (0x0610 - 0x0000)
@@ -111,7 +114,7 @@ struct FInstallProgressMod final
 {
 public:
 	struct FInstalledMod                          mod;                                               // 0x0000(0x0538)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FLibraryProgress                       progress;                                          // 0x0538(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FLibraryProgress                       Progress;                                          // 0x0538(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_578[0x1];                                      // 0x0578(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	EInstallStatus                                installStatus;                                     // 0x0579(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_57A[0x6];                                      // 0x057A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -121,5 +124,6 @@ public:
 	TArray<struct FCategory>                      Categories;                                        // 0x05F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UWidget*                                ModSlotRef;                                        // 0x0608(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FInstallProgressMod;
 
 SDK_NAMESPACE_END

@@ -69,6 +69,7 @@ public:
 	TArray<class FString>                         Warnings;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         Errors;                                            // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FGLTFExportMessages;
 
 // ScriptStruct GLTFExporter.GLTFMaterialBakeSize
 // 0x000C (0x000C - 0x0000)
@@ -80,6 +81,7 @@ public:
 	bool                                          bAutoDetect;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FGLTFMaterialBakeSize;
 
 // ScriptStruct GLTFExporter.GLTFOverrideMaterialBakeSettings
 // 0x0014 (0x0014 - 0x0000)
@@ -94,5 +96,6 @@ public:
 	bool                                          bOverrideTiling;                                   // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureAddress                               Tiling;                                            // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FGLTFOverrideMaterialBakeSettings;
 
 SDK_NAMESPACE_END

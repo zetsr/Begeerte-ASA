@@ -20,6 +20,284 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToInstance
+// 0x0018 (0x0018 - 0x0000)
+struct SmartObjectSubsystem_AddTagToInstance final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_AddTagToInstance;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToSlot
+// 0x001C (0x001C - 0x0000)
+struct SmartObjectSubsystem_AddTagToSlot final
+{
+public:
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0014(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_AddTagToSlot;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinition
+// 0x0038 (0x0038 - 0x0000)
+struct SmartObjectSubsystem_GetBehaviorDefinition final
+{
+public:
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0030(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetBehaviorDefinition;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinitionByRequestResult
+// 0x0038 (0x0038 - 0x0000)
+struct SmartObjectSubsystem_GetBehaviorDefinitionByRequestResult final
+{
+public:
+	struct FSmartObjectRequestResult              RequestResult;                                     // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0030(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetBehaviorDefinitionByRequestResult;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.Release
+// 0x002C (0x002C - 0x0000)
+struct SmartObjectSubsystem_Release final
+{
+public:
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_Release;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromInstance
+// 0x0018 (0x0018 - 0x0000)
+struct SmartObjectSubsystem_RemoveTagFromInstance final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_RemoveTagFromInstance;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromSlot
+// 0x0020 (0x0020 - 0x0000)
+struct SmartObjectSubsystem_RemoveTagFromSlot final
+{
+public:
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0014(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_RemoveTagFromSlot;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabled
+// 0x0014 (0x0014 - 0x0000)
+struct SmartObjectSubsystem_SetEnabled final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_SetEnabled;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabledForReason
+// 0x001C (0x001C - 0x0000)
+struct SmartObjectSubsystem_SetEnabledForReason final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           ReasonTag;                                         // 0x0010(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_SetEnabledForReason;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.SetSlotEnabled
+// 0x0018 (0x0018 - 0x0000)
+struct SmartObjectSubsystem_SetSlotEnabled final
+{
+public:
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0014(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_SetSlotEnabled;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObject
+// 0x0130 (0x0130 - 0x0000)
+struct SmartObjectSubsystem_FindSmartObject final
+{
+public:
+	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0100)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x0100(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectRequestResult              ReturnValue;                                       // 0x0108(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_FindSmartObject;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects
+// 0x0120 (0x0120 - 0x0000)
+struct SmartObjectSubsystem_FindSmartObjects final
+{
+public:
+	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0100)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x0100(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x0110(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_FindSmartObjects;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects_BP
+// 0x0120 (0x0120 - 0x0000)
+struct SmartObjectSubsystem_FindSmartObjects_BP final
+{
+public:
+	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0100)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x0100(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x0110(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_FindSmartObjects_BP;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetAllSlots
+// 0x0020 (0x0020 - 0x0000)
+struct SmartObjectSubsystem_GetAllSlots final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectSlotHandle>         OutSlots;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetAllSlots;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetInstanceTags
+// 0x0030 (0x0030 - 0x0000)
+struct SmartObjectSubsystem_GetInstanceTags final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetInstanceTags;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotLocation
+// 0x0048 (0x0048 - 0x0000)
+struct SmartObjectSubsystem_GetSlotLocation final
+{
+public:
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                OutSlotLocation;                                   // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSlotLocation;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotState
+// 0x0018 (0x0018 - 0x0000)
+struct SmartObjectSubsystem_GetSlotState final
+{
+public:
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESmartObjectSlotState                         ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSlotState;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTags
+// 0x0038 (0x0038 - 0x0000)
+struct SmartObjectSubsystem_GetSlotTags final
+{
+public:
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0018(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSlotTags;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransform
+// 0x00A0 (0x00A0 - 0x0000)
+struct SmartObjectSubsystem_GetSlotTransform final
+{
+public:
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutSlotTransform;                                  // 0x0030(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSlotTransform;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransformFromRequestResult
+// 0x00A0 (0x00A0 - 0x0000)
+struct SmartObjectSubsystem_GetSlotTransformFromRequestResult final
+{
+public:
+	struct FSmartObjectRequestResult              RequestResult;                                     // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutSlotTransform;                                  // 0x0030(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSlotTransformFromRequestResult;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponent
+// 0x0038 (0x0038 - 0x0000)
+struct SmartObjectSubsystem_GetSmartObjectComponent final
+{
+public:
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	ETrySpawnActorIfDehydrated                    TrySpawnActorIfDehydrated;                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USmartObjectComponent*                  ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSmartObjectComponent;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponentByRequestResult
+// 0x0030 (0x0030 - 0x0000)
+struct SmartObjectSubsystem_GetSmartObjectComponentByRequestResult final
+{
+public:
+	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	ETrySpawnActorIfDehydrated                    TrySpawnActorIfDehydrated;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USmartObjectComponent*                  ReturnValue;                                       // 0x0028(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_GetSmartObjectComponentByRequestResult;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabled
+// 0x0014 (0x0014 - 0x0000)
+struct SmartObjectSubsystem_IsEnabled final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_IsEnabled;
+
+// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabledForReason
+// 0x001C (0x001C - 0x0000)
+struct SmartObjectSubsystem_IsEnabledForReason final
+{
+public:
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           ReasonTag;                                         // 0x0010(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectSubsystem_IsEnabledForReason;
+
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddMultipleSmartObjects
 // 0x0018 (0x0018 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_AddMultipleSmartObjects final
@@ -29,6 +307,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_AddMultipleSmartObjects;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddOrRemoveMultipleSmartObjects
 // 0x0018 (0x0018 - 0x0000)
@@ -40,6 +319,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_AddOrRemoveMultipleSmartObjects;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddOrRemoveSmartObject
 // 0x0010 (0x0010 - 0x0000)
@@ -51,6 +331,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_AddOrRemoveSmartObject;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddSmartObject
 // 0x0010 (0x0010 - 0x0000)
@@ -61,15 +342,17 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_AddSmartObject;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectClaimHandleToString
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectClaimHandleToString final
 {
 public:
-	struct FSmartObjectClaimHandle                Result;                                            // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                Result;                                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectClaimHandleToString;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectDefinitionToString
 // 0x0018 (0x0018 - 0x0000)
@@ -79,219 +362,297 @@ public:
 	const class USmartObjectDefinition*           Definition;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectDefinitionToString;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectHandleToString
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectHandleToString final
 {
 public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectHandleToString;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectRequestResultToString
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectRequestResultToString final
 {
 public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectRequestResultToString;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Conv_SmartObjectSlotHandleToString
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectSlotHandleToString final
 {
 public:
-	struct FSmartObjectSlotHandle                 Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotHandle                 Handle;                                            // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectSlotHandleToString;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Equal_SmartObjectHandleSmartObjectHandle
-// 0x0018 (0x0018 - 0x0000)
+// 0x0024 (0x0024 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Equal_SmartObjectHandleSmartObjectHandle final
 {
 public:
-	struct FSmartObjectHandle                     A;                                                 // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectHandle                     B;                                                 // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectHandle                     A;                                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectHandle                     B;                                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Equal_SmartObjectHandleSmartObjectHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.Equal_SmartObjectSlotHandleSmartObjectSlotHandle
-// 0x0028 (0x0028 - 0x0000)
+// 0x002C (0x002C - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_Equal_SmartObjectSlotHandleSmartObjectSlotHandle final
 {
 public:
-	struct FSmartObjectSlotHandle                 A;                                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectSlotHandle                 B;                                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectSlotHandle                 A;                                                 // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotHandle                 B;                                                 // 0x0014(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Equal_SmartObjectSlotHandleSmartObjectSlotHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInActor
-// 0x0100 (0x0100 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInActor final
 {
 public:
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0000(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class AActor*                                 SearchActor;                                       // 0x00D0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00D8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x00E8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0xF];                                       // 0x00F1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0000(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class AActor*                                 SearchActor;                                       // 0x00C0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00C8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x00D8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInActor;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInComponent
-// 0x0100 (0x0100 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInComponent final
 {
 public:
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0000(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class USmartObjectComponent*                  SmartObjectComponent;                              // 0x00D0(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00D8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x00E8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0xF];                                       // 0x00F1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0000(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class USmartObjectComponent*                  SmartObjectComponent;                              // 0x00C0(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00C8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x00D8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInComponent;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInList
-// 0x0110 (0x0110 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInList final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0010(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ActorList;                                         // 0x00E0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00F0(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x0100(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0108(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0010(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ActorList;                                         // 0x00D0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00E0(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x00F0(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInList;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.FindSmartObjectsInTargetingRequest
-// 0x0110 (0x0110 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInTargetingRequest final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0010(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x00E0(0x0004)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00E8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x00F8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0100(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0xF];                                      // 0x0101(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0010(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x00D0(0x0004)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x00D8(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	const class AActor*                           UserActor;                                         // 0x00E8(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_FindSmartObjectsInTargetingRequest;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetBlackboardValueAsSOClaimHandle
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_GetBlackboardValueAsSOClaimHandle final
 {
 public:
 	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0030(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetBlackboardValueAsSOClaimHandle;
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetNumSlotEntrances
+// 0x0010 (0x0010 - 0x0000)
+struct SmartObjectBlueprintFunctionLibrary_GetNumSlotEntrances final
+{
+public:
+	const class USmartObjectDefinition*           Definition;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetNumSlotEntrances;
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotDefinitionDataByType
+// 0x0028 (0x0028 - 0x0000)
+struct SmartObjectBlueprintFunctionLibrary_GetSlotDefinitionDataByType final
+{
+public:
+	const class USmartObjectDefinition*           Definition;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 OutDefinitionData;                                 // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetSlotDefinitionDataByType;
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotEntranceOffsetAndRotation
+// 0x0048 (0x0048 - 0x0000)
+struct SmartObjectBlueprintFunctionLibrary_GetSlotEntranceOffsetAndRotation final
+{
+public:
+	const class USmartObjectDefinition*           Definition;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntranceIndex;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutOffset;                                         // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               OutRotation;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetSlotEntranceOffsetAndRotation;
+
+// Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetSlotEntranceTransform
+// 0x0080 (0x0080 - 0x0000)
+struct SmartObjectBlueprintFunctionLibrary_GetSlotEntranceTransform final
+{
+public:
+	const class USmartObjectDefinition*           Definition;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntranceIndex;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetSlotEntranceTransform;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.GetValueAsSOClaimHandle
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_GetValueAsSOClaimHandle final
 {
 public:
 	class UBlackboardComponent*                   BlackboardComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   KeyName;                                           // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_GetValueAsSOClaimHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.IsValidSmartObjectClaimHandle
-// 0x0028 (0x0028 - 0x0000)
+// 0x002C (0x002C - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectClaimHandle final
 {
 public:
-	struct FSmartObjectClaimHandle                Handle;                                            // 0x0000(0x0020)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectClaimHandle                Handle;                                            // 0x0000(0x0028)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectClaimHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.IsValidSmartObjectHandle
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectHandle final
 {
 public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.IsValidSmartObjectSlotHandle
 // 0x0018 (0x0018 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectSlotHandle final
 {
 public:
-	struct FSmartObjectSlotHandle                 Handle;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectSlotHandle                 Handle;                                            // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_IsValidSmartObjectSlotHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsClaimed
-// 0x0048 (0x0048 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsClaimed final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0008(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0028(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0008(0x0014)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class AActor*                           UserActor;                                         // 0x0020(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsClaimed;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsFree
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsFree final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0008(0x0020)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0008(0x0028)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsFree;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.MarkSmartObjectSlotAsOccupied
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsOccupied final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0008(0x0020)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0030(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0008(0x0028)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0038(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_MarkSmartObjectSlotAsOccupied;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.NotEqual_SmartObjectHandleSmartObjectHandle
-// 0x0018 (0x0018 - 0x0000)
+// 0x0024 (0x0024 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_NotEqual_SmartObjectHandleSmartObjectHandle final
 {
 public:
-	struct FSmartObjectHandle                     A;                                                 // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectHandle                     B;                                                 // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectHandle                     A;                                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectHandle                     B;                                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_NotEqual_SmartObjectHandleSmartObjectHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle
-// 0x0028 (0x0028 - 0x0000)
+// 0x002C (0x002C - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle final
 {
 public:
-	struct FSmartObjectSlotHandle                 A;                                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectSlotHandle                 B;                                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectSlotHandle                 A;                                                 // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotHandle                 B;                                                 // 0x0014(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_NotEqual_SmartObjectSlotHandleSmartObjectSlotHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.RemoveMultipleSmartObjects
 // 0x0018 (0x0018 - 0x0000)
@@ -302,6 +663,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_RemoveMultipleSmartObjects;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.RemoveSmartObject
 // 0x0010 (0x0010 - 0x0000)
@@ -312,16 +674,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_RemoveSmartObject;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetBlackboardValueAsSOClaimHandle
-// 0x0050 (0x0050 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_SetBlackboardValueAsSOClaimHandle final
 {
 public:
 	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                Value;                                             // 0x0030(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                Value;                                             // 0x0030(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SetBlackboardValueAsSOClaimHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetMultipleSmartObjectsEnabled
 // 0x0018 (0x0018 - 0x0000)
@@ -333,6 +697,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SetMultipleSmartObjectsEnabled;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetSmartObjectEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -344,33 +709,37 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SetSmartObjectEnabled;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SetValueAsSOClaimHandle
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_SetValueAsSOClaimHandle final
 {
 public:
 	class UBlackboardComponent*                   BlackboardComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   KeyName;                                           // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectClaimHandle                Value;                                             // 0x0010(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                Value;                                             // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SetValueAsSOClaimHandle;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.SmartObjectClaimHandle_Invalid
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct SmartObjectBlueprintFunctionLibrary_SmartObjectClaimHandle_Invalid final
 {
 public:
-	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SmartObjectClaimHandle_Invalid;
 
 // Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct SmartObjectComponent_ReceiveOnEvent final
 {
 public:
-	struct FSmartObjectEventData                  EventData;                                         // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	const class AActor*                           Interactor;                                        // 0x0038(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectEventData                  EventData;                                         // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	const class AActor*                           Interactor;                                        // 0x0040(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_ReceiveOnEvent;
 
 // Function SmartObjectsModule.SmartObjectComponent.SetDefinition
 // 0x0008 (0x0008 - 0x0000)
@@ -379,6 +748,7 @@ struct SmartObjectComponent_SetDefinition final
 public:
 	class USmartObjectDefinition*                 DefinitionAsset;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_SetDefinition;
 
 // Function SmartObjectsModule.SmartObjectComponent.GetDefinition
 // 0x0008 (0x0008 - 0x0000)
@@ -387,6 +757,7 @@ struct SmartObjectComponent_GetDefinition final
 public:
 	const class USmartObjectDefinition*           ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_GetDefinition;
 
 // Function SmartObjectsModule.SmartObjectComponent.IsBoundToSimulation
 // 0x0001 (0x0001 - 0x0000)
@@ -395,6 +766,7 @@ struct SmartObjectComponent_IsBoundToSimulation final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_IsBoundToSimulation;
 
 // Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -403,6 +775,7 @@ struct SmartObjectComponent_IsSmartObjectEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabled;
 
 // Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
 // 0x000C (0x000C - 0x0000)
@@ -413,6 +786,29 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabledForReason;
+
+// Function SmartObjectsModule.SmartObjectComponent.K2_SetSmartObjectEnabled
+// 0x0002 (0x0002 - 0x0000)
+struct SmartObjectComponent_K2_SetSmartObjectEnabled final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_K2_SetSmartObjectEnabled;
+
+// Function SmartObjectsModule.SmartObjectComponent.K2_SetSmartObjectEnabledForReason
+// 0x000C (0x000C - 0x0000)
+struct SmartObjectComponent_K2_SetSmartObjectEnabledForReason final
+{
+public:
+	struct FGameplayTag                           ReasonTag;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectComponent_K2_SetSmartObjectEnabledForReason;
 
 // Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -422,6 +818,7 @@ public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabled;
 
 // Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
 // 0x000C (0x000C - 0x0000)
@@ -433,16 +830,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabledForReason;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetMutableSlot
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct SmartObjectDefinition_GetMutableSlot final
 {
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectSlotDefinition             ReturnValue;                                       // 0x0008(0x00E0)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FSmartObjectSlotDefinition             ReturnValue;                                       // 0x0008(0x00F0)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetMutableSlot;
 
 // Function SmartObjectsModule.SmartObjectDefinition.SetUserTagFilter
 // 0x0048 (0x0048 - 0x0000)
@@ -451,6 +850,7 @@ struct SmartObjectDefinition_SetUserTagFilter final
 public:
 	struct FGameplayTagQuery                      InUserTagFilter;                                   // 0x0000(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_SetUserTagFilter;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetActivityTags
 // 0x0020 (0x0020 - 0x0000)
@@ -459,14 +859,16 @@ struct SmartObjectDefinition_GetActivityTags final
 public:
 	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetActivityTags;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetBounds
 // 0x0038 (0x0038 - 0x0000)
 struct SmartObjectDefinition_GetBounds final
 {
 public:
-	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetBounds;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetSlotActivityTags
 // 0x0028 (0x0028 - 0x0000)
@@ -477,6 +879,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  OutActivityTags;                                   // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetSlotActivityTags;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetSlotWorldTransform
 // 0x00D0 (0x00D0 - 0x0000)
@@ -488,6 +891,7 @@ public:
 	struct FTransform                             OwnerTransform;                                    // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             ReturnValue;                                       // 0x0070(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetSlotWorldTransform;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetUserTagFilter
 // 0x0048 (0x0048 - 0x0000)
@@ -496,6 +900,7 @@ struct SmartObjectDefinition_GetUserTagFilter final
 public:
 	struct FGameplayTagQuery                      ReturnValue;                                       // 0x0000(0x0048)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetUserTagFilter;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetUserTagsFilteringPolicy
 // 0x0001 (0x0001 - 0x0000)
@@ -504,6 +909,7 @@ struct SmartObjectDefinition_GetUserTagsFilteringPolicy final
 public:
 	ESmartObjectTagFilteringPolicy                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_GetUserTagsFilteringPolicy;
 
 // Function SmartObjectsModule.SmartObjectDefinition.IsValidSlotIndex
 // 0x0008 (0x0008 - 0x0000)
@@ -514,6 +920,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_SmartObjectDefinition_IsValidSlotIndex;
 
 // Function SmartObjectsModule.SmartObjectDefinition.K2_GetSlots
 // 0x0010 (0x0010 - 0x0000)
@@ -522,256 +929,7 @@ struct SmartObjectDefinition_K2_GetSlots final
 public:
 	TArray<struct FSmartObjectSlotDefinition>     ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-
-// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToInstance
-// 0x0010 (0x0010 - 0x0000)
-struct SmartObjectSubsystem_AddTagToInstance final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.AddTagToSlot
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_AddTagToSlot final
-{
-public:
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinition
-// 0x0030 (0x0030 - 0x0000)
-struct SmartObjectSubsystem_GetBehaviorDefinition final
-{
-public:
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0028(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetBehaviorDefinitionByRequestResult
-// 0x0028 (0x0028 - 0x0000)
-struct SmartObjectSubsystem_GetBehaviorDefinitionByRequestResult final
-{
-public:
-	struct FSmartObjectRequestResult              RequestResult;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	TSubclassOf<class USmartObjectBehaviorDefinition> DefinitionClass;                               // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class USmartObjectBehaviorDefinition*   ReturnValue;                                       // 0x0020(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.Release
-// 0x0028 (0x0028 - 0x0000)
-struct SmartObjectSubsystem_Release final
-{
-public:
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromInstance
-// 0x0010 (0x0010 - 0x0000)
-struct SmartObjectSubsystem_RemoveTagFromInstance final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.RemoveTagFromSlot
-// 0x0020 (0x0020 - 0x0000)
-struct SmartObjectSubsystem_RemoveTagFromSlot final
-{
-public:
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabled
-// 0x0010 (0x0010 - 0x0000)
-struct SmartObjectSubsystem_SetEnabled final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetEnabledForReason
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_SetEnabledForReason final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           ReasonTag;                                         // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.SetSlotEnabled
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_SetSlotEnabled final
-{
-public:
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObject
-// 0x0130 (0x0130 - 0x0000)
-struct SmartObjectSubsystem_FindSmartObject final
-{
-public:
-	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x0110(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSmartObjectRequestResult              ReturnValue;                                       // 0x0118(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects
-// 0x0130 (0x0130 - 0x0000)
-struct SmartObjectSubsystem_FindSmartObjects final
-{
-public:
-	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x0110(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x0120(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0128(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.FindSmartObjects_BP
-// 0x0130 (0x0130 - 0x0000)
-struct SmartObjectSubsystem_FindSmartObjects_BP final
-{
-public:
-	struct FSmartObjectRequest                    Request;                                           // 0x0000(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectRequestResult>      OutResults;                                        // 0x0110(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	const class AActor*                           UserActor;                                         // 0x0120(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0128(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetAllSlots
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_GetAllSlots final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FSmartObjectSlotHandle>         OutSlots;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetInstanceTags
-// 0x0028 (0x0028 - 0x0000)
-struct SmartObjectSubsystem_GetInstanceTags final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotLocation
-// 0x0040 (0x0040 - 0x0000)
-struct SmartObjectSubsystem_GetSlotLocation final
-{
-public:
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                OutSlotLocation;                                   // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotState
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_GetSlotState final
-{
-public:
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESmartObjectSlotState                         ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTags
-// 0x0030 (0x0030 - 0x0000)
-struct SmartObjectSubsystem_GetSlotTags final
-{
-public:
-	struct FSmartObjectSlotHandle                 SlotHandle;                                        // 0x0000(0x0010)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  ReturnValue;                                       // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransform
-// 0x0090 (0x0090 - 0x0000)
-struct SmartObjectSubsystem_GetSlotTransform final
-{
-public:
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             OutSlotTransform;                                  // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSlotTransformFromRequestResult
-// 0x0090 (0x0090 - 0x0000)
-struct SmartObjectSubsystem_GetSlotTransformFromRequestResult final
-{
-public:
-	struct FSmartObjectRequestResult              RequestResult;                                     // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             OutSlotTransform;                                  // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponent
-// 0x0030 (0x0030 - 0x0000)
-struct SmartObjectSubsystem_GetSmartObjectComponent final
-{
-public:
-	struct FSmartObjectClaimHandle                ClaimHandle;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	ETrySpawnActorIfDehydrated                    TrySpawnActorIfDehydrated;                         // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USmartObjectComponent*                  ReturnValue;                                       // 0x0028(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.GetSmartObjectComponentByRequestResult
-// 0x0028 (0x0028 - 0x0000)
-struct SmartObjectSubsystem_GetSmartObjectComponentByRequestResult final
-{
-public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	ETrySpawnActorIfDehydrated                    TrySpawnActorIfDehydrated;                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USmartObjectComponent*                  ReturnValue;                                       // 0x0020(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabled
-// 0x0010 (0x0010 - 0x0000)
-struct SmartObjectSubsystem_IsEnabled final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-
-// Function SmartObjectsModule.SmartObjectSubsystem.IsEnabledForReason
-// 0x0018 (0x0018 - 0x0000)
-struct SmartObjectSubsystem_IsEnabledForReason final
-{
-public:
-	struct FSmartObjectHandle                     Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           ReasonTag;                                         // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
+DUMPER7_ASSERTS_SmartObjectDefinition_K2_GetSlots;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Drill_HarvestImpactEmitter_Base.Drill_HarvestImpactEmitter_Base_C
-// 0x0008 (0x05C0 - 0x05B8)
+// 0x0008 (0x05C8 - 0x05C0)
 class ADrill_HarvestImpactEmitter_Base_C : public APrimalEmitterSpawnable
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 
 public:
 	void BPOnSetEmitterInstigatorFromSpawn(class APawn* NewInstigator);
@@ -41,5 +41,6 @@ public:
 		return GetDefaultObjImpl<ADrill_HarvestImpactEmitter_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_ADrill_HarvestImpactEmitter_Base_C;
 
 SDK_NAMESPACE_END

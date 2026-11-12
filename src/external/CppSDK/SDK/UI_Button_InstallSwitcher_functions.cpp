@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_Button_InstallSwitcher_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_Button_InstallSwitcher_C_GetRootCFWidget Parms{};
 
@@ -44,10 +42,8 @@ void UUI_Button_InstallSwitcher_C::GetRootCFWidget(class UPanelWidget** RootPane
 
 void UUI_Button_InstallSwitcher_C::UpdateButtonSwitcherStatus(const struct FInstallProgressMod& ModInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonSwitcherStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "UpdateButtonSwitcherStatus", FuncInfo);
 
 	Params::UI_Button_InstallSwitcher_C_UpdateButtonSwitcherStatus Parms{};
 
@@ -64,10 +60,8 @@ void UUI_Button_InstallSwitcher_C::UpdateButtonSwitcherStatus(const struct FInst
 
 void UUI_Button_InstallSwitcher_C::UpdateButtonCollor(ENUM_CFCore_Install ButtonStatus)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonCollor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "UpdateButtonCollor", FuncInfo);
 
 	Params::UI_Button_InstallSwitcher_C_UpdateButtonCollor Parms{};
 
@@ -82,10 +76,8 @@ void UUI_Button_InstallSwitcher_C::UpdateButtonCollor(ENUM_CFCore_Install Button
 
 void UUI_Button_InstallSwitcher_C::Update_All_Theme_Settings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "Update All Theme Settings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "Update All Theme Settings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +90,8 @@ void UUI_Button_InstallSwitcher_C::Update_All_Theme_Settings()
 
 void UUI_Button_InstallSwitcher_C::SetProgress(const struct FInstallProgressMod& InstallProgressMod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "SetProgress");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "SetProgress", FuncInfo);
 
 	Params::UI_Button_InstallSwitcher_C_SetProgress Parms{};
 
@@ -116,10 +106,8 @@ void UUI_Button_InstallSwitcher_C::SetProgress(const struct FInstallProgressMod&
 
 void UUI_Button_InstallSwitcher_C::BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -130,10 +118,8 @@ void UUI_Button_InstallSwitcher_C::BndEvt__UI_Button_InstallSwitcher_UI_Button_A
 
 void UUI_Button_InstallSwitcher_C::BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +130,8 @@ void UUI_Button_InstallSwitcher_C::BndEvt__UI_Button_InstallSwitcher_UI_Button_A
 
 void UUI_Button_InstallSwitcher_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +144,8 @@ void UUI_Button_InstallSwitcher_C::Construct()
 
 void UUI_Button_InstallSwitcher_C::ExecuteUbergraph_UI_Button_InstallSwitcher(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "ExecuteUbergraph_UI_Button_InstallSwitcher");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_Button_InstallSwitcher_C", "ExecuteUbergraph_UI_Button_InstallSwitcher", FuncInfo);
 
 	Params::UI_Button_InstallSwitcher_C_ExecuteUbergraph_UI_Button_InstallSwitcher Parms{};
 

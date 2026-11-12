@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Drill_HarvestImpactEmitter_Wood.Drill_HarvestImpactEmitter_Wood_C
-// 0x0000 (0x05C0 - 0x05C0)
+// 0x0000 (0x05C8 - 0x05C8)
 class ADrill_HarvestImpactEmitter_Wood_C final : public ADrill_HarvestImpactEmitter_Base_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<ADrill_HarvestImpactEmitter_Wood_C>();
 	}
 };
+DUMPER7_ASSERTS_ADrill_HarvestImpactEmitter_Wood_C;
 
 SDK_NAMESPACE_END

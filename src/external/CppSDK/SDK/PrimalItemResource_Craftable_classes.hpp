@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Craftable_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemResource_Craftable_C;
 
 SDK_NAMESPACE_END

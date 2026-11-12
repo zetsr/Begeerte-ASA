@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_ZoomImage_C::BindControllerAction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BindControllerAction");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BindControllerAction", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_ZoomImage_C::BindControllerAction()
 
 void UUI_CFCore_ZoomImage_C::BndEvt__UI_ZoomImage_UI_Button_Ark_Global_Back_C_0_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BndEvt__UI_ZoomImage_UI_Button_Ark_Global_Back_C_0_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BndEvt__UI_ZoomImage_UI_Button_Ark_Global_Back_C_0_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -49,10 +45,8 @@ void UUI_CFCore_ZoomImage_C::BndEvt__UI_ZoomImage_UI_Button_Ark_Global_Back_C_0_
 
 void UUI_CFCore_ZoomImage_C::BndEvt__ZoomImage_UI_NextImage_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BndEvt__ZoomImage_UI_NextImage_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BndEvt__ZoomImage_UI_NextImage_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +57,8 @@ void UUI_CFCore_ZoomImage_C::BndEvt__ZoomImage_UI_NextImage_K2Node_ComponentBoun
 
 void UUI_CFCore_ZoomImage_C::BndEvt__ZoomImage_UI_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BndEvt__ZoomImage_UI_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BndEvt__ZoomImage_UI_PrevImage_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +72,8 @@ void UUI_CFCore_ZoomImage_C::BndEvt__ZoomImage_UI_PrevImage_K2Node_ComponentBoun
 
 bool UUI_CFCore_ZoomImage_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_BPGamepadReleased Parms{};
 
@@ -102,10 +92,8 @@ bool UUI_CFCore_ZoomImage_C::BPGamepadReleased(const struct FKey& theKey)
 
 bool UUI_CFCore_ZoomImage_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_BPHighlightWidgetOnStart Parms{};
 
@@ -123,10 +111,8 @@ bool UUI_CFCore_ZoomImage_C::BPHighlightWidgetOnStart()
 
 void UUI_CFCore_ZoomImage_C::ButtonCall(const struct FKey& Key, EViewState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "ButtonCall");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "ButtonCall", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_ButtonCall Parms{};
 
@@ -142,10 +128,8 @@ void UUI_CFCore_ZoomImage_C::ButtonCall(const struct FKey& Key, EViewState State
 
 void UUI_CFCore_ZoomImage_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +142,8 @@ void UUI_CFCore_ZoomImage_C::Construct()
 
 void UUI_CFCore_ZoomImage_C::ExecuteUbergraph_UI_CFCore_ZoomImage(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "ExecuteUbergraph_UI_CFCore_ZoomImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "ExecuteUbergraph_UI_CFCore_ZoomImage", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_ExecuteUbergraph_UI_CFCore_ZoomImage Parms{};
 
@@ -176,10 +158,8 @@ void UUI_CFCore_ZoomImage_C::ExecuteUbergraph_UI_CFCore_ZoomImage(int32 EntryPoi
 
 void UUI_CFCore_ZoomImage_C::FadeOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "FadeOut");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "FadeOut", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +172,8 @@ void UUI_CFCore_ZoomImage_C::FadeOut()
 
 void UUI_CFCore_ZoomImage_C::GetRootCFWidget(class UPanelWidget** RootPanelWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "GetRootCFWidget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "GetRootCFWidget", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_GetRootCFWidget Parms{};
 
@@ -214,10 +192,8 @@ void UUI_CFCore_ZoomImage_C::GetRootCFWidget(class UPanelWidget** RootPanelWidge
 
 void UUI_CFCore_ZoomImage_C::GetScreenshotsInfo(TArray<class UTexture2DDynamic*>* screenshots, TArray<class FString>* Descriptions)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "GetScreenshotsInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "GetScreenshotsInfo", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_GetScreenshotsInfo Parms{};
 
@@ -236,10 +212,8 @@ void UUI_CFCore_ZoomImage_C::GetScreenshotsInfo(TArray<class UTexture2DDynamic*>
 
 void UUI_CFCore_ZoomImage_C::GoBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "GoBack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "GoBack", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -250,10 +224,8 @@ void UUI_CFCore_ZoomImage_C::GoBack()
 
 void UUI_CFCore_ZoomImage_C::NextImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "NextImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "NextImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -268,10 +240,8 @@ void UUI_CFCore_ZoomImage_C::NextImage()
 
 struct FEventReply UUI_CFCore_ZoomImage_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "OnKeyDown");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "OnKeyDown", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_OnKeyDown Parms{};
 
@@ -285,14 +255,12 @@ struct FEventReply UUI_CFCore_ZoomImage_C::OnKeyDown(const struct FGeometry& MyG
 
 
 // Function UI_CFCore_ZoomImage.UI_CFCore_ZoomImage_C.PlayFadeInOnBeginPlayAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ZoomImage_C::PlayFadeInOnBeginPlayAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "PlayFadeInOnBeginPlayAnim");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "PlayFadeInOnBeginPlayAnim", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -303,10 +271,8 @@ void UUI_CFCore_ZoomImage_C::PlayFadeInOnBeginPlayAnim()
 
 void UUI_CFCore_ZoomImage_C::PrevImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "PrevImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "PrevImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -317,10 +283,8 @@ void UUI_CFCore_ZoomImage_C::PrevImage()
 
 void UUI_CFCore_ZoomImage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ZoomImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ZoomImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "SequenceEvent__ENTRYPOINTUI_CFCore_ZoomImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -331,10 +295,8 @@ void UUI_CFCore_ZoomImage_C::SequenceEvent__ENTRYPOINTUI_CFCore_ZoomImage()
 
 void UUI_CFCore_ZoomImage_C::SequenceEvent_SwapImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "SequenceEvent_SwapImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "SequenceEvent_SwapImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +310,8 @@ void UUI_CFCore_ZoomImage_C::SequenceEvent_SwapImage()
 
 void UUI_CFCore_ZoomImage_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_ZoomImage_C_Tick Parms{};
 
@@ -367,10 +327,8 @@ void UUI_CFCore_ZoomImage_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 void UUI_CFCore_ZoomImage_C::UpdateAllScreenshotInformation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdateAllScreenshotInformation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdateAllScreenshotInformation", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -381,10 +339,8 @@ void UUI_CFCore_ZoomImage_C::UpdateAllScreenshotInformation()
 
 void UUI_CFCore_ZoomImage_C::UpdateButtonsStyle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdateButtonsStyle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdateButtonsStyle", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -395,10 +351,8 @@ void UUI_CFCore_ZoomImage_C::UpdateButtonsStyle()
 
 void UUI_CFCore_ZoomImage_C::UpdatePageCounter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdatePageCounter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdatePageCounter", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -409,24 +363,20 @@ void UUI_CFCore_ZoomImage_C::UpdatePageCounter()
 
 void UUI_CFCore_ZoomImage_C::UpdateScreenshotDescription()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdateScreenshotDescription");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdateScreenshotDescription", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function UI_CFCore_ZoomImage.UI_CFCore_ZoomImage_C.UpdateScreenshotImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UUI_CFCore_ZoomImage_C::UpdateScreenshotImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdateScreenshotImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdateScreenshotImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -437,10 +387,8 @@ void UUI_CFCore_ZoomImage_C::UpdateScreenshotImage()
 
 void UUI_CFCore_ZoomImage_C::UpdateToCurrentImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_ZoomImage_C", "UpdateToCurrentImage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_ZoomImage_C", "UpdateToCurrentImage", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -21,7 +21,7 @@ SDK_NAMESPACE_START
 class UForceAggro_BT_C final : public UBTDecorator_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	bool                                          BabyUnderAttack;                                   // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -42,5 +42,6 @@ public:
 		return GetDefaultObjImpl<UForceAggro_BT_C>();
 	}
 };
+DUMPER7_ASSERTS_UForceAggro_BT_C;
 
 SDK_NAMESPACE_END

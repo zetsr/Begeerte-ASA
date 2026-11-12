@@ -69,4 +69,28 @@ enum class EDLSSRRPreset : uint8
 	MAX                                      = 16,
 };
 
+// Enum DLSS.EDLSSUpscalerModularFeatureQuality
+// NumValues: 0x0009
+enum class EDLSSUpscalerModularFeatureQuality : uint8
+{
+	Auto                                     = 0,
+	UltraQuality                             = 1,
+	Quality                                  = 2,
+	Balanced                                 = 3,
+	Performance                              = 4,
+	UltraPerformance                         = 5,
+	DLAA                                     = 6,
+	Count                                    = 7,
+	EDLSSUpscalerModularFeatureQuality_MAX   = 8,
+};
+
+// ScriptStruct DLSS.DLSSUpscalerModularFeatureSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FDLSSUpscalerModularFeatureSettings final
+{
+public:
+	EDLSSUpscalerModularFeatureQuality            Quality;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDLSSUpscalerModularFeatureSettings;
+
 SDK_NAMESPACE_END

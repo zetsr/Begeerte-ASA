@@ -17,6 +17,19 @@
 
 SDK_NAMESPACE_START
 
+// Enum AnimationWarpingRuntime.EOffsetRootBoneMode
+// NumValues: 0x0007
+enum class EOffsetRootBoneMode : uint8
+{
+	Accumulate                               = 0,
+	Interpolate                              = 1,
+	LockOffsetAndConsumeAnimation            = 2,
+	LockOffsetIncreaseAndConsumeAnimation    = 3,
+	LockOffsetAndIgnoreAnimation             = 4,
+	Release                                  = 5,
+	EOffsetRootBoneMode_MAX                  = 6,
+};
+
 // Enum AnimationWarpingRuntime.EFootPlacementLockType
 // NumValues: 0x0005
 enum class EFootPlacementLockType : uint8
@@ -48,19 +61,6 @@ enum class EActorMovementCompensationMode : uint8
 	EActorMovementCompensationMode_MAX       = 3,
 };
 
-// Enum AnimationWarpingRuntime.EOffsetRootBoneMode
-// NumValues: 0x0007
-enum class EOffsetRootBoneMode : uint8
-{
-	Accumulate                               = 0,
-	Interpolate                              = 1,
-	LockOffsetAndConsumeAnimation            = 2,
-	LockOffsetIncreaseAndConsumeAnimation    = 3,
-	LockOffsetAndIgnoreAnimation             = 4,
-	Release                                  = 5,
-	EOffsetRootBoneMode_MAX                  = 6,
-};
-
 // Enum AnimationWarpingRuntime.EOffsetRootBone_CollisionTestingMode
 // NumValues: 0x0004
 enum class EOffsetRootBone_CollisionTestingMode : uint8
@@ -80,6 +80,13 @@ enum class EOrientationWarpingSpace : uint8
 	CustomTransform                          = 2,
 	EOrientationWarpingSpace_MAX             = 3,
 };
+
+// ScriptStruct AnimationWarpingRuntime.OffsetRootBoneAnimNodeReference
+// 0x0000 (0x0010 - 0x0010)
+struct FOffsetRootBoneAnimNodeReference final : public FAnimNodeReference
+{
+};
+DUMPER7_ASSERTS_FOffsetRootBoneAnimNodeReference;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementInterpolationSettings
 // 0x002C (0x002C - 0x0000)
@@ -101,6 +108,7 @@ public:
 	bool                                          bEnableSeparationInterpolation;                    // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FFootPlacementInterpolationSettings;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementTraceSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -118,6 +126,7 @@ public:
 	bool                                          bEnabled;                                          // 0x0015(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FFootPlacementTraceSettings;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementRootDefinition
 // 0x0020 (0x0020 - 0x0000)
@@ -127,6 +136,7 @@ public:
 	struct FBoneReference                         PelvisBone;                                        // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBoneReference                         IKRootBone;                                        // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FFootPlacementRootDefinition;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementPelvisSettings
 // 0x0024 (0x0024 - 0x0000)
@@ -145,6 +155,7 @@ public:
 	bool                                          bDisablePelvisOffsetInAir;                         // 0x001B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   DisablePelvisCurveName;                            // 0x001C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FFootPlacementPelvisSettings;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacemenLegDefinition
 // 0x004C (0x004C - 0x0000)
@@ -159,6 +170,7 @@ public:
 	class FName                                   DisableLockCurveName;                              // 0x003C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   DisableLegCurveName;                               // 0x0044(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FFootPlacemenLegDefinition;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementPlantSettings
 // 0x0034 (0x0034 - 0x0000)
@@ -182,6 +194,7 @@ public:
 	bool                                          bAdjustHeelBeforePlanting;                         // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FFootPlacementPlantSettings;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_FootPlacement
 // 0x03F8 (0x04C0 - 0x00C8)
@@ -200,6 +213,7 @@ public:
 	struct FVector                                BaseTranslationDelta;                              // 0x0198(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B0[0x310];                                    // 0x01B0(0x0310)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_FootPlacement;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_OffsetRootBone
 // 0x00F0 (0x0100 - 0x0010)
@@ -209,6 +223,7 @@ public:
 	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0xE0];                                      // 0x0020(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_OffsetRootBone;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_OrientationWarping
 // 0x0198 (0x0260 - 0x00C8)
@@ -245,6 +260,7 @@ public:
 	struct FTransform                             WarpingSpaceTransform;                             // 0x0170(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D0[0x90];                                     // 0x01D0(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_OrientationWarping;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_OverrideRootMotion
 // 0x0020 (0x0030 - 0x0010)
@@ -254,6 +270,7 @@ public:
 	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_OverrideRootMotion;
 
 // ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootDefinition
 // 0x0028 (0x0028 - 0x0000)
@@ -265,6 +282,7 @@ public:
 	int32                                         NumBonesInLimb;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FootSize;                                          // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSlopeWarpingFootDefinition;
 
 // ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootData
 // 0x00B0 (0x00B0 - 0x0000)
@@ -273,6 +291,7 @@ struct alignas(0x10) FSlopeWarpingFootData final
 public:
 	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FSlopeWarpingFootData;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_SlopeWarping
 // 0x0218 (0x02E0 - 0x00C8)
@@ -307,27 +326,32 @@ public:
 	struct FVector                                ActorLocation;                                     // 0x02B0(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                GravityDirCompSpace;                               // 0x02C8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
+DUMPER7_ASSERTS_FAnimNode_SlopeWarping;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_Steering
-// 0x0118 (0x01E0 - 0x00C8)
+// 0x00E8 (0x01B0 - 0x00C8)
 struct FAnimNode_Steering final : public FAnimNode_SkeletalControlBase
 {
 public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  TargetOrientation;                                 // 0x00D0(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableTargetSmoothing;                            // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMirrored;                                         // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SmoothTargetStiffness;                             // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothTargetDamping;                               // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ProceduralTargetTime;                              // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetTime;                                        // 0x0100(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimatedTargetTime;                                // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RootMotionThreshold;                               // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisableSteeringBelowSpeed;                         // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimationAsset*                        CurrentAnimAsset;                                  // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	float                                         CurrentAnimAssetTime;                              // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11C[0xC4];                                     // 0x011C(0x00C4)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         ProceduralTargetTime;                              // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetTime;                                        // 0x00F8(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimatedTargetTime;                                // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RootMotionThreshold;                               // 0x0100(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisableSteeringBelowSpeed;                         // 0x0104(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisableAdditiveBelowSpeed;                         // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinScaleRatio;                                     // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxScaleRatio;                                     // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UAnimationAsset*                        CurrentAnimAsset;                                  // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	float                                         CurrentAnimAssetTime;                              // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x84];                                     // 0x012C(0x0084)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_Steering;
 
 // ScriptStruct AnimationWarpingRuntime.StrideWarpingFootDefinition
 // 0x0030 (0x0030 - 0x0000)
@@ -338,6 +362,7 @@ public:
 	struct FBoneReference                         FKFootBone;                                        // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBoneReference                         ThighBone;                                         // 0x0020(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FStrideWarpingFootDefinition;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_StrideWarping
 // 0x0180 (0x0248 - 0x00C8)
@@ -365,5 +390,18 @@ public:
 	bool                                          bDisableIfMissingRootMotion;                       // 0x0203(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_204[0x44];                                     // 0x0204(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAnimNode_StrideWarping;
+
+// ScriptStruct AnimationWarpingRuntime.AnimNode_WarpTest
+// 0x00A0 (0x00B0 - 0x0010)
+struct alignas(0x10) FAnimNode_WarpTest final : public FAnimNode_Base
+{
+public:
+	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Transforms;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         SecondsToWait;                                     // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x7C];                                      // 0x0034(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_WarpTest;
 
 SDK_NAMESPACE_END

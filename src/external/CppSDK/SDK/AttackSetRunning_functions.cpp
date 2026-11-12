@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UAttackSetRunning_C::ExecuteUbergraph_AttackSetRunning(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackSetRunning_C", "ExecuteUbergraph_AttackSetRunning");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackSetRunning_C", "ExecuteUbergraph_AttackSetRunning", FuncInfo);
 
 	Params::AttackSetRunning_C_ExecuteUbergraph_AttackSetRunning Parms{};
 
@@ -43,10 +41,8 @@ void UAttackSetRunning_C::ExecuteUbergraph_AttackSetRunning(int32 EntryPoint)
 
 void UAttackSetRunning_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AttackSetRunning_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "AttackSetRunning_C", "ReceiveExecute", FuncInfo);
 
 	Params::AttackSetRunning_C_ReceiveExecute Parms{};
 

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UIsNotFollowing_DK_C::ExecuteUbergraph_IsNotFollowing_DK(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsNotFollowing_DK_C", "ExecuteUbergraph_IsNotFollowing_DK");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsNotFollowing_DK_C", "ExecuteUbergraph_IsNotFollowing_DK", FuncInfo);
 
 	Params::IsNotFollowing_DK_C_ExecuteUbergraph_IsNotFollowing_DK Parms{};
 
@@ -43,10 +41,8 @@ void UIsNotFollowing_DK_C::ExecuteUbergraph_IsNotFollowing_DK(int32 EntryPoint)
 
 void UIsNotFollowing_DK_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsNotFollowing_DK_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsNotFollowing_DK_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::IsNotFollowing_DK_C_ReceiveConditionCheck Parms{};
 

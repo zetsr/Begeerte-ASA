@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass LeftClimbing_ImpactEffect_Metal.LeftClimbing_ImpactEffect_Metal_C
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x04E8 - 0x04E8)
 class ALeftClimbing_ImpactEffect_Metal_C final : public AClimbing_ImpactEffect_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<ALeftClimbing_ImpactEffect_Metal_C>();
 	}
 };
+DUMPER7_ASSERTS_ALeftClimbing_ImpactEffect_Metal_C;
 
 SDK_NAMESPACE_END

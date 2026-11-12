@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_Prompt_UninstallAll_C::BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Back_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -35,10 +33,8 @@ void UUI_CFCore_Prompt_UninstallAll_C::BndEvt__UI_Prompt_UninstallAll_UI_Button_
 
 void UUI_CFCore_Prompt_UninstallAll_C::BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Continue_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Continue_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "BndEvt__UI_Prompt_UninstallAll_UI_Button_Ark_Global_Continue_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +48,8 @@ void UUI_CFCore_Prompt_UninstallAll_C::BndEvt__UI_Prompt_UninstallAll_UI_Button_
 
 bool UUI_CFCore_Prompt_UninstallAll_C::BPGamepadReleased(const struct FKey& theKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "BPGamepadReleased");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "BPGamepadReleased", FuncInfo);
 
 	Params::UI_CFCore_Prompt_UninstallAll_C_BPGamepadReleased Parms{};
 
@@ -74,10 +68,8 @@ bool UUI_CFCore_Prompt_UninstallAll_C::BPGamepadReleased(const struct FKey& theK
 
 bool UUI_CFCore_Prompt_UninstallAll_C::BPHighlightWidgetOnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "BPHighlightWidgetOnStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "BPHighlightWidgetOnStart", FuncInfo);
 
 	Params::UI_CFCore_Prompt_UninstallAll_C_BPHighlightWidgetOnStart Parms{};
 
@@ -92,10 +84,8 @@ bool UUI_CFCore_Prompt_UninstallAll_C::BPHighlightWidgetOnStart()
 
 void UUI_CFCore_Prompt_UninstallAll_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +98,8 @@ void UUI_CFCore_Prompt_UninstallAll_C::Construct()
 
 void UUI_CFCore_Prompt_UninstallAll_C::ExecuteUbergraph_UI_CFCore_Prompt_UninstallAll(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "ExecuteUbergraph_UI_CFCore_Prompt_UninstallAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "ExecuteUbergraph_UI_CFCore_Prompt_UninstallAll", FuncInfo);
 
 	Params::UI_CFCore_Prompt_UninstallAll_C_ExecuteUbergraph_UI_CFCore_Prompt_UninstallAll Parms{};
 
@@ -129,10 +117,8 @@ void UUI_CFCore_Prompt_UninstallAll_C::ExecuteUbergraph_UI_CFCore_Prompt_Uninsta
 
 void UUI_CFCore_Prompt_UninstallAll_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "Tick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "Tick", FuncInfo);
 
 	Params::UI_CFCore_Prompt_UninstallAll_C_Tick Parms{};
 
@@ -148,10 +134,8 @@ void UUI_CFCore_Prompt_UninstallAll_C::Tick(const struct FGeometry& MyGeometry, 
 
 void UUI_CFCore_Prompt_UninstallAll_C::UpdateThemeSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_Prompt_UninstallAll_C", "UpdateThemeSettings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_Prompt_UninstallAll_C", "UpdateThemeSettings", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }

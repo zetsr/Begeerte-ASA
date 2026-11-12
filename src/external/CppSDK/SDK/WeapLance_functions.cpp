@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 bool AWeapLance_C::BPForceTPVTargetingAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "BPForceTPVTargetingAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "BPForceTPVTargetingAnimation", FuncInfo);
 
 	Params::WeapLance_C_BPForceTPVTargetingAnimation Parms{};
 
@@ -41,10 +39,8 @@ bool AWeapLance_C::BPForceTPVTargetingAnimation()
 
 void AWeapLance_C::BPHandleMeleeAttack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "BPHandleMeleeAttack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "BPHandleMeleeAttack", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -55,10 +51,8 @@ void AWeapLance_C::BPHandleMeleeAttack()
 
 void AWeapLance_C::BPStopMeleeAttack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "BPStopMeleeAttack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "BPStopMeleeAttack", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +66,8 @@ void AWeapLance_C::BPStopMeleeAttack()
 
 void AWeapLance_C::DamageActor(class AActor* Victim, struct FHitResult& HitInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DamageActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DamageActor", FuncInfo);
 
 	Params::WeapLance_C_DamageActor Parms{};
 
@@ -93,10 +85,8 @@ void AWeapLance_C::DamageActor(class AActor* Victim, struct FHitResult& HitInfo)
 
 void AWeapLance_C::DidDismountHit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DidDismountHit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DidDismountHit", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +97,8 @@ void AWeapLance_C::DidDismountHit()
 
 void AWeapLance_C::DoPlayStartAttackingSound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DoPlayStartAttackingSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DoPlayStartAttackingSound", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +109,8 @@ void AWeapLance_C::DoPlayStartAttackingSound()
 
 void AWeapLance_C::DoPlayStopAttackingSound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DoPlayStopAttackingSound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DoPlayStopAttackingSound", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +124,8 @@ void AWeapLance_C::DoPlayStopAttackingSound()
 
 void AWeapLance_C::DoTrace(const struct FVector& Start, const struct FVector& End)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DoTrace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DoTrace", FuncInfo);
 
 	Params::WeapLance_C_DoTrace Parms{};
 
@@ -157,10 +141,8 @@ void AWeapLance_C::DoTrace(const struct FVector& Start, const struct FVector& En
 
 void AWeapLance_C::DoTraceAttacks()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "DoTraceAttacks");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "DoTraceAttacks", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +155,8 @@ void AWeapLance_C::DoTraceAttacks()
 
 void AWeapLance_C::ExecuteUbergraph_WeapLance(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "ExecuteUbergraph_WeapLance");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "ExecuteUbergraph_WeapLance", FuncInfo);
 
 	Params::WeapLance_C_ExecuteUbergraph_WeapLance Parms{};
 
@@ -193,10 +173,8 @@ void AWeapLance_C::ExecuteUbergraph_WeapLance(int32 EntryPoint)
 
 void AWeapLance_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapLance_C", "ReceiveTick");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapLance_C", "ReceiveTick", FuncInfo);
 
 	Params::WeapLance_C_ReceiveTick Parms{};
 

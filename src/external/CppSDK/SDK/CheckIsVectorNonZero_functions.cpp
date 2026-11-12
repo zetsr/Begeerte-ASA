@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UCheckIsVectorNonZero_C::ExecuteUbergraph_CheckIsVectorNonZero(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheckIsVectorNonZero_C", "ExecuteUbergraph_CheckIsVectorNonZero");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CheckIsVectorNonZero_C", "ExecuteUbergraph_CheckIsVectorNonZero", FuncInfo);
 
 	Params::CheckIsVectorNonZero_C_ExecuteUbergraph_CheckIsVectorNonZero Parms{};
 
@@ -43,10 +41,8 @@ void UCheckIsVectorNonZero_C::ExecuteUbergraph_CheckIsVectorNonZero(int32 EntryP
 
 void UCheckIsVectorNonZero_C::ReceiveExecute(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheckIsVectorNonZero_C", "ReceiveExecute");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "CheckIsVectorNonZero_C", "ReceiveExecute", FuncInfo);
 
 	Params::CheckIsVectorNonZero_C_ReceiveExecute Parms{};
 

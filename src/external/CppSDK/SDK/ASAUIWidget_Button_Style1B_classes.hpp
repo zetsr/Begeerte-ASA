@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass ASAUIWidget_Button_Style1B.ASAUIWidget_Button_Style1B_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x09D0 - 0x09D0)
 class UASAUIWidget_Button_Style1B_C final : public UASAUIWidget_Button_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_Button_Style1B_C>();
 	}
 };
+DUMPER7_ASSERTS_UASAUIWidget_Button_Style1B_C;
 
 SDK_NAMESPACE_END

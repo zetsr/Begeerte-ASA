@@ -39,38 +39,41 @@ enum class EConstantQFFTSizeEnum : uint8
 };
 
 // Enum AudioSynesthesia.ELoudnessCurveTypeEnum
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class ELoudnessCurveTypeEnum : uint8
 {
 	A                                        = 0,
 	B                                        = 1,
 	C                                        = 2,
 	D                                        = 3,
-	None                                     = 4,
-	ELoudnessCurveTypeEnum_MAX               = 5,
+	K                                        = 4,
+	None                                     = 5,
+	ELoudnessCurveTypeEnum_MAX               = 6,
 };
 
 // Enum AudioSynesthesia.ELoudnessNRTCurveTypeEnum
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class ELoudnessNRTCurveTypeEnum : uint8
 {
 	A                                        = 0,
 	B                                        = 1,
 	C                                        = 2,
 	D                                        = 3,
-	None                                     = 4,
-	ELoudnessNRTCurveTypeEnum_MAX            = 5,
+	K                                        = 4,
+	None                                     = 5,
+	ELoudnessNRTCurveTypeEnum_MAX            = 6,
 };
 
 // Enum AudioSynesthesia.EMeterPeakType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMeterPeakType : uint8
 {
 	MeanSquared                              = 0,
 	RootMeanSquared                          = 1,
 	Peak                                     = 2,
-	Count                                    = 3,
-	EMeterPeakType_MAX                       = 4,
+	TruePeak                                 = 3,
+	Count                                    = 4,
+	EMeterPeakType_MAX                       = 5,
 };
 
 // ScriptStruct AudioSynesthesia.ConstantQResults
@@ -82,6 +85,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FConstantQResults;
 
 // ScriptStruct AudioSynesthesia.LoudnessResults
 // 0x0010 (0x0010 - 0x0000)
@@ -93,6 +97,7 @@ public:
 	float                                         PerceptualEnergy;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeSeconds;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FLoudnessResults;
 
 // ScriptStruct AudioSynesthesia.MeterResults
 // 0x0014 (0x0014 - 0x0000)
@@ -105,6 +110,7 @@ public:
 	int32                                         NumSamplesClipping;                                // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClippingValue;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMeterResults;
 
 // ScriptStruct AudioSynesthesia.SynesthesiaSpectrumResults
 // 0x0018 (0x0018 - 0x0000)
@@ -115,5 +121,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FSynesthesiaSpectrumResults;
 
 SDK_NAMESPACE_END

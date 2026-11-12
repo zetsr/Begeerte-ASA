@@ -13,6 +13,7 @@
 #include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -26,6 +27,43 @@ struct UI_CFCore_ExpandedModSlot_C_Animation_UpdateModImage final
 public:
 	class UImage*                                 IMG_GameImage;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_Animation_UpdateModImage;
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEndEntryDropOperation
+// 0x0001 (0x0001 - 0x0000)
+struct UI_CFCore_ExpandedModSlot_C_BP_OnEndEntryDropOperation final
+{
+public:
+	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnEndEntryDropOperation;
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDragged
+// 0x0008 (0x0008 - 0x0000)
+struct UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragged final
+{
+public:
+	class UDragDropOperation*                     Operation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragged;
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDragOverChanged
+// 0x0001 (0x0001 - 0x0000)
+struct UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragOverChanged final
+{
+public:
+	bool                                          bIsDraggingOver;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnEntryDragOverChanged;
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnEntryDropped
+// 0x0008 (0x0008 - 0x0000)
+struct UI_CFCore_ExpandedModSlot_C_BP_OnEntryDropped final
+{
+public:
+	class UDragDropOperation*                     Operation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnEntryDropped;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnItemExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -34,6 +72,7 @@ struct UI_CFCore_ExpandedModSlot_C_BP_OnItemExpansionChanged final
 public:
 	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnItemExpansionChanged;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnItemSelectionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -42,9 +81,19 @@ struct UI_CFCore_ExpandedModSlot_C_BP_OnItemSelectionChanged final
 public:
 	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnItemSelectionChanged;
+
+// Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.BP_OnUpdateEntryDropIndicator
+// 0x0001 (0x0001 - 0x0000)
+struct UI_CFCore_ExpandedModSlot_C_BP_OnUpdateEntryDropIndicator final
+{
+public:
+	EUMGItemDropZone                              DropZone;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_BP_OnUpdateEntryDropIndicator;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.ExecuteUbergraph_UI_CFCore_ExpandedModSlot
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct UI_CFCore_ExpandedModSlot_C_ExecuteUbergraph_UI_CFCore_ExpandedModSlot final
 {
 public:
@@ -62,38 +111,46 @@ public:
 	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2DDynamic*                      K2Node_CustomEvent_Texture_1;                      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUI_CFCore_ModPage_C*                   CallFunc_CreateModPageFromID_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UTexture2DDynamic* Texture)> K2Node_CreateDelegate_OutputDelegate_2;        // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 K2Node_CustomEvent_IMG_GameImage;                  // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SubscribeViewToEvents_ReturnValue;        // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsSelected;                          // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsExpanded;                          // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_InitializeModView_ReturnValue;            // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 K2Node_CustomEvent_IMG_GameImage;                  // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUI_CFCore_ModPage_C*                   CallFunc_CreateModPageFromID_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UTexture2DDynamic* Texture)> K2Node_CreateDelegate_OutputDelegate_2;        // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EUMGItemDropZone                              K2Node_Event_DropZone;                             // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsSelected;                          // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SubscribeViewToEvents_ReturnValue;        // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsExpanded;                          // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDragDropOperation*                     K2Node_Event_Operation_1;                          // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsDraggingOver;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDragDropOperation*                     K2Node_Event_Operation;                            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bSuccess;                             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAsyncTaskDownloadImage*                CallFunc_DownloadImage_ReturnValue;                // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2DDynamic*                      CallFunc_Map_Find_Value;                           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable_1;                            // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_Select_Default;                             // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00F0(0x00B0)()
-	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output;                  // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output_1;                // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output_2;                // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InitializeModView_ReturnValue;            // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAsyncTaskDownloadImage*                CallFunc_DownloadImage_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture2DDynamic*                      CallFunc_Map_Find_Value;                           // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Temp_object_Variable_1;                            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_Select_Default;                             // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0110(0x00B0)()
+	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output;                  // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output_1;                // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output_2;                // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_ExecuteUbergraph_UI_CFCore_ExpandedModSlot;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.FormatDownloadNumber
 // 0x01C8 (0x01C8 - 0x0000)
@@ -137,6 +194,7 @@ public:
 	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue_4;           // 0x01B0(0x0010)()
 	bool                                          CallFunc_Less_Int64Int64_ReturnValue_1;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_FormatDownloadNumber;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GenerateAuthorNameToolTipWidget
 // 0x0018 (0x0018 - 0x0000)
@@ -147,6 +205,7 @@ public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUI_CFCore_ToolTipWidget_C*             CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GenerateAuthorNameToolTipWidget;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GenerateModNameToolTipWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -155,6 +214,7 @@ struct UI_CFCore_ExpandedModSlot_C_GenerateModNameToolTipWidget final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GenerateModNameToolTipWidget;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GetAuthors
 // 0x0098 (0x0098 - 0x0000)
@@ -176,6 +236,7 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GetAuthors;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GetDownloadCount
 // 0x0020 (0x0020 - 0x0000)
@@ -185,6 +246,7 @@ public:
 	class FText                                   FinalAmount;                                       // 0x0000(0x0010)(Parm, OutParm)
 	class FText                                   CallFunc_FormatDownloadNumber_FinalAmount;         // 0x0010(0x0010)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GetDownloadCount;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GetModName
 // 0x0010 (0x0010 - 0x0000)
@@ -193,6 +255,7 @@ struct UI_CFCore_ExpandedModSlot_C_GetModName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GetModName;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GetModSize
 // 0x0250 (0x0250 - 0x0000)
@@ -225,6 +288,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0230(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0240(0x0010)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GetModSize;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -234,6 +298,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_GetRootCFWidget;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.InitModInfo
 // 0x0610 (0x0610 - 0x0000)
@@ -242,6 +307,7 @@ struct UI_CFCore_ExpandedModSlot_C_InitModInfo final
 public:
 	struct FInstallProgressMod                    NewModInfo;                                        // 0x0000(0x0610)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_InitModInfo;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.OnEventBroadcasted
 // 0x0C70 (0x0C70 - 0x0000)
@@ -265,6 +331,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0C64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0C68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_OnEventBroadcasted;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.OnFail_99B1ABC24A7099A526173E84E0B7AC9A
 // 0x0008 (0x0008 - 0x0000)
@@ -273,6 +340,7 @@ struct UI_CFCore_ExpandedModSlot_C_OnFail_99B1ABC24A7099A526173E84E0B7AC9A final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_OnFail_99B1ABC24A7099A526173E84E0B7AC9A;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
@@ -281,6 +349,7 @@ struct UI_CFCore_ExpandedModSlot_C_OnListItemObjectSet final
 public:
 	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_OnListItemObjectSet;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A
 // 0x0008 (0x0008 - 0x0000)
@@ -289,15 +358,17 @@ struct UI_CFCore_ExpandedModSlot_C_OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A fi
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_OnSuccess_99B1ABC24A7099A526173E84E0B7AC9A;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.PlayStartingAnimation
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct UI_CFCore_ExpandedModSlot_C_PlayStartingAnimation final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_PlayStartingAnimation;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot
 // 0x0008 (0x0008 - 0x0000)
@@ -306,6 +377,7 @@ struct UI_CFCore_ExpandedModSlot_C_SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedMo
 public:
 	class UImage*                                 IMG_GameImage;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_SequenceEvent__ENTRYPOINTUI_CFCore_ExpandedModSlot;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.ToggleUpdateButtonVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -314,6 +386,7 @@ struct UI_CFCore_ExpandedModSlot_C_ToggleUpdateButtonVisibility final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_ToggleUpdateButtonVisibility;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.Update LikeStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -322,6 +395,7 @@ struct UI_CFCore_ExpandedModSlot_C_Update_LikeStatus final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_Update_LikeStatus;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.UpdateAuthors
 // 0x0038 (0x0038 - 0x0000)
@@ -334,15 +408,17 @@ public:
 	class FString                                 CallFunc_StringLimit_NewString;                    // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_UpdateAuthors;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.UpdateImage
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct UI_CFCore_ExpandedModSlot_C_UpdateImage final
 {
 public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_UpdateImage;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.UpdateModName
 // 0x0010 (0x0010 - 0x0000)
@@ -351,6 +427,7 @@ struct UI_CFCore_ExpandedModSlot_C_UpdateModName final
 public:
 	class FString                                 CallFunc_GetModName_Name;                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_UpdateModName;
 
 // Function UI_CFCore_ExpandedModSlot.UI_CFCore_ExpandedModSlot_C.UpdateModSummary
 // 0x0020 (0x0020 - 0x0000)
@@ -360,6 +437,7 @@ public:
 	class FString                                 CallFunc_GetModSummary_OutAsString;                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetModSummary_OutAsText;                  // 0x0010(0x0010)()
 };
+DUMPER7_ASSERTS_UI_CFCore_ExpandedModSlot_C_UpdateModSummary;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

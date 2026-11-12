@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UIsInvalidNavigationPoint_TK_C final : public UBTTask_BlueprintBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor)
 	struct FBlackboardKeySelector                 NavigationTargetKey;                               // 0x00B0(0x0028)(Edit, BlueprintVisible)
 
 public:
@@ -43,5 +43,6 @@ public:
 		return GetDefaultObjImpl<UIsInvalidNavigationPoint_TK_C>();
 	}
 };
+DUMPER7_ASSERTS_UIsInvalidNavigationPoint_TK_C;
 
 SDK_NAMESPACE_END

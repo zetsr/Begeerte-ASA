@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UWeaponCameraOverride_Sword_C>();
 	}
 };
+DUMPER7_ASSERTS_UWeaponCameraOverride_Sword_C;
 
 SDK_NAMESPACE_END

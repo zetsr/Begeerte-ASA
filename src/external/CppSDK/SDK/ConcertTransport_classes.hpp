@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "ConcertTransport_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -38,5 +38,6 @@ public:
 		return GetDefaultObjImpl<UConcertEndpointConfig>();
 	}
 };
+DUMPER7_ASSERTS_UConcertEndpointConfig;
 
 SDK_NAMESPACE_END

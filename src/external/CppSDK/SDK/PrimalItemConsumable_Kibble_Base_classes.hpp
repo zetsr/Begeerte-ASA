@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Kibble_Base_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemConsumable_Kibble_Base_C;
 
 SDK_NAMESPACE_END

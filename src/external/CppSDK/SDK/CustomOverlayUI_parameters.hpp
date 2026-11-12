@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Slate_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,6 +27,7 @@ public:
 	struct FVector2D                              Size;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ZOrder;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_AddChildToCanvas;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.ExecuteUbergraph_CustomOverlayUI
 // 0x0188 (0x0188 - 0x0000)
@@ -92,6 +93,7 @@ public:
 	double                                        CallFunc_SetInnerRingScales_Scale1_ImplicitCast;   // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SetInnerRingScales_Scale2_ImplicitCast;   // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_ExecuteUbergraph_CustomOverlayUI;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.SetArrowAlpha
 // 0x0008 (0x0008 - 0x0000)
@@ -101,6 +103,7 @@ public:
 	float                                         theLeftRightAlpha;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         theUpDownAlpha;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_SetArrowAlpha;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.SetInnerRingScales
 // 0x000C (0x000C - 0x0000)
@@ -111,6 +114,7 @@ public:
 	float                                         scale1;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         scale2;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_SetInnerRingScales;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.SetPointerColorAdd
 // 0x0004 (0x0004 - 0x0000)
@@ -119,6 +123,7 @@ struct CustomOverlayUI_C_SetPointerColorAdd final
 public:
 	float                                         Add;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_SetPointerColorAdd;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.SetPointerScale
 // 0x0004 (0x0004 - 0x0000)
@@ -127,6 +132,7 @@ struct CustomOverlayUI_C_SetPointerScale final
 public:
 	float                                         Scale;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_SetPointerScale;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.ShowReticule
 // 0x0001 (0x0001 - 0x0000)
@@ -135,6 +141,7 @@ struct CustomOverlayUI_C_ShowReticule final
 public:
 	bool                                          show;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_ShowReticule;
 
 // Function CustomOverlayUI.CustomOverlayUI_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -144,6 +151,7 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_CustomOverlayUI_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

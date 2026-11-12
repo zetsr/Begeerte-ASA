@@ -25,6 +25,54 @@ enum class EAttributeBasedRootMotionMode : uint32
 	EAttributeBasedRootMotionMode_MAX        = 2,
 };
 
+// Enum MotionWarping.ESwitchOffConditionEffect
+// NumValues: 0x0005
+enum class ESwitchOffConditionEffect : uint8
+{
+	CancelFollow                             = 0,
+	CancelWarping                            = 1,
+	PauseWarping                             = 2,
+	PauseRootMotion                          = 3,
+	ESwitchOffConditionEffect_MAX            = 4,
+};
+
+// Enum MotionWarping.ESwitchOffConditionDistanceOp
+// NumValues: 0x0003
+enum class ESwitchOffConditionDistanceOp : uint8
+{
+	LessThan                                 = 0,
+	GreaterThan                              = 1,
+	ESwitchOffConditionDistanceOp_MAX        = 2,
+};
+
+// Enum MotionWarping.ESwitchOffConditionDistanceAxesType
+// NumValues: 0x0004
+enum class ESwitchOffConditionDistanceAxesType : uint8
+{
+	AllAxes                                  = 0,
+	IgnoreZAxis                              = 1,
+	OnlyZAxis                                = 2,
+	ESwitchOffConditionDistanceAxesType_MAX  = 3,
+};
+
+// Enum MotionWarping.ESwitchOffConditionAngleOp
+// NumValues: 0x0003
+enum class ESwitchOffConditionAngleOp : uint8
+{
+	LessThan                                 = 0,
+	GreaterThan                              = 1,
+	ESwitchOffConditionAngleOp_MAX           = 2,
+};
+
+// Enum MotionWarping.ESwitchOffConditionCompositeOp
+// NumValues: 0x0003
+enum class ESwitchOffConditionCompositeOp : uint8
+{
+	Or                                       = 0,
+	And                                      = 1,
+	ESwitchOffConditionCompositeOp_MAX       = 2,
+};
+
 // Enum MotionWarping.ERootMotionModifierState
 // NumValues: 0x0005
 enum class ERootMotionModifierState : uint8
@@ -36,23 +84,36 @@ enum class ERootMotionModifierState : uint8
 	ERootMotionModifierState_MAX             = 4,
 };
 
+// Enum MotionWarping.EWarpTargetLocationOffsetDirection
+// NumValues: 0x0004
+enum class EWarpTargetLocationOffsetDirection : uint8
+{
+	TargetsForwardVector                     = 0,
+	VectorFromTargetToOwner                  = 1,
+	WorldSpace                               = 2,
+	EWarpTargetLocationOffsetDirection_MAX   = 3,
+};
+
 // Enum MotionWarping.EMotionWarpRotationType
-// NumValues: 0x0003
+// NumValues: 0x0005
 enum class EMotionWarpRotationType : uint8
 {
 	Default                                  = 0,
 	Facing                                   = 1,
-	EMotionWarpRotationType_MAX              = 2,
+	OppositeDefault                          = 2,
+	OppositeFacing                           = 3,
+	EMotionWarpRotationType_MAX              = 4,
 };
 
 // Enum MotionWarping.EMotionWarpRotationMethod
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EMotionWarpRotationMethod : uint8
 {
 	Slerp                                    = 0,
 	SlerpWithClampedRate                     = 1,
 	ConstantRate                             = 2,
-	EMotionWarpRotationMethod_MAX            = 3,
+	Scale                                    = 3,
+	EMotionWarpRotationMethod_MAX            = 4,
 };
 
 // Enum MotionWarping.EWarpPointAnimProvider
@@ -65,6 +126,30 @@ enum class EWarpPointAnimProvider : uint8
 	EWarpPointAnimProvider_MAX               = 3,
 };
 
+// Enum MotionWarping.EPrecomputedWarpWeightCurveType
+// NumValues: 0x0009
+enum class EPrecomputedWarpWeightCurveType : uint32
+{
+	FromRootMotionTranslation                = 0,
+	FromRootMotionRotation                   = 1,
+	Linear                                   = 2,
+	EaseIn                                   = 3,
+	EaseOut                                  = 4,
+	EaseInOut                                = 5,
+	Instant                                  = 6,
+	DoNotWarp                                = 7,
+	EPrecomputedWarpWeightCurveType_MAX      = 8,
+};
+
+// Enum MotionWarping.EPrecomputedWarpUpdateMode
+// NumValues: 0x0003
+enum class EPrecomputedWarpUpdateMode : uint32
+{
+	World                                    = 0,
+	Relative                                 = 1,
+	EPrecomputedWarpUpdateMode_MAX           = 2,
+};
+
 // ScriptStruct MotionWarping.AttributeBasedRootMotionComponentPrePhysicsTickFunction
 // 0x0008 (0x0038 - 0x0030)
 struct FAttributeBasedRootMotionComponentPrePhysicsTickFunction final : public FTickFunction
@@ -72,6 +157,7 @@ struct FAttributeBasedRootMotionComponentPrePhysicsTickFunction final : public F
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FAttributeBasedRootMotionComponentPrePhysicsTickFunction;
 
 // ScriptStruct MotionWarping.MotionWarpingWindowData
 // 0x0010 (0x0010 - 0x0000)
@@ -82,6 +168,49 @@ public:
 	float                                         StartTime;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndTime;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMotionWarpingWindowData;
+
+// ScriptStruct MotionWarping.MotionWarpingTarget
+// 0x00E0 (0x00E0 - 0x0000)
+struct FMotionWarpingTarget final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0038(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFollowComponent;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWarpTargetLocationOffsetDirection            LocationOffsetDirection;                           // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocationOffset;                                    // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationOffset;                                    // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  AvatarActor;                                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x58];                                      // 0x0088(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMotionWarpingTarget;
+
+// ScriptStruct MotionWarping.SwitchOffConditionData
+// 0x0018 (0x0018 - 0x0000)
+struct FSwitchOffConditionData final
+{
+public:
+	class FName                                   WarpTargetName;                                    // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMotionWarpingSwitchOffCondition*> SwitchOffConditions;                             // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FSwitchOffConditionData;
+
+// ScriptStruct MotionWarping.MotionWarpingSwapState
+// 0x0040 (0x0040 - 0x0000)
+struct FMotionWarpingSwapState final
+{
+public:
+	TArray<class URootMotionModifier*>            Modifiers;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FMotionWarpingTarget>           WarpTargets;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FSwitchOffConditionData>        SwitchOffConditions;                               // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMotionWarpingSwapState;
 
 // ScriptStruct MotionWarping.MotionWarpingUpdateContext
 // 0x001C (0x001C - 0x0000)
@@ -95,22 +224,7 @@ public:
 	float                                         PlayRate;                                          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaSeconds;                                      // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// ScriptStruct MotionWarping.MotionWarpingTarget
-// 0x0080 (0x0080 - 0x0000)
-struct FMotionWarpingTarget final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class USceneComponent>         Component;                                         // 0x0038(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFollowComponent;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LocationOffset;                                    // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationOffset;                                    // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_FMotionWarpingUpdateContext;
 
 // ScriptStruct MotionWarping.MotionDeltaTrack
 // 0x0060 (0x0060 - 0x0000)
@@ -123,6 +237,7 @@ public:
 	struct FVector                                TotalTranslation;                                  // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               TotalRotation;                                     // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMotionDeltaTrack;
 
 // ScriptStruct MotionWarping.MotionDeltaTrackContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -131,5 +246,30 @@ struct FMotionDeltaTrackContainer final
 public:
 	TArray<struct FMotionDeltaTrack>              Tracks;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FMotionDeltaTrackContainer;
+
+// ScriptStruct MotionWarping.PrecomputedWarpCurve
+// 0x000C (0x000C - 0x0000)
+struct FPrecomputedWarpCurve final
+{
+public:
+	EPrecomputedWarpWeightCurveType               CurveType;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartRatio;                                        // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndRatio;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPrecomputedWarpCurve;
+
+// ScriptStruct MotionWarping.PrecomputedWarpSteeringSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FPrecomputedWarpSteeringSettings final
+{
+public:
+	bool                                          bEnableSmoothing;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SmoothStiffness;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothDamping;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngleThreshold;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPrecomputedWarpSteeringSettings;
 
 SDK_NAMESPACE_END

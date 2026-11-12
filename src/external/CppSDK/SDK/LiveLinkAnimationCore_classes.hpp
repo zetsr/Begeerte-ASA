@@ -17,11 +17,11 @@
 SDK_NAMESPACE_START
 
 // Class LiveLinkAnimationCore.LiveLinkInstance
-// 0x0000 (0x03D0 - 0x03D0)
+// 0x0000 (0x03B0 - 0x03B0)
 class ULiveLinkInstance final : public UAnimInstance
 {
 public:
-	class ULiveLinkRetargetAsset*                 CurrentRetargetAsset;                              // 0x03C8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	class ULiveLinkRetargetAsset*                 CurrentRetargetAsset;                              // 0x03A8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 
 public:
 	void EnableLiveLinkEvaluation(bool bDoEnable);
@@ -42,6 +42,7 @@ public:
 		return GetDefaultObjImpl<ULiveLinkInstance>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkInstance;
 
 // Class LiveLinkAnimationCore.LiveLinkRetargetAsset
 // 0x0000 (0x0028 - 0x0028)
@@ -61,6 +62,7 @@ public:
 		return GetDefaultObjImpl<ULiveLinkRetargetAsset>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkRetargetAsset;
 
 // Class LiveLinkAnimationCore.LiveLinkRemapAsset
 // 0x00A0 (0x00C8 - 0x0028)
@@ -88,5 +90,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkRemapAsset>();
 	}
 };
+DUMPER7_ASSERTS_ULiveLinkRemapAsset;
 
 SDK_NAMESPACE_END

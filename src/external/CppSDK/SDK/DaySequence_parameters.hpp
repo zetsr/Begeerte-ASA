@@ -10,9 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Engine_parameters.hpp"
+#include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
+#include "MovieScene_parameters.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,6 +29,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_DaySequenceActor_ContainsDaySequence;
 
 // Function DaySequence.DaySequenceActor.Multicast_SetTimePerCycle
 // 0x0004 (0x0004 - 0x0000)
@@ -35,6 +38,16 @@ struct DaySequenceActor_Multicast_SetTimePerCycle final
 public:
 	float                                         InHours;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_Multicast_SetTimePerCycle;
+
+// Function DaySequence.DaySequenceActor.SetPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceActor_SetPlayRate final
+{
+public:
+	float                                         NewRate;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceActor_SetPlayRate;
 
 // Function DaySequence.DaySequenceActor.SetReplicatePlayback
 // 0x0001 (0x0001 - 0x0000)
@@ -43,6 +56,7 @@ struct DaySequenceActor_SetReplicatePlayback final
 public:
 	bool                                          ReplicatePlayback;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_SetReplicatePlayback;
 
 // Function DaySequence.DaySequenceActor.SetTimeOfDay
 // 0x0008 (0x0008 - 0x0000)
@@ -53,6 +67,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_DaySequenceActor_SetTimeOfDay;
 
 // Function DaySequence.DaySequenceActor.SetTimeOfDayPreview
 // 0x0004 (0x0004 - 0x0000)
@@ -61,6 +76,16 @@ struct DaySequenceActor_SetTimeOfDayPreview final
 public:
 	float                                         InHours;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_SetTimeOfDayPreview;
+
+// Function DaySequence.DaySequenceActor.GetApparentTimeOfDay
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceActor_GetApparentTimeOfDay final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceActor_GetApparentTimeOfDay;
 
 // Function DaySequence.DaySequenceActor.GetDayLength
 // 0x0004 (0x0004 - 0x0000)
@@ -69,6 +94,7 @@ struct DaySequenceActor_GetDayLength final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetDayLength;
 
 // Function DaySequence.DaySequenceActor.GetInitialTimeOfDay
 // 0x0004 (0x0004 - 0x0000)
@@ -77,6 +103,16 @@ struct DaySequenceActor_GetInitialTimeOfDay final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetInitialTimeOfDay;
+
+// Function DaySequence.DaySequenceActor.GetPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceActor_GetPlayRate final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceActor_GetPlayRate;
 
 // Function DaySequence.DaySequenceActor.GetStaticTimeOfDay
 // 0x0004 (0x0004 - 0x0000)
@@ -85,6 +121,7 @@ struct DaySequenceActor_GetStaticTimeOfDay final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetStaticTimeOfDay;
 
 // Function DaySequence.DaySequenceActor.GetTimeOfDay
 // 0x0004 (0x0004 - 0x0000)
@@ -93,6 +130,7 @@ struct DaySequenceActor_GetTimeOfDay final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetTimeOfDay;
 
 // Function DaySequence.DaySequenceActor.GetTimeOfDayPreview
 // 0x0004 (0x0004 - 0x0000)
@@ -101,6 +139,7 @@ struct DaySequenceActor_GetTimeOfDayPreview final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetTimeOfDayPreview;
 
 // Function DaySequence.DaySequenceActor.GetTimePerCycle
 // 0x0004 (0x0004 - 0x0000)
@@ -109,6 +148,7 @@ struct DaySequenceActor_GetTimePerCycle final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_GetTimePerCycle;
 
 // Function DaySequence.DaySequenceActor.HasStaticTimeOfDay
 // 0x0001 (0x0001 - 0x0000)
@@ -117,6 +157,7 @@ struct DaySequenceActor_HasStaticTimeOfDay final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_HasStaticTimeOfDay;
 
 // Function DaySequence.DaySequenceActor.IsPaused
 // 0x0001 (0x0001 - 0x0000)
@@ -125,6 +166,7 @@ struct DaySequenceActor_IsPaused final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceActor_IsPaused;
 
 // Function DaySequence.DaySequenceActor.IsPlaying
 // 0x0001 (0x0001 - 0x0000)
@@ -133,54 +175,7 @@ struct DaySequenceActor_IsPlaying final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function DaySequence.DaySequenceCheatManagerExtension.SetTimeOfDaySequenceActor
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequenceCheatManagerExtension_SetTimeOfDaySequenceActor final
-{
-public:
-	float                                         NewTimeOfDay;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceCheatManagerExtension.SetTimeOfDaySpeed
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequenceCheatManagerExtension_SetTimeOfDaySpeed final
-{
-public:
-	float                                         NewTimeOfDaySpeedMultiplier;                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceConditionTag.Evaluate
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequenceConditionTag_Evaluate final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceModifierComponent.BindToDaySequenceActor
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequenceModifierComponent_BindToDaySequenceActor final
-{
-public:
-	class ADaySequenceActor*                      DaySequenceActor;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceModifierComponent.SetBlendTarget
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequenceModifierComponent_SetBlendTarget final
-{
-public:
-	class APlayerController*                      InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceModifierComponent.GetBlendWeight
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequenceModifierComponent_GetBlendWeight final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_DaySequenceActor_IsPlaying;
 
 // Function DaySequence.DaySequenceModifierVolume.OnDaySequenceActorBound
 // 0x0008 (0x0008 - 0x0000)
@@ -189,6 +184,364 @@ struct DaySequenceModifierVolume_OnDaySequenceActorBound final
 public:
 	class ADaySequenceActor*                      InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_DaySequenceModifierVolume_OnDaySequenceActorBound;
+
+// Function DaySequence.DaySequenceCheatManagerExtension.SetTimeOfDaySequenceActor
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceCheatManagerExtension_SetTimeOfDaySequenceActor final
+{
+public:
+	float                                         NewTimeOfDay;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceCheatManagerExtension_SetTimeOfDaySequenceActor;
+
+// Function DaySequence.DaySequenceCheatManagerExtension.SetTimeOfDaySpeed
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceCheatManagerExtension_SetTimeOfDaySpeed final
+{
+public:
+	float                                         NewTimeOfDaySpeedMultiplier;                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceCheatManagerExtension_SetTimeOfDaySpeed;
+
+// Function DaySequence.DaySequenceConditionTag.Evaluate
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequenceConditionTag_Evaluate final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceConditionTag_Evaluate;
+
+// Function DaySequence.DaySequenceDirector.GetBoundActor
+// 0x0020 (0x0020 - 0x0000)
+struct DaySequenceDirector_GetBoundActor final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetBoundActor;
+
+// Function DaySequence.DaySequenceDirector.GetBoundActors
+// 0x0028 (0x0028 - 0x0000)
+struct DaySequenceDirector_GetBoundActors final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetBoundActors;
+
+// Function DaySequence.DaySequenceDirector.GetBoundObject
+// 0x0020 (0x0020 - 0x0000)
+struct DaySequenceDirector_GetBoundObject final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetBoundObject;
+
+// Function DaySequence.DaySequenceDirector.GetBoundObjects
+// 0x0028 (0x0028 - 0x0000)
+struct DaySequenceDirector_GetBoundObjects final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetBoundObjects;
+
+// Function DaySequence.DaySequenceDirector.GetSequence
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequenceDirector_GetSequence final
+{
+public:
+	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetSequence;
+
+// Function DaySequence.DaySequenceDirector.GetCurrentTime
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequenceDirector_GetCurrentTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetCurrentTime;
+
+// Function DaySequence.DaySequenceDirector.GetRootSequenceTime
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequenceDirector_GetRootSequenceTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceDirector_GetRootSequenceTime;
+
+// Function DaySequence.DaySequenceModifierComponent.BindToDaySequenceActor
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequenceModifierComponent_BindToDaySequenceActor final
+{
+public:
+	class ADaySequenceActor*                      DaySequenceActor;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceModifierComponent_BindToDaySequenceActor;
+
+// Function DaySequence.DaySequenceModifierComponent.SetBlendTarget
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequenceModifierComponent_SetBlendTarget final
+{
+public:
+	class APlayerController*                      InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceModifierComponent_SetBlendTarget;
+
+// Function DaySequence.DaySequenceModifierComponent.GetBlendWeight
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequenceModifierComponent_GetBlendWeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceModifierComponent_GetBlendWeight;
+
+// Function DaySequence.DaySequencePlayer.GetBoundObjects
+// 0x0028 (0x0028 - 0x0000)
+struct DaySequencePlayer_GetBoundObjects final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetBoundObjects;
+
+// Function DaySequence.DaySequencePlayer.GetDisableCameraCuts
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_GetDisableCameraCuts final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetDisableCameraCuts;
+
+// Function DaySequence.DaySequencePlayer.GetObjectBindings
+// 0x0018 (0x0018 - 0x0000)
+struct DaySequencePlayer_GetObjectBindings final
+{
+public:
+	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMovieSceneObjectBindingID>     ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetObjectBindings;
+
+// Function DaySequence.DaySequencePlayer.PlayLooping
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequencePlayer_PlayLooping final
+{
+public:
+	int32                                         NumLoops;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_PlayLooping;
+
+// Function DaySequence.DaySequencePlayer.RequestInvalidateBinding
+// 0x0018 (0x0018 - 0x0000)
+struct DaySequencePlayer_RequestInvalidateBinding final
+{
+public:
+	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_RequestInvalidateBinding;
+
+// Function DaySequence.DaySequencePlayer.RPC_ExplicitServerUpdateEvent
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequencePlayer_RPC_ExplicitServerUpdateEvent final
+{
+public:
+	EUpdatePositionMethod                         Method;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFrameTime                             RelevantTime;                                      // 0x0004(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NewSerialNumber;                                   // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_RPC_ExplicitServerUpdateEvent;
+
+// Function DaySequence.DaySequencePlayer.RPC_OnFinishPlaybackEvent
+// 0x000C (0x000C - 0x0000)
+struct DaySequencePlayer_RPC_OnFinishPlaybackEvent final
+{
+public:
+	struct FFrameTime                             StoppedTime;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NewSerialNumber;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_RPC_OnFinishPlaybackEvent;
+
+// Function DaySequence.DaySequencePlayer.RPC_OnStopEvent
+// 0x000C (0x000C - 0x0000)
+struct DaySequencePlayer_RPC_OnStopEvent final
+{
+public:
+	struct FFrameTime                             StoppedTime;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NewSerialNumber;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_RPC_OnStopEvent;
+
+// Function DaySequence.DaySequencePlayer.SetCompletionModeOverride
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_SetCompletionModeOverride final
+{
+public:
+	EMovieSceneCompletionModeOverride             CompletionModeOverride;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetCompletionModeOverride;
+
+// Function DaySequence.DaySequencePlayer.SetDisableCameraCuts
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_SetDisableCameraCuts final
+{
+public:
+	bool                                          bInDisableCameraCuts;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetDisableCameraCuts;
+
+// Function DaySequence.DaySequencePlayer.SetFrameRange
+// 0x000C (0x000C - 0x0000)
+struct DaySequencePlayer_SetFrameRange final
+{
+public:
+	int32                                         StartFrame;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SubFrames;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetFrameRange;
+
+// Function DaySequence.DaySequencePlayer.SetFrameRate
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequencePlayer_SetFrameRate final
+{
+public:
+	struct FFrameRate                             FrameRate;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetFrameRate;
+
+// Function DaySequence.DaySequencePlayer.SetPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequencePlayer_SetPlayRate final
+{
+public:
+	float                                         PlayRate;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetPlayRate;
+
+// Function DaySequence.DaySequencePlayer.SetWeight
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequencePlayer_SetWeight final
+{
+public:
+	double                                        InWeight;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_SetWeight;
+
+// Function DaySequence.DaySequencePlayer.GetCompletionModeOverride
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_GetCompletionModeOverride final
+{
+public:
+	EMovieSceneCompletionModeOverride             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetCompletionModeOverride;
+
+// Function DaySequence.DaySequencePlayer.GetCurrentNumLoops
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequencePlayer_GetCurrentNumLoops final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetCurrentNumLoops;
+
+// Function DaySequence.DaySequencePlayer.GetEndTime
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequencePlayer_GetEndTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetEndTime;
+
+// Function DaySequence.DaySequencePlayer.GetFrameDuration
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequencePlayer_GetFrameDuration final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetFrameDuration;
+
+// Function DaySequence.DaySequencePlayer.GetFrameRate
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequencePlayer_GetFrameRate final
+{
+public:
+	struct FFrameRate                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetFrameRate;
+
+// Function DaySequence.DaySequencePlayer.GetPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct DaySequencePlayer_GetPlayRate final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetPlayRate;
+
+// Function DaySequence.DaySequencePlayer.GetSequence
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequencePlayer_GetSequence final
+{
+public:
+	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetSequence;
+
+// Function DaySequence.DaySequencePlayer.GetSequenceName
+// 0x0018 (0x0018 - 0x0000)
+struct DaySequencePlayer_GetSequenceName final
+{
+public:
+	bool                                          bAddClientInfo;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetSequenceName;
+
+// Function DaySequence.DaySequencePlayer.GetStartTime
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequencePlayer_GetStartTime final
+{
+public:
+	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_GetStartTime;
+
+// Function DaySequence.DaySequencePlayer.IsPaused
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_IsPaused final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_IsPaused;
+
+// Function DaySequence.DaySequencePlayer.IsPlaying
+// 0x0001 (0x0001 - 0x0000)
+struct DaySequencePlayer_IsPlaying final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequencePlayer_IsPlaying;
 
 // Function DaySequence.DaySequenceStaticTimeContributor.BindToDaySequenceActor
 // 0x0010 (0x0010 - 0x0000)
@@ -199,6 +552,27 @@ public:
 	int32                                         Priority;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_DaySequenceStaticTimeContributor_BindToDaySequenceActor;
+
+// Function DaySequence.DaySequenceSubsystem.SetDaySequenceActor
+// 0x0008 (0x0008 - 0x0000)
+struct DaySequenceSubsystem_SetDaySequenceActor final
+{
+public:
+	class ADaySequenceActor*                      InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceSubsystem_SetDaySequenceActor;
+
+// Function DaySequence.DaySequenceSubsystem.GetDaySequenceActor
+// 0x0010 (0x0010 - 0x0000)
+struct DaySequenceSubsystem_GetDaySequenceActor final
+{
+public:
+	bool                                          bFindFallbackOnNull;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADaySequenceActor*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DaySequenceSubsystem_GetDaySequenceActor;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddBoolKey
 // 0x0010 (0x0010 - 0x0000)
@@ -210,6 +584,7 @@ public:
 	bool                                          Value;                                             // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddBoolKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddBoolOverride
 // 0x000C (0x000C - 0x0000)
@@ -220,6 +595,7 @@ public:
 	bool                                          Value;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddBoolOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddColorMaterialParameterOverride
 // 0x001C (0x001C - 0x0000)
@@ -230,6 +606,7 @@ public:
 	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddColorMaterialParameterOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddColorOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -239,6 +616,7 @@ public:
 	class FName                                   PropertyName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Value;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddColorOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -249,6 +627,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Value;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddMaterialOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddRotationKey
 // 0x0028 (0x0028 - 0x0000)
@@ -261,6 +640,7 @@ public:
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddRotationKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddScalarKey
 // 0x0020 (0x0020 - 0x0000)
@@ -274,6 +654,7 @@ public:
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddScalarKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddScalarMaterialParameterOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -284,6 +665,7 @@ public:
 	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddScalarMaterialParameterOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddScalarOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -293,6 +675,7 @@ public:
 	class FName                                   PropertyName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Value;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddScalarOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddScaleKey
 // 0x0028 (0x0028 - 0x0000)
@@ -305,6 +688,7 @@ public:
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddScaleKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddTransformOverride
 // 0x0060 (0x0060 - 0x0000)
@@ -313,6 +697,7 @@ struct ProceduralDaySequenceBuilder_AddTransformOverride final
 public:
 	struct FTransform                             Value;                                             // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddTransformOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddTranslationKey
 // 0x0028 (0x0028 - 0x0000)
@@ -325,6 +710,7 @@ public:
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddTranslationKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddVectorKey
 // 0x0030 (0x0030 - 0x0000)
@@ -338,6 +724,7 @@ public:
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddVectorKey;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddVectorOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -347,6 +734,7 @@ public:
 	class FName                                   PropertyName;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Value;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddVectorOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.AddVisibilityOverride
 // 0x0001 (0x0001 - 0x0000)
@@ -355,6 +743,7 @@ struct ProceduralDaySequenceBuilder_AddVisibilityOverride final
 public:
 	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_AddVisibilityOverride;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.Initialize
 // 0x0020 (0x0020 - 0x0000)
@@ -367,6 +756,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDaySequence*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_Initialize;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.SetActiveBoundObject
 // 0x0008 (0x0008 - 0x0000)
@@ -375,6 +765,7 @@ struct ProceduralDaySequenceBuilder_SetActiveBoundObject final
 public:
 	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_SetActiveBoundObject;
 
 // Function DaySequence.ProceduralDaySequenceBuilder.IsInitialized
 // 0x0001 (0x0001 - 0x0000)
@@ -383,287 +774,7 @@ struct ProceduralDaySequenceBuilder_IsInitialized final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-
-// Function DaySequence.DaySequenceDirector.GetBoundActor
-// 0x0020 (0x0020 - 0x0000)
-struct DaySequenceDirector_GetBoundActor final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetBoundActors
-// 0x0028 (0x0028 - 0x0000)
-struct DaySequenceDirector_GetBoundActors final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetBoundObject
-// 0x0020 (0x0020 - 0x0000)
-struct DaySequenceDirector_GetBoundObject final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetBoundObjects
-// 0x0028 (0x0028 - 0x0000)
-struct DaySequenceDirector_GetBoundObjects final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetSequence
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequenceDirector_GetSequence final
-{
-public:
-	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetCurrentTime
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequenceDirector_GetCurrentTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceDirector.GetRootSequenceTime
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequenceDirector_GetRootSequenceTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetBoundObjects
-// 0x0028 (0x0028 - 0x0000)
-struct DaySequencePlayer_GetBoundObjects final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetDisableCameraCuts
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_GetDisableCameraCuts final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetObjectBindings
-// 0x0018 (0x0018 - 0x0000)
-struct DaySequencePlayer_GetObjectBindings final
-{
-public:
-	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FMovieSceneObjectBindingID>     ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.PlayLooping
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequencePlayer_PlayLooping final
-{
-public:
-	int32                                         NumLoops;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.RequestInvalidateBinding
-// 0x0018 (0x0018 - 0x0000)
-struct DaySequencePlayer_RequestInvalidateBinding final
-{
-public:
-	struct FMovieSceneObjectBindingID             ObjectBinding;                                     // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.RPC_ExplicitServerUpdateEvent
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequencePlayer_RPC_ExplicitServerUpdateEvent final
-{
-public:
-	EUpdatePositionMethod                         Method;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFrameTime                             RelevantTime;                                      // 0x0004(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NewSerialNumber;                                   // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.RPC_OnFinishPlaybackEvent
-// 0x000C (0x000C - 0x0000)
-struct DaySequencePlayer_RPC_OnFinishPlaybackEvent final
-{
-public:
-	struct FFrameTime                             StoppedTime;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NewSerialNumber;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.RPC_OnStopEvent
-// 0x000C (0x000C - 0x0000)
-struct DaySequencePlayer_RPC_OnStopEvent final
-{
-public:
-	struct FFrameTime                             StoppedTime;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NewSerialNumber;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetCompletionModeOverride
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_SetCompletionModeOverride final
-{
-public:
-	EMovieSceneCompletionModeOverride             CompletionModeOverride;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetDisableCameraCuts
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_SetDisableCameraCuts final
-{
-public:
-	bool                                          bInDisableCameraCuts;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetFrameRange
-// 0x000C (0x000C - 0x0000)
-struct DaySequencePlayer_SetFrameRange final
-{
-public:
-	int32                                         StartFrame;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SubFrames;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetFrameRate
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequencePlayer_SetFrameRate final
-{
-public:
-	struct FFrameRate                             FrameRate;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetPlayRate
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequencePlayer_SetPlayRate final
-{
-public:
-	float                                         PlayRate;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.SetWeight
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequencePlayer_SetWeight final
-{
-public:
-	double                                        InWeight;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetCompletionModeOverride
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_GetCompletionModeOverride final
-{
-public:
-	EMovieSceneCompletionModeOverride             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetEndTime
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequencePlayer_GetEndTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetFrameDuration
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequencePlayer_GetFrameDuration final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetFrameRate
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequencePlayer_GetFrameRate final
-{
-public:
-	struct FFrameRate                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetPlayRate
-// 0x0004 (0x0004 - 0x0000)
-struct DaySequencePlayer_GetPlayRate final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetSequence
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequencePlayer_GetSequence final
-{
-public:
-	class UMovieSceneSequence*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetSequenceName
-// 0x0018 (0x0018 - 0x0000)
-struct DaySequencePlayer_GetSequenceName final
-{
-public:
-	bool                                          bAddClientInfo;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.GetStartTime
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequencePlayer_GetStartTime final
-{
-public:
-	struct FQualifiedFrameTime                    ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.IsPaused
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_IsPaused final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequencePlayer.IsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct DaySequencePlayer_IsPlaying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceSubsystem.SetDaySequenceActor
-// 0x0008 (0x0008 - 0x0000)
-struct DaySequenceSubsystem_SetDaySequenceActor final
-{
-public:
-	class ADaySequenceActor*                      InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-
-// Function DaySequence.DaySequenceSubsystem.GetDaySequenceActor
-// 0x0010 (0x0010 - 0x0000)
-struct DaySequenceSubsystem_GetDaySequenceActor final
-{
-public:
-	bool                                          bFindFallbackOnNull;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADaySequenceActor*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
+DUMPER7_ASSERTS_ProceduralDaySequenceBuilder_IsInitialized;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -21,10 +21,8 @@ SDK_NAMESPACE_START
 
 void UDataListEntryWidgetAllPaintings_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListEntryWidgetAllPaintings_C", "Construct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListEntryWidgetAllPaintings_C", "Construct", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -37,10 +35,8 @@ void UDataListEntryWidgetAllPaintings_C::Construct()
 
 void UDataListEntryWidgetAllPaintings_C::ExecuteUbergraph_DataListEntryWidgetAllPaintings(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListEntryWidgetAllPaintings_C", "ExecuteUbergraph_DataListEntryWidgetAllPaintings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListEntryWidgetAllPaintings_C", "ExecuteUbergraph_DataListEntryWidgetAllPaintings", FuncInfo);
 
 	Params::DataListEntryWidgetAllPaintings_C_ExecuteUbergraph_DataListEntryWidgetAllPaintings Parms{};
 
@@ -57,10 +53,8 @@ void UDataListEntryWidgetAllPaintings_C::ExecuteUbergraph_DataListEntryWidgetAll
 
 void UDataListEntryWidgetAllPaintings_C::OnPaint(struct FPaintContext& Context) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListEntryWidgetAllPaintings_C", "OnPaint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataListEntryWidgetAllPaintings_C", "OnPaint", FuncInfo);
 
 	Params::DataListEntryWidgetAllPaintings_C_OnPaint Parms{};
 

@@ -10,12 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.ExecuteUbergraph_UI_CFCore_Button_Sidebar
-// 0x0030 (0x0030 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct UI_CFCore_Button_Sidebar_C_ExecuteUbergraph_UI_CFCore_Button_Sidebar final
 {
 public:
@@ -24,12 +26,13 @@ public:
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Condition;                      // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0010)(HasGetValueTypeHash)
+	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x0018(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x002C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Button_Sidebar_C_ExecuteUbergraph_UI_CFCore_Button_Sidebar;
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -39,6 +42,7 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Button_Sidebar_C_GetRootCFWidget;
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -47,6 +51,7 @@ struct UI_CFCore_Button_Sidebar_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Button_Sidebar_C_PreConstruct;
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.UpdateSlelectionTo
 // 0x0001 (0x0001 - 0x0000)
@@ -55,6 +60,7 @@ struct UI_CFCore_Button_Sidebar_C_UpdateSlelectionTo final
 public:
 	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Button_Sidebar_C_UpdateSlelectionTo;
 
 // Function UI_CFCore_Button_Sidebar.UI_CFCore_Button_Sidebar_C.UpdateThemeData
 // 0x0001 (0x0001 - 0x0000)
@@ -63,6 +69,7 @@ struct UI_CFCore_Button_Sidebar_C_UpdateThemeData final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_UI_CFCore_Button_Sidebar_C_UpdateThemeData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

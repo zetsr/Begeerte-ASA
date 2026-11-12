@@ -22,6 +22,7 @@ public:
 	bool                                          Owns;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OwnsDLC_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_DA_DLC_Base_C_IsDLCOwned;
 
 // Function DA_DLC_Base.DA_DLC_Base_C.IsLatestDLC
 // 0x0008 (0x0008 - 0x0000)
@@ -32,6 +33,7 @@ public:
 	bool                                          Yes;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_DA_DLC_Base_C_IsLatestDLC;
 
 // Function DA_DLC_Base.DA_DLC_Base_C.WasntDLCBrowsedBefore
 // 0x0018 (0x0018 - 0x0000)
@@ -43,6 +45,7 @@ public:
 	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_DA_DLC_Base_C_WasntDLCBrowsedBefore;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

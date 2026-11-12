@@ -16,8 +16,60 @@
 
 SDK_NAMESPACE_START
 
+// Function GameplayStateTreeModule.StateTreeComponent.AddLinkedStateTreeOverrides
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FStateTreeReference&       StateTreeReference                                     (Parm, NativeAccessSpecifierPublic)
+
+void UStateTreeComponent::AddLinkedStateTreeOverrides(const struct FGameplayTag& StateTag, const struct FStateTreeReference& StateTreeReference)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StateTreeComponent", "AddLinkedStateTreeOverrides");
+
+	Params::StateTreeComponent_AddLinkedStateTreeOverrides Parms{};
+
+	Parms.StateTag = std::move(StateTag);
+	Parms.StateTreeReference = std::move(StateTreeReference);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayStateTreeModule.StateTreeComponent.RemoveLinkedStateTreeOverrides
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FGameplayTag&              StateTag                                               (ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStateTreeComponent::RemoveLinkedStateTreeOverrides(const struct FGameplayTag& StateTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StateTreeComponent", "RemoveLinkedStateTreeOverrides");
+
+	Params::StateTreeComponent_RemoveLinkedStateTreeOverrides Parms{};
+
+	Parms.StateTag = std::move(StateTag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayStateTreeModule.StateTreeComponent.SendStateTreeEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FStateTreeEvent&           Event                                                  (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -42,7 +94,7 @@ void UStateTreeComponent::SendStateTreeEvent(const struct FStateTreeEvent& Event
 
 
 // Function GameplayStateTreeModule.StateTreeComponent.SetStartLogicAutomatically
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // const bool                              bInStartLogicAutomatically                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -66,8 +118,58 @@ void UStateTreeComponent::SetStartLogicAutomatically(const bool bInStartLogicAut
 }
 
 
+// Function GameplayStateTreeModule.StateTreeComponent.SetStateTree
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStateTree*                       StateTree                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStateTreeComponent::SetStateTree(class UStateTree* StateTree)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StateTreeComponent", "SetStateTree");
+
+	Params::StateTreeComponent_SetStateTree Parms{};
+
+	Parms.StateTree = StateTree;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayStateTreeModule.StateTreeComponent.SetStateTreeReference
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FStateTreeReference&       StateTreeReference                                     (Parm, NativeAccessSpecifierPublic)
+
+void UStateTreeComponent::SetStateTreeReference(const struct FStateTreeReference& StateTreeReference)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StateTreeComponent", "SetStateTreeReference");
+
+	Params::StateTreeComponent_SetStateTreeReference Parms{};
+
+	Parms.StateTreeReference = std::move(StateTreeReference);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayStateTreeModule.StateTreeComponent.GetStateTreeRunStatus
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EStateTreeRunStatus                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -84,6 +186,36 @@ EStateTreeRunStatus UStateTreeComponent::GetStateTreeRunStatus() const
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayStateTreeModule.GameplayStateTreeBlueprintFunctionLibrary.RunStateTree
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStateTree*                       StateTreeAsset                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGameplayStateTreeBlueprintFunctionLibrary::RunStateTree(class AActor* Actor, class UStateTree* StateTreeAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GameplayStateTreeBlueprintFunctionLibrary", "RunStateTree");
+
+	Params::GameplayStateTreeBlueprintFunctionLibrary_RunStateTree Parms{};
+
+	Parms.Actor = Actor;
+	Parms.StateTreeAsset = StateTreeAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 

@@ -25,10 +25,8 @@ SDK_NAMESPACE_START
 
 void IEggIncubatorInterface_C::GetItemDisplaySlot(class UPrimalItem* ForItem, int32* InSlot, bool* SlotFound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EggIncubatorInterface_C", "GetItemDisplaySlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "EggIncubatorInterface_C", "GetItemDisplaySlot", FuncInfo);
 
 	Params::EggIncubatorInterface_C_GetItemDisplaySlot Parms{};
 
@@ -52,10 +50,8 @@ void IEggIncubatorInterface_C::GetItemDisplaySlot(class UPrimalItem* ForItem, in
 
 void IEggIncubatorInterface_C::I_CanEggBeHatched(class UPrimalItem* EggItem, bool* bIsHatchable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EggIncubatorInterface_C", "I_CanEggBeHatched");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "EggIncubatorInterface_C", "I_CanEggBeHatched", FuncInfo);
 
 	Params::EggIncubatorInterface_C_I_CanEggBeHatched Parms{};
 
@@ -77,10 +73,8 @@ void IEggIncubatorInterface_C::I_CanEggBeHatched(class UPrimalItem* EggItem, boo
 
 void IEggIncubatorInterface_C::I_CanEggIncubateAtLocation(class UPrimalItem* EggItem, const struct FVector& WorldLocation, bool* Return)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EggIncubatorInterface_C", "I_CanEggIncubateAtLocation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "EggIncubatorInterface_C", "I_CanEggIncubateAtLocation", FuncInfo);
 
 	Params::EggIncubatorInterface_C_I_CanEggIncubateAtLocation Parms{};
 
@@ -102,10 +96,8 @@ void IEggIncubatorInterface_C::I_CanEggIncubateAtLocation(class UPrimalItem* Egg
 
 void IEggIncubatorInterface_C::IsEggItemAllowed(class UPrimalItem* EggItem, bool* IsAllowed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EggIncubatorInterface_C", "IsEggItemAllowed");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "EggIncubatorInterface_C", "IsEggItemAllowed", FuncInfo);
 
 	Params::EggIncubatorInterface_C_IsEggItemAllowed Parms{};
 

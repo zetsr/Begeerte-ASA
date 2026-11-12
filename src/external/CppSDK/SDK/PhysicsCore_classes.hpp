@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "Chaos_structs.hpp"
@@ -36,6 +37,7 @@ public:
 		return GetDefaultObjImpl<UPhysicalMaterialPropertyBase>();
 	}
 };
+DUMPER7_ASSERTS_UPhysicalMaterialPropertyBase;
 
 // Class PhysicsCore.BodySetupCore
 // 0x0010 (0x0038 - 0x0028)
@@ -68,6 +70,7 @@ public:
 		return GetDefaultObjImpl<UBodySetupCore>();
 	}
 };
+DUMPER7_ASSERTS_UBodySetupCore;
 
 // Class PhysicsCore.ChaosPhysicalMaterial
 // 0x0020 (0x0048 - 0x0028)
@@ -97,9 +100,10 @@ public:
 		return GetDefaultObjImpl<UChaosPhysicalMaterial>();
 	}
 };
+DUMPER7_ASSERTS_UChaosPhysicalMaterial;
 
 // Class PhysicsCore.PhysicalMaterial
-// 0x0080 (0x00A8 - 0x0028)
+// 0x0090 (0x00B8 - 0x0028)
 class UPhysicalMaterial final : public UObject
 {
 public:
@@ -124,17 +128,18 @@ public:
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPhysicalMaterialStrength              Strength;                                          // 0x0064(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPhysicalMaterialDamageModifier        DamageModifier;                                    // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bShowExperimentalProperties;                       // 0x0074(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPhysicalMaterialSoftCollisionMode            SoftCollisionMode;                                 // 0x0075(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SoftCollisionThickness;                            // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseFrictionImpulse;                               // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bCanDigForWater;                                   // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WaterRichness;                                     // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESoilType                                     SoilType;                                          // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           DebugColor;                                        // 0x0074(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowExperimentalProperties;                       // 0x0084(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPhysicalMaterialSoftCollisionMode            SoftCollisionMode;                                 // 0x0085(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_86[0x2];                                       // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SoftCollisionThickness;                            // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseFrictionImpulse;                               // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x18];                                      // 0x0090(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bCanDigForWater;                                   // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WaterRichness;                                     // 0x00AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESoilType                                     SoilType;                                          // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -150,9 +155,10 @@ public:
 		return GetDefaultObjImpl<UPhysicalMaterial>();
 	}
 };
+DUMPER7_ASSERTS_UPhysicalMaterial;
 
 // Class PhysicsCore.PhysicsSettingsCore
-// 0x00B0 (0x00E8 - 0x0038)
+// 0x00C8 (0x0100 - 0x0038)
 class UPhysicsSettingsCore : public UDeveloperSettings
 {
 public:
@@ -182,8 +188,8 @@ public:
 	bool                                          bSimulateSkeletalMeshOnDedicatedServer;            // 0x0074(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionTraceFlag                           DefaultShapeComplexity;                            // 0x0075(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChaosSolverConfiguration              SolverOptions;                                     // 0x0078(0x006C)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FChaosSolverConfiguration              SolverOptions;                                     // 0x0078(0x0084)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -199,5 +205,6 @@ public:
 		return GetDefaultObjImpl<UPhysicsSettingsCore>();
 	}
 };
+DUMPER7_ASSERTS_UPhysicsSettingsCore;
 
 SDK_NAMESPACE_END

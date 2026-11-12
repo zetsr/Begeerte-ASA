@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "DataflowCore_structs.hpp"
+
 
 SDK_NAMESPACE_START
 
@@ -21,5 +23,15 @@ public:
 	class FString                                 Attribute;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Group;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FCollectionAttributeKey;
+
+// ScriptStruct DataflowEnginePlugin.DataflowDynamicMeshArray
+// 0x0010 (0x0010 - 0x0000)
+struct FDataflowDynamicMeshArray final : public FDataflowAnyType
+{
+public:
+	TArray<class UDynamicMesh*>                   Value;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FDataflowDynamicMeshArray;
 
 SDK_NAMESPACE_END

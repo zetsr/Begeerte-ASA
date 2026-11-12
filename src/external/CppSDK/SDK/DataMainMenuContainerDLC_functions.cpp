@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UDataMainMenuContainerDLC_C::GetAllDLC(int32* Quantity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataMainMenuContainerDLC_C", "GetAllDLC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataMainMenuContainerDLC_C", "GetAllDLC", FuncInfo);
 
 	Params::DataMainMenuContainerDLC_C_GetAllDLC Parms{};
 
@@ -45,10 +43,8 @@ void UDataMainMenuContainerDLC_C::GetAllDLC(int32* Quantity)
 
 void UDataMainMenuContainerDLC_C::GetAllDLCEntries(TArray<class UDA_DLC_Base_C*>* DLCs_0, int32* LatestDLCVersion)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataMainMenuContainerDLC_C", "GetAllDLCEntries");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataMainMenuContainerDLC_C", "GetAllDLCEntries", FuncInfo);
 
 	Params::DataMainMenuContainerDLC_C_GetAllDLCEntries Parms{};
 
@@ -69,10 +65,8 @@ void UDataMainMenuContainerDLC_C::GetAllDLCEntries(TArray<class UDA_DLC_Base_C*>
 
 void UDataMainMenuContainerDLC_C::GetAllOwnedDLC(int32* Quantity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataMainMenuContainerDLC_C", "GetAllOwnedDLC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataMainMenuContainerDLC_C", "GetAllOwnedDLC", FuncInfo);
 
 	Params::DataMainMenuContainerDLC_C_GetAllOwnedDLC Parms{};
 
@@ -90,10 +84,8 @@ void UDataMainMenuContainerDLC_C::GetAllOwnedDLC(int32* Quantity)
 
 void UDataMainMenuContainerDLC_C::IsAvailableNewDLC(bool* Is)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataMainMenuContainerDLC_C", "IsAvailableNewDLC");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DataMainMenuContainerDLC_C", "IsAvailableNewDLC", FuncInfo);
 
 	Params::DataMainMenuContainerDLC_C_IsAvailableNewDLC Parms{};
 

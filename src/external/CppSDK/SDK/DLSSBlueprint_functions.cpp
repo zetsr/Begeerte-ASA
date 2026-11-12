@@ -282,31 +282,6 @@ void UDLSSLibrary::GetDLSSScreenPercentageRange(float* MinScreenPercentage, floa
 }
 
 
-// Function DLSSBlueprint.DLSSLibrary.GetDLSSSharpness
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UDLSSLibrary::GetDLSSSharpness()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("DLSSLibrary", "GetDLSSSharpness");
-
-	Params::DLSSLibrary_GetDLSSSharpness Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function DLSSBlueprint.DLSSLibrary.GetSupportedDLSSModes
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -577,31 +552,6 @@ void UDLSSLibrary::SetDLSSMode(class UObject* WorldContextObject, EUDLSSMode DLS
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.DLSSMode = DLSSMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function DLSSBlueprint.DLSSLibrary.SetDLSSSharpness
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                                   Sharpness                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UDLSSLibrary::SetDLSSSharpness(float Sharpness)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("DLSSLibrary", "SetDLSSSharpness");
-
-	Params::DLSSLibrary_SetDLSSSharpness Parms{};
-
-	Parms.Sharpness = Sharpness;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -42,5 +42,6 @@ public:
 		return GetDefaultObjImpl<UAssetTagsSubsystem>();
 	}
 };
+DUMPER7_ASSERTS_UAssetTagsSubsystem;
 
 SDK_NAMESPACE_END

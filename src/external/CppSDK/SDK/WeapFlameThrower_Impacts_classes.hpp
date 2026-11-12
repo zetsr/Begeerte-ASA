@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WeapFlameThrower_Impacts.WeapFlameThrower_Impacts_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x08B8 - 0x08B8)
 class AWeapFlameThrower_Impacts_C final : public AMeleeFist_Impacts_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<AWeapFlameThrower_Impacts_C>();
 	}
 };
+DUMPER7_ASSERTS_AWeapFlameThrower_Impacts_C;
 
 SDK_NAMESPACE_END

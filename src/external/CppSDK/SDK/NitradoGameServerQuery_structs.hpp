@@ -48,6 +48,7 @@ public:
 	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Address;                                           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FPortInfo;
 
 // ScriptStruct NitradoGameServerQuery.ModState
 // 0x0020 (0x0020 - 0x0000)
@@ -57,6 +58,7 @@ public:
 	class FString                                 modId;                                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Version;                                           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FModState;
 
 // ScriptStruct NitradoGameServerQuery.GameServerState
 // 0x0090 (0x0090 - 0x0000)
@@ -64,7 +66,7 @@ struct FGameServerState final
 {
 public:
 	class FString                                 UniqueID;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 serverName;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ServerName;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MapName;                                           // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Version;                                           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPortInfo>                      Ports;                                             // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -80,5 +82,6 @@ public:
 	TArray<struct FModState>                      mods;                                              // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         Tags;                                              // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
+DUMPER7_ASSERTS_FGameServerState;
 
 SDK_NAMESPACE_END

@@ -16,324 +16,158 @@
 
 SDK_NAMESPACE_START
 
-// Function GameAnalytics.GameAnalytics.AddAdEvent
+// Function GameAnalytics.GameAnalytics.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameAnalytics*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddAdEvent(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement)
+class UGameAnalytics* UGameAnalytics::GetInstance()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEvent");
+		Func = StaticClass()->GetFunction("GameAnalytics", "GetInstance");
 
-	Params::GameAnalytics_AddAdEvent Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
+	Params::GameAnalytics_GetInstance Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameAnalytics.GameAnalytics.AddAdEvent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGAAdType                               AdType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::AddAdEvent(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, const struct FGACustomFields& CustomFields, bool MergeFields)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "AddAdEvent");
+
+	Params::GameAnalytics_AddAdEvent Parms{};
+
+	Parms.Action = Action;
+	Parms.AdType = AdType;
+	Parms.AdSdkName = std::move(AdSdkName);
+	Parms.AdPlacement = std::move(AdPlacement);
+	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddAdEventWithDuration
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGAAdType                               AdType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddAdEventWithDuration(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration)
+void UGameAnalytics::AddAdEventWithDuration(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, int64 Duration, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithDuration");
+		Func = Class->GetFunction("GameAnalytics", "AddAdEventWithDuration");
 
 	Params::GameAnalytics_AddAdEventWithDuration Parms{};
 
 	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.Duration = Duration;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithDurationAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithDurationAndFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithDurationAndFields");
-
-	Params::GameAnalytics_AddAdEventWithDurationAndFields Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
+	Parms.AdType = AdType;
+	Parms.AdSdkName = std::move(AdSdkName);
+	Parms.AdPlacement = std::move(AdPlacement);
 	Parms.Duration = Duration;
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddAdEventWithDurationAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.AddAdEventWithReason
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// EGAAdType                               AdType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AdPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGAAdError                              Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddAdEventWithDurationAndMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, int64 Duration, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
+void UGameAnalytics::AddAdEventWithReason(EGAAdAction Action, EGAAdType AdType, const class FString& AdSdkName, const class FString& AdPlacement, EGAAdError Reason, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithDurationAndMergeFields");
+		Func = Class->GetFunction("GameAnalytics", "AddAdEventWithReason");
 
-	Params::GameAnalytics_AddAdEventWithDurationAndMergeFields Parms{};
+	Params::GameAnalytics_AddAdEventWithReason Parms{};
 
 	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.Duration = Duration;
+	Parms.AdType = AdType;
+	Parms.AdSdkName = std::move(AdSdkName);
+	Parms.AdPlacement = std::move(AdPlacement);
+	Parms.Reason = Reason;
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithFields");
-
-	Params::GameAnalytics_AddAdEventWithFields Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithMergeFields");
-
-	Params::GameAnalytics_AddAdEventWithMergeFields Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReason
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdError                              noAdReason                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithNoAdReason(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithNoAdReason");
-
-	Params::GameAnalytics_AddAdEventWithNoAdReason Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.noAdReason = noAdReason;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReasonAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdError                              noAdReason                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithNoAdReasonAndFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithNoAdReasonAndFields");
-
-	Params::GameAnalytics_AddAdEventWithNoAdReasonAndFields Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.noAdReason = noAdReason;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddAdEventWithNoAdReasonAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAAdAction                             Action                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdType                               adType                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adSdkName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    adPlacement                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EGAAdError                              noAdReason                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddAdEventWithNoAdReasonAndMergeFields(EGAAdAction Action, EGAAdType adType, const class FString& adSdkName, const class FString& adPlacement, EGAAdError noAdReason, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddAdEventWithNoAdReasonAndMergeFields");
-
-	Params::GameAnalytics_AddAdEventWithNoAdReasonAndMergeFields Parms{};
-
-	Parms.Action = Action;
-	Parms.adType = adType;
-	Parms.adSdkName = std::move(adSdkName);
-	Parms.adPlacement = std::move(adPlacement);
-	Parms.noAdReason = noAdReason;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddBusinessEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Currency                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemID                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    CartType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Receipt                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddBusinessEvent(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType)
+void UGameAnalytics::AddBusinessEvent(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEvent");
+		Func = Class->GetFunction("GameAnalytics", "AddBusinessEvent");
 
 	Params::GameAnalytics_AddBusinessEvent Parms{};
 
@@ -342,31 +176,36 @@ void UGameAnalytics::AddBusinessEvent(const class FString& Currency, int32 Amoun
 	Parms.ItemType = std::move(ItemType);
 	Parms.ItemID = std::move(ItemID);
 	Parms.CartType = std::move(CartType);
+	Parms.Receipt = std::move(Receipt);
+	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceipt
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Currency                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemID                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    CartType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddBusinessEventAndAutoFetchReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType)
+void UGameAnalytics::AddBusinessEventAndAutoFetchReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndAutoFetchReceipt");
+		Func = Class->GetFunction("GameAnalytics", "AddBusinessEventAndAutoFetchReceipt");
 
 	Params::GameAnalytics_AddBusinessEventAndAutoFetchReceipt Parms{};
 
@@ -375,105 +214,40 @@ void UGameAnalytics::AddBusinessEventAndAutoFetchReceipt(const class FString& Cu
 	Parms.ItemType = std::move(ItemType);
 	Parms.ItemID = std::move(ItemID);
 	Parms.CartType = std::move(CartType);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceiptWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventAndAutoFetchReceiptWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndAutoFetchReceiptWithFields");
-
-	Params::GameAnalytics_AddBusinessEventAndAutoFetchReceiptWithFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndAutoFetchReceiptWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.AddBusinessEventWithReceipt
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Currency                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    ItemType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ItemID                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    CartType                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Receipt                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Store                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Signature                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddBusinessEventAndAutoFetchReceiptWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
+void UGameAnalytics::AddBusinessEventWithReceipt(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Store, const class FString& Signature, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndAutoFetchReceiptWithMergeFields");
+		Func = Class->GetFunction("GameAnalytics", "AddBusinessEventWithReceipt");
 
-	Params::GameAnalytics_AddBusinessEventAndAutoFetchReceiptWithMergeFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroid
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Signature                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventAndroid(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndroid");
-
-	Params::GameAnalytics_AddBusinessEventAndroid Parms{};
+	Params::GameAnalytics_AddBusinessEventWithReceipt Parms{};
 
 	Parms.Currency = std::move(Currency);
 	Parms.Amount = Amount;
@@ -481,1102 +255,200 @@ void UGameAnalytics::AddBusinessEventAndroid(const class FString& Currency, int3
 	Parms.ItemID = std::move(ItemID);
 	Parms.CartType = std::move(CartType);
 	Parms.Receipt = std::move(Receipt);
-	Parms.Signature = std::move(Signature);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroidWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Signature                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventAndroidWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndroidWithFields");
-
-	Params::GameAnalytics_AddBusinessEventAndroidWithFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.Receipt = std::move(Receipt);
+	Parms.Store = std::move(Store);
 	Parms.Signature = std::move(Signature);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventAndroidWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Signature                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventAndroidWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const class FString& Signature, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventAndroidWithMergeFields");
-
-	Params::GameAnalytics_AddBusinessEventAndroidWithMergeFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.Receipt = std::move(Receipt);
-	Parms.Signature = std::move(Signature);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOS
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventIOS(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventIOS");
-
-	Params::GameAnalytics_AddBusinessEventIOS Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.Receipt = std::move(Receipt);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOSWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventIOSWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventIOSWithFields");
-
-	Params::GameAnalytics_AddBusinessEventIOSWithFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.Receipt = std::move(Receipt);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventIOSWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Receipt                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventIOSWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const class FString& Receipt, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventIOSWithMergeFields");
-
-	Params::GameAnalytics_AddBusinessEventIOSWithMergeFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.Receipt = std::move(Receipt);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventWithFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventWithFields");
-
-	Params::GameAnalytics_AddBusinessEventWithFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddBusinessEventWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    CartType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddBusinessEventWithMergeFields(const class FString& Currency, int32 Amount, const class FString& ItemType, const class FString& ItemID, const class FString& CartType, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddBusinessEventWithMergeFields");
-
-	Params::GameAnalytics_AddBusinessEventWithMergeFields Parms{};
-
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CartType = std::move(CartType);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddDesignEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddDesignEvent(const class FString& EventId)
+void UGameAnalytics::AddDesignEvent(const class FString& EventId, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEvent");
+		Func = Class->GetFunction("GameAnalytics", "AddDesignEvent");
 
 	Params::GameAnalytics_AddDesignEvent Parms{};
 
 	Parms.EventId = std::move(EventId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddDesignEventWithFields(const class FString& EventId, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEventWithFields");
-
-	Params::GameAnalytics_AddDesignEventWithFields Parms{};
-
-	Parms.EventId = std::move(EventId);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddDesignEventWithMergeFields(const class FString& EventId, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEventWithMergeFields");
-
-	Params::GameAnalytics_AddDesignEventWithMergeFields Parms{};
-
-	Parms.EventId = std::move(EventId);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddDesignEventWithValue
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddDesignEventWithValue(const class FString& EventId, float Value)
+void UGameAnalytics::AddDesignEventWithValue(const class FString& EventId, float Value, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEventWithValue");
+		Func = Class->GetFunction("GameAnalytics", "AddDesignEventWithValue");
 
 	Params::GameAnalytics_AddDesignEventWithValue Parms{};
 
 	Parms.EventId = std::move(EventId);
 	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithValueAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddDesignEventWithValueAndFields(const class FString& EventId, float Value, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEventWithValueAndFields");
-
-	Params::GameAnalytics_AddDesignEventWithValueAndFields Parms{};
-
-	Parms.EventId = std::move(EventId);
-	Parms.Value = Value;
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddDesignEventWithValueAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    EventId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddDesignEventWithValueAndMergeFields(const class FString& EventId, float Value, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddDesignEventWithValueAndMergeFields");
-
-	Params::GameAnalytics_AddDesignEventWithValueAndMergeFields Parms{};
-
-	Parms.EventId = std::move(EventId);
-	Parms.Value = Value;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddErrorEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAErrorSeverity                        Severity                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddErrorEvent(EGAErrorSeverity Severity, const class FString& Message)
+void UGameAnalytics::AddErrorEvent(EGAErrorSeverity Severity, const class FString& Message, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddErrorEvent");
+		Func = Class->GetFunction("GameAnalytics", "AddErrorEvent");
 
 	Params::GameAnalytics_AddErrorEvent Parms{};
 
 	Parms.Severity = Severity;
 	Parms.Message = std::move(Message);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddErrorEventWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAErrorSeverity                        Severity                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddErrorEventWithFields(EGAErrorSeverity Severity, const class FString& Message, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddErrorEventWithFields");
-
-	Params::GameAnalytics_AddErrorEventWithFields Parms{};
-
-	Parms.Severity = Severity;
-	Parms.Message = std::move(Message);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddErrorEventWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAErrorSeverity                        Severity                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddErrorEventWithMergeFields(EGAErrorSeverity Severity, const class FString& Message, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddErrorEventWithMergeFields");
-
-	Params::GameAnalytics_AddErrorEventWithMergeFields Parms{};
-
-	Parms.Severity = Severity;
-	Parms.Message = std::move(Message);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOne
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOne(EGAProgressionStatus ProgressionStatus, const class FString& Progression01)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOne");
-
-	Params::GameAnalytics_AddProgressionEventWithOne Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneAndFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneAndMergeFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneAndMergeFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndScore
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneAndScore");
-
-	Params::GameAnalytics_AddProgressionEventWithOneAndScore Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.score = score;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneAndTwo
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneAndTwo(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneAndTwo");
-
-	Params::GameAnalytics_AddProgressionEventWithOneAndTwo Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneScoreAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneScoreAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneScoreAndFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneScoreAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneScoreAndMergeFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneScoreAndMergeFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoAndFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoAndMergeFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoAndMergeFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndScore
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoAndScore");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoAndScore Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.score = score;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoAndThree
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.AddProgressionEvent
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddProgressionEventWithOneTwoAndThree(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03)
+void UGameAnalytics::AddProgressionEvent(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoAndThree");
+		Func = Class->GetFunction("GameAnalytics", "AddProgressionEvent");
 
-	Params::GameAnalytics_AddProgressionEventWithOneTwoAndThree Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.Progression03 = std::move(Progression03);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoScoreAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoScoreAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoScoreAndFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoScoreAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoScoreAndMergeFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoScoreAndMergeFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoThreeAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoThreeAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoThreeAndFields Parms{};
+	Params::GameAnalytics_AddProgressionEvent Parms{};
 
 	Parms.ProgressionStatus = ProgressionStatus;
 	Parms.Progression01 = std::move(Progression01);
 	Parms.Progression02 = std::move(Progression02);
 	Parms.Progression03 = std::move(Progression03);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.AddProgressionEventWithScore
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddProgressionEventWithOneTwoThreeAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
+void UGameAnalytics::AddProgressionEventWithScore(EGAProgressionStatus ProgressionStatus, int32 score, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoThreeAndMergeFields");
+		Func = Class->GetFunction("GameAnalytics", "AddProgressionEventWithScore");
 
-	Params::GameAnalytics_AddProgressionEventWithOneTwoThreeAndMergeFields Parms{};
+	Params::GameAnalytics_AddProgressionEventWithScore Parms{};
 
 	Parms.ProgressionStatus = ProgressionStatus;
+	Parms.score = score;
 	Parms.Progression01 = std::move(Progression01);
 	Parms.Progression02 = std::move(Progression02);
 	Parms.Progression03 = std::move(Progression03);
 	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeAndScore
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoThreeAndScore(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoThreeAndScore");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoThreeAndScore Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.Progression03 = std::move(Progression03);
-	Parms.score = score;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeScoreAndFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoThreeScoreAndFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoThreeScoreAndFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoThreeScoreAndFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.Progression03 = std::move(Progression03);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameAnalytics.GameAnalytics.AddProgressionEventWithOneTwoThreeScoreAndMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EGAProgressionStatus                    ProgressionStatus                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression01                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression02                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Progression03                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   score                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UGameAnalytics::AddProgressionEventWithOneTwoThreeScoreAndMergeFields(EGAProgressionStatus ProgressionStatus, const class FString& Progression01, const class FString& Progression02, const class FString& Progression03, int32 score, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddProgressionEventWithOneTwoThreeScoreAndMergeFields");
-
-	Params::GameAnalytics_AddProgressionEventWithOneTwoThreeScoreAndMergeFields Parms{};
-
-	Parms.ProgressionStatus = ProgressionStatus;
-	Parms.Progression01 = std::move(Progression01);
-	Parms.Progression02 = std::move(Progression02);
-	Parms.Progression03 = std::move(Progression03);
-	Parms.score = score;
-	Parms.CustomFields = std::move(CustomFields);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.AddResourceEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // EGAResourceFlowType                     FlowType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGACustomFields&           CustomFields                                           (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    MergeFields                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddResourceEvent(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID)
+void UGameAnalytics::AddResourceEvent(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const struct FGACustomFields& CustomFields, bool MergeFields)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddResourceEvent");
+		Func = Class->GetFunction("GameAnalytics", "AddResourceEvent");
 
 	Params::GameAnalytics_AddResourceEvent Parms{};
 
@@ -1585,113 +457,339 @@ void UGameAnalytics::AddResourceEvent(EGAResourceFlowType FlowType, const class 
 	Parms.Amount = Amount;
 	Parms.ItemType = std::move(ItemType);
 	Parms.ItemID = std::move(ItemID);
+	Parms.CustomFields = std::move(CustomFields);
+	Parms.MergeFields = MergeFields;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddResourceEventWithFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.ConfigureAutoDetectAppVersion
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EGAResourceFlowType                     FlowType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddResourceEventWithFields(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
+void UGameAnalytics::ConfigureAutoDetectAppVersion(bool Flag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddResourceEventWithFields");
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAutoDetectAppVersion");
 
-	Params::GameAnalytics_AddResourceEventWithFields Parms{};
+	Params::GameAnalytics_ConfigureAutoDetectAppVersion Parms{};
 
-	Parms.FlowType = FlowType;
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CustomFields = std::move(CustomFields);
+	Parms.Flag = Flag;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.AddResourceEventWithMergeFields
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions01
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// EGAResourceFlowType                     FlowType                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Currency                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Amount                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemType                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    ItemID                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FGameAnalyticsCustomEventField>&CustomFields                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            List                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::AddResourceEventWithMergeFields(EGAResourceFlowType FlowType, const class FString& Currency, float Amount, const class FString& ItemType, const class FString& ItemID, const TArray<struct FGameAnalyticsCustomEventField>& CustomFields)
+void UGameAnalytics::ConfigureAvailableCustomDimensions01(const TArray<class FString>& List)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "AddResourceEventWithMergeFields");
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAvailableCustomDimensions01");
 
-	Params::GameAnalytics_AddResourceEventWithMergeFields Parms{};
+	Params::GameAnalytics_ConfigureAvailableCustomDimensions01 Parms{};
 
-	Parms.FlowType = FlowType;
-	Parms.Currency = std::move(Currency);
-	Parms.Amount = Amount;
-	Parms.ItemType = std::move(ItemType);
-	Parms.ItemID = std::move(ItemID);
-	Parms.CustomFields = std::move(CustomFields);
+	Parms.List = std::move(List);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function GameAnalytics.GameAnalytics.DisableAdvertisingId
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions02
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            List                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureAvailableCustomDimensions02(const TArray<class FString>& List)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAvailableCustomDimensions02");
+
+	Params::GameAnalytics_ConfigureAvailableCustomDimensions02 Parms{};
+
+	Parms.List = std::move(List);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableCustomDimensions03
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            List                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureAvailableCustomDimensions03(const TArray<class FString>& List)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAvailableCustomDimensions03");
+
+	Params::GameAnalytics_ConfigureAvailableCustomDimensions03 Parms{};
+
+	Parms.List = std::move(List);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableResourceCurrencies
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            List                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureAvailableResourceCurrencies(const TArray<class FString>& List)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAvailableResourceCurrencies");
+
+	Params::GameAnalytics_ConfigureAvailableResourceCurrencies Parms{};
+
+	Parms.List = std::move(List);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureAvailableResourceItemTypes
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            List                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureAvailableResourceItemTypes(const TArray<class FString>& List)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureAvailableResourceItemTypes");
+
+	Params::GameAnalytics_ConfigureAvailableResourceItemTypes Parms{};
+
+	Parms.List = std::move(List);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureBuild
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Build                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureBuild(const class FString& Build)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureBuild");
+
+	Params::GameAnalytics_ConfigureBuild Parms{};
+
+	Parms.Build = std::move(Build);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureExternalUserId
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    UserId                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureExternalUserId(const class FString& UserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureExternalUserId");
+
+	Params::GameAnalytics_ConfigureExternalUserId Parms{};
+
+	Parms.UserId = std::move(UserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureGameEngineVersion
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    GameEngineVersion                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureGameEngineVersion(const class FString& GameEngineVersion)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureGameEngineVersion");
+
+	Params::GameAnalytics_ConfigureGameEngineVersion Parms{};
+
+	Parms.GameEngineVersion = std::move(GameEngineVersion);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureSdkGameEngineVersion
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    GameEngineSdkVersion                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureSdkGameEngineVersion(const class FString& GameEngineSdkVersion)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureSdkGameEngineVersion");
+
+	Params::GameAnalytics_ConfigureSdkGameEngineVersion Parms{};
+
+	Parms.GameEngineSdkVersion = std::move(GameEngineSdkVersion);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.ConfigureUserId
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    UserId                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::ConfigureUserId(const class FString& UserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "ConfigureUserId");
+
+	Params::GameAnalytics_ConfigureUserId Parms{};
+
+	Parms.UserId = std::move(UserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.DisableDeviceInfo
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameAnalytics::DisableDeviceInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "DisableDeviceInfo");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.EnableAdvertisingId
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGameAnalytics::DisableAdvertisingId(bool Value)
+void UGameAnalytics::EnableAdvertisingId(bool Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "DisableAdvertisingId");
+		Func = Class->GetFunction("GameAnalytics", "EnableAdvertisingId");
 
-	Params::GameAnalytics_DisableAdvertisingId Parms{};
+	Params::GameAnalytics_EnableAdvertisingId Parms{};
 
 	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.EnableFpsHistogram
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1700,7 +798,7 @@ void UGameAnalytics::EnableFpsHistogram(bool Value)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "EnableFpsHistogram");
+		Func = Class->GetFunction("GameAnalytics", "EnableFpsHistogram");
 
 	Params::GameAnalytics_EnableFpsHistogram Parms{};
 
@@ -1709,14 +807,14 @@ void UGameAnalytics::EnableFpsHistogram(bool Value)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.EnableHealthHardwareInfo
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1725,7 +823,7 @@ void UGameAnalytics::EnableHealthHardwareInfo(bool Value)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "EnableHealthHardwareInfo");
+		Func = Class->GetFunction("GameAnalytics", "EnableHealthHardwareInfo");
 
 	Params::GameAnalytics_EnableHealthHardwareInfo Parms{};
 
@@ -1734,14 +832,14 @@ void UGameAnalytics::EnableHealthHardwareInfo(bool Value)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.EnableMemoryHistogram
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1750,7 +848,7 @@ void UGameAnalytics::EnableMemoryHistogram(bool Value)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "EnableMemoryHistogram");
+		Func = Class->GetFunction("GameAnalytics", "EnableMemoryHistogram");
 
 	Params::GameAnalytics_EnableMemoryHistogram Parms{};
 
@@ -1759,14 +857,14 @@ void UGameAnalytics::EnableMemoryHistogram(bool Value)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.EnableSDKInitEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1775,7 +873,7 @@ void UGameAnalytics::EnableSDKInitEvent(bool Value)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "EnableSDKInitEvent");
+		Func = Class->GetFunction("GameAnalytics", "EnableSDKInitEvent");
 
 	Params::GameAnalytics_EnableSDKInitEvent Parms{};
 
@@ -1784,14 +882,33 @@ void UGameAnalytics::EnableSDKInitEvent(bool Value)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.EndSession
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameAnalytics::EndSession()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "EndSession");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.GetABTestingId
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1800,14 +917,14 @@ class FString UGameAnalytics::GetABTestingId()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "GetABTestingId");
+		Func = Class->GetFunction("GameAnalytics", "GetABTestingId");
 
 	Params::GameAnalytics_GetABTestingId Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1816,7 +933,7 @@ class FString UGameAnalytics::GetABTestingId()
 
 
 // Function GameAnalytics.GameAnalytics.GetABTestingVariantId
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1825,14 +942,89 @@ class FString UGameAnalytics::GetABTestingVariantId()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "GetABTestingVariantId");
+		Func = Class->GetFunction("GameAnalytics", "GetABTestingVariantId");
 
 	Params::GameAnalytics_GetABTestingVariantId Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameAnalytics.GameAnalytics.GetElapsedSessionTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int64 UGameAnalytics::GetElapsedSessionTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "GetElapsedSessionTime");
+
+	Params::GameAnalytics_GetElapsedSessionTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameAnalytics.GameAnalytics.GetElapsedTimeFromAllSessions
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int64 UGameAnalytics::GetElapsedTimeFromAllSessions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "GetElapsedTimeFromAllSessions");
+
+	Params::GameAnalytics_GetElapsedTimeFromAllSessions Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameAnalytics.GameAnalytics.GetExternalUserId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UGameAnalytics::GetExternalUserId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "GetExternalUserId");
+
+	Params::GameAnalytics_GetExternalUserId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1841,7 +1033,7 @@ class FString UGameAnalytics::GetABTestingVariantId()
 
 
 // Function GameAnalytics.GameAnalytics.GetRemoteConfigsContentAsString
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1850,14 +1042,14 @@ class FString UGameAnalytics::GetRemoteConfigsContentAsString()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "GetRemoteConfigsContentAsString");
+		Func = Class->GetFunction("GameAnalytics", "GetRemoteConfigsContentAsString");
 
 	Params::GameAnalytics_GetRemoteConfigsContentAsString Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1866,48 +1058,20 @@ class FString UGameAnalytics::GetRemoteConfigsContentAsString()
 
 
 // Function GameAnalytics.GameAnalytics.GetRemoteConfigsValueAsString
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UGameAnalytics::GetRemoteConfigsValueAsString(const class FString& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "GetRemoteConfigsValueAsString");
-
-	Params::GameAnalytics_GetRemoteConfigsValueAsString Parms{};
-
-	Parms.Key = std::move(Key);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameAnalytics.GameAnalytics.GetRemoteConfigsValueAsStringWithDefaultValue
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Key                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UGameAnalytics::GetRemoteConfigsValueAsStringWithDefaultValue(const class FString& Key, const class FString& DefaultValue)
+class FString UGameAnalytics::GetRemoteConfigsValueAsString(const class FString& Key, const class FString& DefaultValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "GetRemoteConfigsValueAsStringWithDefaultValue");
+		Func = Class->GetFunction("GameAnalytics", "GetRemoteConfigsValueAsString");
 
-	Params::GameAnalytics_GetRemoteConfigsValueAsStringWithDefaultValue Parms{};
+	Params::GameAnalytics_GetRemoteConfigsValueAsString Parms{};
 
 	Parms.Key = std::move(Key);
 	Parms.DefaultValue = std::move(DefaultValue);
@@ -1915,7 +1079,7 @@ class FString UGameAnalytics::GetRemoteConfigsValueAsStringWithDefaultValue(cons
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1923,8 +1087,60 @@ class FString UGameAnalytics::GetRemoteConfigsValueAsStringWithDefaultValue(cons
 }
 
 
+// Function GameAnalytics.GameAnalytics.GetUserId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UGameAnalytics::GetUserId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "GetUserId");
+
+	Params::GameAnalytics_GetUserId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameAnalytics.GameAnalytics.Initialize
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    GameKey                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    GameSecret                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::Initialize(const class FString& GameKey, const class FString& GameSecret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "Initialize");
+
+	Params::GameAnalytics_Initialize Parms{};
+
+	Parms.GameKey = std::move(GameKey);
+	Parms.GameSecret = std::move(GameSecret);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameAnalytics.GameAnalytics.IsRemoteConfigsReady
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1933,14 +1149,14 @@ bool UGameAnalytics::IsRemoteConfigsReady()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "IsRemoteConfigsReady");
+		Func = Class->GetFunction("GameAnalytics", "IsRemoteConfigsReady");
 
 	Params::GameAnalytics_IsRemoteConfigsReady Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1949,26 +1165,26 @@ bool UGameAnalytics::IsRemoteConfigsReady()
 
 
 // Function GameAnalytics.GameAnalytics.OnQuit
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 
 void UGameAnalytics::OnQuit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "OnQuit");
+		Func = Class->GetFunction("GameAnalytics", "OnQuit");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension01
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    CustomDimension                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1977,7 +1193,7 @@ void UGameAnalytics::SetCustomDimension01(const class FString& CustomDimension)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "SetCustomDimension01");
+		Func = Class->GetFunction("GameAnalytics", "SetCustomDimension01");
 
 	Params::GameAnalytics_SetCustomDimension01 Parms{};
 
@@ -1986,14 +1202,14 @@ void UGameAnalytics::SetCustomDimension01(const class FString& CustomDimension)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension02
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    CustomDimension                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2002,7 +1218,7 @@ void UGameAnalytics::SetCustomDimension02(const class FString& CustomDimension)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "SetCustomDimension02");
+		Func = Class->GetFunction("GameAnalytics", "SetCustomDimension02");
 
 	Params::GameAnalytics_SetCustomDimension02 Parms{};
 
@@ -2011,14 +1227,14 @@ void UGameAnalytics::SetCustomDimension02(const class FString& CustomDimension)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
 // Function GameAnalytics.GameAnalytics.SetCustomDimension03
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    CustomDimension                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2027,7 +1243,7 @@ void UGameAnalytics::SetCustomDimension03(const class FString& CustomDimension)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameAnalytics", "SetCustomDimension03");
+		Func = Class->GetFunction("GameAnalytics", "SetCustomDimension03");
 
 	Params::GameAnalytics_SetCustomDimension03 Parms{};
 
@@ -2036,7 +1252,176 @@ void UGameAnalytics::SetCustomDimension03(const class FString& CustomDimension)
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetEnabledErrorReporting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetEnabledErrorReporting(bool Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetEnabledErrorReporting");
+
+	Params::GameAnalytics_SetEnabledErrorReporting Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetEnabledEventSubmission
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetEnabledEventSubmission(bool Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetEnabledEventSubmission");
+
+	Params::GameAnalytics_SetEnabledEventSubmission Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetEnabledInfoLog
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetEnabledInfoLog(bool Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetEnabledInfoLog");
+
+	Params::GameAnalytics_SetEnabledInfoLog Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetEnabledManualSessionHandling
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetEnabledManualSessionHandling(bool Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetEnabledManualSessionHandling");
+
+	Params::GameAnalytics_SetEnabledManualSessionHandling Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetEnabledVerboseLog
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Flag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetEnabledVerboseLog(bool Flag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetEnabledVerboseLog");
+
+	Params::GameAnalytics_SetEnabledVerboseLog Parms{};
+
+	Parms.Flag = Flag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.SetWritablePath
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Path                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameAnalytics::SetWritablePath(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "SetWritablePath");
+
+	Params::GameAnalytics_SetWritablePath Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameAnalytics.GameAnalytics.StartSession
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameAnalytics::StartSession()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameAnalytics", "StartSession");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

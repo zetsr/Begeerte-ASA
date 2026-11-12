@@ -42,5 +42,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_Shield_C>();
 	}
 };
+DUMPER7_ASSERTS_UPrimalItemArmor_Shield_C;
 
 SDK_NAMESPACE_END

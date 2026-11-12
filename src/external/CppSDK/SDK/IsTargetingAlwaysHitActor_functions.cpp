@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UIsTargetingAlwaysHitActor_C::ExecuteUbergraph_IsTargetingAlwaysHitActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsTargetingAlwaysHitActor_C", "ExecuteUbergraph_IsTargetingAlwaysHitActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsTargetingAlwaysHitActor_C", "ExecuteUbergraph_IsTargetingAlwaysHitActor", FuncInfo);
 
 	Params::IsTargetingAlwaysHitActor_C_ExecuteUbergraph_IsTargetingAlwaysHitActor Parms{};
 
@@ -43,10 +41,8 @@ void UIsTargetingAlwaysHitActor_C::ExecuteUbergraph_IsTargetingAlwaysHitActor(in
 
 void UIsTargetingAlwaysHitActor_C::ReceiveConditionCheck(class AActor* OwnerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("IsTargetingAlwaysHitActor_C", "ReceiveConditionCheck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "IsTargetingAlwaysHitActor_C", "ReceiveConditionCheck", FuncInfo);
 
 	Params::IsTargetingAlwaysHitActor_C_ReceiveConditionCheck Parms{};
 

@@ -23,10 +23,8 @@ SDK_NAMESPACE_START
 
 void UUI_CFCore_CustomizeBoolSlot_C::BndEvt__UI_CustomizeBoolSlot_CheckBox_285_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "BndEvt__UI_CustomizeBoolSlot_CheckBox_285_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "BndEvt__UI_CustomizeBoolSlot_CheckBox_285_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_BndEvt__UI_CustomizeBoolSlot_CheckBox_285_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
 
@@ -43,10 +41,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::BndEvt__UI_CustomizeBoolSlot_CheckBox_285_K
 
 void UUI_CFCore_CustomizeBoolSlot_C::ExecuteUbergraph_UI_CFCore_CustomizeBoolSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "ExecuteUbergraph_UI_CFCore_CustomizeBoolSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "ExecuteUbergraph_UI_CFCore_CustomizeBoolSlot", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_ExecuteUbergraph_UI_CFCore_CustomizeBoolSlot Parms{};
 
@@ -63,10 +59,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::ExecuteUbergraph_UI_CFCore_CustomizeBoolSlo
 
 void UUI_CFCore_CustomizeBoolSlot_C::GetColor(struct FLinearColor* Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "GetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "GetColor", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_GetColor Parms{};
 
@@ -84,10 +78,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::GetColor(struct FLinearColor* Color)
 
 void UUI_CFCore_CustomizeBoolSlot_C::GetCurrentTheme(struct FCFCoreThemeRowData* CurrentTheme)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "GetCurrentTheme");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "GetCurrentTheme", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_GetCurrentTheme Parms{};
 
@@ -103,10 +95,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::GetCurrentTheme(struct FCFCoreThemeRowData*
 
 void UUI_CFCore_CustomizeBoolSlot_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "OnInitialized");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "OnInitialized", FuncInfo);
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +109,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::OnInitialized()
 
 void UUI_CFCore_CustomizeBoolSlot_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "PreConstruct");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "PreConstruct", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_PreConstruct Parms{};
 
@@ -139,10 +127,8 @@ void UUI_CFCore_CustomizeBoolSlot_C::PreConstruct(bool IsDesignTime)
 
 void UUI_CFCore_CustomizeBoolSlot_C::SetColor(const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_CFCore_CustomizeBoolSlot_C", "SetColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "UI_CFCore_CustomizeBoolSlot_C", "SetColor", FuncInfo);
 
 	Params::UI_CFCore_CustomizeBoolSlot_C_SetColor Parms{};
 

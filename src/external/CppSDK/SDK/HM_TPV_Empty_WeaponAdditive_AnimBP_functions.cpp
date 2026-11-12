@@ -24,10 +24,8 @@ SDK_NAMESPACE_START
 
 void UHM_TPV_Empty_WeaponAdditive_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HM_TPV_Empty_WeaponAdditive_AnimBP_C", "AnimGraph");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HM_TPV_Empty_WeaponAdditive_AnimBP_C", "AnimGraph", FuncInfo);
 
 	Params::HM_TPV_Empty_WeaponAdditive_AnimBP_C_AnimGraph Parms{};
 
@@ -47,10 +45,8 @@ void UHM_TPV_Empty_WeaponAdditive_AnimBP_C::AnimGraph(const struct FPoseLink& In
 
 void UHM_TPV_Empty_WeaponAdditive_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HM_TPV_Empty_WeaponAdditive_AnimBP_C", "BlueprintUpdateAnimation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HM_TPV_Empty_WeaponAdditive_AnimBP_C", "BlueprintUpdateAnimation", FuncInfo);
 
 	Params::HM_TPV_Empty_WeaponAdditive_AnimBP_C_BlueprintUpdateAnimation Parms{};
 
@@ -67,10 +63,8 @@ void UHM_TPV_Empty_WeaponAdditive_AnimBP_C::BlueprintUpdateAnimation(float Delta
 
 void UHM_TPV_Empty_WeaponAdditive_AnimBP_C::ExecuteUbergraph_HM_TPV_Empty_WeaponAdditive_AnimBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HM_TPV_Empty_WeaponAdditive_AnimBP_C", "ExecuteUbergraph_HM_TPV_Empty_WeaponAdditive_AnimBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "HM_TPV_Empty_WeaponAdditive_AnimBP_C", "ExecuteUbergraph_HM_TPV_Empty_WeaponAdditive_AnimBP", FuncInfo);
 
 	Params::HM_TPV_Empty_WeaponAdditive_AnimBP_C_ExecuteUbergraph_HM_TPV_Empty_WeaponAdditive_AnimBP Parms{};
 

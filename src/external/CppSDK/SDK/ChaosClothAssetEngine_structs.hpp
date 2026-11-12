@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 
@@ -19,7 +20,7 @@ SDK_NAMESPACE_START
 
 // Enum ChaosClothAssetEngine.EClothAssetAsyncProperties
 // NumValues: 0x0008
-enum class EClothAssetAsyncProperties : uint64
+enum class EClothAssetAsyncProperties : uint32
 {
 	None                                     = 0,
 	RenderData                               = 1,
@@ -27,9 +28,59 @@ enum class EClothAssetAsyncProperties : uint64
 	ImportedModel                            = 4,
 	ClothCollection                          = 8,
 	RefSkeleton                              = 16,
-	All                                      = 18446744073709551615,
-	EClothAssetAsyncProperties_MAX           = 17,
+	All                                      = 4294967295,
+	EClothAssetAsyncProperties_MAX           = 4294967296,
 };
+
+// Enum ChaosClothAssetEngine.EChaosClothAssetBaseAsyncProperties
+// NumValues: 0x0008
+enum class EChaosClothAssetBaseAsyncProperties : uint32
+{
+	None                                     = 0,
+	RenderData                               = 1,
+	RefSkeleton                              = 2,
+	HasVertexColors                          = 4,
+	OverlayMaterial                          = 8,
+	OverlayMaterialMaxDrawDistance           = 16,
+	All                                      = 4294967295,
+	EChaosClothAssetBaseAsyncProperties_MAX  = 4294967296,
+};
+
+// ScriptStruct ChaosClothAssetEngine.ClothAssetInteractorPropertyBag
+// 0x0000 (0x0010 - 0x0010)
+struct FClothAssetInteractorPropertyBag final : public FInstancedPropertyBag
+{
+};
+DUMPER7_ASSERTS_FClothAssetInteractorPropertyBag;
+
+// ScriptStruct ChaosClothAssetEngine.ChaosClothSimulationProperties
+// 0x0028 (0x0028 - 0x0000)
+struct FChaosClothSimulationProperties final
+{
+public:
+	class UChaosClothAssetInteractor*             ClothOutfitInteractor;                             // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_8[0x20];                                       // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChaosClothSimulationProperties;
+
+// ScriptStruct ChaosClothAssetEngine.ChaosClothComponentEndTickFunction
+// 0x0008 (0x0038 - 0x0030)
+struct FChaosClothComponentEndTickFunction final : public FTickFunction
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChaosClothComponentEndTickFunction;
+
+// ScriptStruct ChaosClothAssetEngine.ChaosClothComponentInstanceData
+// 0x0010 (0x00C8 - 0x00B8)
+struct FChaosClothComponentInstanceData final : public FSceneComponentInstanceData
+{
+public:
+	class UChaosClothAssetBase*                   Asset;                                             // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChaosClothComponentInstanceData;
 
 // ScriptStruct ChaosClothAssetEngine.ChaosClothAssetLodTransitionDataCache
 // 0x0038 (0x0038 - 0x0000)
@@ -38,6 +89,7 @@ struct alignas(0x08) FChaosClothAssetLodTransitionDataCache final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FChaosClothAssetLodTransitionDataCache;
 
 // ScriptStruct ChaosClothAssetEngine.ChaosClothSimulationLodModel
 // 0x01F0 (0x01F0 - 0x0000)
@@ -57,6 +109,7 @@ public:
 	struct FClothTetherData                       TetherData;                                        // 0x00F0(0x0010)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_100[0xF0];                                     // 0x0100(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FChaosClothSimulationLodModel;
 
 // ScriptStruct ChaosClothAssetEngine.ChaosClothSimulationModel
 // 0x0038 (0x0038 - 0x0000)
@@ -69,5 +122,6 @@ public:
 	int32                                         ReferenceBoneIndex;                                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
+DUMPER7_ASSERTS_FChaosClothSimulationModel;
 
 SDK_NAMESPACE_END

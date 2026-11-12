@@ -35,5 +35,6 @@ public:
 	}
 };
 #pragma pack(pop)
+DUMPER7_ASSERTS_UPrimalItemWeaponGeneric_C;
 
 SDK_NAMESPACE_END

@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_DmgStone_ExtraHarvest_C>();
 	}
 };
+DUMPER7_ASSERTS_UDmgType_Melee_DmgStone_ExtraHarvest_C;
 
 SDK_NAMESPACE_END

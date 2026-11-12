@@ -41,6 +41,7 @@ public:
 		return GetDefaultObjImpl<UTypedElementSelectionSetLibrary>();
 	}
 };
+DUMPER7_ASSERTS_UTypedElementSelectionSetLibrary;
 
 // Class TypedElementRuntime.TypedElementSelectionSet
 // 0x0878 (0x08A0 - 0x0028)
@@ -91,11 +92,15 @@ public:
 		return GetDefaultObjImpl<UTypedElementSelectionSet>();
 	}
 };
+DUMPER7_ASSERTS_UTypedElementSelectionSet;
 
 // Class TypedElementRuntime.TypedElementAssetDataInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementAssetDataInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementAssetDataInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	TArray<struct FAssetData> GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle);
 	struct FAssetData GetAssetData(const struct FScriptTypedElementHandle& InElementHandle);
@@ -123,11 +128,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementAssetDataInterface;
 
 // Class TypedElementRuntime.TypedElementHierarchyInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementHierarchyInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementHierarchyInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetChildElements(const struct FScriptTypedElementHandle& InElementHandle, TArray<struct FScriptTypedElementHandle>* OutElementHandles, const bool bAllowCreate);
 	struct FScriptTypedElementHandle GetParentElement(const struct FScriptTypedElementHandle& InElementHandle, const bool bAllowCreate);
@@ -155,11 +164,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementHierarchyInterface;
 
 // Class TypedElementRuntime.TypedElementObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementObjectInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementObjectInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	class UObject* GetObject(const struct FScriptTypedElementHandle& InElementHandle);
 	class UClass* GetObjectClass(const struct FScriptTypedElementHandle& InElementHandle);
@@ -187,11 +200,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementObjectInterface;
 
 // Class TypedElementRuntime.TypedElementPrimitiveCustomDataInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementPrimitiveCustomDataInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementPrimitiveCustomDataInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetCustomData(const struct FScriptTypedElementHandle& InElementHandle, const TArray<float>& CustomDataFloats, bool bMarkRenderStateDirty);
 	void SetCustomDataValue(const struct FScriptTypedElementHandle& InElementHandle, int32 CustomDataIndex, float CustomDataValue, bool bMarkRenderStateDirty);
@@ -219,11 +236,15 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementPrimitiveCustomDataInterface;
 
 // Class TypedElementRuntime.TypedElementSelectionInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementSelectionInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementSelectionInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool AllowSelectionModifiers(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet);
 	bool CanDeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions);
@@ -256,5 +277,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
+DUMPER7_ASSERTS_ITypedElementSelectionInterface;
 
 SDK_NAMESPACE_END

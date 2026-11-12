@@ -13,22 +13,67 @@
 
 SDK_NAMESPACE_START
 
-// Enum MeshModelingTools.EPolyEditExtrudeEdgeDirectionMode
-// NumValues: 0x0003
-enum class EPolyEditExtrudeEdgeDirectionMode : uint32
+// Enum MeshModelingTools.EPlaneBrushSideMode
+// NumValues: 0x0004
+enum class EPlaneBrushSideMode : uint8
 {
-	LocalExtrudeFrames                       = 0,
-	SingleDirection                          = 1,
-	EPolyEditExtrudeEdgeDirectionMode_MAX    = 2,
+	BothSides                                = 0,
+	PushDown                                 = 1,
+	PullTowards                              = 2,
+	EPlaneBrushSideMode_MAX                  = 3,
 };
 
-// Enum MeshModelingTools.EPolyEditExtrudeEdgeDistanceMode
-// NumValues: 0x0003
-enum class EPolyEditExtrudeEdgeDistanceMode : uint32
+// Enum MeshModelingTools.EMeshSculptStrokeType
+// NumValues: 0x0005
+enum class EMeshSculptStrokeType : uint8
 {
-	Fixed                                    = 0,
-	Gizmo                                    = 1,
-	EPolyEditExtrudeEdgeDistanceMode_MAX     = 2,
+	Spacing                                  = 0,
+	Airbrush                                 = 1,
+	Dots                                     = 2,
+	LastValue                                = 3,
+	EMeshSculptStrokeType_MAX                = 4,
+};
+
+// Enum MeshModelingTools.EVertexColorPaintBrushOpBlendMode
+// NumValues: 0x0004
+enum class EVertexColorPaintBrushOpBlendMode : uint32
+{
+	Lerp                                     = 0,
+	Mix                                      = 1,
+	Multiply                                 = 2,
+	EVertexColorPaintBrushOpBlendMode_MAX    = 3,
+};
+
+// Enum MeshModelingTools.EMeshBoundaryConstraint
+// NumValues: 0x0004
+enum class EMeshBoundaryConstraint : uint8
+{
+	Fixed                                    = 15,
+	Refine                                   = 5,
+	Free                                     = 1,
+	EMeshBoundaryConstraint_MAX              = 16,
+};
+
+// Enum MeshModelingTools.EGroupBoundaryConstraint
+// NumValues: 0x0005
+enum class EGroupBoundaryConstraint : uint8
+{
+	Fixed                                    = 15,
+	Refine                                   = 5,
+	Free                                     = 1,
+	Ignore                                   = 0,
+	EGroupBoundaryConstraint_MAX             = 16,
+};
+
+// Enum MeshModelingTools.EMaterialBoundaryConstraint
+// NumValues: 0x0005
+enum class EMaterialBoundaryConstraint : uint8
+{
+	Fixed                                    = 15,
+	Refine                                   = 5,
+	Free                                     = 1,
+	Ignore                                   = 0,
+	EMaterialBoundaryConstraint_MAX          = 16,
 };
 
 // Enum MeshModelingTools.EMakeMeshPlacementType
@@ -99,6 +144,103 @@ enum class EProceduralStairsType : uint32
 	EProceduralStairsType_MAX                = 4,
 };
 
+// Enum MeshModelingTools.EConvertToPolygonsMode
+// NumValues: 0x0009
+enum class EConvertToPolygonsMode : uint32
+{
+	FaceNormalDeviation                      = 0,
+	FindPolygons                             = 1,
+	FromMaterialIDs                          = 7,
+	FromUVIslands                            = 2,
+	FromNormalSeams                          = 3,
+	FromConnectedTris                        = 4,
+	FromFurthestPointSampling                = 5,
+	CopyFromLayer                            = 6,
+	EConvertToPolygonsMode_MAX               = 8,
+};
+
+// Enum MeshModelingTools.EPerTriangleAttributeType
+// NumValues: 0x0003
+enum class EPerTriangleAttributeType : uint32
+{
+	Integer                                  = 0,
+	Label                                    = 1,
+	EPerTriangleAttributeType_MAX            = 2,
+};
+
+// Enum MeshModelingTools.EGroupTopologyDeformationStrategy
+// NumValues: 0x0003
+enum class EGroupTopologyDeformationStrategy : uint8
+{
+	Linear                                   = 0,
+	Laplacian                                = 1,
+	EGroupTopologyDeformationStrategy_MAX    = 2,
+};
+
+// Enum MeshModelingTools.EWeightScheme
+// NumValues: 0x0008
+enum class EWeightScheme : uint32
+{
+	Uniform                                  = 0,
+	Umbrella                                 = 1,
+	Valence                                  = 2,
+	MeanValue                                = 3,
+	Cotangent                                = 4,
+	ClampedCotangent                         = 5,
+	IDTCotangent                             = 6,
+	EWeightScheme_MAX                        = 7,
+};
+
+// Enum MeshModelingTools.EQuickTransformerMode
+// NumValues: 0x0003
+enum class EQuickTransformerMode : uint8
+{
+	AxisTranslation                          = 0,
+	AxisRotation                             = 1,
+	EQuickTransformerMode_MAX                = 2,
+};
+
+// Enum MeshModelingTools.EDisplaceMeshToolDisplaceType
+// NumValues: 0x0006
+enum class EDisplaceMeshToolDisplaceType : uint8
+{
+	Constant                                 = 0,
+	DisplacementMap                          = 1,
+	RandomNoise                              = 2,
+	PerlinNoise                              = 3,
+	SineWave                                 = 4,
+	EDisplaceMeshToolDisplaceType_MAX        = 5,
+};
+
+// Enum MeshModelingTools.EDisplaceMeshToolSubdivisionType
+// NumValues: 0x0003
+enum class EDisplaceMeshToolSubdivisionType : uint8
+{
+	Flat                                     = 0,
+	PNTriangles                              = 1,
+	EDisplaceMeshToolSubdivisionType_MAX     = 2,
+};
+
+// Enum MeshModelingTools.EDisplaceMeshToolTriangleSelectionType
+// NumValues: 0x0003
+enum class EDisplaceMeshToolTriangleSelectionType : uint8
+{
+	None                                     = 0,
+	Material                                 = 1,
+	EDisplaceMeshToolTriangleSelectionType_MAX = 2,
+};
+
+// Enum MeshModelingTools.EDisplaceMeshToolChannelType
+// NumValues: 0x0005
+enum class EDisplaceMeshToolChannelType : uint8
+{
+	Red                                      = 0,
+	Green                                    = 1,
+	Blue                                     = 2,
+	Alpha                                    = 3,
+	EDisplaceMeshToolChannelType_MAX         = 4,
+};
+
 // Enum MeshModelingTools.EDrawPolygonDrawMode
 // NumValues: 0x0007
 enum class EDrawPolygonDrawMode : uint8
@@ -120,6 +262,30 @@ enum class EDrawPolygonExtrudeMode : uint8
 	Fixed                                    = 1,
 	Interactive                              = 2,
 	EDrawPolygonExtrudeMode_MAX              = 3,
+};
+
+// Enum MeshModelingTools.EDynamicMeshSculptBrushType
+// NumValues: 0x0012
+enum class EDynamicMeshSculptBrushType : uint8
+{
+	Move                                     = 0,
+	PullKelvin                               = 1,
+	PullSharpKelvin                          = 2,
+	Smooth                                   = 3,
+	Offset                                   = 4,
+	SculptView                               = 5,
+	SculptMax                                = 6,
+	Inflate                                  = 7,
+	ScaleKelvin                              = 8,
+	Pinch                                    = 9,
+	TwistKelvin                              = 10,
+	Flatten                                  = 11,
+	Plane                                    = 12,
+	PlaneViewAligned                         = 13,
+	FixedPlane                               = 14,
+	Resample                                 = 15,
+	LastValue                                = 16,
+	EDynamicMeshSculptBrushType_MAX          = 17,
 };
 
 // Enum MeshModelingTools.ELocalFrameMode
@@ -190,6 +356,300 @@ enum class EEditMeshPolygonsToolSelectionMode : uint8
 	EEditMeshPolygonsToolSelectionMode_MAX   = 6,
 };
 
+// Enum MeshModelingTools.EHoleFillToolActions
+// NumValues: 0x0004
+enum class EHoleFillToolActions : uint8
+{
+	NoAction                                 = 0,
+	SelectAll                                = 1,
+	ClearSelection                           = 2,
+	EHoleFillToolActions_MAX                 = 3,
+};
+
+// Enum MeshModelingTools.ELatticeDeformerToolAction
+// NumValues: 0x0004
+enum class ELatticeDeformerToolAction : uint8
+{
+	NoAction                                 = 0,
+	Constrain                                = 1,
+	ClearConstraints                         = 2,
+	ELatticeDeformerToolAction_MAX           = 3,
+};
+
+// Enum MeshModelingTools.EMeshAttributePaintMaterialMode
+// NumValues: 0x0004
+enum class EMeshAttributePaintMaterialMode : uint32
+{
+	Shaded                                   = 0,
+	ColorOnly                                = 1,
+	ExistingMaterial                         = 2,
+	EMeshAttributePaintMaterialMode_MAX      = 3,
+};
+
+// Enum MeshModelingTools.EBrushActionMode
+// NumValues: 0x0005
+enum class EBrushActionMode : uint32
+{
+	Paint                                    = 0,
+	FloodFill                                = 1,
+	Erase                                    = 2,
+	Smooth                                   = 3,
+	EBrushActionMode_MAX                     = 4,
+};
+
+// Enum MeshModelingTools.EMeshAttributePaintToolActions
+// NumValues: 0x0002
+enum class EMeshAttributePaintToolActions : uint8
+{
+	NoAction                                 = 0,
+	EMeshAttributePaintToolActions_MAX       = 1,
+};
+
+// Enum MeshModelingTools.EMeshGroupPaintInteractionType
+// NumValues: 0x0006
+enum class EMeshGroupPaintInteractionType : uint8
+{
+	Brush                                    = 0,
+	Fill                                     = 1,
+	GroupFill                                = 2,
+	PolyLasso                                = 3,
+	LastValue                                = 4,
+	EMeshGroupPaintInteractionType_MAX       = 5,
+};
+
+// Enum MeshModelingTools.EMeshGroupPaintBrushType
+// NumValues: 0x0004
+enum class EMeshGroupPaintBrushType : uint8
+{
+	Paint                                    = 0,
+	Erase                                    = 1,
+	LastValue                                = 2,
+	EMeshGroupPaintBrushType_MAX             = 3,
+};
+
+// Enum MeshModelingTools.EMeshGroupPaintBrushAreaType
+// NumValues: 0x0003
+enum class EMeshGroupPaintBrushAreaType : uint8
+{
+	Connected                                = 0,
+	Volumetric                               = 1,
+	EMeshGroupPaintBrushAreaType_MAX         = 2,
+};
+
+// Enum MeshModelingTools.EMeshGroupPaintVisibilityType
+// NumValues: 0x0004
+enum class EMeshGroupPaintVisibilityType : uint8
+{
+	None                                     = 0,
+	FrontFacing                              = 1,
+	Unoccluded                               = 2,
+	EMeshGroupPaintVisibilityType_MAX        = 3,
+};
+
+// Enum MeshModelingTools.EMeshGroupPaintToolActions
+// NumValues: 0x000A
+enum class EMeshGroupPaintToolActions : uint8
+{
+	NoAction                                 = 0,
+	ClearFrozen                              = 1,
+	FreezeCurrent                            = 2,
+	FreezeOthers                             = 3,
+	GrowCurrent                              = 4,
+	ShrinkCurrent                            = 5,
+	ClearCurrent                             = 6,
+	FloodFillCurrent                         = 7,
+	ClearAll                                 = 8,
+	EMeshGroupPaintToolActions_MAX           = 9,
+};
+
+// Enum MeshModelingTools.ENonlinearOperationType
+// NumValues: 0x0004
+enum class ENonlinearOperationType : uint8
+{
+	Bend                                     = 0,
+	Flare                                    = 1,
+	Twist                                    = 2,
+	ENonlinearOperationType_MAX              = 3,
+};
+
+// Enum MeshModelingTools.EFlareProfileType
+// NumValues: 0x0004
+enum class EFlareProfileType : uint8
+{
+	SinMode                                  = 0,
+	SinSquaredMode                           = 1,
+	TriangleMode                             = 2,
+	EFlareProfileType_MAX                    = 3,
+};
+
+// Enum MeshModelingTools.EMeshSpaceDeformerToolAction
+// NumValues: 0x0003
+enum class EMeshSpaceDeformerToolAction : uint8
+{
+	NoAction                                 = 0,
+	ShiftToCenter                            = 1,
+	EMeshSpaceDeformerToolAction_MAX         = 2,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintInteractionType
+// NumValues: 0x0007
+enum class EMeshVertexPaintInteractionType : uint8
+{
+	Brush                                    = 0,
+	TriFill                                  = 1,
+	Fill                                     = 2,
+	GroupFill                                = 3,
+	PolyLasso                                = 4,
+	LastValue                                = 5,
+	EMeshVertexPaintInteractionType_MAX      = 6,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintColorChannel
+// NumValues: 0x0005
+enum class EMeshVertexPaintColorChannel : uint8
+{
+	Red                                      = 0,
+	Green                                    = 1,
+	Blue                                     = 2,
+	Alpha                                    = 3,
+	EMeshVertexPaintColorChannel_MAX         = 4,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintColorBlendMode
+// NumValues: 0x0004
+enum class EMeshVertexPaintColorBlendMode : uint8
+{
+	Lerp                                     = 0,
+	Mix                                      = 1,
+	Multiply                                 = 2,
+	EMeshVertexPaintColorBlendMode_MAX       = 3,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintBrushType
+// NumValues: 0x0006
+enum class EMeshVertexPaintBrushType : uint8
+{
+	Paint                                    = 0,
+	Erase                                    = 1,
+	Soften                                   = 2,
+	Smooth                                   = 3,
+	LastValue                                = 4,
+	EMeshVertexPaintBrushType_MAX            = 5,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintSecondaryActionType
+// NumValues: 0x0004
+enum class EMeshVertexPaintSecondaryActionType : uint8
+{
+	Erase                                    = 0,
+	Soften                                   = 1,
+	Smooth                                   = 2,
+	EMeshVertexPaintSecondaryActionType_MAX  = 3,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintBrushAreaType
+// NumValues: 0x0003
+enum class EMeshVertexPaintBrushAreaType : uint8
+{
+	Connected                                = 0,
+	Volumetric                               = 1,
+	EMeshVertexPaintBrushAreaType_MAX        = 2,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintVisibilityType
+// NumValues: 0x0004
+enum class EMeshVertexPaintVisibilityType : uint8
+{
+	None                                     = 0,
+	FrontFacing                              = 1,
+	Unoccluded                               = 2,
+	EMeshVertexPaintVisibilityType_MAX       = 3,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintMaterialMode
+// NumValues: 0x0004
+enum class EMeshVertexPaintMaterialMode : uint8
+{
+	LitVertexColor                           = 0,
+	UnlitVertexColor                         = 1,
+	OriginalMaterial                         = 2,
+	EMeshVertexPaintMaterialMode_MAX         = 3,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintToolActions
+// NumValues: 0x0007
+enum class EMeshVertexPaintToolActions : uint8
+{
+	NoAction                                 = 0,
+	PaintAll                                 = 1,
+	EraseAll                                 = 2,
+	FillBlack                                = 3,
+	FillWhite                                = 4,
+	ApplyCurrentUtility                      = 5,
+	EMeshVertexPaintToolActions_MAX          = 6,
+};
+
+// Enum MeshModelingTools.EMeshVertexPaintToolUtilityOperations
+// NumValues: 0x0009
+enum class EMeshVertexPaintToolUtilityOperations : uint32
+{
+	BlendAllSeams                            = 0,
+	FillChannels                             = 1,
+	InvertChannels                           = 2,
+	CopyChannelToChannel                     = 3,
+	SwapChannels                             = 4,
+	CopyFromWeightMap                        = 5,
+	CopyToOtherLODs                          = 6,
+	CopyToSingleLOD                          = 7,
+	EMeshVertexPaintToolUtilityOperations_MAX = 8,
+};
+
+// Enum MeshModelingTools.EMeshVertexSculptBrushType
+// NumValues: 0x0015
+enum class EMeshVertexSculptBrushType : uint8
+{
+	Move                                     = 0,
+	PullKelvin                               = 1,
+	PullSharpKelvin                          = 2,
+	Smooth                                   = 3,
+	SmoothFill                               = 4,
+	Offset                                   = 5,
+	SculptView                               = 6,
+	SculptMax                                = 7,
+	Inflate                                  = 8,
+	InflateStroke                            = 9,
+	InflateMax                               = 10,
+	ScaleKelvin                              = 11,
+	Pinch                                    = 12,
+	TwistKelvin                              = 13,
+	Flatten                                  = 14,
+	Plane                                    = 15,
+	PlaneViewAligned                         = 16,
+	FixedPlane                               = 17,
+	EraseSculptLayer                         = 18,
+	LastValue                                = 19,
+	EMeshVertexSculptBrushType_MAX           = 20,
+};
+
+// Enum MeshModelingTools.EMeshVertexSculptBrushFilterType
+// NumValues: 0x0004
+enum class EMeshVertexSculptBrushFilterType : uint8
+{
+	None                                     = 0,
+	Component                                = 1,
+	PolyGroup                                = 2,
+	EMeshVertexSculptBrushFilterType_MAX     = 3,
+};
+
+// Enum MeshModelingTools.EOffsetMeshToolOffsetType
+// NumValues: 0x0003
+enum class EOffsetMeshToolOffsetType : uint8
+{
+	Iterative                                = 0,
+	Implicit                                 = 1,
+	EOffsetMeshToolOffsetType_MAX            = 2,
+};
+
 // Enum MeshModelingTools.ESetMeshMaterialMode
 // NumValues: 0x0004
 enum class ESetMeshMaterialMode : uint8
@@ -245,6 +705,68 @@ enum class ERevolvePropertiesQuadSplit : uint8
 	Uniform                                  = 0,
 	Compact                                  = 1,
 	ERevolvePropertiesQuadSplit_MAX          = 2,
+};
+
+// Enum MeshModelingTools.EOcclusionTriangleSamplingUIMode
+// NumValues: 0x0003
+enum class EOcclusionTriangleSamplingUIMode : uint8
+{
+	Vertices                                 = 0,
+	VerticesAndCentroids                     = 1,
+	EOcclusionTriangleSamplingUIMode_MAX     = 2,
+};
+
+// Enum MeshModelingTools.EOcclusionCalculationUIMode
+// NumValues: 0x0003
+enum class EOcclusionCalculationUIMode : uint8
+{
+	GeneralizedWindingNumber                 = 0,
+	RaycastOcclusionSamples                  = 1,
+	EOcclusionCalculationUIMode_MAX          = 2,
+};
+
+// Enum MeshModelingTools.EOccludedAction
+// NumValues: 0x0003
+enum class EOccludedAction : uint8
+{
+	Remove                                   = 0,
+	SetNewGroup                              = 1,
+	EOccludedAction_MAX                      = 2,
+};
+
+// Enum MeshModelingTools.EBrushToolSizeType
+// NumValues: 0x0003
+enum class EBrushToolSizeType : uint8
+{
+	Adaptive                                 = 0,
+	World                                    = 1,
+	EBrushToolSizeType_MAX                   = 2,
+};
+
+// Enum MeshModelingTools.EMeshSculptFalloffType
+// NumValues: 0x000A
+enum class EMeshSculptFalloffType : uint8
+{
+	Smooth                                   = 0,
+	Linear                                   = 1,
+	Inverse                                  = 2,
+	Round                                    = 3,
+	BoxSmooth                                = 4,
+	BoxLinear                                = 5,
+	BoxInverse                               = 6,
+	BoxRound                                 = 7,
+	LastValue                                = 8,
+	EMeshSculptFalloffType_MAX               = 9,
+};
+
+// Enum MeshModelingTools.ESmoothMeshToolSmoothType
+// NumValues: 0x0004
+enum class ESmoothMeshToolSmoothType : uint8
+{
+	Iterative                                = 0,
+	Implicit                                 = 1,
+	Diffusion                                = 2,
+	ESmoothMeshToolSmoothType_MAX            = 3,
 };
 
 // Enum MeshModelingTools.EPolyEditCutPlaneOrientation
@@ -310,6 +832,24 @@ enum class EPolyEditPushPullModeOptions : uint32
 	EPolyEditPushPullModeOptions_MAX         = 4,
 };
 
+// Enum MeshModelingTools.EPolyEditExtrudeEdgeDirectionMode
+// NumValues: 0x0003
+enum class EPolyEditExtrudeEdgeDirectionMode : uint32
+{
+	LocalExtrudeFrames                       = 0,
+	SingleDirection                          = 1,
+	EPolyEditExtrudeEdgeDirectionMode_MAX    = 2,
+};
+
+// Enum MeshModelingTools.EPolyEditExtrudeEdgeDistanceMode
+// NumValues: 0x0003
+enum class EPolyEditExtrudeEdgeDistanceMode : uint32
+{
+	Fixed                                    = 0,
+	Gizmo                                    = 1,
+	EPolyEditExtrudeEdgeDistanceMode_MAX     = 2,
+};
+
 // Enum MeshModelingTools.EGroupEdgeInsertionMode
 // NumValues: 0x0003
 enum class EGroupEdgeInsertionMode : uint32
@@ -359,5 +899,40 @@ enum class EUVProjectionToolInitializationMode : uint32
 	AutoFitAlign                             = 3,
 	EUVProjectionToolInitializationMode_MAX  = 4,
 };
+
+// Enum MeshModelingTools.EWeldMeshEdgesAttributeUIMode
+// NumValues: 0x0004
+enum class EWeldMeshEdgesAttributeUIMode : uint8
+{
+	None                                     = 0,
+	OnWeldedMeshEdgesOnly                    = 1,
+	OnFullMesh                               = 2,
+	EWeldMeshEdgesAttributeUIMode_MAX        = 3,
+};
+
+// ScriptStruct MeshModelingTools.PerlinLayerProperties
+// 0x0008 (0x0008 - 0x0000)
+struct FPerlinLayerProperties final
+{
+public:
+	float                                         Frequency;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Intensity;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerlinLayerProperties;
+
+// ScriptStruct MeshModelingTools.BrushToolRadius
+// 0x0018 (0x0018 - 0x0000)
+struct FBrushToolRadius final
+{
+public:
+	EBrushToolSizeType                            SizeType;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AdaptiveSize;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldRadius;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bToolSupportsPressureSensitivity;                  // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePressureSensitivity;                        // 0x000D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0xA];                                        // 0x000E(0x000A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBrushToolRadius;
 
 SDK_NAMESPACE_END

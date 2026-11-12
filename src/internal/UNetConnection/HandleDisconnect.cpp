@@ -5,6 +5,6 @@
 
 namespace g_UNetConnection {
 	void HandleDisconnect(SDK::UNetConnection* UNetConnection) {
-		LuaManager::Get().Lua_OnDisconnect(UNetConnection ? UNetConnection->GetFirstIP() : "?", UNetConnection ? UNetConnection->GetPort() : 0);
+		// LuaManager::Get().Lua_OnDisconnect(UNetConnection ? UNetConnection->GetFirstIP() : "?", UNetConnection ? UNetConnection->GetPort() : 0);
 	}
 }

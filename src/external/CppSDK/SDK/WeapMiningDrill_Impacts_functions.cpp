@@ -27,10 +27,8 @@ SDK_NAMESPACE_START
 
 bool AWeapMiningDrill_Impacts_C::BPGetImpactEffectColor(class UFXSystemComponent* Effect, class APrimalCharacter* InstigatorCharacter, class AActor* ImpactedActor, struct FLinearColor* OutColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WeapMiningDrill_Impacts_C", "BPGetImpactEffectColor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WeapMiningDrill_Impacts_C", "BPGetImpactEffectColor", FuncInfo);
 
 	Params::WeapMiningDrill_Impacts_C_BPGetImpactEffectColor Parms{};
 

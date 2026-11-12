@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
@@ -33,6 +33,7 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_AllowAutoscrollNavFrom;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.BlueprintInit
 // 0x0010 (0x0010 - 0x0000)
@@ -41,6 +42,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_BlueprintInit final
 public:
 	class FString                                 RawExtraData;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_BlueprintInit;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryDoSecondaryClickAction
 // 0x000C (0x000C - 0x0000)
@@ -50,6 +52,7 @@ public:
 	class FName                                   SecondaryZoneClicked;                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsFromGamepad;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryDoSecondaryClickAction;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryDoSecondaryHovered
 // 0x0008 (0x0008 - 0x0000)
@@ -58,6 +61,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryDoSecondaryHovered fin
 public:
 	class FName                                   SecondaryZoneHovered;                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryDoSecondaryHovered;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryDoSecondaryUnhovered
 // 0x0008 (0x0008 - 0x0000)
@@ -66,6 +70,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryDoSecondaryUnhovered f
 public:
 	class FName                                   SecondaryZoneUnhovered;                            // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryDoSecondaryUnhovered;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryFocusEnd
 // 0x0001 (0x0001 - 0x0000)
@@ -74,6 +79,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryFocusEnd final
 public:
 	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryFocusEnd;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryFocusStart
 // 0x0001 (0x0001 - 0x0000)
@@ -82,6 +88,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryFocusStart final
 public:
 	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryFocusStart;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.EntryFocusTick
 // 0x0008 (0x0008 - 0x0000)
@@ -91,6 +98,7 @@ public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsHighlighted;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_EntryFocusTick;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video
 // 0x0400 (0x0400 - 0x0000)
@@ -243,6 +251,7 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast_1;    // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Video;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.OnFail_6683C921475B2E6142ED53BABD998580
 // 0x0010 (0x0010 - 0x0000)
@@ -251,6 +260,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_OnFail_6683C921475B2E6142ED
 public:
 	class FString                                 CacheVideoName;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_OnFail_6683C921475B2E6142ED53BABD998580;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_News_Video.ASAUI_NewsCarouselTemplate_Entry_News_Video_C.OnSuccess_6683C921475B2E6142ED53BABD998580
 // 0x0010 (0x0010 - 0x0000)
@@ -259,6 +269,7 @@ struct ASAUI_NewsCarouselTemplate_Entry_News_Video_C_OnSuccess_6683C921475B2E614
 public:
 	class FString                                 CacheVideoName;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
+DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_News_Video_C_OnSuccess_6683C921475B2E6142ED53BABD998580;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

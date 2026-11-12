@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass WeapCompass.WeapCompass_C
-// 0x0000 (0x1430 - 0x1430)
+// 0x0000 (0x1438 - 0x1438)
 class AWeapCompass_C final : public AWeapGPS_C
 {
 public:
@@ -33,5 +33,6 @@ public:
 		return GetDefaultObjImpl<AWeapCompass_C>();
 	}
 };
+DUMPER7_ASSERTS_AWeapCompass_C;
 
 SDK_NAMESPACE_END
