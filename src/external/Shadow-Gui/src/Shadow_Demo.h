@@ -3,6 +3,42 @@
 #include "../misc/textures/Shadow_Titlebar.h"
 
 namespace Shadow {
+    // DrawList 圆角矩形自适应演示配置常量
+    constexpr float ROUNDED_RECT_DEMO_PADDING_X = 16.0f;
+    constexpr float ROUNDED_RECT_DEMO_PADDING_Y = 10.0f;
+    constexpr float ROUNDED_RECT_DEMO_MIN_WIDTH = 90.0f;
+    constexpr float ROUNDED_RECT_DEMO_MIN_HEIGHT = 44.0f;
+    constexpr float ROUNDED_RECT_DEMO_ITEM_SPACING_X = 12.0f;
+    constexpr float ROUNDED_RECT_DEMO_ITEM_SPACING_Y = 10.0f;
+    constexpr float ROUNDED_RECT_DEMO_DEFAULT_ROUNDING = 12.0f;
+    constexpr float ROUNDED_RECT_DEMO_MAX_ROUNDING = 30.0f;
+    constexpr float ROUNDED_RECT_DEMO_DEFAULT_THICKNESS = 2.0f;
+    constexpr float ROUNDED_RECT_DEMO_MAX_THICKNESS = 8.0f;
+
+    // 全局 Demo 窗口伽马配置常量
+    constexpr float GLOBAL_GAMMA_MIN = 0.1f;
+    constexpr float GLOBAL_GAMMA_MAX = 5.0f;
+    constexpr float GLOBAL_GAMMA_STEP = 0.01f;
+    constexpr float GLOBAL_GAMMA_DEFAULT = 1.0f;
+
+    constexpr float GAMMA_DEMO_MIN = 0.1f;
+    constexpr float GAMMA_DEMO_MAX = 5.0f;
+    constexpr float GAMMA_DEMO_STEP = 0.01f;
+    constexpr float GAMMA_DEMO_DEFAULT = 2.2f;
+    constexpr float GAMMA_DEMO_PREVIEW_WIDTH = 120.0f;
+    constexpr float GAMMA_DEMO_PREVIEW_HEIGHT = 40.0f;
+
+    inline std::string_view GetBackendRendererName(BackendRenderer renderer) {
+        switch (renderer) {
+        case BackendRenderer::Dumper7: return "Dumper-7";
+        case BackendRenderer::Native:  return "Unreal Native";
+        case BackendRenderer::DX9:     return "DirectX 9";
+        case BackendRenderer::DX11:    return "DirectX 11";
+        case BackendRenderer::DX12:    return "DirectX 12";
+        default:                       return "None";
+        }
+    }
+
     // HelpMarker
     inline void HelpMarker(std::string_view desc, float TextWrap = 200.f) {
         Shadow::SameLine();
@@ -21,8 +57,18 @@ namespace Shadow {
         static bool show_demo = true;
         if (!show_demo) return;
 
+        static float demo_global_gamma = GLOBAL_GAMMA_DEFAULT; // 控制整个 Demo 窗口的全局伽马值
+
+        Shadow::ShadowFont font_arialbd = Shadow::LoadFontFromFile(L"C:\\Windows\\Fonts\\arialbd.ttf", 32);
+
         static Shadow::ShadowWindowFlags win_flags = Shadow::ShadowWindowFlags_MenuBar;
         static Shadow::ShadowTabBarFlags tab_flags = Shadow::ShadowTabBarFlags_Reorderable | Shadow::ShadowTabBarFlags_FittingPolicyScroll;
+
+		Shadow::Vec2 screen_size = Shadow::GetIO().DisplaySize;
+
+        Shadow::SetNextWindowSize({ screen_size.x * 0.5f, screen_size.y * 0.7f }, Shadow::ShadowCond_Once);
+
+        Shadow::PushGamma(demo_global_gamma);
 
         if (Shadow::Begin("Shadow Gui Demo##DemoWindow", win_flags)) {
             if (Shadow::BeginMenuBar()) {
@@ -120,7 +166,7 @@ namespace Shadow {
                     Shadow::TreePop();
 
                     if (Shadow::TreeNode("Images & Image Buttons")) {
-                        SDK::UTexture2D* demoTex = Shadow::LoadTextureFromBuffer(Shadow_Titlebar::Logo, sizeof(Shadow_Titlebar::Logo));
+                        Shadow::ShadowTexture demoTex = Shadow::LoadTextureFromBuffer(Shadow_Titlebar::Logo, sizeof(Shadow_Titlebar::Logo));
 
                         // 1. Shadow::Image 基础与不同参数用法演示
                         Shadow::Text("Shadow::Image");
@@ -740,6 +786,60 @@ namespace Shadow {
                     }
                     Shadow::TreePop();
 
+                    if (Shadow::TreeNode("Gamma Correction (PushGamma / PopGamma)")) {
+                        // 1. 控制整个 Demo 窗口的全局伽马值
+                        Shadow::Text("1. Global Demo Window Gamma (Controls Entire Window):");
+                        Shadow::Slider("Global Window Gamma##WholeDemo", &demo_global_gamma, GLOBAL_GAMMA_MIN, GLOBAL_GAMMA_MAX, GLOBAL_GAMMA_STEP);
+                        Shadow::HelpMarker("Controls the gamma for the entire Shadow_Demo window.\nApplied via PushGamma before Begin() and PopGamma after End().");
+
+                        Shadow::Spacing();
+                        Shadow::Separator();
+
+                        // 2. 局部对比演示
+                        Shadow::Text("2. Local PushGamma / PopGamma vs Current Window Gamma:");
+                        static float demo_gamma = GAMMA_DEMO_DEFAULT;
+                        Shadow::Slider("Local Gamma Value##Demo", &demo_gamma, GAMMA_DEMO_MIN, GAMMA_DEMO_MAX, GAMMA_DEMO_STEP);
+                        Shadow::HelpMarker("PushGamma(gamma) applies dynamic gamma correction.\nUCanvas backends (Dumper7 / Native) compute on CPU.\nDirectX backends (DX9 / DX11 / DX12) compute in Pixel Shader.");
+
+                        Shadow::Text("Inherited Window Gamma:");
+                        Shadow::Button("Window Gamma Button##Norm");
+                        Shadow::SameLine();
+                        ShadowDrawList* dl = Shadow::GetWindowDrawList();
+                        Vec2 p1 = Shadow::GetCursorScreenPos();
+                        dl->AddRectFilled(p1, { GAMMA_DEMO_PREVIEW_WIDTH, GAMMA_DEMO_PREVIEW_HEIGHT }, Shadow::GetColor({ 0.2f, 0.6f, 0.9f, 1.0f }), 6.0f);
+                        Shadow::Dummy({ GAMMA_DEMO_PREVIEW_WIDTH, GAMMA_DEMO_PREVIEW_HEIGHT });
+
+                        Shadow::Spacing();
+
+                        Shadow::Text(std::format("Locally Overridden PushGamma({:.2f}):", demo_gamma));
+                        Shadow::PushGamma(demo_gamma);
+                        Shadow::Button(std::format("Local Gamma Button ({:.2f})##GammaBtn", demo_gamma));
+                        Shadow::SameLine();
+                        Vec2 p2 = Shadow::GetCursorScreenPos();
+                        dl->AddRectFilled(p2, { GAMMA_DEMO_PREVIEW_WIDTH, GAMMA_DEMO_PREVIEW_HEIGHT }, Shadow::GetColor({ 0.2f, 0.6f, 0.9f, 1.0f }), 6.0f);
+                        Shadow::Dummy({ GAMMA_DEMO_PREVIEW_WIDTH, GAMMA_DEMO_PREVIEW_HEIGHT });
+                        Shadow::PopGamma();
+
+                        Shadow::Spacing();
+                        Shadow::Separator();
+
+                        // 3. 嵌套多层栈演示
+                        Shadow::Text("3. Nested Gamma Stack (Multi-layer):");
+                        Shadow::PushGamma(1.5f);
+                        Shadow::Text("Outer Scope: PushGamma(1.5f)");
+                        {
+                            Shadow::PushGamma(demo_gamma);
+                            Shadow::Text(std::format("  -> Inner Scope: PushGamma({:.2f})", demo_gamma));
+                            Shadow::Button("Inner Button##NestedG");
+                            Shadow::PopGamma();
+                        }
+                        Shadow::Text("Restored Outer Scope: (1.5f)");
+                        Shadow::PopGamma();
+
+                        Shadow::Text(std::format("Restored to Window Level: ({:.2f})", demo_global_gamma));
+                    }
+                    Shadow::TreePop();
+
                     if (Shadow::TreeNode("Disabled Status")) {
                         static bool disable_all = true;
                         Shadow::Checkbox("Disable the following group", &disable_all);
@@ -1047,6 +1147,18 @@ namespace Shadow {
                         Shadow::Slider("ControlOffsetMin", &style.ControlOffsetMin, 0.f, 400.f, 1.f);
                         Shadow::Slider("ControlOffsetRatio", &style.ControlOffsetRatio, 0.f, 1.f, 0.01f);
                         Shadow::Slider("FontScaleDpi", &style.FontScaleDpi, 0.5f, 3.f, 0.05f);
+
+                        Shadow::Separator();
+                        Shadow::Text("Rounding Metrics");
+						static float rounding_min = 0.f, rounding_max = 90.f;
+                        Shadow::Slider("WindowRounding", &style.WindowRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("ChildRounding", &style.ChildRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("PopupRounding", &style.PopupRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("FrameRounding", &style.FrameRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("ScrollbarRounding", &style.ScrollbarRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("GrabRounding", &style.GrabRounding, rounding_min, rounding_max, 1.f);
+                        Shadow::Slider("TabRounding", &style.TabRounding, rounding_min, rounding_max, 1.f);
+
                         Shadow::HelpMarker("Style metrics editor using GetStyle().");
                     }
                     Shadow::TreePop();
@@ -1119,8 +1231,95 @@ namespace Shadow {
                     }
                     Shadow::TreePop();
 
+                    if (Shadow::TreeNode("DrawList Rounded Rectangles")) {
+                        static float demo_rounding = ROUNDED_RECT_DEMO_DEFAULT_ROUNDING;
+                        static float demo_thickness = ROUNDED_RECT_DEMO_DEFAULT_THICKNESS;
+
+                        Shadow::Slider("Demo Rounding##RR", &demo_rounding, 0.0f, ROUNDED_RECT_DEMO_MAX_ROUNDING, 1.0f);
+                        Shadow::Slider("Demo Thickness##RR", &demo_thickness, 1.0f, ROUNDED_RECT_DEMO_MAX_THICKNESS, 0.5f);
+
+                        ShadowDrawList* dl = Shadow::GetWindowDrawList();
+
+                        struct CornerDemo {
+                            const char* name;
+                            ShadowDrawFlags flags;
+                        };
+
+                        CornerDemo demos[] = {
+                            { "All Corners", ShadowDrawFlags_RoundCornersAll },
+                            { "Top Only", ShadowDrawFlags_RoundCornersTop },
+                            { "Bottom Only", ShadowDrawFlags_RoundCornersBottom },
+                            { "Left Only", ShadowDrawFlags_RoundCornersLeft },
+                            { "Right Only", ShadowDrawFlags_RoundCornersRight }
+                        };
+
+                        auto RenderAdaptiveRow = [&](bool is_filled) {
+                            float start_x = Shadow::GetCursorScreenPos().x;
+                            float max_x = Shadow::g_Ctx.WindowPos.x + Shadow::g_Ctx.WindowSize.x - Shadow::GetRightMargin();
+                            float cur_x = start_x;
+                            float cur_y = Shadow::GetCursorScreenPos().y;
+                            float current_row_h = 0.f;
+
+                            for (size_t i = 0; i < sizeof(demos) / sizeof(demos[0]); ++i) {
+                                // 1. 根据文字测量尺寸，自适应计算矩形宽高（留出圆角与内边距保护空间）
+                                Vec2 txt_sz = Shadow::MeasureTextSize(demos[i].name);
+                                float box_w = std::max(ROUNDED_RECT_DEMO_MIN_WIDTH, txt_sz.x + ROUNDED_RECT_DEMO_PADDING_X * 2.0f + demo_rounding * 0.5f);
+                                float box_h = std::max(ROUNDED_RECT_DEMO_MIN_HEIGHT, txt_sz.y + ROUNDED_RECT_DEMO_PADDING_Y * 2.0f);
+
+                                // 2. 窗口宽度不足时，自动流式换行
+                                if (cur_x + box_w > max_x && cur_x > start_x) {
+                                    cur_x = start_x;
+                                    cur_y += current_row_h + ROUNDED_RECT_DEMO_ITEM_SPACING_Y;
+                                    current_row_h = 0.f;
+                                }
+
+                                Vec2 box_pos = { cur_x, cur_y };
+                                Vec2 box_size = { box_w, box_h };
+
+                                // 3. 绘制填充矩形或线框矩形
+                                if (is_filled) {
+                                    Color bg_col = Shadow::GetColor({ 0.15f + i * 0.15f, 0.45f, 0.85f - i * 0.1f, 0.9f });
+                                    dl->AddRectFilled(box_pos, box_size, bg_col, demo_rounding, demos[i].flags);
+                                }
+                                else {
+                                    Color outline_col = Shadow::GetColor({ 0.95f, 0.65f - i * 0.1f, 0.2f + i * 0.15f, 1.0f });
+                                    dl->AddRect(box_pos, box_size, outline_col, demo_thickness, demo_rounding, demos[i].flags);
+                                }
+
+                                // 4. 文本在矩形几何中心严格居中绘制
+                                Vec2 txt_pos = {
+                                    box_pos.x + (box_size.x - txt_sz.x) * 0.5f,
+                                    box_pos.y + (box_size.y - txt_sz.y) * 0.5f
+                                };
+                                Color txt_col = is_filled ? Shadow::GetColor({ 1.0f, 1.0f, 1.0f, 1.0f }) : Shadow::GetColor({ 0.95f, 0.95f, 0.95f, 1.0f });
+                                dl->AddText(txt_pos, txt_col, demos[i].name);
+
+                                // 5. 推进当前行光标并记录行最大高度
+                                cur_x += box_w + ROUNDED_RECT_DEMO_ITEM_SPACING_X;
+                                current_row_h = std::max(current_row_h, box_h);
+                            }
+
+                            // 计算总高度并同步推进 Shadow GUI 内部布局光标
+                            float total_h = (cur_y + current_row_h) - Shadow::GetCursorScreenPos().y;
+                            Shadow::Dummy({ 0.f, total_h });
+                            };
+
+                        // 1. 填充圆角矩形演示
+                        Shadow::Text("1. Filled Rounded Rectangles (AddRectFilled):");
+                        RenderAdaptiveRow(true);
+
+                        Shadow::Spacing();
+
+                        // 2. 线框圆角矩形演示
+                        Shadow::Text("2. Outlined Rounded Rectangles (AddRect):");
+                        RenderAdaptiveRow(false);
+
+                        Shadow::HelpMarker("Rectangles adapt size to text and padding, center labels, and wrap automatically when window shrinks.");
+                    }
+                    Shadow::TreePop();
+
                     if (Shadow::TreeNode("DrawList Texture & PushTexture")) {
-                        SDK::UTexture2D* TitlebarTex = Shadow::LoadTextureFromBuffer(Shadow_Titlebar::Logo, sizeof(Shadow_Titlebar::Logo));
+                        Shadow::ShadowTexture TitlebarTex = Shadow::LoadTextureFromBuffer(Shadow_Titlebar::Logo, sizeof(Shadow_Titlebar::Logo));
 
                         Vec2 p = Shadow::g_Ctx.Cursor;
                         Shadow::Dummy({ 200.f, 80.f });
@@ -1143,7 +1342,7 @@ namespace Shadow {
                         Shadow::InputText("Texture Path", tex_path);
                         Shadow::InputText("Font Path", font_path);
                         if (Shadow::Button("Load Texture")) {
-                            SDK::UTexture2D* tex = Shadow::LoadTextureFromFile(Shadow::ToWString(tex_path).c_str());
+                            Shadow::ShadowTexture tex = Shadow::LoadTextureFromFile(Shadow::ToWString(tex_path).c_str());
                             if (tex) {
                                 Shadow::Text("Texture loaded!");
                             }
@@ -1153,7 +1352,7 @@ namespace Shadow {
                         }
                         Shadow::SameLine();
                         if (Shadow::Button("Load Font")) {
-                            SDK::UFont* font = Shadow::LoadFontFromFile(Shadow::ToWString(font_path).c_str());
+                            Shadow::ShadowFont font = Shadow::LoadFontFromFile(Shadow::ToWString(font_path).c_str());
                             if (font) {
                                 Shadow::Text("Font loaded!");
                             }
@@ -1164,7 +1363,7 @@ namespace Shadow {
                         static std::vector<unsigned char> font_buffer;
                         if (Shadow::Button("Load Font from Buffer")) {
                             if (!font_buffer.empty()) {
-                                SDK::UFont* font = Shadow::LoadFontFromBuffer(font_buffer.data(), font_buffer.size());
+                                Shadow::ShadowFont font = Shadow::LoadFontFromBuffer(font_buffer.data(), font_buffer.size());
                                 if (font) {
                                     Shadow::Text("Font from buffer loaded!");
                                 }
@@ -1174,10 +1373,21 @@ namespace Shadow {
                     Shadow::TreePop();
 
                     if (Shadow::TreeNode("Font, PixelSnap & ID Stack")) {
+                        Shadow::PushFont(Shadow::g_Ctx.DefaultFont, 1.5f);
+                        Shadow::Text("PushFont 1.5x");
+                        Shadow::PopFont();
+
                         Shadow::PushFontNoSDF(Shadow::g_Ctx.DefaultFont, 1.5f);
                         Shadow::Text("PushFontNoSDF 1.5x");
                         Shadow::PopFont();
                         Shadow::HelpMarker("PushFontNoSDF / PopFont demo.");
+
+                        if (font_arialbd) {
+                            Shadow::PushFont(font_arialbd);
+                            Shadow::Text("PushFont font_arialbd (Arial Bold 32pt)");
+                            Shadow::PopFont();
+                            Shadow::HelpMarker("PushFont / PopFont demonstration with font_arialbd.");
+                        }
 
                         Shadow::PushTextPixelSnap(true);
                         Shadow::Text("Pixel snapped text");
@@ -1322,6 +1532,11 @@ namespace Shadow {
                         float screen_h = IO.DisplaySize.y;
                         std::string screen_size_str = std::format("Screen: {} / {}", screen_w, screen_h);
                         Shadow::Text(screen_size_str);
+
+                        std::string_view backend_name = Shadow::GetBackendRendererName(IO.BackendRenderer);
+                        std::string backend_str = std::format("Backend Renderer: {} (ID: {})", backend_name, static_cast<int>(IO.BackendRenderer));
+                        Shadow::Text(backend_str);
+                        Shadow::HelpMarker("using Shadow::GetIO().BackendRenderer.");
                     }
                     Shadow::TreePop();
 
@@ -1333,5 +1548,6 @@ namespace Shadow {
 
         }
         Shadow::End(); // Unconditional End
+        Shadow::PopGamma(); // 弹出全局伽马值，恢复默认渲染状态
     }
 } // namespace Shadow

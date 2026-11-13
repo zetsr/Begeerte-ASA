@@ -124,6 +124,7 @@
     <ClInclude Include="external\Minimal-D3D12-Hook-ImGui\MinHook\src\hde\table32.h" />
     <ClInclude Include="external\Minimal-D3D12-Hook-ImGui\MinHook\src\hde\table64.h" />
     <ClInclude Include="external\Minimal-D3D12-Hook-ImGui\MinHook\src\trampoline.h" />
+    <ClInclude Include="external\Shadow-Gui\src\Backend_Dumper7.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow_Demo.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow_Nav.h" />

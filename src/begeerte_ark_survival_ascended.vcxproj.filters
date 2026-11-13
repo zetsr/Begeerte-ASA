@@ -549,6 +549,9 @@
     <ClInclude Include="external\Shadow-Gui\src\Shadow_Texture.h">
       <Filter>src\external\Shadow-Gui\src</Filter>
     </ClInclude>
+    <ClInclude Include="external\Shadow-Gui\src\Backend_Dumper7.h">
+      <Filter>src\external\Shadow-Gui\src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Object Include="external\LuaJIT-2.1\src\lj_vm.obj">
