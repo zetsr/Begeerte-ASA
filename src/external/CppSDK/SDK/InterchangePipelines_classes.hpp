@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "InterchangePipelines_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "InterchangePipelines_structs.hpp"
 #include "HairStrandsCore_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
 #include "InterchangeCore_structs.hpp"

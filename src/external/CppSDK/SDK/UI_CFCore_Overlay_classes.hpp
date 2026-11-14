@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CFCoreWidget_classes.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ENUM_CFCore_OverlayProfiles_structs.hpp"
-#include "CFCoreWidget_classes.hpp"
 
 
 SDK_NAMESPACE_START

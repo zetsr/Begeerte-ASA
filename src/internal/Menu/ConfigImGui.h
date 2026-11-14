@@ -1,4 +1,4 @@
-﻿#if defined(__cpp_char8_t)
+#if defined(__cpp_char8_t)
 #define U8(str) reinterpret_cast<const char*>(u8##str)
 #else
 #define U8(str) u8##str
@@ -677,7 +677,6 @@ namespace g_DrawImGui {
 
 		ImU32 col_track_bg = ImGui::GetColorU32(ImGuiCol_FrameBg);
 		ImU32 col_fill = ImGui::GetColorU32(ImGuiCol_SliderGrab);
-		ImU32 col_fill2 = ImGui::GetColorU32(ImGuiCol_SliderGrabActive);
 		ImU32 col_handle = ImGui::GetColorU32(ImGuiCol_SliderGrab);
 		ImU32 col_handle_active = ImGui::GetColorU32(ImGuiCol_SliderGrabActive);
 		ImU32 col_text = ImGui::GetColorU32(ImGuiCol_Text);
@@ -694,15 +693,7 @@ namespace g_DrawImGui {
 
 		ImVec2 filled_max = ImVec2(track_min.x + track_size.x * t, track_max.y);
 		if (filled_max.x > track_min.x + 1.0f) {
-			ImU32 colA = col_fill;
-			ImU32 colB = col_fill2;
-			draw->AddRectFilled(track_min, filled_max, colA, track_rounding);
-			ImVec2 grad_mid = ImVec2((track_min.x + filled_max.x) * 0.5f, track_min.y);
-			draw->AddRectFilledMultiColor(
-				ImVec2(grad_mid.x, track_min.y),
-				filled_max,
-				colA, colB, colB, colA
-			);
+			draw->AddRectFilled(track_min, filled_max, col_fill, track_rounding, ImDrawFlags_RoundCornersLeft);
 		}
 
 		ImVec2 handle_center = ImVec2(track_min.x + track_size.x * t, (track_min.y + track_max.y) * 0.5f);

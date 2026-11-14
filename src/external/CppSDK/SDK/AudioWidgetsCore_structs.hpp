@@ -16,19 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// ScriptStruct AudioWidgetsCore.LoudnessMeterDisplayOptions
-// 0x0014 (0x0014 - 0x0000)
-struct FLoudnessMeterDisplayOptions
-{
-public:
-	bool                                          bShowValue;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowMeter;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHoldMaxForValue;                                  // 0x0002(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHoldMaxForMeter;                                  // 0x0003(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0004(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLoudnessMeterDisplayOptions;
-
 // ScriptStruct AudioWidgetsCore.AudioMeterWidgetStyle
 // 0x04E8 (0x04F0 - 0x0008)
 struct FAudioMeterWidgetStyle : public FSlateWidgetStyle
@@ -72,6 +59,19 @@ public:
 	TOptional<float>                              MeterValueBarStart;                                // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAudioMeterChannelInfo;
+
+// ScriptStruct AudioWidgetsCore.LoudnessMeterDisplayOptions
+// 0x0014 (0x0014 - 0x0000)
+struct FLoudnessMeterDisplayOptions
+{
+public:
+	bool                                          bShowValue;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowMeter;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHoldMaxForValue;                                  // 0x0002(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHoldMaxForMeter;                                  // 0x0003(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x0004(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLoudnessMeterDisplayOptions;
 
 // ScriptStruct AudioWidgetsCore.LoudnessMeterSettings
 // 0x00A0 (0x00A0 - 0x0000)

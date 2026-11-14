@@ -733,6 +733,19 @@ public:
 };
 DUMPER7_ASSERTS_FDataflowRandomVectorSampler;
 
+// ScriptStruct DataflowNodes.TransferMeshAttributesDataflowNode
+// 0x0040 (0x0228 - 0x01E8)
+struct FTransferMeshAttributesDataflowNode final : public FDataflowNode
+{
+public:
+	class UDataflowMesh*                          Mesh;                                              // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UDataflowMesh*                          SourceMesh;                                        // 0x01F0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FDataflowFunctionProperty              All;                                               // 0x01F8(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
+	struct FDataflowFunctionProperty              None;                                              // 0x0208(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               AttributeProxies;                                  // 0x0218(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTransferMeshAttributesDataflowNode;
+
 // ScriptStruct DataflowNodes.DataflowRandomVectorSamplerNode
 // 0x0068 (0x0250 - 0x01E8)
 struct FDataflowRandomVectorSamplerNode final : public FDataflowNode
@@ -1117,6 +1130,28 @@ public:
 };
 DUMPER7_ASSERTS_FDataflowTurbulenceFloatSampler;
 
+// ScriptStruct DataflowNodes.DataflowAttributeProxy
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FDataflowAttributeProxy
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowAttributeProxy;
+
+// ScriptStruct DataflowNodes.DataflowPolygroupProxy
+// 0x0018 (0x0020 - 0x0008)
+struct FDataflowPolygroupProxy final : public FDataflowAttributeProxy
+{
+public:
+	EProxySourceType                              SourceType;                                        // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Source;                                            // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Destination;                                       // 0x0014(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDataflowPolygroupProxy;
+
 // ScriptStruct DataflowNodes.DataflowTurbulenceFloatSamplerNode
 // 0x0088 (0x0270 - 0x01E8)
 struct FDataflowTurbulenceFloatSamplerNode final : public FDataflowNode
@@ -1137,19 +1172,6 @@ public:
 	struct FBox                                   RenderBounds;                                      // 0x0010(0x0038)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDataflowUniformFloatSampler;
-
-// ScriptStruct DataflowNodes.TransferMeshAttributesDataflowNode
-// 0x0040 (0x0228 - 0x01E8)
-struct FTransferMeshAttributesDataflowNode final : public FDataflowNode
-{
-public:
-	class UDataflowMesh*                          Mesh;                                              // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UDataflowMesh*                          SourceMesh;                                        // 0x01F0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FDataflowFunctionProperty              All;                                               // 0x01F8(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
-	struct FDataflowFunctionProperty              None;                                              // 0x0208(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               AttributeProxies;                                  // 0x0218(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTransferMeshAttributesDataflowNode;
 
 // ScriptStruct DataflowNodes.DataflowUniformFloatSamplerNode
 // 0x0060 (0x0248 - 0x01E8)
@@ -2053,15 +2075,6 @@ public:
 };
 DUMPER7_ASSERTS_FSamplerRangeDataflowNode;
 
-// ScriptStruct DataflowNodes.DataflowAttributeProxy
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FDataflowAttributeProxy
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDataflowAttributeProxy;
-
 // ScriptStruct DataflowNodes.DataflowSkeletonProxy
 // 0x0000 (0x0008 - 0x0008)
 struct FDataflowSkeletonProxy final : public FDataflowAttributeProxy
@@ -2094,19 +2107,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataflowMorphTargetProxy;
-
-// ScriptStruct DataflowNodes.DataflowPolygroupProxy
-// 0x0018 (0x0020 - 0x0008)
-struct FDataflowPolygroupProxy final : public FDataflowAttributeProxy
-{
-public:
-	EProxySourceType                              SourceType;                                        // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Source;                                            // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Destination;                                       // 0x0014(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDataflowPolygroupProxy;
 
 // ScriptStruct DataflowNodes.DataflowTriangleLabelsProxy
 // 0x0018 (0x0020 - 0x0008)

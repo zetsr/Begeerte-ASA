@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "TakeTrackRecorders_structs.hpp"
 #include "TakesCore_structs.hpp"
 #include "MovieScene_structs.hpp"
-#include "TakeTrackRecorders_structs.hpp"
 
 
 SDK_NAMESPACE_START

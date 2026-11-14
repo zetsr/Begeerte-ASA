@@ -264,6 +264,15 @@ enum class EPhysicalMaterialSoftCollisionMode : uint8
 	EPhysicalMaterialSoftCollisionMode_MAX   = 3,
 };
 
+// ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
+// 0x0004 (0x0004 - 0x0000)
+struct FPhysicalMaterialDamageModifier final
+{
+public:
+	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPhysicalMaterialDamageModifier;
+
 // ScriptStruct PhysicsCore.BodyInstanceCore
 // 0x000C (0x000C - 0x0000)
 struct alignas(0x04) FBodyInstanceCore
@@ -293,14 +302,5 @@ public:
 	float                                         ShearStrength;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPhysicalMaterialStrength;
-
-// ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
-// 0x0004 (0x0004 - 0x0000)
-struct FPhysicalMaterialDamageModifier final
-{
-public:
-	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPhysicalMaterialDamageModifier;
 
 SDK_NAMESPACE_END

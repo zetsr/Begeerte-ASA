@@ -275,17 +275,6 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExCellArtifactsDetails;
 
-// ScriptStruct PCGExGraphs.PCGExCellGrowthDetails
-// 0x0068 (0x0068 - 0x0000)
-struct FPCGExCellGrowthDetails final
-{
-public:
-	struct FPCGExInputShorthandSelectorInteger32Abs Growth;                                          // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bMergeAdjacentCells;                               // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x17];                                      // 0x0051(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExCellGrowthDetails;
-
 // ScriptStruct PCGExGraphs.PCGExChainGatingDetails
 // 0x00A0 (0x00A0 - 0x0000)
 struct FPCGExChainGatingDetails final
@@ -330,6 +319,17 @@ public:
 	double                                        MaxEndpointDeviation;                              // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExChainGatingDetails;
+
+// ScriptStruct PCGExGraphs.PCGExCellGrowthDetails
+// 0x0068 (0x0068 - 0x0000)
+struct FPCGExCellGrowthDetails final
+{
+public:
+	struct FPCGExInputShorthandSelectorInteger32Abs Growth;                                          // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bMergeAdjacentCells;                               // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x17];                                      // 0x0051(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExCellGrowthDetails;
 
 // ScriptStruct PCGExGraphs.PCGExBasicEdgeSolidificationDetails
 // 0x0018 (0x0018 - 0x0000)

@@ -12,8 +12,8 @@
 
 #include "PCGExGraphs_structs.hpp"
 #include "PCGExGraphs_classes.hpp"
-#include "PCGExElementsClustersDiagrams_structs.hpp"
 #include "PCGExCore_structs.hpp"
+#include "PCGExElementsClustersDiagrams_structs.hpp"
 #include "PCGExFoundations_classes.hpp"
 #include "PCGExBlending_structs.hpp"
 

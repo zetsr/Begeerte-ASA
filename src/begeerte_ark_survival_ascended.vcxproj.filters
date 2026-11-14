@@ -513,16 +513,7 @@
     <ClInclude Include="internal\AActor\Tick.h">
       <Filter>src\internal\AActor</Filter>
     </ClInclude>
-    <ClInclude Include="external\CppSDK\PropertyFixup.hpp">
-      <Filter>src\external\CppSDK</Filter>
-    </ClInclude>
     <ClInclude Include="external\CppSDK\SDK.hpp">
-      <Filter>src\external\CppSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="external\CppSDK\UnrealContainers.hpp">
-      <Filter>src\external\CppSDK</Filter>
-    </ClInclude>
-    <ClInclude Include="external\CppSDK\UtfN.hpp">
       <Filter>src\external\CppSDK</Filter>
     </ClInclude>
     <ClInclude Include="internal\ESP\Indicators.h">
@@ -712,13 +703,5 @@
     <ClCompile Include="external\CppSDK\SDK\ShooterGame_functions.cpp">
       <Filter>src\external\CppSDK\SDK</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="external\CppSDK\Assertions.inl">
-      <Filter>src\external\CppSDK</Filter>
-    </None>
-    <None Include="external\CppSDK\NameCollisions.inl">
-      <Filter>src\external\CppSDK</Filter>
-    </None>
   </ItemGroup>
 </Project>

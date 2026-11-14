@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_CFCore_SideTabs_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UI_CFCore_ParentBrowser_classes.hpp"
 #include "cfcore_ui_structs.hpp"
+#include "ENUM_CFCore_SideTabs_structs.hpp"
 
 
 SDK_NAMESPACE_START

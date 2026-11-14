@@ -76,25 +76,36 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNextExecuteContext;
 
-// ScriptStruct UAF.RigUnit_AnimNextBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigUnit_AnimNextBase : public FRigVMStruct
-{
-};
-DUMPER7_ASSERTS_FRigUnit_AnimNextBase;
-
-// ScriptStruct UAF.RigUnit_GetSocketTransform
-// 0x0078 (0x0080 - 0x0008)
-struct FRigUnit_GetSocketTransform final : public FRigUnit_AnimNextBase
+// ScriptStruct UAF.UAFSystemBuilder
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FUAFSystemBuilder
 {
 public:
-	class USceneComponent*                        SceneComponent;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class FName                                   SocketName;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERelativeTransformSpace                       TransformSpace;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Result;                                            // 0x0020(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigUnit_GetSocketTransform;
+DUMPER7_ASSERTS_FUAFSystemBuilder;
+
+// ScriptStruct UAF.UAFSimpleSystemBuilder
+// 0x0040 (0x0050 - 0x0010)
+struct FUAFSimpleSystemBuilder final : public FUAFSystemBuilder
+{
+public:
+	TArray<struct FInstancedStruct>               ComponentStructs;                                  // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FInstancedStruct>               VariablesStructs;                                  // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<TScriptInterface<class IRigVMRuntimeAssetInterface>> ReferencedVariableRigVMAssets;       // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UUAFRigVMAsset*>                 ReferencedVariableAssets;                          // 0x0040(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FUAFSimpleSystemBuilder;
+
+// ScriptStruct UAF.UAFSystemFactoryParams
+// 0x0060 (0x0060 - 0x0000)
+struct FUAFSystemFactoryParams final
+{
+public:
+	struct FUAFSimpleSystemBuilder                Builder;                                           // 0x0000(0x0050)(Edit, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUAFSystemFactoryParams;
 
 // ScriptStruct UAF.AnimNextFieldPath
 // 0x0020 (0x0020 - 0x0000)
@@ -104,6 +115,24 @@ public:
 	TFieldPath<class FProperty>                   FieldPath;                                         // 0x0000(0x0020)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAnimNextFieldPath;
+
+// ScriptStruct UAF.RigUnit_AnimNextBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigUnit_AnimNextBase : public FRigVMStruct
+{
+};
+DUMPER7_ASSERTS_FRigUnit_AnimNextBase;
+
+// ScriptStruct UAF.RigUnit_IsRecentlyRendered
+// 0x0010 (0x0018 - 0x0008)
+struct FRigUnit_IsRecentlyRendered final : public FRigUnit_AnimNextBase
+{
+public:
+	class USkinnedMeshComponent*                  MeshComponent;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          Result;                                            // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRigUnit_IsRecentlyRendered;
 
 // ScriptStruct UAF.AnimNextGraphState
 // 0x0018 (0x0018 - 0x0000)
@@ -116,36 +145,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNextGraphState;
 
-// ScriptStruct UAF.AnimNextGraphLODPose
-// 0x00E0 (0x00E0 - 0x0000)
-struct alignas(0x08) FAnimNextGraphLODPose final
-{
-public:
-	uint8                                         Pad_0[0xE0];                                       // 0x0000(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNextGraphLODPose;
-
-// ScriptStruct UAF.AnimNextGraphReferencePose
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FAnimNextGraphReferencePose final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNextGraphReferencePose;
-
-// ScriptStruct UAF.RigUnit_AnimNextRemapPose
-// 0x02E8 (0x02F0 - 0x0008)
-struct FRigUnit_AnimNextRemapPose final : public FRigUnit_AnimNextBase
-{
-public:
-	struct FAnimNextGraphLODPose                  Pose;                                              // 0x0008(0x00E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAnimNextGraphLODPose                  Result;                                            // 0x00E8(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FAnimNextGraphReferencePose            TargetAnimGraphRefPose;                            // 0x01C8(0x0008)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x01D0(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigUnit_AnimNextRemapPose;
-
 // ScriptStruct UAF.AnimNextNativeDataInterface
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FAnimNextNativeDataInterface
@@ -154,17 +153,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNextNativeDataInterface;
-
-// ScriptStruct UAF.RigUnit_UAFWriteInstancedSkinnedMeshPose
-// 0x0208 (0x0210 - 0x0008)
-struct FRigUnit_UAFWriteInstancedSkinnedMeshPose final : public FRigUnit_AnimNextBase
-{
-public:
-	struct FAnimNextGraphLODPose                  Pose;                                              // 0x0008(0x00E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UInstancedSkinnedMeshComponent*         SkinnedMeshComponent;                              // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x00F0(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigUnit_UAFWriteInstancedSkinnedMeshPose;
 
 // ScriptStruct UAF.AnimNextRigVMFunctionData
 // 0x0030 (0x0030 - 0x0000)
@@ -187,6 +175,16 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNextSoftFunctionPtr;
 
+// ScriptStruct UAF.RigVMTrait_AnimNextPublicVariables
+// 0x0018 (0x0030 - 0x0018)
+struct FRigVMTrait_AnimNextPublicVariables final : public FRigVMTrait
+{
+public:
+	class UUAFSharedVariables*                    InternalAsset;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<class FName>                           InternalVariableNames;                             // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMTrait_AnimNextPublicVariables;
+
 // ScriptStruct UAF.AnimNextTag
 // 0x0001 (0x0001 - 0x0000)
 struct FAnimNextTag
@@ -203,6 +201,60 @@ struct FAnimNextScope final : public FAnimNextTag
 };
 DUMPER7_ASSERTS_FAnimNextScope;
 
+// ScriptStruct UAF.RigUnit_GetSocketTransform
+// 0x0078 (0x0080 - 0x0008)
+struct FRigUnit_GetSocketTransform final : public FRigUnit_AnimNextBase
+{
+public:
+	class USceneComponent*                        SceneComponent;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class FName                                   SocketName;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERelativeTransformSpace                       TransformSpace;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Result;                                            // 0x0020(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigUnit_GetSocketTransform;
+
+// ScriptStruct UAF.AnimNextParamType
+// 0x0010 (0x0010 - 0x0000)
+struct FAnimNextParamType final
+{
+public:
+	class UObject*                                ValueTypeObject;                                   // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	EPropertyBagPropertyType                      ValueType;                                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EPropertyBagContainerType                     ContainerType;                                     // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNextParamType;
+
+// ScriptStruct UAF.AnimNextVariableOverrideInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FAnimNextVariableOverrideInfo final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAnimNextParamType                     Type;                                              // 0x0008(0x0010)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DefaultValue;                                      // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnimNextVariableOverrideInfo;
+
+// ScriptStruct UAF.RigVMTrait_OverrideVariables
+// 0x0010 (0x0028 - 0x0018)
+struct FRigVMTrait_OverrideVariables : public FRigVMTrait
+{
+public:
+	TArray<struct FAnimNextVariableOverrideInfo>  Overrides;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigVMTrait_OverrideVariables;
+
+// ScriptStruct UAF.RigVMTrait_OverrideVariablesForAsset
+// 0x0008 (0x0030 - 0x0028)
+struct FRigVMTrait_OverrideVariablesForAsset final : public FRigVMTrait_OverrideVariables
+{
+public:
+	class UUAFRigVMAsset*                         Asset;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FRigVMTrait_OverrideVariablesForAsset;
+
 // ScriptStruct UAF.AnimNextEntryPoint
 // 0x0000 (0x0001 - 0x0001)
 struct FAnimNextEntryPoint final : public FAnimNextTag
@@ -210,16 +262,23 @@ struct FAnimNextEntryPoint final : public FAnimNextTag
 };
 DUMPER7_ASSERTS_FAnimNextEntryPoint;
 
-// ScriptStruct UAF.RigUnit_IsRecentlyRendered
-// 0x0010 (0x0018 - 0x0008)
-struct FRigUnit_IsRecentlyRendered final : public FRigUnit_AnimNextBase
+// ScriptStruct UAF.AnimNextGraphReferencePose
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FAnimNextGraphReferencePose final
 {
 public:
-	class USkinnedMeshComponent*                  MeshComponent;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          Result;                                            // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRigUnit_IsRecentlyRendered;
+DUMPER7_ASSERTS_FAnimNextGraphReferencePose;
+
+// ScriptStruct UAF.AnimNextGraphLODPose
+// 0x00E0 (0x00E0 - 0x0000)
+struct alignas(0x08) FAnimNextGraphLODPose final
+{
+public:
+	uint8                                         Pad_0[0xE0];                                       // 0x0000(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNextGraphLODPose;
 
 // ScriptStruct UAF.BoneTransformAnimationAttribute
 // 0x0000 (0x0060 - 0x0060)
@@ -265,6 +324,15 @@ public:
 };
 DUMPER7_ASSERTS_FRigVMTrait_ModuleEventDependency;
 
+// ScriptStruct UAF.BindableValueBase
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FBindableValueBase
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBindableValueBase;
+
 // ScriptStruct UAF.UAFScriptContextData
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x04) FUAFScriptContextData
@@ -283,24 +351,21 @@ public:
 };
 DUMPER7_ASSERTS_FUAFAssetContextData;
 
-// ScriptStruct UAF.BindableValueBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FBindableValueBase
+// ScriptStruct UAF.UAFAssetInstanceComponent
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FUAFAssetInstanceComponent
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBindableValueBase;
+DUMPER7_ASSERTS_FUAFAssetInstanceComponent;
 
-// ScriptStruct UAF.BindableFloat
-// 0x0008 (0x0010 - 0x0008)
-struct FBindableFloat final : public FBindableValueBase
+// ScriptStruct UAF.UAFScriptComponent
+// 0x0000 (0x0010 - 0x0010)
+struct FUAFScriptComponent : public FUAFAssetInstanceComponent
 {
-public:
-	float                                         ConstantValue;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBindableFloat;
+DUMPER7_ASSERTS_FUAFScriptComponent;
 
 // ScriptStruct UAF.UAFAssetData
 // 0x0008 (0x0008 - 0x0000)
@@ -317,22 +382,6 @@ struct FUAFSystemFactoryAsset : public FUAFAssetData
 {
 };
 DUMPER7_ASSERTS_FUAFSystemFactoryAsset;
-
-// ScriptStruct UAF.UAFAssetInstanceComponent
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FUAFAssetInstanceComponent
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUAFAssetInstanceComponent;
-
-// ScriptStruct UAF.UAFModuleInstanceComponent
-// 0x0000 (0x0010 - 0x0010)
-struct FUAFModuleInstanceComponent : public FUAFAssetInstanceComponent
-{
-};
-DUMPER7_ASSERTS_FUAFModuleInstanceComponent;
 
 // ScriptStruct UAF.UAFGraphFactoryAsset
 // 0x0000 (0x0008 - 0x0008)
@@ -375,12 +424,14 @@ public:
 };
 DUMPER7_ASSERTS_FUAFPropertyBinding;
 
-// ScriptStruct UAF.UAFScriptComponent
-// 0x0000 (0x0010 - 0x0010)
-struct FUAFScriptComponent : public FUAFAssetInstanceComponent
+// ScriptStruct UAF.UAFWeakSystemReference
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FUAFWeakSystemReference final
 {
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUAFScriptComponent;
+DUMPER7_ASSERTS_FUAFWeakSystemReference;
 
 // ScriptStruct UAF.UAFSystemFactoryAsset_System
 // 0x0008 (0x0010 - 0x0008)
@@ -390,6 +441,13 @@ public:
 	class UUAFSystem*                             System;                                            // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
 DUMPER7_ASSERTS_FUAFSystemFactoryAsset_System;
+
+// ScriptStruct UAF.UAFModuleInstanceComponent
+// 0x0000 (0x0010 - 0x0010)
+struct FUAFModuleInstanceComponent : public FUAFAssetInstanceComponent
+{
+};
+DUMPER7_ASSERTS_FUAFModuleInstanceComponent;
 
 // ScriptStruct UAF.UAFSystemOutputComponent
 // 0x0110 (0x0120 - 0x0010)
@@ -403,15 +461,6 @@ public:
 	uint8                                         Pad_108[0x18];                                     // 0x0108(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FUAFSystemOutputComponent;
-
-// ScriptStruct UAF.UAFWeakSystemReference
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FUAFWeakSystemReference final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUAFWeakSystemReference;
 
 // ScriptStruct UAF.UAFValueBundle
 // 0x0010 (0x0010 - 0x0000)
@@ -431,6 +480,16 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBindableBool;
+
+// ScriptStruct UAF.BindableFloat
+// 0x0008 (0x0010 - 0x0008)
+struct FBindableFloat final : public FBindableValueBase
+{
+public:
+	float                                         ConstantValue;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBindableFloat;
 
 // ScriptStruct UAF.BindableDouble
 // 0x0008 (0x0010 - 0x0008)
@@ -549,37 +608,6 @@ public:
 };
 DUMPER7_ASSERTS_FUAFComponentInputDesc;
 
-// ScriptStruct UAF.UAFSystemBuilder
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FUAFSystemBuilder
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUAFSystemBuilder;
-
-// ScriptStruct UAF.UAFSimpleSystemBuilder
-// 0x0040 (0x0050 - 0x0010)
-struct FUAFSimpleSystemBuilder final : public FUAFSystemBuilder
-{
-public:
-	TArray<struct FInstancedStruct>               ComponentStructs;                                  // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FInstancedStruct>               VariablesStructs;                                  // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<TScriptInterface<class IRigVMRuntimeAssetInterface>> ReferencedVariableRigVMAssets;       // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UUAFRigVMAsset*>                 ReferencedVariableAssets;                          // 0x0040(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FUAFSimpleSystemBuilder;
-
-// ScriptStruct UAF.UAFSystemFactoryParams
-// 0x0060 (0x0060 - 0x0000)
-struct FUAFSystemFactoryParams final
-{
-public:
-	struct FUAFSimpleSystemBuilder                Builder;                                           // 0x0000(0x0050)(Edit, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUAFSystemFactoryParams;
-
 // ScriptStruct UAF.RigUnit_AnimNextBeginExecution
 // 0x0128 (0x0130 - 0x0008)
 struct FRigUnit_AnimNextBeginExecution final : public FRigUnit_AnimNextBase
@@ -589,6 +617,18 @@ public:
 	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x0010(0x0120)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigUnit_AnimNextBeginExecution;
+
+// ScriptStruct UAF.RigUnit_AnimNextRemapPose
+// 0x02E8 (0x02F0 - 0x0008)
+struct FRigUnit_AnimNextRemapPose final : public FRigUnit_AnimNextBase
+{
+public:
+	struct FAnimNextGraphLODPose                  Pose;                                              // 0x0008(0x00E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAnimNextGraphLODPose                  Result;                                            // 0x00E8(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FAnimNextGraphReferencePose            TargetAnimGraphRefPose;                            // 0x01C8(0x0008)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x01D0(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigUnit_AnimNextRemapPose;
 
 // ScriptStruct UAF.RetargetPoseData
 // 0x0048 (0x0048 - 0x0000)
@@ -666,6 +706,17 @@ public:
 };
 DUMPER7_ASSERTS_FRigUnit_MakeReferencePoseFromSkeletalMeshComponent;
 
+// ScriptStruct UAF.RigUnit_UAFWriteInstancedSkinnedMeshPose
+// 0x0208 (0x0210 - 0x0008)
+struct FRigUnit_UAFWriteInstancedSkinnedMeshPose final : public FRigUnit_AnimNextBase
+{
+public:
+	struct FAnimNextGraphLODPose                  Pose;                                              // 0x0008(0x00E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UInstancedSkinnedMeshComponent*         SkinnedMeshComponent;                              // 0x00E8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x00F0(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRigUnit_UAFWriteInstancedSkinnedMeshPose;
+
 // ScriptStruct UAF.RigUnit_UAFWriteSystemOutput
 // 0x0138 (0x0140 - 0x0008)
 struct FRigUnit_UAFWriteSystemOutput final : public FRigUnit_AnimNextBase
@@ -676,16 +727,6 @@ public:
 	struct FAnimNextExecuteContext                ExecuteContext;                                    // 0x0020(0x0120)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRigUnit_UAFWriteSystemOutput;
-
-// ScriptStruct UAF.RigVMTrait_AnimNextPublicVariables
-// 0x0018 (0x0030 - 0x0018)
-struct FRigVMTrait_AnimNextPublicVariables final : public FRigVMTrait
-{
-public:
-	class UUAFSharedVariables*                    InternalAsset;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<class FName>                           InternalVariableNames;                             // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMTrait_AnimNextPublicVariables;
 
 // ScriptStruct UAF.AnimNextActorComponentReferenceComponent
 // 0x0010 (0x0020 - 0x0010)
@@ -941,18 +982,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNextObjectPropertyLocatorFragment;
 
-// ScriptStruct UAF.AnimNextParamType
-// 0x0010 (0x0010 - 0x0000)
-struct FAnimNextParamType final
-{
-public:
-	class UObject*                                ValueTypeObject;                                   // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	EPropertyBagPropertyType                      ValueType;                                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EPropertyBagContainerType                     ContainerType;                                     // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNextParamType;
-
 // ScriptStruct UAF.RigUnit_AnimNextParameterBeginExecution
 // 0x0138 (0x0140 - 0x0008)
 struct FRigUnit_AnimNextParameterBeginExecution final : public FRigUnit_AnimNextParameterBase
@@ -1178,35 +1207,6 @@ struct FRigVMDispatch_GetObjectProperty final : public FRigVMDispatchFactory
 {
 };
 DUMPER7_ASSERTS_FRigVMDispatch_GetObjectProperty;
-
-// ScriptStruct UAF.AnimNextVariableOverrideInfo
-// 0x0028 (0x0028 - 0x0000)
-struct FAnimNextVariableOverrideInfo final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAnimNextParamType                     Type;                                              // 0x0008(0x0010)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DefaultValue;                                      // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAnimNextVariableOverrideInfo;
-
-// ScriptStruct UAF.RigVMTrait_OverrideVariables
-// 0x0010 (0x0028 - 0x0018)
-struct FRigVMTrait_OverrideVariables : public FRigVMTrait
-{
-public:
-	TArray<struct FAnimNextVariableOverrideInfo>  Overrides;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRigVMTrait_OverrideVariables;
-
-// ScriptStruct UAF.RigVMTrait_OverrideVariablesForAsset
-// 0x0008 (0x0030 - 0x0028)
-struct FRigVMTrait_OverrideVariablesForAsset final : public FRigVMTrait_OverrideVariables
-{
-public:
-	class UUAFRigVMAsset*                         Asset;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FRigVMTrait_OverrideVariablesForAsset;
 
 // ScriptStruct UAF.RigVMTrait_OverrideVariablesForStruct
 // 0x0008 (0x0030 - 0x0028)

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
+#include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START

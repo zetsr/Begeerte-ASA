@@ -126,27 +126,17 @@ enum class ECustomizableObjectNumBoneInfluences : uint8
 	ECustomizableObjectNumBoneInfluences_MAX = 13,
 };
 
-// ScriptStruct CustomizableObject.AnimInstanceOverridePhysicsAsset
-// 0x0010 (0x0010 - 0x0000)
-struct FAnimInstanceOverridePhysicsAsset final
+// ScriptStruct CustomizableObject.CustomizableObjectExternalTypeParameterValue
+// 0x0040 (0x0040 - 0x0000)
+struct FCustomizableObjectExternalTypeParameterValue final
 {
 public:
-	int32                                         PropertyIndex;                                     // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       ParameterValue;                                    // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	struct FGuid                                  ID;                                                // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               ParameterRangeValues;                              // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimInstanceOverridePhysicsAsset;
-
-// ScriptStruct CustomizableObject.PendingReleaseMaterialsInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FPendingReleaseMaterialsInfo final
-{
-public:
-	TArray<class UMaterialInterface*>             Materials;                                         // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	int32                                         TicksUntilRelease;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPendingReleaseMaterialsInfo;
+DUMPER7_ASSERTS_FCustomizableObjectExternalTypeParameterValue;
 
 // ScriptStruct CustomizableObject.BakedResourceData
 // 0x0068 (0x0068 - 0x0000)
@@ -175,6 +165,50 @@ public:
 };
 DUMPER7_ASSERTS_FCustomizableObjectInstanceBakeOutput;
 
+// ScriptStruct CustomizableObject.MutableRefSocket
+// 0x0060 (0x0060 - 0x0000)
+struct FMutableRefSocket final
+{
+public:
+	class FName                                   SocketName;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RelativeLocation;                                  // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RelativeRotation;                                  // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RelativeScale;                                     // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceAlwaysAnimated;                              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMutableRefSocket;
+
+// ScriptStruct CustomizableObject.MutableRefSkeletalMeshSettings
+// 0x0008 (0x0008 - 0x0000)
+struct FMutableRefSkeletalMeshSettings final
+{
+public:
+	bool                                          bEnablePerPolyCollision;                           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DefaultUVChannelDensity;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMutableRefSkeletalMeshSettings;
+
+// ScriptStruct CustomizableObject.MutableRefSkeletalMeshData
+// 0x00C8 (0x00C8 - 0x0000)
+struct FMutableRefSkeletalMeshData final
+{
+public:
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSoftObjectPtr<class USkeletalMesh>           SoftSkeletalMesh;                                  // 0x0008(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMeshLODSettings*               SkeletalMeshLODSettings;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FMutableRefSocket>              Sockets;                                           // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       Bounds;                                            // 0x0048(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMutableRefSkeletalMeshSettings        Settings;                                          // 0x0080(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	class USkeleton*                              Skeleton;                                          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0090(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TSoftClassPtr<class UClass>                   PostProcessAnimInst;                               // 0x0098(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPhysicsAsset*                          ShadowPhysicsAsset;                                // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FMutableRefSkeletalMeshData;
+
 // ScriptStruct CustomizableObject.CustomizableInstanceComponentData
 // 0x0050 (0x0050 - 0x0000)
 struct FCustomizableInstanceComponentData final
@@ -187,16 +221,17 @@ public:
 };
 DUMPER7_ASSERTS_FCustomizableInstanceComponentData;
 
-// ScriptStruct CustomizableObject.AnimBpOverridePhysicsAssetsInfo
-// 0x0030 (0x0030 - 0x0000)
-struct FAnimBpOverridePhysicsAssetsInfo final
+// ScriptStruct CustomizableObject.CustomizableObjectMaterialParameterValue
+// 0x0038 (0x0038 - 0x0000)
+struct FCustomizableObjectMaterialParameterValue final
 {
 public:
-	TSoftClassPtr<class UClass>                   AnimInstanceClass;                                 // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PropertyIndex;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     ParameterValue;                                    // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FGuid                                  ID;                                                // 0x0018(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             ParameterRangeValues;                              // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FAnimBpOverridePhysicsAssetsInfo;
+DUMPER7_ASSERTS_FCustomizableObjectMaterialParameterValue;
 
 // ScriptStruct CustomizableObject.CompileCallbackParams
 // 0x0005 (0x0005 - 0x0000)
@@ -210,30 +245,6 @@ public:
 	bool                                          bCompiled;                                         // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCompileCallbackParams;
-
-// ScriptStruct CustomizableObject.CustomizableObjectBoolParameterValue
-// 0x0028 (0x0028 - 0x0000)
-struct FCustomizableObjectBoolParameterValue final
-{
-public:
-	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ParameterValue;                                    // 0x0010(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  ID;                                                // 0x0014(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCustomizableObjectBoolParameterValue;
-
-// ScriptStruct CustomizableObject.UpdateContext
-// 0x0010 (0x0010 - 0x0000)
-struct FUpdateContext final
-{
-public:
-	EUpdateResult                                 UpdateResult;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomizableObjectInstance*            Instance;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FUpdateContext;
 
 // ScriptStruct CustomizableObject.CustomizableObjectAnimationSlot
 // 0x0030 (0x0030 - 0x0000)
@@ -254,6 +265,43 @@ public:
 };
 DUMPER7_ASSERTS_FMutableParamNameSet;
 
+// ScriptStruct CustomizableObject.UpdateContext
+// 0x0010 (0x0010 - 0x0000)
+struct FUpdateContext final
+{
+public:
+	EUpdateResult                                 UpdateResult;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCustomizableObjectInstance*            Instance;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FUpdateContext;
+
+// ScriptStruct CustomizableObject.MutableUIMetadata
+// 0x00F0 (0x00F0 - 0x0000)
+struct FMutableUIMetadata
+{
+public:
+	class FString                                 ObjectFriendlyName;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UISectionName;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UIOrder;                                           // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              UIThumbnail;                                       // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            ExtraInformation;                                  // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, TSoftObjectPtr<class UObject>> ExtraAssets;                                  // 0x00A0(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMutableUIMetadata;
+
+// ScriptStruct CustomizableObject.MutableParamUIMetadata
+// 0x0028 (0x0118 - 0x00F0)
+struct FMutableParamUIMetadata final : public FMutableUIMetadata
+{
+public:
+	float                                         MinimumValue;                                      // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaximumValue;                                      // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  GameplayTags;                                      // 0x00F8(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMutableParamUIMetadata;
+
 // ScriptStruct CustomizableObject.PreSetSkeletalMeshParams
 // 0x0010 (0x0010 - 0x0000)
 struct FPreSetSkeletalMeshParams final
@@ -264,6 +312,17 @@ public:
 };
 DUMPER7_ASSERTS_FPreSetSkeletalMeshParams;
 
+// ScriptStruct CustomizableObject.AnimInstanceOverridePhysicsAsset
+// 0x0010 (0x0010 - 0x0000)
+struct FAnimInstanceOverridePhysicsAsset final
+{
+public:
+	int32                                         PropertyIndex;                                     // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FAnimInstanceOverridePhysicsAsset;
+
 // ScriptStruct CustomizableObject.AnimBpGeneratedPhysicsAssets
 // 0x0010 (0x0010 - 0x0000)
 struct FAnimBpGeneratedPhysicsAssets final
@@ -272,6 +331,19 @@ public:
 	TArray<struct FAnimInstanceOverridePhysicsAsset> AnimInstancePropertyIndexAndPhysicsAssets;      // 0x0000(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAnimBpGeneratedPhysicsAssets;
+
+// ScriptStruct CustomizableObject.CustomizableObjectBoolParameterValue
+// 0x0028 (0x0028 - 0x0000)
+struct FCustomizableObjectBoolParameterValue final
+{
+public:
+	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ParameterValue;                                    // 0x0010(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  ID;                                                // 0x0014(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCustomizableObjectBoolParameterValue;
 
 // ScriptStruct CustomizableObject.CustomizableObjectIntParameterValue
 // 0x0040 (0x0040 - 0x0000)
@@ -322,18 +394,6 @@ public:
 };
 DUMPER7_ASSERTS_FCustomizableObjectSkeletalMeshParameterValue;
 
-// ScriptStruct CustomizableObject.CustomizableObjectMaterialParameterValue
-// 0x0038 (0x0038 - 0x0000)
-struct FCustomizableObjectMaterialParameterValue final
-{
-public:
-	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     ParameterValue;                                    // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FGuid                                  ID;                                                // 0x0018(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             ParameterRangeValues;                              // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FCustomizableObjectMaterialParameterValue;
-
 // ScriptStruct CustomizableObject.CustomizableObjectVectorParameterValue
 // 0x0030 (0x0030 - 0x0000)
 struct FCustomizableObjectVectorParameterValue final
@@ -382,18 +442,6 @@ public:
 	TArray<struct FCustomizableObjectProjector>   RangeValues;                                       // 0x0058(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCustomizableObjectProjectorParameterValue;
-
-// ScriptStruct CustomizableObject.CustomizableObjectExternalTypeParameterValue
-// 0x0040 (0x0040 - 0x0000)
-struct FCustomizableObjectExternalTypeParameterValue final
-{
-public:
-	class FString                                 ParameterName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       ParameterValue;                                    // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	struct FGuid                                  ID;                                                // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               ParameterRangeValues;                              // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizableObjectExternalTypeParameterValue;
 
 // ScriptStruct CustomizableObject.MutableRemappedBone
 // 0x000C (0x000C - 0x0000)
@@ -448,49 +496,16 @@ public:
 };
 DUMPER7_ASSERTS_FMutableModelImageProperties;
 
-// ScriptStruct CustomizableObject.MutableRefSocket
-// 0x0060 (0x0060 - 0x0000)
-struct FMutableRefSocket final
+// ScriptStruct CustomizableObject.AnimBpOverridePhysicsAssetsInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FAnimBpOverridePhysicsAssetsInfo final
 {
 public:
-	class FName                                   SocketName;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RelativeLocation;                                  // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RelativeRotation;                                  // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RelativeScale;                                     // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceAlwaysAnimated;                              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   AnimInstanceClass;                                 // 0x0000(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PropertyIndex;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMutableRefSocket;
-
-// ScriptStruct CustomizableObject.MutableRefSkeletalMeshSettings
-// 0x0008 (0x0008 - 0x0000)
-struct FMutableRefSkeletalMeshSettings final
-{
-public:
-	bool                                          bEnablePerPolyCollision;                           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DefaultUVChannelDensity;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMutableRefSkeletalMeshSettings;
-
-// ScriptStruct CustomizableObject.MutableRefSkeletalMeshData
-// 0x00C8 (0x00C8 - 0x0000)
-struct FMutableRefSkeletalMeshData final
-{
-public:
-	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TSoftObjectPtr<class USkeletalMesh>           SoftSkeletalMesh;                                  // 0x0008(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMeshLODSettings*               SkeletalMeshLODSettings;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FMutableRefSocket>              Sockets;                                           // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FBoxSphereBounds                       Bounds;                                            // 0x0048(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMutableRefSkeletalMeshSettings        Settings;                                          // 0x0080(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-	class USkeleton*                              Skeleton;                                          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0090(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TSoftClassPtr<class UClass>                   PostProcessAnimInst;                               // 0x0098(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPhysicsAsset*                          ShadowPhysicsAsset;                                // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FMutableRefSkeletalMeshData;
+DUMPER7_ASSERTS_FAnimBpOverridePhysicsAssetsInfo;
 
 // ScriptStruct CustomizableObject.MutableStreamableBlock
 // 0x0010 (0x0010 - 0x0000)
@@ -522,32 +537,6 @@ public:
 	TSet<TSoftObjectPtr<class UDataTable>>        DataTables;                                        // 0x0000(0x0050)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FIntegerParameterOptionDataTable;
-
-// ScriptStruct CustomizableObject.MutableUIMetadata
-// 0x00F0 (0x00F0 - 0x0000)
-struct FMutableUIMetadata
-{
-public:
-	class FString                                 ObjectFriendlyName;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UISectionName;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UIOrder;                                           // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              UIThumbnail;                                       // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            ExtraInformation;                                  // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, TSoftObjectPtr<class UObject>> ExtraAssets;                                  // 0x00A0(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMutableUIMetadata;
-
-// ScriptStruct CustomizableObject.MutableParamUIMetadata
-// 0x0028 (0x0118 - 0x00F0)
-struct FMutableParamUIMetadata final : public FMutableUIMetadata
-{
-public:
-	float                                         MinimumValue;                                      // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaximumValue;                                      // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  GameplayTags;                                      // 0x00F8(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMutableParamUIMetadata;
 
 // ScriptStruct CustomizableObject.IntegerParameterUIData
 // 0x0118 (0x0118 - 0x0000)
@@ -717,6 +706,17 @@ public:
 	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCustomizableObjectInstanceDescriptor;
+
+// ScriptStruct CustomizableObject.PendingReleaseMaterialsInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FPendingReleaseMaterialsInfo final
+{
+public:
+	TArray<class UMaterialInterface*>             Materials;                                         // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	int32                                         TicksUntilRelease;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPendingReleaseMaterialsInfo;
 
 // ScriptStruct CustomizableObject.MultilayerProjectorLayer
 // 0x0080 (0x0080 - 0x0000)

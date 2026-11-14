@@ -23,8 +23,8 @@ public:
 	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 public:
-	void OnSearch(const class FText& Search_Input);
 	void UpdateSearch(const class FText& SearchInput);
+	void OnSearch(const class FText& Search_Input);
 
 public:
 	static class UClass* StaticClass()

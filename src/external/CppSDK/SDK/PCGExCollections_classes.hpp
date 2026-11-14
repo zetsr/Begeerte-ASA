@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "PCGExCore_structs.hpp"
+#include "PCGExCore_classes.hpp"
 #include "PCGExCollections_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PCGExCore_structs.hpp"
-#include "PCGExCore_classes.hpp"
 #include "PCG_structs.hpp"
 #include "PCG_classes.hpp"
 #include "PCGExProperties_structs.hpp"

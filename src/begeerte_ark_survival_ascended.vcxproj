@@ -20,10 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external\AOBScan\AOBScan.hpp" />
-    <ClInclude Include="external\CppSDK\PropertyFixup.hpp" />
     <ClInclude Include="external\CppSDK\SDK.hpp" />
-    <ClInclude Include="external\CppSDK\UnrealContainers.hpp" />
-    <ClInclude Include="external\CppSDK\UtfN.hpp" />
     <ClInclude Include="external\ezVMT\include\ezVMT.hpp" />
     <ClInclude Include="external\LuaJIT-2.1\src\lauxlib.h" />
     <ClInclude Include="external\LuaJIT-2.1\src\lj_alloc.h" />
@@ -231,10 +228,6 @@
     <ClCompile Include="internal\UNetConnection\HandleDisconnect.cpp" />
     <ClCompile Include="internal\Util\infoCPU.cpp" />
     <ClCompile Include="internal\Util\infoGPU.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="external\CppSDK\Assertions.inl" />
-    <None Include="external\CppSDK\NameCollisions.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

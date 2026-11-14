@@ -1343,16 +1343,18 @@ public:
 // DUMPER7_ASSERTS_FUAFBlendSmootherPerBoneTraitSharedData;
 
 // ScriptStruct UAFAnimGraph.AnimNextBlendStackCoreTraitSharedData
-// 0x0000 (0x0000 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 #pragma pack(push, 0x1)
 struct SDK_ALIGN(0x01) FAnimNextBlendStackCoreTraitSharedData : public FAnimNextTraitSharedData
 {
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 #pragma pack(pop)
 DUMPER7_ASSERTS_FAnimNextBlendStackCoreTraitSharedData;
 
 // ScriptStruct UAFAnimGraph.AnimNextBlendStackTraitSharedData
-// 0x0010 (0x0010 - 0x0000)
+// 0x000F (0x0010 - 0x0001)
 struct FAnimNextBlendStackTraitSharedData final : public FAnimNextBlendStackCoreTraitSharedData
 {
 public:
@@ -1361,7 +1363,7 @@ public:
 	bool                                          bForceBlend;                                       // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNextBlendStackTraitSharedData;
+// DUMPER7_ASSERTS_FAnimNextBlendStackTraitSharedData;
 
 // ScriptStruct UAFAnimGraph.AnimNextBlendStackRequesterTraitSharedData
 // 0x0010 (0x0010 - 0x0000)

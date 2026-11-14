@@ -23,6 +23,15 @@ enum class ETakeRecorderSpawnableOverwriteBehavior : uint8
 	ETakeRecorderSpawnableOverwriteBehavior_MAX = 3,
 };
 
+// ScriptStruct TakesCore.AudioInputDeviceChannelProperty
+// 0x0004 (0x0004 - 0x0000)
+struct FAudioInputDeviceChannelProperty final
+{
+public:
+	int32                                         AudioInputDeviceChannel;                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAudioInputDeviceChannelProperty;
+
 // ScriptStruct TakesCore.AudioInputDeviceInfoProperty
 // 0x0030 (0x0030 - 0x0000)
 struct FAudioInputDeviceInfoProperty final
@@ -51,15 +60,6 @@ public:
 };
 DUMPER7_ASSERTS_FAudioInputDeviceProperty;
 
-// ScriptStruct TakesCore.TakeRecorderTargetRecordClassProperty
-// 0x0028 (0x0028 - 0x0000)
-struct FTakeRecorderTargetRecordClassProperty final
-{
-public:
-	TSoftClassPtr<class UClass>                   TargetRecordClass;                                 // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTakeRecorderTargetRecordClassProperty;
-
 // ScriptStruct TakesCore.ActorRecordedProperty
 // 0x0020 (0x0020 - 0x0000)
 struct FActorRecordedProperty final
@@ -72,13 +72,13 @@ public:
 };
 DUMPER7_ASSERTS_FActorRecordedProperty;
 
-// ScriptStruct TakesCore.AudioInputDeviceChannelProperty
-// 0x0004 (0x0004 - 0x0000)
-struct FAudioInputDeviceChannelProperty final
+// ScriptStruct TakesCore.TakeRecorderTargetRecordClassProperty
+// 0x0028 (0x0028 - 0x0000)
+struct FTakeRecorderTargetRecordClassProperty final
 {
 public:
-	int32                                         AudioInputDeviceChannel;                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   TargetRecordClass;                                 // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAudioInputDeviceChannelProperty;
+DUMPER7_ASSERTS_FTakeRecorderTargetRecordClassProperty;
 
 SDK_NAMESPACE_END

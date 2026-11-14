@@ -291,12 +291,12 @@ public:
 DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMaterialObject;
 
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateMeshObject
-// 0x06D0 (0x06D0 - 0x0000)
+// 0x06E0 (0x06E0 - 0x0000)
 struct ModelingObjectsCreationAPI_CreateMeshObject final
 {
 public:
-	struct FCreateMeshObjectParams                CreateMeshParams;                                  // 0x0000(0x06B0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FCreateMeshObjectResult                ReturnValue;                                       // 0x06B0(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FCreateMeshObjectParams                CreateMeshParams;                                  // 0x0000(0x06C0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FCreateMeshObjectResult                ReturnValue;                                       // 0x06C0(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMeshObject;
 

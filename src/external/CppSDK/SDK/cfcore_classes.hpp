@@ -102,7 +102,7 @@ public:
 DUMPER7_ASSERTS_UCFCoreEditorSettings;
 
 // Class cfcore.CFCoreSubsystem
-// 0x0060 (0x0090 - 0x0030)
+// 0x0070 (0x00A0 - 0x0030)
 class UCFCoreSubsystem final : public UEngineSubsystem
 {
 public:
@@ -112,6 +112,7 @@ public:
 	TDelegate<void(bool* bHandled, struct FGenPremiumCheckoutUrlRequest* Request)> OnGeneratePremiumCheckoutUrl; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(bool bSuccess)> OnPurchaseFinalizedEvent;                          // 0x0070(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const struct FInstalledMod& UninstalledMod)> OnModUninstalledEvent; // 0x0080(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FInstalledMod& InstalledMod)> OnModInstalledEvent;    // 0x0090(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	void AnalyticsSendGamePlaySession(const struct FGamePlaySessionParams& InParams, const TDelegate<void()>& OnSuccess, const TDelegate<void(const struct FCFCoreError& Error)>& OnError);

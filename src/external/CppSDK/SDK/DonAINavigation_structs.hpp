@@ -37,6 +37,16 @@ public:
 };
 DUMPER7_ASSERTS_FDonNavigationDynamicCollisionPayload;
 
+// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionNotifyee
+// 0x0058 (0x0058 - 0x0000)
+struct alignas(0x08) FDonNavigationDynamicCollisionNotifyee final
+{
+public:
+	TDelegate<void(const struct FDonNavigationDynamicCollisionPayload& Data)> Listener;              // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x48];                                      // 0x0010(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDonNavigationDynamicCollisionNotifyee;
+
 // ScriptStruct DonAINavigation.DoNNavigationQueryParams
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FDoNNavigationQueryParams final
@@ -114,16 +124,6 @@ public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDonVoxelCollisionProfile;
-
-// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionNotifyee
-// 0x0058 (0x0058 - 0x0000)
-struct alignas(0x08) FDonNavigationDynamicCollisionNotifyee final
-{
-public:
-	TDelegate<void(const struct FDonNavigationDynamicCollisionPayload& Data)> Listener;              // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x48];                                      // 0x0010(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FDonNavigationDynamicCollisionNotifyee;
 
 // ScriptStruct DonAINavigation.DonNavVoxelY
 // 0x0010 (0x0010 - 0x0000)

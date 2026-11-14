@@ -841,6 +841,36 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExAttributeSourceToTargetDetails;
 
+// ScriptStruct PCGExCore.PCGExInputShorthandBase
+// 0x0002 (0x0002 - 0x0000)
+struct FPCGExInputShorthandBase
+{
+public:
+	EPCGExInputValueType                          Input;                                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCleanupAttribute;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExInputShorthandBase;
+
+// ScriptStruct PCGExCore.PCGExInputShorthandNameBase
+// 0x000A (0x000C - 0x0002)
+struct FPCGExInputShorthandNameBase : public FPCGExInputShorthandBase
+{
+public:
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Attribute;                                         // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExInputShorthandNameBase;
+
+// ScriptStruct PCGExCore.PCGExInputShorthandNameVector2
+// 0x0014 (0x0020 - 0x000C)
+struct FPCGExInputShorthandNameVector2 final : public FPCGExInputShorthandNameBase
+{
+public:
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Constant;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExInputShorthandNameVector2;
+
 // ScriptStruct PCGExCore.PCGExAttributeSourceToTargetList
 // 0x0010 (0x0010 - 0x0000)
 struct FPCGExAttributeSourceToTargetList final
@@ -968,6 +998,15 @@ struct FPCGExDataTypeInfoClusterPart : public FPCGDataTypeInfoPoint
 };
 DUMPER7_ASSERTS_FPCGExDataTypeInfoClusterPart;
 
+// ScriptStruct PCGExCore.PCGExInputShorthandNameInteger3201
+// 0x0004 (0x0010 - 0x000C)
+struct FPCGExInputShorthandNameInteger3201 final : public FPCGExInputShorthandNameBase
+{
+public:
+	int32                                         Constant;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExInputShorthandNameInteger3201;
+
 // ScriptStruct PCGExCore.PCGExDataTypeInfoVtx
 // 0x0000 (0x0008 - 0x0008)
 struct FPCGExDataTypeInfoVtx final : public FPCGExDataTypeInfoClusterPart
@@ -981,36 +1020,6 @@ struct FPCGExDataTypeInfoEdges final : public FPCGExDataTypeInfoClusterPart
 {
 };
 DUMPER7_ASSERTS_FPCGExDataTypeInfoEdges;
-
-// ScriptStruct PCGExCore.PCGExInputShorthandBase
-// 0x0002 (0x0002 - 0x0000)
-struct FPCGExInputShorthandBase
-{
-public:
-	EPCGExInputValueType                          Input;                                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCleanupAttribute;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExInputShorthandBase;
-
-// ScriptStruct PCGExCore.PCGExInputShorthandNameBase
-// 0x000A (0x000C - 0x0002)
-struct FPCGExInputShorthandNameBase : public FPCGExInputShorthandBase
-{
-public:
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Attribute;                                         // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExInputShorthandNameBase;
-
-// ScriptStruct PCGExCore.PCGExInputShorthandNameVector2
-// 0x0014 (0x0020 - 0x000C)
-struct FPCGExInputShorthandNameVector2 final : public FPCGExInputShorthandNameBase
-{
-public:
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Constant;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExInputShorthandNameVector2;
 
 // ScriptStruct PCGExCore.PCGExVectorHashComparisonDetails
 // 0x0060 (0x0060 - 0x0000)
@@ -1365,6 +1374,19 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExRandomRatioDetails;
 
+// ScriptStruct PCGExCore.PCGExPathFilterSettings
+// 0x0070 (0x0070 - 0x0000)
+struct FPCGExPathFilterSettings final
+{
+public:
+	EPCGExEdgeDirectionMethod                     DirectionMethod;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGExEdgeDirectionChoice                     DirectionChoice;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     DirSourceAttribute;                                // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x28];                                      // 0x0048(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExPathFilterSettings;
+
 // ScriptStruct PCGExCore.PCGExDistanceDetails
 // 0x0004 (0x0004 - 0x0000)
 struct FPCGExDistanceDetails final
@@ -1376,20 +1398,6 @@ public:
 	bool                                          bOverlapIsZero;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExDistanceDetails;
-
-// ScriptStruct PCGExCore.PCGExPathOutputDetails
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGExPathOutputDetails final
-{
-public:
-	bool                                          bRemoveSmallPaths;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinPointCount;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemoveLargePaths;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxPointCount;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExPathOutputDetails;
 
 // ScriptStruct PCGExCore.PCGExEdgeDirectionSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -1494,6 +1502,16 @@ public:
 	uint8                                         Pad_3[0x9];                                        // 0x0003(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPCGExFittingVariationsDetails;
+
+// ScriptStruct PCGExCore.PCGExInputShorthandNameInteger64
+// 0x000C (0x0018 - 0x000C)
+struct FPCGExInputShorthandNameInteger64 final : public FPCGExInputShorthandNameBase
+{
+public:
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         Constant;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExInputShorthandNameInteger64;
 
 // ScriptStruct PCGExCore.PCGExFittingDetailsHandler
 // 0x03F0 (0x03F0 - 0x0000)
@@ -1678,25 +1696,6 @@ public:
 	int32                                         Constant;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExInputShorthandNameInteger32Abs;
-
-// ScriptStruct PCGExCore.PCGExInputShorthandNameInteger3201
-// 0x0004 (0x0010 - 0x000C)
-struct FPCGExInputShorthandNameInteger3201 final : public FPCGExInputShorthandNameBase
-{
-public:
-	int32                                         Constant;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExInputShorthandNameInteger3201;
-
-// ScriptStruct PCGExCore.PCGExInputShorthandNameInteger64
-// 0x000C (0x0018 - 0x000C)
-struct FPCGExInputShorthandNameInteger64 final : public FPCGExInputShorthandNameBase
-{
-public:
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         Constant;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExInputShorthandNameInteger64;
 
 // ScriptStruct PCGExCore.PCGExInputShorthandNameVector
 // 0x001C (0x0028 - 0x000C)
@@ -1952,19 +1951,6 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExPathEdgeIntersectionDetails;
 
-// ScriptStruct PCGExCore.PCGExPathFilterSettings
-// 0x0070 (0x0070 - 0x0000)
-struct FPCGExPathFilterSettings final
-{
-public:
-	EPCGExEdgeDirectionMethod                     DirectionMethod;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGExEdgeDirectionChoice                     DirectionChoice;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGAttributePropertyInputSelector     DirSourceAttribute;                                // 0x0008(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x28];                                      // 0x0048(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExPathFilterSettings;
-
 // ScriptStruct PCGExCore.PCGExPathIntersectionDetails
 // 0x0048 (0x0048 - 0x0000)
 struct FPCGExPathIntersectionDetails final
@@ -1984,6 +1970,20 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPCGExPathIntersectionDetails;
+
+// ScriptStruct PCGExCore.PCGExPathOutputDetails
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGExPathOutputDetails final
+{
+public:
+	bool                                          bRemoveSmallPaths;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinPointCount;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemoveLargePaths;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxPointCount;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExPathOutputDetails;
 
 // ScriptStruct PCGExCore.PCGExGeo2DProjectionDetails
 // 0x0150 (0x0150 - 0x0000)

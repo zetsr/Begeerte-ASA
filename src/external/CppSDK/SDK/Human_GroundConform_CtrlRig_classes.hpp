@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "ControlRig_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "PBIK_structs.hpp"
 
 

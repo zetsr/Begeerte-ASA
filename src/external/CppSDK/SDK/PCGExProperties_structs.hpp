@@ -29,26 +29,6 @@ enum class EPCGExSchemaMergePolicy : uint8
 	EPCGExSchemaMergePolicy_MAX              = 4,
 };
 
-// ScriptStruct PCGExProperties.PCGExProperty
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FPCGExProperty
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   PropertyName;                                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGExProperty;
-
-// ScriptStruct PCGExProperties.PCGExProperty_SoftObjectPath
-// 0x0030 (0x0040 - 0x0010)
-struct FPCGExProperty_SoftObjectPath final : public FPCGExProperty
-{
-public:
-	struct FSoftObjectPath                        Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExProperty_SoftObjectPath;
-
 // ScriptStruct PCGExProperties.PCGExPropertySchema
 // 0x0018 (0x0018 - 0x0000)
 struct FPCGExPropertySchema final
@@ -90,6 +70,16 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExPropertySchemaCollection;
 
+// ScriptStruct PCGExProperties.PCGExProperty
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FPCGExProperty
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   PropertyName;                                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGExProperty;
+
 // ScriptStruct PCGExProperties.PCGExEnumSelector
 // 0x0010 (0x0010 - 0x0000)
 struct FPCGExEnumSelector final
@@ -99,6 +89,16 @@ public:
 	int64                                         Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExEnumSelector;
+
+// ScriptStruct PCGExProperties.PCGExProperty_Vector2
+// 0x0020 (0x0030 - 0x0010)
+struct FPCGExProperty_Vector2 final : public FPCGExProperty
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExProperty_Vector2;
 
 // ScriptStruct PCGExProperties.PCGExCapturedImportOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -112,6 +112,16 @@ public:
 	struct FInstancedStruct                       Value;                                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExCapturedImportOverride;
+
+// ScriptStruct PCGExProperties.PCGExProperty_Rotator
+// 0x0028 (0x0038 - 0x0010)
+struct FPCGExProperty_Rotator final : public FPCGExProperty
+{
+public:
+	struct FRotator                               Value;                                             // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExProperty_Rotator;
 
 // ScriptStruct PCGExProperties.PCGExCapturedSchemaOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -245,16 +255,6 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExProperty_Vector;
 
-// ScriptStruct PCGExProperties.PCGExProperty_Vector2
-// 0x0020 (0x0030 - 0x0010)
-struct FPCGExProperty_Vector2 final : public FPCGExProperty
-{
-public:
-	struct FVector2D                              Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExProperty_Vector2;
-
 // ScriptStruct PCGExProperties.PCGExProperty_Vector4
 // 0x0030 (0x0040 - 0x0010)
 struct FPCGExProperty_Vector4 final : public FPCGExProperty
@@ -275,16 +275,6 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExProperty_Color;
 
-// ScriptStruct PCGExProperties.PCGExProperty_Rotator
-// 0x0028 (0x0038 - 0x0010)
-struct FPCGExProperty_Rotator final : public FPCGExProperty
-{
-public:
-	struct FRotator                               Value;                                             // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExProperty_Rotator;
-
 // ScriptStruct PCGExProperties.PCGExProperty_Quat
 // 0x0030 (0x0040 - 0x0010)
 struct FPCGExProperty_Quat final : public FPCGExProperty
@@ -304,6 +294,16 @@ public:
 	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPCGExProperty_Transform;
+
+// ScriptStruct PCGExProperties.PCGExProperty_SoftObjectPath
+// 0x0030 (0x0040 - 0x0010)
+struct FPCGExProperty_SoftObjectPath final : public FPCGExProperty
+{
+public:
+	struct FSoftObjectPath                        Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExProperty_SoftObjectPath;
 
 // ScriptStruct PCGExProperties.PCGExProperty_SoftClassPath
 // 0x0030 (0x0040 - 0x0010)

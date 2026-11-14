@@ -16,24 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.OnSearch
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Search_Input                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void IBPI_CFCore_PageWidgets_C::OnSearch(const class FText& Search_Input)
-{
-	static ReloadableFuncInfo FuncInfo;
-	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "BPI_CFCore_PageWidgets_C", "OnSearch", FuncInfo);
-
-	Params::BPI_CFCore_PageWidgets_C_OnSearch Parms{};
-
-	Parms.Search_Input = std::move(Search_Input);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.UpdateSearch
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -47,6 +29,24 @@ void IBPI_CFCore_PageWidgets_C::UpdateSearch(const class FText& SearchInput)
 	Params::BPI_CFCore_PageWidgets_C_UpdateSearch Parms{};
 
 	Parms.SearchInput = std::move(SearchInput);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.OnSearch
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Search_Input                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void IBPI_CFCore_PageWidgets_C::OnSearch(const class FText& Search_Input)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(AsUObject()->Class, "BPI_CFCore_PageWidgets_C", "OnSearch", FuncInfo);
+
+	Params::BPI_CFCore_PageWidgets_C_OnSearch Parms{};
+
+	Parms.Search_Input = std::move(Search_Input);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

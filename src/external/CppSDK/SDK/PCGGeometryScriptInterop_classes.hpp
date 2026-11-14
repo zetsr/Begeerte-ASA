@@ -359,15 +359,15 @@ public:
 DUMPER7_ASSERTS_UPCGPrimitiveCrossSectionSettings;
 
 // Class PCGGeometryScriptInterop.PCGSaveDynamicMeshToAssetSettings
-// 0x0100 (0x01A8 - 0x00A8)
+// 0x0110 (0x01B8 - 0x00A8)
 class UPCGSaveDynamicMeshToAssetSettings final : public UPCGDynamicMeshBaseSettings
 {
 public:
 	struct FPCGAssetExporterParameters            ExportParams;                                      // 0x00A8(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bExportMaterialsFromDynamicMesh;                   // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptCopyMeshToAssetOptions  CopyMeshToAssetOptions;                            // 0x00E0(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshWriteLOD            MeshWriteLOD;                                      // 0x01A0(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshToAssetOptions  CopyMeshToAssetOptions;                            // 0x00E0(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshWriteLOD            MeshWriteLOD;                                      // 0x01B0(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()

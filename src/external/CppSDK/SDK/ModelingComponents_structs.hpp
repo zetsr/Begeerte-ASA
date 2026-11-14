@@ -278,7 +278,7 @@ public:
 DUMPER7_ASSERTS_FRenderableTriangle;
 
 // ScriptStruct ModelingComponents.CreateMeshObjectParams
-// 0x06B0 (0x06B0 - 0x0000)
+// 0x06C0 (0x06C0 - 0x0000)
 struct FCreateMeshObjectParams final
 {
 public:
@@ -305,8 +305,8 @@ public:
 	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NaniteProxyTrianglePercent;                        // 0x0128(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMeshNaniteSettings                    NaniteSettings;                                    // 0x0130(0x0078)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A8[0x508];                                    // 0x01A8(0x0508)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMeshNaniteSettings                    NaniteSettings;                                    // 0x0130(0x0088)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B8[0x508];                                    // 0x01B8(0x0508)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCreateMeshObjectParams;
 

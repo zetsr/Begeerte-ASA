@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "PCGExCore_structs.hpp"
-#include "PCGExCore_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PCGExElementsSampling_structs.hpp"
+#include "PCGExCore_structs.hpp"
+#include "PCGExCore_classes.hpp"
 #include "PCGExBlending_structs.hpp"
 #include "PCGExFoundations_structs.hpp"
 #include "PCGExFoundations_classes.hpp"

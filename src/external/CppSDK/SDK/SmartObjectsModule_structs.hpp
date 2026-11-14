@@ -190,34 +190,6 @@ enum class ESmartObjectTraceType : uint8
 	ESmartObjectTraceType_MAX                = 3,
 };
 
-// ScriptStruct SmartObjectsModule.SmartObjectRequestFilter
-// 0x00C0 (0x00C0 - 0x0000)
-struct alignas(0x10) FSmartObjectRequestFilter final
-{
-public:
-	struct FGameplayTagContainer                  UserTags;                                          // 0x0000(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0028(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class USmartObjectBehaviorDefinition>> BehaviorDefinitionClasses;             // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	bool                                          bShouldEvaluateConditions;                         // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldIncludeClaimedSlots;                        // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldIncludeDisabledSlots;                       // 0x0082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_83[0x3D];                                      // 0x0083(0x003D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSmartObjectRequestFilter;
-
-// ScriptStruct SmartObjectsModule.SmartObjectRequest
-// 0x0100 (0x0100 - 0x0000)
-struct FSmartObjectRequest final
-{
-public:
-	struct FBox                                   QueryBox;                                          // 0x0000(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0040(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSmartObjectRequest;
-
 // ScriptStruct SmartObjectsModule.SmartObjectHandle
 // 0x0010 (0x0010 - 0x0000)
 struct FSmartObjectHandle final
@@ -261,15 +233,15 @@ public:
 };
 DUMPER7_ASSERTS_FSmartObjectDefinitionDataHandle;
 
-// ScriptStruct SmartObjectsModule.SmartObjectDefinitionPropertyBinding
-// 0x0008 (0x0030 - 0x0028)
-struct FSmartObjectDefinitionPropertyBinding final : public FPropertyBindingBinding
+// ScriptStruct SmartObjectsModule.SmartObjectDefinitionBindableStructDescriptor
+// 0x0008 (0x0020 - 0x0018)
+struct FSmartObjectDefinitionBindableStructDescriptor final : public FPropertyBindingBindableStructDescriptor
 {
 public:
-	struct FSmartObjectDefinitionDataHandle       SourceDataHandle;                                  // 0x0028(0x0004)(Edit, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FSmartObjectDefinitionDataHandle       TargetDataHandle;                                  // 0x002C(0x0004)(Edit, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FSmartObjectDefinitionDataHandle       DataHandle;                                        // 0x0018(0x0004)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSmartObjectDefinitionPropertyBinding;
+DUMPER7_ASSERTS_FSmartObjectDefinitionBindableStructDescriptor;
 
 // ScriptStruct SmartObjectsModule.SmartObjectDefinitionData
 // 0x0008 (0x0008 - 0x0000)
@@ -280,6 +252,15 @@ public:
 };
 DUMPER7_ASSERTS_FSmartObjectDefinitionData;
 
+// ScriptStruct SmartObjectsModule.SmartObjectSlotIndex
+// 0x0004 (0x0004 - 0x0000)
+struct FSmartObjectSlotIndex final
+{
+public:
+	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FSmartObjectSlotIndex;
+
 // ScriptStruct SmartObjectsModule.SmartObjectSlotAnnotation
 // 0x0000 (0x0008 - 0x0008)
 struct FSmartObjectSlotAnnotation : public FSmartObjectDefinitionData
@@ -287,24 +268,43 @@ struct FSmartObjectSlotAnnotation : public FSmartObjectDefinitionData
 };
 DUMPER7_ASSERTS_FSmartObjectSlotAnnotation;
 
-// ScriptStruct SmartObjectsModule.SmartObjectActorOwnerData
-// 0x0020 (0x0020 - 0x0000)
-struct FSmartObjectActorOwnerData final
+// ScriptStruct SmartObjectsModule.SmartObjectDefinitionPropertyBinding
+// 0x0008 (0x0030 - 0x0028)
+struct FSmartObjectDefinitionPropertyBinding final : public FPropertyBindingBinding
 {
 public:
-	struct FActorInstanceHandle                   Handle;                                            // 0x0000(0x0020)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSmartObjectDefinitionDataHandle       SourceDataHandle;                                  // 0x0028(0x0004)(Edit, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FSmartObjectDefinitionDataHandle       TargetDataHandle;                                  // 0x002C(0x0004)(Edit, EditConst, NoDestructor, Protected, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FSmartObjectActorOwnerData;
+DUMPER7_ASSERTS_FSmartObjectDefinitionPropertyBinding;
 
-// ScriptStruct SmartObjectsModule.SmartObjectDefinitionBindableStructDescriptor
-// 0x0008 (0x0020 - 0x0018)
-struct FSmartObjectDefinitionBindableStructDescriptor final : public FPropertyBindingBindableStructDescriptor
+// ScriptStruct SmartObjectsModule.SmartObjectRequestFilter
+// 0x00C0 (0x00C0 - 0x0000)
+struct alignas(0x10) FSmartObjectRequestFilter final
 {
 public:
-	struct FSmartObjectDefinitionDataHandle       DataHandle;                                        // 0x0018(0x0004)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  UserTags;                                          // 0x0000(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0028(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class USmartObjectBehaviorDefinition>> BehaviorDefinitionClasses;             // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	bool                                          bShouldEvaluateConditions;                         // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldIncludeClaimedSlots;                        // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldIncludeDisabledSlots;                       // 0x0082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_83[0x3D];                                      // 0x0083(0x003D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSmartObjectDefinitionBindableStructDescriptor;
+DUMPER7_ASSERTS_FSmartObjectRequestFilter;
+
+// ScriptStruct SmartObjectsModule.SmartObjectRequest
+// 0x0100 (0x0100 - 0x0000)
+struct FSmartObjectRequest final
+{
+public:
+	struct FBox                                   QueryBox;                                          // 0x0000(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0040(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSmartObjectRequest;
 
 // ScriptStruct SmartObjectsModule.SmartObjectRequestResult
 // 0x0024 (0x0024 - 0x0000)
@@ -662,15 +662,6 @@ public:
 };
 DUMPER7_ASSERTS_FSmartObjectSlotEntranceLocationResult;
 
-// ScriptStruct SmartObjectsModule.SmartObjectSlotIndex
-// 0x0004 (0x0004 - 0x0000)
-struct FSmartObjectSlotIndex final
-{
-public:
-	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FSmartObjectSlotIndex;
-
 // ScriptStruct SmartObjectsModule.SmartObjectTraceParams
 // 0x0028 (0x0028 - 0x0000)
 struct FSmartObjectTraceParams final
@@ -709,6 +700,15 @@ public:
 	TWeakObjectPtr<class AActor>                  UserActor;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSmartObjectActorUserData;
+
+// ScriptStruct SmartObjectsModule.SmartObjectActorOwnerData
+// 0x0020 (0x0020 - 0x0000)
+struct FSmartObjectActorOwnerData final
+{
+public:
+	struct FActorInstanceHandle                   Handle;                                            // 0x0000(0x0020)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSmartObjectActorOwnerData;
 
 // ScriptStruct SmartObjectsModule.SmartObjectWorldConditionObjectTagQueryState
 // 0x0008 (0x0008 - 0x0000)

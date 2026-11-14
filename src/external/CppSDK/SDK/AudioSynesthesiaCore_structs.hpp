@@ -15,16 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// ScriptStruct AudioSynesthesiaCore.LKFSNRTAggregateStats
-// 0x0008 (0x0008 - 0x0000)
-struct FLKFSNRTAggregateStats final
-{
-public:
-	float                                         IntegratedLoudness;                                // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GatedLoudness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLKFSNRTAggregateStats;
-
 // ScriptStruct AudioSynesthesiaCore.LKFSResults
 // 0x0028 (0x0028 - 0x0000)
 struct FLKFSResults final
@@ -53,6 +43,16 @@ public:
 	float                                         ShortTermLoudness;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FLKFSNRTResults;
+
+// ScriptStruct AudioSynesthesiaCore.LKFSNRTAggregateStats
+// 0x0008 (0x0008 - 0x0000)
+struct FLKFSNRTAggregateStats final
+{
+public:
+	float                                         IntegratedLoudness;                                // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GatedLoudness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLKFSNRTAggregateStats;
 
 // ScriptStruct AudioSynesthesiaCore.LKFSNRTChannelData
 // 0x0020 (0x0020 - 0x0000)

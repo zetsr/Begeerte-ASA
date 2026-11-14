@@ -7577,6 +7577,26 @@ class USoundCue* APrimalBuff::BPGetPlayerFootStepSound()
 }
 
 
+// Function ShooterGame.PrimalBuff.BPGetStaminaRecoveryIgnoreHealthPercentEffect
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float APrimalBuff::BPGetStaminaRecoveryIgnoreHealthPercentEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PrimalBuff", "BPGetStaminaRecoveryIgnoreHealthPercentEffect");
+
+	Params::PrimalBuff_BPGetStaminaRecoveryIgnoreHealthPercentEffect Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ShooterGame.PrimalBuff.BPGetWaypointsBuff
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -68253,7 +68273,7 @@ void APrimalDinoCharacter::BPUnsetupDinoTameable()
 
 
 // Function ShooterGame.PrimalDinoCharacter.BPUnstasis
-// (Event, Public, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void APrimalDinoCharacter::BPUnstasis()
 {
@@ -222306,6 +222326,31 @@ void UShooterCheatManager::TrackCarByName(const class FString& Name_0)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.TrackPlayer
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    PlayerIdOrEOSId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::TrackPlayer(const class FString& PlayerIdOrEOSId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "TrackPlayer");
+
+	Params::ShooterCheatManager_TrackPlayer Parms{};
+
+	Parms.PlayerIdOrEOSId = std::move(PlayerIdOrEOSId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.TransferImprints
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -223193,6 +223238,31 @@ void UShooterEngine::HandleFinalizePurchaseSuccess()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.ShooterEngine.HandleGameplayUserInstalledMod
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const struct FInstalledMod&             InstalledMod                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UShooterEngine::HandleGameplayUserInstalledMod(const struct FInstalledMod& InstalledMod)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterEngine", "HandleGameplayUserInstalledMod");
+
+	Params::ShooterEngine_HandleGameplayUserInstalledMod Parms{};
+
+	Parms.InstalledMod = std::move(InstalledMod);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

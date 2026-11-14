@@ -38,30 +38,23 @@ struct SDK_ALIGN(0x01) FEditorDataStorageColumn
 #pragma pack(pop)
 DUMPER7_ASSERTS_FEditorDataStorageColumn;
 
-// ScriptStruct TypedElementFramework.ScopeDataVersionColumn
+// ScriptStruct TypedElementFramework.EditingVerseScope
+// 0x0010 (0x0010 - 0x0000)
+struct FEditingVerseScope final : public FEditorDataStorageColumn
+{
+public:
+	class FString                                 EditingScopeVersePath;                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEditingVerseScope;
+
+// ScriptStruct TypedElementFramework.TypedElementLevelColumn
 // 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FScopeDataVersionColumn final : public FEditorDataStorageColumn
+struct alignas(0x04) FTypedElementLevelColumn final : public FEditorDataStorageColumn
 {
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FScopeDataVersionColumn;
-
-// ScriptStruct TypedElementFramework.EditorDataStorageTag
-// 0x0001 (0x0001 - 0x0000)
-struct FEditorDataStorageTag
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FEditorDataStorageTag;
-
-// ScriptStruct TypedElementFramework.TypedElementPropertyBagPlaceholderTag
-// 0x0000 (0x0001 - 0x0001)
-struct FTypedElementPropertyBagPlaceholderTag final : public FEditorDataStorageTag
-{
-};
-DUMPER7_ASSERTS_FTypedElementPropertyBagPlaceholderTag;
+DUMPER7_ASSERTS_FTypedElementLevelColumn;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -71,6 +64,15 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FScriptTypedElementHandle;
+
+// ScriptStruct TypedElementFramework.EditorDataStorageTag
+// 0x0001 (0x0001 - 0x0000)
+struct FEditorDataStorageTag
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEditorDataStorageTag;
 
 // ScriptStruct TypedElementFramework.EditorDataStorageUiDecoratorWidgetFactoryTag
 // 0x0000 (0x0001 - 0x0001)
@@ -86,15 +88,6 @@ struct FDataStorageScopeDataTag final : public FEditorDataStorageTag
 };
 DUMPER7_ASSERTS_FDataStorageScopeDataTag;
 
-// ScriptStruct TypedElementFramework.EditingVerseScope
-// 0x0010 (0x0010 - 0x0000)
-struct FEditingVerseScope final : public FEditorDataStorageColumn
-{
-public:
-	class FString                                 EditingScopeVersePath;                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEditingVerseScope;
-
 // ScriptStruct TypedElementFramework.ScopeRowSourceInfo
 // 0x0208 (0x0208 - 0x0000)
 struct alignas(0x08) FScopeRowSourceInfo final : public FEditorDataStorageColumn
@@ -103,6 +96,15 @@ public:
 	uint8                                         Pad_0[0x208];                                      // 0x0000(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FScopeRowSourceInfo;
+
+// ScriptStruct TypedElementFramework.ScopeDataVersionColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FScopeDataVersionColumn final : public FEditorDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FScopeDataVersionColumn;
 
 // ScriptStruct TypedElementFramework.TedsRowHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -210,21 +212,19 @@ struct FEditorDataStorageWorldTag final : public FEditorDataStorageTag
 };
 DUMPER7_ASSERTS_FEditorDataStorageWorldTag;
 
-// ScriptStruct TypedElementFramework.TypedElementLevelColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTypedElementLevelColumn final : public FEditorDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementLevelColumn;
-
 // ScriptStruct TypedElementFramework.EditorDataStorageLevelTag
 // 0x0000 (0x0001 - 0x0001)
 struct FEditorDataStorageLevelTag final : public FEditorDataStorageTag
 {
 };
 DUMPER7_ASSERTS_FEditorDataStorageLevelTag;
+
+// ScriptStruct TypedElementFramework.TypedElementPropertyBagPlaceholderTag
+// 0x0000 (0x0001 - 0x0001)
+struct FTypedElementPropertyBagPlaceholderTag final : public FEditorDataStorageTag
+{
+};
+DUMPER7_ASSERTS_FTypedElementPropertyBagPlaceholderTag;
 
 // ScriptStruct TypedElementFramework.TypedElementLoosePropertyTag
 // 0x0000 (0x0001 - 0x0001)

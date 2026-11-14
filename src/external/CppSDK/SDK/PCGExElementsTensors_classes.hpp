@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "PCGExElementsProbing_classes.hpp"
-#include "PCGExElementsTensors_structs.hpp"
 #include "PCGExFilters_classes.hpp"
 #include "PCGExCore_structs.hpp"
 #include "PCGExCore_classes.hpp"
+#include "PCGExElementsProbing_classes.hpp"
+#include "PCGExElementsTensors_structs.hpp"
 #include "PCGExFoundations_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PCGExHeuristics_classes.hpp"

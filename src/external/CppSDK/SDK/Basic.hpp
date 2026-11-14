@@ -39,7 +39,7 @@
 
 #define DUMPER_7_UE_VERSION_MAJOR 5
 #define DUMPER_7_UE_VERSION_MINOR 8
-#define DUMPER_7_UE_VERSION_STRING "5.8.3-839206+++ARK1+Rel-1.97"
+#define DUMPER_7_UE_VERSION_STRING "5.8.3-840334+++ARK1+Rel-1.97"
 #define DUMPER_7_GAME_NAME "ShooterGame"
 
 #include <string>
@@ -66,12 +66,12 @@ using namespace UC;
 */
 namespace Offsets
 {
-	constexpr int32 GObjects             = 0x0DA30740;
-	constexpr int32 AppendString         = 0x01727500;
-	constexpr int32 GetNameEntry      = 0x01728570;
+	constexpr int32 GObjects             = 0x0DA33740;
+	constexpr int32 AppendString         = 0x017274A0;
+	constexpr int32 GetNameEntry      = 0x01728510;
 	constexpr int32 GNames               = 0x00000000;
-	constexpr int32 GWorld               = 0x0DDA4218;
-	constexpr int32 ProcessEvent         = 0x0193EED0;
+	constexpr int32 GWorld               = 0x0DDA7318;
+	constexpr int32 ProcessEvent         = 0x0193EE30;
 	constexpr int32 ProcessEventIdx      = 0x0000004D;
 	constexpr int32 FindFunctionChecked  = 0x00000000;
 }

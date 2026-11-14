@@ -1094,35 +1094,35 @@ public:
 DUMPER7_ASSERTS_GeometryScriptLibrary_StaticMeshFunctions_CopyMeshFromStaticMeshV2;
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.CopyMeshToSkeletalMesh
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh final
 {
 public:
 	class UDynamicMesh*                           FromDynamicMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USkeletalMesh*                          ToSkeletalMeshAsset;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x00C0)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x00D0(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x00E0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x00D0)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x00E0(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x00E8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00F0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00F8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh;
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.CopyMeshToStaticMesh
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh final
 {
 public:
 	class UDynamicMesh*                           FromDynamicMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UStaticMesh*                            ToStaticMeshAsset;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x00C0)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x00D0(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSectionMaterials;                              // 0x00D9(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DA[0x6];                                       // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x00E0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x00D0)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x00E0(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x00E8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSectionMaterials;                              // 0x00E9(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00F0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00F8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh;
 

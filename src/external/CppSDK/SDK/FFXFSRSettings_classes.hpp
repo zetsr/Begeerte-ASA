@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "FFXFSRSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "Engine_structs.hpp"
-#include "FFXFSRSettings_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -40,27 +40,17 @@ enum class ERelayThrottlingState : uint8
 	ERelayThrottlingState_MAX                = 2,
 };
 
-// ScriptStruct ChaosSolverEngine.ChaosVDDataChannelState
-// 0x0018 (0x0018 - 0x0000)
-struct FChaosVDDataChannelState final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanChangeChannelState;                            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChaosVDDataChannelState;
-
-// ScriptStruct ChaosSolverEngine.ChaosVDChannelStateChangeResponseMessage
-// 0x0028 (0x0028 - 0x0000)
-struct FChaosVDChannelStateChangeResponseMessage final
+// ScriptStruct ChaosSolverEngine.ChaosVDRelayTraceStatusMessage
+// 0x0020 (0x0020 - 0x0000)
+struct FChaosVDRelayTraceStatusMessage final
 {
 public:
 	struct FGuid                                  InstanceId;                                        // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FChaosVDDataChannelState               NewState;                                          // 0x0010(0x0018)(NativeAccessSpecifierPublic)
+	int64                                         QueuedDataBytesNum;                                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERelayThrottlingState                         ThrottlingState;                                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosVDChannelStateChangeResponseMessage;
+DUMPER7_ASSERTS_FChaosVDRelayTraceStatusMessage;
 
 // ScriptStruct ChaosSolverEngine.ChaosPhysicsCollisionInfo
 // 0x00C0 (0x00C0 - 0x0000)
@@ -98,17 +88,17 @@ public:
 };
 DUMPER7_ASSERTS_FChaosVDRelayTraceDataMessage;
 
-// ScriptStruct ChaosSolverEngine.ChaosVDRelayTraceStatusMessage
-// 0x0020 (0x0020 - 0x0000)
-struct FChaosVDRelayTraceStatusMessage final
+// ScriptStruct ChaosSolverEngine.ChaosVDDataChannelState
+// 0x0018 (0x0018 - 0x0000)
+struct FChaosVDDataChannelState final
 {
 public:
-	struct FGuid                                  InstanceId;                                        // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         QueuedDataBytesNum;                                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERelayThrottlingState                         ThrottlingState;                                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanChangeChannelState;                            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosVDRelayTraceStatusMessage;
+DUMPER7_ASSERTS_FChaosVDDataChannelState;
 
 // ScriptStruct ChaosSolverEngine.ChaosVDChannelStateChangeCommandMessage
 // 0x0018 (0x0018 - 0x0000)
@@ -118,6 +108,16 @@ public:
 	struct FChaosVDDataChannelState               NewState;                                          // 0x0000(0x0018)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChaosVDChannelStateChangeCommandMessage;
+
+// ScriptStruct ChaosSolverEngine.ChaosVDChannelStateChangeResponseMessage
+// 0x0028 (0x0028 - 0x0000)
+struct FChaosVDChannelStateChangeResponseMessage final
+{
+public:
+	struct FGuid                                  InstanceId;                                        // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChaosVDDataChannelState               NewState;                                          // 0x0010(0x0018)(NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FChaosVDChannelStateChangeResponseMessage;
 
 // ScriptStruct ChaosSolverEngine.ChaosVDFullSessionInfoResponseData
 // 0x0010 (0x0010 - 0x0000)

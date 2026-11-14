@@ -142,6 +142,13 @@ struct FMassRenderISMCandidateTag final : public FMassTag
 };
 DUMPER7_ASSERTS_FMassRenderISMCandidateTag;
 
+// ScriptStruct MassEngine.MassPhysicsSimulatedBodyTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassPhysicsSimulatedBodyTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassPhysicsSimulatedBodyTag;
+
 // ScriptStruct MassEngine.MassISMGroupingFragment
 // 0x0010 (0x0010 - 0x0000)
 struct FMassISMGroupingFragment final : public FMassConstSharedFragment
@@ -159,21 +166,6 @@ public:
 	bool                                          bFillCollisionUnderneathForNavData;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMassNavigationRelevantParameters;
-
-// ScriptStruct MassEngine.MassPhysicsBodyInstancesInitializationRequestFragment
-// 0x0058 (0x0058 - 0x0000)
-struct FMassPhysicsBodyInstancesInitializationRequestFragment final : public FMassFragment
-{
-public:
-	TWeakObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Transforms;                                        // 0x0008(0x0010)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bDynamic;                                          // 0x0050(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassPhysicsBodyInstancesInitializationRequestFragment;
 
 // ScriptStruct MassEngine.MassNavigationEvaluatedTag
 // 0x0000 (0x0001 - 0x0001)
@@ -218,19 +210,27 @@ struct FMassPhysicsDynamicBodyTag final : public FMassTag
 };
 DUMPER7_ASSERTS_FMassPhysicsDynamicBodyTag;
 
-// ScriptStruct MassEngine.MassPhysicsSimulatedBodyTag
-// 0x0000 (0x0001 - 0x0001)
-struct FMassPhysicsSimulatedBodyTag final : public FMassTag
-{
-};
-DUMPER7_ASSERTS_FMassPhysicsSimulatedBodyTag;
-
 // ScriptStruct MassEngine.MassPhysicsBodyInstanceInitializedTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassPhysicsBodyInstanceInitializedTag final : public FMassTag
 {
 };
 DUMPER7_ASSERTS_FMassPhysicsBodyInstanceInitializedTag;
+
+// ScriptStruct MassEngine.MassPhysicsBodyInstancesInitializationRequestFragment
+// 0x0058 (0x0058 - 0x0000)
+struct FMassPhysicsBodyInstancesInitializationRequestFragment final : public FMassFragment
+{
+public:
+	TWeakObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Transforms;                                        // 0x0008(0x0010)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0028(0x0008)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDynamic;                                          // 0x0050(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassPhysicsBodyInstancesInitializationRequestFragment;
 
 // ScriptStruct MassEngine.MassRenderStateFragment
 // 0x0010 (0x0010 - 0x0000)

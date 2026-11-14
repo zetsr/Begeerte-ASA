@@ -34,6 +34,16 @@ public:
 };
 DUMPER7_ASSERTS_FEngineServicePing;
 
+// ScriptStruct EngineMessages.TraceControlDiscoveryPing
+// 0x0020 (0x0020 - 0x0000)
+struct FTraceControlDiscoveryPing final
+{
+public:
+	struct FGuid                                  SessionId;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  InstanceId;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTraceControlDiscoveryPing;
+
 // ScriptStruct EngineMessages.EngineServicePong
 // 0x0050 (0x0050 - 0x0000)
 struct FEngineServicePong final
@@ -61,15 +71,6 @@ public:
 };
 DUMPER7_ASSERTS_FEngineServiceAuthDeny;
 
-// ScriptStruct EngineMessages.TraceControlStop
-// 0x0001 (0x0001 - 0x0000)
-struct FTraceControlStop final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTraceControlStop;
-
 // ScriptStruct EngineMessages.EngineServiceAuthGrant
 // 0x0020 (0x0020 - 0x0000)
 struct FEngineServiceAuthGrant final
@@ -80,6 +81,15 @@ public:
 };
 DUMPER7_ASSERTS_FEngineServiceAuthGrant;
 
+// ScriptStruct EngineMessages.TraceControlChannelsStatus
+// 0x0010 (0x0010 - 0x0000)
+struct FTraceControlChannelsStatus final
+{
+public:
+	TArray<uint32>                                EnabledIds;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTraceControlChannelsStatus;
+
 // ScriptStruct EngineMessages.EngineServiceExecuteCommand
 // 0x0020 (0x0020 - 0x0000)
 struct FEngineServiceExecuteCommand final
@@ -89,34 +99,6 @@ public:
 	class FString                                 Username;                                          // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FEngineServiceExecuteCommand;
-
-// ScriptStruct EngineMessages.EngineServiceTerminate
-// 0x0010 (0x0010 - 0x0000)
-struct FEngineServiceTerminate final
-{
-public:
-	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEngineServiceTerminate;
-
-// ScriptStruct EngineMessages.TraceControlChannelsSetError
-// 0x0050 (0x0050 - 0x0000)
-struct FTraceControlChannelsSetError final
-{
-public:
-	TMap<uint32, class FString>                   Errors;                                            // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTraceControlChannelsSetError;
-
-// ScriptStruct EngineMessages.EngineServiceNotification
-// 0x0018 (0x0018 - 0x0000)
-struct FEngineServiceNotification final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        TimeSeconds;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FEngineServiceNotification;
 
 // ScriptStruct EngineMessages.TraceControlStartCommon
 // 0x0018 (0x0018 - 0x0000)
@@ -129,12 +111,33 @@ public:
 };
 DUMPER7_ASSERTS_FTraceControlStartCommon;
 
-// ScriptStruct EngineMessages.TraceControlSecure
-// 0x0000 (0x0018 - 0x0018)
-struct FTraceControlSecure final : public FTraceControlStartCommon
+// ScriptStruct EngineMessages.TraceControlSend
+// 0x0010 (0x0028 - 0x0018)
+struct FTraceControlSend final : public FTraceControlStartCommon
 {
+public:
+	class FString                                 Host;                                              // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTraceControlSecure;
+DUMPER7_ASSERTS_FTraceControlSend;
+
+// ScriptStruct EngineMessages.EngineServiceTerminate
+// 0x0010 (0x0010 - 0x0000)
+struct FEngineServiceTerminate final
+{
+public:
+	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEngineServiceTerminate;
+
+// ScriptStruct EngineMessages.EngineServiceNotification
+// 0x0018 (0x0018 - 0x0000)
+struct FEngineServiceNotification final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        TimeSeconds;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEngineServiceNotification;
 
 // ScriptStruct EngineMessages.TraceControlStatusPing
 // 0x0001 (0x0001 - 0x0000)
@@ -234,15 +237,6 @@ public:
 };
 DUMPER7_ASSERTS_FTraceControlChannelsDesc;
 
-// ScriptStruct EngineMessages.TraceControlChannelsStatus
-// 0x0010 (0x0010 - 0x0000)
-struct FTraceControlChannelsStatus final
-{
-public:
-	TArray<uint32>                                EnabledIds;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTraceControlChannelsStatus;
-
 // ScriptStruct EngineMessages.TraceControlChannelsSet
 // 0x0020 (0x0020 - 0x0000)
 struct FTraceControlChannelsSet final
@@ -253,15 +247,14 @@ public:
 };
 DUMPER7_ASSERTS_FTraceControlChannelsSet;
 
-// ScriptStruct EngineMessages.TraceControlDiscoveryPing
-// 0x0020 (0x0020 - 0x0000)
-struct FTraceControlDiscoveryPing final
+// ScriptStruct EngineMessages.TraceControlChannelsSetError
+// 0x0050 (0x0050 - 0x0000)
+struct FTraceControlChannelsSetError final
 {
 public:
-	struct FGuid                                  SessionId;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  InstanceId;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<uint32, class FString>                   Errors;                                            // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTraceControlDiscoveryPing;
+DUMPER7_ASSERTS_FTraceControlChannelsSetError;
 
 // ScriptStruct EngineMessages.TraceControlDiscovery
 // 0x0020 (0x0088 - 0x0068)
@@ -273,14 +266,14 @@ public:
 };
 DUMPER7_ASSERTS_FTraceControlDiscovery;
 
-// ScriptStruct EngineMessages.TraceControlSend
-// 0x0010 (0x0028 - 0x0018)
-struct FTraceControlSend final : public FTraceControlStartCommon
+// ScriptStruct EngineMessages.TraceControlStop
+// 0x0001 (0x0001 - 0x0000)
+struct FTraceControlStop final
 {
 public:
-	class FString                                 Host;                                              // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTraceControlSend;
+DUMPER7_ASSERTS_FTraceControlStop;
 
 // ScriptStruct EngineMessages.TraceControlFile
 // 0x0018 (0x0030 - 0x0018)
@@ -292,6 +285,13 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTraceControlFile;
+
+// ScriptStruct EngineMessages.TraceControlSecure
+// 0x0000 (0x0018 - 0x0018)
+struct FTraceControlSecure final : public FTraceControlStartCommon
+{
+};
+DUMPER7_ASSERTS_FTraceControlSecure;
 
 // ScriptStruct EngineMessages.TraceControlSecureResponse
 // 0x0048 (0x0048 - 0x0000)

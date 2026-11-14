@@ -522,6 +522,23 @@ public:
 };
 DUMPER7_ASSERTS_FPCGExActorCollectionGlobals;
 
+// ScriptStruct PCGExCollections.PCGExAssetStagingData
+// 0x00C0 (0x00C0 - 0x0000)
+struct FPCGExAssetStagingData final
+{
+public:
+	int32                                         InternalIndex;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPCGExSocket>                   Sockets;                                           // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Bounds;                                            // 0x0038(0x0038)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAuthored;                                         // 0x0070(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       BoundsStagingModifier;                             // 0x0078(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x38];                                      // 0x0088(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGExAssetStagingData;
+
 // ScriptStruct PCGExCollections.PCGExGrammarAxisDetails
 // 0x0018 (0x0018 - 0x0000)
 struct FPCGExGrammarAxisDetails final
@@ -569,23 +586,6 @@ public:
 	struct FLinearColor                           DebugColor;                                        // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGExCollectionGrammarDetails;
-
-// ScriptStruct PCGExCollections.PCGExAssetStagingData
-// 0x00C0 (0x00C0 - 0x0000)
-struct FPCGExAssetStagingData final
-{
-public:
-	int32                                         InternalIndex;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGExSocket>                   Sockets;                                           // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FBox                                   Bounds;                                            // 0x0038(0x0038)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAuthored;                                         // 0x0070(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedStruct                       BoundsStagingModifier;                             // 0x0078(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x38];                                      // 0x0088(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGExAssetStagingData;
 
 // ScriptStruct PCGExCollections.PCGExAssetCollectionEntry
 // 0x0358 (0x0358 - 0x0000)

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "PCGExFoundations_structs.hpp"
-#include "PCGExCore_structs.hpp"
 #include "PCG_structs.hpp"
+#include "PCGExCore_structs.hpp"
 
 
 SDK_NAMESPACE_START

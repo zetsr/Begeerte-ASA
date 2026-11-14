@@ -2884,6 +2884,15 @@ public:
 };
 DUMPER7_ASSERTS_PrimalBuff_BPGetPlayerFootStepSound;
 
+// Function ShooterGame.PrimalBuff.BPGetStaminaRecoveryIgnoreHealthPercentEffect
+// 0x0004 (0x0004 - 0x0000)
+struct PrimalBuff_BPGetStaminaRecoveryIgnoreHealthPercentEffect final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PrimalBuff_BPGetStaminaRecoveryIgnoreHealthPercentEffect;
+
 // Function ShooterGame.PrimalBuff.BPGetWaypointsBuff
 // 0x0010 (0x0010 - 0x0000)
 struct PrimalBuff_BPGetWaypointsBuff final
@@ -74890,6 +74899,15 @@ public:
 };
 DUMPER7_ASSERTS_ShooterCheatManager_TrackCarByName;
 
+// Function ShooterGame.ShooterCheatManager.TrackPlayer
+// 0x0010 (0x0010 - 0x0000)
+struct ShooterCheatManager_TrackPlayer final
+{
+public:
+	class FString                                 PlayerIdOrEOSId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShooterCheatManager_TrackPlayer;
+
 // Function ShooterGame.ShooterCheatManager.TransferImprints
 // 0x0028 (0x0028 - 0x0000)
 struct ShooterCheatManager_TransferImprints final
@@ -75153,6 +75171,15 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ShooterDiscordUISubsystem_GetUnreadCount;
+
+// Function ShooterGame.ShooterEngine.HandleGameplayUserInstalledMod
+// 0x0538 (0x0538 - 0x0000)
+struct ShooterEngine_HandleGameplayUserInstalledMod final
+{
+public:
+	struct FInstalledMod                          InstalledMod;                                      // 0x0000(0x0538)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShooterEngine_HandleGameplayUserInstalledMod;
 
 // Function ShooterGame.ShooterEngine.HandleOnGeneratePremiumCheckoutUrl
 // 0x0080 (0x0080 - 0x0000)
