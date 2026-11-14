@@ -440,6 +440,18 @@ void g_Hook::StopAllHooks() {
 namespace g_MDX12 {
     static DXGI_FORMAT g_LastRTVFormat = DXGI_FORMAT_R8G8B8A8_UNORM;
 
+    void InitImGuiDX12Backend(DXGI_FORMAT rtvFormat) {
+        ImGui_ImplDX12_InitInfo initInfo;
+        initInfo.Device = g_D3D12Resources::g_pd3dDevice;
+        initInfo.CommandQueue = g_D3D12Resources::g_pd3dCommandQueue;
+        initInfo.NumFramesInFlight = static_cast<int>(g_D3D12Resources::g_bufferCount);
+        initInfo.RTVFormat = rtvFormat;
+        initInfo.SrvDescriptorHeap = g_D3D12Resources::g_pd3dSrvDescHeap;
+        initInfo.LegacySingleSrvCpuDescriptor = g_D3D12Resources::g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart();
+        initInfo.LegacySingleSrvGpuDescriptor = g_D3D12Resources::g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart();
+        ImGui_ImplDX12_Init(&initInfo);
+    }
+
     void UpdateImGuiFont() {
         // 如果缩放比例没有发生改变，直接返回
         if (g_LoadedFontScaleIdx == g_Config::MenuScaleIdx) return;
@@ -486,7 +498,7 @@ namespace g_MDX12 {
 
         // 如果是运行时切换(非首次)，立即重建 DX12 对象
         if (g_LoadedFontScaleIdx != -1) {
-            ImGui_ImplDX12_Init(g_D3D12Resources::g_pd3dDevice, g_D3D12Resources::g_bufferCount, g_LastRTVFormat, g_D3D12Resources::g_pd3dSrvDescHeap, g_D3D12Resources::g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(), g_D3D12Resources::g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
+            InitImGuiDX12Backend(g_LastRTVFormat);
         }
 
         g_LoadedFontScaleIdx = safeIdx; // 更新记录
@@ -665,7 +677,7 @@ namespace g_MDX12 {
             UpdateImGuiFont();
 
             // DX12 后端必须重新初始化，因为 resize 可能会让之前的 backend 对象失效
-            ImGui_ImplDX12_Init(g_D3D12Resources::g_pd3dDevice, g_D3D12Resources::g_bufferCount, desc.BufferDesc.Format, g_D3D12Resources::g_pd3dSrvDescHeap, g_D3D12Resources::g_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(), g_D3D12Resources::g_pd3dSrvDescHeap->GetGPUDescriptorHandleForHeapStart());
+            InitImGuiDX12Backend(desc.BufferDesc.Format);
 
             // unsigned char* pixels;
             // int width, height;

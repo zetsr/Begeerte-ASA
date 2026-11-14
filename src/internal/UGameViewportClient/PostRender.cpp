@@ -1,6 +1,7 @@
 #pragma once
 #include "../../external/CppSDK/SDK.hpp"
 #include "../../external/Shadow-Gui/src/Shadow.h"
+#include "../../external/Shadow-Gui/src/Backend_Dumper7.h"
 #include "../CheatData/CheatCache.hpp"
 #include "../ESP/DrawESP.h"
 #include "../ESP/Indicators.h"
@@ -189,11 +190,13 @@ namespace g_UGameViewportClient {
             g_Config::bPotatoGraphics = false;
         }
 
-        Shadow::NewFrame(canvas);
+		Shadow::Dumper7_NewFrame(canvas);
+        Shadow::NewFrame();
         g_Util::Welcome(CheatCache::PostRender::World, canvas);
         g_DrawESP::DrawESP(canvas);
         g_Indicators::OnRender();
         LuaManager::Get().Lua_OnPostRender();
         Shadow::Render();
+		Shadow::Dumper7_RenderDrawData(Shadow::GetDrawData());
     }
 }
